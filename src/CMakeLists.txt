@@ -9,10 +9,6 @@ endif ()
 
 configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
 
-if (HAVE_X11)
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
-endif()
-
 add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1410)
 
 add_subdirectory( data )
@@ -106,7 +102,7 @@ target_link_libraries(drkonqi
 
     drkonqi_backtrace_parser
 )
-if (HAVE_X11)
+if (${Qt5X11Extras_FOUND})
     target_link_libraries(drkonqi
         Qt5::X11Extras
     )
