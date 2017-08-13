@@ -12,132 +12,206 @@ Number of Actions=7
 
 [Action_0]
 Description=Jpeg-Image
+Description[es]=Imagen jpeg
+Description[sv]=Jpeg-bild
+Description[x-test]=xxJpeg-Imagexx
 Number of commands=1
 Regexp=^\\/.+\\.jpg$
 
 [Action_0/Command_0]
 Commandline=gwenview %s
 Description=Launch &Gwenview
+Description[es]=Lanzar &Gwenview
+Description[sv]=Starta &Gwenview
+Description[x-test]=xxLaunch &Gwenviewxx
 Enabled=true
 
 [Action_1]
 Description=Web-URL
+Description[sv]=Webbadress
+Description[x-test]=xxWeb-URLxx
 Number of commands=6
 Regexp=^https?://.
 
 [Action_1/Command_0]
 Commandline=kfmclient exec %s
 Description=Open with &default Browser
+Description[es]=Abrir con el &navegador por omisión
+Description[sv]=Öppna med &förvald webbläsare
+Description[x-test]=xxOpen with &default Browserxx
 Enabled=true
 
 [Action_1/Command_1]
 Commandline=konqueror %s
 Description=Open with &Konqueror
+Description[es]=Abrir con &Konqueror
+Description[sv]=Öppna med &Konqueror
+Description[x-test]=xxOpen with &Konquerorxx
 Enabled=true
 
 [Action_1/Command_2]
 Commandline=ps x |grep -q '[m]ozilla' && "mozilla -remote openURL(%s, new-window)" || mozilla %s
 Icon=mozilla
 Description=Open with &Mozilla
+Description[es]=Abrir con &Mozilla
+Description[sv]=Öppna med &Mozilla
+Description[x-test]=xxOpen with &Mozillaxx
 Enabled=true
 
 [Action_1/Command_3]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[es]=Enviar &URL
+Description[sv]=Skicka &webbadress
+Description[x-test]=xxSend &URLxx
 Enabled=true
 
 [Action_1/Command_4]
 Commandline=ps x |grep -q '[f]irefox' && "firefox -remote openURL(%s, new-window)" || firefox "%s"
 Icon=firefox
 Description=Open with &Firefox
+Description[es]=Abrir con &Firefox
+Description[sv]=Öppna med &Firefox
+Description[x-test]=xxOpen with &Firefoxxx
 Enabled=true
 
 [Action_1/Command_5]
 Commandline=kmail  --attach %s
 Description=Send &Page
+Description[es]=Enviar &página
+Description[sv]=Ski&cka sida
+Description[x-test]=xxSend &Pagexx
 Enabled=true
 
 [Action_2]
 Description=Mail-URL
+Description[sv]=Webbadress för e-post
+Description[x-test]=xxMail-URLxx
 Number of commands=2
 Regexp=^mailto:.
 
 [Action_2/Command_0]
 Commandline=kmail --composer `echo %s | sed 's/mailto://g'`
 Description=Launch &Kmail
+Description[es]=Lanzar &Kmail
+Description[sv]=Starta &Kmail
+Description[x-test]=xxLaunch &Kmailxx
 Enabled=true
 
 [Action_2/Command_1]
 Commandline=konsole -e mutt `echo %s | sed 's/mailto://g'`
 Description=Launch &mutt
+Description[es]=Lanzar &mutt
+Description[sv]=Starta &Mutt
+Description[x-test]=xxLaunch &muttxx
 Enabled=true
 
 [Action_3]
 Description=Text File
+Description[es]=Archivo de texto
+Description[sv]=Textfil
+Description[x-test]=xxText Filexx
 Number of commands=1
 Regexp=^\\/.+\\.txt$
 
 [Action_3/Command_0]
 Commandline=kwrite %s
 Description=Launch K&Write
+Description[es]=Lanzar K&Write
+Description[sv]=Starta K&write
+Description[x-test]=xxLaunch K&Writexx
 Enabled=true
 
 [Action_4]
 Description=Local file URL
+Description[es]=URL de archivo local
+Description[sv]=Webbadress för lokal fil
+Description[x-test]=xxLocal file URLxx
 Number of commands=2
 Regexp=^file:.
 
 [Action_4/Command_0]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[es]=Enviar &URL
+Description[sv]=Skicka &webbadress
+Description[x-test]=xxSend &URLxx
 Enabled=true
 
 [Action_4/Command_1]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[es]=Enviar &archivo
+Description[sv]=Skicka &fil
+Description[x-test]=xxSend &Filexx
 Enabled=true
 
 [Action_5]
 Description=Gopher URL
+Description[sv]=Gopher-webbadress
+Description[x-test]=xxGopher URLxx
 Number of commands=2
 Regexp=^gopher:.
 
 [Action_5/Command_0]
 Commandline=kmail --body %s
 Description=Send &URL
+Description[es]=Enviar &URL
+Description[sv]=Skicka &webbadress
+Description[x-test]=xxSend &URLxx
 Enabled=true
 
 [Action_5/Command_1]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[es]=Enviar &archivo
+Description[sv]=Skicka &fil
+Description[x-test]=xxSend &Filexx
 Enabled=true
 
 [Action_6]
 Description=ftp URL
+Description[sv]=FTP-webbadress
+Description[x-test]=xxftp URLxx
 Number of commands=5
 Regexp=^ftp://.
 
 [Action_6/Command_0]
 Commandline=kfmclient exec %s
 Description=Open with &default Browser
+Description[es]=Abrir con el &navegador por omisión
+Description[sv]=Öppna med &förvald webbläsare
+Description[x-test]=xxOpen with &default Browserxx
 Enabled=true
 
 [Action_6/Command_1]
 Commandline=konqueror %s
 Description=Open with &Konqueror
+Description[es]=Abrir con &Konqueror
+Description[sv]=Öppna med &Konqueror
+Description[x-test]=xxOpen with &Konquerorxx
 Enabled=true
 
 [Action_6/Command_2]
 Commandline=mozilla -remote openURL(%s, new-window)
 Description=Open with &Mozilla
+Description[es]=Abrir con &Mozilla
+Description[sv]=Öppna med &Mozilla
+Description[x-test]=xxOpen with &Mozillaxx
 Enabled=true
 
 [Action_6/Command_3]
 Commandline=kmail --body  %s
 Description=Send &URL
+Description[es]=Enviar &URL
+Description[sv]=Skicka &webbadress
+Description[x-test]=xxSend &URLxx
 Enabled=true
 
 [Action_6/Command_4]
 Commandline=kmail  --attach %s
 Description=Send &File
+Description[es]=Enviar &archivo
+Description[sv]=Skicka &fil
+Description[x-test]=xxSend &Filexx
 Enabled=true

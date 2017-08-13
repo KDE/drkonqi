@@ -1,14 +1,29 @@
 [Global]
 IconName=drive-harddisk
 Comment=KDE Free Space Notifier Daemon
+Comment[sv]=KDE:s demon för information om ledigt utrymme
+Comment[x-test]=xxKDE Free Space Notifier Daemonxx
 Name=Low Disk Space
+Name[es]=Poco espacio en disco
+Name[sv]=Ont om diskutrymme
+Name[x-test]=xxLow Disk Spacexx
 
 [Context/warningnot]
 Name=Warning
+Name[es]=Advertencia
+Name[sv]=Varning
+Name[x-test]=xxWarningxx
 Comment=Used for warning notifications
+Comment[sv]=Används för varningsmeddelanden
+Comment[x-test]=xxUsed for warning notificationsxx
 
 [Event/freespacenotif]
 Name=Running low on disk space
+Name[sv]=Diskutrymmet håller på att ta slut
+Name[x-test]=xxRunning low on disk spacexx
 Comment=You are running low on disk space
+Comment[es]=Se está quedando sin espacio en disco
+Comment[sv]=Diskutrymmet håller på att ta slut
+Comment[x-test]=xxYou are running low on disk spacexx
 Contexts=warningnot
 Action=Popup

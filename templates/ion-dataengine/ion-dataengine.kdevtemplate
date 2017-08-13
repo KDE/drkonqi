@@ -1,6 +1,10 @@
 # KDE Config File
 [General]
 Name=Plasma Weather Ion Dataengine
+Name[sv]=Plasma-datagränssnitt för väderjon
+Name[x-test]=xxPlasma Weather Ion Dataenginexx
 Comment=A special Plasma sub-dataengine for the Plasma Weather dataengine, providing access to one weather data service provider
+Comment[sv]=Ett särskilt undergränssnitt för Plasmas datagränssnitt för väder, som ger tillgång till en datatjänstleverantör av väder
+Comment[x-test]=xxA special Plasma sub-dataengine for the Plasma Weather dataengine, providing access to one weather data service providerxx
 ShowFilesAfterGeneration=%{PROJECTDIR}/src/ion-%{APPNAMELC}.cpp
 Category=Plasma/Dataengine

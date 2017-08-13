@@ -1,13 +1,23 @@
 [Global]
 IconName=preferences-desktop-sound
 Comment=Multimedia System
+Comment[es]=Sistema multimedia
+Comment[sv]=Multimediasystem
+Comment[x-test]=xxMultimedia Systemxx
 
 [Context/Application]
 Name=Application
+Name[es]=Aplicación
+Name[sv]=Program
+Name[x-test]=xxApplicationxx
 #Comment=The name of the group of the contact
 
 [Event/AudioDeviceFallback]
 Name=Audio Output Device Changed
+Name[sv]=Ljudutenhet ändrades
+Name[x-test]=xxAudio Output Device Changedxx
 Comment=Notification when audio output device has automatically changed
+Comment[sv]=Underrättelse när ljudutenhet har ändrats automatiskt
+Comment[x-test]=xxNotification when audio output device has automatically changedxx
 Contexts=Application
 Action=Popup
