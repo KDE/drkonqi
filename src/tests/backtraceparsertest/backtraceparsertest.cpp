@@ -125,5 +125,5 @@ void BacktraceParserTest::btParserBenchmark()
     }
 }
 
-QTEST_MAIN(BacktraceParserTest)
+QTEST_GUILESS_MAIN(BacktraceParserTest)
 
