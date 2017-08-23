@@ -42,7 +42,7 @@ if(RUBY_EXECUTABLE AND XVFB_RUN_EXECTUABLE AND ATSPI_BUS_LAUNCHER_EXECUTABLE
    AND ATSPI_REGISTRYD_EXECUTABLE AND GDB_EXECUTABLE
    AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
     set(WITH_DRKONI_INTEGRATION_TESTING TRUE)
+    add_subdirectory(integration)
 endif()
 add_feature_info(DrKonqiIntegrationTesting WITH_DRKONI_INTEGRATION_TESTING
     "Needs Ruby, functional atspi and xmlrpc gems, gdb, as well as xvfb-run.")
-add_subdirectory(integration)
