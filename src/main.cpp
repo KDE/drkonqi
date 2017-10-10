@@ -81,9 +81,7 @@ int main(int argc, char* argv[])
     qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(description);
-    parser.addHelpOption();
-    parser.addVersionOption();
+    aboutData.setupCommandLine(&parser);
 
     QCommandLineOption signalOption(QStringLiteral("signal"), i18nc("@info:shell","The signal <number> that was caught"), QStringLiteral("number"));
     QCommandLineOption appNameOption(QStringLiteral("appname"), i18nc("@info:shell","<Name> of the program"), QStringLiteral("name"));
@@ -116,7 +114,6 @@ int main(int argc, char* argv[])
     parser.addOption(threadOption);
     parser.addOption(dialogOption);
 
-    aboutData.setupCommandLine(&parser);
     parser.process(qa);
     aboutData.processCommandLine(&parser);
 
