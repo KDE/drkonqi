@@ -60,6 +60,7 @@ int main(int argc, char* argv[])
     KLocalizedString::setApplicationDomain("drkonqi5");
     QCoreApplication::setApplicationName(QStringLiteral("drkonqi"));
     QCoreApplication::setApplicationVersion(version);
+    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);
@@ -79,6 +80,7 @@ int main(int argc, char* argv[])
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
                          QStringLiteral("spehr@kde.org"));
     qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
+    qa.setDesktopFileName(QStringLiteral("org.kde.drkonqi"));
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
