@@ -114,7 +114,7 @@ class BugzillaReportInformationDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit BugzillaReportInformationDialog(BugzillaDuplicatesPage*parent=0);
+    explicit BugzillaReportInformationDialog(BugzillaDuplicatesPage*parent=nullptr);
     ~BugzillaReportInformationDialog() override;
 
     void showBugReport(int bugNumber, bool relatedButtonEnabled = true);

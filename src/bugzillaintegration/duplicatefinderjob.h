@@ -68,7 +68,7 @@ class DuplicateFinderJob : public KJob
             BugReport::Resolution resolution;
         };
 
-        DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager *manager, QObject *parent = 0);
+        DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager *manager, QObject *parent = nullptr);
         ~DuplicateFinderJob() override;
 
         void start() override;

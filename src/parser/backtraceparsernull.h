@@ -24,7 +24,7 @@ class BacktraceParserNull : public BacktraceParser
 {
     Q_OBJECT
 public:
-    explicit BacktraceParserNull(QObject *parent = 0);
+    explicit BacktraceParserNull(QObject *parent = nullptr);
 
 protected Q_SLOTS:
     void newLine(const QString & lineStr) override;

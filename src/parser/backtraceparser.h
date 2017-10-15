@@ -33,7 +33,7 @@ public:
     enum Usefulness { InvalidUsefulness, Useless, ProbablyUseless, MayBeUseful, ReallyUseful };
     Q_ENUM(Usefulness)
 
-    static BacktraceParser *newParser(const QString & debuggerName, QObject *parent = 0);
+    static BacktraceParser *newParser(const QString & debuggerName, QObject *parent = nullptr);
     ~BacktraceParser() override;
 
     /*! Connects the parser to the backtrace generator.
@@ -79,7 +79,7 @@ protected Q_SLOTS:
     virtual void newLine(const QString & lineStr) = 0;
 
 protected:
-    explicit BacktraceParser(QObject *parent = 0);
+    explicit BacktraceParser(QObject *parent = nullptr);
 
     /*! Subclasses should override to provide their own BacktraceParserPrivate instance */
     virtual BacktraceParserPrivate *constructPrivate() const;

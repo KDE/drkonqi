@@ -29,7 +29,7 @@ class DebuggerManager : public QObject
 public:
     DebuggerManager(const Debugger & internalDebugger,
                     const QList<Debugger> & externalDebuggers,
-                    QObject *parent = 0);
+                    QObject *parent = nullptr);
     ~DebuggerManager() override;
 
     bool debuggerIsRunning() const;

@@ -34,7 +34,7 @@ class ReportAssistantDialog: public KAssistantDialog
     Q_OBJECT
 
 public:
-    explicit ReportAssistantDialog(QWidget * parent = 0);
+    explicit ReportAssistantDialog(QWidget * parent = nullptr);
     ~ReportAssistantDialog() override;
 
     ReportInterface *reportInterface() const {

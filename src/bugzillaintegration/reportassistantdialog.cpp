@@ -42,7 +42,7 @@ static const char KDE_BUGZILLA_DESCRIPTION[] = I18N_NOOP("the KDE Bug Tracking S
 
 ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
         KAssistantDialog(parent),
-        m_aboutBugReportingDialog(0),
+        m_aboutBugReportingDialog(nullptr),
         m_reportInterface(new ReportInterface(this)),
         m_canClose(false)
 {

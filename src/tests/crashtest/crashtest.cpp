@@ -46,7 +46,7 @@ struct SomeStruct
 
 void do_crash()
 {
-  SomeStruct *obj = 0;
+  SomeStruct *obj = nullptr;
   int ret = obj->foo();
   printf("result = %d\n", ret);
 }

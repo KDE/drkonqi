@@ -25,7 +25,7 @@ class FakeBacktraceGenerator : public QObject
 {
     Q_OBJECT
 public:
-    FakeBacktraceGenerator(QObject *parent = 0) : QObject(parent) {}
+    FakeBacktraceGenerator(QObject *parent = nullptr) : QObject(parent) {}
     void sendData(const QString & filename);
 
 Q_SIGNALS:

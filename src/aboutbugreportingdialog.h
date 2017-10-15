@@ -29,7 +29,7 @@ class AboutBugReportingDialog: public QDialog
     Q_OBJECT
 
 public:
-    explicit AboutBugReportingDialog(QWidget * parent = 0);
+    explicit AboutBugReportingDialog(QWidget * parent = nullptr);
     ~AboutBugReportingDialog() override;
     void showSection(const QString&);
 

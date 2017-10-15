@@ -80,7 +80,7 @@ DrKonqi::~DrKonqi()
 //static
 DrKonqi *DrKonqi::instance()
 {
-    static DrKonqi *drKonqiInstance = NULL;
+    static DrKonqi *drKonqiInstance = nullptr;
     if (!drKonqiInstance) {
         drKonqiInstance = new DrKonqi();
     }

@@ -30,7 +30,7 @@
 #include "crashedapplication.h"
 
 DebugPackageInstaller::DebugPackageInstaller(QObject *parent)
-    : QObject(parent), m_installerProcess(0), m_progressDialog(0)
+    : QObject(parent), m_installerProcess(nullptr), m_progressDialog(nullptr)
 {
     m_executablePath = QStandardPaths::findExecutable(DEBUG_PACKAGE_INSTALLER_NAME); //defined from CMakeLists.txt
 }
@@ -71,7 +71,7 @@ void DebugPackageInstaller::installDebugPackages()
 void DebugPackageInstaller::progressDialogCanceled()
 {
     m_progressDialog->deleteLater();
-    m_progressDialog = 0;
+    m_progressDialog = nullptr;
 
     if (m_installerProcess) {
         if (m_installerProcess->state() == QProcess::Running) {
@@ -81,7 +81,7 @@ void DebugPackageInstaller::progressDialogCanceled()
             disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
                        m_installerProcess, &KProcess::deleteLater);
         }
-        m_installerProcess = 0;
+        m_installerProcess = nullptr;
     }
 
     emit canceled();
@@ -117,8 +117,8 @@ void DebugPackageInstaller::processFinished(int exitCode, QProcess::ExitStatus)
     m_progressDialog->reject();
 
     delete m_progressDialog;
-    m_progressDialog = 0;
+    m_progressDialog = nullptr;
 
     delete m_installerProcess;
-    m_installerProcess = 0;
+    m_installerProcess = nullptr;
 }

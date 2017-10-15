@@ -34,7 +34,7 @@ class ParseBugBacktraces : QObject
 {
     Q_OBJECT
     public:
-        explicit ParseBugBacktraces(const BugReport &bug, QObject *parent = 0);
+        explicit ParseBugBacktraces(const BugReport &bug, QObject *parent = nullptr);
 
         void parse();
 

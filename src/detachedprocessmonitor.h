@@ -23,7 +23,7 @@ class DetachedProcessMonitor : public QObject
 {
     Q_OBJECT
 public:
-    explicit DetachedProcessMonitor(QObject *parent = 0);
+    explicit DetachedProcessMonitor(QObject *parent = nullptr);
     void startMonitoring(int pid);
 
 Q_SIGNALS:

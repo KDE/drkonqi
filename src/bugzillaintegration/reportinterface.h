@@ -37,7 +37,7 @@ public:
     enum Reproducible { ReproducibleUnsure, ReproducibleNever,
         ReproducibleSometimes, ReproducibleEverytime };
 
-    explicit ReportInterface(QObject *parent = 0);
+    explicit ReportInterface(QObject *parent = nullptr);
 
     void setBugAwarenessPageData(bool, Reproducible, bool, bool, bool);
     bool isBugAwarenessPageDataUseful() const;

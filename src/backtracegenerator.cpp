@@ -36,8 +36,8 @@
 
 BacktraceGenerator::BacktraceGenerator(const Debugger & debugger, QObject *parent)
         : QObject(parent),
-          m_debugger(debugger), m_proc(NULL),
-          m_temp(NULL), m_state(NotLoaded)
+          m_debugger(debugger), m_proc(nullptr),
+          m_temp(nullptr), m_state(NotLoaded)
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);
@@ -66,7 +66,7 @@ BacktraceGenerator::~BacktraceGenerator()
 bool BacktraceGenerator::start()
 {
     //they should always be null before entering this function.
-    Q_ASSERT(m_proc == NULL && m_temp == NULL);
+    Q_ASSERT(m_proc && m_temp);
 
     m_parsedBacktrace.clear();
     m_state = Loading;
@@ -103,8 +103,8 @@ bool BacktraceGenerator::start()
         //we mustn't keep these around...
         m_proc->deleteLater();
         m_temp->deleteLater();
-        m_proc = NULL;
-        m_temp = NULL;
+        m_proc = nullptr;
+        m_temp = nullptr;
 
         m_state = FailedToStart;
         emit failedToStart();
@@ -133,8 +133,8 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     //these are useless now
     m_proc->deleteLater();
     m_temp->deleteLater();
-    m_proc = NULL;
-    m_temp = NULL;
+    m_proc = nullptr;
+    m_temp = nullptr;
 
     //mark the end of the backtrace for the parser
     emit newLine(QString());

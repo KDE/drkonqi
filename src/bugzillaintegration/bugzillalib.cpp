@@ -60,7 +60,7 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
         : QObject(parent)
         , m_bugTrackerUrl(bugTrackerUrl)
         , m_logged(false)
-        , m_searchJob(0)
+        , m_searchJob(nullptr)
 {
     m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + "xmlrpc.cgi"), this);
     m_xmlRpcClient->setUserAgent(QLatin1String("DrKonqi"));
@@ -296,7 +296,7 @@ void BugzillaManager::stopCurrentSearch()
     if (m_searchJob) { //Stop previous searchJob
         m_searchJob->disconnect();
         m_searchJob->kill();
-        m_searchJob = 0;
+        m_searchJob = nullptr;
     }
 }
 //END Misc methods
@@ -344,7 +344,7 @@ void BugzillaManager::searchBugsJobFinished(KJob * job)
         emit searchError(job->errorString());
     }
 
-    m_searchJob = 0;
+    m_searchJob = nullptr;
 }
 
 static inline Component buildComponent(const QVariantMap& map)

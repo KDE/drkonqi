@@ -32,7 +32,7 @@ class ProductMapping: public QObject
 {
 Q_OBJECT
 public:
-    explicit ProductMapping(const CrashedApplication *, BugzillaManager *, QObject * parent = 0);
+    explicit ProductMapping(const CrashedApplication *, BugzillaManager *, QObject * parent = nullptr);
 
     QString bugzillaProduct() const;
     QString bugzillaComponent() const;

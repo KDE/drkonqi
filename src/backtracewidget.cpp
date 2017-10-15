@@ -42,7 +42,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
     bool showToggleBacktrace) :
         QWidget(parent),
         m_btGenerator(generator),
-        m_highlighter(0)
+        m_highlighter(nullptr)
 {
     ui.setupUi(this);
 
@@ -123,7 +123,7 @@ void BacktraceWidget::setAsLoading()
 {
     //remove the syntax highlighter
     delete m_highlighter;
-    m_highlighter = 0;
+    m_highlighter = nullptr;
 
     //Set the widget as loading and disable all the action buttons
     ui.m_backtraceEdit->setText(i18nc("@info:status", "Loading..."));

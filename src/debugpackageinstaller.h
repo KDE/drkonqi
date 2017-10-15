@@ -33,7 +33,7 @@ class DebugPackageInstaller: public QObject
                    ResultSymbolsNotFound = 2, ResultCanceled = 3 };
 
     public:
-        explicit DebugPackageInstaller(QObject *parent = 0);
+        explicit DebugPackageInstaller(QObject *parent = nullptr);
         bool canInstallDebugPackages() const;
         void setMissingLibraries(const QStringList &);
         void installDebugPackages();

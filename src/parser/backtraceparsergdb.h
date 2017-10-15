@@ -26,7 +26,7 @@ class BacktraceParserGdb : public BacktraceParser
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParserGdb)
 public:
-    explicit BacktraceParserGdb(QObject *parent = 0);
+    explicit BacktraceParserGdb(QObject *parent = nullptr);
 
     QString parsedBacktrace() const override;
     QList<BacktraceLine> parsedBacktraceLines() const override;

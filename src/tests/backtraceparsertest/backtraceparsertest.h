@@ -25,7 +25,7 @@ class BacktraceParserTest : public QObject
 {
     Q_OBJECT
 public:
-    BacktraceParserTest(QObject *parent = 0);
+    BacktraceParserTest(QObject *parent = nullptr);
 
 private Q_SLOTS:
     void btParserUsefulnessTest_data();

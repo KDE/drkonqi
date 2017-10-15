@@ -26,7 +26,7 @@ class SystemInformation: public QObject
 {
     Q_OBJECT
     public:
-        explicit SystemInformation(QObject * parent = 0);
+        explicit SystemInformation(QObject * parent = nullptr);
         ~SystemInformation() override;
 
         QString bugzillaPlatform() const;

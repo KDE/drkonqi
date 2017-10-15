@@ -25,7 +25,7 @@ class BacktraceParserKdbgwin : public BacktraceParser
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParser)
 public:
-    explicit BacktraceParserKdbgwin(QObject *parent = 0);
+    explicit BacktraceParserKdbgwin(QObject *parent = nullptr);
 
 protected Q_SLOTS:
     void newLine(const QString & lineStr) override;

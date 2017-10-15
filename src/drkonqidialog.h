@@ -38,7 +38,7 @@ class DrKonqiDialog: public QDialog
     Q_OBJECT
 
 public:
-    explicit DrKonqiDialog(QWidget * parent = 0);
+    explicit DrKonqiDialog(QWidget * parent = nullptr);
     ~DrKonqiDialog() override;
 
 private Q_SLOTS:

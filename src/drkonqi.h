@@ -36,7 +36,7 @@ public:
     static DebuggerManager *debuggerManager();
     static CrashedApplication *crashedApplication();
 
-    static void saveReport(const QString & reportText, QWidget *parent = 0);
+    static void saveReport(const QString & reportText, QWidget *parent = nullptr);
 
     static void setSignal(int signal);
     static void setAppName(const QString &appName);

@@ -67,7 +67,7 @@ static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
 BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
         ReportAssistantPage(parent),
-        m_wallet(0), m_walletWasOpenedBefore(false),
+        m_wallet(nullptr), m_walletWasOpenedBefore(false),
         m_bugzillaVersionFound(false)
 {
     connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound, this, &BugzillaLoginPage::bugzillaVersionFound);
@@ -683,7 +683,7 @@ void BugzillaPreviewPage::aboutToShow()
 
 BugzillaSendPage::BugzillaSendPage(ReportAssistantDialog * parent)
         : ReportAssistantPage(parent),
-        m_contentsDialog(0)
+        m_contentsDialog(nullptr)
 {
     connect(reportInterface(), &ReportInterface::reportSent, this, &BugzillaSendPage::sent);
     connect(reportInterface(), &ReportInterface::sendReportError, this, &BugzillaSendPage::sendError);

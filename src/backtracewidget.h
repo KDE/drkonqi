@@ -34,7 +34,7 @@ class BacktraceWidget: public QWidget
     Q_OBJECT
 
 public:
-    explicit BacktraceWidget(BacktraceGenerator *generator, QWidget *parent = 0,
+    explicit BacktraceWidget(BacktraceGenerator *generator, QWidget *parent = nullptr,
                              bool showToggleBacktrace = false);
 
     bool canInstallDebugPackages() const;

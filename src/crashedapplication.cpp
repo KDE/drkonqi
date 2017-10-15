@@ -84,18 +84,18 @@ int CrashedApplication::signalNumber() const
 QString CrashedApplication::signalName() const
 {
 #if defined(HAVE_STRSIGNAL) && defined(Q_OS_UNIX)
-    const char * oldLocale = std::setlocale(LC_MESSAGES, NULL);
+    const char * oldLocale = std::setlocale(LC_MESSAGES, nullptr);
     char * savedLocale;
     if (oldLocale) {
         savedLocale = strdup(oldLocale);
     } else {
-        savedLocale = NULL;
+        savedLocale = nullptr;
     }
     std::setlocale(LC_MESSAGES, "C");
     const char *name = strsignal(m_signalNumber);
     std::setlocale(LC_MESSAGES, savedLocale);
     std::free(savedLocale);
-    return QString::fromLocal8Bit(name != NULL ? name : "Unknown");
+    return QString::fromLocal8Bit(name ? name : "Unknown");
 #else
     switch (m_signalNumber) {
 # if defined(Q_OS_UNIX)

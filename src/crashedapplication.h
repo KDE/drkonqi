@@ -74,7 +74,7 @@ Q_SIGNALS:
 
 protected:
     friend class KCrashBackend;
-    CrashedApplication(QObject *parent = 0);
+    CrashedApplication(QObject *parent = nullptr);
 
     int m_pid;
     int m_signalNumber;

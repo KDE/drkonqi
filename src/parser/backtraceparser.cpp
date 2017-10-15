@@ -35,7 +35,7 @@ BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObjec
     }
 }
 
-BacktraceParser::BacktraceParser(QObject *parent) : QObject(parent), d_ptr(NULL) {}
+BacktraceParser::BacktraceParser(QObject *parent) : QObject(parent), d_ptr(nullptr) {}
 BacktraceParser::~BacktraceParser() { delete d_ptr; }
 
 void BacktraceParser::connectToGenerator(QObject *generator)
