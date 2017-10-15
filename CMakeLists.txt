@@ -30,7 +30,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test 
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service ConfigWidgets JobWidgets KIO Crash Completion XmlRpcClient WidgetsAddons Wallet Notifications IdleTime)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG COMPONENTS X11Extras)
+find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
