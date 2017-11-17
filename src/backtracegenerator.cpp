@@ -66,7 +66,8 @@ BacktraceGenerator::~BacktraceGenerator()
 bool BacktraceGenerator::start()
 {
     //they should always be null before entering this function.
-    Q_ASSERT(m_proc && m_temp);
+    Q_ASSERT(!m_proc);
+    Q_ASSERT(!m_temp);
 
     m_parsedBacktrace.clear();
     m_state = Loading;
