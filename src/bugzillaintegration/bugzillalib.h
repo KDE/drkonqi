@@ -165,7 +165,7 @@ public:
         setData(QStringLiteral("keywords"), keywords.join(QStringLiteral(",")));
     }
     QStringList keywords() const {
-        return getData(QStringLiteral("keywords")).split(',');
+        return getData(QStringLiteral("keywords")).split(QLatin1Char(','));
     }
 
     void setDescription(const QString & desc) {

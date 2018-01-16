@@ -113,8 +113,8 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     CrashedApplication *a = new CrashedApplication(this);
     a->m_datetime = QDateTime::currentDateTime();
     a->m_name = DrKonqi::programName();
-    a->m_version = DrKonqi::appVersion().toUtf8();
-    a->m_reportAddress = BugReportAddress(DrKonqi::bugAddress().toUtf8());
+    a->m_version = DrKonqi::appVersion();
+    a->m_reportAddress = BugReportAddress(DrKonqi::bugAddress());
     a->m_pid = DrKonqi::pid();
     a->m_signalNumber = DrKonqi::signal();
     a->m_restarted = DrKonqi::isRestarted();

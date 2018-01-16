@@ -62,7 +62,7 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
         , m_logged(false)
         , m_searchJob(nullptr)
 {
-    m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + "xmlrpc.cgi"), this);
+    m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + QStringLiteral("xmlrpc.cgi")), this);
     m_xmlRpcClient->setUserAgent(QLatin1String("DrKonqi"));
     // Allow constructors for ReportInterface and assistant dialogs to finish.
     // We do not want them to be racing the remote Bugzilla database.
@@ -183,7 +183,7 @@ QString BugzillaManager::getUsername() const
 //BEGIN Bugzilla Action methods
 void BugzillaManager::fetchBugReport(int bugnumber, QObject * jobOwner)
 {
-    QUrl url(m_bugTrackerUrl + QString(fetchBugUrl).arg(bugnumber));
+    QUrl url(m_bugTrackerUrl + QString::fromLatin1(fetchBugUrl).arg(bugnumber));
 
     if (!jobOwner) {
         jobOwner = this;
@@ -205,15 +205,15 @@ void BugzillaManager::searchBugs(const QStringList & products,
             product = products.at(0);
         } else  {
             Q_FOREACH(const QString & p, products) {
-                product += p + "&product=";
+                product += p + QStringLiteral("&product=");
             }
             product = product.mid(0,product.size()-9);
         }
     }
 
     QString url = QString(m_bugTrackerUrl) +
-                  QString(searchUrl).arg(product, comment.replace(' ' , '+'), date_start,
-                                         date_end, severity, QString(columns));
+                  QString::fromLatin1(searchUrl).arg(product, comment.replace(QLatin1Char(' ') , QLatin1Char('+')), date_start,
+                                         date_end, severity, QString::fromLatin1(columns));
 
     stopCurrentSearch();
 
@@ -288,7 +288,7 @@ void BugzillaManager::fetchProductInfo(const QString & product)
 //BEGIN Misc methods
 QString BugzillaManager::urlForBug(int bug_number) const
 {
-    return QString(m_bugTrackerUrl) + QString(showBugUrl).arg(bug_number);
+    return QString(m_bugTrackerUrl) + QString::fromLatin1(showBugUrl).arg(bug_number);
 }
 
 void BugzillaManager::stopCurrentSearch()
@@ -508,10 +508,10 @@ BugMapList BugListCSVParser::parse()
         //Parse buglist CSV
         QTextStream ts(&m_data);
         QString headersLine = ts.readLine().remove(QLatin1Char('\"')) ;   //Discard headers
-        QString expectedHeadersLine = QString(columns);
+        QString expectedHeadersLine = QString::fromLatin1(columns);
 
         if (headersLine == (QStringLiteral("bug_id,") + expectedHeadersLine)) {
-            QStringList headers = expectedHeadersLine.split(',', QString::KeepEmptyParts);
+            QStringList headers = expectedHeadersLine.split(QLatin1Char(','), QString::KeepEmptyParts);
             int headersCount = headers.count();
 
             while (!ts.atEnd()) {
@@ -520,7 +520,7 @@ BugMapList BugListCSVParser::parse()
                 QString line = ts.readLine();
 
                 //Get bug_id (always at first column)
-                int bug_id_index = line.indexOf(',');
+                int bug_id_index = line.indexOf(QLatin1Char(','));
                 QString bug_id = line.left(bug_id_index);
                 bug.insert(QStringLiteral("bug_id"), bug_id);
 

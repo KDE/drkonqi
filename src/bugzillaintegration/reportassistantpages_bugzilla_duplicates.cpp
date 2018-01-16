@@ -336,7 +336,7 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
                 customStatusString = i18nc("@info bug status", "[Incomplete]");
             }
 
-            title = customStatusString + ' ' + bug[QStringLiteral("short_desc")];
+            title = customStatusString + QLatin1Char(' ') + bug[QStringLiteral("short_desc")];
 
             QStringList fields = QStringList() << bug[QStringLiteral("bug_id")] << title;
 
@@ -408,7 +408,7 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
         if (BugReport::isOpen(status) || (BugReport::isClosed(status) && status == BugReport::NeedsInfo)) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash is a <strong>duplicate</strong> and has already been reported as <a href=\"%1\">Bug %1</a>.", QString::number(duplicate)) :
                 i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>", QString::number(duplicate), QString::number(parentDuplicate))) +
-                '\n' + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QStringLiteral("attach"));
+                QLatin1Char('\n') + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QStringLiteral("attach"));
         } else if (BugReport::isClosed(status)) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which has been <strong>closed</strong>.", QString::number(duplicate)) :
                 i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>.", QString::number(duplicate), QString::number(parentDuplicate)));
@@ -694,9 +694,9 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                 QString comment = commentList.at(i);
                 //Don't add duplicates mark comments
                 if (!comment.contains(duplicatesMark)) {
-                    comment.replace('\n', QLatin1String("<br />"));
+                    comment.replace(QLatin1Char('\n'), QLatin1String("<br />"));
                     comments += i18nc("comment $number to use as subtitle", "<h4>Comment %1:</h4>", (i+1))
-                                    + "<p>" + comment + "</p><hr />";
+                                    + QStringLiteral("<p>") + comment + QStringLiteral("</p><hr />");
                     //Count the inline attached crashes (DrKonqi feature)
                     QLatin1String attachedCrashMark =
                         QLatin1String("New crash information added by DrKonqi");
@@ -797,7 +797,7 @@ void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject
                                 report.product(), report.component()) +
                 i18nc("@info bug report description",
                                 "<h3>Description of the bug</h3><p>%1</p>",
-                                report.description().replace('\n', QLatin1String("<br />")));
+                                report.description().replace(QLatin1Char('\n'), QLatin1String("<br />")));
 
             if (!comments.isEmpty()) {
                 text += i18nc("@label:textbox bug report comments (already formatted)",

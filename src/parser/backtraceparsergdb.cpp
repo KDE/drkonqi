@@ -237,7 +237,9 @@ void BacktraceParserGdb::parseLine(const QString & lineStr)
         if (d->m_isBelowSignalHandler) {
             d->m_linesToRate.append(line);
         }
-
+#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
+        Q_FALLTHROUGH();
+#endif
         //fall through and append the line to the list
     default:
         d->m_linesList.append(line);

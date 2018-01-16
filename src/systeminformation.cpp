@@ -219,8 +219,8 @@ QString SystemInformation::fetchOSDetailInformation() const
     if (uname(&buf) == -1) {
         qDebug() << "call to uname failed" << errno;
     } else {
-        operatingSystem = QString::fromLocal8Bit(buf.sysname) + ' '
-            + QString::fromLocal8Bit(buf.release) + ' '
+        operatingSystem = QString::fromLocal8Bit(buf.sysname) + QLatin1Char(' ')
+            + QString::fromLocal8Bit(buf.release) + QLatin1Char(' ')
             + QString::fromLocal8Bit(buf.machine);
     }
 #endif
@@ -243,7 +243,7 @@ QString SystemInformation::fetchOSReleaseInformation() const
 
         // its format is one simple NAME=VALUE per line
         // don't use QString.split() here since its value might contain '=''
-        const int index = line.indexOf('=');
+        const int index = line.indexOf(QLatin1Char('='));
         if ( index != -1 ) {
             const QString key = line.left(index);
             const QString value = line.mid(index+1);
@@ -294,7 +294,7 @@ void SystemInformation::setCompiledSources(bool compiled)
 
 QString SystemInformation::qtVersion() const
 {
-    return qVersion();
+    return QString::fromLatin1(qVersion());
 }
 
 QString SystemInformation::frameworksVersion() const

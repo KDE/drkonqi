@@ -386,16 +386,15 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
         missingDbgForFiles.insert(0, DrKonqi::crashedApplication()->executable().absoluteFilePath());
 
         //HTML message
-        QString message;
-        message = QLatin1String("<html>");
+        QString message = QStringLiteral("<html>");
         message += i18n("The packages containing debug information for the following application and libraries are missing:");
-        message += QLatin1String("<br /><ul>");
+        message += QStringLiteral("<br /><ul>");
 
         Q_FOREACH(const QString & string, missingDbgForFiles) {
-            message += "<li>" + string + "</li>";
+            message += QStringLiteral("<li>") + string + QStringLiteral("</li>");
         }
 
-        message += QLatin1String("</ul></html>");
+        message += QStringLiteral("</ul></html>");
 
         KMessageBox::information(this, message, i18nc("messagebox title","Missing debug information packages"));
     }

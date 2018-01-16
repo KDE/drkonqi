@@ -28,7 +28,7 @@ GdbHighlighter::GdbHighlighter(QTextDocument* parent, const QList<BacktraceLine>
     int l = 0;
     foreach(const BacktraceLine& line, gdbLines) {
         lines.insert(l, line);
-        l += line.toString().count('\n');
+        l += line.toString().count(QLatin1Char('\n'));
     }
 
     // setup formates
@@ -54,7 +54,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
     const QRegExp hexptrPattern(QStringLiteral("0x[0-9a-f]+"), Qt::CaseSensitive, QRegExp::RegExp2);
     int lineNr = currentBlock().firstLineNumber();
     while ( cur < text.length() ) {
-        next = text.indexOf('\n', cur);
+        next = text.indexOf(QLatin1Char('\n'), cur);
         if (next == -1) {
             next = text.length();
         }
@@ -67,7 +67,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
 
         diff = next - cur;
 
-        QString lineStr = text.mid(cur, diff).append('\n');
+        QString lineStr = text.mid(cur, diff).append(QLatin1Char('\n'));
         // -1 since we skip the first line
         QMap< int, BacktraceLine >::iterator it = lines.lowerBound(lineNr - 1);
         Q_ASSERT(it != lines.end());
@@ -85,7 +85,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
             setFormat(cur, diff, crapFormat);
         } else if (line.type() == BacktraceLine::StackFrame) {
             if (!line.fileName().isEmpty()) {
-                int colonPos = line.fileName().lastIndexOf(':');
+                int colonPos = line.fileName().lastIndexOf(QLatin1Char(':'));
                 setFormat(lineStr.indexOf(line.fileName()), colonPos == -1 ? line.fileName().length() : colonPos, urlFormat);
             }
             if (!line.libraryName().isEmpty()) {
@@ -99,13 +99,13 @@ void GdbHighlighter::highlightBlock(const QString& text)
                     int i = idx;
                     int from = idx;
                     while (i < idx + line.functionName().length()) {
-                        if (lineStr.at(i) == ':') {
+                        if (lineStr.at(i) == QLatin1Char(':')) {
                             setFormat(from, i - from, otheridFormat);
                             // skip ::
                             i += 2;
                             from = i;
                             continue;
-                        } else if (lineStr.at(i) == '<' || lineStr.at(i) == '>') {
+                        } else if (lineStr.at(i) == QLatin1Char('<') || lineStr.at(i) == QLatin1Char('>')) {
                             setFormat(from, i - from, otheridFormat);
                             ++i;
                             from = i;

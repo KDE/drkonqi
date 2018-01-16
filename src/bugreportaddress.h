@@ -36,7 +36,7 @@ public:
 
     inline bool isEmail() const
     {
-        return contains('@');
+        return contains(QLatin1Char('@'));
     }
 };
 

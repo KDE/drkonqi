@@ -37,8 +37,8 @@ ProductMapping::ProductMapping(const CrashedApplication * crashedApp, BugzillaMa
 {
     //Default "fallback" values
     m_bugzillaProduct = crashedApp->fakeExecutableBaseName();
-    m_bugzillaComponent = QLatin1String("general");
-    m_bugzillaVersionString = QLatin1String("unspecified");
+    m_bugzillaComponent = QStringLiteral("general");
+    m_bugzillaVersionString = QStringLiteral("unspecified");
     m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
 
     map(crashedApp->fakeExecutableBaseName());
@@ -62,7 +62,7 @@ void ProductMapping::mapUsingInternalFile(const QString & appName)
     if (mappings.hasKey(appName)) {
         QString mappingString = mappings.readEntry(appName);
         if (!mappingString.isEmpty()) {
-            QStringList list = mappingString.split('|', QString::SkipEmptyParts);
+            QStringList list = mappingString.split(QLatin1Char('|'), QString::SkipEmptyParts);
             if (list.count()==2) {
                 m_bugzillaProduct = list.at(0);
                 m_bugzillaComponent = list.at(1);
@@ -94,7 +94,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
                             "(or there was an error when reading)";
             return;
         }
-        groups = group.split('|', QString::SkipEmptyParts);
+        groups = group.split(QLatin1Char('|'), QString::SkipEmptyParts);
     }
 
     //All KDE apps use the KDE Platform (basic libs)
@@ -109,7 +109,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);
             if (!bzGroup.isEmpty()) {
-                QStringList relatedGroups = bzGroup.split('|', QString::SkipEmptyParts);
+                QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), QString::SkipEmptyParts);
                 if (relatedGroups.size()>0) {
                     m_relatedBugzillaProducts.append(relatedGroups);
                 }

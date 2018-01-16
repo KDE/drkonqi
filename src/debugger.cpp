@@ -67,7 +67,7 @@ QString Debugger::tryExec() const
 QStringList Debugger::supportedBackends() const
 {
     return isValid() ? m_config->group("General").readEntry("Backends")
-                                   .split('|', QString::SkipEmptyParts) : QStringList();
+                                   .split(QLatin1Char('|'), QString::SkipEmptyParts) : QStringList();
 }
 
 void Debugger::setUsedBackend(const QString & backendName)
@@ -134,7 +134,7 @@ QList<Debugger> Debugger::availableDebuggers(const QString & path, const QString
     QList<Debugger> result;
     foreach (const QString & debuggerFile, debuggers) {
         Debugger debugger;
-        debugger.m_config = KSharedConfig::openConfig(debuggerDir +'/'+ debuggerFile);
+        debugger.m_config = KSharedConfig::openConfig(debuggerDir +QLatin1Char('/')+ debuggerFile);
         if (debugger.supportedBackends().contains(backend)) {
             debugger.setUsedBackend(backend);
             result.append(debugger);

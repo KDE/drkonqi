@@ -40,7 +40,6 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
     setWindowTitle(i18nc("@title title of the dialog", "About Bug Reporting - Help"));
 
     QVBoxLayout* layout = new QVBoxLayout(this);
-    setLayout(layout);
     m_textBrowser = new QTextBrowser(this);
     m_textBrowser->setMinimumSize(QSize(600, 300));
     connect(m_textBrowser, &QTextBrowser::anchorClicked, this, &AboutBugReportingDialog::handleInternalLinks);

@@ -9,8 +9,6 @@ endif ()
 
 configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
 
-add_definitions(-DKDE_DEFAULT_DEBUG_AREA=1410)
-
 add_subdirectory( data )
 add_subdirectory( parser )
 if ( WIN32 )

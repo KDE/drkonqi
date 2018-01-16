@@ -138,7 +138,7 @@ void ParseBugBacktraces::parse(const QString &comment)
     int end = -1;
     do {
         start = end + 1;
-        end = comment.indexOf('\n', start);
+        end = comment.indexOf(QLatin1Char('\n'), start);
         emit newLine(comment.mid(start, (end != -1 ? end - start + 1 : end)));
     } while (end != -1);
 

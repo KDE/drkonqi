@@ -59,7 +59,7 @@ static const char kWalletEntryName[] = "drkonqi_bugzilla";
 static const char kWalletEntryUsername[] = "username";
 static const char kWalletEntryPassword[] = "password";
 
-static QString konquerorKWalletEntryName = KDE_BUGZILLA_URL + "index.cgi#login";
+static QString konquerorKWalletEntryName = KDE_BUGZILLA_URL + QStringLiteral("index.cgi#login");
 static const char konquerorKWalletEntryUsername[] = "Bugzilla_login";
 static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
@@ -238,11 +238,11 @@ bool BugzillaLoginPage::canSetCookies()
         qDebug() << "Bugzilla software no longer issues cookies.";
         return false;
     }
-    QDBusInterface kded(QLatin1String("org.kde.kded5"),
-                        QLatin1String("/kded"),
-                        QLatin1String("org.kde.kded5"));
-    QDBusReply<bool> kcookiejarLoaded = kded.call(QLatin1String("loadModule"),
-                                                  QLatin1String("kcookiejar"));
+    QDBusInterface kded(QStringLiteral("org.kde.kded5"),
+                        QStringLiteral("/kded"),
+                        QStringLiteral("org.kde.kded5"));
+    QDBusReply<bool> kcookiejarLoaded = kded.call(QStringLiteral("loadModule"),
+                                                  QStringLiteral("kcookiejar"));
     if (!kcookiejarLoaded.isValid()) {
         KMessageBox::error(this, i18n("Failed to communicate with kded. Make sure it is running."));
         return false;
@@ -252,10 +252,10 @@ bool BugzillaLoginPage::canSetCookies()
     }
 
 
-    QDBusInterface kcookiejar(QLatin1String("org.kde.kded5"),
-                              QLatin1String("/modules/kcookiejar"),
-                              QLatin1String("org.kde.KCookieServer"));
-    QDBusReply<QString> advice = kcookiejar.call(QLatin1String("getDomainAdvice"),
+    QDBusInterface kcookiejar(QStringLiteral("org.kde.kded5"),
+                              QStringLiteral("/modules/kcookiejar"),
+                              QStringLiteral("org.kde.KCookieServer"));
+    QDBusReply<QString> advice = kcookiejar.call(QStringLiteral("getDomainAdvice"),
                                                  KDE_BUGZILLA_URL);
 
     if (!advice.isValid()) {
@@ -420,50 +420,50 @@ void BugzillaInformationPage::aboutToShow()
         if (DrKonqi::systemInformation()->bugzillaPlatform() == QLatin1String("unspecified")) {
             m_distroComboVisible = true;
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Unspecified"),"unspecified");
+                                                   "Unspecified"),QStringLiteral("unspecified"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Archlinux"), "Archlinux Packages");
+                                                   "Archlinux"), QStringLiteral("Archlinux Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Chakra"), "Chakra");
+                                                   "Chakra"), QStringLiteral("Chakra"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian stable"), "Debian stable");
+                                                   "Debian stable"), QStringLiteral("Debian stable"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian testing"), "Debian testing");
+                                                   "Debian testing"), QStringLiteral("Debian testing"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian unstable"), "Debian unstable");
+                                                   "Debian unstable"), QStringLiteral("Debian unstable"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Exherbo"), "Exherbo Packages");
+                                                   "Exherbo"), QStringLiteral("Exherbo Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Fedora"), "Fedora RPMs");
+                                                   "Fedora"), QStringLiteral("Fedora RPMs"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Gentoo"), "Gentoo Packages");
+                                                   "Gentoo"), QStringLiteral("Gentoo Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mageia"), "Mageia RPMs");
+                                                   "Mageia"), QStringLiteral("Mageia RPMs"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mandriva"), "Mandriva RPMs");
+                                                   "Mandriva"), QStringLiteral("Mandriva RPMs"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Neon"), "Neon Packages");
+                                                   "Neon"), QStringLiteral("Neon Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "OpenSUSE"), "openSUSE RPMs");
+                                                   "OpenSUSE"), QStringLiteral("openSUSE RPMs"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Pardus"), "Pardus Packages");
+                                                   "Pardus"), QStringLiteral("Pardus Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "RedHat"), "RedHat RPMs");
+                                                   "RedHat"), QStringLiteral("RedHat RPMs"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Slackware"), "Slackware Packages");
+                                                   "Slackware"), QStringLiteral("Slackware Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
                                                    "Ubuntu (and derivatives)"),
-                                                   "Ubuntu Packages");
+                                                   QStringLiteral("Ubuntu Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "FreeBSD (Ports)"), "FreeBSD Ports");
+                                                   "FreeBSD (Ports)"), QStringLiteral("FreeBSD Ports"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "NetBSD (pkgsrc)"), "NetBSD pkgsrc");
+                                                   "NetBSD (pkgsrc)"), QStringLiteral("NetBSD pkgsrc"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "OpenBSD"), "OpenBSD Packages");
+                                                   "OpenBSD"), QStringLiteral("OpenBSD Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mac OS X"), "MacPorts Packages");
+                                                   "Mac OS X"), QStringLiteral("MacPorts Packages"));
             ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Solaris"), "Solaris Packages");
+                                                   "Solaris"), QStringLiteral("Solaris Packages"));
 
             //Restore previously selected bugzilla platform (distribution)
             KConfigGroup config(KSharedConfig::openConfig(), "BugzillaInformationPage");
@@ -509,10 +509,10 @@ int BugzillaInformationPage::currentDescriptionCharactersCount()
     description.remove(QStringLiteral("What I was doing when the application crashed"));
     description.remove(QStringLiteral("Unusual behavior I noticed"));
     description.remove(QStringLiteral("Custom settings of the application"));
-    description.remove('\n');
-    description.remove('-');
-    description.remove(':');
-    description.remove(' ');
+    description.remove(QLatin1Char('\n'));
+    description.remove(QLatin1Char('-'));
+    description.remove(QLatin1Char(':'));
+    description.remove(QLatin1Char(' '));
 
     return description.size();
 }
@@ -558,7 +558,7 @@ bool BugzillaInformationPage::showNextPage()
             QString message = i18nc("@info","The description about the crash details does not provide "
                                         "enough information yet.<br /><br />");
 
-            message += ' ' + i18nc("@info","The amount of required information is proportional to "
+            message += QLatin1Char(' ') + i18nc("@info","The amount of required information is proportional to "
                                         "the quality of the other information like the backtrace "
                                         "or the reproducibility rate."
                                         "<br /><br />");
@@ -566,12 +566,12 @@ bool BugzillaInformationPage::showNextPage()
             if (reportInterface()->userCanProvideActionsAppDesktop()
                 || reportInterface()->userCanProvideUnusualBehavior()
                 || reportInterface()->userCanProvideApplicationConfigDetails()) {
-                message += ' ' + i18nc("@info","Previously, you told DrKonqi that you could provide some "
+                message += QLatin1Char(' ') + i18nc("@info","Previously, you told DrKonqi that you could provide some "
                                         "contextual information. Try writing more details about your situation. "
                                         "(even little ones could help us.)<br /><br />");
             }
 
-            message += ' ' + i18nc("@info","If you cannot provide more information, your report "
+            message += QLatin1Char(' ') + i18nc("@info","If you cannot provide more information, your report "
                                     "will probably waste developers' time. Can you tell us more?");
 
             KGuiItem yesItem = KStandardGuiItem::yes();
@@ -636,23 +636,23 @@ void BugzillaInformationPage::showDescriptionHelpExamples()
     QString descriptionHelp = i18nc("@info:tooltip help and examples of good bug descriptions",
                                   "Describe in as much detail as possible the crash circumstances:");
     if (reportInterface()->userCanProvideActionsAppDesktop()) {
-        descriptionHelp += "<br />" +
+        descriptionHelp += QStringLiteral("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Detail which actions were you taking inside and outside the "
                                  "application an instant before the crash.");
     }
     if (reportInterface()->userCanProvideUnusualBehavior()) {
-        descriptionHelp += "<br />" +
+        descriptionHelp += QStringLiteral("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Note if you noticed any unusual behavior in the application "
                                  "or in the whole environment.");
     }
     if (reportInterface()->userCanProvideApplicationConfigDetails()) {
-        descriptionHelp += "<br />" +
+        descriptionHelp += QStringLiteral("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Note any non-default configuration in the application.");
         if (reportInterface()->appDetailsExamples()->hasExamples()) {
-            descriptionHelp += ' ' +
+            descriptionHelp += QLatin1Char(' ') +
                                i18nc("@info:tooltip examples of configuration details. "
                                      "the examples are already translated",
                                      "Examples: %1",
@@ -822,11 +822,10 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    QVBoxLayout * layout = new QVBoxLayout();
+    QVBoxLayout * layout = new QVBoxLayout(this);
     layout->addLayout(titleLayout);
     layout->addWidget(htmlView);
     layout->addWidget(buttonBox);
-    setLayout(layout);
 
     m_extendedHTMLError = extendedMessage;
     mainLabel->setText(i18nc("@label", "There was an unhandled Bugzilla error: %1.<br />"

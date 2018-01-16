@@ -116,6 +116,9 @@ void BacktraceParserKdbgwin::newLine(const QString & lineStr)
         break; //we don't want crap in the backtrace ;)
     case BacktraceLine::StackFrame:
         d->m_linesToRate.append(line);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
+        Q_FALLTHROUGH();
+#endif
     default:
         d->m_linesList.append(line);
     }

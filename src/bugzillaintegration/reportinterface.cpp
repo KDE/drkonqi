@@ -207,7 +207,7 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
         Q_FOREACH(const QString & dupe, m_possibleDuplicates) {
             duplicatesString += QLatin1String("bug ") + dupe + QLatin1String(", ");
         }
-        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + '.';
+        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + QLatin1Char('.');
         report.append(QStringLiteral("The reporter indicates this bug may be a duplicate of or related to %1\n")
                         .arg(duplicatesString));
     }
@@ -221,7 +221,7 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
             duplicatesString += QLatin1String("bug ") + m_allPossibleDuplicatesByQuery.at(i) +
                                 QLatin1String(", ");
         }
-        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + '.';
+        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + QLatin1Char('.');
         report.append(QStringLiteral("Possible duplicates by query: %1\n").arg(duplicatesString));
     }
 

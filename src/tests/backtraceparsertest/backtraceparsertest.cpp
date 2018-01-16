@@ -27,7 +27,7 @@
 
 BacktraceParserTest::BacktraceParserTest(QObject *parent)
     : QObject(parent),
-      m_settings(DATA_DIR "/" SETTINGS_FILE, QSettings::IniFormat),
+      m_settings(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + QString::fromLatin1(SETTINGS_FILE), QSettings::IniFormat),
       m_generator(new FakeBacktraceGenerator(this))
 {
 }
@@ -44,9 +44,9 @@ void BacktraceParserTest::fetchData(const QString & group)
 
     foreach(const QString & key, keys) {
         QTest::newRow(key.toLocal8Bit())
-            << QString(DATA_DIR"/" + key)
-            << m_settings.value(group + "/" + key).toString()
-            << m_settings.value("debugger/" + key).toString();
+            << QString(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + key)
+            << m_settings.value(group + QLatin1Char('/') + key).toString()
+            << m_settings.value(QStringLiteral("debugger/") + key).toString();
     }
 }
 
@@ -69,7 +69,7 @@ void BacktraceParserTest::btParserUsefulnessTest()
     //convert usefulness to string
     QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
                                     BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
-    QString btUsefulness = metaUsefulness.valueToKey(parser->backtraceUsefulness());
+    QString btUsefulness = QString::fromLatin1(metaUsefulness.valueToKey(parser->backtraceUsefulness()));
 
     //compare
     QEXPECT_FAIL("test_e", "Working on it", Continue);
@@ -106,7 +106,7 @@ void BacktraceParserTest::btParserBenchmark_data()
     QStringList keys = m_settings.allKeys();
     foreach(const QString & key, keys) {
         QTest::newRow(key.toLocal8Bit())
-            << QString(DATA_DIR"/" + key)
+            << QString(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + key)
             << m_settings.value(key).toString();
     }
     m_settings.endGroup();

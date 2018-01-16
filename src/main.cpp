@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
     qa.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     KLocalizedString::setApplicationDomain("drkonqi5");
     QCoreApplication::setApplicationName(QStringLiteral("drkonqi"));
-    QCoreApplication::setApplicationVersion(version);
+    QCoreApplication::setApplicationVersion(QString::fromLatin1(version));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
     // Prevent KApplication from setting the crash handler. We will set it later...
@@ -68,9 +68,9 @@ int main(int argc, char* argv[])
     unsetenv("SESSION_MANAGER");
 
     KAboutData aboutData(QStringLiteral("drkonqi"), i18n("The KDE Crash Handler"),
-                         version, i18n(description),
+                         QString::fromLatin1(version), i18n(description),
                          KAboutLicense::GPL,
-                         i18n("(C) 2000-2009, The DrKonqi Authors"));
+                         i18n("(C) 2000-2018, The DrKonqi Authors"));
     aboutData.addAuthor(i18nc("@info:credit","Hans Petter Bieker"), QString(),
                          QStringLiteral("bieker@kde.org"));
     aboutData.addAuthor(i18nc("@info:credit","Dario Andres Rodriguez"), QString(),

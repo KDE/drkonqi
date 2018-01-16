@@ -32,7 +32,7 @@
 DebugPackageInstaller::DebugPackageInstaller(QObject *parent)
     : QObject(parent), m_installerProcess(nullptr), m_progressDialog(nullptr)
 {
-    m_executablePath = QStandardPaths::findExecutable(DEBUG_PACKAGE_INSTALLER_NAME); //defined from CMakeLists.txt
+    m_executablePath = QStandardPaths::findExecutable(QString::fromLatin1(DEBUG_PACKAGE_INSTALLER_NAME)); //defined from CMakeLists.txt
 }
 
 bool DebugPackageInstaller::canInstallDebugPackages() const
