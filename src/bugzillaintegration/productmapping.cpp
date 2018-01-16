@@ -21,7 +21,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <QDebug>
+#include "drkonqi_debug.h"
 #include <QStandardPaths>
 
 #include "bugzillalib.h"
@@ -68,10 +68,10 @@ void ProductMapping::mapUsingInternalFile(const QString & appName)
                 m_bugzillaComponent = list.at(1);
                 m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
             } else {
-                qWarning() << "Error while reading mapping entry. Sections found " << list.count();
+                qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Sections found " << list.count();
             }
         } else {
-            qWarning() << "Error while reading mapping entry. Entry exists but it is empty "
+            qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
                             "(or there was an error when reading)";
         }
     }
@@ -90,7 +90,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
     if (productGroup.hasKey(bugzillaProduct)) {
         QString group = productGroup.readEntry(bugzillaProduct);
         if (group.isEmpty()) {
-            qWarning() << "Error while reading mapping entry. Entry exists but it is empty "
+            qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
                             "(or there was an error when reading)";
             return;
         }
@@ -114,7 +114,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
                     m_relatedBugzillaProducts.append(relatedGroups);
                 }
             } else {
-                qWarning() << "Error while reading mapping entry. Entry exists but it is empty "
+                qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
                                 "(or there was an error when reading)";
             }
         }

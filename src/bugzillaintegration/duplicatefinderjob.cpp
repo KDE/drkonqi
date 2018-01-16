@@ -19,7 +19,7 @@
 
 #include "duplicatefinderjob.h"
 
-#include <QDebug>
+#include "drkonqi_debug.h"
 
 #include "backtracegenerator.h"
 #include "parser/backtraceparser.h"
@@ -32,7 +32,7 @@ DuplicateFinderJob::DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager
     m_manager(manager),
     m_bugIds(bugIds)
 {
-    qDebug() << "Possible duplicates:" << m_bugIds;
+    qCDebug(DRKONQI_LOG) << "Possible duplicates:" << m_bugIds;
     connect(m_manager, &BugzillaManager::bugReportFetched, this, &DuplicateFinderJob::slotBugReportFetched);
     connect(m_manager, &BugzillaManager::bugReportError, this, &DuplicateFinderJob::slotBugReportError);
 }
@@ -59,7 +59,7 @@ void DuplicateFinderJob::analyzeNextBug()
     }
 
     const int bugId = m_bugIds.takeFirst();
-    qDebug() << "Fetching:" << bugId;
+    qCDebug(DRKONQI_LOG) << "Fetching:" << bugId;
     m_manager->fetchBugReport(bugId, this);
 }
 
@@ -68,10 +68,10 @@ void DuplicateFinderJob::fetchBug(const QString &bugId)
     bool ok;
     const int num = bugId.toInt(&ok);
     if (ok) {
-        qDebug() << "Fetching:" << bugId;
+        qCDebug(DRKONQI_LOG) << "Fetching:" << bugId;
         m_manager->fetchBugReport(num, this);
     } else {
-        qDebug() << "Bug id not valid:" << bugId;
+        qCDebug(DRKONQI_LOG) << "Bug id not valid:" << bugId;
         analyzeNextBug();
     }
 }
@@ -87,26 +87,26 @@ void DuplicateFinderJob::slotBugReportFetched(const BugReport &bug, QObject *own
 
     BacktraceGenerator *btGenerator = DrKonqi::debuggerManager()->backtraceGenerator();
     const ParseBugBacktraces::DuplicateRating rating = parse.findDuplicate(btGenerator->parser()->parsedBacktraceLines());
-    qDebug() << "Duplicate rating:" << rating;
+    qCDebug(DRKONQI_LOG) << "Duplicate rating:" << rating;
 
     //TODO handle more cases here
     if (rating != ParseBugBacktraces::PerfectDuplicate) {
-        qDebug() << "Bug" << bug.bugNumber() << "most likely not a duplicate:" << rating;
+        qCDebug(DRKONQI_LOG) << "Bug" << bug.bugNumber() << "most likely not a duplicate:" << rating;
         analyzeNextBug();
         return;
     }
 
     //The Bug is a duplicate, now find out the status and resolution of the existing report
     if (bug.resolutionValue() == BugReport::Duplicate) {
-        qDebug() << "Found duplicate is a duplicate itself.";
+        qCDebug(DRKONQI_LOG) << "Found duplicate is a duplicate itself.";
         if (!m_result.duplicate) {
             m_result.duplicate = bug.bugNumberAsInt();
         }
         fetchBug(bug.markedAsDuplicateOf());
     } else if ((bug.statusValue() == BugReport::UnknownStatus) || (bug.resolutionValue() == BugReport::UnknownResolution)) {
-        qDebug() << "Either the status or the resolution is unknown.";
-        qDebug() << "Status \"" << bug.bugStatus() << "\" known:" << (bug.statusValue() != BugReport::UnknownStatus);
-        qDebug() << "Resolution \"" << bug.resolution() << "\" known:" << (bug.resolutionValue() != BugReport::UnknownResolution);
+        qCDebug(DRKONQI_LOG) << "Either the status or the resolution is unknown.";
+        qCDebug(DRKONQI_LOG) << "Status \"" << bug.bugStatus() << "\" known:" << (bug.statusValue() != BugReport::UnknownStatus);
+        qCDebug(DRKONQI_LOG) << "Resolution \"" << bug.resolution() << "\" known:" << (bug.resolutionValue() != BugReport::UnknownResolution);
         analyzeNextBug();
     } else {
         if (!m_result.duplicate) {
@@ -115,7 +115,7 @@ void DuplicateFinderJob::slotBugReportFetched(const BugReport &bug, QObject *own
         m_result.parentDuplicate = bug.bugNumberAsInt();
         m_result.status = bug.statusValue();
         m_result.resolution = bug.resolutionValue();
-        qDebug() << "Found duplicate information (id/status/resolution):" << bug.bugNumber() << bug.bugStatus() << bug.resolution();
+        qCDebug(DRKONQI_LOG) << "Found duplicate information (id/status/resolution):" << bug.bugNumber() << bug.bugStatus() << bug.resolution();
         emitResult();
     }
 }
@@ -125,6 +125,6 @@ void DuplicateFinderJob::slotBugReportError(const QString &message, QObject *own
     if (this != owner) {
         return;
     }
-    qDebug() << "Error fetching bug:" << message;
+    qCDebug(DRKONQI_LOG) << "Error fetching bug:" << message;
     analyzeNextBug();
 }

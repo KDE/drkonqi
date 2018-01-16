@@ -36,13 +36,13 @@ int main(int argc, char *argv[])
 
     if (argc != 3)
     {
-        kFatal() << "Parameters are incorrect";
+        qCCritical(DRKONQI_LOG) << "Parameters are incorrect";
         return -1;
     }
 
     if (!Process::EnableDebugPrivilege())
     {
-        kFatal() << "Cannot enable debug privilege, exiting";
+        qCCritical(DRKONQI_LOG) << "Cannot enable debug privilege, exiting";
         return -1;
     }
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     Process proc;
     if (!proc.GetInfo(argv[1], argv[2]))
     {
-        kFatal() << "Cannot attach to process, exiting";
+        qCCritical(DRKONQI_LOG) << "Cannot attach to process, exiting";
         return -1;
     }
 

@@ -46,7 +46,7 @@ QString AbstractBTGenerator::GetModuleName()
 
     if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module))
     {
-        kError() << "SymGetModuleInfo64 failed: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "SymGetModuleInfo64 failed: " << GetLastError();
         return QLatin1String(DEFAULT_MODULE);
     }
 
@@ -62,7 +62,7 @@ QString AbstractBTGenerator::GetModulePath()
 
     if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module))
     {
-        kError() << "SymGetModuleInfo64 failed: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "SymGetModuleInfo64 failed: " << GetLastError();
         return QLatin1String(DEFAULT_MODULE);
     }
 
@@ -93,7 +93,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
     assert(dw != DWORD(-1));
     if (dw == DWORD(-1))
     {
-        kError() << "SuspendThread() failed: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "SuspendThread() failed: " << GetLastError();
         return;
     }
 
@@ -107,7 +107,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
         {
             ResumeThread(hThread);
             assert(false);
-            kError() << "GetThreadContext() failed: " << GetLastError();
+            qCCritical(DRKONQI_LOG) << "GetThreadContext() failed: " << GetLastError();
             return;
         }
     }
@@ -117,13 +117,13 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
         HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, L"Local\\KCrashShared");
         if (hMapFile == NULL)
         {
-            kError() << "OpenFileMapping() failed: " << GetLastError();
+            qCCritical(DRKONQI_LOG) << "OpenFileMapping() failed: " << GetLastError();
             return;
         }
         CONTEXT *othercontext = (CONTEXT*) MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(CONTEXT));
         if (othercontext == NULL)
         {
-            kError() << "MapViewOfFile() failed: " << GetLastError();
+            qCCritical(DRKONQI_LOG) << "MapViewOfFile() failed: " << GetLastError();
             SafeCloseHandle(hMapFile);
             return;
         }
@@ -173,7 +173,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
             NULL))
         {
             emit Finished();
-            kDebug() << "Stackwalk finished; GetLastError=" << GetLastError();
+            qCDebug(DRKONQI_LOG) << "Stackwalk finished; GetLastError=" << GetLastError();
             break;
         }
         

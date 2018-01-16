@@ -40,6 +40,7 @@
     * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #include "drkonqi.h"
+#include "drkonqi_debug.h"
 
 #include <QtCore/QPointer>
 #include <QtCore/QTextStream>
@@ -96,7 +97,7 @@ public:
     }
 protected:
     void timerEvent(QTimerEvent *event) override {
-        qDebug() << "Enabling drkonqi crash catching";
+        qCDebug(DRKONQI_LOG) << "Enabling drkonqi crash catching";
         KCrash::setDrKonqiEnabled(true);
         killTimer(event->timerId());
         this->deleteLater();
@@ -113,7 +114,7 @@ bool DrKonqi::init()
         // is not drkonqi already. If it is drkonqi, delay enabling crash catching
         // to prevent recursive crashes (in case it crashes at startup)
         if (crashedApplication()->fakeExecutableBaseName() != QLatin1String("drkonqi")) {
-            qDebug() << "Enabling drkonqi crash catching";
+            qCDebug(DRKONQI_LOG) << "Enabling drkonqi crash catching";
             KCrash::setDrKonqiEnabled(true);
         } else {
             new EnableCrashCatchingDelayed;

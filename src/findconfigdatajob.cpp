@@ -89,7 +89,7 @@ QStringList FindConfigDataJob::data(InformationType type)
         result = temp.split(',', QString::SkipEmptyParts);
     }
 
-    kDebug() << "Found data for " + key + ':' << result << result.count();
+    qCDebug(DRKONQI_LOG) << "Found data for " + key + ':' << result << result.count();
     return result;
 }
 

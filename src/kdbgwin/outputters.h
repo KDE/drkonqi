@@ -45,6 +45,6 @@ public:
 
 public slots:
     /// The slot that will be called for each line emitted by the generator. This method
-    /// sends the string to stdout and kDebug()
+    /// sends the string to stdout and qCDebug(DRKONQI_LOG)
     void OnDebugLine(const QString&);
 };

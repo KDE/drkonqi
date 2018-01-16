@@ -33,7 +33,7 @@
 #include <QtDBus/QDBusInterface>
 #include <QtDBus/QDBusReply>
 
-#include <QDebug>
+#include "drkonqi_debug.h"
 #include <KMessageBox>
 #include <KToolInvocation>
 #include <KLocalizedString>
@@ -235,7 +235,7 @@ void BugzillaLoginPage::walletLogin()
 bool BugzillaLoginPage::canSetCookies()
 {
     if (bugzillaManager()->securityMethod() != BugzillaManager::UseCookies) {
-        qDebug() << "Bugzilla software no longer issues cookies.";
+        qCDebug(DRKONQI_LOG) << "Bugzilla software no longer issues cookies.";
         return false;
     }
     QDBusInterface kded(QStringLiteral("org.kde.kded5"),
@@ -263,7 +263,7 @@ bool BugzillaLoginPage::canSetCookies()
         return false;
     }
 
-    qDebug() << "Got reply from KCookieServer:" << advice.value();
+    qCDebug(DRKONQI_LOG) << "Got reply from KCookieServer:" << advice.value();
 
     if (advice.value() == QLatin1String("Reject")) {
         QString msg = i18nc("@info 1 is the bugzilla website url",
@@ -283,7 +283,7 @@ bool BugzillaLoginPage::canSetCookies()
                                                        KDE_BUGZILLA_URL,
                                                        QStringLiteral("Accept"));
             if (!success.isValid() || !success.value()) {
-                qWarning() << "Failed to set domain advice in KCookieServer";
+                qCWarning(DRKONQI_LOG) << "Failed to set domain advice in KCookieServer";
                 return false;
             } else {
                 return true;

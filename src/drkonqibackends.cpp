@@ -28,7 +28,7 @@
 #include <KConfigGroup>
 #include <KCrash>
 #include <QStandardPaths>
-#include <QDebug>
+#include "drkonqi_debug.h"
 
 #include "crashedapplication.h"
 #include "debugger.h"
@@ -64,7 +64,7 @@ bool KCrashBackend::init()
 
     //check whether the attached process exists and whether we have permissions to inspect it
     if (crashedApplication()->pid() <= 0) {
-        qWarning() << "Invalid pid specified";
+        qCWarning(DRKONQI_LOG) << "Invalid pid specified";
         return false;
     }
 
@@ -72,10 +72,10 @@ bool KCrashBackend::init()
     if (::kill(crashedApplication()->pid(), 0) < 0) {
         switch (errno) {
         case EPERM:
-            qWarning() << "DrKonqi doesn't have permissions to inspect the specified process";
+            qCWarning(DRKONQI_LOG) << "DrKonqi doesn't have permissions to inspect the specified process";
             break;
         case ESRCH:
-            qWarning() << "The specified process does not exist.";
+            qCWarning(DRKONQI_LOG) << "The specified process does not exist.";
             break;
         default:
             break;
@@ -123,7 +123,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     //try to determine the executable that crashed
     if ( QFileInfo(QStringLiteral("/proc/%1/exe").arg(a->m_pid)).exists() ) {
         //on linux, the fastest and most reliable way is to get the path from /proc
-        qDebug() << "Using /proc to determine executable path";
+        qCDebug(DRKONQI_LOG) << "Using /proc to determine executable path";
         a->m_executable.setFile(QFile::symLinkTarget(QStringLiteral("/proc/%1/exe").arg(a->m_pid)));
 
         if (DrKonqi::isKdeinit() ||
@@ -148,8 +148,8 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
         }
     }
 
-    qDebug() << "Executable is:" << a->m_executable.absoluteFilePath();
-    qDebug() << "Executable exists:" << a->m_executable.exists();
+    qCDebug(DRKONQI_LOG) << "Executable is:" << a->m_executable.absoluteFilePath();
+    qCDebug(DRKONQI_LOG) << "Executable exists:" << a->m_executable.exists();
 
     return a;
 }
@@ -181,7 +181,7 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
         if (firstKnownGoodDebugger.isValid()) {
             preferredDebugger = firstKnownGoodDebugger;
         } else {
-            qWarning() << "Unable to find an internal debugger that can work with the KCrash backend";
+            qCWarning(DRKONQI_LOG) << "Unable to find an internal debugger that can work with the KCrash backend";
         }
     }
 
@@ -191,7 +191,7 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 void KCrashBackend::stopAttachedProcess()
 {
     if (m_state == ProcessRunning) {
-        qDebug() << "Sending SIGSTOP to process";
+        qCDebug(DRKONQI_LOG) << "Sending SIGSTOP to process";
         ::kill(crashedApplication()->pid(), SIGSTOP);
         m_state = ProcessStopped;
     }
@@ -200,7 +200,7 @@ void KCrashBackend::stopAttachedProcess()
 void KCrashBackend::continueAttachedProcess()
 {
     if (m_state == ProcessStopped) {
-        qDebug() << "Sending SIGCONT to process";
+        qCDebug(DRKONQI_LOG) << "Sending SIGCONT to process";
         ::kill(crashedApplication()->pid(), SIGCONT);
         m_state = ProcessRunning;
     }

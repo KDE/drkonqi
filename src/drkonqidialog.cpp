@@ -26,7 +26,7 @@
 #include <QStandardPaths>
 #include <QMenu>
 #include <QDialogButtonBox>
-#include <QDebug>
+#include "drkonqi_debug.h"
 #include <QDesktopServices>
 
 #include "drkonqi.h"
@@ -254,7 +254,7 @@ void DrKonqiDialog::removeDebugger(AbstractDebuggerLauncher *launcher)
         m_debugMenu->removeAction(action);
         action->deleteLater();
     } else {
-        qWarning() << "Invalid launcher";
+        qCWarning(DRKONQI_LOG) << "Invalid launcher";
     }
 }
 
@@ -281,7 +281,7 @@ void DrKonqiDialog::linkActivated(const QString& link)
     } else if (link == DRKONQI_REPORT_BUG_URL) {
         QDesktopServices::openUrl(QUrl(link));
     } else if (link.startsWith(QLatin1String("http"))) {
-        qWarning() << "unexpected link";
+        qCWarning(DRKONQI_LOG) << "unexpected link";
         QDesktopServices::openUrl(QUrl(link));
     }
 }

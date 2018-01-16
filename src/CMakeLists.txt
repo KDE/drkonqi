@@ -75,6 +75,9 @@ ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_bugzilla_send.ui
 )
 
+ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi)
+
+
 add_executable(drkonqi ${drkonqi_SRCS})
 ecm_mark_nongui_executable(drkonqi)
 

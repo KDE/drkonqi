@@ -30,20 +30,20 @@ BOOL Callbacks::ReadProcessMemory(HANDLE hProcess, DWORD64 qwBaseAddr, PVOID lpB
     SIZE_T st;
     BOOL bRet = ::ReadProcessMemory(hProcess, (LPVOID) qwBaseAddr, (LPVOID) lpBuf, nSize, &st);
     *lpBytesRead = (DWORD) st;
-    //kDebug() << "bytes read=" << st << "; bRet=" << bRet << "; LastError: " << GetLastError();
+    //qCDebug(DRKONQI_LOG) << "bytes read=" << st << "; bRet=" << bRet << "; LastError: " << GetLastError();
     return bRet;
 }
 
 PVOID Callbacks::SymFunctionTableAccess64(HANDLE hProcess, DWORD64 qwAddr)
 {
     PVOID ret = ::SymFunctionTableAccess64(hProcess, qwAddr);
-    //kDebug() << "ret=" << ret << "; LastError: " << GetLastError();
+    //qCDebug(DRKONQI_LOG) << "ret=" << ret << "; LastError: " << GetLastError();
     return ret;
 }
 
 DWORD64 Callbacks::SymGetModuleBase64(HANDLE hProcess, DWORD64 qwAddr)
 {
     DWORD64 ret = ::SymGetModuleBase64(hProcess, qwAddr);
-    //kDebug() << "ret=" << ret << "; LastError: " << GetLastError();
+    //qCDebug(DRKONQI_LOG) << "ret=" << ret << "; LastError: " << GetLastError();
     return ret;
 }

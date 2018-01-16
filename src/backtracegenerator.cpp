@@ -28,7 +28,7 @@
 #include "backtracegenerator.h"
 
 #include <QTemporaryFile>
-#include <QDebug>
+#include "drkonqi_debug.h"
 #include <KShell>
 #include <KProcess>
 
@@ -51,7 +51,7 @@ BacktraceGenerator::BacktraceGenerator(const Debugger & debugger, QObject *paren
 BacktraceGenerator::~BacktraceGenerator()
 {
     if (m_proc && m_proc->state() == QProcess::Running) {
-        qWarning() << "Killing running debugger instance";
+        qCWarning(DRKONQI_LOG) << "Killing running debugger instance";
         m_proc->disconnect(this);
         m_proc->terminate();
         if (!m_proc->waitForFinished(10000)) {

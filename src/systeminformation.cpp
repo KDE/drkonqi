@@ -30,7 +30,7 @@
 #include <QtCore/QFile>
 
 #include <KProcess>
-#include <QDebug>
+#include "drkonqi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -83,7 +83,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
     //Run lsb_release async
     QString lsb_release = QStandardPaths::findExecutable(QLatin1String("lsb_release"));
     if ( !lsb_release.isEmpty() ) {
-        qDebug() << "found lsb_release";
+        qCDebug(DRKONQI_LOG) << "found lsb_release";
         KProcess *process = new KProcess();
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
         process->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));
@@ -217,7 +217,7 @@ QString SystemInformation::fetchOSDetailInformation() const
 #ifdef HAVE_UNAME
     struct utsname buf;
     if (uname(&buf) == -1) {
-        qDebug() << "call to uname failed" << errno;
+        qCDebug(DRKONQI_LOG) << "call to uname failed" << errno;
     } else {
         operatingSystem = QString::fromLocal8Bit(buf.sysname) + QLatin1Char(' ')
             + QString::fromLocal8Bit(buf.release) + QLatin1Char(' ')

@@ -19,6 +19,7 @@
 #include "backtraceparsergdb.h"
 #include "backtraceparserkdbgwin.h"
 #include "backtraceparsernull.h"
+#include "drkonqi_parser_debug.h"
 #include <QtCore/QRegExp>
 #include <QtCore/QMetaEnum>
 #include <QtCore/QDebug>
@@ -170,7 +171,7 @@ static bool lineIsStackBase(const BacktraceLine & line)
 
 /* This function returns true if the given stack frame line is the top of the bactrace
    and thus the parser should not rate any frames above that one. This is used to avoid
-   rating the stack frames of abort(), assert(), Q_ASSERT() and qFatal() */
+   rating the stack frames of abort(), assert(), Q_ASSERT() and qCCritical(DRKONQI_PARSER_LOG) */
 static bool lineIsStackTop(const BacktraceLine & line)
 {
     //optimization. if there is no function name, do not bother to check it
@@ -323,7 +324,7 @@ void BacktraceParser::calculateRatingData()
         rating += static_cast<uint>(line.rating()) * multiplier;
         bestPossibleRating += static_cast<uint>(BacktraceLine::BestRating) * multiplier;
 
-        qDebug() << line.rating() << line.toString();
+        qCDebug(DRKONQI_PARSER_LOG) << line.rating() << line.toString();
     }
 
     //Generate a simplified backtrace
@@ -383,11 +384,11 @@ void BacktraceParser::calculateRatingData()
         }
     }
 
-    qDebug() << "Rating:" << rating << "out of" << bestPossibleRating << "Usefulness:"
+    qCDebug(DRKONQI_PARSER_LOG) << "Rating:" << rating << "out of" << bestPossibleRating << "Usefulness:"
              << staticMetaObject.enumerator(staticMetaObject.indexOfEnumerator("Usefulness")).valueToKey(d->m_usefulness);
-    qDebug() << "90%:" << (bestPossibleRating*0.90) << "70%:" << (bestPossibleRating*0.70)
+    qCDebug(DRKONQI_PARSER_LOG) << "90%:" << (bestPossibleRating*0.90) << "70%:" << (bestPossibleRating*0.70)
              << "40%:" << (bestPossibleRating*0.40);
-    qDebug() << "Have seen stack base:" << haveSeenStackBase << "Lines counted:" << counter;
+    qCDebug(DRKONQI_PARSER_LOG) << "Have seen stack base:" << haveSeenStackBase << "Lines counted:" << counter;
 }
 
 

@@ -20,10 +20,10 @@
 
 #include "bugzillalib.h"
 
-#include <QtCore/QtGlobal>
-#include <QtCore/QTextStream>
-#include <QtCore/QByteArray>
-#include <QtCore/QString>
+#include <QtGlobal>
+#include <QTextStream>
+#include <QByteArray>
+#include <QString>
 
 #include <QtXml/QDomNode>
 #include <QtXml/QDomNodeList>
@@ -32,7 +32,7 @@
 
 #include <KIO/Job>
 #include <KLocalizedString>
-#include <QDebug>
+#include "drkonqi_debug.h"
 
 #define MAKE_BUGZILLA_VERSION(a,b,c) (((a) << 16) | ((b) << 8) | (c))
 
@@ -63,10 +63,14 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
         , m_searchJob(nullptr)
 {
     m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + QStringLiteral("xmlrpc.cgi")), this);
-    m_xmlRpcClient->setUserAgent(QLatin1String("DrKonqi"));
+    m_xmlRpcClient->setUserAgent(QStringLiteral("DrKonqi"));
     // Allow constructors for ReportInterface and assistant dialogs to finish.
     // We do not want them to be racing the remote Bugzilla database.
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    QMetaObject::invokeMethod (this, &BugzillaManager::lookupVersion, Qt::QueuedConnection);
+#else
     QMetaObject::invokeMethod (this, "lookupVersion", Qt::QueuedConnection);
+#endif
 }
 
 // BEGIN Checks of Bugzilla software versions.
@@ -99,7 +103,7 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
         digits << QLatin1String("0");
     }
     if (digits.count() > nVersionParts) {
-        qWarning() << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
+        qCWarning(DRKONQI_LOG) << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
     }
     int currentVersion = MAKE_BUGZILLA_VERSION(digits.at(0).toUInt(),
                              digits.at(1).toUInt(), digits.at(2).toUInt());
@@ -115,7 +119,7 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
         m_security = UsePasswords;
     }
 
-    qDebug() << "VERSION" << version << "SECURITY" << m_security;
+    qCDebug(DRKONQI_LOG) << "VERSION" << version << "SECURITY" << m_security;
 }
 // END Checks of Bugzilla software versions.
 
@@ -127,16 +131,16 @@ void BugzillaManager::callBugzilla(const char* method, const char* id,
     if (security == SecurityEnabled) {
         switch (m_security) {
         case UseTokens:
-            qDebug() << method << id << "using token";
+            qCDebug(DRKONQI_LOG) << method << id << "using token";
             args.insert(QLatin1String("Bugzilla_token"), m_token);
             break;
         case UsePasswords:
-            qDebug() << method << id << "using username" << m_username;
+            qCDebug(DRKONQI_LOG) << method << id << "using username" << m_username;
             args.insert(QLatin1String("Bugzilla_login"), m_username);
             args.insert(QLatin1String("Bugzilla_password"), m_password);
             break;
         case UseCookies:
-            qDebug() << method << id << "using cookies";
+            qCDebug(DRKONQI_LOG) << method << id << "using cookies";
             // Some KDE process other than Dr Konqi should provide cookies.
             break;
         }
@@ -407,7 +411,7 @@ void BugzillaManager::fetchProductInfoFinished(const QVariantMap & map)
 
 void BugzillaManager::callMessage(const QList<QVariant> & result, const QVariant & id)
 {
-    qDebug() << id << result;
+    qCDebug(DRKONQI_LOG) << id << result;
 
     if (id.toString() == QLatin1String("login")) {
         if ((m_security == UseTokens) && (result.count() > 0)) {
@@ -450,7 +454,7 @@ void BugzillaManager::callMessage(const QList<QVariant> & result, const QVariant
 
 void BugzillaManager::callFault(int errorCode, const QString & errorString, const QVariant & id)
 {
-    qDebug() << id << errorCode << errorString;
+    qCDebug(DRKONQI_LOG) << id << errorCode << errorString;
 
     QString genericError = i18nc("@info", "Received unexpected error code %1 from bugzilla. "
                                  "Error message was: %2", errorCode, errorString);

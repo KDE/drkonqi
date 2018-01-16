@@ -35,7 +35,7 @@ Process::Process()
 // to successfully use ReadProcessMemory()
 BOOL Process::EnableDebugPrivilege()
 {
-    kDebug() << "Enabling debug privilege";
+    qCDebug(DRKONQI_LOG) << "Enabling debug privilege";
     HANDLE hToken = NULL;
 
     if (!OpenThreadToken(GetCurrentThread(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, FALSE, &hToken))
@@ -44,18 +44,18 @@ BOOL Process::EnableDebugPrivilege()
         {
             if (!ImpersonateSelf(SecurityImpersonation))
             {
-                kError() << "ImpersonateSelf() failed: " << GetLastError();
+                qCCritical(DRKONQI_LOG) << "ImpersonateSelf() failed: " << GetLastError();
                 return FALSE;
             }
             if (!OpenThreadToken(GetCurrentThread(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, FALSE, &hToken))
             {
-                kError() << "OpenThreadToken() #2 failed: " << GetLastError();
+                qCCritical(DRKONQI_LOG) << "OpenThreadToken() #2 failed: " << GetLastError();
                 return FALSE;
             }
         }
         else
         {
-            kError() << "OpenThreadToken() #1 failed: " << GetLastError();
+            qCCritical(DRKONQI_LOG) << "OpenThreadToken() #1 failed: " << GetLastError();
             return FALSE;
         }
     }
@@ -64,7 +64,7 @@ BOOL Process::EnableDebugPrivilege()
     if (!LookupPrivilegeValue(NULL, SE_DEBUG_NAME, &luid))
     {
         assert(false);
-        kError() << "Cannot lookup privilege: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "Cannot lookup privilege: " << GetLastError();
         SafeCloseHandle(hToken);
         return FALSE;
     }
@@ -77,7 +77,7 @@ BOOL Process::EnableDebugPrivilege()
     if (!AdjustTokenPrivileges(hToken, FALSE, &tp, NULL, (PTOKEN_PRIVILEGES) NULL, (PDWORD) NULL))
     {
         assert(false);
-        kError() << "Cannot adjust privilege: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "Cannot adjust privilege: " << GetLastError();
         SafeCloseHandle(hToken);
         return FALSE;
     }
@@ -88,7 +88,7 @@ BOOL Process::EnableDebugPrivilege()
 
 BOOL Process::GetInfo(const char* pid, const char* threadId)
 {
-    kDebug() << "Trying to get info about pid=" << pid;
+    qCDebug(DRKONQI_LOG) << "Trying to get info about pid=" << pid;
 
     DWORD dwPid = DWORD(atoi(pid));
     DWORD dwThread = DWORD(atoi(threadId));
@@ -99,7 +99,7 @@ BOOL Process::GetInfo(const char* pid, const char* threadId)
     assert(hProcess);
     if (hProcess == NULL)
     {
-        kError() << "Cannot open process " << dwPid << ": " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "Cannot open process " << dwPid << ": " << GetLastError();
         return m_bValid;
     }
     m_dwPid = dwPid;
@@ -115,7 +115,7 @@ BOOL Process::GetInfo(const char* pid, const char* threadId)
     HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, NULL);
     if (hSnapshot == INVALID_HANDLE_VALUE)
     {
-        kError() << "CreateToolhelp32Snapshot() failed: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "CreateToolhelp32Snapshot() failed: " << GetLastError();
         assert(false);
         return m_bValid;
     }
@@ -130,14 +130,14 @@ BOOL Process::GetInfo(const char* pid, const char* threadId)
         {
             if (te.th32OwnerProcessID == dwPid)
             {
-                kDebug() << "Found thread " << te.th32ThreadID << ", adding to list";
+                qCDebug(DRKONQI_LOG) << "Found thread " << te.th32ThreadID << ", adding to list";
                 
                 HANDLE hThread = NULL;
                 hThread = OpenThread(THREAD_ALL_ACCESS, FALSE, te.th32ThreadID);
                 assert(hThread);
                 if (hThread == NULL)
                 {
-                    kError() << "Cannot open thread " << te.th32ThreadID << ": " << GetLastError();
+                    qCCritical(DRKONQI_LOG) << "Cannot open thread " << te.th32ThreadID << ": " << GetLastError();
                     continue;
                 }
                 
@@ -157,7 +157,7 @@ BOOL Process::GetInfo(const char* pid, const char* threadId)
     DWORD cbNeeded = 0;
     if (!EnumProcessModules(hProcess, hMods, ArrayCount(hMods), &cbNeeded))
     {
-        kError() << "Cannot enumerate modules: " << GetLastError();
+        qCCritical(DRKONQI_LOG) << "Cannot enumerate modules: " << GetLastError();
         return m_bValid;
     }
     for (size_t i = 0; i < (cbNeeded / sizeof(hMods[0])); i++)
@@ -171,7 +171,7 @@ BOOL Process::GetInfo(const char* pid, const char* threadId)
         if (GetModuleFileNameEx(hProcess, hMods[i], (LPTSTR) szModName, MAX_PATH))
         {
             //QString str = QString::fromUtf16(szModName);
-            //kDebug() << "Got module: " << str;
+            //qCDebug(DRKONQI_LOG) << "Got module: " << str;
             //m_modules.push_back(QString::fromUtf16(szModName));
             m_modules[QString::fromUtf16(szModName)] = hMods[i];
         }

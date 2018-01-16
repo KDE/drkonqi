@@ -15,6 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "detachedprocessmonitor.h"
+#include "drkonqi_debug.h"
 
 #include <errno.h>
 #include <signal.h>
@@ -37,7 +38,7 @@ void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
 {
     Q_ASSERT(m_pid != 0);
     if (::kill(m_pid, 0) < 0) {
-        qDebug() << "Process" << m_pid << "finished. kill(2) returned errno:" << errno;
+        qCDebug(DRKONQI_LOG) << "Process" << m_pid << "finished. kill(2) returned errno:" << errno;
         killTimer(event->timerId());
         m_pid = 0;
         emit processFinished();
