@@ -122,9 +122,9 @@ private:
     uint     m_attachToBugNumber;
     uint     m_duplicate;
 
-    ProductMapping *    m_productMapping;
-    BugzillaManager *   m_bugzillaManager;
-    ApplicationDetailsExamples * m_appDetailsExamples;
+    ProductMapping *    m_productMapping = nullptr;
+    BugzillaManager *   m_bugzillaManager = nullptr;
+    ApplicationDetailsExamples * m_appDetailsExamples = nullptr;
 };
 
 #endif

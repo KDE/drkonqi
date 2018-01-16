@@ -27,7 +27,7 @@ class DebuggerManager : public QObject
 {
     Q_OBJECT
 public:
-    DebuggerManager(const Debugger & internalDebugger,
+    explicit DebuggerManager(const Debugger & internalDebugger,
                     const QList<Debugger> & externalDebuggers,
                     QObject *parent = nullptr);
     ~DebuggerManager() override;

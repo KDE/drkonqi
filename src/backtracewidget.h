@@ -51,11 +51,11 @@ Q_SIGNALS:
     void stateChanged();
 
 private:
-    BacktraceGenerator * m_btGenerator;
+    BacktraceGenerator * m_btGenerator = nullptr;
     Ui::Form    ui;
-    BacktraceRatingWidget *   m_backtraceRatingWidget;
-    QSyntaxHighlighter *m_highlighter;
-    DebugPackageInstaller * m_debugPackageInstaller;
+    BacktraceRatingWidget *   m_backtraceRatingWidget = nullptr;
+    QSyntaxHighlighter *m_highlighter = nullptr;
+    DebugPackageInstaller * m_debugPackageInstaller = nullptr;
 
     void setAsLoading();
 

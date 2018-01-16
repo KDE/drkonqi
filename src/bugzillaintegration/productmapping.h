@@ -57,7 +57,7 @@ private:
     QString     m_bugzillaVersionString;
 
     const CrashedApplication *   m_crashedAppPtr;
-    BugzillaManager *   m_bugzillaManagerPtr;
+    BugzillaManager *   m_bugzillaManagerPtr = nullptr;
 
     bool m_bugzillaProductDisabled;
     bool m_bugzillaVersionDisabled;

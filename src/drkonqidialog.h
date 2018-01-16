@@ -60,20 +60,20 @@ private Q_SLOTS:
 private:
     void showAboutBugReporting();
 
-    QTabWidget *                        m_tabWidget;
+    QTabWidget *                        m_tabWidget = nullptr;
 
     QPointer<AboutBugReportingDialog>   m_aboutBugReportingDialog;
 
-    QWidget *                           m_introWidget;
+    QWidget *                           m_introWidget = nullptr;
     Ui::MainWidget                      ui;
 
-    BacktraceWidget *                   m_backtraceWidget;
+    BacktraceWidget *                   m_backtraceWidget = nullptr;
 
     QMenu *m_debugMenu;
     QHash<AbstractDebuggerLauncher*, QAction*> m_debugMenuActions;
-    QDialogButtonBox*                   m_buttonBox;
-    QPushButton*                        m_debugButton;
-    QPushButton*                        m_restartButton;
+    QDialogButtonBox*                   m_buttonBox = nullptr;
+    QPushButton*                        m_debugButton = nullptr;
+    QPushButton*                        m_restartButton = nullptr;
 };
 
 #endif

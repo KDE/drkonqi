@@ -41,7 +41,7 @@ class FindConfigDataJob : public KJob
          * @param productName e.g. "plasma"
          * @param bugtrackerBaseUrl e.g. "https://bugs.kde.org"
          */
-        explicit FindConfigDataJob(const QString &productName, const QUrl &bugtrackerBaseUrl, QObject *parent = 0);
+        explicit FindConfigDataJob(const QString &productName, const QUrl &bugtrackerBaseUrl, QObject *parent = nullptr);
         virtual ~FindConfigDataJob();
 
         virtual void start();
@@ -61,7 +61,7 @@ class FindConfigDataJob : public KJob
         void receivedData(KJob *job);
 
     private:
-        KIO::StoredTransferJob *m_job;
+        KIO::StoredTransferJob *m_job = nullptr;
         QUrl m_url;
         QString m_data;
         QString m_errorString;

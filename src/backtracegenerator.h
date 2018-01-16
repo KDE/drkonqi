@@ -78,15 +78,15 @@ private Q_SLOTS:
 
 private:
     const Debugger    m_debugger;
-    KProcess *        m_proc;
-    QTemporaryFile *  m_temp;
+    KProcess *        m_proc = nullptr;
+    QTemporaryFile *  m_temp = nullptr;
     QByteArray        m_output;
     State             m_state;
-    BacktraceParser * m_parser;
+    BacktraceParser * m_parser = nullptr;
     QString           m_parsedBacktrace;
 
 #ifdef BACKTRACE_PARSER_DEBUG
-    BacktraceParser * m_debugParser;
+    BacktraceParser * m_debugParser = nullptr;
 #endif
 };
 

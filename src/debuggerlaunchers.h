@@ -56,7 +56,7 @@ private Q_SLOTS:
 
 private:
     const Debugger m_debugger;
-    DetachedProcessMonitor *m_monitor;
+    DetachedProcessMonitor *m_monitor = nullptr;
 };
 
 #if 0

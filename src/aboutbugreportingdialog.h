@@ -37,7 +37,7 @@ private Q_SLOTS:
     void handleInternalLinks(const QUrl& url);
 
 private:
-    QTextBrowser * m_textBrowser;
+    QTextBrowser * m_textBrowser = nullptr;
 };
 
 #endif

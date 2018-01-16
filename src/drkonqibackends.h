@@ -41,8 +41,8 @@ protected:
     virtual DebuggerManager *constructDebuggerManager() = 0;
 
 private:
-    CrashedApplication *m_crashedApplication;
-    DebuggerManager *m_debuggerManager;
+    CrashedApplication *m_crashedApplication = nullptr;
+    DebuggerManager *m_debuggerManager = nullptr;
 };
 
 class KCrashBackend : public QObject, public AbstractDrKonqiBackend

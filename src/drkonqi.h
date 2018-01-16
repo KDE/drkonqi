@@ -71,8 +71,8 @@ private:
     ~DrKonqi();
     static DrKonqi *instance();
 
-    SystemInformation *m_systemInformation;
-    AbstractDrKonqiBackend *m_backend;
+    SystemInformation *m_systemInformation = nullptr;
+    AbstractDrKonqiBackend *m_backend = nullptr;
 
     int m_signal;
     QString m_appName;

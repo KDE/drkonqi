@@ -65,7 +65,7 @@ private:
     QHash<QLatin1String, KPageWidgetItem*>       m_pageWidgetMap;
 
     QPointer<AboutBugReportingDialog>   m_aboutBugReportingDialog;
-    ReportInterface *                m_reportInterface;
+    ReportInterface *                m_reportInterface = nullptr;
 
     bool                        m_canClose;
 };

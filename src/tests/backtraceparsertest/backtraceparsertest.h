@@ -39,7 +39,7 @@ private:
     void fetchData(const QString & group);
 
     QSettings m_settings;
-    FakeBacktraceGenerator *m_generator;
+    FakeBacktraceGenerator *m_generator = nullptr;
 };
 
 #endif

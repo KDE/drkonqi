@@ -431,8 +431,8 @@ private:
     bool        m_logged;
     SecurityMethod m_security;
 
-    KIO::Job *  m_searchJob;
-    KXmlRpc::Client *m_xmlRpcClient;
+    KIO::Job *  m_searchJob = nullptr;
+    KXmlRpc::Client *m_xmlRpcClient = nullptr;
 
     enum SecurityStatus {SecurityDisabled, SecurityEnabled};
     void callBugzilla(const char* method, const char* id,

@@ -48,8 +48,8 @@ class DebugPackageInstaller: public QObject
         void canceled();
 
     private:
-        KProcess *              m_installerProcess;
-        QProgressDialog *       m_progressDialog;
+        KProcess *              m_installerProcess = nullptr;
+        QProgressDialog *       m_progressDialog = nullptr;
         QString                 m_executablePath;
         QStringList             m_missingLibraries;
 };

@@ -88,7 +88,7 @@ class DuplicateFinderJob : public KJob
         void fetchBug(const QString &bugId);
 
     private:
-        BugzillaManager *m_manager;
+        BugzillaManager *m_manager = nullptr;
         QList<int> m_bugIds;
         Result m_result;
 };

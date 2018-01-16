@@ -55,7 +55,7 @@ class ParseBugBacktraces : QObject
         void parse(const QString &comment);
 
     private:
-        BacktraceParser *m_parser;
+        BacktraceParser *m_parser = nullptr;
         const BugReport m_bug;
         QList<QList<BacktraceLine> > m_backtraces;
 };
