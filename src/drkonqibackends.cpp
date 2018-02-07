@@ -21,8 +21,8 @@
 #include <sys/types.h>
 #include <signal.h>
 
-#include <QtCore/QTimer>
-#include <QtCore/QDir>
+#include <QTimer>
+#include <QDir>
 
 #include <KConfig>
 #include <KConfigGroup>

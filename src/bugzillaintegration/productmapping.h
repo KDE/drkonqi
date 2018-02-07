@@ -20,9 +20,9 @@
 #ifndef PRODUCTMAPPING__H
 #define PRODUCTMAPPING__H
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
+#include <QObject>
+#include <QString>
+#include <QStringList>
 
 class Product;
 class BugzillaManager;

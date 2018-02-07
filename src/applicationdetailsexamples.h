@@ -20,8 +20,8 @@
 #ifndef APPLICATIONDETAILSEXAMPLES__H
 #define APPLICATIONDETAILSEXAMPLES__H
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
+#include <QObject>
+#include <QString>
 
 class ApplicationDetailsExamples : QObject
 {

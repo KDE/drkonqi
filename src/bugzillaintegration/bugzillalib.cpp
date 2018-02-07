@@ -25,10 +25,10 @@
 #include <QByteArray>
 #include <QString>
 
-#include <QtXml/QDomNode>
-#include <QtXml/QDomNodeList>
-#include <QtXml/QDomElement>
-#include <QtXml/QDomNamedNodeMap>
+#include <QDomNode>
+#include <QDomNodeList>
+#include <QDomElement>
+#include <QDomNamedNodeMap>
 
 #include <KIO/Job>
 #include <KLocalizedString>

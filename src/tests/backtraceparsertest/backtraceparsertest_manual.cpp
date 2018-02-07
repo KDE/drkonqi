@@ -16,11 +16,11 @@
 */
 #include "fakebacktracegenerator.h"
 #include "../../parser/backtraceparser.h"
-#include <QtCore/QFile>
-#include <QtCore/QSharedPointer>
-#include <QtCore/QTextStream>
-#include <QtCore/QMetaEnum>
-#include <QtCore/QCoreApplication>
+#include <QFile>
+#include <QSharedPointer>
+#include <QTextStream>
+#include <QMetaEnum>
+#include <QCoreApplication>
 #include <QCommandLineParser>
 #include <kaboutdata.h>
 #include <KLocalizedString>

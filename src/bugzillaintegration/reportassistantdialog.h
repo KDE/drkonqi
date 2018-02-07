@@ -20,7 +20,7 @@
 #ifndef REPORTASSISTANTDIALOG__H
 #define REPORTASSISTANTDIALOG__H
 
-#include <QtCore/QPointer>
+#include <QPointer>
 
 #include <KAssistantDialog>
 

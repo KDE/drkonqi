@@ -21,10 +21,10 @@
 #ifndef BUGZILLALIB__H
 #define BUGZILLALIB__H
 
-#include <QtCore/QObject>
-#include <QtCore/QMap>
-#include <QtCore/QStringList>
-#include <QtXml/QDomDocument>
+#include <QObject>
+#include <QMap>
+#include <QStringList>
+#include <QDomDocument>
 
 #include <kxmlrpcclient/client.h>
 

@@ -19,8 +19,7 @@
 
 #include "reportassistantpages_bugzilla.h"
 
-#include <QtCore/QTimer>
-
+#include <QTimer>
 #include <QLabel>
 #include <QCheckBox>
 #include <QToolTip>
@@ -30,8 +29,8 @@
 #include <QTextBrowser>
 #include <QDesktopServices>
 
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusReply>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 #include "drkonqi_debug.h"
 #include <KMessageBox>

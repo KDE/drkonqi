@@ -16,8 +16,8 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 #include "fakebacktracegenerator.h"
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
+#include <QFile>
+#include <QTextStream>
 
 void FakeBacktraceGenerator::sendData(const QString & filename)
 {

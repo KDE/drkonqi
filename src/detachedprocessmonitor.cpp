@@ -20,8 +20,8 @@
 #include <errno.h>
 #include <signal.h>
 
-#include <QtCore/QTimerEvent>
-#include <QtCore/QDebug>
+#include <QTimerEvent>
+#include <QDebug>
 
 DetachedProcessMonitor::DetachedProcessMonitor(QObject *parent)
         : QObject(parent), m_pid(0)

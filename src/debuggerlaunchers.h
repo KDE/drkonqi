@@ -17,7 +17,7 @@
 #ifndef DEBUGGERLAUNCHERS_H
 #define DEBUGGERLAUNCHERS_H
 
-#include <QtDBus/QDBusAbstractAdaptor>
+#include <QDBusAbstractAdaptor>
 
 #include "debugger.h"
 #include "debuggermanager.h"

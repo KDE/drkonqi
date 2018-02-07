@@ -21,8 +21,8 @@
 #ifndef REPORTINTERFACE__H
 #define REPORTINTERFACE__H
 
-#include <QtCore/QObject>
-#include <QtCore/QStringList>
+#include <QObject>
+#include <QStringList>
 
 class BugReport;
 

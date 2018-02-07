@@ -17,7 +17,7 @@
 #ifndef DRKONQIBACKENDS_H
 #define DRKONQIBACKENDS_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class CrashedApplication;
 class DebuggerManager;

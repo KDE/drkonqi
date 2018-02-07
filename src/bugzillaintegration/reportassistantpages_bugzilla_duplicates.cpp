@@ -19,9 +19,8 @@
 
 #include "reportassistantpages_bugzilla_duplicates.h"
 
-#include <QtCore/QDate>
-#include <QtCore/QTimer>
-
+#include <QDate>
+#include <QTimer>
 #include <QTreeWidgetItem>
 #include <QHeaderView>
 

@@ -20,7 +20,7 @@
 #ifndef DRKONQI_FIND_VERSIONS_JOB_H
 #define DRKONQI_FIND_VERSIONS_JOB_H
 
-#include <QtCore/QStringList>
+#include <QStringList>
 
 #include <KJob>
 #include <QUrl>

@@ -20,8 +20,8 @@
 #ifndef REPORTASSISTANTPAGES__BASE__H
 #define REPORTASSISTANTPAGES__BASE__H
 
-#include <QtCore/QPointer>
-#include <QtWidgets/QDialog>
+#include <QPointer>
+#include <QDialog>
 
 #include "reportassistantdialog.h"
 #include "reportassistantpage.h"

@@ -20,7 +20,7 @@
 #ifndef SYSTEMINFORMATION__H
 #define SYSTEMINFORMATION__H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class SystemInformation: public QObject
 {

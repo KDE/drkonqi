@@ -17,9 +17,9 @@
 #ifndef CRASHEDAPPLICATION_H
 #define CRASHEDAPPLICATION_H
 
-#include <QtCore/QObject>
-#include <QtCore/QDateTime>
-#include <QtCore/QFileInfo>
+#include <QObject>
+#include <QDateTime>
+#include <QFileInfo>
 
 #include "bugreportaddress.h"
 

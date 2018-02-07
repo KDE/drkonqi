@@ -19,7 +19,7 @@
 #ifndef STATUSWIDGET__H
 #define STATUSWIDGET__H
 
-#include <QtCore/QEvent>
+#include <QEvent>
 #include <QStackedWidget>
 #include <QLabel>
 #include <QTextDocument>

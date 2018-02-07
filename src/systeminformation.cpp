@@ -27,7 +27,7 @@
 # include <sys/utsname.h>
 #endif
 
-#include <QtCore/QFile>
+#include <QFile>
 
 #include <KProcess>
 #include "drkonqi_debug.h"

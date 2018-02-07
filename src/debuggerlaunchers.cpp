@@ -16,7 +16,7 @@
 */
 #include "debuggerlaunchers.h"
 
-#include <QtDBus/QDBusConnection>
+#include <QDBusConnection>
 
 #include <KShell>
 #include <KProcess>

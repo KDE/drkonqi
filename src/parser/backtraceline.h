@@ -18,8 +18,8 @@
 #ifndef BACKTRACELINE_H
 #define BACKTRACELINE_H
 
-#include <QtCore/QSharedData>
-#include <QtCore/QString>
+#include <QSharedData>
+#include <QString>
 
 class BacktraceLine
 {

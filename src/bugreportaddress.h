@@ -17,7 +17,7 @@
 #ifndef BUGREPORTADDRESS_H
 #define BUGREPORTADDRESS_H
 
-#include <QtCore/QString>
+#include <QString>
 
 #include "drkonqi_globals.h"
 

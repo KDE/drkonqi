@@ -20,7 +20,7 @@
 #ifndef DUPLICATE_FINDER_H
 #define DUPLICATE_FINDER_H
 
-#include <QtCore/QList>
+#include <QList>
 
 #include <KJob>
 

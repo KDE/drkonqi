@@ -19,10 +19,10 @@
 #define BACKTRACEPARSER_H
 
 #include "backtraceline.h"
-#include <QtCore/QObject>
-#include <QtCore/QStringList>
-#include <QtCore/QMetaType>
-#include <QtCore/QSet>
+#include <QObject>
+#include <QStringList>
+#include <QMetaType>
+#include <QSet>
 class BacktraceParserPrivate;
 
 class BacktraceParser : public QObject

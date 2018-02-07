@@ -17,7 +17,7 @@
 #ifndef DEBUGGERMANAGER_H
 #define DEBUGGERMANAGER_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class BacktraceGenerator;
 class Debugger;

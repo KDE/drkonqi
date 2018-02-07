@@ -17,7 +17,7 @@
 #ifndef DEBUGGER_H
 #define DEBUGGER_H
 
-#include <QtCore/QString>
+#include <QString>
 
 #include <KSharedConfig>
 

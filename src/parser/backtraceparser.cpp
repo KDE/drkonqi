@@ -20,9 +20,9 @@
 #include "backtraceparserkdbgwin.h"
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
-#include <QtCore/QRegExp>
-#include <QtCore/QMetaEnum>
-#include <QtCore/QDebug>
+#include <QRegExp>
+#include <QMetaEnum>
+#include <QDebug>
 
 //factory
 BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObject *parent)

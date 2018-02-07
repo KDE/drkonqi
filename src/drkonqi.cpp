@@ -42,12 +42,12 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
-#include <QtCore/QPointer>
-#include <QtCore/QTextStream>
-#include <QtCore/QTimerEvent>
-#include <QtCore/QTemporaryFile>
-#include <QtCore/QDebug>
-#include <QtWidgets/QFileDialog>
+#include <QPointer>
+#include <QTextStream>
+#include <QTimerEvent>
+#include <QTemporaryFile>
+#include <QDebug>
+#include <QFileDialog>
 
 #include <KMessageBox>
 #include <KCrash>

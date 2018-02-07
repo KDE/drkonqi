@@ -20,8 +20,8 @@
 #ifndef DRKONQIDIALOG__H
 #define DRKONQIDIALOG__H
 
-#include <QtCore/QPointer>
-#include <QtCore/QHash>
+#include <QPointer>
+#include <QHash>
 
 #include <QDialog>
 
