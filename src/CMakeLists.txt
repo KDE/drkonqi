@@ -110,7 +110,7 @@ if (${Qt5X11Extras_FOUND})
 endif()
 
 install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
-install(PROGRAMS org.kde.drkonqi.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(PROGRAMS org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 
 # Only go into tests once we have a drkonqi target so the tests can reference
