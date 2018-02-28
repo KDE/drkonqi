@@ -32,6 +32,7 @@ class AboutBugReportingDialog;
 class QTabWidget;
 class AbstractDebuggerLauncher;
 class QDialogButtonBox;
+class QMenu;
 
 class DrKonqiDialog: public QDialog
 {

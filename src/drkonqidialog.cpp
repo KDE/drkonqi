@@ -28,6 +28,8 @@
 #include <QDialogButtonBox>
 #include <QDebug>
 #include <QDesktopServices>
+#include <QTabBar>
+#include <QTabWidget>
 
 #include "drkonqi.h"
 #include "backtracewidget.h"
