@@ -28,6 +28,8 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#include <QIcon>
+
 #include <KAboutData>
 #include <KLocalizedString>
 #include <QCommandLineParser>
