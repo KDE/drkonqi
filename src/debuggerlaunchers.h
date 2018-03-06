@@ -29,7 +29,7 @@ class AbstractDebuggerLauncher : public QObject
     Q_OBJECT
     Q_PROPERTY(QString name READ name)
 public:
-    explicit AbstractDebuggerLauncher(DebuggerManager *parent = nullptr) : QObject(parent) {}
+    explicit AbstractDebuggerLauncher(QObject *parent = nullptr) : QObject(parent) {}
     virtual QString name() const = 0;
 
 public Q_SLOTS:
@@ -71,42 +71,41 @@ public slots:
 };
 #endif
 
-class DBusOldInterfaceAdaptor;
+class DBusInterfaceAdaptor;
 
 /** This class handles the old drkonqi dbus interface used by kdevelop */
-class DBusOldInterfaceLauncher : public AbstractDebuggerLauncher
+class DBusInterfaceLauncher : public AbstractDebuggerLauncher
 {
     Q_OBJECT
-    friend class DBusOldInterfaceAdaptor;
 public:
-    explicit DBusOldInterfaceLauncher(DebuggerManager *parent = nullptr);
+    explicit DBusInterfaceLauncher(const QString &name, DBusInterfaceAdaptor *parent = nullptr);
     QString name() const override;
 
 public Q_SLOTS:
     void start() override;
 
-Q_SIGNALS:
-    void available();
-
 private:
     QString m_name;
-    DBusOldInterfaceAdaptor *m_adaptor;
 };
 
-class DBusOldInterfaceAdaptor : public QDBusAbstractAdaptor
+class DBusInterfaceAdaptor : public QDBusAbstractAdaptor
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.Krash")
-    friend class DBusOldInterfaceLauncher;
+    Q_CLASSINFO("D-Bus Interface", "org.kde.drkonqi")
 public:
-    explicit DBusOldInterfaceAdaptor(DBusOldInterfaceLauncher *parent);
+    explicit DBusInterfaceAdaptor(DebuggerManager *parent);
 
 public Q_SLOTS:
     int pid();
-    Q_NOREPLY void registerDebuggingApplication(const QString & name);
+    Q_NOREPLY void registerDebuggingApplication(const QString &name);
+    Q_NOREPLY void debuggingFinished(const QString &name);
+    Q_NOREPLY void debuggerClosed(const QString &name);
 
 Q_SIGNALS:
-    void acceptDebuggingApplication();
+    void acceptDebuggingApplication(const QString &name);
+
+private:
+    QHash<QString, DBusInterfaceLauncher*> m_launchers;
 };
 
 #endif // DEBUGGERLAUNCHERS_H

@@ -27,7 +27,7 @@ struct DebuggerManager::Private
     BacktraceGenerator *btGenerator;
     bool debuggerRunning;
     QList<AbstractDebuggerLauncher*> externalDebuggers;
-    DBusOldInterfaceLauncher *dbusOldInterfaceLauncher;
+    DBusInterfaceAdaptor *dbusInterfaceAdaptor;
 };
 
 DebuggerManager::DebuggerManager(const Debugger & internalDebugger,
@@ -44,18 +44,13 @@ DebuggerManager::DebuggerManager(const Debugger & internalDebugger,
 
     foreach(const Debugger & debugger, externalDebuggers) {
         if (debugger.isInstalled()) {
-            AbstractDebuggerLauncher *l = new DefaultDebuggerLauncher(debugger, this); //FIXME
-            d->externalDebuggers.append(l);
-            connect(l, &AbstractDebuggerLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
-            connect(l, &AbstractDebuggerLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
-            connect(l, &AbstractDebuggerLauncher::invalidated, this, &DebuggerManager::onDebuggerInvalidated);
+            // TODO: use TerminalDebuggerLauncher instead
+            addDebugger(new DefaultDebuggerLauncher(debugger, this));
         }
     }
 
     //setup kdevelop compatibility
-    d->dbusOldInterfaceLauncher = new DBusOldInterfaceLauncher(this);
-    connect(d->dbusOldInterfaceLauncher, &DBusOldInterfaceLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
-    connect(d->dbusOldInterfaceLauncher, &DBusOldInterfaceLauncher::available, this, &DebuggerManager::onDBusOldInterfaceDebuggerAvailable);
+    d->dbusInterfaceAdaptor = new DBusInterfaceAdaptor(this);
 }
 
 DebuggerManager::~DebuggerManager()
@@ -90,6 +85,17 @@ BacktraceGenerator* DebuggerManager::backtraceGenerator() const
     return d->btGenerator;
 }
 
+void DebuggerManager::addDebugger(AbstractDebuggerLauncher *launcher, bool emitsignal)
+{
+    d->externalDebuggers.append(launcher);
+    connect(launcher, &DBusInterfaceLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
+    connect(launcher, &DBusInterfaceLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
+    connect(launcher, &AbstractDebuggerLauncher::invalidated, this, &DebuggerManager::onDebuggerInvalidated);
+    if (emitsignal) {
+        emit externalDebuggerAdded(launcher);
+    }
+}
+
 void DebuggerManager::onDebuggerStarting()
 {
     d->debuggerRunning = true;
@@ -113,11 +119,3 @@ void DebuggerManager::onDebuggerInvalidated()
     d->externalDebuggers.removeAt(index);
     emit externalDebuggerRemoved(launcher);
 }
-
-void DebuggerManager::onDBusOldInterfaceDebuggerAvailable()
-{
-    d->externalDebuggers.append(d->dbusOldInterfaceLauncher);
-    emit externalDebuggerAdded(d->dbusOldInterfaceLauncher);
-}
-
-

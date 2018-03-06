@@ -76,42 +76,59 @@ void TerminalDebuggerLauncher::start()
 #endif
 
 
-DBusOldInterfaceLauncher::DBusOldInterfaceLauncher(DebuggerManager *parent)
-    : AbstractDebuggerLauncher(parent)
+DBusInterfaceLauncher::DBusInterfaceLauncher(const QString &name, DBusInterfaceAdaptor *parent)
+    : AbstractDebuggerLauncher(parent), m_name(name)
 {
-    m_adaptor = new DBusOldInterfaceAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/krashinfo"), this);
 }
 
-QString DBusOldInterfaceLauncher::name() const
+QString DBusInterfaceLauncher::name() const
 {
     return m_name;
 }
 
-void DBusOldInterfaceLauncher::start()
+void DBusInterfaceLauncher::start()
 {
     emit starting();
-    emit m_adaptor->acceptDebuggingApplication();
+    emit static_cast<DBusInterfaceAdaptor*>(parent())->acceptDebuggingApplication(m_name);
 }
 
 
-DBusOldInterfaceAdaptor::DBusOldInterfaceAdaptor(DBusOldInterfaceLauncher *parent)
+DBusInterfaceAdaptor::DBusInterfaceAdaptor(DebuggerManager *parent)
     : QDBusAbstractAdaptor(parent)
 {
     Q_ASSERT(parent);
+
+    if (QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.drkonqi-%1").arg(pid()))) {
+        QDBusConnection::sessionBus().registerObject(QStringLiteral("/debugger"), parent);
+    }
 }
 
-int DBusOldInterfaceAdaptor::pid()
+int DBusInterfaceAdaptor::pid()
 {
     return DrKonqi::crashedApplication()->pid();
 }
 
-void DBusOldInterfaceAdaptor::registerDebuggingApplication(const QString & name)
+void DBusInterfaceAdaptor::registerDebuggingApplication(const QString &name)
 {
-    if ( static_cast<DBusOldInterfaceLauncher*>(parent())->m_name.isEmpty() && !name.isEmpty() ) {
-        static_cast<DBusOldInterfaceLauncher*>(parent())->m_name = name;
-        emit static_cast<DBusOldInterfaceLauncher*>(parent())->available();
+    if (!name.isEmpty() && !m_launchers.contains(name)) {
+        auto launcher = new DBusInterfaceLauncher(name, this);
+        m_launchers.insert(name, launcher);
+        static_cast<DebuggerManager*>(parent())->addDebugger(launcher, true);
     }
 }
 
+void DBusInterfaceAdaptor::debuggingFinished(const QString &name)
+{
+    auto it = m_launchers.find(name);
+    if (it != m_launchers.end()) {
+        emit it.value()->finished();
+    }
+}
 
+void DBusInterfaceAdaptor::debuggerClosed(const QString &name)
+{
+    auto it = m_launchers.find(name);
+    if (it != m_launchers.end()) {
+        emit it.value()->invalidated();
+    }
+}

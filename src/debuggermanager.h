@@ -36,6 +36,7 @@ public:
     bool showExternalDebuggers() const;
     QList<AbstractDebuggerLauncher*> availableExternalDebuggers() const;
     BacktraceGenerator *backtraceGenerator() const;
+    void addDebugger(AbstractDebuggerLauncher *launcher, bool emitsignal = false);
 
 Q_SIGNALS:
     void debuggerStarting();
@@ -48,7 +49,6 @@ private Q_SLOTS:
     void onDebuggerStarting();
     void onDebuggerFinished();
     void onDebuggerInvalidated();
-    void onDBusOldInterfaceDebuggerAvailable();
 
 private:
     struct Private;
