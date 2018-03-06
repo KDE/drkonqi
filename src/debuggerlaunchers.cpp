@@ -40,7 +40,7 @@ QString DefaultDebuggerLauncher::name() const
 
 void DefaultDebuggerLauncher::start()
 {
-    if ( qobject_cast<DebuggerManager*>(parent())->debuggerIsRunning() ) {
+    if ( static_cast<DebuggerManager*>(parent())->debuggerIsRunning() ) {
         qCWarning(DRKONQI_LOG) << "Another debugger is already running";
         return;
     }
