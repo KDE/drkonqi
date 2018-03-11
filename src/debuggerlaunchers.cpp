@@ -130,5 +130,6 @@ void DBusInterfaceAdaptor::debuggerClosed(const QString &name)
     auto it = m_launchers.find(name);
     if (it != m_launchers.end()) {
         emit it.value()->invalidated();
+        m_launchers.erase(it);
     }
 }

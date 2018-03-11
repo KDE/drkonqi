@@ -88,8 +88,8 @@ BacktraceGenerator* DebuggerManager::backtraceGenerator() const
 void DebuggerManager::addDebugger(AbstractDebuggerLauncher *launcher, bool emitsignal)
 {
     d->externalDebuggers.append(launcher);
-    connect(launcher, &DBusInterfaceLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
-    connect(launcher, &DBusInterfaceLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
+    connect(launcher, &AbstractDebuggerLauncher::starting, this, &DebuggerManager::onDebuggerStarting);
+    connect(launcher, &AbstractDebuggerLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
     connect(launcher, &AbstractDebuggerLauncher::invalidated, this, &DebuggerManager::onDebuggerInvalidated);
     if (emitsignal) {
         emit externalDebuggerAdded(launcher);
