@@ -389,7 +389,7 @@ public:
 
     /* Codes for security methods used by Bugzilla in various versions. */
     enum SecurityMethod {UseCookies, UseTokens, UsePasswords};
-    SecurityMethod securityMethod() { return m_security; };
+    SecurityMethod securityMethod() { return m_security; }
 
 private Q_SLOTS:
     /* Slots to handle KJob::finished */

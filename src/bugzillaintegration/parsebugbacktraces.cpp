@@ -108,8 +108,6 @@ ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceC
     } else {
         return ParseBugBacktraces::NoDuplicate;
     }
-
-    return ParseBugBacktraces::NoDuplicate;
 }
 
 ParseBugBacktraces::ParseBugBacktraces(const BugReport &bug, QObject *parent)
