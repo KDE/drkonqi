@@ -1,6 +1,7 @@
 # KDE Config File
 [Desktop Entry]
 Type=Application
+Exec=${KDE_INSTALL_FULL_LIBEXECDIR}/drkonqi
 Name=Dr Konqi
 Name[ca]=Dr Konqi
 Name[ca@valencia]=Dr Konqi
