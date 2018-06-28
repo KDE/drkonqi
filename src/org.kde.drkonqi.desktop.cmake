@@ -18,6 +18,7 @@ Name[hu]=Dr Konqi
 Name[id]=Dr Konqi
 Name[it]=Dr Konqi
 Name[ko]=Dr Konqi
+Name[nb]=Dr Konqi
 Name[nl]=Dr Konqi
 Name[nn]=Dr Konqi
 Name[pl]=Dr Konqi
