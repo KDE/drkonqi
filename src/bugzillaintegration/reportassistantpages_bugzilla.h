@@ -58,6 +58,7 @@ Q_SIGNALS:
     void loggedTurnToNextPage();
 
 private:
+    void updateWidget(bool enabled);
     bool kWalletEntryExists(const QString&);
     void openWallet();
     bool canSetCookies();

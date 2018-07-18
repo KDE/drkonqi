@@ -304,14 +304,7 @@ void BugzillaLoginPage::loginClicked()
             return;
         }
 
-        ui.m_loginButton->setEnabled(false);
-
-        ui.m_userLabel->setEnabled(false);
-        ui.m_passwordLabel->setEnabled(false);
-
-        ui.m_userEdit->setEnabled(false);
-        ui.m_passwordEdit->setEnabled(false);
-        ui.m_savePasswordCheckBox->setEnabled(false);
+        updateWidget(false);
 
         if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data
             if (!m_wallet) {
@@ -350,6 +343,18 @@ void BugzillaLoginPage::loginClicked()
     }
 }
 
+void BugzillaLoginPage::updateWidget(bool enabled)
+{
+    ui.m_loginButton->setEnabled(enabled);
+
+    ui.m_userLabel->setEnabled(enabled);
+    ui.m_passwordLabel->setEnabled(enabled);
+
+    ui.m_userEdit->setEnabled(enabled);
+    ui.m_passwordEdit->setEnabled(enabled);
+    ui.m_savePasswordCheckBox->setEnabled(enabled);
+}
+
 void BugzillaLoginPage::loginFinished(bool logged)
 {
     if (logged) {
@@ -366,13 +371,7 @@ void BugzillaLoginPage::loginFinished(bool logged)
     } else {
         ui.m_statusWidget->setIdle(i18nc("@info:status","<b>Error: Invalid username or "
                                                                                   "password</b>"));
-
-        ui.m_loginButton->setEnabled(true);
-
-        ui.m_userEdit->setEnabled(true);
-        ui.m_passwordEdit->setEnabled(true);
-        ui.m_savePasswordCheckBox->setEnabled(true);
-
+        updateWidget(true);
         ui.m_userEdit->setFocus(Qt::OtherFocusReason);
     }
 }
