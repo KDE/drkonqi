@@ -24,7 +24,7 @@ class BacktraceParserPrivate
 {
 public:
     BacktraceParserPrivate() : m_usefulness(BacktraceParser::InvalidUsefulness) {}
-    virtual ~BacktraceParserPrivate() {}
+    ~BacktraceParserPrivate() {}
 
     QList<BacktraceLine> m_linesList;
     QList<BacktraceLine> m_linesToRate;
