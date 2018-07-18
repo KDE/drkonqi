@@ -263,7 +263,7 @@ void ConclusionPage::finishClicked()
 
 void ConclusionPage::aboutToShow()
 {
-    connect(assistant(), SIGNAL(user1Clicked()), this, SLOT(finishClicked()));
+    connect(assistant()->finishButton(), &QPushButton::clicked, this, &ConclusionPage::finishClicked);
     ui.m_restartAppOnFinish->setVisible(false);
     ui.m_restartAppOnFinish->setChecked(false);
 
@@ -404,7 +404,7 @@ void ConclusionPage::aboutToShow()
 
 void ConclusionPage::aboutToHide()
 {
-    assistant()->disconnect(SIGNAL(user1Clicked()), this, SLOT(finishClicked()));
+    disconnect(assistant()->finishButton(), &QPushButton::clicked, this, &ConclusionPage::finishClicked);
 }
 
 void ConclusionPage::openReportInformation()

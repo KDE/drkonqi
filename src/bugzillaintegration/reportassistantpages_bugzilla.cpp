@@ -706,7 +706,7 @@ BugzillaSendPage::BugzillaSendPage(ReportAssistantDialog * parent)
     ui.m_launchPageOnFinish->setVisible(false);
     ui.m_restartAppOnFinish->setVisible(false);
 
-    connect(assistant(), SIGNAL(user1Clicked()), this, SLOT(finishClicked()));
+    connect(assistant()->finishButton(), &QPushButton::clicked, this, &BugzillaSendPage::finishClicked);
 }
 
 void BugzillaSendPage::retryClicked()
