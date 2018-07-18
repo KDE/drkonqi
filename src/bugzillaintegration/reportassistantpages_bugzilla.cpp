@@ -88,10 +88,10 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
     connect(ui.m_loginButton, &QPushButton::clicked, this, &BugzillaLoginPage::loginClicked);
 
     connect(ui.m_userEdit, &KLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
-    connect(ui.m_passwordEdit, &KLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
+    connect(ui.m_passwordEdit->lineEdit(), &QLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
 
     connect(ui.m_userEdit, &KLineEdit::textChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
-    connect(ui.m_passwordEdit, &KLineEdit::textChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
+    connect(ui.m_passwordEdit, &KPasswordLineEdit::passwordChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
 
     ui.m_noticeLabel->setText(
                         xi18nc("@info/rich","<note>You need a user account on the "
@@ -119,7 +119,7 @@ void BugzillaLoginPage::bugzillaVersionFound()
 void BugzillaLoginPage::updateLoginButtonStatus()
 {
     ui.m_loginButton->setEnabled( !ui.m_userEdit->text().isEmpty() &&
-                                  !ui.m_passwordEdit->text().isEmpty() &&
+                                  !ui.m_passwordEdit->password().isEmpty() &&
                                   m_bugzillaVersionFound );
 }
 
@@ -198,7 +198,7 @@ void BugzillaLoginPage::walletLogin()
 
                 if (!username.isEmpty() && !password.isEmpty()) {
                     ui.m_userEdit->setText(username);
-                    ui.m_passwordEdit->setText(password);
+                    ui.m_passwordEdit->setPassword(password);
                 }
             }
         } else if (kWalletEntryExists(konquerorKWalletEntryName)) {
@@ -223,7 +223,7 @@ void BugzillaLoginPage::walletLogin()
                     ui.m_savePasswordCheckBox->setCheckState(Qt::Checked);
 
                     ui.m_userEdit->setText(username);
-                    ui.m_passwordEdit->setText(password);
+                    ui.m_passwordEdit->setPassword(password);
                 }
             }
 
@@ -297,7 +297,7 @@ bool BugzillaLoginPage::canSetCookies()
 
 void BugzillaLoginPage::loginClicked()
 {
-    if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->text().isEmpty())) {
+    if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty())) {
 
         if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
             && (!canSetCookies())) {
@@ -316,7 +316,7 @@ void BugzillaLoginPage::loginClicked()
 
                 QMap<QString, QString> values;
                 values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
-                values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->text());
+                values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
                 m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
             }
 
@@ -337,7 +337,7 @@ void BugzillaLoginPage::loginClicked()
                                       "Performing login at %1 as %2...",
                                       QLatin1String(KDE_BUGZILLA_SHORT_URL), ui.m_userEdit->text()));
 
-        bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->text());
+        bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->password());
     } else {
         loginFinished(false);
     }
