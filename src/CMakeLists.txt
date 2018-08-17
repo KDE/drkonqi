@@ -12,6 +12,9 @@ configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonq
 add_subdirectory( data )
 add_subdirectory( parser )
 if ( WIN32 )
+    find_package(KDEWin REQUIRED)
+    # for finding drkonqi_debug.h
+    include_directories(${CMAKE_CURRENT_BINARY_DIR})
     add_subdirectory( kdbgwin )
 endif ()
 
@@ -107,6 +110,10 @@ if (${Qt5X11Extras_FOUND})
     target_link_libraries(drkonqi
         Qt5::X11Extras
     )
+endif()
+
+if (WIN32)
+    target_link_libraries(drkonqi kdewin)
 endif()
 
 install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})

@@ -27,6 +27,9 @@
 
 #include "common.h"
 
+#include <QString>
+#include <QMap>
+
 typedef QMap<DWORD, HANDLE>     TThreadsMap;
 typedef QMap<QString, HMODULE>   TModulesMap;
 

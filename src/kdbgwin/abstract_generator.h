@@ -28,6 +28,8 @@
 #include "common.h"
 #include "process.h"
 
+#include <QObject>
+
 const static char*      BACKTRACE_FORMAT    = "%1!%2() [%3 @ %4] at 0x%5";
 // module.dll!KClass::function() [c:\file.cpp @ 10] at 0x0001000
 

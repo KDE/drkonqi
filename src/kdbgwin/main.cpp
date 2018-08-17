@@ -27,12 +27,14 @@
 #include "mingw_generator.h"
 #include "outputters.h"
 #include "process.h"
+#include "common.h"
+
 #include <QCoreApplication>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
-    QCoreApplication::setApplicationName("kdbgwin");
+    QCoreApplication::setApplicationName(QStringLiteral("kdbgwin"));
 
     if (argc != 3)
     {

@@ -27,6 +27,50 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service 
 find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
 set_package_properties(Qt5X11Extras PROPERTIES TYPE RECOMMENDED PURPOSE "Recommended for better integration on X11.")
 
+if (MINGW)
+    find_package(ZLIB REQUIRED)
+    find_library(INTL_LIBRARY NAMES intl)
+    find_library(IBERTY_LIBRARY NAMES iberty)
+    find_library(BFD_LIBRARY NAMES bfd)
+    if (IBERTY_LIBRARY)
+        set(iberty_FOUND 1)
+    else()
+        set(msg "iberty")
+    endif()
+    if (BFD_LIBRARY)
+        set(bfd_FOUND 1)
+    else()
+        set(msg "${msg} bfd")
+    endif()
+    if (INTL_LIBRARY)
+        set(intl_FOUND 1)
+    else()
+        set(msg "${msg} intl")
+    endif()
+    if (msg)
+        message(FATAL_ERROR "could not find ${msg}")
+    endif()
+    add_library(z STATIC IMPORTED)
+    set_target_properties(z PROPERTIES
+        IMPORTED_LOCATION ${ZLIB_LIBRARIES}
+        IMPORTED_INCLUDE_DIRECTORIES ${ZLIB_INCLUDE_DIRS}
+    )
+    add_library(intl SHARED IMPORTED)
+    set_target_properties(intl PROPERTIES
+        IMPORTED_IMPLIB ${INTL_LIBRARY}
+    )
+    add_library(iberty STATIC IMPORTED)
+    set_target_properties(iberty PROPERTIES
+        IMPORTED_LOCATION ${IBERTY_LIBRARY}
+    )
+    add_library(bfd STATIC IMPORTED)
+    set_target_properties(bfd PROPERTIES
+        IMPORTED_LOCATION ${BFD_LIBRARY}
+        # bfd header requires this to be defined
+        INTERFACE_COMPILE_DEFINITIONS "PACKAGE;PACKAGE_VERSION"
+    )
+endif()
+
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 

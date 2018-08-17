@@ -127,7 +127,7 @@ void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
 {
     QString symbolFile = module;
     symbolFile.truncate(symbolFile.length() - 4);
-    symbolFile.append(".sym");
+    symbolFile.append(QStringLiteral(".sym"));
 
     m_symbolsMap[module] = false; // default
     QString symbolType;

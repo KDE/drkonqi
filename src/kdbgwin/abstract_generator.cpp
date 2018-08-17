@@ -50,7 +50,7 @@ QString AbstractBTGenerator::GetModuleName()
         return QLatin1String(DEFAULT_MODULE);
     }
 
-    QStringList list = QString(module.ImageName).split("\\");
+    QStringList list = QString(QLatin1String(module.ImageName)).split(QStringLiteral("\\"));
     return list[list.size() - 1];
 }
 
@@ -66,7 +66,7 @@ QString AbstractBTGenerator::GetModulePath()
         return QLatin1String(DEFAULT_MODULE);
     }
 
-    return QString(module.ImageName);
+    return QString(QLatin1String(module.ImageName));
 }
 
 void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
