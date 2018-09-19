@@ -57,7 +57,7 @@ class FindConfigDataJob : public KJob
          */
         QStringList data(InformationType type);
 
-    private slots:
+    private Q_SLOTS:
         void receivedData(KJob *job);
 
     private:

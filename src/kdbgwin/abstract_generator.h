@@ -108,7 +108,7 @@ public:
 
     /// Tries to load a symbol file for a module loaded at dwBaseAddr
     virtual void LoadSymbol(const QString& module, DWORD64 dwBaseAddr) = 0;
-signals:
+Q_SIGNALS:
     /// This will be emitted whenever the generator wishes to output information. It can either be
     /// module information (in the form: "Loaded C:\path\to.dll (symbols loaded)", a stack frame line,
     /// or newlines

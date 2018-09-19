@@ -122,7 +122,7 @@ void BacktraceGenerator::slotReadInput()
 
     int pos;
     while ((pos = m_output.indexOf('\n')) != -1) {
-        QString line = QString::fromLocal8Bit(m_output, pos + 1);
+        QString line = QString::fromLocal8Bit(m_output.constData(), pos + 1);
         m_output.remove(0, pos + 1);
 
         emit newLine(line);

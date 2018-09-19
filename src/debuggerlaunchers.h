@@ -66,7 +66,7 @@ class TerminalDebuggerLauncher : public DefaultDebuggerLauncher
 public:
     explicit TerminalDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent = 0);
 
-public slots:
+public Q_SLOTS:
     virtual void start();
 };
 #endif

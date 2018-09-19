@@ -38,7 +38,7 @@ public:
 
     static bool notificationServiceRegistered();
 
-signals:
+Q_SIGNALS:
     void expired();
     void activated();
 
