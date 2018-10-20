@@ -8,6 +8,7 @@ Name[ca@valencia]=Dr Konqi
 Name[cs]=Dr Konqi
 Name[da]=Dr Konqi
 Name[de]=Dr Konqi
+Name[el]=Dr Konqi
 Name[en_GB]=Dr Konqi
 Name[es]=Dr Konqi
 Name[eu]=Dr Konqi
