@@ -66,11 +66,7 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
     m_xmlRpcClient->setUserAgent(QStringLiteral("DrKonqi"));
     // Allow constructors for ReportInterface and assistant dialogs to finish.
     // We do not want them to be racing the remote Bugzilla database.
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
     QMetaObject::invokeMethod (this, &BugzillaManager::lookupVersion, Qt::QueuedConnection);
-#else
-    QMetaObject::invokeMethod (this, "lookupVersion", Qt::QueuedConnection);
-#endif
 }
 
 // BEGIN Checks of Bugzilla software versions.
