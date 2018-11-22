@@ -19,6 +19,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMacroExpander>
+#include <QCoreApplication>
 #include <QDir>
 
 #include "crashedapplication.h"
