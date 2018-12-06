@@ -111,6 +111,11 @@ if (${Qt5X11Extras_FOUND})
         Qt5::X11Extras
     )
 endif()
+if (APPLE)
+    target_link_libraries(drkonqi
+        KF5::WindowSystem
+    )
+endif()
 
 if (WIN32)
     target_link_libraries(drkonqi kdewin)

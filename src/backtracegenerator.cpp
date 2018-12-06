@@ -56,9 +56,12 @@ BacktraceGenerator::~BacktraceGenerator()
         m_proc->terminate();
         if (!m_proc->waitForFinished(10000)) {
             m_proc->kill();
-            m_proc->waitForFinished();
+            // lldb can become "stuck" on OS X; just mark m_proc as to be deleted later rather
+            // than waiting a potentially very long time for it to heed the kill() request.
+            m_proc->deleteLater();
+        } else {
+            delete m_proc;
         }
-        delete m_proc;
         delete m_temp;
     }
 }
@@ -96,6 +99,13 @@ bool BacktraceGenerator::start()
     *m_proc << KShell::splitArgs(str);
     m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
     m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
+    // check if the debugger should take its input from a file we'll generate,
+    // and take the appropriate steps if so
+    QString stdinFile = m_debugger.backendValueOfParameter(QStringLiteral("ExecInputFile"));
+    Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName());
+    if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
+        m_proc->setStandardInputFile(stdinFile);
+    }
     connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
 
@@ -117,6 +127,11 @@ bool BacktraceGenerator::start()
 
 void BacktraceGenerator::slotReadInput()
 {
+    if (!m_proc) {
+        // this can happen with lldb after we detected that it detached from the debuggee.
+        return;
+    }
+
     // we do not know if the output array ends in the middle of an utf-8 sequence
     m_output += m_proc->readAllStandardOutput();
 
@@ -126,6 +141,23 @@ void BacktraceGenerator::slotReadInput()
         m_output.remove(0, pos + 1);
 
         emit newLine(line);
+        line = line.simplified();
+        if (line.startsWith(QLatin1String("Process ")) && line.endsWith(QLatin1String(" detached"))) {
+            // lldb is acting on a detach command (in lldbrc)
+            // Anything following this line doesn't interest us, and lldb has been known
+            // to turn into a zombie instead of exitting, thereby blocking us.
+            // Tell the process to quit if it's still running, and pretend it did.
+            if (m_proc && m_proc->state() == QProcess::Running) {
+                m_proc->terminate();
+                if (!m_proc->waitForFinished(500)) {
+                    m_proc->kill();
+                }
+                if (m_proc) {
+                    slotProcessExited(0, QProcess::NormalExit);
+                }
+            }
+            return;
+        }
     }
 }
 

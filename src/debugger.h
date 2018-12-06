@@ -70,6 +70,8 @@ public:
     /** If this is an external debugger, it returns whether it should be run in a terminal or not */
     bool runInTerminal() const;
 
+    /** Returns the value of the arbitrary configuration parameter @param key, or an empty QString if @param key isn't defined */
+    QString backendValueOfParameter(const QString &key) const;
 
     enum ExpandStringUsage {
         ExpansionUsagePlainText,

@@ -205,6 +205,9 @@ void BacktraceWidget::loadData()
 
         // scroll to crash
         QTextCursor crashCursor = ui.m_backtraceEdit->document()->find(QStringLiteral("[KCrash Handler]"));
+        if (crashCursor.isNull()) {
+            crashCursor = ui.m_backtraceEdit->document()->find(QStringLiteral("KCrash::defaultCrashHandler"));
+        }
         if (!crashCursor.isNull()) {
             crashCursor.movePosition(QTextCursor::Up, QTextCursor::MoveAnchor);
             ui.m_backtraceEdit->verticalScrollBar()->setValue(ui.m_backtraceEdit->cursorRect(crashCursor).top());

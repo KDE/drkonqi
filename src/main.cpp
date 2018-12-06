@@ -38,6 +38,9 @@
 #if HAVE_X11
 #include <QX11Info>
 #endif
+#ifdef Q_OS_MACOS
+#include <KWindowSystem>
+#endif
 
 #include "drkonqi.h"
 #include "drkonqidialog.h"
@@ -81,7 +84,7 @@ int main(int argc, char* argv[])
                          QStringLiteral("gkiagia@users.sourceforge.net"));
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
                          QStringLiteral("spehr@kde.org"));
-    qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
+    qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), qa.windowIcon()));
     qa.setDesktopFileName(QStringLiteral("org.kde.drkonqi"));
 
     QCommandLineParser parser;
@@ -152,6 +155,9 @@ int main(int argc, char* argv[])
         DrKonqiDialog *w = new DrKonqiDialog();
         QObject::connect(w, &DrKonqiDialog::rejected, &qa, &QApplication::quit);
         w->show();
+#ifdef Q_OS_MACOS
+        KWindowSystem::forceActiveWindow(w->winId());
+#endif
     };
 
     bool restarted = parser.isSet(restartedOption);

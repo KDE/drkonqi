@@ -105,6 +105,15 @@ bool Debugger::runInTerminal() const
     }
 }
 
+QString Debugger::backendValueOfParameter(const QString &key) const
+{
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return QString();
+    } else {
+        return m_config->group(m_backend).readEntry(key, QString());
+    }
+}
+
 //static
 void Debugger::expandString(QString & str, ExpandStringUsage usage, const QString & tempFile)
 {

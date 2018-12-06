@@ -18,6 +18,7 @@
 #include "backtraceparser_p.h"
 #include "backtraceparsergdb.h"
 #include "backtraceparserkdbgwin.h"
+#include "backtraceparserlldb.h"
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
 #include <QRegExp>
@@ -31,6 +32,8 @@ BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObjec
         return new BacktraceParserGdb(parent);
     } else if (debuggerName == QLatin1String("kdbgwin")) {
         return new BacktraceParserKdbgwin(parent);
+    } else if (debuggerName == QLatin1String("lldb")) {
+        return new BacktraceParserLldb(parent);
     } else {
         return new BacktraceParserNull(parent);
     }
@@ -198,6 +201,10 @@ static bool lineShouldBeIgnored(const BacktraceLine & line)
         || line.functionName().startsWith(QLatin1String("*__GI_")) //glibc2.9 uses *__GI_ as prefix
         || line.libraryName().contains(QStringLiteral("libpthread.so"))
         || line.libraryName().contains(QStringLiteral("libglib-2.0.so"))
+#ifdef Q_OS_MACOS
+        || (line.libraryName().startsWith(QStringLiteral("libsystem_")) && line.libraryName().endsWith(QStringLiteral(".dylib")))
+        || line.libraryName().contains(QStringLiteral("Foundation`"))
+#endif
         || line.libraryName().contains(QStringLiteral("ntdll.dll"))
         || line.libraryName().contains(QStringLiteral("kernel32.dll"))
         || line.functionName().contains(QStringLiteral("_tmain"))

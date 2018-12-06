@@ -36,6 +36,10 @@
 #include "backtracegenerator.h"
 #include "drkonqi.h"
 
+#ifdef Q_OS_MACOS
+#include <AvailabilityMacros.h>
+#endif
+
 AbstractDrKonqiBackend::~AbstractDrKonqiBackend()
 {
 }
@@ -158,7 +162,9 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
     QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
     KConfigGroup config(KSharedConfig::openConfig(), "DrKonqi");
-#ifndef Q_OS_WIN
+#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED > 1070
+    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("lldb"));
+#elif !defined(Q_OS_WIN)
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("gdb"));
 #else
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("kdbgwin"));

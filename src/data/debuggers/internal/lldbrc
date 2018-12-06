@@ -1,0 +1,9 @@
+[General]
+Name=lldb
+TryExec=lldb
+Backends=KCrash
+
+[KCrash]
+Exec=lldb -p %pid
+ExecInputFile=%tempfile
+BatchCommands=set term-width 200\nthread info\nbt all\ndetach

@@ -1,0 +1,8 @@
+[General]
+Name=lldb
+TryExec=lldb
+Backends=KCrash
+
+[KCrash]
+Exec=konsole --nofork -e lldb -p %pid
+Terminal=true

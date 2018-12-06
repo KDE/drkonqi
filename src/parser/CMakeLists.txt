@@ -3,6 +3,7 @@ set(BACKTRACEPARSER_SRCS
     backtraceparsergdb.cpp
     backtraceparserkdbgwin.cpp
     backtraceparsernull.cpp
+    backtraceparserlldb.cpp
 )
 
 ecm_qt_declare_logging_category(BACKTRACEPARSER_SRCS HEADER drkonqi_parser_debug.h IDENTIFIER DRKONQI_PARSER_LOG CATEGORY_NAME org.kde.drkonqi.parser)
