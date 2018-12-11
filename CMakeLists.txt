@@ -52,11 +52,7 @@ if (MINGW)
     if (msg)
         message(FATAL_ERROR "could not find ${msg}")
     endif()
-    add_library(z STATIC IMPORTED)
-    set_target_properties(z PROPERTIES
-        IMPORTED_LOCATION ${ZLIB_LIBRARIES}
-        IMPORTED_INCLUDE_DIRECTORIES ${ZLIB_INCLUDE_DIRS}
-    )
+
     add_library(intl SHARED IMPORTED)
     set_target_properties(intl PROPERTIES
         IMPORTED_IMPLIB ${INTL_LIBRARY}

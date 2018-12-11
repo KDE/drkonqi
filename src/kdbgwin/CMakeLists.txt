@@ -18,7 +18,7 @@ set(COMMON_LIBS dbghelp psapi shlwapi)
 
 if ( MINGW )
     add_executable(kdbgwin ${kdbgwin_SRCS} mingw_generator.h mingw_generator.cpp)
-    target_link_libraries(kdbgwin PRIVATE ${COMMON_LIBS} bfd iberty intl z Qt5::Core)
+    target_link_libraries(kdbgwin PRIVATE ${COMMON_LIBS} bfd iberty intl ZLIB::ZLIB Qt5::Core)
 endif ()
 if ( MSVC OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel"))
     add_executable(kdbgwin ${kdbgwin_SRCS} msvc_generator.h msvc_generator.cpp)
