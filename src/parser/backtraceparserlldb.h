@@ -25,7 +25,7 @@ class BacktraceParserLldb : public BacktraceParser
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParser)
 public:
-    explicit BacktraceParserLldb(QObject *parent = 0);
+    explicit BacktraceParserLldb(QObject *parent = nullptr);
 
 protected Q_SLOTS:
     virtual void newLine(const QString & lineStr);
