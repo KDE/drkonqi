@@ -34,6 +34,7 @@ set(drkonqi_SRCS
     crashedapplication.cpp
     debugger.cpp
     debuggerlaunchers.cpp
+    ptracer.cpp
     debuggermanager.cpp
     applicationdetailsexamples.cpp
     gdbhighlighter.cpp

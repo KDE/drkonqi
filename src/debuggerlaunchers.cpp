@@ -16,6 +16,7 @@
 */
 #include "debuggerlaunchers.h"
 
+#include <QCoreApplication>
 #include <QDBusConnection>
 
 #include <KShell>
@@ -25,6 +26,8 @@
 #include "detachedprocessmonitor.h"
 #include "drkonqi.h"
 #include "crashedapplication.h"
+
+#include "ptracer.h"
 
 DefaultDebuggerLauncher::DefaultDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent)
     : AbstractDebuggerLauncher(parent), m_debugger(debugger)
@@ -51,6 +54,7 @@ void DefaultDebuggerLauncher::start()
     emit starting();
     int pid = KProcess::startDetached(KShell::splitArgs(str));
     if ( pid > 0 ) {
+        setPtracer(pid, DrKonqi::pid());
         m_monitor->startMonitoring(pid);
     } else {
         qCWarning(DRKONQI_LOG) << "Could not start debugger:" << name();
@@ -60,6 +64,7 @@ void DefaultDebuggerLauncher::start()
 
 void DefaultDebuggerLauncher::onProcessFinished()
 {
+    setPtracer(QCoreApplication::applicationPid(), DrKonqi::pid());
     emit finished();
 }
 
@@ -76,8 +81,8 @@ void TerminalDebuggerLauncher::start()
 #endif
 
 
-DBusInterfaceLauncher::DBusInterfaceLauncher(const QString &name, DBusInterfaceAdaptor *parent)
-    : AbstractDebuggerLauncher(parent), m_name(name)
+DBusInterfaceLauncher::DBusInterfaceLauncher(const QString &name, qint64 pid, DBusInterfaceAdaptor *parent)
+    : AbstractDebuggerLauncher(parent), m_name(name), m_pid(pid)
 {
 }
 
@@ -89,6 +94,9 @@ QString DBusInterfaceLauncher::name() const
 void DBusInterfaceLauncher::start()
 {
     emit starting();
+
+    setPtracer(m_pid, DrKonqi::pid());
+
     emit static_cast<DBusInterfaceAdaptor*>(parent())->acceptDebuggingApplication(m_name);
 }
 
@@ -108,10 +116,10 @@ int DBusInterfaceAdaptor::pid()
     return DrKonqi::crashedApplication()->pid();
 }
 
-void DBusInterfaceAdaptor::registerDebuggingApplication(const QString &name)
+void DBusInterfaceAdaptor::registerDebuggingApplication(const QString &name, qint64 pid)
 {
     if (!name.isEmpty() && !m_launchers.contains(name)) {
-        auto launcher = new DBusInterfaceLauncher(name, this);
+        auto launcher = new DBusInterfaceLauncher(name, pid, this);
         m_launchers.insert(name, launcher);
         static_cast<DebuggerManager*>(parent())->addDebugger(launcher, true);
     }
@@ -121,6 +129,7 @@ void DBusInterfaceAdaptor::debuggingFinished(const QString &name)
 {
     auto it = m_launchers.find(name);
     if (it != m_launchers.end()) {
+        setPtracer(QCoreApplication::applicationPid(), DrKonqi::pid());
         emit it.value()->finished();
     }
 }

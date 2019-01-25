@@ -78,7 +78,7 @@ class DBusInterfaceLauncher : public AbstractDebuggerLauncher
 {
     Q_OBJECT
 public:
-    explicit DBusInterfaceLauncher(const QString &name, DBusInterfaceAdaptor *parent = nullptr);
+    explicit DBusInterfaceLauncher(const QString &name, qint64 pid, DBusInterfaceAdaptor *parent = nullptr);
     QString name() const override;
 
 public Q_SLOTS:
@@ -86,6 +86,7 @@ public Q_SLOTS:
 
 private:
     QString m_name;
+    qint64 m_pid;
 };
 
 class DBusInterfaceAdaptor : public QDBusAbstractAdaptor
@@ -97,7 +98,7 @@ public:
 
 public Q_SLOTS:
     int pid();
-    Q_NOREPLY void registerDebuggingApplication(const QString &name);
+    Q_NOREPLY void registerDebuggingApplication(const QString &name, qint64 pid = 0);
     Q_NOREPLY void debuggingFinished(const QString &name);
     Q_NOREPLY void debuggerClosed(const QString &name);
 
