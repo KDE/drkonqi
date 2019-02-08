@@ -78,7 +78,7 @@ QString MsvcGenerator::GetFile()
         return QString::fromLatin1(DEFAULT_FILE);
     }
 
-    return QString(line.FileName);
+    return QString::fromLatin1(const_cast<char *>(line.FileName));
 }
 
 int MsvcGenerator::GetLine()
