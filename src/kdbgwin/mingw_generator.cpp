@@ -133,7 +133,7 @@ void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
     QString symbolType;
     do
     {
-        bfd* abfd = bfd_openr(symbolFile.toLatin1(), NULL);
+        bfd* abfd = bfd_openr(symbolFile.toLatin1().data(), NULL);
         if (abfd == NULL)
         {
             symbolType = QString::fromLatin1("no symbols loaded");
