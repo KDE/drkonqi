@@ -64,7 +64,7 @@ void MingwGenerator::FrameChanged()
     QString modPath = GetModulePath();
     bool existsSymbol = false;
     TSymbolsMap::const_iterator i = m_symbolsMap.constFind(modPath);
-    if (i == m_symbolsMap.end())
+    if (i == m_symbolsMap.cend())
     {
         return;
     }
