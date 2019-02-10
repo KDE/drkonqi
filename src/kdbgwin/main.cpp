@@ -26,7 +26,7 @@
 #include "msvc_generator.h"
 #include "mingw_generator.h"
 #include "outputters.h"
-#include "process.h"
+#include "kdbgwin_process.h"
 #include "common.h"
 
 #include <QCoreApplication>

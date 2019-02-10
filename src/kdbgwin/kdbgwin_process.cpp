@@ -24,7 +24,7 @@
  *****************************************************************/
 
 #include "common.h"
-#include "process.h"
+#include "kdbgwin_process.h"
 
 Process::Process()
     : m_bValid(FALSE)

@@ -26,7 +26,7 @@
 #pragma once
 
 #include "common.h"
-#include "process.h"
+#include "kdbgwin_process.h"
 
 #include <QObject>
 

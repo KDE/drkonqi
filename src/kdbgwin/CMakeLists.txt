@@ -3,8 +3,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..)
 set(kdbgwin_SRCS
     common.h
     main.cpp
-    process.h
-    process.cpp
+    kdbgwin_process.h
+    kdbgwin_process.cpp
     abstract_generator.h
     abstract_generator.cpp
     callbacks.h
