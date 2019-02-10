@@ -67,6 +67,8 @@ if (MINGW)
         # bfd header requires this to be defined
         INTERFACE_COMPILE_DEFINITIONS "PACKAGE;PACKAGE_VERSION"
     )
+    find_path(BFD_INCLUDE_DIR bfd.h)
+    include_directories(${BFD_INCLUDE_DIR})
 endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
