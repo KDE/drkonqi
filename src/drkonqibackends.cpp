@@ -172,6 +172,9 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 
     Debugger firstKnownGoodDebugger, preferredDebugger;
     foreach (const Debugger & debugger, internalDebuggers) {
+        qCDebug(DRKONQI_LOG) << "Check Debugger:" << debugger.name() \
+            << "Installed: " << debugger.isInstalled() \
+            << "Valid: " << debugger.isValid();
         if (!firstKnownGoodDebugger.isValid() && debugger.isInstalled()) {
             firstKnownGoodDebugger = debugger;
         }
