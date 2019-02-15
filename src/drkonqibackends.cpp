@@ -167,7 +167,7 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 #elif !defined(Q_OS_WIN)
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("gdb"));
 #else
-    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("kdbgwin"));
+    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("cdb"));
 #endif
 
     Debugger firstKnownGoodDebugger, preferredDebugger;

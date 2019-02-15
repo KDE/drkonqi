@@ -19,6 +19,7 @@
 #include "backtraceparsergdb.h"
 #include "backtraceparserkdbgwin.h"
 #include "backtraceparserlldb.h"
+#include "backtraceparsercdb.h"
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
 #include <QRegExp>
@@ -34,6 +35,8 @@ BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObjec
         return new BacktraceParserKdbgwin(parent);
     } else if (debuggerName == QLatin1String("lldb")) {
         return new BacktraceParserLldb(parent);
+    } else if (debuggerName == QLatin1String("cdb")) {
+        return new BacktraceParserCdb(parent);
     } else {
         return new BacktraceParserNull(parent);
     }

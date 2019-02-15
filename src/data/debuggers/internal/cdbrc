@@ -1,0 +1,7 @@
+[General]
+Name=cdb
+TryExec=cdb
+Backends=KCrash
+
+[KCrash]
+Exec=cdb.exe -p %pid -lines -c "~*kv; q"
