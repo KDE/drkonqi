@@ -310,6 +310,12 @@ void BacktraceWidget::loadData()
     }
 
     ui.m_reloadBacktraceButton->setEnabled(true);
+
+    // We substantially change label content, the window might need resizing to
+    // fit it all.
+    // https://bugs.kde.org/show_bug.cgi?id=337319
+    window()->adjustSize();
+
     emit stateChanged();
 }
 
