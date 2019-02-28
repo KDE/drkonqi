@@ -15,6 +15,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
+
 #ifndef BACKTRACEPARSERLLDB_H
 #define BACKTRACEPARSERLLDB_H
 
@@ -25,13 +26,13 @@ class BacktraceParserLldb : public BacktraceParser
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParser)
 public:
-    explicit BacktraceParserLldb(QObject *parent = 0);
+    explicit BacktraceParserLldb(QObject *parent = nullptr);
 
 protected Q_SLOTS:
-    virtual void newLine(const QString & lineStr);
+    virtual void newLine(const QString & lineStr) override;
 
 protected:
-    virtual BacktraceParserPrivate *constructPrivate() const;
+    virtual BacktraceParserPrivate *constructPrivate() const override;
 };
 
 #endif // BACKTRACEPARSERLLDB_H
