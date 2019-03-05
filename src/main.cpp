@@ -42,6 +42,7 @@
 #include <KWindowSystem>
 #endif
 
+#include "config-drkonqi.h"
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 #include "statusnotifier.h"

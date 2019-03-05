@@ -85,8 +85,6 @@ ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER D
 add_executable(drkonqi ${drkonqi_SRCS})
 ecm_mark_nongui_executable(drkonqi)
 
-target_compile_definitions(drkonqi PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
-
 target_link_libraries(drkonqi
     KF5::I18n
     KF5::CoreAddons
