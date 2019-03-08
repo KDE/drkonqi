@@ -34,7 +34,7 @@ class ParseBugBacktraces : QObject
 {
     Q_OBJECT
     public:
-        explicit ParseBugBacktraces(const BugReport &bug, QObject *parent = nullptr);
+        explicit ParseBugBacktraces(const QList<Bugzilla::Comment::Ptr> &comments, QObject *parent = nullptr);
 
         void parse();
 
@@ -56,7 +56,7 @@ class ParseBugBacktraces : QObject
 
     private:
         BacktraceParser *m_parser = nullptr;
-        const BugReport m_bug;
+        const QList<Bugzilla::Comment::Ptr> m_comments;
         QList<QList<BacktraceLine> > m_backtraces;
 };
 

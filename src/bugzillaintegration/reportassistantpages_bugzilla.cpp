@@ -127,7 +127,7 @@ void BugzillaLoginPage::loginError(const QString & err, const QString & extended
 {
     loginFinished(false);
     ui.m_statusWidget->setIdle(xi18nc("@info:status","Error when trying to login: "
-                                                 "<message>%1.</message>", err));
+                                                 "<message>%1</message>", err));
     if (!extendedMessage.isEmpty()) {
         new UnhandledErrorDialog(this, err, extendedMessage);
     }
@@ -231,79 +231,9 @@ void BugzillaLoginPage::walletLogin()
     }
 }
 
-bool BugzillaLoginPage::canSetCookies()
-{
-    if (bugzillaManager()->securityMethod() != BugzillaManager::UseCookies) {
-        qCDebug(DRKONQI_LOG) << "Bugzilla software no longer issues cookies.";
-        return false;
-    }
-    QDBusInterface kded(QStringLiteral("org.kde.kded5"),
-                        QStringLiteral("/kded"),
-                        QStringLiteral("org.kde.kded5"));
-    QDBusReply<bool> kcookiejarLoaded = kded.call(QStringLiteral("loadModule"),
-                                                  QStringLiteral("kcookiejar"));
-    if (!kcookiejarLoaded.isValid()) {
-        KMessageBox::error(this, i18n("Failed to communicate with kded. Make sure it is running."));
-        return false;
-    } else if (!kcookiejarLoaded.value()) {
-        KMessageBox::error(this, i18n("Failed to load KCookieServer. Check your KDE installation."));
-        return false;
-    }
-
-
-    QDBusInterface kcookiejar(QStringLiteral("org.kde.kded5"),
-                              QStringLiteral("/modules/kcookiejar"),
-                              QStringLiteral("org.kde.KCookieServer"));
-    QDBusReply<QString> advice = kcookiejar.call(QStringLiteral("getDomainAdvice"),
-                                                 KDE_BUGZILLA_URL);
-
-    if (!advice.isValid()) {
-        KMessageBox::error(this, i18n("Failed to communicate with KCookieServer."));
-        return false;
-    }
-
-    qCDebug(DRKONQI_LOG) << "Got reply from KCookieServer:" << advice.value();
-
-    if (advice.value() == QLatin1String("Reject")) {
-        QString msg = i18nc("@info 1 is the bugzilla website url",
-                            "Cookies are not allowed in your KDE network settings. In order to "
-                            "proceed, you need to allow %1 to set cookies.", KDE_BUGZILLA_URL);
-
-        KGuiItem yesItem = KStandardGuiItem::yes();
-        yesItem.setText(i18nc("@action:button 1 is the bugzilla website url",
-                              "Allow %1 to set cookies", KDE_BUGZILLA_URL));
-
-        KGuiItem noItem = KStandardGuiItem::no();
-        noItem.setText(i18nc("@action:button do not allow the bugzilla website "
-                             "to set cookies", "No, do not allow"));
-
-        if (KMessageBox::warningYesNo(this, msg, QString(), yesItem, noItem) == KMessageBox::Yes) {
-            QDBusReply<bool> success = kcookiejar.call(QStringLiteral("setDomainAdvice"),
-                                                       KDE_BUGZILLA_URL,
-                                                       QStringLiteral("Accept"));
-            if (!success.isValid() || !success.value()) {
-                qCWarning(DRKONQI_LOG) << "Failed to set domain advice in KCookieServer";
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    return true;
-}
-
 void BugzillaLoginPage::loginClicked()
 {
     if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty())) {
-
-        if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
-            && (!canSetCookies())) {
-            return;
-        }
-
         updateWidget(false);
 
         if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data

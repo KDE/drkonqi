@@ -2,6 +2,7 @@
 * bugzillalib.cpp
 * Copyright  2009, 2011  Dario Andres Rodriguez <andresbajotierra@gmail.com>
 * Copyright  2012  George Kiagiadakis <kiagiadakis.george@gmail.com>
+* Copyright  2019  Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -20,41 +21,72 @@
 
 #include "bugzillalib.h"
 
-#include <QtGlobal>
-#include <QTextStream>
-#include <QByteArray>
-#include <QString>
+#include <QReadWriteLock>
 
-#include <QDomNode>
-#include <QDomNodeList>
-#include <QDomElement>
-#include <QDomNamedNodeMap>
-
-#include <KIO/Job>
-#include <KLocalizedString>
+#include "libbugzilla/clients/commentclient.h"
+#include "libbugzilla/connection.h"
+#include "libbugzilla/bugzilla.h"
 #include "drkonqi_debug.h"
 
-#define MAKE_BUGZILLA_VERSION(a,b,c) (((a) << 16) | ((b) << 8) | (c))
-
-static const char columns[] = "bug_severity,priority,bug_status,product,short_desc,resolution";
-
-//Bugzilla URLs
-static const char searchUrl[] =
-        "buglist.cgi?query_format=advanced&order=Importance&ctype=csv"
-        "&product=%1"
-        "&longdesc_type=allwordssubstr&longdesc=%2"
-        "&chfieldfrom=%3&chfieldto=%4&chfield=[Bug+creation]"
-        "&bug_severity=%5"
-        "&columnlist=%6";
-// short_desc, product, long_desc(possible backtraces lines), searchFrom, searchTo, severity, columnList
 static const char showBugUrl[] = "show_bug.cgi?id=%1";
-static const char fetchBugUrl[] = "show_bug.cgi?id=%1&ctype=xml";
 
-static inline Component buildComponent(const QVariantMap& map);
-static inline Version buildVersion(const QVariantMap& map);
-static inline Product buildProduct(const QVariantMap& map);
+// Extra filter rigging. We don't want to leak secrets via qdebug, so install
+// a message handler which does nothing more than replace secrets in debug
+// messages with placeholders.
+// This is used as a global static (since message handlers are meant to be
+// static) and is slightly synchronizing across threads WRT the filter hash.
+struct QMessageFilterContainer {
+    QMessageFilterContainer();
+    void insert(const QString &needle, const QString &replace);
+    void clear();
 
-//BEGIN BugzillaManager
+    QString filter(const QString &msg);
+
+    // Message handler is called across threads. Syncronize for good meassure.
+    QReadWriteLock lock;
+    QtMessageHandler handler;
+
+private:
+    QHash<QString, QString> filters;
+};
+
+Q_GLOBAL_STATIC(QMessageFilterContainer, s_messageFilter)
+
+QMessageFilterContainer::QMessageFilterContainer()
+{
+    handler =
+            qInstallMessageHandler([](QtMsgType type,
+                                   const QMessageLogContext &context,
+                                   const QString &msg) {
+            s_messageFilter->handler(type, context, s_messageFilter->filter(msg));
+});
+}
+
+void QMessageFilterContainer::insert(const QString &needle, const QString &replace)
+{
+    if (needle.isEmpty()) {
+        return;
+    }
+
+    QWriteLocker locker(&lock);
+    filters[needle] = replace;
+}
+
+QString QMessageFilterContainer::filter(const QString &msg)
+{
+    QReadLocker locker(&lock);
+    QString filteredMsg = msg;
+    for (auto it = filters.constBegin(); it != filters.constEnd(); ++it) {
+        filteredMsg.replace(it.key(), it.value());
+    }
+    return filteredMsg;
+}
+
+void QMessageFilterContainer::clear()
+{
+    QWriteLocker locker(&lock);
+    filters.clear();
+}
 
 BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
         : QObject(parent)
@@ -62,18 +94,30 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
         , m_logged(false)
         , m_searchJob(nullptr)
 {
-    m_xmlRpcClient = new KXmlRpc::Client(QUrl(m_bugTrackerUrl + QStringLiteral("xmlrpc.cgi")), this);
-    m_xmlRpcClient->setUserAgent(QStringLiteral("DrKonqi"));
+    Q_ASSERT(bugTrackerUrl.endsWith(QLatin1Char('/')));
+    Bugzilla::setConnection(new Bugzilla::HTTPConnection(QUrl(m_bugTrackerUrl + QStringLiteral("rest"))));
     // Allow constructors for ReportInterface and assistant dialogs to finish.
-    // We do not want them to be racing the remote Bugzilla database.
-    QMetaObject::invokeMethod (this, &BugzillaManager::lookupVersion, Qt::QueuedConnection);
+    // Otherwise we may have a race on our hand if the lookup finishes before
+    // the constructors.
+    // I am not sure why this is so weirdly done TBH. Might deserve some looking
+    // into.
+    QMetaObject::invokeMethod(this, &BugzillaManager::lookupVersion, Qt::QueuedConnection);
 }
 
-// BEGIN Checks of Bugzilla software versions.
 void BugzillaManager::lookupVersion()
 {
-    QMap<QString, QVariant> args;
-    callBugzilla("Bugzilla.version", "version", args, SecurityDisabled);
+    KJob *job = Bugzilla::version();
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            QString version = Bugzilla::version(job);
+            setFeaturesForVersion(version);
+            emit bugzillaVersionFound();
+        } catch (Bugzilla::Exception &e) {
+            // Version detection problems simply mean we'll not mark the version
+            // found and the UI will not allow reporting.
+            qCWarning(DRKONQI_LOG) << e.whatString();
+        }
+    });
 }
 
 void BugzillaManager::setFeaturesForVersion(const QString& version)
@@ -101,72 +145,37 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
     if (digits.count() > nVersionParts) {
         qCWarning(DRKONQI_LOG) << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
     }
-    int currentVersion = MAKE_BUGZILLA_VERSION(digits.at(0).toUInt(),
-                             digits.at(1).toUInt(), digits.at(2).toUInt());
 
-    // Set the code(s) for historical versions of Bugzilla - before any change.
-    m_security = UseCookies;    // Used to have cookies for update-security.
-
-    if (currentVersion >= MAKE_BUGZILLA_VERSION(4, 4, 3)) {
-        // Security method changes from cookies to tokens in Bugzilla 4.4.3.
-	// BUT, tokens fail when kio_http sends any cookies found in KCookieJar,
-	// so go directly to passwords-only security (supported since Bugzilla
-	// 3.6 and will be enforced in Bugzilla 4.5.x).
-        m_security = UsePasswords;
-    }
-
-    qCDebug(DRKONQI_LOG) << "VERSION" << version << "SECURITY" << m_security;
+    qCDebug(DRKONQI_LOG) << "VERSION" << version;
 }
-// END Checks of Bugzilla software versions.
 
-// BEGIN Generic remote-procedure (RPC) call to Bugzilla
-void BugzillaManager::callBugzilla(const char* method, const char* id,
-                                   QMap<QString, QVariant>& args,
-                                   SecurityStatus security)
-{
-    if (security == SecurityEnabled) {
-        switch (m_security) {
-        case UseTokens:
-            qCDebug(DRKONQI_LOG) << method << id << "using token";
-            args.insert(QLatin1String("Bugzilla_token"), m_token);
-            break;
-        case UsePasswords:
-            qCDebug(DRKONQI_LOG) << method << id << "using username" << m_username;
-            args.insert(QLatin1String("Bugzilla_login"), m_username);
-            args.insert(QLatin1String("Bugzilla_password"), m_password);
-            break;
-        case UseCookies:
-            qCDebug(DRKONQI_LOG) << method << id << "using cookies";
-            // Some KDE process other than Dr Konqi should provide cookies.
-            break;
-        }
-    }
-
-    m_xmlRpcClient->call(QLatin1String(method), args,
-            this, SLOT(callMessage(QList<QVariant>,QVariant)),
-            this, SLOT(callFault(int,QString,QVariant)),
-            QLatin1String(id));
-}
-// END Generic call to Bugzilla
-
-//BEGIN Login methods
-void BugzillaManager::tryLogin(const QString& username, const QString& password)
+void BugzillaManager::tryLogin(const QString &username, const QString &password)
 {
     m_username = username;
-    if (m_security == UsePasswords) {
-        m_password = password;
-    }
+    m_password = password;
     m_logged = false;
 
-    QMap<QString, QVariant> args;
-    args.insert(QLatin1String("login"), username);
-    args.insert(QLatin1String("password"), password);
-    if (m_security == UseCookies) {
-        // Removed in Bugzilla 4.4.3 software, which no longer issues cookies.
-        args.insert(QLatin1String("remember"), false);
-    }
-
-    callBugzilla("User.login", "login", args, SecurityDisabled);
+    s_messageFilter->clear();
+    s_messageFilter->insert(password, QStringLiteral("PASSWORD"));
+    KJob *job = Bugzilla::login(username, password);
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            auto details = Bugzilla::login(job);
+            m_token = details.token;
+            if (m_token.isEmpty()) {
+                throw Bugzilla::RuntimeException(QStringLiteral("Did not receive a token"));
+            }
+            s_messageFilter->insert(m_token, QStringLiteral("TOKEN"));
+            Bugzilla::connection().setToken(m_token);
+            m_logged = true;
+            emit loginFinished(true);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            // Version detection problems simply mean we'll not mark the version
+            // found and the UI will not allow reporting.
+            emit loginError(e.whatString());
+        }
+    });
 }
 
 bool BugzillaManager::getLogged() const
@@ -178,114 +187,157 @@ QString BugzillaManager::getUsername() const
 {
     return m_username;
 }
-//END Login methods
 
-//BEGIN Bugzilla Action methods
-void BugzillaManager::fetchBugReport(int bugnumber, QObject * jobOwner)
+void BugzillaManager::fetchBugReport(int bugnumber, QObject *jobOwner)
 {
-    QUrl url(m_bugTrackerUrl + QString::fromLatin1(fetchBugUrl).arg(bugnumber));
+    Bugzilla::BugSearch search;
+    search.id = bugnumber;
 
-    if (!jobOwner) {
-        jobOwner = this;
-    }
-
-    KIO::Job * fetchBugJob = KIO::storedGet(url, KIO::Reload, KIO::HideProgressInfo);
-    fetchBugJob->setParent(jobOwner);
-    connect(fetchBugJob, &KIO::Job::finished, this, &BugzillaManager::fetchBugJobFinished);
+    Bugzilla::BugClient client;
+    auto job = m_searchJob = client.search(search);
+    connect(job, &KJob::finished, this, [this, &client, jobOwner](KJob *job) {
+        try {
+            auto list = client.search(job);
+            if (list.size() != 1) {
+                throw Bugzilla::RuntimeException(QStringLiteral("Unexpected bug amount returned: %1").arg(list.size()));
+            }
+            auto bug = list.at(0);
+            m_searchJob = nullptr;
+            emit bugReportFetched(bug, jobOwner);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit bugReportError(e.whatString(), jobOwner);
+        }
+    });
 }
 
-
-void BugzillaManager::searchBugs(const QStringList & products,
-                                const QString & severity, const QString & date_start,
-                                const QString & date_end, QString comment)
+void BugzillaManager::fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobOwner)
 {
-    QString product;
-    if (products.size() > 0) {
-        if (products.size() == 1) {
-            product = products.at(0);
-        } else  {
-            Q_FOREACH(const QString & p, products) {
-                product += p + QStringLiteral("&product=");
-            }
-            product = product.mid(0,product.size()-9);
+    Bugzilla::CommentClient client;
+    auto job = client.getFromBug(bug->id());
+    connect(job, &KJob::finished, this, [this, &client, jobOwner](KJob *job) {
+        try {
+            auto comments = client.getFromBug(job);
+            emit commentsFetched(comments, jobOwner);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit commentsError(e.whatString(), jobOwner);
         }
-    }
+    });
+}
 
-    QString url = QString(m_bugTrackerUrl) +
-                  QString::fromLatin1(searchUrl).arg(product, comment.replace(QLatin1Char(' ') , QLatin1Char('+')), date_start,
-                                         date_end, severity, QString::fromLatin1(columns));
+// TODO: This would kinda benefit from an actual pagination class,
+// currently this implicitly relies on the caller to handle offests correctly.
+// Fortunately we only have one caller so it makes no difference.
+void BugzillaManager::searchBugs(const QStringList &products,
+                                 const QString &severity,
+                                 const QString &comment,
+                                 int offset)
+{
+    Bugzilla::BugSearch search;
+    search.products = products;
+    search.severity = severity;
+    search.longdesc = comment;
+    // Order descedingly by bug_id. This allows us to offset through the results
+    // from newest to oldest.
+    // The UI will later order our data anyway, so the order at which we receive
+    // the data is not important for the UI (outside the fact that we want
+    // to step through pages of data)
+    search.order << QStringLiteral("bug_id DESC");
+    search.limit = 25;
+    search.offset = offset;
 
     stopCurrentSearch();
 
-    m_searchJob = KIO::storedGet(QUrl(url) , KIO::Reload, KIO::HideProgressInfo);
-    connect(m_searchJob, &KIO::Job::finished, this, &BugzillaManager::searchBugsJobFinished);
+    Bugzilla::BugClient client;
+    auto job = m_searchJob = Bugzilla::BugClient().search(search);
+    connect(job, &KJob::finished, this, [this, &client](KJob *job) {
+        try {
+            auto list = client.search(job);
+            m_searchJob = nullptr;
+            emit searchFinished(list);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit searchError(e.whatString());
+        }
+    });
 }
 
-void BugzillaManager::sendReport(const BugReport & report)
+void BugzillaManager::sendReport(const Bugzilla::NewBug &bug)
 {
-    QMap<QString, QVariant> args;
-    args.insert(QLatin1String("product"), report.product());
-    args.insert(QLatin1String("component"), report.component());
-    args.insert(QLatin1String("version"), report.version());
-    args.insert(QLatin1String("summary"), report.shortDescription());
-    args.insert(QLatin1String("description"), report.description());
-    args.insert(QLatin1String("op_sys"), report.operatingSystem());
-    args.insert(QLatin1String("platform"), report.platform());
-    args.insert(QLatin1String("keywords"), report.keywords());
-    args.insert(QLatin1String("priority"), report.priority());
-    args.insert(QLatin1String("severity"), report.bugSeverity());
-
-    callBugzilla("Bug.create", "Bug.create", args, SecurityEnabled);
+    auto job = Bugzilla::BugClient().create(bug);
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            int id = Bugzilla::BugClient().create(job);
+            Q_ASSERT(id > 0);
+            emit reportSent(id);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit sendReportError(e.whatString());
+        }
+    });
 }
 
 void BugzillaManager::attachTextToReport(const QString & text, const QString & filename,
     const QString & summary, int bugId, const QString & comment)
 {
-    QMap<QString, QVariant> args;
-    args.insert(QLatin1String("ids"), QVariantList() << bugId);
-    args.insert(QLatin1String("file_name"), filename);
-    args.insert(QLatin1String("summary"), summary);
-    args.insert(QLatin1String("comment"), comment);
-    args.insert(QLatin1String("content_type"), QLatin1String("text/plain"));
+    Bugzilla::NewAttachment attachment;
+    attachment.ids = QList<int> { bugId };
+    attachment.data = text;
+    attachment.file_name = filename;
+    attachment.summary = summary;
+    attachment.comment = comment;
+    attachment.content_type = QLatin1Literal("text/plain");
 
-    //data needs to be a QByteArray so that it is encoded in base64 (query.cpp:246)
-    args.insert(QLatin1String("data"), text.toUtf8());
-
-    callBugzilla("Bug.add_attachment", "Bug.add_attachment", args,
-                 SecurityEnabled);
+    auto job = Bugzilla::AttachmentClient().createAttachment(bugId, attachment);
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            QList<int> ids = Bugzilla::AttachmentClient().createAttachment(job);
+            Q_ASSERT(ids.size() == 1);
+            emit attachToReportSent(ids.at(0));
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit attachToReportError(e.whatString());
+        }
+    });
 }
 
 void BugzillaManager::addMeToCC(int bugId)
 {
-    QMap<QString, QVariant> args;
-    args.insert(QLatin1String("ids"), QVariantList() << bugId);
+    Bugzilla::BugUpdate update;
+    Q_ASSERT(!m_username.isEmpty());
+    update.cc->add << m_username;
 
-    QMap<QString, QVariant> ccChanges;
-    ccChanges.insert(QLatin1String("add"), QVariantList() << m_username);
-    args.insert(QLatin1String("cc"), ccChanges);
-
-    callBugzilla("Bug.update", "Bug.update.cc", args, SecurityEnabled);
+    auto job = Bugzilla::BugClient().update(bugId, update);
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            const auto bugId = Bugzilla::BugClient().update(job);
+            Q_ASSERT(bugId != 0);
+            emit addMeToCCFinished(bugId);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            emit addMeToCCError(e.whatString());
+        }
+    });
 }
 
-void BugzillaManager::fetchProductInfo(const QString & product)
+void BugzillaManager::fetchProductInfo(const QString &product)
 {
-    QMap<QString, QVariant> args;
-
-    args.insert(QStringLiteral("names"), (QStringList() << product) ) ;
-
-    QStringList includeFields;
-    // currently we only need these informations
-    includeFields << QStringLiteral("name") << QStringLiteral("is_active") << QStringLiteral("components") << QStringLiteral("versions");
-
-    args.insert(QStringLiteral("include_fields"), includeFields) ;
-
-    callBugzilla("Product.get", "Product.get.versions", args, SecurityDisabled);
+    auto job = Bugzilla::ProductClient().get(product);
+    connect(job, &KJob::finished, this, [this](KJob *job) {
+        try {
+            auto ptr = Bugzilla::ProductClient().get(job);
+            Q_ASSERT(ptr);
+            productInfoFetched(ptr);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            // This doesn't have a string because it is actually not used for
+            // anything...
+            emit productInfoError();
+        }
+    });
 }
 
-
-//END Bugzilla Action methods
-
-//BEGIN Misc methods
 QString BugzillaManager::urlForBug(int bug_number) const
 {
     return QString(m_bugTrackerUrl) + QString::fromLatin1(showBugUrl).arg(bug_number);
@@ -297,389 +349,5 @@ void BugzillaManager::stopCurrentSearch()
         m_searchJob->disconnect();
         m_searchJob->kill();
         m_searchJob = nullptr;
-    }
-}
-//END Misc methods
-
-//BEGIN Slots to handle KJob::finished
-
-void BugzillaManager::fetchBugJobFinished(KJob* job)
-{
-    if (!job->error()) {
-        KIO::StoredTransferJob * fetchBugJob = static_cast<KIO::StoredTransferJob*>(job);
-
-        BugReportXMLParser * parser = new BugReportXMLParser(fetchBugJob->data());
-        BugReport report = parser->parse();
-
-        if (parser->isValid()) {
-            emit bugReportFetched(report, job->parent());
-        } else {
-            emit bugReportError(i18nc("@info","Invalid report information (malformed data). This "
-                                      "could mean that the bug report does not exist, or the "
-                                      "bug tracking site is experiencing a problem."), job->parent());
-        }
-
-        delete parser;
-    } else {
-        emit bugReportError(job->errorString(), job->parent());
-    }
-}
-
-void BugzillaManager::searchBugsJobFinished(KJob * job)
-{
-    if (!job->error()) {
-        KIO::StoredTransferJob * searchBugsJob = static_cast<KIO::StoredTransferJob*>(job);
-
-        BugListCSVParser * parser = new BugListCSVParser(searchBugsJob->data());
-        BugMapList list = parser->parse();
-
-        if (parser->isValid()) {
-            emit searchFinished(list);
-        } else {
-            emit searchError(i18nc("@info","Invalid bug list: corrupted data"));
-        }
-
-        delete parser;
-    } else {
-        emit searchError(job->errorString());
-    }
-
-    m_searchJob = nullptr;
-}
-
-static inline Component buildComponent(const QVariantMap& map)
-{
-    QString name = map.value(QStringLiteral("name")).toString();
-    bool active = map.value(QStringLiteral("is_active")).toBool();
-
-    return Component(name, active);
-}
-
-static inline Version buildVersion(const QVariantMap& map)
-{
-    QString name = map.value(QStringLiteral("name")).toString();
-    bool active = map.value(QStringLiteral("is_active")).toBool();
-
-    return Version(name, active);
-}
-
-static inline Product buildProduct(const QVariantMap& map)
-{
-    QString name = map.value(QStringLiteral("name")).toString();
-    bool active = map.value(QStringLiteral("is_active")).toBool();
-
-    Product product(name, active);
-
-    QVariantList components = map.value(QStringLiteral("components")).toList();
-    foreach (const QVariant& c, components) {
-        Component component = buildComponent(c.toMap());
-        product.addComponent(component);
-
-    }
-
-    QVariantList versions = map.value(QStringLiteral("versions")).toList();
-    foreach (const QVariant& v, versions) {
-        Version version = buildVersion(v.toMap());
-        product.addVersion(version);
-    }
-
-    return product;
-}
-
-void BugzillaManager::fetchProductInfoFinished(const QVariantMap & map)
-{
-    QList<Product> products;
-
-    QVariantList plist = map.value(QStringLiteral("products")).toList();
-    foreach (const QVariant& p, plist) {
-        Product product = buildProduct(p.toMap());
-        products.append(product);
-    }
-
-    if ( products.size() > 0 ) {
-        emit productInfoFetched(products.at(0));
-    } else {
-        emit productInfoError();
-    }
-}
-
-//END Slots to handle KJob::finished
-
-void BugzillaManager::callMessage(const QList<QVariant> & result, const QVariant & id)
-{
-    qCDebug(DRKONQI_LOG) << id << result;
-
-    if (id.toString() == QLatin1String("login")) {
-        if ((m_security == UseTokens) && (result.count() > 0)) {
-            QVariantMap map = result.at(0).toMap();
-            m_token = map.value(QLatin1String("token")).toString();
-        }
-        m_logged = true;
-        Q_EMIT loginFinished(true);
-    } else if (id.toString() == QLatin1String("Product.get.versions")) {
-        QVariantMap map = result.at(0).toMap();
-        fetchProductInfoFinished(map);
-    } else if (id.toString() == QLatin1String("Bug.create")) {
-        QVariantMap map = result.at(0).toMap();
-        int bug_id = map.value(QLatin1String("id")).toInt();
-        Q_ASSERT(bug_id != 0);
-        Q_EMIT reportSent(bug_id);
-    } else if (id.toString() == QLatin1String("Bug.add_attachment")) {
-        QVariantMap map = result.at(0).toMap();
-        if (map.contains(QLatin1String("attachments"))){  // for bugzilla 4.2
-            map = map.value(QLatin1String("attachments")).toMap();
-            map = map.constBegin()->toMap();
-            const int attachment_id = map.value(QLatin1String("id")).toInt();
-            Q_EMIT attachToReportSent(attachment_id);
-        } else if (map.contains(QLatin1String("ids"))) {  // for bugzilla 4.4
-            const int attachment_id = map.value(QLatin1String("ids")).toList().at(0).toInt();
-            Q_EMIT attachToReportSent(attachment_id);
-        }
-    } else if (id.toString() == QLatin1String("Bug.update.cc")) {
-        QVariantMap map = result.at(0).toMap().value(QLatin1String("bugs")).toList().at(0).toMap();
-        int bug_id = map.value(QLatin1String("id")).toInt();
-        Q_ASSERT(bug_id != 0);
-        Q_EMIT addMeToCCFinished(bug_id);
-    } else if (id.toString() == QLatin1String("version")) {
-        QVariantMap map = result.at(0).toMap();
-        QString bugzillaVersion = map.value(QLatin1String("version")).toString();
-        setFeaturesForVersion(bugzillaVersion);
-        Q_EMIT bugzillaVersionFound();
-    }
-}
-
-void BugzillaManager::callFault(int errorCode, const QString & errorString, const QVariant & id)
-{
-    qCDebug(DRKONQI_LOG) << id << errorCode << errorString;
-
-    QString genericError = i18nc("@info", "Received unexpected error code %1 from bugzilla. "
-                                 "Error message was: %2", errorCode, errorString);
-
-    if (id.toString() == QLatin1String("login")) {
-        switch(errorCode) {
-        case 300: //invalid username or password
-            Q_EMIT loginFinished(false); //TODO replace with loginError
-            break;
-        default:
-            Q_EMIT loginError(genericError);
-            break;
-        }
-    } else if (id.toString() == QLatin1String("Bug.create")) {
-        switch (errorCode) {
-        case 51:  //invalid object (one example is invalid platform value)
-        case 105: //invalid component
-        case 106: //invalid product
-            Q_EMIT sendReportErrorInvalidValues();
-            break;
-        default:
-            Q_EMIT sendReportError(genericError);
-            break;
-        }
-    } else if (id.toString() == QLatin1String("Bug.add_attachment")) {
-        switch (errorCode) {
-        default:
-            Q_EMIT attachToReportError(genericError);
-            break;
-        }
-    } else if (id.toString() == QLatin1String("Bug.update.cc")) {
-        switch (errorCode) {
-        default:
-            Q_EMIT addMeToCCError(genericError);
-            break;
-        }
-    }
-}
-
-//END BugzillaManager
-
-//BEGIN BugzillaCSVParser
-
-BugListCSVParser::BugListCSVParser(const QByteArray& data)
-{
-    m_data = data;
-    m_isValid = false;
-}
-
-BugMapList BugListCSVParser::parse()
-{
-    BugMapList list;
-
-    if (!m_data.isEmpty()) {
-        //Parse buglist CSV
-        QTextStream ts(&m_data);
-        QString headersLine = ts.readLine().remove(QLatin1Char('\"')) ;   //Discard headers
-        QString expectedHeadersLine = QString::fromLatin1(columns);
-
-        if (headersLine == (QStringLiteral("bug_id,") + expectedHeadersLine)) {
-            QStringList headers = expectedHeadersLine.split(QLatin1Char(','), QString::KeepEmptyParts);
-            int headersCount = headers.count();
-
-            while (!ts.atEnd()) {
-                BugMap bug; //bug report data map
-
-                QString line = ts.readLine();
-
-                //Get bug_id (always at first column)
-                int bug_id_index = line.indexOf(QLatin1Char(','));
-                QString bug_id = line.left(bug_id_index);
-                bug.insert(QStringLiteral("bug_id"), bug_id);
-
-                line = line.mid(bug_id_index + 2);
-
-                QStringList fields = line.split(QStringLiteral(",\""));
-
-                for (int i = 0; i < headersCount && i < fields.count(); i++) {
-                    QString field = fields.at(i);
-                    field = field.left(field.size() - 1) ;   //Remove trailing "
-                    bug.insert(headers.at(i), field);
-                }
-
-                list.append(bug);
-            }
-
-            m_isValid = true;
-        }
-    }
-
-    return list;
-}
-
-//END BugzillaCSVParser
-
-//BEGIN BugzillaXMLParser
-
-BugReportXMLParser::BugReportXMLParser(const QByteArray & data)
-{
-    m_valid = m_xml.setContent(data, true);
-}
-
-BugReport BugReportXMLParser::parse()
-{
-    BugReport report; //creates an invalid and empty report object
-
-    if (m_valid) {
-        //Check bug notfound
-        QDomNodeList bug_number = m_xml.elementsByTagName(QStringLiteral("bug"));
-        QDomNode d = bug_number.at(0);
-        QDomNamedNodeMap a = d.attributes();
-        QDomNode d2 = a.namedItem(QStringLiteral("error"));
-        m_valid = d2.isNull();
-
-        if (m_valid) {
-            report.setValid(true);
-
-            //Get basic fields
-            report.setBugNumber(getSimpleValue(QStringLiteral("bug_id")));
-            report.setShortDescription(getSimpleValue(QStringLiteral("short_desc")));
-            report.setProduct(getSimpleValue(QStringLiteral("product")));
-            report.setComponent(getSimpleValue(QStringLiteral("component")));
-            report.setVersion(getSimpleValue(QStringLiteral("version")));
-            report.setOperatingSystem(getSimpleValue(QStringLiteral("op_sys")));
-            report.setBugStatus(getSimpleValue(QStringLiteral("bug_status")));
-            report.setResolution(getSimpleValue(QStringLiteral("resolution")));
-            report.setPriority(getSimpleValue(QStringLiteral("priority")));
-            report.setBugSeverity(getSimpleValue(QStringLiteral("bug_severity")));
-            report.setMarkedAsDuplicateOf(getSimpleValue(QStringLiteral("dup_id")));
-            report.setVersionFixedIn(getSimpleValue(QStringLiteral("cf_versionfixedin")));
-
-            //Parse full content + comments
-            QStringList m_commentList;
-            QDomNodeList comments = m_xml.elementsByTagName(QStringLiteral("long_desc"));
-            for (int i = 0; i < comments.count(); i++) {
-                QDomElement element = comments.at(i).firstChildElement(QStringLiteral("thetext"));
-                m_commentList << element.text();
-            }
-
-            report.setComments(m_commentList);
-
-        } //isValid
-    } //isValid
-
-    return report;
-}
-
-QString BugReportXMLParser::getSimpleValue(const QString & name)   //Extract an unique tag from XML
-{
-    QString ret;
-
-    QDomNodeList bug_number = m_xml.elementsByTagName(name);
-    if (bug_number.count() == 1) {
-        QDomNode node = bug_number.at(0);
-        ret = node.toElement().text();
-    }
-    return ret;
-}
-
-//END BugzillaXMLParser
-
-void BugReport::setBugStatus(const QString &stat)
-{
-    setData(QStringLiteral("bug_status"), stat);
-
-    m_status = parseStatus(stat);
-}
-
-void BugReport::setResolution(const QString &res)
-{
-    setData(QStringLiteral("resolution"), res);
-
-    m_resolution = parseResolution(res);
-}
-
-BugReport::Status BugReport::parseStatus(const QString &stat)
-{
-    if (stat == QLatin1String("UNCONFIRMED")) {
-        return Unconfirmed;
-    } else if (stat == QLatin1String("CONFIRMED")) {
-        return New;
-    } else if (stat == QLatin1String("ASSIGNED")) {
-        return Assigned;
-    } else if (stat == QLatin1String("REOPENED")) {
-        return Reopened;
-    } else if (stat == QLatin1String("RESOLVED")) {
-        return Resolved;
-    } else if (stat == QLatin1String("NEEDSINFO")) {
-        return NeedsInfo;
-    } else if (stat == QLatin1String("VERIFIED")) {
-        return Verified;
-    } else if (stat == QLatin1String("CLOSED")) {
-        return Closed;
-    } else {
-        return UnknownStatus;
-    }
-}
-
-BugReport::Resolution BugReport::parseResolution(const QString &res)
-{
-    if (res.isEmpty()) {
-        return NotResolved;
-    } else if (res == QLatin1String("FIXED")) {
-        return Fixed;
-    } else if (res == QLatin1String("INVALID")) {
-        return Invalid;
-    } else if (res == QLatin1String("WONTFIX")) {
-        return WontFix;
-    } else if (res == QLatin1String("LATER")) {
-        return Later;
-    } else if (res == QLatin1String("REMIND")) {
-        return Remind;
-    } else if (res == QLatin1String("DUPLICATE")) {
-        return Duplicate;
-    } else if (res == QLatin1String("WORKSFORME")) {
-        return WorksForMe;
-    } else if (res == QLatin1String("MOVED")) {
-        return Moved;
-    } else if (res == QLatin1String("UPSTREAM")) {
-        return Upstream;
-    } else if (res == QLatin1String("DOWNSTREAM")) {
-        return Downstream;
-    } else if (res == QLatin1String("WAITINGFORINFO")) {
-        return WaitingForInfo;
-    } else if (res == QLatin1String("BACKTRACE")) {
-        return Backtrace;
-    } else if (res == QLatin1String("UNMAINTAINED")) {
-        return Unmaintained;
-    } else {
-        return UnknownResolution;
     }
 }

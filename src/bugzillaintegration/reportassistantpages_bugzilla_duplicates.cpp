@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantpages_bugzilla_duplicates.cpp
 * Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -19,7 +20,7 @@
 
 #include "reportassistantpages_bugzilla_duplicates.h"
 
-#include <QDate>
+#include <QDebug>
 #include <QTimer>
 #include <QTreeWidgetItem>
 #include <QHeaderView>
@@ -36,24 +37,21 @@
 
 //BEGIN BugzillaDuplicatesPage
 
-BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
-        ReportAssistantPage(parent),
-        m_searching(false),
-        m_foundDuplicate(false)
+BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
+    : ReportAssistantPage(parent)
 {
-    resetDates();
-
     connect(bugzillaManager(), &BugzillaManager::searchFinished,
-             this, &BugzillaDuplicatesPage::searchFinished);
-    connect(bugzillaManager(), SIGNAL(searchError(QString)),
-             this, SLOT(searchError(QString)));
+            this, &BugzillaDuplicatesPage::searchFinished);
+    connect(bugzillaManager(), &BugzillaManager::searchError,
+            this, &BugzillaDuplicatesPage::searchError);
 
     ui.setupUi(this);
     ui.information->hide();
 
     connect(ui.m_bugListWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
              this, SLOT(itemClicked(QTreeWidgetItem*,int)));
-    connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged, this, &BugzillaDuplicatesPage::itemSelectionChanged);
+    connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged,
+            this, &BugzillaDuplicatesPage::itemSelectionChanged);
 
     QHeaderView * header = ui.m_bugListWidget->header();
     header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -79,8 +77,7 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog * parent):
     m_searchMoreGuiItem = KGuiItem2(i18nc("@action:button", "Search for more reports"),
                                                    QIcon::fromTheme(QStringLiteral("edit-find")),
                                                    i18nc("@info:tooltip", "Use this button to "
-                                                        "search for more similar bug reports on an "
-                                                        "earlier date."));
+                                                        "search for more similar bug reports"));
     KGuiItem::assign(ui.m_searchMoreButton, m_searchMoreGuiItem);
     connect(ui.m_searchMoreButton, &QAbstractButton::clicked, this, &BugzillaDuplicatesPage::searchMore);
 
@@ -206,38 +203,29 @@ bool BugzillaDuplicatesPage::showNextPage()
 //BEGIN Search related methods
 void BugzillaDuplicatesPage::searchMore()
 {
-    //1 year back
-    m_searchingEndDate = m_startDate;
-    m_searchingStartDate = m_searchingEndDate.addYears(-1);
-
-    performSearch();
-}
-
-void BugzillaDuplicatesPage::performSearch()
-{
-    markAsSearching(true);
-
-    QString startDateStr = m_searchingStartDate.toString(QStringLiteral("yyyy-MM-dd"));
-    QString endDateStr = m_searchingEndDate.toString(QStringLiteral("yyyy-MM-dd"));
-
-    ui.m_statusWidget->setBusy(i18nc("@info:status","Searching for duplicates (from %1 to %2)...",
-                                   startDateStr, endDateStr));
-
-    //Bugzilla will not search on Today bugs if we send the date.
-    //we need to send "Now"
-    if (m_searchingEndDate == QDate::currentDate()) {
-        endDateStr = QLatin1String("Now");
+    if (m_offset < 0) {
+        m_offset = 0; // initialize, -1 means no search done yet
     }
 
-#if 1
-    BugReport report = reportInterface()->newBugReportTemplate();
+    // This is fairly inefficient, unfortunately the API's offset/limit system
+    // is not useful to us. The search is always sorting by lowest id, and
+    // negative offests are not a thing. So, offset=0&limit=1 gives the first
+    // ever reported bug in the product, while what we want is the latest.
+    // We also cannot query all perintent bug ids by default. While the API
+    // is reasonably fast, it'll still produce upwards of 2MiB just for the
+    // ids of a dolphin crash (as it includes all sorts of extra products).
+    // So we are left with somewhat shoddy time-based queries.
+
+    markAsSearching(true);
+    ui.m_statusWidget->setBusy(i18nc("@info:status", "Searching for duplicates..."));
+
+    // Grab the default severity for newbugs
+    static QString severity = reportInterface()->newBugReportTemplate().severity;
+
     bugzillaManager()->searchBugs(reportInterface()->relatedBugzillaProducts(),
-                                  report.bugSeverity(), startDateStr, endDateStr,
-                                  reportInterface()->firstBacktraceFunctions().join(QStringLiteral(" ")));
-#else //Test search
-    bugzillaManager()->searchBugs(QStringList() << "plasma", "crash", startDateStr, endDateStr,
-       "QGraphicsScenePrivate::processDirtyItemsRecursive");
-#endif
+                                  severity,
+                                  reportInterface()->firstBacktraceFunctions().join(QStringLiteral(" ")),
+                                  m_offset);
 }
 
 void BugzillaDuplicatesPage::stopCurrentSearch()
@@ -247,12 +235,10 @@ void BugzillaDuplicatesPage::stopCurrentSearch()
 
         markAsSearching(false);
 
-        if (m_startDate==m_endDate) { //Never searched
-            ui.m_statusWidget->setIdle(i18nc("@info:status","Search stopped."));
+        if (m_offset < 0) { //Never searched
+            ui.m_statusWidget->setIdle(i18nc("@info:status", "Search stopped."));
         } else {
-            ui.m_statusWidget->setIdle(i18nc("@info:status","Search stopped. Showing results from "
-                                        "%1 to %2", m_startDate.toString(QStringLiteral("yyyy-MM-dd")),
-                                        m_endDate.toString(QStringLiteral("yyyy-MM-dd"))));
+            ui.m_statusWidget->setIdle(i18nc("@info:status", "Search stopped. Showing results."));
         }
     }
 }
@@ -284,72 +270,87 @@ void BugzillaDuplicatesPage::markAsSearching(bool searching)
 
 bool BugzillaDuplicatesPage::canSearchMore()
 {
-    return (m_startDate.year() >= 2009);
+    return !m_atEnd;
 }
 
-void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
+static QString statusString(const Bugzilla::Bug::Ptr &bug)
+{
+    // Generate a non-geek readable status
+    switch(bug->status()) {
+    case Bugzilla::Bug::Status::UNCONFIRMED:
+    case Bugzilla::Bug::Status::CONFIRMED:
+    case Bugzilla::Bug::Status::ASSIGNED:
+    case Bugzilla::Bug::Status::REOPENED:
+        return i18nc("@info bug status", "[Open]");
+
+    case Bugzilla::Bug::Status::RESOLVED:
+    case Bugzilla::Bug::Status::VERIFIED:
+    case Bugzilla::Bug::Status::CLOSED:
+        switch(bug->resolution()) {
+        case Bugzilla::Bug::Resolution::FIXED:
+            return i18nc("@info bug resolution", "[Fixed]");
+        case Bugzilla::Bug::Resolution::WORKSFORME:
+            return i18nc("@info bug resolution", "[Non-reproducible]");
+        case Bugzilla::Bug::Resolution::DUPLICATE:
+            return i18nc("@info bug resolution", "[Duplicate report]");
+        case Bugzilla::Bug::Resolution::INVALID:
+            return i18nc("@info bug resolution", "[Invalid]");
+        case Bugzilla::Bug::Resolution::UPSTREAM:
+        case Bugzilla::Bug::Resolution::DOWNSTREAM:
+            return i18nc("@info bug resolution", "[External problem]");
+        case Bugzilla::Bug::Resolution::WONTFIX:
+        case Bugzilla::Bug::Resolution::LATER:
+        case Bugzilla::Bug::Resolution::REMIND:
+        case Bugzilla::Bug::Resolution::MOVED:
+        case Bugzilla::Bug::Resolution::WAITINGFORINFO:
+        case Bugzilla::Bug::Resolution::BACKTRACE:
+        case Bugzilla::Bug::Resolution::UNMAINTAINED:
+        case Bugzilla::Bug::Resolution::NONE:
+            return QStringLiteral("[%1]").arg(QVariant::fromValue(bug->resolution()).toString());
+        case Bugzilla::Bug::Resolution::Unknown:
+            Q_FALLTHROUGH();
+        }
+        break;
+    case Bugzilla::Bug::Status::NEEDSINFO:
+        return i18nc("@info bug status", "[Incomplete]");
+
+    case Bugzilla::Bug::Status::Unknown:
+        Q_FALLTHROUGH();
+    }
+    return QString();
+}
+
+void BugzillaDuplicatesPage::searchFinished(const QList<Bugzilla::Bug::Ptr> &list)
 {
     KGuiItem::assign(ui.m_searchMoreButton, m_searchMoreGuiItem);
-    m_startDate = m_searchingStartDate;
 
     int results = list.count();
+    m_offset += results;
     if (results > 0) {
+        m_atEnd = false;
+
         markAsSearching(false);
 
-        ui.m_statusWidget->setIdle(i18nc("@info:status","Showing results from %1 to %2",
-                                     m_startDate.toString(QStringLiteral("yyyy-MM-dd")),
-                                     m_endDate.toString(QStringLiteral("yyyy-MM-dd"))));
+        ui.m_statusWidget->setIdle(i18nc("@info:status", "Showing results."));
 
-        QList<int> bugIds;
         for (int i = 0; i < results; i++) {
-            BugMap bug = list.at(i);
+            Bugzilla::Bug::Ptr bug = list.at(i);
 
-            bool ok;
-            int bugId = bug.value(QStringLiteral("bug_id")).toInt(&ok);
-            if (ok) {
-                bugIds << bugId;
-            }
+            QString title = statusString(bug) + QLatin1Char(' ') + bug->summary();
 
-            QString title;
-
-            //Generate a non-geek readable status
-            QString customStatusString;
-            BugReport::Status status = BugReport::parseStatus(bug.value(QStringLiteral("bug_status")));
-            BugReport::Resolution resolution = BugReport::parseResolution(bug.value(QStringLiteral("resolution")));
-            if (BugReport::isOpen(status)) {
-                customStatusString = i18nc("@info bug status", "[Open]");
-            } else if (BugReport::isClosed(status) && status != BugReport::NeedsInfo) {
-                if (resolution == BugReport::Fixed) {
-                    customStatusString = i18nc("@info bug resolution", "[Fixed]");
-                } else if (resolution == BugReport::WorksForMe) {
-                    customStatusString = i18nc("@info bug resolution", "[Non-reproducible]");
-                } else if (resolution == BugReport::Duplicate) {
-                    customStatusString = i18nc("@info bug resolution", "[Duplicate report]");
-                } else if (resolution == BugReport::Invalid) {
-                    customStatusString = i18nc("@info bug resolution", "[Invalid]");
-                } else if (resolution == BugReport::Downstream
-                    || resolution == BugReport::Upstream) {
-                    customStatusString = i18nc("@info bug resolution", "[External problem]");
-                }
-            } else if (status == BugReport::NeedsInfo) {
-                customStatusString = i18nc("@info bug status", "[Incomplete]");
-            }
-
-            title = customStatusString + QLatin1Char(' ') + bug[QStringLiteral("short_desc")];
-
-            QStringList fields = QStringList() << bug[QStringLiteral("bug_id")] << title;
+            QStringList fields = QStringList() << QString::number(bug->id()) << title;
 
             QTreeWidgetItem * item = new QTreeWidgetItem(fields);
-            item->setToolTip(0, bug[QStringLiteral("short_desc")]);
-            item->setToolTip(1, bug[QStringLiteral("short_desc")]);
+            item->setToolTip(0, bug->summary());
+            item->setToolTip(1, bug->summary());
 
             ui.m_bugListWidget->addTopLevelItem(item);
         }
 
         if (!m_foundDuplicate) {
             markAsSearching(true);
-            DuplicateFinderJob *job = new DuplicateFinderJob(bugIds, bugzillaManager(), this);
-            connect(job, SIGNAL(result(KJob*)), this, SLOT(analyzedDuplicates(KJob*)));
+            DuplicateFinderJob *job = new DuplicateFinderJob(list, bugzillaManager(), this);
+            connect(job, &KJob::result, this, &BugzillaDuplicatesPage::analyzedDuplicates);
             job->start();
         }
 
@@ -361,6 +362,7 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
         }
 
     } else {
+        m_atEnd = true;
 
         if (canSearchMore()) {
             //We don't call markAsSearching(false) to avoid flicker
@@ -380,6 +382,31 @@ void BugzillaDuplicatesPage::searchFinished(const BugMapList & list)
     }
 }
 
+static bool isStatusOpen(Bugzilla::Bug::Status status)
+{
+    switch(status) {
+    case Bugzilla::Bug::Status::UNCONFIRMED:
+    case Bugzilla::Bug::Status::CONFIRMED:
+    case Bugzilla::Bug::Status::ASSIGNED:
+    case Bugzilla::Bug::Status::REOPENED:
+        return true;
+    case Bugzilla::Bug::Status::RESOLVED:
+    case Bugzilla::Bug::Status::NEEDSINFO:
+    case Bugzilla::Bug::Status::VERIFIED:
+    case Bugzilla::Bug::Status::CLOSED:
+        return false;
+
+    case Bugzilla::Bug::Status::Unknown:
+        Q_FALLTHROUGH();
+    }
+    return false;
+}
+
+static bool isStatusClosed(Bugzilla::Bug::Status status)
+{
+    return !isStatusOpen(status);
+}
+
 void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
 {
     markAsSearching(false);
@@ -390,7 +417,7 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
     reportInterface()->setDuplicateId(m_result.parentDuplicate);
     ui.m_searchMoreButton->setEnabled(!m_foundDuplicate);
     ui.information->setVisible(m_foundDuplicate);
-    BugReport::Status status = m_result.status;
+    auto status = m_result.status;
     const int duplicate = m_result.duplicate;
     const int parentDuplicate = m_result.parentDuplicate;
 
@@ -404,13 +431,13 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
         }
 
         QString text;
-        if (BugReport::isOpen(status) || (BugReport::isClosed(status) && status == BugReport::NeedsInfo)) {
+        if (isStatusOpen(status) || status == Bugzilla::Bug::Status::NEEDSINFO) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash is a <strong>duplicate</strong> and has already been reported as <a href=\"%1\">Bug %1</a>.", QString::number(duplicate)) :
-                i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>", QString::number(duplicate), QString::number(parentDuplicate))) +
-                QLatin1Char('\n') + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QStringLiteral("attach"));
-        } else if (BugReport::isClosed(status)) {
+                                                   i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>", QString::number(duplicate), QString::number(parentDuplicate))) +
+                    QLatin1Char('\n') + i18nc("@label", "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed information to the bug report.", QStringLiteral("attach"));
+        } else if (isStatusClosed(status)) {
             text = (parentDuplicate == duplicate ? i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which has been <strong>closed</strong>.", QString::number(duplicate)) :
-                i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>.", QString::number(duplicate), QString::number(parentDuplicate)));
+                                                   i18nc("@label", "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>.", QString::number(duplicate), QString::number(parentDuplicate)));
         }
         ui.information->setText(text);
     }
@@ -440,11 +467,6 @@ void BugzillaDuplicatesPage::searchError(QString err)
                                                  "Please wait some time and try again.", err));
 }
 
-void BugzillaDuplicatesPage::resetDates()
-{
-    m_endDate = QDate::currentDate();
-    m_startDate = m_endDate;
-}
 //END Search related methods
 
 //BEGIN Duplicates list related methods
@@ -588,9 +610,13 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
 
     //Connect bugzillalib signals
     connect(m_parent->bugzillaManager(), &BugzillaManager::bugReportFetched,
-             this, &BugzillaReportInformationDialog::bugFetchFinished);
-    connect(m_parent->bugzillaManager(), SIGNAL(bugReportError(QString,QObject*)),
-             this, SLOT(bugFetchError(QString,QObject*)));
+            this, &BugzillaReportInformationDialog::bugFetchFinished);
+    connect(m_parent->bugzillaManager(), &BugzillaManager::bugReportError,
+            this, &BugzillaReportInformationDialog::bugFetchError);
+    connect(m_parent->bugzillaManager(), &BugzillaManager::commentsFetched,
+            this, &BugzillaReportInformationDialog::onCommentsFetched);
+    connect(m_parent->bugzillaManager(), &BugzillaManager::commentsError,
+            this, &BugzillaReportInformationDialog::bugFetchError);
 
     KConfigGroup config(KSharedConfig::openConfig(), "BugzillaReportInformationDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), config);
@@ -644,173 +670,225 @@ void BugzillaReportInformationDialog::showBugReport(int bugNumber, bool relatedB
     show();
 }
 
-void BugzillaReportInformationDialog::bugFetchFinished(BugReport report, QObject * jobOwner)
+struct Status2 {
+    QString statusString;
+    QString closedStateString;
+};
+
+static Status2 statusString2(const Bugzilla::Bug::Ptr &bug)
 {
-    if (jobOwner == this && isVisible()) {
-        if (report.isValid()) {
+    // Generate a non-geek readable status
+    switch(bug->status()) {
+    case Bugzilla::Bug::Status::UNCONFIRMED:
+        return { i18nc("@info bug status", "Opened (Unconfirmed)"), QString() };
+    case Bugzilla::Bug::Status::CONFIRMED:
+    case Bugzilla::Bug::Status::ASSIGNED:
+    case Bugzilla::Bug::Status::REOPENED:
+        return { i18nc("@info bug status", "Opened (Unfixed)"), QString() };
 
-            //Handle duplicate state
-            QString duplicate = report.markedAsDuplicateOf();
-            if (!duplicate.isEmpty()) {
-                bool ok = false;
-                int dupId = duplicate.toInt(&ok);
-                if (ok && dupId > 0) {
-                    ui.m_statusWidget->setIdle(QString());
-
-                    KGuiItem yesItem = KStandardGuiItem::yes();
-                    yesItem.setText(i18nc("@action:button let the user to choose to read the "
-                    "main report", "Yes, read the main report"));
-
-                    KGuiItem noItem = KStandardGuiItem::no();
-                    noItem.setText(i18nc("@action:button let the user choose to read the original "
-                    "report", "No, let me read the report I selected"));
-
-                    if (KMessageBox::questionYesNo(this,
-                       xi18nc("@info","The report you selected (bug %1) is already "
-                       "marked as duplicate of bug %2. "
-                       "Do you want to read that report instead? (recommended)",
-                       report.bugNumber(), QString::number(dupId)),
-                       i18nc("@title:window","Nested duplicate detected"), yesItem, noItem)
-                                                    == KMessageBox::Yes) {
-                        showBugReport(dupId);
-                        return;
-                    }
-                }
+    case Bugzilla::Bug::Status::RESOLVED:
+    case Bugzilla::Bug::Status::VERIFIED:
+    case Bugzilla::Bug::Status::CLOSED:
+        switch(bug->resolution()) {
+        case Bugzilla::Bug::Resolution::FIXED: {
+            auto fixedIn = bug->customField("cf_versionfixedin").toString();
+            if (!fixedIn.isEmpty()) {
+                return { i18nc("@info bug resolution, fixed in version",
+                               "Fixed in version \"%1\"",
+                               fixedIn),
+                         i18nc("@info bug resolution, fixed by kde devs in version",
+                               "the bug was fixed by KDE developers in version \"%1\"",
+                               fixedIn)
+                };
             }
+            return {
+                i18nc("@info bug resolution", "Fixed"),
+                        i18nc("@info bug resolution", "the bug was fixed by KDE developers")
+            };
+        }
 
-            //Generate html for comments (with proper numbering)
-            QLatin1String duplicatesMark = QLatin1String("has been marked as a duplicate of this bug.");
+        case Bugzilla::Bug::Resolution::WORKSFORME:
+            return { i18nc("@info bug resolution", "Non-reproducible"), QString() };
+        case Bugzilla::Bug::Resolution::DUPLICATE:
+            return { i18nc("@info bug resolution", "Duplicate report (Already reported before)"), QString() };
+        case Bugzilla::Bug::Resolution::INVALID:
+            return { i18nc("@info bug resolution", "Not a valid report/crash"), QString() };
+        case Bugzilla::Bug::Resolution::UPSTREAM:
+        case Bugzilla::Bug::Resolution::DOWNSTREAM:
+            return { i18nc("@info bug resolution", "Not caused by a problem in the KDE's Applications or libraries"),
+                     i18nc("@info bug resolution", "the bug is caused by a problem in an external application or library, or by a distribution or packaging issue") };
+        case Bugzilla::Bug::Resolution::WONTFIX:
+        case Bugzilla::Bug::Resolution::LATER:
+        case Bugzilla::Bug::Resolution::REMIND:
+        case Bugzilla::Bug::Resolution::MOVED:
+        case Bugzilla::Bug::Resolution::WAITINGFORINFO:
+        case Bugzilla::Bug::Resolution::BACKTRACE:
+        case Bugzilla::Bug::Resolution::UNMAINTAINED:
+        case Bugzilla::Bug::Resolution::NONE:
+            return { QVariant::fromValue(bug->resolution()).toString(), QString() };
+        case Bugzilla::Bug::Resolution::Unknown:
+            Q_FALLTHROUGH();
+        }
+        return {};
 
-            QString comments;
-            QStringList commentList = report.comments();
-            for (int i = 0; i < commentList.count(); i++) {
-                QString comment = commentList.at(i);
-                //Don't add duplicates mark comments
-                if (!comment.contains(duplicatesMark)) {
-                    comment.replace(QLatin1Char('\n'), QLatin1String("<br />"));
-                    comments += i18nc("comment $number to use as subtitle", "<h4>Comment %1:</h4>", (i+1))
-                                    + QStringLiteral("<p>") + comment + QStringLiteral("</p><hr />");
-                    //Count the inline attached crashes (DrKonqi feature)
-                    QLatin1String attachedCrashMark =
-                        QLatin1String("New crash information added by DrKonqi");
-                    if (comment.contains(attachedCrashMark)) {
-                        m_duplicatesCount++;
-                    }
-                } else {
-                    //Count duplicate
-                    m_duplicatesCount++;
-                }
-            }
+    case Bugzilla::Bug::Status::NEEDSINFO:
+        return { i18nc("@info bug status", "Temporarily closed, because of a lack of information"), QString() };
 
-            //Generate a non-geek readable status
-            QString customStatusString;
-            BugReport::Status status = report.statusValue();
-            BugReport::Resolution resolution = report.resolutionValue();
-            if (status == BugReport::Unconfirmed) {
-                customStatusString = i18nc("@info bug status", "Opened (Unconfirmed)");
-            } else if (report.isOpen()) {
-                customStatusString = i18nc("@info bug status", "Opened (Unfixed)");
-            } else if (report.isClosed() && status != BugReport::NeedsInfo) {
-                QString customResolutionString;
-                if (resolution == BugReport::Fixed) {
-                    if (!report.versionFixedIn().isEmpty()) {
-                        customResolutionString = i18nc("@info bug resolution, fixed in version",
-                                                       "Fixed in version \"%1\"",
-                                                       report.versionFixedIn());
-                        m_closedStateString = i18nc("@info bug resolution, fixed by kde devs in version",
-                                                    "the bug was fixed by KDE developers in version \"%1\"",
-                                                    report.versionFixedIn());
-                    } else {
-                        customResolutionString = i18nc("@info bug resolution", "Fixed");
-                        m_closedStateString = i18nc("@info bug resolution", "the bug was fixed by KDE developers");
-                    }
-                } else if (resolution == BugReport::WorksForMe) {
-                    customResolutionString = i18nc("@info bug resolution", "Non-reproducible");
-                } else if (resolution == BugReport::Duplicate) {
-                    customResolutionString = i18nc("@info bug resolution", "Duplicate report "
-                                                   "(Already reported before)");
-                } else if (resolution == BugReport::Invalid) {
-                    customResolutionString = i18nc("@info bug resolution", "Not a valid report/crash");
-                } else if (resolution == BugReport::Downstream || resolution == BugReport::Upstream) {
-                    customResolutionString = i18nc("@info bug resolution", "Not caused by a problem "
-                                                "in the KDE's Applications or libraries");
-                    m_closedStateString = i18nc("@info bug resolution", "the bug is caused by a "
-                                                "problem in an external application or library, or "
-                                                "by a distribution or packaging issue");
-                } else {
-                    customResolutionString = report.resolution();
-                }
+    case Bugzilla::Bug::Status::Unknown:
+        Q_FALLTHROUGH();
+    }
+    return {};
+}
 
-                customStatusString = i18nc("@info bug status, %1 is the resolution", "Closed (%1)",
-                                           customResolutionString);
-            } else if (status == BugReport::NeedsInfo) {
-                customStatusString = i18nc("@info bug status", "Temporarily closed, because of a lack "
-                                            "of information");
-            } else { //Fallback to other raw values
-                customStatusString = QStringLiteral("%1 (%2)").arg(report.bugStatus(), report.resolution());
-            }
+void BugzillaReportInformationDialog::bugFetchFinished(Bugzilla::Bug::Ptr bug, QObject *jobOwner)
+{
+    if (jobOwner != this || !isVisible()) {
+        return;
+    }
 
-            //Generate notes
-            QString notes = xi18n("<p><note>The bug report's title is often written by its reporter "
-                                 "and may not reflect the bug's nature, root cause or other visible "
-                                 "symptoms you could use to compare to your crash. Please read the "
-                                 "complete report and all the comments below.</note></p>");
+    if (!bug) {
+        bugFetchError(i18nc("@info", "Invalid report information (malformed data). This could "
+                                     "mean that the bug report does not exist, or the bug tracking site "
+                                     "is experiencing a problem."), this);
+        return;
+    }
 
-            if (m_duplicatesCount >= 10) { //Consider a possible mass duplicate crash
-                notes += xi18np("<p><note>This bug report has %1 duplicate report. That means this "
-                               "is probably a <strong>common crash</strong>. <i>Please consider only "
-                               "adding a comment or a note if you can provide new valuable "
-                               "information which was not already mentioned.</i></note></p>",
-                               "<p><note>This bug report has %1 duplicate reports. That means this "
-                               "is probably a <strong>common crash</strong>. <i>Please consider only "
-                               "adding a comment or a note if you can provide new valuable "
-                               "information which was not already mentioned.</i></note></p>",
-                              m_duplicatesCount);
-            }
+    Q_ASSERT(!m_bug); // m_bug must only be set once we've selected one!
 
-            //A manually entered bug ID could represent a normal bug
-            if (report.bugSeverity() != QLatin1String("crash")
-                && report.bugSeverity() != QLatin1String("major")
-                && report.bugSeverity() != QLatin1String("grave")
-                && report.bugSeverity() != QLatin1String("critical"))
-            {
-                notes += xi18n("<p><note>This bug report is not about a crash or about any other "
-                              "critical bug.</note></p>");
-            }
+    // Handle duplicate state
+    if (bug->dupe_of() > 0) {
+        ui.m_statusWidget->setIdle(QString());
 
-            //Generate HTML text
-            QString text =
-                i18nc("@info bug report title (quoted)",
-                                "<h3>\"%1\"</h3>", report.shortDescription()) +
-                notes +
-                i18nc("@info bug report status",
-                                "<h4>Bug Report Status: %1</h4>", customStatusString) +
-                i18nc("@info bug report product and component",
-                                "<h4>Affected Component: %1 (%2)</h4>",
-                                report.product(), report.component()) +
-                i18nc("@info bug report description",
-                                "<h3>Description of the bug</h3><p>%1</p>",
-                                report.description().replace(QLatin1Char('\n'), QLatin1String("<br />")));
+        KGuiItem yesItem = KStandardGuiItem::yes();
+        yesItem.setText(i18nc("@action:button let the user to choose to read the "
+                              "main report", "Yes, read the main report"));
 
-            if (!comments.isEmpty()) {
-                text += i18nc("@label:textbox bug report comments (already formatted)",
-                                "<h2>Additional Comments</h2>%1", comments);
-            }
+        KGuiItem noItem = KStandardGuiItem::no();
+        noItem.setText(i18nc("@action:button let the user choose to read the original "
+                             "report", "No, let me read the report I selected"));
 
-            ui.m_infoBrowser->setText(text);
-            ui.m_infoBrowser->setEnabled(true);
-
-            m_suggestButton->setEnabled(m_relatedButtonEnabled);
-            m_suggestButton->setVisible(m_relatedButtonEnabled);
-
-            ui.m_statusWidget->setIdle(xi18nc("@info:status", "Showing bug %1",
-                                                              QString::number(report.bugNumberAsInt())));
-        } else {
-            bugFetchError(i18nc("@info", "Invalid report information (malformed data). This could "
-                                "mean that the bug report does not exist, or the bug tracking site "
-                                "is experiencing a problem."), this);
+        auto ret = KMessageBox::questionYesNo(
+                    this,
+                    xi18nc("@info","The report you selected (bug %1) is already "
+                                   "marked as duplicate of bug %2. "
+                                   "Do you want to read that report instead? (recommended)",
+                           bug->id(), QString::number(bug->dupe_of())),
+                    i18nc("@title:window","Nested duplicate detected"),
+                    yesItem,
+                    noItem);
+        if (ret == KMessageBox::Yes) {
+            qDebug() << "REDIRECT";
+            showBugReport(bug->dupe_of());
+            return;
         }
     }
+
+    // Process comments...
+    m_bug = bug;
+    m_parent->bugzillaManager()->fetchComments(m_bug, this);
+}
+
+void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment::Ptr> bugComments,
+                                                        QObject *jobOwner)
+{
+    if (jobOwner != this || !isVisible()) {
+        return;
+    }
+
+    Q_ASSERT(m_bug);
+
+    // Generate html for comments (with proper numbering)
+    QLatin1String duplicatesMark = QLatin1String("has been marked as a duplicate of this bug.");
+
+    // TODO: the way comment objects are turned into comment strings is fairly
+    //    awkward and does not particularly object-centric. May benefit from a
+    //    slight redesign.
+    QString comments;
+    QString description; // aka first comment
+    if (bugComments.size() > 0) {
+        description = bugComments.takeFirst()->text();
+    }
+    for (auto it = bugComments.constBegin(); it != bugComments.constEnd(); ++it) {
+        QString comment = (*it)->text();
+        // Don't add duplicates mark comments
+        if (!comment.contains(duplicatesMark)) {
+            comment.replace(QLatin1Char('\n'), QLatin1String("<br />"));
+            const int i = it - bugComments.constBegin();
+            comments += i18nc("comment $number to use as subtitle", "<h4>Comment %1:</h4>", (i+1))
+                    + QStringLiteral("<p>") + comment + QStringLiteral("</p><hr />");
+            // Count the inline attached crashes (DrKonqi feature)
+            QLatin1String attachedCrashMark =
+                    QLatin1String("New crash information added by DrKonqi");
+            if (comment.contains(attachedCrashMark)) {
+                m_duplicatesCount++;
+            }
+        } else {
+            // Count duplicate
+            m_duplicatesCount++;
+        }
+    }
+
+    // Generate a non-geek readable status
+    auto str = statusString2(m_bug);
+    QString customStatusString = str.statusString;
+    m_closedStateString = str.closedStateString;
+
+    // Generate notes
+    QString notes = xi18n("<p><note>The bug report's title is often written by its reporter "
+                          "and may not reflect the bug's nature, root cause or other visible "
+                          "symptoms you could use to compare to your crash. Please read the "
+                          "complete report and all the comments below.</note></p>");
+
+    if (m_duplicatesCount >= 10) { //Consider a possible mass duplicate crash
+        notes += xi18np("<p><note>This bug report has %1 duplicate report. That means this "
+                        "is probably a <strong>common crash</strong>. <i>Please consider only "
+                        "adding a comment or a note if you can provide new valuable "
+                        "information which was not already mentioned.</i></note></p>",
+                        "<p><note>This bug report has %1 duplicate reports. That means this "
+                        "is probably a <strong>common crash</strong>. <i>Please consider only "
+                        "adding a comment or a note if you can provide new valuable "
+                        "information which was not already mentioned.</i></note></p>",
+                        m_duplicatesCount);
+    }
+
+    // A manually entered bug ID could represent a normal bug
+    if (m_bug->severity() != QLatin1String("crash")
+            && m_bug->severity() != QLatin1String("major")
+            && m_bug->severity() != QLatin1String("grave")
+            && m_bug->severity() != QLatin1String("critical"))
+    {
+        notes += xi18n("<p><note>This bug report is not about a crash or about any other "
+                       "critical bug.</note></p>");
+    }
+
+    // Generate HTML text
+    QString text =
+            i18nc("@info bug report title (quoted)",
+                  "<h3>\"%1\"</h3>", m_bug->summary()) +
+            notes +
+            i18nc("@info bug report status",
+                  "<h4>Bug Report Status: %1</h4>", customStatusString) +
+            i18nc("@info bug report product and component",
+                  "<h4>Affected Component: %1 (%2)</h4>",
+                  m_bug->product(),
+                  m_bug->component()) +
+            i18nc("@info bug report description",
+                  "<h3>Description of the bug</h3><p>%1</p>",
+                  description.replace(QLatin1Char('\n'), QLatin1String("<br />")));
+
+    if (!comments.isEmpty()) {
+        text += i18nc("@label:textbox bug report comments (already formatted)",
+                      "<h2>Additional Comments</h2>%1", comments);
+    }
+
+    ui.m_infoBrowser->setText(text);
+    ui.m_infoBrowser->setEnabled(true);
+
+    m_suggestButton->setEnabled(m_relatedButtonEnabled);
+    m_suggestButton->setVisible(m_relatedButtonEnabled);
+
+    ui.m_statusWidget->setIdle(xi18nc("@info:status", "Showing bug %1",
+                                      QString::number(m_bug->id())));
 }
 
 void BugzillaReportInformationDialog::markAsDuplicate()

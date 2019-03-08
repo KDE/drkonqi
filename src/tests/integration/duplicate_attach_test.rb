@@ -18,92 +18,78 @@
 
 require_relative 'test_helper'
 
-require 'xmlrpc/client'
-require 'xmlrpc/server'
+require 'json'
+require 'webrick'
 
-# Monkey patch the xmlrpc server to let us handle regular GET requests.
-# Drkonqi partially goes through regular bugzilla cgi's simply requesting xml
-# output.
-module XMLServerInterceptor
-  # raw xml data is here
-  # def process(*args)
-  #   warn "+++ #{__method__} +++"
-  #   p args
-  #   warn "--- #{__method__} ---"
-  #   super
-  # end
-
-  def service(req, resp)
-    # Where webrick comes in with request, server rejects non-xmlrpc requests
-    # so we'll manually handle GET requests as necessary and forward to an
-    # actual bugzilla so we don't have to reimplement everything.
-    warn "+++ #{__method__} +++"
-    if req.request_method == 'GET'
-      if req.request_uri.path.include?('buglist.cgi') # Returns CSV.
-        resp.body = <<-EOF
-bug_id,"bug_severity","priority","bug_status","product","short_desc","resolution"
-375161,"crash","NOR","NEEDSINFO","dolphin","Dolphin crash, copy from Samba share","BACKTRACE"
-        EOF
-        return
-      end
-
-      if req.request_uri.path.include?('show_bug.cgi')
-        uri = req.request_uri.dup
-        uri.host = 'bugstest.kde.org'
-        uri.scheme = 'https'
-        uri.port = nil
-        resp.set_redirect(WEBrick::HTTPStatus::TemporaryRedirect, uri.to_s)
-        return
-      end
-    end
-    warn "--- #{__method__} ---"
-    super
-  end
-end
-
-class XMLRPC::Server
-  prepend XMLServerInterceptor
-
-  # Expose webrick server so we can get our port :|
-  # https://github.com/ruby/xmlrpc/issues/17
-  attr_accessor :server
+# monkey patch alias from put to get, upstream only aliases post -.-
+class WEBrick::HTTPServlet::ProcHandler
+  alias do_PUT do_GET
 end
 
 class TestDuplicateAttach < ATSPITest
   def setup
-    server = XMLRPC::Server.new(0)
-    port = server.server.config.fetch(:Port)
+    server = WEBrick::HTTPServer.new(Port: 0)
+
+    port = server.config.fetch(:Port)
     ENV['DRKONQI_KDE_BUGZILLA_URL'] = "http://localhost:#{port}/"
 
     @got_comment = false
 
-    server.set_default_handler do |name, args|
-      puts '+++ handler +++'
-      p name, args
-      if name == 'User.login'
-        next {"id"=>12345, "token"=>"12345-cJ5o717AbC"}
+    server.mount_proc '/' do |req, res|
+      query = req.request_uri.query
+
+      case req.request_method
+      when 'GET'
+        case req.path_info
+        when '/rest/version'
+          res.body = JSON.generate(version: '5.0.6')
+          next
+        when '/rest/product/ruby' # this is off because the product detection is a bit meh
+          res.body = File.read("#{__dir__}/data/product.dolphin")
+          next
+        when '/rest/login'
+          unless query.include?('login=xxx') && query.include?('password=yyy')
+            abort
+          end
+
+          res.body = JSON.generate(token: '123', id: '321')
+          next
+        when '/rest/bug', '/rest/bug/375161'
+          res.body = File.read("#{__dir__}/data/bugs")
+          next
+        when '/rest/bug/375161/comment'
+          res.body = File.read("#{__dir__}/data/comments")
+          next
+        end
+      when 'PUT'
+        case req.path_info
+        when '/rest/bug/375161'
+          input = JSON.parse(req.body)
+          if input['cc']&.[]('add')&.include?('xxx')
+            res.body = JSON.generate(id: 375161)
+            next
+          end
+        end
+      when 'POST'
+        case req.path_info
+        when '/rest/bug/375161/attachment'
+          input = JSON.parse(req.body)
+          if input['comment']&.include?('yyyyyyyyy')
+            res.body = JSON.generate(ids: [375161])
+            @got_comment = true
+            next
+          end
+        end
       end
-      if name == 'Bug.update'
-        id = args.fetch('ids').fetch(0)
-        cc_to_add = args.fetch('cc').fetch('add')
-        next {"bugs"=>[{"last_change_time"=>DateTime.now, "id"=>id, "changes"=>{"cc"=>{"removed"=>"", "added"=>cc_to_add}}, "alias"=>[]}]}
-      end
-      if name == 'Bug.add_attachment'
-        # Check for garbage string from test
-        @got_comment = args.fetch('comment').include?('yyyyyyyyyyyyyyyy')
-        next { "ids" => [1234] }
-      end
-      puts '~~~ bugzilla ~~~'
-      # Pipe request through bugstest.
-      # The arguments are killing me.
-      client = XMLRPC::Client.new('bugstest.kde.org', '/xmlrpc.cgi', 443,
-                                  nil, nil, nil, nil, true)
-      bugzilla = client.call(name, *args)
-      p bugzilla
-      next bugzilla
+
+      warn "!!!!!!!!"
+      res.keep_alive = false
+      abort "ERROR Unexpected request #{req}"
     end
 
-    @xml_server_thread = Thread.start { server.serve }
+    Thread.report_on_exception = true
+    @api_server_thread = Thread.start { server.start }
+    @api_server_thread.report_on_exception=true
 
     @tracee = fork { loop { sleep(999_999_999) } }
 
@@ -119,8 +105,8 @@ class TestDuplicateAttach < ATSPITest
   def teardown
     Process.kill('KILL', @tracee)
     Process.waitpid2(@tracee)
-    @xml_server_thread.kill
-    @xml_server_thread.join
+    @api_server_thread.kill
+    @api_server_thread.join
   end
 
   def drkonqi_running?
@@ -171,7 +157,8 @@ class TestDuplicateAttach < ATSPITest
       # Set pseudo login data if there are none.
       accessible = find_in(window, name: 'Username input')
       accessible.text.set_to 'xxx' if accessible.text.length <= 0
-      accessible = find_in(window, name: 'Password input')
+      # the lineedit is in fact an element on the input. why wouldn't it be...
+      accessible = find_in(window, name: 'Password input').children[0]
       accessible.text.set_to 'yyy' if accessible.text.length <= 0
 
       accessible = find_in(window, name: 'Login')

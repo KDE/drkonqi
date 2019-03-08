@@ -261,44 +261,26 @@ QString ReportInterface::generateAttachmentComment() const
     return comment;
 }
 
-BugReport ReportInterface::newBugReportTemplate() const
+Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
 {
-    //Generate a new bug report template with some values on it
-    BugReport report;
+    const SystemInformation *sysInfo = DrKonqi::systemInformation();
 
-    const SystemInformation * sysInfo = DrKonqi::systemInformation();
-
-    report.setProduct(m_productMapping->bugzillaProduct());
-    report.setComponent(m_productMapping->bugzillaComponent());
-    report.setVersion(m_productMapping->bugzillaVersion());
-    report.setOperatingSystem(sysInfo->bugzillaOperatingSystem());
+    Bugzilla::NewBug bug;
+    bug.product = m_productMapping->bugzillaProduct();
+    bug.component = m_productMapping->bugzillaComponent();
+    bug.version = m_productMapping->bugzillaVersion();
+    bug.op_sys = sysInfo->bugzillaOperatingSystem();
     if (sysInfo->compiledSources()) {
-        report.setPlatform(QLatin1String("Compiled Sources"));
+       bug.platform = QLatin1String("Compiled Sources");
     } else {
-        report.setPlatform(sysInfo->bugzillaPlatform());
+        bug.platform = sysInfo->bugzillaPlatform();
     }
-    report.setKeywords(QStringList() << QStringLiteral("drkonqi"));
-    report.setPriority(QLatin1String("NOR"));
-    report.setBugSeverity(QLatin1String("crash"));
+    bug.keywords = QStringList { QStringLiteral("drkonqi") };
+    bug.priority = QLatin1String("NOR");
+    bug.severity = QLatin1String("crash");
+    bug.summary = m_reportTitle;
 
-    /*
-    Disable the backtrace functions on title for RELEASE.
-    It also needs a bit of polishment
-
-    QString title = m_reportTitle;
-
-    //If there are not too much possible duplicates by query then there are more possibilities
-    //that this report is unique. Let's add the backtrace functions to the title
-    if (m_allPossibleDuplicatesByQuery.count() <= 2) {
-        if (!m_firstBacktraceFunctions.isEmpty()) {
-            title += (QLatin1String(" [") + m_firstBacktraceFunctions.join(", ").trimmed()
-                                                                            + QLatin1String("]"));
-        }
-    }
-    */
-
-    report.setShortDescription(m_reportTitle);
-    return report;
+    return bug;
 }
 
 void ReportInterface::sendBugReport() const
@@ -312,9 +294,9 @@ void ReportInterface::sendBugReport() const
         m_bugzillaManager->addMeToCC(m_attachToBugNumber);
     } else {
         //Creating a new bug report
-        BugReport report = newBugReportTemplate();
-        report.setDescription(generateReportFullText(true));
-        report.setValid(true);
+        Bugzilla::NewBug report = newBugReportTemplate();
+        report.description = generateReportFullText(true);
+        Q_ASSERT(!report.description.isEmpty());
 
         connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
         connect(m_bugzillaManager, &BugzillaManager::reportSent, this, &ReportInterface::reportSent);
@@ -327,13 +309,12 @@ void ReportInterface::sendUsingDefaultProduct() const
 {
     //Fallback function: if some of the custom values fail, we need to reset all the fields to the default
     //(and valid) bugzilla values; and try to resend
-    BugReport report = newBugReportTemplate();
-    report.setProduct(QLatin1String("kde"));
-    report.setComponent(QLatin1String("general"));
-    report.setPlatform(QLatin1String("unspecified"));
-    report.setDescription(generateReportFullText(true));
-    report.setValid(true);
-    m_bugzillaManager->sendReport(report);
+    Bugzilla::NewBug bug = newBugReportTemplate();
+    bug.product = QLatin1String("kde");
+    bug.component = QLatin1String("general");
+    bug.platform = QLatin1String("unspecified");
+    bug.description = generateReportFullText(true);
+    m_bugzillaManager->sendReport(bug);
 }
 
 void ReportInterface::addedToCC()

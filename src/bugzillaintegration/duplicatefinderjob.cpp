@@ -1,6 +1,7 @@
 /*******************************************************************
 * duplicatefinderjob.cpp
 * Copyright 2011    Matthias Fuchs <mat69@gmx.net>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -27,14 +28,21 @@
 #include "drkonqi.h"
 #include "parsebugbacktraces.h"
 
-DuplicateFinderJob::DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager *manager, QObject *parent)
+DuplicateFinderJob::DuplicateFinderJob(const QList<Bugzilla::Bug::Ptr> &bugs, BugzillaManager *manager, QObject *parent)
   : KJob(parent),
     m_manager(manager),
-    m_bugIds(bugIds)
+    m_bugs(bugs)
 {
-    qCDebug(DRKONQI_LOG) << "Possible duplicates:" << m_bugIds;
-    connect(m_manager, &BugzillaManager::bugReportFetched, this, &DuplicateFinderJob::slotBugReportFetched);
-    connect(m_manager, &BugzillaManager::bugReportError, this, &DuplicateFinderJob::slotBugReportError);
+    qCDebug(DRKONQI_LOG) << "Possible duplicates:" << m_bugs.size();
+    connect(m_manager, &BugzillaManager::bugReportFetched,
+            this, &DuplicateFinderJob::slotBugReportFetched);
+    connect(m_manager, &BugzillaManager::bugReportError,
+            this, &DuplicateFinderJob::slotError);
+
+    connect(m_manager, &BugzillaManager::commentsFetched,
+            this, &DuplicateFinderJob::slotCommentsFetched);
+    connect(m_manager, &BugzillaManager::commentsError,
+            this, &DuplicateFinderJob::slotError);
 }
 
 DuplicateFinderJob::~DuplicateFinderJob()
@@ -53,36 +61,51 @@ DuplicateFinderJob::Result DuplicateFinderJob::result() const
 
 void DuplicateFinderJob::analyzeNextBug()
 {
-    if (m_bugIds.isEmpty()) {
+    if (m_bugs.isEmpty()) {
         emitResult();
         return;
     }
 
-    const int bugId = m_bugIds.takeFirst();
-    qCDebug(DRKONQI_LOG) << "Fetching:" << bugId;
-    m_manager->fetchBugReport(bugId, this);
+    m_bug = m_bugs.takeFirst();
+    qCDebug(DRKONQI_LOG) << "Fetching:" << m_bug->id();
+    m_manager->fetchComments(m_bug, this);
 }
 
-void DuplicateFinderJob::fetchBug(const QString &bugId)
+void DuplicateFinderJob::fetchBug(int bugId)
 {
-    bool ok;
-    const int num = bugId.toInt(&ok);
-    if (ok) {
+    if (bugId > 0) {
         qCDebug(DRKONQI_LOG) << "Fetching:" << bugId;
-        m_manager->fetchBugReport(num, this);
+        m_manager->fetchBugReport(bugId, this);
     } else {
         qCDebug(DRKONQI_LOG) << "Bug id not valid:" << bugId;
         analyzeNextBug();
     }
 }
 
-void DuplicateFinderJob::slotBugReportFetched(const BugReport &bug, QObject *owner)
+void DuplicateFinderJob::slotBugReportFetched(const Bugzilla::Bug::Ptr &bug, QObject *owner)
 {
     if (this != owner) {
         return;
     }
 
-    ParseBugBacktraces parse(bug, this);
+    m_bug = bug;
+    qCDebug(DRKONQI_LOG) << "Fetching:" << m_bug->id();
+    m_manager->fetchComments(m_bug, this);
+}
+
+void DuplicateFinderJob::slotCommentsFetched(const QList<Bugzilla::Comment::Ptr> &comments, QObject *owner)
+{
+    if (this != owner) {
+        return;
+    }
+
+    // NOTE: we do not hold the comments in our bug object, once they go out
+    //   of scope they are gone again. We have no use for keeping them in memory
+    //   a user might look at 3 out of 20 bugs, and for those we can simply
+    //   request the comments again instead of holding the potentially very large
+    //   comments in memory.
+
+    ParseBugBacktraces parse(comments, this);
     parse.parse();
 
     BacktraceGenerator *btGenerator = DrKonqi::debuggerManager()->backtraceGenerator();
@@ -91,36 +114,42 @@ void DuplicateFinderJob::slotBugReportFetched(const BugReport &bug, QObject *own
 
     //TODO handle more cases here
     if (rating != ParseBugBacktraces::PerfectDuplicate) {
-        qCDebug(DRKONQI_LOG) << "Bug" << bug.bugNumber() << "most likely not a duplicate:" << rating;
+        qCDebug(DRKONQI_LOG) << "Bug" << m_bug->id() << "most likely not a duplicate:" << rating;
         analyzeNextBug();
         return;
     }
 
+    bool unknownStatus = (m_bug->status() == Bugzilla::Bug::Status::Unknown);
+    bool unknownResolution = (m_bug->resolution() == Bugzilla::Bug::Resolution::Unknown);
+
     //The Bug is a duplicate, now find out the status and resolution of the existing report
-    if (bug.resolutionValue() == BugReport::Duplicate) {
+    if (m_bug->resolution() == Bugzilla::Bug::Resolution::DUPLICATE) {
         qCDebug(DRKONQI_LOG) << "Found duplicate is a duplicate itself.";
         if (!m_result.duplicate) {
-            m_result.duplicate = bug.bugNumberAsInt();
+            m_result.duplicate = m_bug->id();
         }
-        fetchBug(bug.markedAsDuplicateOf());
-    } else if ((bug.statusValue() == BugReport::UnknownStatus) || (bug.resolutionValue() == BugReport::UnknownResolution)) {
+        fetchBug(m_bug->dupe_of());
+    } else if (unknownStatus || unknownResolution) {
+        // A resolution is unknown when the bug is unresolved.
+        // Status generally is never unknown.
         qCDebug(DRKONQI_LOG) << "Either the status or the resolution is unknown.";
-        qCDebug(DRKONQI_LOG) << "Status \"" << bug.bugStatus() << "\" known:" << (bug.statusValue() != BugReport::UnknownStatus);
-        qCDebug(DRKONQI_LOG) << "Resolution \"" << bug.resolution() << "\" known:" << (bug.resolutionValue() != BugReport::UnknownResolution);
+        qCDebug(DRKONQI_LOG) << "Status \"" << m_bug->status() << "\" known:" << !unknownStatus;
+        qCDebug(DRKONQI_LOG) << "Resolution \"" << m_bug->resolution() << "\" known:" << !unknownResolution;
         analyzeNextBug();
     } else {
         if (!m_result.duplicate) {
-            m_result.duplicate = bug.bugNumberAsInt();
+            m_result.duplicate = m_bug->id();
         }
-        m_result.parentDuplicate = bug.bugNumberAsInt();
-        m_result.status = bug.statusValue();
-        m_result.resolution = bug.resolutionValue();
-        qCDebug(DRKONQI_LOG) << "Found duplicate information (id/status/resolution):" << bug.bugNumber() << bug.bugStatus() << bug.resolution();
+        m_result.parentDuplicate = m_bug->id();
+        m_result.status = m_bug->status();
+        m_result.resolution = m_bug->resolution();
+        qCDebug(DRKONQI_LOG) << "Found duplicate information (id/status/resolution):"
+                             << m_bug->id() << m_bug->status() << m_bug->resolution();
         emitResult();
     }
 }
 
-void DuplicateFinderJob::slotBugReportError(const QString &message, QObject *owner)
+void DuplicateFinderJob::slotError(const QString &message, QObject *owner)
 {
     if (this != owner) {
         return;
@@ -128,3 +157,4 @@ void DuplicateFinderJob::slotBugReportError(const QString &message, QObject *own
     qCDebug(DRKONQI_LOG) << "Error fetching bug:" << message;
     analyzeNextBug();
 }
+

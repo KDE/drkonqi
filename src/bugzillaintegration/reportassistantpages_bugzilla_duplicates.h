@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantpages_bugzilla_duplicates.h
 * Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -57,18 +58,15 @@ public:
 private Q_SLOTS:
     /* Search related methods */
     void searchMore();
-    void performSearch();
     void stopCurrentSearch();
 
     void markAsSearching(bool);
 
     bool canSearchMore();
 
-    void searchFinished(const BugMapList&);
+    void searchFinished(const QList<Bugzilla::Bug::Ptr> &);
     void searchError(QString);
     void analyzedDuplicates(KJob *job);
-
-    void resetDates();
 
     /* Duplicates list related methods */
     void openSelectedReport();
@@ -91,21 +89,17 @@ private Q_SLOTS:
     void informationClicked(const QString &activatedLink);
 
 private:
-    bool                                        m_searching;
-    bool                                        m_foundDuplicate;
+    bool m_searching = false;
+    bool m_foundDuplicate = false;
 
-    Ui::AssistantPageBugzillaDuplicates         ui;
+    Ui::AssistantPageBugzillaDuplicates ui;
 
-    //Dates of current Results
-    QDate                                       m_startDate;
-    QDate                                       m_endDate;
-    //Dates of searching process
-    QDate                                       m_searchingStartDate;
-    QDate                                       m_searchingEndDate;
+    KGuiItem m_searchMoreGuiItem;
+    KGuiItem m_retrySearchGuiItem;
+    DuplicateFinderJob::Result m_result;
 
-    KGuiItem                                    m_searchMoreGuiItem;
-    KGuiItem                                    m_retrySearchGuiItem;
-    DuplicateFinderJob::Result                  m_result;
+    int m_offset = -1;
+    bool m_atEnd = false;
 };
 
 /** Internal bug-info dialog **/
@@ -124,7 +118,10 @@ public:
     void cancelAssistant();
 
 private Q_SLOTS:
-    void bugFetchFinished(BugReport,QObject *);
+    void bugFetchFinished(Bugzilla::Bug::Ptr bug, QObject *);
+    void onCommentsFetched(QList<Bugzilla::Comment::Ptr> bugComments,
+                           QObject *jobOwner);
+
     void bugFetchError(QString, QObject *);
 
     void reloadReport();
@@ -146,6 +143,8 @@ private:
     QString                                     m_closedStateString;
     int                                         m_duplicatesCount;
     QPushButton*                                m_suggestButton;
+
+    Bugzilla::Bug::Ptr m_bug = nullptr;
 };
 
 class BugzillaReportConfirmationDialog : public QDialog

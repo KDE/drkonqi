@@ -121,20 +121,20 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
     }
 }
 
-void ProductMapping::checkProductInfo(const Product & product)
+void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
 {
     // check whether the product itself is disabled for new reports,
     // which usually means that product/application is unmaintained.
-    m_bugzillaProductDisabled = !product.isActive();
+    m_bugzillaProductDisabled = !product->isActive();
 
     // check whether the product on bugzilla contains the expected component
-    if (! product.components().contains(m_bugzillaComponent)) {
+    if (!product->componentNames().contains(m_bugzillaComponent)) {
         m_bugzillaComponent = QLatin1String("general");
     }
 
     // find the appropriate version to use on bugzilla
     const QString version = m_crashedAppPtr->version();
-    const QStringList& allVersions = product.allVersions();
+    const QStringList &allVersions = product->allVersions();
 
     if (allVersions.contains(version)) {
         //The version the crash application provided is a valid bugzilla version: use it !
@@ -149,7 +149,7 @@ void ProductMapping::checkProductInfo(const Product & product)
 
     // check whether that verions is disabled for new reports, which
     // usually means that version is outdated and not supported anymore.
-    const QStringList& inactiveVersions = product.inactiveVersions();
+    const QStringList &inactiveVersions = product->inactiveVersions();
     m_bugzillaVersionDisabled = inactiveVersions.contains(m_bugzillaVersionString);
 
 }

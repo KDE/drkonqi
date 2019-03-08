@@ -1,6 +1,7 @@
 /*******************************************************************
 * duplicatefinderjob.h
 * Copyright 2011    Matthias Fuchs <mat69@gmx.net>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -37,13 +38,6 @@ class DuplicateFinderJob : public KJob
     public:
         struct Result
         {
-            Result()
-              : duplicate(0),
-                parentDuplicate(0),
-                status(BugReport::UnknownStatus),
-                resolution(BugReport::UnknownResolution)
-            {}
-
             /**
              * First duplicate that was found, it might be that
              * this one is a duplicate itself, though this is still
@@ -54,21 +48,20 @@ class DuplicateFinderJob : public KJob
              * @note 0 means that there is no duplicate
              * @see parrentDuplicate
              */
-            int duplicate;
+            int duplicate = 0;
 
             /**
              * This always points to the parent bug, i.e.
              * the bug that has no duplicates itself.
              * If this is 0 it means that there are no duplicates
              */
-            int parentDuplicate;
+            int parentDuplicate = 0;
 
-            BugReport::Status status;
-
-            BugReport::Resolution resolution;
+            Bugzilla::Bug::Status status = Bugzilla::Bug::Status::Unknown;
+            Bugzilla::Bug::Resolution resolution = Bugzilla::Bug::Resolution::Unknown;
         };
 
-        DuplicateFinderJob(const QList<int> &bugIds, BugzillaManager *manager, QObject *parent = nullptr);
+        DuplicateFinderJob(const QList<Bugzilla::Bug::Ptr> &bugs, BugzillaManager *manager, QObject *parent = nullptr);
         ~DuplicateFinderJob() override;
 
         void start() override;
@@ -80,16 +73,21 @@ class DuplicateFinderJob : public KJob
         Result result() const;
 
     private Q_SLOTS:
-        void slotBugReportFetched(const BugReport &bug, QObject *owner);
-        void slotBugReportError(const QString &message, QObject *owner);
+        void slotBugReportFetched(const Bugzilla::Bug::Ptr &bug, QObject *owner);
+        void slotCommentsFetched(const QList<Bugzilla::Comment::Ptr> &comments, QObject *owner);
+
+        void slotError(const QString &message, QObject *owner);
 
     private:
         void analyzeNextBug();
-        void fetchBug(const QString &bugId);
+        void fetchBug(int bugId);
 
     private:
         BugzillaManager *m_manager = nullptr;
-        QList<int> m_bugIds;
         Result m_result;
+
+        Bugzilla::Bug::Ptr m_bug = nullptr;
+
+        QList<Bugzilla::Bug::Ptr> m_bugs;
 };
 #endif

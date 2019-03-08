@@ -75,17 +75,16 @@ class BugzillaLibTest : public QObject
 
         void sendBR()
         {
-            BugReport br;
-            br.setValid(true);
-            br.setProduct(QStringLiteral("konqueror"));
-            br.setComponent(QStringLiteral("general"));
-            br.setVersion(QStringLiteral("undefined"));
-            br.setOperatingSystem(QStringLiteral("Linux"));
-            br.setPriority(QStringLiteral("NOR"));
-            br.setPlatform(QStringLiteral("random test"));
-            br.setBugSeverity(QStringLiteral("crash"));
-            br.setShortDescription(QStringLiteral("bla bla"));
-            br.setDescription(QStringLiteral("bla bla large"));
+            Bugzilla::NewBug br;
+            br.product = QStringLiteral("konqueror");
+            br.component = QStringLiteral("general");
+            br.version = QStringLiteral("undefined");
+            br.op_sys = QStringLiteral("Linux");
+            br.priority = QStringLiteral("NOR");
+            br.platform = QStringLiteral("random test");
+            br.severity = QStringLiteral("crash");
+            br.summary = QStringLiteral("bla bla");
+            br.description = QStringLiteral("bla bla large");
 
             manager->sendReport(br);
             qDebug() << "Trying to send bug report";
@@ -93,17 +92,16 @@ class BugzillaLibTest : public QObject
 
         void sendBR2()
         {
-            BugReport br;
-            br.setValid(true);
-            br.setProduct(QStringLiteral("konqueror"));
-            br.setComponent(QStringLiteral("general"));
-            br.setVersion(QStringLiteral("undefined"));
-            br.setOperatingSystem(QStringLiteral("Linux"));
-            br.setPriority(QStringLiteral("NOR"));
-            br.setPlatform(QStringLiteral("unspecified"));
-            br.setBugSeverity(QStringLiteral("crash"));
-            br.setShortDescription(QStringLiteral("bla bla"));
-            br.setDescription(QStringLiteral("bla bla large"));
+            Bugzilla::NewBug br;
+            br.product = QStringLiteral("konqueror");
+            br.component = QStringLiteral("general");
+            br.version = QStringLiteral("undefined");
+            br.op_sys = QStringLiteral("Linux");
+            br.priority = QStringLiteral("NOR");
+            br.platform = QStringLiteral("unspecified");
+            br.severity = QStringLiteral("crash");
+            br.summary = QStringLiteral("bla bla");
+            br.description = QStringLiteral("bla bla large");
 
             manager->sendReport(br);
             qDebug() << "Trying to send bug report";

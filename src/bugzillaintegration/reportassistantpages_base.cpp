@@ -131,6 +131,13 @@ bool CrashInformationPage::showNextPage()
 
 //BEGIN BugAwarenessPage
 
+static QHash<int, ReportInterface::Reproducible> s_reproducibleIndex {
+    { 0, ReportInterface::ReproducibleUnsure },
+    { 1, ReportInterface::ReproducibleNever },
+    { 2, ReportInterface::ReproducibleSometimes },
+    { 3, ReportInterface::ReproducibleEverytime }
+};
+
 BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
         : ReportAssistantPage(parent)
 {
@@ -150,6 +157,12 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
                 i18nc("@label examples about information the user can provide",
                       "Examples: %1", reportInterface()->appDetailsExamples()->examples()));
     ui.m_appSpecificDetailsExamples->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+
+    if (qEnvironmentVariableIsSet("DRKONQI_TEST_MODE")) {
+        ui.m_rememberCrashSituationYes->setChecked(true);
+        ui.m_reproducibleBox->setCurrentIndex(
+                    s_reproducibleIndex.key(ReportInterface::ReproducibleEverytime));
+    }
 }
 
 void BugAwarenessPage::aboutToShow()
@@ -161,24 +174,7 @@ void BugAwarenessPage::aboutToHide()
 {
     //Save data
     ReportInterface::Reproducible reproducible = ReportInterface::ReproducibleUnsure;
-    switch(ui.m_reproducibleBox->currentIndex()) {
-        case 0: {
-            reproducible = ReportInterface::ReproducibleUnsure;
-            break;
-        }
-        case 1: {
-            reproducible = ReportInterface::ReproducibleNever;
-            break;
-        }
-        case 2: {
-            reproducible = ReportInterface::ReproducibleSometimes;
-            break;
-        }
-        case 3: {
-            reproducible = ReportInterface::ReproducibleEverytime;
-            break;
-        }
-    }
+    reproducible = s_reproducibleIndex.value(ui.m_reproducibleBox->currentIndex());
 
     reportInterface()->setBugAwarenessPageData(ui.m_rememberCrashSituationYes->isChecked(),
                                                reproducible,

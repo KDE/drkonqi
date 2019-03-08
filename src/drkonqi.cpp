@@ -336,13 +336,18 @@ int DrKonqi::thread()
 
 bool DrKonqi::ignoreQuality()
 {
-    return qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY");
+    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") ||
+            qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
+    return ignore;
 }
 
 const QString &DrKonqi::kdeBugzillaURL()
 {
-    // NB: for practical reasons this cannot use the shared instance. Initing the instances requires
-    //   knowing the URL already, so we'd have an init loop. Use a local static instead.
+    // WARNING: for practical reasons this cannot use the shared instance
+    //   Initing the instances requires knowing the URL already, so we'd have
+    //   an init loop. Use a local static instead. Otherwise we'd crash on
+    //   initialization of global statics derived from our return value.
+    //   Always copy into the local static and return that!
     static QString url;
     if (!url.isEmpty()) {
         return url;
@@ -353,6 +358,11 @@ const QString &DrKonqi::kdeBugzillaURL()
         return url;
     }
 
-    url = QStringLiteral("https://bugs.kde.org/");
+    if (qEnvironmentVariableIsSet("DRKONQI_TEST_MODE")) {
+        url = QStringLiteral("https://bugstest.kde.org/");
+    } else {
+        url = QStringLiteral("https://bugs.kde.org/");
+    }
+
     return url;
 }

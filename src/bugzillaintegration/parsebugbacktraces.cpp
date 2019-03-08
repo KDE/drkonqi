@@ -110,9 +110,9 @@ ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceC
     }
 }
 
-ParseBugBacktraces::ParseBugBacktraces(const BugReport &bug, QObject *parent)
-  : QObject(parent),
-    m_bug(bug)
+ParseBugBacktraces::ParseBugBacktraces(const QList<Bugzilla::Comment::Ptr> &comments, QObject *parent)
+    : QObject(parent)
+    , m_comments(comments)
 {
     m_parser = BacktraceParser::newParser(QStringLiteral("gdb"), this);
     m_parser->connectToGenerator(this);
@@ -120,11 +120,8 @@ ParseBugBacktraces::ParseBugBacktraces(const BugReport &bug, QObject *parent)
 
 void ParseBugBacktraces::parse()
 {
-    parse(m_bug.description());
-
-    QStringList comments = m_bug.comments();
-    foreach (const QString &comment, comments) {
-        parse(comment);
+    for (const auto &comment : m_comments) {
+        parse(comment->text());
     }
 }
 

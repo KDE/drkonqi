@@ -9,6 +9,7 @@ endif ()
 
 configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
 
+add_subdirectory( bugzillaintegration/libbugzilla )
 add_subdirectory( data )
 add_subdirectory( parser )
 if ( WIN32 )
@@ -62,7 +63,7 @@ set(drkonqi_SRCS
     bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp
     bugzillaintegration/reportinterface.cpp
     bugzillaintegration/productmapping.cpp
-    bugzillaintegration/parsebugbacktraces.cpp # Requires kxmlrpcclient
+    bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
 )
 ki18n_wrap_ui(drkonqi_SRCS
@@ -81,7 +82,6 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi)
 
-
 add_executable(drkonqi ${drkonqi_SRCS})
 ecm_mark_nongui_executable(drkonqi)
 
@@ -96,7 +96,6 @@ target_link_libraries(drkonqi
     KF5::Completion
     Qt5::DBus
 
-    KF5::XmlRpcClient
     KF5::WidgetsAddons
     KF5::Wallet
 
@@ -104,6 +103,7 @@ target_link_libraries(drkonqi
     KF5::IdleTime # hide status notifier only if user saw it
 
     drkonqi_backtrace_parser
+    qbugzilla
 )
 if (${Qt5X11Extras_FOUND})
     target_link_libraries(drkonqi
@@ -124,7 +124,6 @@ install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop)
 install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
-
-# Only go into tests once we have a drkonqi target so the tests can reference
-# it.
 add_subdirectory( tests )
+
+add_subdirectory(bugzillaintegration/libbugzilla/autotests)

@@ -20,9 +20,13 @@ include(ECMMarkAsTest)
 include(CheckFunctionExists)
 include(FeatureSummary)
 
+kde_enable_exceptions()
+
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service ConfigWidgets JobWidgets KIO Crash Completion XmlRpcClient WidgetsAddons Wallet Notifications IdleTime)
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service
+    ConfigWidgets JobWidgets KIO Crash Completion WidgetsAddons Wallet
+    Notifications IdleTime)
 if(APPLE)
     find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS WindowSystem)
 endif()

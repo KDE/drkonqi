@@ -1,8 +1,26 @@
+if(NOT BUILD_TESTING)
+     # Skip everything. Particularly trying to look for integration test deps.
+    return()
+endif()
+
+if(BUILD_COVERAGE)
+    add_custom_target(coverage)
+    add_custom_command(TARGET coverage
+        COMMAND ctest
+        COMMAND lcov -o ${CMAKE_BINARY_DIR}/lcov.report -c -d ${CMAKE_BINARY_DIR}
+        COMMAND genhtml -o ${CMAKE_BINARY_DIR}/coverage ${CMAKE_BINARY_DIR}/lcov.report
+        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v
+        DEPENDS test
+    )
+    add_custom_target(show-coverage
+        COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html
+        DEPENDS coverage
+    )
+endif()
+
 add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
-if(KF5XmlRpcClient_FOUND)
-    add_subdirectory(bugzillalibtest)
-endif()
+add_subdirectory(bugzillalibtest)
 
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)
@@ -11,8 +29,6 @@ if(NOT APPLE)
     if(RUBY_EXECUTABLE)
         execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'atspi'"
             RESULT_VARIABLE RUBY_ATSPI)
-        execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'xmlrpc/server'"
-            RESULT_VARIABLE RUBY_XMLRPC)
     endif()
     if(NOT GDB_EXECUTABLE)
         # Needed so drkonqi can actually trace something.
@@ -41,10 +57,10 @@ if(NOT APPLE)
 
     if(RUBY_EXECUTABLE AND XVFB_RUN_EXECTUABLE AND ATSPI_BUS_LAUNCHER_EXECUTABLE
        AND ATSPI_REGISTRYD_EXECUTABLE AND GDB_EXECUTABLE
-       AND RUBY_ATSPI EQUAL 0 AND RUBY_XMLRPC EQUAL 0)
+       AND RUBY_ATSPI EQUAL 0)
         set(WITH_DRKONI_INTEGRATION_TESTING TRUE)
         add_subdirectory(integration)
     endif()
     add_feature_info(DrKonqiIntegrationTesting WITH_DRKONI_INTEGRATION_TESTING
-        "Needs Ruby, functional atspi and xmlrpc gems, gdb, as well as xvfb-run.")
+        "Needs Ruby, functional atspi gem, gdb, as well as xvfb-run.")
 endif()

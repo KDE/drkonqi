@@ -24,7 +24,9 @@
 #include <QObject>
 #include <QStringList>
 
-class BugReport;
+namespace Bugzilla {
+class NewBug;
+}
 
 class BugzillaManager;
 class ProductMapping;
@@ -58,7 +60,7 @@ public:
 
     QString generateReportFullText(bool drKonqiStamp) const;
 
-    BugReport newBugReportTemplate() const;
+    Bugzilla::NewBug newBugReportTemplate() const;
     void sendBugReport() const;
 
     QStringList relatedBugzillaProducts() const;
