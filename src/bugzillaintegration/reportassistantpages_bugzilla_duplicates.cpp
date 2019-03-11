@@ -599,11 +599,6 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
 
 BugzillaReportInformationDialog::~BugzillaReportInformationDialog()
 {
-    disconnect(m_parent->bugzillaManager(), &BugzillaManager::bugReportFetched,
-             this, &BugzillaReportInformationDialog::bugFetchFinished);
-    disconnect(m_parent->bugzillaManager(), SIGNAL(bugReportError(QString,QObject*)),
-             this, SLOT(bugFetchError(QString,QObject*)));
-
     KConfigGroup config(KSharedConfig::openConfig(), "BugzillaReportInformationDialog");
     KWindowConfig::saveWindowSize(windowHandle(), config);
 }
