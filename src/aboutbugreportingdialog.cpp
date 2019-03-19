@@ -194,7 +194,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
             xi18nc("@info/rich", "If you are interested in helping us to keep the KDE bug tracker system "
                                  "clean and useful, which allows the developers to be more focused on "
                                  "fixing the real issues,  you are welcome to "
-                                 "<link url='http://techbase.kde.org/Contribute/Bugsquad'>join the BugSquad team</link>."));
+                                 "<link url='https://community.kde.org/Guidelines_and_HOWTOs/Bug_triaging'>join the BugSquad team</link>."));
 
     m_textBrowser->setText(text);
 

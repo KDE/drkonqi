@@ -246,7 +246,7 @@ void ConclusionPage::finishClicked()
         } else {
             QUrl url(reportAddress);
             if (QUrl(reportAddress).isRelative()) { //Scheme is missing
-                url = QUrl(QString::fromLatin1("http://%1").arg(reportAddress));
+                url = QUrl(QString::fromLatin1("https://%1").arg(reportAddress));
             }
             QDesktopServices::openUrl(url);
         }
