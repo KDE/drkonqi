@@ -33,6 +33,7 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <QCommandLineParser>
+#include <QDebug>
 
 #include <config-drkonqi.h>
 #if HAVE_X11
@@ -121,6 +122,24 @@ int main(int argc, char* argv[])
     parser.addOption(keepRunningOption);
     parser.addOption(threadOption);
     parser.addOption(dialogOption);
+
+    // Add all unknown options but make sure to print a warning.
+    // This enables older DrKonqi's to run by newer KCrash instances with
+    // possibly different/new options.
+    // KCrash can always send all options it knows to send and be sure that
+    // DrKonqi will not explode on them. If an option is not known here it's
+    // either too old or too new.
+    //
+    // To implement this smartly we'll ::parse all arguments, and then ::process
+    // them again once we have injected no-op options for all unknown ones.
+    // This allows ::process to still do common argument handling for --version
+    // as well as standard error handling.
+    if (!parser.parse(qa.arguments())) {
+        for (const QString &option : parser.unknownOptionNames()) {
+            qWarning() << "Unknown option" << option << " - ignoring it.";
+            parser.addOption(QCommandLineOption(option));
+        }
+    }
 
     parser.process(qa);
     aboutData.processCommandLine(&parser);
