@@ -24,6 +24,7 @@
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
+#include "drkonqi_debug.h"
 
 //static
 QList<Debugger> Debugger::availableInternalDebuggers(const QString & backend)
@@ -45,7 +46,14 @@ bool Debugger::isValid() const
 bool Debugger::isInstalled() const
 {
     QString tryexec = tryExec();
-    return !tryexec.isEmpty() && !QStandardPaths::findExecutable(tryexec).isEmpty();
+    if(tryexec.isEmpty()) {
+        qCDebug(DRKONQI_LOG) << "tryExec of" << name() << "is empty!";
+        return false;
+    }
+
+    // Find for executable in PATH and in our application path
+    return !QStandardPaths::findExecutable(tryexec).isEmpty()
+        || !QStandardPaths::findExecutable(tryexec, {QCoreApplication::applicationDirPath()}).isEmpty();
 }
 
 QString Debugger::name() const

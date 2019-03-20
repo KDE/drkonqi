@@ -172,6 +172,7 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 
     Debugger firstKnownGoodDebugger, preferredDebugger;
     foreach (const Debugger & debugger, internalDebuggers) {
+        qCDebug(DRKONQI_LOG) << "Check debugger if" << debugger.name() << "is installed:" << debugger.isInstalled();
         if (!firstKnownGoodDebugger.isValid() && debugger.isInstalled()) {
             firstKnownGoodDebugger = debugger;
         }
@@ -235,5 +236,3 @@ void KCrashBackend::emergencySaveFunction(int signal)
     Q_UNUSED(signal);
     ::kill(s_pid, SIGKILL);
 }
-
-
