@@ -46,9 +46,7 @@ StatusNotifier::StatusNotifier(QObject *parent)
     m_autoCloseTimer->setInterval(60000);
     m_autoCloseTimer->start();
     connect(m_autoCloseTimer, &QTimer::timeout, this, &StatusNotifier::expired);
-    connect(this, &StatusNotifier::activated, this, [this] {
-        deleteLater();
-    });
+    connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
 
     KService::Ptr service = KService::serviceByStorageId(crashedApp->fakeExecutableBaseName());
     if (service) {
@@ -75,9 +73,7 @@ StatusNotifier::StatusNotifier(QObject *parent)
     if (canBeRestarted(crashedApp)) {
         action = new QAction(QIcon::fromTheme(QStringLiteral("system-reboot")),
                              i18n("&Restart Application"), nullptr);
-        connect(action, &QAction::triggered, this, [crashedApp] {
-            crashedApp->restart();
-        });
+        connect(action, &QAction::triggered, crashedApp, &CrashedApplication::restart);
         // once restarted successfully, disable restart option
         connect(crashedApp, &CrashedApplication::restarted, action, [action](bool success) {
             action->setEnabled(!success);
