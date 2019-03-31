@@ -34,7 +34,7 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 
-#include <config-X11.h>
+#include <config-drkonqi.h>
 #if HAVE_X11
 #include <QX11Info>
 #endif

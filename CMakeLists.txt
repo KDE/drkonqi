@@ -70,7 +70,6 @@ if (MINGW)
 endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
-configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 

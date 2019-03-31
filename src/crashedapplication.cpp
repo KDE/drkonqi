@@ -19,7 +19,7 @@
 
 #include "crashedapplication.h"
 
-#if defined(HAVE_STRSIGNAL) && defined(Q_OS_UNIX)
+#if HAVE_STRSIGNAL && defined(Q_OS_UNIX)
 # include <clocale>
 # include <cstring>
 # include <cstdlib>
@@ -83,7 +83,7 @@ int CrashedApplication::signalNumber() const
 
 QString CrashedApplication::signalName() const
 {
-#if defined(HAVE_STRSIGNAL) && defined(Q_OS_UNIX)
+#if HAVE_STRSIGNAL && defined(Q_OS_UNIX)
     const char * oldLocale = std::setlocale(LC_MESSAGES, nullptr);
     char * savedLocale;
     if (oldLocale) {

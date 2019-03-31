@@ -22,7 +22,7 @@
 
 #include "systeminformation.h"
 
-#ifdef HAVE_UNAME
+#if HAVE_UNAME
 # include <errno.h>
 # include <sys/utsname.h>
 #endif
@@ -214,7 +214,7 @@ QString SystemInformation::fetchOSDetailInformation() const
     //Get complete OS string (and fallback to base string)
     QString operatingSystem = m_bugzillaOperatingSystem;
 
-#ifdef HAVE_UNAME
+#if HAVE_UNAME
     struct utsname buf;
     if (uname(&buf) == -1) {
         qCDebug(DRKONQI_LOG) << "call to uname failed" << errno;

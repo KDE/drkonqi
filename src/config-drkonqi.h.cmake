@@ -1,6 +1,6 @@
-#cmakedefine HAVE_STRSIGNAL 1
-#cmakedefine HAVE_UNAME 1
-#cmakedefine HAVE_X11 1
-#define HAVE_XMLRPCCLIENT 1
+#cmakedefine01 HAVE_STRSIGNAL
+#cmakedefine01 HAVE_UNAME
+#cmakedefine01 HAVE_X11
+#cmakedefine01 HAVE_XMLRPCCLIENT
 
 #define DEBUG_PACKAGE_INSTALLER_NAME "@DEBUG_PACKAGE_INSTALLER_NAME@"
