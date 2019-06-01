@@ -39,9 +39,7 @@
 #include "debuggerlaunchers.h"
 #include "drkonqi_globals.h"
 #include "config-drkonqi.h"
-#if HAVE_XMLRPCCLIENT
-    #include "bugzillaintegration/reportassistantdialog.h"
-#endif
+#include "bugzillaintegration/reportassistantdialog.h"
 
 static const char ABOUT_BUG_REPORTING_URL[] = "#aboutbugreporting";
 static QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral("enter_bug.cgi?product=drkonqi&format=guided");
@@ -185,8 +183,7 @@ void DrKonqiDialog::buildDialogButtons()
 
     bool enableReportAssistant = !crashedApp->bugReportAddress().isEmpty() &&
                                  crashedApp->fakeExecutableBaseName() != QLatin1String("drkonqi") &&
-                                 !DrKonqi::isSafer() &&
-                                 HAVE_XMLRPCCLIENT;
+                                 !DrKonqi::isSafer();
     reportButton->setEnabled(enableReportAssistant);
     connect(reportButton, &QPushButton::clicked, this, &DrKonqiDialog::startBugReportAssistant);
 
@@ -267,13 +264,11 @@ void DrKonqiDialog::enableDebugMenu(bool debuggerRunning)
 
 void DrKonqiDialog::startBugReportAssistant()
 {
-#if HAVE_XMLRPCCLIENT
     ReportAssistantDialog * bugReportAssistant = new ReportAssistantDialog();
     bugReportAssistant->show();
     connect(bugReportAssistant, &QObject::destroyed, this, &DrKonqiDialog::reject);
 
     hide();
-#endif
 }
 
 void DrKonqiDialog::linkActivated(const QString& link)
