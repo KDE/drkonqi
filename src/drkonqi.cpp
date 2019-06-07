@@ -200,7 +200,12 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
                 return;
             }
 
-            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl);
+            // QFileDialog was run with confirmOverwrite, so we can safely
+            // overwrite as necesssary.
+            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()),
+                                                   fileUrl,
+                                                   -1,
+                                                   KIO::DefaultFlags | KIO::Overwrite);
             KJobWidgets::setWindow(job, parent);
             if (!job->exec()) {
                 KMessageBox::sorry(parent, job->errorString());
