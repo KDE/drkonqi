@@ -142,6 +142,25 @@ void BacktraceWidget::setAsLoading()
 
     ui.m_copyButton->setEnabled(false);
     ui.m_saveButton->setEnabled(false);
+
+    adjustWindowSize();
+}
+
+void BacktraceWidget::adjustWindowSize()
+{
+    // We substantially change label content in-place so the window might need
+    // resizing to fit everything again. This should get called whenever label
+    // content is changed.
+    // We'll only increase our size but never shrink it. Shrinking would almost
+    // always screw with user expectation (e.g. button position or manually
+    // resized window).
+    // https://bugs.kde.org/show_bug.cgi?id=406748
+    // https://bugs.kde.org/show_bug.cgi?id=337319
+    const auto hint = window()->sizeHint();
+    const auto size = window()->size();
+    if (hint.width() > size.width() || hint.height() > size.height()) {
+        window()->adjustSize();
+    }
 }
 
 //Force backtrace generation
@@ -192,6 +211,8 @@ void BacktraceWidget::anotherDebuggerRunning()
                                     "click <interface>Reload</interface>."));
     ui.m_installDebugButton->setVisible(false);
     ui.m_reloadBacktraceButton->setEnabled(true);
+
+    adjustWindowSize();
 }
 
 void BacktraceWidget::loadData()
@@ -311,10 +332,7 @@ void BacktraceWidget::loadData()
 
     ui.m_reloadBacktraceButton->setEnabled(true);
 
-    // We substantially change label content, the window might need resizing to
-    // fit it all.
-    // https://bugs.kde.org/show_bug.cgi?id=337319
-    window()->adjustSize();
+    adjustWindowSize();
 
     emit stateChanged();
 }
