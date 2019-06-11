@@ -74,8 +74,6 @@ public:
     void aboutToHide() override;
 
 private Q_SLOTS:
-    void showApplicationDetailsExamples();
-
     void updateCheckBoxes();
 
 private:

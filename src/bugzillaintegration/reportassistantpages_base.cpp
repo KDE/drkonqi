@@ -22,6 +22,7 @@
 
 #include <QLabel>
 #include <QCheckBox>
+#include <QFontDatabase>
 #include <QToolTip>
 #include <QDesktopServices>
 
@@ -145,9 +146,10 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
     connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled), this, &BugAwarenessPage::updateCheckBoxes);
 
     ui.m_appSpecificDetailsExamples->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
-    ui.m_appSpecificDetailsExamples->setContextMenuPolicy(Qt::NoContextMenu);
-
-    connect(ui.m_appSpecificDetailsExamples, &QLabel::linkActivated, this, &BugAwarenessPage::showApplicationDetailsExamples);
+    ui.m_appSpecificDetailsExamples->setText(
+                i18nc("@label examples about information the user can provide",
+                      "Examples: %1", reportInterface()->appDetailsExamples()->examples()));
+    ui.m_appSpecificDetailsExamples->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 }
 
 void BugAwarenessPage::aboutToShow()
@@ -198,14 +200,6 @@ void BugAwarenessPage::updateCheckBoxes()
 
     ui.m_appSpecificDetails->setEnabled(rememberSituation);
     ui.m_appSpecificDetailsExamples->setEnabled(rememberSituation);
-}
-
-void BugAwarenessPage::showApplicationDetailsExamples()
-{
-    QToolTip::showText(QCursor::pos(),
-                       i18nc("@label examples about information the user can provide",
-                             "Examples: %1", reportInterface()->appDetailsExamples()->examples()),
-                       this);
 }
 
 //END BugAwarenessPage
