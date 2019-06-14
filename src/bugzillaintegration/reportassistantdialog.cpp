@@ -164,8 +164,10 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     addPage(m_bugzillaPreviewPage);
     addPage(m_bugzillaSendPage);
 
-    setMinimumSize(QSize(600, 400));
-    resize(minimumSize());
+    // Force a 16:9 ratio for nice appearance by default.
+    QSize aspect(16, 9);
+    aspect.scale(sizeHint(), Qt::KeepAspectRatioByExpanding);
+    resize(aspect);
 }
 
 ReportAssistantDialog::~ReportAssistantDialog()

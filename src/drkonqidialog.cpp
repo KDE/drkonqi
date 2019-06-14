@@ -73,18 +73,19 @@ DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
     }
 
     m_backtraceWidget = new BacktraceWidget(DrKonqi::debuggerManager()->backtraceGenerator(), this);
-    m_backtraceWidget->setMinimumSize(QSize(575, 240));
     m_tabWidget->addTab(m_backtraceWidget, i18nc("@title:tab", "&Developer Information"));
 
     m_tabWidget->tabBar()->setVisible(m_tabWidget->count() > 1);
 
     buildDialogButtons();
 
-    setMinimumSize(QSize(640,320));
-    resize(minimumSize());
-
     KWindowConfig::restoreWindowSize(windowHandle(), config);
     setLayout(l);
+
+    // Force a 16:9 ratio for nice appearance by default.
+    QSize aspect(16, 9);
+    aspect.scale(sizeHint(), Qt::KeepAspectRatioByExpanding);
+    resize(aspect);
 }
 
 DrKonqiDialog::~DrKonqiDialog()
