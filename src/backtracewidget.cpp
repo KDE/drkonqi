@@ -52,6 +52,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
     connect(m_debugPackageInstaller, &DebugPackageInstaller::packagesInstalled, this, &BacktraceWidget::regenerateBacktrace);
     connect(m_debugPackageInstaller, &DebugPackageInstaller::canceled, this, &BacktraceWidget::debugPackageCanceled);
 
+    connect(m_btGenerator, &BacktraceGenerator::starting, this, &BacktraceWidget::setAsLoading);
     connect(m_btGenerator, &BacktraceGenerator::done, this, &BacktraceWidget::loadData);
     connect(m_btGenerator, &BacktraceGenerator::someError, this, &BacktraceWidget::loadData);
     connect(m_btGenerator, &BacktraceGenerator::failedToStart, this, &BacktraceWidget::loadData);
@@ -339,6 +340,11 @@ void BacktraceWidget::loadData()
 
 void BacktraceWidget::backtraceNewLine(const QString & line)
 {
+    // We absolutely must not have a highlighter attached. The highlighter has
+    // a static list of lines to highlight from. When we are loading lines
+    // this static list does not match reality breaking text lenght expecations
+    // and resulting in segfaults.
+    Q_ASSERT(!m_highlighter);
     //While loading the backtrace (unparsed) a new line was sent from the debugger, append it
     ui.m_backtraceEdit->append(line.trimmed());
 }
