@@ -86,6 +86,7 @@ int main(int argc, char* argv[])
                          QStringLiteral("gkiagia@users.sourceforge.net"));
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
                          QStringLiteral("spehr@kde.org"));
+    KAboutData::setApplicationData(aboutData);
     qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), qa.windowIcon()));
     qa.setDesktopFileName(QStringLiteral("org.kde.drkonqi"));
 
