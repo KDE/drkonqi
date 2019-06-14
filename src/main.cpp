@@ -65,9 +65,6 @@ int main(int argc, char* argv[])
     QApplication qa(argc, argv);
     qa.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     KLocalizedString::setApplicationDomain("drkonqi5");
-    QCoreApplication::setApplicationName(QStringLiteral("drkonqi"));
-    QCoreApplication::setApplicationVersion(QString::fromLatin1(version));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);
@@ -88,7 +85,6 @@ int main(int argc, char* argv[])
                          QStringLiteral("spehr@kde.org"));
     KAboutData::setApplicationData(aboutData);
     qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), qa.windowIcon()));
-    qa.setDesktopFileName(QStringLiteral("org.kde.drkonqi"));
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
