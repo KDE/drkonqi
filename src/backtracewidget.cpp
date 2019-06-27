@@ -52,6 +52,7 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
     connect(m_debugPackageInstaller, &DebugPackageInstaller::packagesInstalled, this, &BacktraceWidget::regenerateBacktrace);
     connect(m_debugPackageInstaller, &DebugPackageInstaller::canceled, this, &BacktraceWidget::debugPackageCanceled);
 
+    connect(m_btGenerator, &BacktraceGenerator::starting, this, &BacktraceWidget::setAsLoading);
     connect(m_btGenerator, &BacktraceGenerator::done, this, &BacktraceWidget::loadData);
     connect(m_btGenerator, &BacktraceGenerator::someError, this, &BacktraceWidget::loadData);
     connect(m_btGenerator, &BacktraceGenerator::failedToStart, this, &BacktraceWidget::loadData);
@@ -142,25 +143,6 @@ void BacktraceWidget::setAsLoading()
 
     ui.m_copyButton->setEnabled(false);
     ui.m_saveButton->setEnabled(false);
-
-    adjustWindowSize();
-}
-
-void BacktraceWidget::adjustWindowSize()
-{
-    // We substantially change label content in-place so the window might need
-    // resizing to fit everything again. This should get called whenever label
-    // content is changed.
-    // We'll only increase our size but never shrink it. Shrinking would almost
-    // always screw with user expectation (e.g. button position or manually
-    // resized window).
-    // https://bugs.kde.org/show_bug.cgi?id=406748
-    // https://bugs.kde.org/show_bug.cgi?id=337319
-    const auto hint = window()->sizeHint();
-    const auto size = window()->size();
-    if (hint.width() > size.width() || hint.height() > size.height()) {
-        window()->adjustSize();
-    }
 }
 
 //Force backtrace generation
@@ -211,8 +193,6 @@ void BacktraceWidget::anotherDebuggerRunning()
                                     "click <interface>Reload</interface>."));
     ui.m_installDebugButton->setVisible(false);
     ui.m_reloadBacktraceButton->setEnabled(true);
-
-    adjustWindowSize();
 }
 
 void BacktraceWidget::loadData()
@@ -332,13 +312,16 @@ void BacktraceWidget::loadData()
 
     ui.m_reloadBacktraceButton->setEnabled(true);
 
-    adjustWindowSize();
-
     emit stateChanged();
 }
 
 void BacktraceWidget::backtraceNewLine(const QString & line)
 {
+    // We absolutely must not have a highlighter attached. The highlighter has
+    // a static list of lines to highlight from. When we are loading lines
+    // this static list does not match reality breaking text lenght expecations
+    // and resulting in segfaults.
+    Q_ASSERT(!m_highlighter);
     //While loading the backtrace (unparsed) a new line was sent from the debugger, append it
     ui.m_backtraceEdit->append(line.trimmed());
 }
