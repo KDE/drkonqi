@@ -592,7 +592,6 @@ BugzillaReportInformationDialog::BugzillaReportInformationDialog(BugzillaDuplica
     connect(m_parent->bugzillaManager(), SIGNAL(bugReportError(QString,QObject*)),
              this, SLOT(bugFetchError(QString,QObject*)));
 
-    resize(QSize(800, 600));
     KConfigGroup config(KSharedConfig::openConfig(), "BugzillaReportInformationDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), config);
 }
@@ -951,9 +950,6 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     }
 
     checkProceed();
-
-    setMinimumSize(QSize(600, 350));
-    resize(QSize(600, 350));
 }
 
 BugzillaReportConfirmationDialog::~BugzillaReportConfirmationDialog()
