@@ -832,9 +832,6 @@ UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & err
                               "to submit a bug against DrKonqi.").arg(error));
     htmlView->setHtml(extendedMessage);
 
-    setMinimumSize(QSize(550, 350));
-    resize(minimumSize());
-
     show();
 }
 

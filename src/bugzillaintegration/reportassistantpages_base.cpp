@@ -443,7 +443,6 @@ ReportInformationDialog::ReportInformationDialog(const QString & reportText)
     connect(saveButton, &QPushButton::clicked, this, &ReportInformationDialog::saveReport);
     ui.buttonBox->addButton(saveButton, QDialogButtonBox::ActionRole);
 
-    resize(QSize(800, 600));
     KConfigGroup config(KSharedConfig::openConfig(), "ReportInformationDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), config);
 }

@@ -22,7 +22,6 @@
 #include <QPainter>
 #include <QIcon>
 
-
 BacktraceRatingWidget::BacktraceRatingWidget(QWidget * parent) :
         QWidget(parent),
         m_state(BacktraceGenerator::NotLoaded),
