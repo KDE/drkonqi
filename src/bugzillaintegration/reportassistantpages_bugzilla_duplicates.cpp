@@ -315,7 +315,7 @@ static QString statusString(const Bugzilla::Bug::Ptr &bug)
         return i18nc("@info bug status", "[Incomplete]");
 
     case Bugzilla::Bug::Status::Unknown:
-        Q_FALLTHROUGH();
+        break;
     }
     return QString();
 }
