@@ -134,55 +134,45 @@ void SystemInformation::lsbReleaseFinished()
 //side, they need to be updated here as well                                   .
 QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) const
 {
-    if ( distroInfo.contains(QStringLiteral("suse"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("openSUSE RPMs"));
-    } else if ( distroInfo.contains(QStringLiteral("mint"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Mint (Ubuntu Based)"));
-    } else if ( distroInfo.contains(QStringLiteral("lmde"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Mint (Debian Based)"));
-    } else if ( distroInfo.contains(QStringLiteral("ubuntu"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Ubuntu Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("fedora"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Fedora RPMs"));
-    } else if ( distroInfo.contains(QStringLiteral("redhat"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("RedHat RPMs"));
-    } else if ( distroInfo.contains(QStringLiteral("gentoo"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Gentoo Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("mandriva"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Mandriva RPMs"));
-    } else if ( distroInfo.contains(QStringLiteral("mageia"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Mageia RPMs"));
-    } else if ( distroInfo.contains(QStringLiteral("slack"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Slackware Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("pclinuxos"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("PCLinuxOS"));
-    } else if ( distroInfo.contains(QStringLiteral("pardus"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Pardus Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("freebsd"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("FreeBSD Ports"));
-    } else if ( distroInfo.contains(QStringLiteral("netbsd"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("NetBSD pkgsrc"));
-    } else if ( distroInfo.contains(QStringLiteral("openbsd"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("OpenBSD Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("solaris"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Solaris Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("chakra"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Chakra"));
-    } else if ( distroInfo.contains(QStringLiteral("ms windows"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("MS Windows"));
-    } else if ( distroInfo.contains(QStringLiteral("arch"),Qt::CaseInsensitive) ) {
-        return (QLatin1String("Archlinux Packages"));
-    } else if ( distroInfo.contains(QStringLiteral("debian"),Qt::CaseInsensitive) ) {
-        if ( distroInfo.contains(QStringLiteral("unstable"),Qt::CaseInsensitive) ) {
-            return (QLatin1String("Debian unstable"));
-        } else if ( distroInfo.contains(QStringLiteral("testing"),Qt::CaseInsensitive) ) {
-            return (QLatin1String("Debian testing"));
-        } else {
-            return (QLatin1String("Debian stable"));
+    static QHash<QString, QString> platforms {
+        { QStringLiteral("suse"), QStringLiteral("openSUSE RPMs") },
+        { QStringLiteral("mint"), QStringLiteral("Mint (Ubuntu Based)") },
+        { QStringLiteral("lmde"), QStringLiteral("Mint (Debian Based)") },
+        { QStringLiteral("ubuntu"), QStringLiteral("Ubuntu Packages") },
+        { QStringLiteral("fedora"), QStringLiteral("Fedora RPMs") },
+        { QStringLiteral("redhat"), QStringLiteral("RedHat RPMs") },
+        { QStringLiteral("gentoo"), QStringLiteral("Gentoo Packages") },
+        { QStringLiteral("mandriva"), QStringLiteral("Mandriva RPMs") },
+        { QStringLiteral("mageia"), QStringLiteral("Mageia RPMs") },
+        { QStringLiteral("slack"), QStringLiteral("Slackware Packages") },
+        { QStringLiteral("pclinuxos"), QStringLiteral("PCLinuxOS") },
+        { QStringLiteral("pardus"), QStringLiteral("Pardus Packages") },
+        { QStringLiteral("freebsd"), QStringLiteral("FreeBSD Ports") },
+        { QStringLiteral("netbsd"), QStringLiteral("NetBSD pkgsrc") },
+        { QStringLiteral("openbsd"), QStringLiteral("OpenBSD Packages") },
+        { QStringLiteral("solaris"), QStringLiteral("Solaris Packages") },
+        { QStringLiteral("chakra"), QStringLiteral("Chakra") },
+        { QStringLiteral("ms windows"), QStringLiteral("MS Windows") },
+        { QStringLiteral("arch"), QStringLiteral("Archlinux Packages") }
+    };
+    for (auto it = platforms.constBegin(); it != platforms.constEnd(); ++it) {
+        if (distroInfo.contains(it.key(), Qt::CaseInsensitive)) {
+            return it.value();
         }
-    } else {
-        return PLATFORM_UNSPECIFIED;
     }
+
+    // Debian has multiple platforms.
+    if (distroInfo.contains(QStringLiteral("debian"), Qt::CaseInsensitive)) {
+        if (distroInfo.contains(QStringLiteral("unstable"), Qt::CaseInsensitive)) {
+            return QStringLiteral("Debian unstable");
+        } else if (distroInfo.contains(QStringLiteral("testing"), Qt::CaseInsensitive)) {
+            return QStringLiteral("Debian testing");
+        } else {
+            return QStringLiteral("Debian stable");
+        }
+    }
+
+    return PLATFORM_UNSPECIFIED;
 }
 
 //this function maps the operating system to an OS value that is accepted by bugs.kde.org.
