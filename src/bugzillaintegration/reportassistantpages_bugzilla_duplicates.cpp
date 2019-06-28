@@ -308,7 +308,7 @@ static QString statusString(const Bugzilla::Bug::Ptr &bug)
         case Bugzilla::Bug::Resolution::NONE:
             return QStringLiteral("[%1]").arg(QVariant::fromValue(bug->resolution()).toString());
         case Bugzilla::Bug::Resolution::Unknown:
-            Q_FALLTHROUGH();
+            break;
         }
         break;
     case Bugzilla::Bug::Status::NEEDSINFO:
