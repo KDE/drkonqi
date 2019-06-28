@@ -56,7 +56,7 @@ class HTTPConnection : public Connection
 {
     Q_OBJECT
 public:
-    explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/")),
+    explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")),
                             QObject *parent = nullptr);
     ~HTTPConnection();
 
@@ -65,6 +65,8 @@ public:
     virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override;
     virtual APIJob *post(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override;
     virtual APIJob *put(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override;
+
+    QUrl root() const;
 
 private:
     QUrl url(const QString &appendix, QUrlQuery query) const;

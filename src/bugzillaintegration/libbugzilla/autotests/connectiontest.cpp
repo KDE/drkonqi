@@ -41,6 +41,28 @@ private Q_SLOTS:
     {
     }
 
+    void testDefaultRoot()
+    {
+        // Make sure the defautl root is well formed.
+        // This talks to bugzilla directly! To avoid flakeyness the actual
+        // HTTP interaction is qwaiting and retrying a bunch of times.
+        // Obviously still not ideal.
+        Bugzilla::HTTPConnection c;
+        QVERIFY(c.root().toString().endsWith("/rest"));
+        QVERIFY(QTest::qWaitFor([&]() {
+            APIJob *job = c.get("/version");
+            job->exec();
+            try {
+                job->document();
+            } catch (Bugzilla::Exception &e) {
+                QTest::qSleep(1000);
+                return false;
+            }
+
+            return true;
+        }, 5000));
+    }
+
     void testGet()
     {
         qDebug() << Q_FUNC_INFO;

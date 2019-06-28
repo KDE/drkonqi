@@ -93,6 +93,11 @@ APIJob *HTTPConnection::put(const QString &path, const QByteArray &data, const Q
     return job;
 }
 
+QUrl HTTPConnection::root() const
+{
+    return m_root;
+}
+
 QUrl HTTPConnection::url(const QString &appendix, QUrlQuery query) const
 {
     QUrl url(m_root);
