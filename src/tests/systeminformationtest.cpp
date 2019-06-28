@@ -64,7 +64,7 @@ private Q_SLOTS:
 
         QCOMPARE(info.bugzillaPlatform(), "openSUSE RPMs");
         QCOMPARE(info.operatingSystem(), "FreeBSD 1.0.0 x86_64");
-        QCOMPARE(info.lsbRelease(), "KDE SUSE User Edition 5.16");
+        QCOMPARE(info.distributionPrettyName(), "KDE SUSE User Edition 5.16");
         QCOMPARE(info.compiledSources(), false);
         QCOMPARE(info.qtVersion(), "5.12.3");
         QCOMPARE(info.frameworksVersion(), "5.59.0");
@@ -82,7 +82,7 @@ private Q_SLOTS:
 
         QCOMPARE(info.bugzillaPlatform(), "FreeBSD Ports");
         QCOMPARE(info.operatingSystem(), "FreeBSD 1.0.0 x86_64");
-        QCOMPARE(info.lsbRelease(), ""); // FIXME: should also be set, its used in the submitted report
+        QCOMPARE(info.distributionPrettyName(), "FreeBSD #1");
         QCOMPARE(info.compiledSources(), false);
         QCOMPARE(info.qtVersion(), "5.12.3");
         QCOMPARE(info.frameworksVersion(), "5.59.0");

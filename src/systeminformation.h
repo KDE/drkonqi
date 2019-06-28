@@ -44,7 +44,7 @@ class SystemInformation: public QObject
         QString operatingSystem() const;
         QString bugzillaOperatingSystem() const;
 
-        QString lsbRelease() const;
+        QString distributionPrettyName() const;
 
         bool compiledSources() const;
         void setCompiledSources(bool);
@@ -61,7 +61,7 @@ class SystemInformation: public QObject
     private:
         QString fetchOSBasicInformation() const;
         QString fetchOSDetailInformation() const;
-        QString fetchOSReleaseInformation() const;
+        QString fetchOSReleaseInformation();
 
         QString guessBugzillaPlatform(const QString&) const;
 
@@ -72,7 +72,7 @@ class SystemInformation: public QObject
         QString     m_bugzillaOperatingSystem;
         QString     m_bugzillaPlatform;
 
-        QString     m_lsbRelease;
+        QString     m_distributionPrettyName;
 
         bool        m_compiledSources;
 

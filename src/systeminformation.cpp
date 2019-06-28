@@ -113,11 +113,11 @@ void SystemInformation::lsbReleaseFinished()
 {
     KProcess *process = qobject_cast<KProcess*>(sender());
     Q_ASSERT(process);
-    m_lsbRelease = QString::fromLocal8Bit(process->readAllStandardOutput().trimmed());
+    m_distributionPrettyName = QString::fromLocal8Bit(process->readAllStandardOutput().trimmed());
     process->deleteLater();
 
     //Guess distro string
-    QString platform = guessBugzillaPlatform(m_lsbRelease);
+    QString platform = guessBugzillaPlatform(m_distributionPrettyName);
 
     // if lsb_release doesn't work well, turn to the /etc/os-release file
     if (platform == PLATFORM_UNSPECIFIED) {
@@ -246,10 +246,10 @@ QString SystemInformation::fetchOSDetailInformation() const
     return operatingSystem;
 }
 
-QString SystemInformation::fetchOSReleaseInformation() const
+QString SystemInformation::fetchOSReleaseInformation()
 {
     KOSRelease os(m_infoConfig.osReleasePath);
-    return os.prettyName();
+    return m_distributionPrettyName = os.prettyName();
 }
 
 QString SystemInformation::operatingSystem() const
@@ -272,9 +272,9 @@ void SystemInformation::setBugzillaPlatform(const QString & platform)
     m_bugzillaPlatform = platform;
 }
 
-QString SystemInformation::lsbRelease() const
+QString SystemInformation::distributionPrettyName() const
 {
-    return m_lsbRelease;
+    return m_distributionPrettyName;
 }
 
 bool SystemInformation::compiledSources() const
