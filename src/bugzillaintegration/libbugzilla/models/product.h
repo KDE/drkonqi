@@ -31,9 +31,9 @@ namespace Bugzilla {
 class ProductVersion : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int id READ id WRITE setId CONSTANT)
-    Q_PROPERTY(QString name READ name WRITE setName CONSTANT)
-    Q_PROPERTY(bool active READ isActive WRITE setActive CONSTANT)
+    Q_PROPERTY(int id READ id WRITE setId)
+    Q_PROPERTY(QString name READ name WRITE setName)
+    Q_PROPERTY(bool active READ isActive WRITE setActive)
 public:
     int id() const { return m_id; }
     QString name() const { return m_name; }

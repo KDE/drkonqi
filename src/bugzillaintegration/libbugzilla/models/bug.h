@@ -68,19 +68,19 @@ public:
 
 private:
     Q_OBJECT
-    Q_PROPERTY(qint64 id READ id WRITE setId CONSTANT)
-    Q_PROPERTY(QString product READ product WRITE setProduct CONSTANT)
-    Q_PROPERTY(QString component READ component WRITE setComponent CONSTANT)
-    Q_PROPERTY(QString summary READ summary WRITE setSummary CONSTANT)
-    Q_PROPERTY(QString version READ version WRITE setVersion CONSTANT)
-    Q_PROPERTY(bool is_open READ is_open WRITE setIs_open CONSTANT)
+    Q_PROPERTY(qint64 id READ id WRITE setId)
+    Q_PROPERTY(QString product READ product WRITE setProduct)
+    Q_PROPERTY(QString component READ component WRITE setComponent)
+    Q_PROPERTY(QString summary READ summary WRITE setSummary)
+    Q_PROPERTY(QString version READ version WRITE setVersion)
+    Q_PROPERTY(bool is_open READ is_open WRITE setIs_open)
     // maybe should be camel mapped, who knows
-    Q_PROPERTY(QString op_sys READ op_sys WRITE setOp_sys CONSTANT)
-    Q_PROPERTY(QString priority READ priority WRITE setPriority CONSTANT)
-    Q_PROPERTY(QString severity READ severity WRITE setSeverity CONSTANT)
-    Q_PROPERTY(Status status READ status WRITE setStatus CONSTANT)
-    Q_PROPERTY(Resolution resolution READ resolution WRITE setResolution CONSTANT)
-    Q_PROPERTY(qint64 dupe_of READ dupe_of WRITE setDupe_of CONSTANT)
+    Q_PROPERTY(QString op_sys READ op_sys WRITE setOp_sys)
+    Q_PROPERTY(QString priority READ priority WRITE setPriority)
+    Q_PROPERTY(QString severity READ severity WRITE setSeverity)
+    Q_PROPERTY(Status status READ status WRITE setStatus)
+    Q_PROPERTY(Resolution resolution READ resolution WRITE setResolution)
+    Q_PROPERTY(qint64 dupe_of READ dupe_of WRITE setDupe_of)
 
     // Custom fields (versionfixedin etc) are only available via customField().
 

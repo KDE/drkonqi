@@ -29,8 +29,8 @@ namespace Bugzilla {
 class Comment : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int bug_id READ bug_id WRITE setBug_id CONSTANT)
-    Q_PROPERTY(QString text READ text WRITE setText CONSTANT)
+    Q_PROPERTY(int bug_id READ bug_id WRITE setBug_id)
+    Q_PROPERTY(QString text READ text WRITE setText)
 public:
     typedef QPointer<Comment> Ptr;
 
