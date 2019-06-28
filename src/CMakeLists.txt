@@ -20,7 +20,6 @@ if ( WIN32 )
 endif ()
 
 set(drkonqi_SRCS
-    main.cpp
     drkonqidialog.cpp
     statuswidget.cpp
     aboutbugreportingdialog.cpp
@@ -82,10 +81,10 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi)
 
-add_executable(drkonqi ${drkonqi_SRCS})
-ecm_mark_nongui_executable(drkonqi)
+# transient static lib we can use to link autotests against
+add_library(DrKonqiInternal STATIC ${drkonqi_SRCS})
 
-target_link_libraries(drkonqi
+target_link_libraries(DrKonqiInternal
     KF5::I18n
     KF5::CoreAddons
     KF5::Service
@@ -106,19 +105,23 @@ target_link_libraries(drkonqi
     qbugzilla
 )
 if (${Qt5X11Extras_FOUND})
-    target_link_libraries(drkonqi
+    target_link_libraries(DrKonqiInternal
         Qt5::X11Extras
     )
 endif()
 if (APPLE)
-    target_link_libraries(drkonqi
+    target_link_libraries(DrKonqiInternal
         KF5::WindowSystem
     )
 endif()
 
 if (WIN32)
-    target_link_libraries(drkonqi kdewin)
+    target_link_libraries(DrKonqiInternal kdewin)
 endif()
+
+add_executable(drkonqi main.cpp)
+ecm_mark_nongui_executable(drkonqi)
+target_link_libraries(drkonqi DrKonqiInternal)
 
 install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop)
