@@ -22,12 +22,11 @@
 #include <QDebug>
 #include <QSharedPointer>
 
-#define DATA_DIR "backtraceparsertest_data"
-#define SETTINGS_FILE "data.ini"
+#define DATA_DIR QFINDTESTDATA("backtraceparsertest_data")
 
 BacktraceParserTest::BacktraceParserTest(QObject *parent)
     : QObject(parent),
-      m_settings(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + QString::fromLatin1(SETTINGS_FILE), QSettings::IniFormat),
+      m_settings(DATA_DIR + QLatin1Char('/') + QStringLiteral("data.ini"), QSettings::IniFormat),
       m_generator(new FakeBacktraceGenerator(this))
 {
 }
@@ -44,7 +43,7 @@ void BacktraceParserTest::fetchData(const QString & group)
 
     foreach(const QString & key, keys) {
         QTest::newRow(qPrintable(key))
-            << QString(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + key)
+            << QString(DATA_DIR + QLatin1Char('/') + key)
             << m_settings.value(group + QLatin1Char('/') + key).toString()
             << m_settings.value(QStringLiteral("debugger/") + key).toString();
     }
@@ -106,7 +105,7 @@ void BacktraceParserTest::btParserBenchmark_data()
     QStringList keys = m_settings.allKeys();
     foreach(const QString & key, keys) {
         QTest::newRow(qPrintable(key))
-            << QString(QString::fromLatin1(DATA_DIR) + QLatin1Char('/') + key)
+            << QString(DATA_DIR + QLatin1Char('/') + key)
             << m_settings.value(key).toString();
     }
     m_settings.endGroup();
