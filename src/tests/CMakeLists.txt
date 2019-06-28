@@ -18,6 +18,21 @@ if(BUILD_COVERAGE)
     )
 endif()
 
+remove_definitions(-DQT_NO_CAST_FROM_ASCII)
+
+find_package(Qt5Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
+
+# Test helper for systeminformationtest
+add_executable(lsb_release lsb_release_double.c)
+
+ecm_add_tests(
+    systeminformationtest
+    LINK_LIBRARIES
+        Qt5::Core
+        Qt5::Test
+        DrKonqiInternal
+)
+
 add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)

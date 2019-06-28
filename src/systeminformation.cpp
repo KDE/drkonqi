@@ -2,9 +2,10 @@
 * systeminformation.cpp
 * Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
 * Copyright 2009    George Kiagiadakis <gkiagia@users.sourceforge.net>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
-* This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
+* This program is free software; you can redistribute it and/or
 * published by the Free Software Foundation; either version 2 of
 * the License, or (at your option) any later version.
 *
@@ -41,10 +42,18 @@
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
 static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
 
-SystemInformation::SystemInformation(QObject * parent)
+SystemInformation::Config::Config()
+    : lsbReleasePath(QStandardPaths::findExecutable(QLatin1String("lsb_release")))
+    , osReleasePath(QStringLiteral("/etc/os-release"))
+{
+}
+
+SystemInformation::SystemInformation(Config infoConfig, QObject *parent)
     : QObject(parent)
     , m_bugzillaOperatingSystem(OS_UNSPECIFIED)
     , m_bugzillaPlatform(PLATFORM_UNSPECIFIED)
+    , m_complete(false)
+    , m_infoConfig(infoConfig)
 {
     // NOTE: the relative order is important here
     m_bugzillaOperatingSystem = fetchOSBasicInformation();
@@ -81,8 +90,8 @@ void SystemInformation::tryToSetBugzillaPlatform()
 void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
 {
     //Run lsb_release async
-    QString lsb_release = QStandardPaths::findExecutable(QLatin1String("lsb_release"));
-    if ( !lsb_release.isEmpty() ) {
+    QString lsb_release = m_infoConfig.lsbReleasePath;
+    if (!lsb_release.isEmpty()) {
         qCDebug(DRKONQI_LOG) << "found lsb_release";
         KProcess *process = new KProcess();
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
@@ -95,6 +104,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
         const QString& osReleaseInfo = fetchOSReleaseInformation();
         const QString& platform = guessBugzillaPlatform(osReleaseInfo);
         setBugzillaPlatform(platform);
+        m_complete = true;
     }
 }
 
@@ -115,6 +125,7 @@ void SystemInformation::lsbReleaseFinished()
     }
 
     setBugzillaPlatform(platform);
+    m_complete = true;
 }
 
 //this function maps the distribution information to an "Hardware Platform"    .
@@ -216,7 +227,13 @@ QString SystemInformation::fetchOSDetailInformation() const
 
 #if HAVE_UNAME
     struct utsname buf;
-    if (uname(&buf) == -1) {
+
+    auto unameFunc = &uname;
+    if (m_infoConfig.unameFunc) {
+        unameFunc = (int (*)(utsname*))m_infoConfig.unameFunc;
+    }
+
+    if ((*unameFunc)(&buf) == -1) {
         qCDebug(DRKONQI_LOG) << "call to uname failed" << errno;
     } else {
         operatingSystem = QString::fromLocal8Bit(buf.sysname) + QLatin1Char(' ')
@@ -230,7 +247,7 @@ QString SystemInformation::fetchOSDetailInformation() const
 
 QString SystemInformation::fetchOSReleaseInformation() const
 {
-    QFile data(QStringLiteral("/etc/os-release"));
+    QFile data(m_infoConfig.osReleasePath);
     if (!data.open(QIODevice::ReadOnly | QIODevice::Text)) {
         return QString();
     }
@@ -300,4 +317,9 @@ QString SystemInformation::qtVersion() const
 QString SystemInformation::frameworksVersion() const
 {
     return KCoreAddons::versionString();
+}
+
+bool SystemInformation::complete() const
+{
+    return m_complete;
 }

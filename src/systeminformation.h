@@ -1,6 +1,7 @@
 /*******************************************************************
 * systeminformation.h
 * Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019    Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -26,7 +27,15 @@ class SystemInformation: public QObject
 {
     Q_OBJECT
     public:
-        explicit SystemInformation(QObject * parent = nullptr);
+        struct Config {
+            Config();
+
+            QString lsbReleasePath;
+            QString osReleasePath;
+            void *unameFunc = nullptr;
+        };
+
+        explicit SystemInformation(Config infoConfig = Config(), QObject * parent = nullptr);
         ~SystemInformation() override;
 
         QString bugzillaPlatform() const;
@@ -42,6 +51,9 @@ class SystemInformation: public QObject
 
         QString qtVersion() const;
         QString frameworksVersion() const;
+
+        /// All helpers finished and the data is complete
+        bool complete() const;
 
     private Q_SLOTS:
         void lsbReleaseFinished();
@@ -63,6 +75,10 @@ class SystemInformation: public QObject
         QString     m_lsbRelease;
 
         bool        m_compiledSources;
+
+        bool m_complete; // all available data retrieved
+
+        Config m_infoConfig;
 };
 
 #endif
