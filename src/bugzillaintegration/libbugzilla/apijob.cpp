@@ -38,6 +38,8 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
     addMetaData(QStringLiteral("content-type"), QStringLiteral("application/json"));
     addMetaData(QStringLiteral("accept"), QStringLiteral("application/json"));
     addMetaData(QStringLiteral("UserAgent"), QStringLiteral("DrKonqi"));
+    // We don't want HTML blobs but proper job errors + text!
+    addMetaData(QStringLiteral("errorPage"), QStringLiteral("false"));
 
     connect(m_transferJob, &KIO::TransferJob::data,
             this, [this](KIO::Job *, const QByteArray &data) {
@@ -51,6 +53,7 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
         setError(job->error());
         setErrorText(job->errorText());
 
+        Q_ASSERT(!((KIO::TransferJob*)job)->isErrorPage());
         emitResult();
     });
 }
