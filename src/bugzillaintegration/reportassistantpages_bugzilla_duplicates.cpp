@@ -397,7 +397,7 @@ static bool isStatusOpen(Bugzilla::Bug::Status status)
         return false;
 
     case Bugzilla::Bug::Status::Unknown:
-        Q_FALLTHROUGH();
+        break;
     }
     return false;
 }
@@ -727,7 +727,7 @@ static Status2 statusString2(const Bugzilla::Bug::Ptr &bug)
         case Bugzilla::Bug::Resolution::NONE:
             return { QVariant::fromValue(bug->resolution()).toString(), QString() };
         case Bugzilla::Bug::Resolution::Unknown:
-            Q_FALLTHROUGH();
+            break;
         }
         return {};
 
@@ -735,7 +735,7 @@ static Status2 statusString2(const Bugzilla::Bug::Ptr &bug)
         return { i18nc("@info bug status", "Temporarily closed, because of a lack of information"), QString() };
 
     case Bugzilla::Bug::Status::Unknown:
-        Q_FALLTHROUGH();
+        break;
     }
     return {};
 }
