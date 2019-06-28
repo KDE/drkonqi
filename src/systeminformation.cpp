@@ -37,6 +37,7 @@
 #include <KSharedConfig>
 #include <kcoreaddons_version.h>
 #include <KCoreAddons>
+#include <KOSRelease>
 #include <QStandardPaths>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
@@ -44,7 +45,7 @@ static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
 
 SystemInformation::Config::Config()
     : lsbReleasePath(QStandardPaths::findExecutable(QLatin1String("lsb_release")))
-    , osReleasePath(QStringLiteral("/etc/os-release"))
+    , osReleasePath(/* Use KOSRelease default */)
 {
 }
 
@@ -247,31 +248,8 @@ QString SystemInformation::fetchOSDetailInformation() const
 
 QString SystemInformation::fetchOSReleaseInformation() const
 {
-    QFile data(m_infoConfig.osReleasePath);
-    if (!data.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        return QString();
-    }
-
-    QMap<QString,QString> distroInfos;
-
-    QTextStream in(&data);
-    while (!in.atEnd()) {
-        const QString line = in.readLine();
-
-        // its format is one simple NAME=VALUE per line
-        // don't use QString.split() here since its value might contain '=''
-        const int index = line.indexOf(QLatin1Char('='));
-        if ( index != -1 ) {
-            const QString key = line.left(index);
-            const QString value = line.mid(index+1);
-            distroInfos.insert(key, value);
-        }
-    }
-
-    // the PRETTY_NAME entry should be the most appropriate one,
-    // but I could be wrong.
-    const QString prettyName = distroInfos.value(QStringLiteral("PRETTY_NAME"), QStringLiteral("Linux"));
-    return prettyName;
+    KOSRelease os(m_infoConfig.osReleasePath);
+    return os.prettyName();
 }
 
 QString SystemInformation::operatingSystem() const
