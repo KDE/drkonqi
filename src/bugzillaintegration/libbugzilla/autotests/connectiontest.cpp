@@ -137,15 +137,19 @@ private Q_SLOTS:
         // qhttpserver is still in qt-labs. as a simple solution do some dumb
         // http socketing.
         QThread thread;
-        QTcpServer server;
-        server.moveToThread(&thread);
+        // On the heap lest it gets destroyed on stack unwind (which would be
+        // in the wrong thread!) and may fail assertions inside Qt when built
+        // in debug mode as destruction entails posting events, which is ENOGOOD
+        // across threads.
+        QTcpServer *server = new QTcpServer;
+        server->moveToThread(&thread);
 
         QString readBlob; // lambda member essentially
 
-        connect(&server, &QTcpServer::newConnection,
-              &server, [&server, &readBlob]() {
-            QCOMPARE(server.thread(), QThread::currentThread());
-            QTcpSocket *socket = server.nextPendingConnection();
+        connect(server, &QTcpServer::newConnection,
+              server, [server, &readBlob]() {
+            QCOMPARE(server->thread(), QThread::currentThread());
+            QTcpSocket *socket = server->nextPendingConnection();
             connect(socket, &QTcpSocket::readyRead,
                     socket, [&readBlob, socket] {
                 readBlob += socket->readAll();
@@ -167,24 +171,23 @@ private Q_SLOTS:
                 }
             });
         });
-
         thread.start();
 
         QMutex portMutex;
         QWaitCondition portCondition;
         quint16 port;
         portMutex.lock();
-        QTimer::singleShot(0, &server, [&server, &portMutex, &portCondition, &port]() {
-            Q_ASSERT(server.listen(QHostAddress::LocalHost, 0));
+        QTimer::singleShot(0, server, [server, &portMutex, &portCondition, &port]() {
+            Q_ASSERT(server->listen(QHostAddress::LocalHost, 0));
             QMutexLocker locker(&portMutex);
-            port = server.serverPort();
+            port = server->serverPort();
             portCondition.wakeAll();
         });
         portCondition.wait(&portMutex);
         portMutex.unlock();
 
         QUrl root("http://localhost");
-        root.setPort(server.serverPort());
+        root.setPort(server->serverPort());
         HTTPConnection c(root);
         APIJob *job = c.put("/put", "hello there!");
         KJob *kjob = job;
