@@ -82,7 +82,7 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
                                               QIcon::fromTheme(QStringLiteral("network-connect")),
                                               i18nc("@info:tooltip", "Use this button to login "
                                               "to the KDE bug tracking system using the provided "
-                                              "username and password.")));
+                                              "e-mail address and password.")));
     ui.m_loginButton->setEnabled(false);
 
     connect(ui.m_loginButton, &QPushButton::clicked, this, &BugzillaLoginPage::loginClicked);
@@ -282,7 +282,7 @@ void BugzillaLoginPage::login()
 {
     Q_ASSERT(canLogin());
 
-    ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the username",
+    ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the e-mail address",
                                      "Performing login at %1 as %2...",
                                      QLatin1String(KDE_BUGZILLA_SHORT_URL),
                                      ui.m_userEdit->text()));
@@ -316,8 +316,8 @@ void BugzillaLoginPage::loginFinished(bool logged)
 
         emit loggedTurnToNextPage();
     } else {
-        ui.m_statusWidget->setIdle(i18nc("@info:status","<b>Error: Invalid username or "
-                                                                                  "password</b>"));
+        ui.m_statusWidget->setIdle(i18nc("@info:status",
+                                         "<b>Error: Invalid e-mail address or password</b>"));
         updateWidget(true);
         ui.m_userEdit->setFocus(Qt::OtherFocusReason);
     }

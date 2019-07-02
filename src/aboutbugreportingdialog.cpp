@@ -130,7 +130,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget * parent):
                             "need to have an account on the KDE bug tracking system. If you do "
                             "not have one, you can create one here: <link>%1</link>",
                             KDE_BUGZILLA_CREATE_ACCOUNT_URL),
-            xi18nc("@info/rich","Then, enter your username and password and "
+            xi18nc("@info/rich","Then, enter your e-mail address and password and "
                             "press the Login button. You can use this login to directly access the "
                             "KDE bug tracking system later."),
             xi18nc("@info/rich","The KWallet dialog may appear when pressing Login to "
