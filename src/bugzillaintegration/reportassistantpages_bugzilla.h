@@ -47,6 +47,8 @@ public:
 private Q_SLOTS:
     void bugzillaVersionFound();
     void loginClicked();
+    bool canLogin() const;
+    void login();
     void loginFinished(bool);
     void loginError(const QString &, const QString &);
 

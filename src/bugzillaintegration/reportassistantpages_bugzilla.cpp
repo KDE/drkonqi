@@ -228,49 +228,66 @@ void BugzillaLoginPage::walletLogin()
             }
 
         }
+
+        if (canLogin()) {
+            loginClicked();
+        }
     }
 }
 
 void BugzillaLoginPage::loginClicked()
 {
-    if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty())) {
-        updateWidget(false);
+    if (!canLogin()) {
+        loginFinished(false);
+        return;
+    }
 
-        if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data
+    updateWidget(false);
+
+    if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data
+        if (!m_wallet) {
+            openWallet();
+        }
+        //Got wallet open ?
+        if (m_wallet) {
+            m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
+
+            QMap<QString, QString> values;
+            values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
+            values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
+            m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
+        }
+    } else { //User doesn't want to save or wants to remove.
+        if (kWalletEntryExists(QLatin1String(kWalletEntryName))) {
             if (!m_wallet) {
                 openWallet();
             }
             //Got wallet open ?
             if (m_wallet) {
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
-
-                QMap<QString, QString> values;
-                values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
-                values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
-                m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
-            }
-
-        } else { //User doesn't want to save or wants to remove.
-            if (kWalletEntryExists(QLatin1String(kWalletEntryName))) {
-                if (!m_wallet) {
-                    openWallet();
-                }
-                //Got wallet open ?
-                if (m_wallet) {
-                    m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
-                    m_wallet->removeEntry(QLatin1String(kWalletEntryName));
-                }
+                m_wallet->removeEntry(QLatin1String(kWalletEntryName));
             }
         }
-
-        ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the username",
-                                      "Performing login at %1 as %2...",
-                                      QLatin1String(KDE_BUGZILLA_SHORT_URL), ui.m_userEdit->text()));
-
-        bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->password());
-    } else {
-        loginFinished(false);
     }
+
+    login();
+}
+
+bool BugzillaLoginPage::canLogin() const
+{
+    return (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty()));
+}
+
+void BugzillaLoginPage::login()
+{
+    Q_ASSERT(canLogin());
+
+    ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the username",
+                                     "Performing login at %1 as %2...",
+                                     QLatin1String(KDE_BUGZILLA_SHORT_URL),
+                                     ui.m_userEdit->text()));
+
+    bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->password());
 }
 
 void BugzillaLoginPage::updateWidget(bool enabled)
