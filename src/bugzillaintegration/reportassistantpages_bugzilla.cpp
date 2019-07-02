@@ -301,46 +301,45 @@ bool BugzillaLoginPage::canSetCookies()
 
 void BugzillaLoginPage::loginClicked()
 {
-    if (canLogin()) {
+    if (!canLogin()) {
+        loginFinished(false);
+        return;
+    }
 
-        if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
+    if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
             && (!canSetCookies())) {
-            return;
+        return;
+    }
+
+    updateWidget(false);
+
+    if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data
+        if (!m_wallet) {
+            openWallet();
         }
+        //Got wallet open ?
+        if (m_wallet) {
+            m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
 
-        updateWidget(false);
-
-        if (ui.m_savePasswordCheckBox->checkState()==Qt::Checked) { //Wants to save data
+            QMap<QString, QString> values;
+            values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
+            values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
+            m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
+        }
+    } else { //User doesn't want to save or wants to remove.
+        if (kWalletEntryExists(QLatin1String(kWalletEntryName))) {
             if (!m_wallet) {
                 openWallet();
             }
             //Got wallet open ?
             if (m_wallet) {
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
-
-                QMap<QString, QString> values;
-                values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
-                values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
-                m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
-            }
-
-        } else { //User doesn't want to save or wants to remove.
-            if (kWalletEntryExists(QLatin1String(kWalletEntryName))) {
-                if (!m_wallet) {
-                    openWallet();
-                }
-                //Got wallet open ?
-                if (m_wallet) {
-                    m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
-                    m_wallet->removeEntry(QLatin1String(kWalletEntryName));
-                }
+                m_wallet->removeEntry(QLatin1String(kWalletEntryName));
             }
         }
-
-        login();
-    } else {
-        loginFinished(false);
     }
+
+    login();
 }
 
 bool BugzillaLoginPage::canLogin() const
