@@ -228,6 +228,10 @@ void BugzillaLoginPage::walletLogin()
             }
 
         }
+
+        if (canLogin()) {
+            loginClicked();
+        }
     }
 }
 
@@ -297,7 +301,7 @@ bool BugzillaLoginPage::canSetCookies()
 
 void BugzillaLoginPage::loginClicked()
 {
-    if (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty())) {
+    if (canLogin()) {
 
         if ((bugzillaManager()->securityMethod() == BugzillaManager::UseCookies)
             && (!canSetCookies())) {
@@ -333,14 +337,27 @@ void BugzillaLoginPage::loginClicked()
             }
         }
 
-        ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the username",
-                                      "Performing login at %1 as %2...",
-                                      QLatin1String(KDE_BUGZILLA_SHORT_URL), ui.m_userEdit->text()));
-
-        bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->password());
+        login();
     } else {
         loginFinished(false);
     }
+}
+
+bool BugzillaLoginPage::canLogin() const
+{
+    return (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty()));
+}
+
+void BugzillaLoginPage::login()
+{
+    Q_ASSERT(canLogin());
+
+    ui.m_statusWidget->setBusy(i18nc("@info:status '1' is a url, '2' the username",
+                                     "Performing login at %1 as %2...",
+                                     QLatin1String(KDE_BUGZILLA_SHORT_URL),
+                                     ui.m_userEdit->text()));
+
+    bugzillaManager()->tryLogin(ui.m_userEdit->text(), ui.m_passwordEdit->password());
 }
 
 void BugzillaLoginPage::updateWidget(bool enabled)
