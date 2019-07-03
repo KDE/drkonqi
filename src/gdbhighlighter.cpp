@@ -67,7 +67,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
 
         diff = next - cur;
 
-        QString lineStr = text.mid(cur, diff).append(QLatin1Char('\n'));
+        const QString lineStr = text.mid(cur, diff).append(QLatin1Char('\n'));
         // -1 since we skip the first line
         QMap< int, BacktraceLine >::iterator it = lines.lowerBound(lineNr - 1);
         Q_ASSERT(it != lines.end());

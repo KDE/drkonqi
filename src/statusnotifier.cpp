@@ -121,9 +121,7 @@ void StatusNotifier::notify()
 
     QStringList actions = {i18nc("Notification action button, keep short", "Report Bug")};
 
-    bool restartEnabled = canBeRestarted(crashedApp);
-
-    if (restartEnabled) {
+    if (canBeRestarted(crashedApp)) {
         actions << i18nc("Notification action button, keep short", "Restart App");
     }
 

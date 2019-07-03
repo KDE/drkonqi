@@ -30,7 +30,6 @@ class DrKonqi
 {
 public:
     static bool init();
-    static void cleanup();
 
     static SystemInformation *systemInformation();
     static DebuggerManager *debuggerManager();

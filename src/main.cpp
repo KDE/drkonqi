@@ -195,6 +195,5 @@ int main(int argc, char* argv[])
 
     int ret = qa.exec();
 
-    DrKonqi::cleanup();
     return ret;
 }

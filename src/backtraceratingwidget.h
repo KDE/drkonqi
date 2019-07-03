@@ -47,10 +47,7 @@ private:
 
     BacktraceGenerator::State       m_state;
 
-    bool                            m_star1;
-    bool                            m_star2;
-    bool                            m_star3;
-
+    int                             m_numStars;
     QPixmap                         m_errorPixmap;
 
     QPixmap                         m_starPixmap;

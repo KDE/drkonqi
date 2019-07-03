@@ -81,11 +81,8 @@ DrKonqi::~DrKonqi()
 //static
 DrKonqi *DrKonqi::instance()
 {
-    static DrKonqi *drKonqiInstance = nullptr;
-    if (!drKonqiInstance) {
-        drKonqiInstance = new DrKonqi();
-    }
-    return drKonqiInstance;
+    static DrKonqi drKonqiInstance;
+    return &drKonqiInstance;
 }
 
 //based on KCrashDelaySetHandler from kdeui/util/kcrash.cpp
@@ -107,7 +104,6 @@ protected:
 bool DrKonqi::init()
 {
     if (!instance()->m_backend->init()) {
-        cleanup();
         return false;
     } else { //all ok, continue initialization
         // Set drkonqi to handle its own crashes, but only if the crashed app
@@ -121,11 +117,6 @@ bool DrKonqi::init()
         }
         return true;
     }
-}
-
-void DrKonqi::cleanup()
-{
-    delete instance();
 }
 
 //static

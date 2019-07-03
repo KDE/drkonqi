@@ -339,15 +339,13 @@ void BacktraceWidget::saveClicked()
 
 void BacktraceWidget::hilightExtraDetailsLabel(bool hilight)
 {
-    QString stylesheet;
-    if (hilight) {
-        stylesheet = QLatin1String("border-width: 2px; "
-                                    "border-style: solid; "
-                                    "border-color: red;");
-    } else {
-        stylesheet = QLatin1String("border-width: 0px;");
-    }
-    stylesheet += QLatin1String(extraDetailsLabelMargin);
+    const QString stylesheet = ((!hilight)
+        ? QLatin1String("border-width: 0px;")
+        : QLatin1String("border-width: 2px; "
+                        "border-style: solid; "
+                        "border-color: red;"))
+        + QLatin1String(extraDetailsLabelMargin);
+
     ui.m_extraDetailsLabel->setStyleSheet(stylesheet);
 }
 
@@ -396,9 +394,9 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
         missingDbgForFiles.insert(0, DrKonqi::crashedApplication()->executable().absoluteFilePath());
 
         //HTML message
-        QString message = QStringLiteral("<html>");
-        message += i18n("The packages containing debug information for the following application and libraries are missing:");
-        message += QStringLiteral("<br /><ul>");
+        QString message = QStringLiteral("<html>")
+            + i18n("The packages containing debug information for the following application and libraries are missing:")
+            + QStringLiteral("<br /><ul>");
 
         Q_FOREACH(const QString & string, missingDbgForFiles) {
             message += QStringLiteral("<li>") + string + QStringLiteral("</li>");

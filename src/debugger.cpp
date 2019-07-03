@@ -88,53 +88,46 @@ void Debugger::setUsedBackend(const QString & backendName)
 
 QString Debugger::command() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return QString();
-    } else {
-        return m_config->group(m_backend).readPathEntry("Exec", QString());
-    }
+    return (isValid() && m_config->hasGroup(m_backend))
+        ? m_config->group(m_backend).readPathEntry("Exec", QString())
+        : QString();
 }
 
 QString Debugger::backtraceBatchCommands() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return QString();
-    } else {
-        return m_config->group(m_backend).readEntry("BatchCommands");
-    }
+    return (isValid() && m_config->hasGroup(m_backend))
+        ? m_config->group(m_backend).readPathEntry("BatchCommands", QString())
+        : QString();
 }
 
 bool Debugger::runInTerminal() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return false;
-    } else {
-        return m_config->group(m_backend).readEntry("Terminal", false);
-    }
+    return (isValid() && m_config->hasGroup(m_backend))
+        ? m_config->group(m_backend).readEntry("Terminal", false)
+        : false;
 }
 
 QString Debugger::backendValueOfParameter(const QString &key) const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return QString();
-    } else {
-        return m_config->group(m_backend).readEntry(key, QString());
-    }
+    return (isValid() && m_config->hasGroup(m_backend))
+        ? m_config->group(m_backend).readEntry(key, QString())
+        : QString();
 }
 
 //static
 void Debugger::expandString(QString & str, ExpandStringUsage usage, const QString & tempFile)
 {
     const CrashedApplication *appInfo = DrKonqi::crashedApplication();
-    QHash<QString, QString> map;
-    map[QLatin1String("progname")] = appInfo->name();
-    map[QLatin1String("execname")] = appInfo->fakeExecutableBaseName();
-    map[QLatin1String("execpath")] = appInfo->executable().absoluteFilePath();
-    map[QLatin1String("signum")] = QString::number(appInfo->signalNumber());
-    map[QLatin1String("signame")] = appInfo->signalName();
-    map[QLatin1String("pid")] = QString::number(appInfo->pid());
-    map[QLatin1String("tempfile")] = tempFile;
-    map[QLatin1String("thread")] = QString::number(appInfo->thread());
+    const QHash<QString, QString> map = {
+        { QLatin1String("progname"), appInfo->name() },
+        { QLatin1String("execname"), appInfo->fakeExecutableBaseName() },
+        { QLatin1String("execpath"), appInfo->executable().absoluteFilePath() },
+        { QLatin1String("signum"), QString::number(appInfo->signalNumber()) },
+        { QLatin1String("signame"), appInfo->signalName() },
+        { QLatin1String("pid"), QString::number(appInfo->pid()) },
+        { QLatin1String("tempfile"), tempFile },
+        { QLatin1String("thread"), QString::number(appInfo->thread()) },
+    };
 
     if (usage == ExpansionUsageShell) {
         str = KMacroExpander::expandMacrosShellQuote(str, map);

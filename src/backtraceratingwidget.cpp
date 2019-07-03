@@ -24,10 +24,7 @@
 
 BacktraceRatingWidget::BacktraceRatingWidget(QWidget * parent) :
         QWidget(parent),
-        m_state(BacktraceGenerator::NotLoaded),
-        m_star1(false),
-        m_star2(false),
-        m_star3(false)
+        m_state(BacktraceGenerator::NotLoaded)
 {
     setMinimumSize(105, 24);
 
@@ -38,34 +35,21 @@ BacktraceRatingWidget::BacktraceRatingWidget(QWidget * parent) :
 
 void BacktraceRatingWidget::setUsefulness(BacktraceParser::Usefulness usefulness)
 {
-    switch (usefulness) {
-    case BacktraceParser::ReallyUseful: {
-        m_star1 = true;
-        m_star2 = true;
-        m_star3 = true;
+    switch(usefulness) {
+        case BacktraceParser::ReallyUseful:
+            m_numStars = 3;
+        break;
+        case BacktraceParser::MayBeUseful:
+            m_numStars = 2;
+        break;
+        case BacktraceParser::ProbablyUseless:
+            m_numStars = 1;
+        break;
+        case BacktraceParser::Useless:
+        case BacktraceParser::InvalidUsefulness:
+            m_numStars = 0;
         break;
     }
-    case BacktraceParser::MayBeUseful: {
-        m_star1 = true;
-        m_star2 = true;
-        m_star3 = false;
-        break;
-    }
-    case BacktraceParser::ProbablyUseless: {
-        m_star1 = true;
-        m_star2 = false;
-        m_star3 = false;
-        break;
-    }
-    case BacktraceParser::Useless:
-    case BacktraceParser::InvalidUsefulness: {
-        m_star1 = false;
-        m_star2 = false;
-        m_star3 = false;
-        break;
-    }
-    }
-
     update();
 }
 
@@ -74,10 +58,9 @@ void BacktraceRatingWidget::paintEvent(QPaintEvent * event)
     Q_UNUSED(event);
 
     QPainter p(this);
-
-    p.drawPixmap(QPoint(30, 1) , m_star1 ? m_starPixmap : m_disabledStarPixmap);
-    p.drawPixmap(QPoint(55, 1) , m_star2 ? m_starPixmap : m_disabledStarPixmap);
-    p.drawPixmap(QPoint(80, 1) , m_star3 ? m_starPixmap : m_disabledStarPixmap);
+    p.drawPixmap(QPoint(30, 1) , m_numStars >= 1 ? m_starPixmap : m_disabledStarPixmap);
+    p.drawPixmap(QPoint(55, 1) , m_numStars >= 2 ? m_starPixmap : m_disabledStarPixmap);
+    p.drawPixmap(QPoint(80, 1) , m_numStars >= 3 ? m_starPixmap : m_disabledStarPixmap);
 
     switch (m_state) {
     case BacktraceGenerator::Failed:
@@ -85,8 +68,6 @@ void BacktraceRatingWidget::paintEvent(QPaintEvent * event)
         p.drawPixmap(QPoint(0, 1) , m_errorPixmap);
         break;
     }
-    case BacktraceGenerator::Loading:
-    case BacktraceGenerator::Loaded:
     default:
         break;
     }
