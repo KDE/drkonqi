@@ -37,6 +37,7 @@ static const char showBugUrl[] = "show_bug.cgi?id=%1";
 // static) and is slightly synchronizing across threads WRT the filter hash.
 struct QMessageFilterContainer {
     QMessageFilterContainer();
+    ~QMessageFilterContainer();
     void insert(const QString &needle, const QString &replace);
     void clear();
 
@@ -60,6 +61,11 @@ QMessageFilterContainer::QMessageFilterContainer()
                                    const QString &msg) {
             s_messageFilter->handler(type, context, s_messageFilter->filter(msg));
 });
+}
+
+QMessageFilterContainer::~QMessageFilterContainer()
+{
+    qInstallMessageHandler(handler);
 }
 
 void QMessageFilterContainer::insert(const QString &needle, const QString &replace)
