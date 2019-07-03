@@ -23,6 +23,8 @@
 
 #include <config-drkonqi.h>
 
+#include <KCoreAddons>
+
 #if HAVE_UNAME
 # include <errno.h>
 # include <sys/utsname.h>
@@ -66,8 +68,8 @@ private Q_SLOTS:
         QCOMPARE(info.operatingSystem(), "FreeBSD 1.0.0 x86_64");
         QCOMPARE(info.distributionPrettyName(), "KDE SUSE User Edition 5.16");
         QCOMPARE(info.compiledSources(), false);
-        QCOMPARE(info.qtVersion(), "5.12.3");
-        QCOMPARE(info.frameworksVersion(), "5.59.0");
+        QCOMPARE(info.qtVersion(), qVersion());
+        QCOMPARE(info.frameworksVersion(), KCoreAddons::versionString());
     }
 
     void testOsRelease()
@@ -84,8 +86,8 @@ private Q_SLOTS:
         QCOMPARE(info.operatingSystem(), "FreeBSD 1.0.0 x86_64");
         QCOMPARE(info.distributionPrettyName(), "FreeBSD #1");
         QCOMPARE(info.compiledSources(), false);
-        QCOMPARE(info.qtVersion(), "5.12.3");
-        QCOMPARE(info.frameworksVersion(), "5.59.0");
+        QCOMPARE(info.qtVersion(), qVersion());
+        QCOMPARE(info.frameworksVersion(), KCoreAddons::versionString());
     }
 };
 
