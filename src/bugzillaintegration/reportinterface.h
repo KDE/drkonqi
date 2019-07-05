@@ -61,7 +61,6 @@ public:
     QString generateReportFullText(bool drKonqiStamp) const;
 
     Bugzilla::NewBug newBugReportTemplate() const;
-    void sendBugReport() const;
 
     QStringList relatedBugzillaProducts() const;
 
@@ -91,6 +90,9 @@ public:
     bool userCanProvideApplicationConfigDetails() const {
         return m_provideApplicationConfigurationDetails;
     }
+
+public Q_SLOTS:
+    void sendBugReport() const;
 
 private Q_SLOTS:
     void sendUsingDefaultProduct() const;

@@ -665,11 +665,32 @@ void BugzillaSendPage::retryClicked()
 void BugzillaSendPage::aboutToShow()
 {
     ui.m_statusWidget->setBusy(i18nc("@info:status","Sending crash report... (please wait)"));
-    reportInterface()->sendBugReport();
+
+    // Trigger relogin. If the user took a long time to prepare the login our
+    // token might have gone invalid in the meantime. As a cheap way to prevent
+    // this we'll simply refresh the token regardless. It's plenty cheap and
+    // should reliably ensure that the token is current.
+    // Disconnect everything first though, this function may get called a bunch
+    // of times, so we don't want duplicated submissions.
+    disconnect(bugzillaManager(), &BugzillaManager::loginFinished,
+               reportInterface(), &ReportInterface::sendBugReport);
+    disconnect(bugzillaManager(), &BugzillaManager::loginError,
+               this, nullptr);
+    connect(bugzillaManager(), &BugzillaManager::loginFinished,
+            reportInterface(), &ReportInterface::sendBugReport);
+    connect(bugzillaManager(), &BugzillaManager::loginError,
+            this, [this](const QString &error) { sendError(error, QString()); });
+    bugzillaManager()->refreshToken();
 }
 
 void BugzillaSendPage::sent(int bug_id)
 {
+    // Disconnect login->submit chain again.
+    disconnect(bugzillaManager(), &BugzillaManager::loginFinished,
+               reportInterface(), &ReportInterface::sendBugReport);
+    disconnect(bugzillaManager(), &BugzillaManager::loginError,
+               this, nullptr);
+
     ui.m_statusWidget->setVisible(false);
     ui.m_retryButton->setEnabled(false);
     ui.m_retryButton->setVisible(false);

@@ -44,6 +44,7 @@ public:
 
     /* Login methods */
     void tryLogin(const QString &username, const QString &password);
+    void refreshToken();
     bool getLogged() const;
 
     QString getUsername() const;

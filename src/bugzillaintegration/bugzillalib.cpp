@@ -159,11 +159,21 @@ void BugzillaManager::tryLogin(const QString &username, const QString &password)
 {
     m_username = username;
     m_password = password;
+    refreshToken();
+}
+
+void BugzillaManager::refreshToken()
+{
+    Q_ASSERT(!m_username.isEmpty());
+    Q_ASSERT(!m_password.isEmpty());
     m_logged = false;
 
+    // Rest token and qdebug filters
+    Bugzilla::connection().setToken(QString());
     s_messageFilter->clear();
-    s_messageFilter->insert(password, QStringLiteral("PASSWORD"));
-    KJob *job = Bugzilla::login(username, password);
+    s_messageFilter->insert(m_password, QStringLiteral("PASSWORD"));
+
+    KJob *job = Bugzilla::login(m_username, m_password);
     connect(job, &KJob::finished, this, [this](KJob *job) {
         try {
             auto details = Bugzilla::login(job);
@@ -171,9 +181,11 @@ void BugzillaManager::tryLogin(const QString &username, const QString &password)
             if (m_token.isEmpty()) {
                 throw Bugzilla::RuntimeException(QStringLiteral("Did not receive a token"));
             }
+
             s_messageFilter->insert(m_token, QStringLiteral("TOKEN"));
             Bugzilla::connection().setToken(m_token);
             m_logged = true;
+
             emit loginFinished(true);
         } catch (Bugzilla::Exception &e) {
             qCWarning(DRKONQI_LOG) << e.whatString();
