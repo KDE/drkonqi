@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantpages_bugzilla.h
 * Copyright 2009, 2011    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019 Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -113,6 +114,7 @@ public:
     explicit BugzillaPreviewPage(ReportAssistantDialog *);
 
     void aboutToShow() override;
+    void aboutToHide() override;
 
 private:
     Ui::AssistantPageBugzillaPreview    ui;

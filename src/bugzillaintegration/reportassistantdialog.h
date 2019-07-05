@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantdialog.h
 * Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019 Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -20,6 +21,7 @@
 #ifndef REPORTASSISTANTDIALOG__H
 #define REPORTASSISTANTDIALOG__H
 
+#include <QIcon>
 #include <QPointer>
 
 #include <KAssistantDialog>
@@ -40,6 +42,8 @@ public:
     ReportInterface *reportInterface() const {
         return m_reportInterface;
     }
+
+    void setAboutToSend(bool aboutTo);
 
 private Q_SLOTS:
     void currentPageChanged_slot(KPageWidgetItem *, KPageWidgetItem *);
@@ -68,6 +72,9 @@ private:
     ReportInterface *                m_reportInterface = nullptr;
 
     bool                        m_canClose;
+
+    QIcon m_nextButtonIconCache;
+    QString m_nextButtonTextCache;
 };
 
 #endif

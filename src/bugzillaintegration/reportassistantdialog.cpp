@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantdialog.cpp
 * Copyright 2009,2010    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019 Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -172,6 +173,21 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
 
 ReportAssistantDialog::~ReportAssistantDialog()
 {
+}
+
+void ReportAssistantDialog::setAboutToSend(bool aboutTo)
+{
+    if (aboutTo) {
+        m_nextButtonIconCache = nextButton()->icon();
+        m_nextButtonTextCache = nextButton()->text();
+        nextButton()->setIcon(QIcon::fromTheme(QStringLiteral("document-send")));
+        nextButton()->setText(i18nc("@action button to submit report", "Submit"));
+        return;
+    }
+    nextButton()->setIcon(m_nextButtonIconCache);
+    nextButton()->setText(m_nextButtonTextCache);
+    m_nextButtonIconCache = QIcon();
+    m_nextButtonTextCache = QString();
 }
 
 void ReportAssistantDialog::connectSignals(ReportAssistantPage * page)

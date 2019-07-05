@@ -1,6 +1,7 @@
 /*******************************************************************
 * reportassistantpages_bugzilla.cpp
 * Copyright 2009, 2010, 2011    Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* Copyright 2019 Harald Sitter <sitter@kde.org>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -620,6 +621,12 @@ BugzillaPreviewPage::BugzillaPreviewPage(ReportAssistantDialog * parent)
 void BugzillaPreviewPage::aboutToShow()
 {
     ui.m_previewEdit->setText(reportInterface()->generateReportFullText(true));
+    assistant()->setAboutToSend(true);
+}
+
+void BugzillaPreviewPage::aboutToHide()
+{
+    assistant()->setAboutToSend(false);
 }
 
 //END BugzillaPreviewPage
