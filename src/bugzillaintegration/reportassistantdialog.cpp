@@ -32,6 +32,7 @@
 #include "debuggermanager.h"
 #include "backtracegenerator.h"
 
+#include "assistantpage_bugzilla_version.h"
 #include "crashedapplication.h"
 #include "aboutbugreportingdialog.h"
 #include "reportassistantpages_base.h"
@@ -105,6 +106,10 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     m_conclusionsPage->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
     connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
+    // Version check page
+    BugzillaVersionPage *versionPage = new BugzillaVersionPage(this);
+    m_pageWidgetMap.insert(QLatin1String(PAGE_BZVERSION_ID), versionPage->item());
+
     //-Bugzilla Login
     BugzillaLoginPage * m_bugzillaLogin =  new BugzillaLoginPage(this);
     connectSignals(m_bugzillaLogin);
@@ -159,6 +164,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget * parent) :
     addPage(m_awarenessPage);
     addPage(m_backtracePage);
     addPage(m_conclusionsPage);
+    addPage(versionPage->item());
     addPage(m_bugzillaLoginPage);
     addPage(m_bugzillaDuplicatesPage);
     addPage(m_bugzillaInformationPage);
@@ -267,6 +273,13 @@ void ReportAssistantDialog::showHelp()
 //Override KAssistantDialog "next" page implementation
 void ReportAssistantDialog::next()
 {
+    // FIXME: this entire function is a bit weird. It'd likely make more sense to
+    // use the page appropriateness more globally. i.e. mark pages inappropriate
+    // when they are not applicable based on earlier settings done (e.g. put
+    // a conclusion page under/after the awareness page but only mark it
+    // appropriate if the data is not useful. that way kassistantdialog would
+    // just skip over the page).
+
     //Allow the widget to Ask a question to the user before changing the page
     ReportAssistantPage * page = dynamic_cast<ReportAssistantPage*>(currentPage()->widget());
     if (page) {
@@ -296,7 +309,11 @@ void ReportAssistantDialog::next()
         if (m_reportInterface->isWorthReporting() &&
             DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla())
         {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_BZLOGIN_ID)));
+            // Depending on whether the page is appropriate either go to version
+            // check page or login page.
+            const auto versionPage = m_pageWidgetMap.value(QLatin1String(PAGE_BZVERSION_ID));
+            const auto loginPage = m_pageWidgetMap.value(QLatin1String(PAGE_BZLOGIN_ID));
+            setCurrentPage(isAppropriate(versionPage) ? versionPage : loginPage);
             return;
         }
     } else if (name == QLatin1String(PAGE_BZDUPLICATES_ID)) {

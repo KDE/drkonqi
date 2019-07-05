@@ -54,6 +54,7 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
+    bugzillaintegration/assistantpage_bugzilla_version.cpp
     bugzillaintegration/bugzillalib.cpp
     bugzillaintegration/reportassistantdialog.cpp
     bugzillaintegration/reportassistantpage.cpp
@@ -77,6 +78,7 @@ ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_bugzilla_information.ui
     bugzillaintegration/ui/assistantpage_bugzilla_preview.ui
     bugzillaintegration/ui/assistantpage_bugzilla_send.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_version.ui
 )
 
 ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi)

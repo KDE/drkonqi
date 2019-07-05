@@ -102,12 +102,6 @@ BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
 {
     Q_ASSERT(bugTrackerUrl.endsWith(QLatin1Char('/')));
     Bugzilla::setConnection(new Bugzilla::HTTPConnection(QUrl(m_bugTrackerUrl + QStringLiteral("rest"))));
-    // Allow constructors for ReportInterface and assistant dialogs to finish.
-    // Otherwise we may have a race on our hand if the lookup finishes before
-    // the constructors.
-    // I am not sure why this is so weirdly done TBH. Might deserve some looking
-    // into.
-    QMetaObject::invokeMethod(this, &BugzillaManager::lookupVersion, Qt::QueuedConnection);
 }
 
 void BugzillaManager::lookupVersion()
@@ -122,6 +116,7 @@ void BugzillaManager::lookupVersion()
             // Version detection problems simply mean we'll not mark the version
             // found and the UI will not allow reporting.
             qCWarning(DRKONQI_LOG) << e.whatString();
+            emit bugzillaVersionError(e.whatString());
         }
     });
 }

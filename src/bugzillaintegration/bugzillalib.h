@@ -64,8 +64,6 @@ public:
     void stopCurrentSearch();
 
     void fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobOwner);
-
-private Q_SLOTS:
     void lookupVersion();
 
 Q_SIGNALS:
@@ -90,6 +88,7 @@ Q_SIGNALS:
     void attachToReportError(const QString &errorMsg, const QString &extendedErrorMsg = QString());
     void addMeToCCError(const QString &errorMsg, const QString &extendedErrorMsg = QString());
     void productInfoError();
+    void bugzillaVersionError(const QString &errorMsg);
 
 private:
     QString m_bugTrackerUrl;

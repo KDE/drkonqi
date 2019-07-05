@@ -45,6 +45,10 @@ public:
 
     void setAboutToSend(bool aboutTo);
 
+public Q_SLOTS:
+    void next() override;
+    void back() override;
+
 private Q_SLOTS:
     void currentPageChanged_slot(KPageWidgetItem *, KPageWidgetItem *);
 
@@ -55,9 +59,6 @@ private Q_SLOTS:
     void assistantFinished(bool);
 
     void showHelp();
-
-    void next() override;
-    void back() override;
 
     //Override default reject method
     void reject() override;

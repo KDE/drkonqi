@@ -20,6 +20,7 @@
 
 #include "reportassistantpages_bugzilla.h"
 
+#include <QAction>
 #include <QTimer>
 #include <QLabel>
 #include <QCheckBox>
@@ -64,10 +65,9 @@ static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
 BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
         ReportAssistantPage(parent),
-        m_wallet(nullptr), m_walletWasOpenedBefore(false),
-        m_bugzillaVersionFound(false)
+        m_wallet(nullptr),
+        m_walletWasOpenedBefore(false)
 {
-    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound, this, &BugzillaLoginPage::bugzillaVersionFound);
     connect(bugzillaManager(), &BugzillaManager::loginFinished, this, &BugzillaLoginPage::loginFinished);
     connect(bugzillaManager(), &BugzillaManager::loginError, this, &BugzillaLoginPage::loginError);
 
@@ -114,18 +114,9 @@ bool BugzillaLoginPage::isComplete()
     return bugzillaManager()->getLogged();
 }
 
-void BugzillaLoginPage::bugzillaVersionFound()
-{
-    // Login depends on first knowing the Bugzilla software version number.
-    m_bugzillaVersionFound = true;
-    updateLoginButtonStatus();
-}
-
 void BugzillaLoginPage::updateLoginButtonStatus()
 {
-    ui.m_loginButton->setEnabled( !ui.m_userEdit->text().isEmpty() &&
-                                  !ui.m_passwordEdit->password().isEmpty() &&
-                                  m_bugzillaVersionFound );
+    ui.m_loginButton->setEnabled(canLogin());
 }
 
 void BugzillaLoginPage::loginError(const QString & err, const QString & extendedMessage)
@@ -280,7 +271,8 @@ void BugzillaLoginPage::loginClicked()
 
 bool BugzillaLoginPage::canLogin() const
 {
-    return (!(ui.m_userEdit->text().isEmpty() || ui.m_passwordEdit->password().isEmpty()));
+    return (!(ui.m_userEdit->text().isEmpty() ||
+              ui.m_passwordEdit->password().isEmpty()));
 }
 
 void BugzillaLoginPage::login()

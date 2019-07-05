@@ -46,7 +46,6 @@ public:
     bool isComplete() override;
 
 private Q_SLOTS:
-    void bugzillaVersionFound();
     void loginClicked();
     bool canLogin() const;
     void login();
