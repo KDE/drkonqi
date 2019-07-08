@@ -75,6 +75,7 @@ private:
     QDialogButtonBox*                   m_buttonBox = nullptr;
     QPushButton*                        m_debugButton = nullptr;
     QPushButton*                        m_restartButton = nullptr;
+    bool                                m_debugButtonInBox = false;
 };
 
 #endif
