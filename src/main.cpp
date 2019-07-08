@@ -62,8 +62,8 @@ int main(int argc, char* argv[])
     }
 #endif
 
-    QApplication qa(argc, argv);
-    qa.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     KLocalizedString::setApplicationDomain("drkonqi5");
 
     // Prevent KApplication from setting the crash handler. We will set it later...
@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
     aboutData.addAuthor(i18nc("@info:credit","A. L. Spehr"), QString(),
                          QStringLiteral("spehr@kde.org"));
     KAboutData::setApplicationData(aboutData);
-    qa.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), qa.windowIcon()));
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), app.windowIcon()));
 
     QCommandLineParser parser;
     aboutData.setupCommandLine(&parser);
@@ -133,14 +133,14 @@ int main(int argc, char* argv[])
     // them again once we have injected no-op options for all unknown ones.
     // This allows ::process to still do common argument handling for --version
     // as well as standard error handling.
-    if (!parser.parse(qa.arguments())) {
+    if (!parser.parse(app.arguments())) {
         for (const QString &option : parser.unknownOptionNames()) {
             qWarning() << "Unknown option" << option << " - ignoring it.";
             parser.addOption(QCommandLineOption(option));
         }
     }
 
-    parser.process(qa);
+    parser.process(app);
     aboutData.processCommandLine(&parser);
 
     DrKonqi::setSignal(parser.value(signalOption).toInt());
@@ -168,11 +168,11 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    qa.setQuitOnLastWindowClosed(false);
+    app.setQuitOnLastWindowClosed(false);
 
-    auto openDrKonqiDialog = [&qa]{
+    auto openDrKonqiDialog = [&app]{
         DrKonqiDialog *w = new DrKonqiDialog();
-        QObject::connect(w, &DrKonqiDialog::rejected, &qa, &QApplication::quit);
+        QObject::connect(w, &DrKonqiDialog::rejected, &app, &QApplication::quit);
         w->show();
 #ifdef Q_OS_MACOS
         KWindowSystem::forceActiveWindow(w->winId());
@@ -191,11 +191,11 @@ int main(int argc, char* argv[])
         if (!restarted) {
             statusNotifier->notify();
         }
-        QObject::connect(statusNotifier, &StatusNotifier::expired, &qa, &QApplication::quit);
+        QObject::connect(statusNotifier, &StatusNotifier::expired, &app, &QApplication::quit);
         QObject::connect(statusNotifier, &StatusNotifier::activated, openDrKonqiDialog);
     }
 
-    int ret = qa.exec();
+    int ret = app.exec();
 
     return ret;
 }
