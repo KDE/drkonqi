@@ -53,10 +53,13 @@
 #include <KLocalizedString>
 #include <KJobWidgets>
 #include <kio/filecopyjob.h>
+#include <QApplication>
 
 #include "systeminformation.h"
 #include "crashedapplication.h"
 #include "drkonqibackends.h"
+#include "debuggermanager.h"
+#include "backtracegenerator.h"
 
 DrKonqi::DrKonqi()
     : m_signal(0)
@@ -202,6 +205,54 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
             }
         }
     }
+}
+
+// Helper functions for the shutdownSaveReport
+namespace {
+    QString shutdownSaveString;
+    void saveReportAndQuit()
+    {
+        const QString dirname = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
+        // Try to create the directory to save the logs, if we can't open the directory,
+        // just bail out. no need to hold the shutdown process.
+        {
+            QDir dir;
+            if(!dir.mkpath(dirname)) {
+                qApp->quit();
+            }
+        }
+
+        const QString defname = dirname
+                        + QLatin1Char('/') 
+                        + getSuggestedKCrashFilename(DrKonqi::crashedApplication());
+        KMessageBox::sorry(nullptr, defname);
+
+        QFile shutdownSaveFile(defname);
+        if (shutdownSaveFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream ts(&shutdownSaveFile);
+            ts << shutdownSaveString;
+            ts.flush();
+            shutdownSaveFile.close();
+        }
+        qApp->quit();
+    }
+
+    void appendNewLine(const QString& newLine)
+    {
+        shutdownSaveString += newLine;
+    }
+}
+
+void DrKonqi::shutdownSaveReport()
+{
+    auto btGenerator = instance()->debuggerManager()->backtraceGenerator();
+    shutdownSaveString.clear();
+
+    QObject::connect(btGenerator, &BacktraceGenerator::done, &saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::someError, &saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::failedToStart, &saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::newLine, &appendNewLine);
+    btGenerator->start();
 }
 
 void DrKonqi::setSignal(int signal)

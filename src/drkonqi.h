@@ -36,7 +36,7 @@ public:
     static CrashedApplication *crashedApplication();
 
     static void saveReport(const QString & reportText, QWidget *parent = nullptr);
-
+    static void shutdownSaveReport();
     static void setSignal(int signal);
     static void setAppName(const QString &appName);
     static void setAppPath(const QString &appPath);

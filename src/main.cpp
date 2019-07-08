@@ -34,6 +34,12 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QDebug>
+#include <QTemporaryFile>
+#include <QFile>
+
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 #include <config-drkonqi.h>
 #if HAVE_X11
@@ -47,6 +53,8 @@
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 #include "statusnotifier.h"
+#include "debuggermanager.h"
+#include "backtracegenerator.h"
 
 static const char version[] = PROJECT_VERSION;
 static const char description[] = I18N_NOOP("The KDE Crash Handler gives the user feedback "
@@ -69,6 +77,18 @@ namespace {
         }
         QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &QApplication::quit);
         QObject::connect(statusNotifier, &StatusNotifier::activated, &openDrKonqiDialog);
+    }
+
+    bool isShuttingDown() {
+        if (QDBusConnection::sessionBus().isConnected()) {
+            QDBusInterface remoteApp( QStringLiteral("org.kde.ksmserver"),
+                                      QStringLiteral("/KSMServer"),
+                                      QStringLiteral("org.kde.KSMServerInterface" ));
+
+            QDBusReply<bool> reply = remoteApp.call( QStringLiteral("isShuttingDown") );
+            return reply.isValid() ? reply.value() : false;
+        }
+        return false;
     }
 }
 
@@ -195,8 +215,10 @@ int main(int argc, char* argv[])
 
     // if no notification service is running (eg. shell crashed, or other desktop environment)
     // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
-    // and emitting a desktop notification
-    if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
+    // and emitting a desktop notification.
+    if (isShuttingDown()) {
+        DrKonqi::shutdownSaveReport();
+    } else if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
         openDrKonqiDialog();
     } else {
         requestDrKonqiDialog(restarted);
