@@ -105,20 +105,22 @@ int main(int argc, char* argv[])
     const QCommandLineOption threadOption(QStringLiteral("thread"), i18nc("@info:shell","The <thread id> of the failing thread"), QStringLiteral("threadid"));
     const QCommandLineOption dialogOption(QStringLiteral("dialog"), i18nc("@info:shell","Do not show a notification but launch the debug dialog directly"));
 
-    parser.addOption(signalOption);
-    parser.addOption(appNameOption);
-    parser.addOption(appPathOption);
-    parser.addOption(appVersionOption);
-    parser.addOption(bugAddressOption);
-    parser.addOption(programNameOption);
-    parser.addOption(pidOption);
-    parser.addOption(startupIdOption);
-    parser.addOption(kdeinitOption);
-    parser.addOption(saferOption);
-    parser.addOption(restartedOption);
-    parser.addOption(keepRunningOption);
-    parser.addOption(threadOption);
-    parser.addOption(dialogOption);
+    parser.addOptions({
+        signalOption,
+        appNameOption,
+        appPathOption,
+        appVersionOption,
+        bugAddressOption,
+        programNameOption,
+        pidOption,
+        startupIdOption,
+        kdeinitOption,
+        saferOption,
+        restartedOption,
+        keepRunningOption,
+        threadOption,
+        dialogOption
+    });
 
     // Add all unknown options but make sure to print a warning.
     // This enables older DrKonqi's to run by newer KCrash instances with
