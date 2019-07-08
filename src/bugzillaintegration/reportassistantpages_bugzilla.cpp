@@ -102,6 +102,13 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog * parent) :
                             "Please do not use disposable email accounts.</note>",
                             DrKonqi::crashedApplication()->bugReportAddress(),
                             KDE_BUGZILLA_CREATE_ACCOUNT_URL));
+
+    // Don't advertise saving credentials when we can't save them.
+    // https://bugs.kde.org/show_bug.cgi?id=363570
+    if (!KWallet::Wallet::isEnabled()) {
+        ui.m_savePasswordCheckBox->setVisible(false);
+        ui.m_savePasswordCheckBox->setCheckState(Qt::Unchecked);
+    }
 }
 
 bool BugzillaLoginPage::isComplete()
