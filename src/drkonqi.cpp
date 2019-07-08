@@ -224,8 +224,10 @@ namespace {
 
         const QString defname = dirname
                         + QLatin1Char('/') 
+                        + QStringLiteral("pid-")
+                        + QString::number(DrKonqi::pid())
+                        + QLatin1Char('-')
                         + getSuggestedKCrashFilename(DrKonqi::crashedApplication());
-        KMessageBox::sorry(nullptr, defname);
 
         QFile shutdownSaveFile(defname);
         if (shutdownSaveFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
