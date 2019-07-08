@@ -41,7 +41,9 @@ public:
     {
         Q_ASSERT(!m_fixture.isEmpty());
         QFile file(m_fixture);
-        Q_ASSERT(file.open(QFile::ReadOnly | QFile::Text));
+        if (!file.open(QFile::ReadOnly | QFile::Text)) {
+            return {};
+        }
         QTextStream in(&file);
         return in.readAll().toUtf8();
     }
@@ -62,6 +64,8 @@ public:
     virtual APIJob *get(const QString &path,
                         const QUrlQuery &query = QUrlQuery()) const override
     {
+        Q_UNUSED(path);
+        Q_UNUSED(query);
         if (path == "/product/dragonplayer") {
             return new JobDouble { QFINDTESTDATA("data/product.dragonplayer.json") };
         }

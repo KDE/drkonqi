@@ -42,7 +42,9 @@ public:
     {
         Q_ASSERT(!m_fixture.isEmpty());
         QFile file(m_fixture);
-        Q_ASSERT(file.open(QFile::ReadOnly | QFile::Text));
+        if (!file.open(QFile::ReadOnly | QFile::Text)) {
+            return {};
+        }
         QTextStream in(&file);
         return in.readAll().toUtf8();
     }

@@ -80,7 +80,7 @@ private Q_SLOTS:
             // passed along!
             if (httpBlob.startsWith("GET /hi?informal=yes")) {
                 QFile file(QFINDTESTDATA("data/hi.http"));
-                Q_ASSERT(file.open(QFile::ReadOnly | QFile::Text));
+                file.open(QFile::ReadOnly | QFile::Text);
                 socket->write(file.readAll());
                 socket->waitForBytesWritten();
                 socket->disconnect();
@@ -115,7 +115,7 @@ private Q_SLOTS:
             QString httpBlob = socket->readAll();
             qDebug() << httpBlob;
             QFile file(QFINDTESTDATA("data/error.http"));
-            QVERIFY(file.open(QFile::ReadOnly | QFile::Text));
+            file.open(QFile::ReadOnly | QFile::Text);
             socket->write(file.readAll());
             socket->waitForBytesWritten();
             socket->disconnect();
@@ -159,7 +159,7 @@ private Q_SLOTS:
                         parts.contains("Content-Length: 12") &&
                         parts.contains("hello there!")) {
                     QFile file(QFINDTESTDATA("data/put.http"));
-                    QVERIFY(file.open(QFile::ReadOnly | QFile::Text));
+                    file.open(QFile::ReadOnly | QFile::Text);
                     QByteArray ret = file.readAll();
                     ret.replace("\n", "\r\n");
                     qDebug() << ret;
@@ -178,7 +178,7 @@ private Q_SLOTS:
         quint16 port;
         portMutex.lock();
         QTimer::singleShot(0, server, [server, &portMutex, &portCondition, &port]() {
-            Q_ASSERT(server->listen(QHostAddress::LocalHost, 0));
+            server->listen(QHostAddress::LocalHost, 0);
             QMutexLocker locker(&portMutex);
             port = server->serverPort();
             portCondition.wakeAll();

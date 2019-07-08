@@ -42,7 +42,9 @@ public:
     {
         Q_ASSERT(!m_fixture.isEmpty());
         QFile file(m_fixture);
-        Q_ASSERT(file.open(QFile::ReadOnly | QFile::Text));
+        if (!file.open(QFile::ReadOnly | QFile::Text)) {
+            return {};
+        }
         QTextStream in(&file);
         return in.readAll().toUtf8();
     }
@@ -78,6 +80,8 @@ public:
                          const QByteArray &,
                          const QUrlQuery &query = QUrlQuery()) const override
     {
+        Q_UNUSED(path);
+        Q_UNUSED(query);
         Q_ASSERT_X(false, "post",
                    qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
@@ -87,6 +91,8 @@ public:
                         const QByteArray &,
                         const QUrlQuery &query = QUrlQuery()) const override
     {
+        Q_UNUSED(path);
+        Q_UNUSED(query);
         Q_ASSERT_X(false, "put",
                    qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
