@@ -52,6 +52,26 @@ static const char version[] = PROJECT_VERSION;
 static const char description[] = I18N_NOOP("The KDE Crash Handler gives the user feedback "
                                             "if a program has crashed.");
 
+namespace {
+    void openDrKonqiDialog () {
+        DrKonqiDialog *w = new DrKonqiDialog();
+        QObject::connect(w, &DrKonqiDialog::rejected, qApp, &QApplication::quit);
+        w->show();
+    #ifdef Q_OS_MACOS
+        KWindowSystem::forceActiveWindow(w->winId());
+    #endif
+    }
+
+    void requestDrKonqiDialog(bool restarted) {
+        StatusNotifier *statusNotifier = new StatusNotifier();
+        if (!restarted) {
+            statusNotifier->notify();
+        }
+        QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &QApplication::quit);
+        QObject::connect(statusNotifier, &StatusNotifier::activated, &openDrKonqiDialog);
+    }
+}
+
 int main(int argc, char* argv[])
 {
 #ifndef Q_OS_WIN //krazy:exclude=cpp
@@ -170,16 +190,8 @@ int main(int argc, char* argv[])
 
     app.setQuitOnLastWindowClosed(false);
 
-    auto openDrKonqiDialog = [&app]{
-        DrKonqiDialog *w = new DrKonqiDialog();
-        QObject::connect(w, &DrKonqiDialog::rejected, &app, &QApplication::quit);
-        w->show();
-#ifdef Q_OS_MACOS
-        KWindowSystem::forceActiveWindow(w->winId());
-#endif
-    };
 
-    bool restarted = parser.isSet(restartedOption);
+    const bool restarted = parser.isSet(restartedOption);
 
     // if no notification service is running (eg. shell crashed, or other desktop environment)
     // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
@@ -187,12 +199,7 @@ int main(int argc, char* argv[])
     if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
         openDrKonqiDialog();
     } else {
-        StatusNotifier *statusNotifier = new StatusNotifier();
-        if (!restarted) {
-            statusNotifier->notify();
-        }
-        QObject::connect(statusNotifier, &StatusNotifier::expired, &app, &QApplication::quit);
-        QObject::connect(statusNotifier, &StatusNotifier::activated, openDrKonqiDialog);
+        requestDrKonqiDialog(restarted);
     }
 
     return app.exec();
