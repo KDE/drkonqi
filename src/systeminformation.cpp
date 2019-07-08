@@ -43,23 +43,58 @@
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
 static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
 
+// This function maps the operating system to an OS value that is
+// accepted by bugs.kde.org. If the values change on the server
+// side, they need to be updated here as well.
+static QString fetchBasicOperatingSystem()
+{
+    // krazy:excludeall=cpp
+    // Get the base OS string (bugzillaOS)
+#if defined(Q_OS_LINUX)
+    return QStringLiteral("Linux");
+#elif defined(Q_OS_FREEBSD)
+    return QStringLiteral("FreeBSD");
+#elif defined(Q_OS_NETBSD)
+    return QStringLiteral("NetBSD");
+#elif defined(Q_OS_OPENBSD)
+    return QStringLiteral("OpenBSD");
+#elif defined(Q_OS_AIX)
+    return QStringLiteral("AIX");
+#elif defined(Q_OS_HPUX)
+    return QStringLiteral("HP-UX");
+#elif defined(Q_OS_IRIX)
+    return QStringLiteral("IRIX");
+#elif defined(Q_OS_OSF)
+    return QStringLiteral("Tru64");
+#elif defined(Q_OS_SOLARIS)
+    return QStringLiteral("Solaris");
+#elif defined(Q_OS_CYGWIN)
+    return QStringLiteral("Cygwin");
+#elif defined(Q_OS_DARWIN)
+    return QStringLiteral("OS X");
+#elif defined(Q_OS_WIN32)
+    return QStringLiteral("MS Windows");
+#else
+    return OS_UNSPECIFIED;
+#endif
+}
+
 SystemInformation::Config::Config()
-    : lsbReleasePath(QStandardPaths::findExecutable(QLatin1String("lsb_release")))
+    : basicOperatingSystem(fetchBasicOperatingSystem())
+    , lsbReleasePath(QStandardPaths::findExecutable(QStringLiteral("lsb_release")))
     , osReleasePath(/* Use KOSRelease default */)
 {
 }
 
 SystemInformation::SystemInformation(Config infoConfig, QObject *parent)
     : QObject(parent)
-    , m_bugzillaOperatingSystem(OS_UNSPECIFIED)
+    , m_bugzillaOperatingSystem(infoConfig.basicOperatingSystem)
     , m_bugzillaPlatform(PLATFORM_UNSPECIFIED)
     , m_complete(false)
     , m_infoConfig(infoConfig)
 {
-    // NOTE: the relative order is important here
-    m_bugzillaOperatingSystem = fetchOSBasicInformation();
+    // NOTE: order matters. These require m_bugzillaOperatingSystem to be set!
     m_operatingSystem = fetchOSDetailInformation();
-
     tryToSetBugzillaPlatform();
 
     KConfigGroup config(KSharedConfig::openConfig(), "SystemInformation");
@@ -173,42 +208,6 @@ QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) cons
     }
 
     return PLATFORM_UNSPECIFIED;
-}
-
-//this function maps the operating system to an OS value that is accepted by bugs.kde.org.
-//if the values change on the server side, they need to be updated here as well.
-QString SystemInformation::fetchOSBasicInformation() const
-{
-    //krazy:excludeall=cpp
-    //Get the base OS string (bugzillaOS)
-#if defined(Q_OS_LINUX)
-    return QLatin1String("Linux");
-#elif defined(Q_OS_FREEBSD)
-    return QLatin1String("FreeBSD");
-#elif defined(Q_OS_NETBSD)
-    return QLatin1String("NetBSD");
-#elif defined(Q_OS_OPENBSD)
-    return QLatin1String("OpenBSD");
-#elif defined(Q_OS_AIX)
-    return QLatin1String("AIX");
-#elif defined(Q_OS_HPUX)
-    return QLatin1String("HP-UX");
-#elif defined(Q_OS_IRIX)
-    return QLatin1String("IRIX");
-#elif defined(Q_OS_OSF)
-    return QLatin1String("Tru64");
-#elif defined(Q_OS_SOLARIS)
-    return QLatin1String("Solaris");
-#elif defined(Q_OS_CYGWIN)
-    return QLatin1String("Cygwin");
-#elif defined(Q_OS_DARWIN)
-    return QLatin1String("OS X");
-#elif defined(Q_OS_WIN32)
-    return QLatin1String("MS Windows");
-#else
-    return OS_UNSPECIFIED;
-#endif
-
 }
 
 QString SystemInformation::fetchOSDetailInformation() const

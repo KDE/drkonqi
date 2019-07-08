@@ -30,8 +30,13 @@ class SystemInformation: public QObject
         struct Config {
             Config();
 
+            // Overrides m_operatingSystem value
+            QString basicOperatingSystem;
+            // Path to lsb_release executable
             QString lsbReleasePath;
+            // Path to os-release file
             QString osReleasePath;
+            // Function pointer to uname override
             void *unameFunc = nullptr;
         };
 
@@ -59,7 +64,6 @@ class SystemInformation: public QObject
         void lsbReleaseFinished();
 
     private:
-        QString fetchOSBasicInformation() const;
         QString fetchOSDetailInformation() const;
         QString fetchOSReleaseInformation();
 
