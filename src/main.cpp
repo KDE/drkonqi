@@ -195,7 +195,5 @@ int main(int argc, char* argv[])
         QObject::connect(statusNotifier, &StatusNotifier::activated, openDrKonqiDialog);
     }
 
-    int ret = app.exec();
-
-    return ret;
+    return app.exec();
 }
