@@ -66,7 +66,7 @@ class TestDuplicateAttach < ATSPITest
         when '/rest/bug/375161'
           input = JSON.parse(req.body)
           if input['cc']&.[]('add')&.include?('xxx')
-            res.body = JSON.generate(id: 375161)
+            res.body = File.read("#{__dir__}/data/bugs")
             next
           end
         end
@@ -200,7 +200,7 @@ class TestDuplicateAttach < ATSPITest
       accessible = find_in(window, name: 'Next')
       press(accessible)
 
-      accessible = find_in(window, name: 'Next')
+      accessible = find_in(window, name: 'Submit')
       press(accessible)
 
       accessible = find_in(window, name: /.*Crash report sent.*/)
