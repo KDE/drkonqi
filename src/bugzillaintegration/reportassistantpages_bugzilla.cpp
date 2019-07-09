@@ -30,12 +30,9 @@
 #include <QTextBrowser>
 #include <QDesktopServices>
 
-#include <QDBusInterface>
-#include <QDBusReply>
 
 #include "drkonqi_debug.h"
 #include <KMessageBox>
-#include <KToolInvocation>
 #include <KLocalizedString>
 #include <kwallet.h>
 #include <KCapacityBar>

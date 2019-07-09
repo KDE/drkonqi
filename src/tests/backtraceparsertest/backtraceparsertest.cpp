@@ -15,11 +15,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "backtraceparsertest.h"
-#include <QDirIterator>
-#include <QFileInfo>
-#include <QFile>
 #include <QMetaEnum>
-#include <QDebug>
 #include <QSharedPointer>
 
 #define DATA_DIR QFINDTESTDATA("backtraceparsertest_data")

@@ -22,7 +22,6 @@
 #define PRODUCT_H
 
 #include <QObject>
-#include <QPointer>
 
 #include "connection.h"
 

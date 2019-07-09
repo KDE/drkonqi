@@ -42,9 +42,6 @@
 #include "drkonqi_debug.h"
 
 // second: Qt includes
-#include <QLoggingCategory>
-#include <QString>
-#include <QMap>
 
 
 // third: KDE includes

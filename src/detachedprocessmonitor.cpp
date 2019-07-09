@@ -21,7 +21,6 @@
 #include <signal.h>
 
 #include <QTimerEvent>
-#include <QDebug>
 
 DetachedProcessMonitor::DetachedProcessMonitor(QObject *parent)
         : QObject(parent), m_pid(0)

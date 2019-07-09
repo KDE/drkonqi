@@ -20,7 +20,6 @@
 
 #include "apijob.h"
 
-#include <QDebug>
 #include <QMetaMethod>
 
 #include <KIOCore/KIO/TransferJob>

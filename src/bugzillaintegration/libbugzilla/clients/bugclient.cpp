@@ -20,8 +20,6 @@
 
 #include "bugclient.h"
 
-#include <QUrlQuery>
-#include <QMetaEnum>
 
 namespace Bugzilla {
 

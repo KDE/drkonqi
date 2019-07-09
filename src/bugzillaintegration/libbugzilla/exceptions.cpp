@@ -20,7 +20,6 @@
 
 #include "exceptions.h"
 
-#include <QDebug>
 
 #include "apijob.h"
 

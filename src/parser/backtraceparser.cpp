@@ -24,7 +24,6 @@
 #include "drkonqi_parser_debug.h"
 #include <QRegExp>
 #include <QMetaEnum>
-#include <QDebug>
 
 //factory
 BacktraceParser *BacktraceParser::newParser(const QString & debuggerName, QObject *parent)

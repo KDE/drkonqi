@@ -19,7 +19,6 @@
 
 #include "drkonqidialog.h"
 
-#include <KToolInvocation>
 #include <KWindowConfig>
 #include <KLocalizedString>
 

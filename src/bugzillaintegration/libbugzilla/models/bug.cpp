@@ -21,10 +21,6 @@
 #include "bug.h"
 
 #include <QDebug>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QMetaEnum>
-#include <QUrlQuery>
 
 namespace Bugzilla {
 

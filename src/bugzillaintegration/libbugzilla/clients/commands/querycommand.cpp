@@ -19,10 +19,7 @@
 */
 
 #include "querycommand.h"
-
-#include <QDebug>
-#include <QJsonDocument>
-#include <QJsonObject>
+#include <QVariant>
 #include <QMetaProperty>
 
 namespace Bugzilla {

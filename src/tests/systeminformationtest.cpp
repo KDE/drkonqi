@@ -18,7 +18,6 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <QDebug>
 #include <QTest>
 
 #include <config-drkonqi.h>

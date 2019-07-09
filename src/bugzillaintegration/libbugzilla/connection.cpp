@@ -20,7 +20,6 @@
 
 #include "connection.h"
 
-#include <QDebug>
 #include <QUrlQuery>
 
 #include <KIOCore/KIO/TransferJob>

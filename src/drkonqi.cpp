@@ -46,7 +46,6 @@
 #include <QTextStream>
 #include <QTimerEvent>
 #include <QTemporaryFile>
-#include <QDebug>
 #include <QFileDialog>
 
 #include <KMessageBox>

@@ -20,7 +20,6 @@
 
 #include "newattachment.h"
 
-#include <QDebug>
 #include <QVariantHash>
 
 namespace Bugzilla {

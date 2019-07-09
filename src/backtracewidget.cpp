@@ -24,7 +24,6 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <KToolInvocation>
 #include <qdesktopservices.h>
 
 #include "drkonqi.h"

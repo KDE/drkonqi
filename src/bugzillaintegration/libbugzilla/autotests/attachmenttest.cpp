@@ -20,7 +20,6 @@
 
 #include <QTest>
 
-#include <QDebug>
 
 #include "../clients/attachmentclient.h"
 

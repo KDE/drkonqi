@@ -20,7 +20,6 @@
 
 #include "bugsearch.h"
 
-#include <QDebug>
 
 namespace Bugzilla {
 

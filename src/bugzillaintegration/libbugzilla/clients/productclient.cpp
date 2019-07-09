@@ -23,7 +23,7 @@
 #include <QMetaObject>
 #include <QMetaMethod>
 #include <QMetaType>
-
+#include <QSharedPointer>
 namespace Bugzilla {
 
 Product::Ptr ProductClient::get(KJob *kjob)

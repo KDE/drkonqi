@@ -20,10 +20,8 @@
 
 #include "reportassistantpages_base.h"
 
-#include <QLabel>
 #include <QCheckBox>
 #include <QFontDatabase>
-#include <QToolTip>
 #include <QDesktopServices>
 
 #include <KToolInvocation>

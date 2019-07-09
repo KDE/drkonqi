@@ -20,9 +20,7 @@
 
 #include "product.h"
 
-#include <QDebug>
 
-#include <QMetaObject>
 #include <QMetaMethod>
 #include <QMetaType>
 

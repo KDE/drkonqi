@@ -28,7 +28,6 @@
 # include <sys/utsname.h>
 #endif
 
-#include <QFile>
 
 #include <KProcess>
 #include "drkonqi_debug.h"

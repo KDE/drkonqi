@@ -19,7 +19,6 @@
 #include "backtraceparser_p.h"
 #include "drkonqi_parser_debug.h"
 #include <QRegExp>
-#include <QDebug>
 
 //BEGIN BacktraceLineGdb
 
