@@ -18,6 +18,7 @@
 
 require_relative 'test_helper'
 
+require 'json'
 require 'xmlrpc/client'
 require 'xmlrpc/server'
 
@@ -48,6 +49,11 @@ bug_id,"bug_severity","priority","bug_status","product","short_desc","resolution
       end
 
       if req.request_uri.path.include?('show_bug.cgi')
+        if req.request_uri.query.include?('id=375161')
+          resp.body = File.read("#{__dir__}/xml-data/show_bug.cgi?id=375161&ctype=xml")
+          return
+        end
+
         uri = req.request_uri.dup
         uri.host = 'bugstest.kde.org'
         uri.scheme = 'https'
@@ -80,18 +86,19 @@ class TestDuplicateAttach < ATSPITest
     server.set_default_handler do |name, args|
       puts '+++ handler +++'
       p name, args
-      if name == 'User.login'
+      case name
+      when 'User.login'
         next {"id"=>12345, "token"=>"12345-cJ5o717AbC"}
-      end
-      if name == 'Bug.update'
+      when 'Bug.update'
         id = args.fetch('ids').fetch(0)
         cc_to_add = args.fetch('cc').fetch('add')
         next {"bugs"=>[{"last_change_time"=>DateTime.now, "id"=>id, "changes"=>{"cc"=>{"removed"=>"", "added"=>cc_to_add}}, "alias"=>[]}]}
-      end
-      if name == 'Bug.add_attachment'
+      when 'Bug.add_attachment'
         # Check for garbage string from test
         @got_comment = args.fetch('comment').include?('yyyyyyyyyyyyyyyy')
         next { "ids" => [1234] }
+      when 'Bugzilla.version'
+        next JSON.parse(File.read("#{__dir__}/rpc-data/Bugzilla.version"))
       end
       puts '~~~ bugzilla ~~~'
       # Pipe request through bugstest.
@@ -171,7 +178,8 @@ class TestDuplicateAttach < ATSPITest
       # Set pseudo login data if there are none.
       accessible = find_in(window, name: 'Username input')
       accessible.text.set_to 'xxx' if accessible.text.length <= 0
-      accessible = find_in(window, name: 'Password input')
+      # the lineedit is in fact an element on the input. why wouldn't it be...
+      accessible = find_in(window, name: 'Password input').children[0]
       accessible.text.set_to 'yyy' if accessible.text.length <= 0
 
       accessible = find_in(window, name: 'Login')

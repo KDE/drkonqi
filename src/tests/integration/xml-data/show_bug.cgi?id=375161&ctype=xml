@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE bugzilla SYSTEM "https://bugstest.kde.org/page.cgi?id=bugzilla.dtd">
+
+<bugzilla version="5.0.6"
+          urlbase="https://bugstest.kde.org/"
+          
+          maintainer="sysadmin@kde.org"
+          exporter="sitter@kde.org"
+>
+
+    <bug>
+          <bug_id>375161</bug_id>
+          
+          <creation_ts>2017-01-16 21:57:27 +0000</creation_ts>
+          <short_desc>Dolphin crash, copy from Samba share</short_desc>
+          <delta_ts>2017-10-28 09:58:26 +0000</delta_ts>
+          <reporter_accessible>1</reporter_accessible>
+          <cclist_accessible>1</cclist_accessible>
+          <classification_id>1</classification_id>
+          <classification>Unclassified</classification>
+          <product>dolphin</product>
+          <component>general</component>
+          <version>16.08.2</version>
+          <rep_platform>openSUSE RPMs</rep_platform>
+          <op_sys>Linux</op_sys>
+          <bug_status>UNCONFIRMED</bug_status>
+          <resolution></resolution>
+
+
+          <bug_file_loc></bug_file_loc>
+          <status_whiteboard></status_whiteboard>
+          <keywords>drkonqi</keywords>
+          <priority>NOR</priority>
+          <bug_severity>crash</bug_severity>
+          <target_milestone>---</target_milestone>
+          
+          
+          <everconfirmed>0</everconfirmed>
+          <reporter name="Jung Péter">j.peter0123@gmail.com</reporter>
+          <assigned_to name="Dolphin Bug Assignee">dolphin-bugs-null@kde.org</assigned_to>
+          <cc>elvis.angelaccio@kde.org</cc>
+          
+          <cf_commitlink></cf_commitlink>
+          <cf_versionfixedin></cf_versionfixedin>
+          <votes>0</votes>
+
+      
+          <token>1562664405-KDZ4-KXnqyziC6h0NfV7uxL4Or5VvoTZNZvYgV4bJpE</token>
+
+      
+
+      
+
+          <comment_sort_order>oldest_to_newest</comment_sort_order>  
+          <long_desc isprivate="0" >
+    <commentid>1654770</commentid>
+    <comment_count>0</comment_count>
+    <who name="Jung Péter">j.peter0123@gmail.com</who>
+    <bug_when>2017-01-16 21:57:27 +0000</bug_when>
+    <thetext>Application: dolphin (16.08.2)
+
+Qt Version: 5.6.1
+Frameworks Version: 5.26.0
+Operating System: Linux 4.4.36-8-default x86_64
+Distribution: &quot;openSUSE Leap 42.2&quot;
+
+-- Information about the crash:
+- What I was doing when the application crashed:
+I had copyed files from Samba share (with drag and drop methode).
+
+-- Backtrace:
+Application: Dolphin (dolphin), signal: Segmentation fault
+Using host libthread_db library &quot;/lib64/libthread_db.so.1&quot;.
+[Current thread is 1 (Thread 0x7f03846b5900 (LWP 4820))]
+
+Thread 4 (Thread 0x7f035bfff700 (LWP 4823)):
+#0  0x00007f0383f8951d in read () at /lib64/libc.so.6
+#1  0x00007f037430b073 in  () at /usr/lib64/tls/libnvidia-tls.so.375.26
+#2  0x00007f0378dbb670 in  () at /usr/lib64/libglib-2.0.so.0
+#3  0x00007f0378d7ae49 in g_main_context_check () at /usr/lib64/libglib-2.0.so.0
+#4  0x00007f0378d7b2a8 in  () at /usr/lib64/libglib-2.0.so.0
+#5  0x00007f0378d7b42c in g_main_context_iteration () at /usr/lib64/libglib-2.0.so.0
+#6  0x00007f037e26932b in QEventDispatcherGlib::processEvents(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#7  0x00007f037e216fdb in QEventLoop::exec(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#8  0x00007f037e051f1a in QThread::exec() () at /usr/lib64/libQt5Core.so.5
+#9  0x00007f037e0569e9 in  () at /usr/lib64/libQt5Core.so.5
+#10 0x00007f0379902734 in start_thread () at /lib64/libpthread.so.0
+#11 0x00007f0383f95d3d in clone () at /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f036a0f2700 (LWP 4822)):
+#0  0x00007f0383f8951d in read () at /lib64/libc.so.6
+#1  0x00007f037430b073 in  () at /usr/lib64/tls/libnvidia-tls.so.375.26
+#2  0x00007f0378dbb670 in  () at /usr/lib64/libglib-2.0.so.0
+#3  0x00007f0378d7ae49 in g_main_context_check () at /usr/lib64/libglib-2.0.so.0
+#4  0x00007f0378d7b2a8 in  () at /usr/lib64/libglib-2.0.so.0
+#5  0x00007f0378d7b42c in g_main_context_iteration () at /usr/lib64/libglib-2.0.so.0
+#6  0x00007f037e26932b in QEventDispatcherGlib::processEvents(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#7  0x00007f037e216fdb in QEventLoop::exec(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#8  0x00007f037e051f1a in QThread::exec() () at /usr/lib64/libQt5Core.so.5
+#9  0x00007f037e67d1d5 in  () at /usr/lib64/libQt5DBus.so.5
+#10 0x00007f037e0569e9 in  () at /usr/lib64/libQt5Core.so.5
+#11 0x00007f0379902734 in start_thread () at /lib64/libpthread.so.0
+#12 0x00007f0383f95d3d in clone () at /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f036c09b700 (LWP 4821)):
+#0  0x00007f0383f8d49d in poll () at /lib64/libc.so.6
+#1  0x00007f0376c703e2 in  () at /usr/lib64/libxcb.so.1
+#2  0x00007f0376c71fcf in xcb_wait_for_event () at /usr/lib64/libxcb.so.1
+#3  0x00007f036ec27839 in  () at /usr/lib64/libQt5XcbQpa.so.5
+#4  0x00007f037e0569e9 in  () at /usr/lib64/libQt5Core.so.5
+#5  0x00007f0379902734 in start_thread () at /lib64/libpthread.so.0
+#6  0x00007f0383f95d3d in clone () at /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f03846b5900 (LWP 4820)):
+[KCrash Handler]
+#6  0x00007f0383f28296 in malloc_usable_size () at /lib64/libc.so.6
+#7  0x00007f03783d5139 in  () at /usr/X11R6/lib64/libGL.so.1
+#8  0x00007f037430b1fc in  () at /usr/lib64/tls/libnvidia-tls.so.375.26
+#9  0x00007f037e2414a4 in QObjectPrivate::Connection::~Connection() () at /usr/lib64/libQt5Core.so.5
+#10 0x00007f037e246dcc in QObjectPrivate::cleanConnectionLists() () at /usr/lib64/libQt5Core.so.5
+#11 0x00007f037e246eab in QObjectPrivate::addConnection(int, QObjectPrivate::Connection*) () at /usr/lib64/libQt5Core.so.5
+#12 0x00007f037e2475c6 in  () at /usr/lib64/libQt5Core.so.5
+#13 0x00007f037e247d57 in QObject::connect(QObject const*, char const*, QObject const*, char const*, Qt::ConnectionType) () at /usr/lib64/libQt5Core.so.5
+#14 0x00007f038207b54d in  () at /usr/lib64/libKF5KIOCore.so.5
+#15 0x00007f038208c686 in  () at /usr/lib64/libKF5KIOCore.so.5
+#16 0x00007f037e242bb1 in QMetaObject::activate(QObject*, int, int, void**) () at /usr/lib64/libQt5Core.so.5
+#17 0x00007f037e250112 in QTimer::timerEvent(QTimerEvent*) () at /usr/lib64/libQt5Core.so.5
+#18 0x00007f037e243f34 in QObject::event(QEvent*) () at /usr/lib64/libQt5Core.so.5
+#19 0x00007f037f1a0e3c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () at /usr/lib64/libQt5Widgets.so.5
+#20 0x00007f037f1a549a in QApplication::notify(QObject*, QEvent*) () at /usr/lib64/libQt5Widgets.so.5
+#21 0x00007f037e218fc5 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () at /usr/lib64/libQt5Core.so.5
+#22 0x00007f037e268c7e in QTimerInfoList::activateTimers() () at /usr/lib64/libQt5Core.so.5
+#23 0x00007f037e269079 in  () at /usr/lib64/libQt5Core.so.5
+#24 0x00007f0378d7b134 in g_main_context_dispatch () at /usr/lib64/libglib-2.0.so.0
+#25 0x00007f0378d7b388 in  () at /usr/lib64/libglib-2.0.so.0
+#26 0x00007f0378d7b42c in g_main_context_iteration () at /usr/lib64/libglib-2.0.so.0
+#27 0x00007f037e26930c in QEventDispatcherGlib::processEvents(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#28 0x00007f037e216fdb in QEventLoop::exec(QFlags&lt;QEventLoop::ProcessEventsFlag&gt;) () at /usr/lib64/libQt5Core.so.5
+#29 0x00007f037e21eec6 in QCoreApplication::exec() () at /usr/lib64/libQt5Core.so.5
+#30 0x00007f03842b196a in kdemain () at /usr/lib64/libkdeinit5_dolphin.so
+#31 0x00007f0383ecc6e5 in __libc_start_main () at /lib64/libc.so.6
+#32 0x0000000000400789 in _start ()
+
+Reported using DrKonqi</thetext>
+  </long_desc><long_desc isprivate="0" >
+    <commentid>1654785</commentid>
+    <comment_count>1</comment_count>
+    <who name="Elvis Angelaccio">elvis.angelaccio@kde.org</who>
+    <bug_when>2017-01-16 22:45:08 +0000</bug_when>
+    <thetext>Thanks for the report. Unfortunately the backtracke is not very useful. If you can reproduce the crash, please install debug symbols and attach a new backtrace here. See also https://community.kde.org/Dolphin/FAQ/Crashes</thetext>
+  </long_desc><long_desc isprivate="0" >
+    <commentid>1708610</commentid>
+    <comment_count>2</comment_count>
+    <who name="Elvis Angelaccio">elvis.angelaccio@kde.org</who>
+    <bug_when>2017-10-28 09:58:26 +0000</bug_when>
+    <thetext>
+
+*** This bug has been marked as a duplicate of bug 386277 ***</thetext>
+  </long_desc>
+      
+      
+
+    </bug>
+
+</bugzilla>
