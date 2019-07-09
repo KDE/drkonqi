@@ -66,7 +66,7 @@ void TransferAPIJob::setPutData(const QByteArray &data)
 {
     m_putData = data;
 
-    // This is rally awkward, does it need to be this way? Why can't we just
+    // This is really awkward, does it need to be this way? Why can't we just
     // push the entire array in?
 
     // dataReq says we shouldn't send data >1mb, so segment the incoming data
