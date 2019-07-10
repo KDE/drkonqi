@@ -210,18 +210,30 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
 // Helper functions for the shutdownSaveReport
 namespace {
     QString shutdownSaveString;
+
+    void removeOldFilesIn(QDir& dir) {
+        auto fileList = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot,
+                                          QDir::SortFlag::Time | QDir::Reversed);
+        if (fileList.size() >= 10) {
+            int filesToRemove = fileList.size() - 9;
+            while(filesToRemove--) {
+                auto currentFile = fileList.takeFirst();
+                dir.remove(currentFile.fileName());
+            }
+        }
+    }
+
     void saveReportAndQuit()
     {
         const QString dirname = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
         // Try to create the directory to save the logs, if we can't open the directory,
         // just bail out. no need to hold the shutdown process.
-        {
-            QDir dir;
-            if(!dir.mkpath(dirname)) {
-                qApp->quit();
-            }
+        QDir dir(dirname);
+        if(!dir.mkpath(dirname)) {
+            qApp->quit();
         }
 
+        removeOldFilesIn(dir);
         const QString defname = dirname
                         + QLatin1Char('/') 
                         + QStringLiteral("pid-")
