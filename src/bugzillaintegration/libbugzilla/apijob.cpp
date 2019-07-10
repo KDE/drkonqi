@@ -21,6 +21,7 @@
 #include "apijob.h"
 
 #include <QMetaMethod>
+#include <QTimer>
 
 #include <KIOCore/KIO/TransferJob>
 
@@ -53,6 +54,15 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
         setErrorText(job->errorText());
 
         Q_ASSERT(!((KIO::TransferJob*)job)->isErrorPage());
+
+        // Force a delay on all API actions if configured. This allows
+        // simulation of slow connections.
+        static int delay = qEnvironmentVariableIntValue("DRKONQI_HTTP_DELAY_MS");
+        if (delay > 0) {
+            QTimer::singleShot(delay, [this] { emitResult(); });
+            return;
+        }
+
         emitResult();
     });
 }
