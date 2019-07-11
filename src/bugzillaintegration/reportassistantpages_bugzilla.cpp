@@ -119,14 +119,11 @@ void BugzillaLoginPage::updateLoginButtonStatus()
     ui.m_loginButton->setEnabled(canLogin());
 }
 
-void BugzillaLoginPage::loginError(const QString & err, const QString & extendedMessage)
+void BugzillaLoginPage::loginError(const QString &error)
 {
     loginFinished(false);
     ui.m_statusWidget->setIdle(xi18nc("@info:status","Error when trying to login: "
-                                                 "<message>%1</message>", err));
-    if (!extendedMessage.isEmpty()) {
-        new UnhandledErrorDialog(this, err, extendedMessage);
-    }
+                                                 "<message>%1</message>", error));
 }
 
 void BugzillaLoginPage::aboutToShow()
@@ -682,7 +679,7 @@ void BugzillaSendPage::aboutToShow()
     connect(bugzillaManager(), &BugzillaManager::loginFinished,
             reportInterface(), &ReportInterface::sendBugReport);
     connect(bugzillaManager(), &BugzillaManager::loginError,
-            this, [this](const QString &error) { sendError(error, QString()); });
+            this, &BugzillaSendPage::sendError);
     bugzillaManager()->refreshToken();
 }
 
@@ -713,17 +710,13 @@ void BugzillaSendPage::sent(int bug_id)
     emit finished(false);
 }
 
-void BugzillaSendPage::sendError(const QString & errorString, const QString & extendedMessage)
+void BugzillaSendPage::sendError(const QString &errorString)
 {
     ui.m_statusWidget->setIdle(xi18nc("@info:status","Error sending the crash report:  "
                                   "<message>%1.</message>", errorString));
 
     ui.m_retryButton->setEnabled(true);
     ui.m_retryButton->setVisible(true);
-
-    if (!extendedMessage.isEmpty()) {
-        new UnhandledErrorDialog(this,errorString, extendedMessage);
-    }
 }
 
 void BugzillaSendPage::finishClicked()
@@ -751,104 +744,3 @@ void BugzillaSendPage::openReportContents()
 }
 
 //END BugzillaSendPage
-
-/* Dialog for Unhandled Bugzilla Errors */
-/* The user can save the bugzilla html output to check the error and/or to report this as a DrKonqi bug */
-
-//BEGIN UnhandledErrorDialog
-
-UnhandledErrorDialog::UnhandledErrorDialog(QWidget * parent, const QString & error, const QString & extendedMessage)
-    : QDialog(parent)
-{
-    setWindowTitle(i18nc("@title:window", "Unhandled Bugzilla Error"));
-    setWindowModality(Qt::ApplicationModal);
-
-    QPushButton* saveButton = new QPushButton(this);
-    saveButton->setText(i18nc("@action:button save html to a file","Save to a file"));
-    saveButton->setIcon(QIcon::fromTheme(QStringLiteral("document-save")));
-    connect(saveButton, &QPushButton::clicked, this, &UnhandledErrorDialog::saveErrorMessage);
-
-    setAttribute(Qt::WA_DeleteOnClose);
-
-    QTextBrowser * htmlView = new QTextBrowser(this);
-
-    QLabel * iconLabel = new QLabel(this);
-    iconLabel->setFixedSize(32, 32);
-    iconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(32, 32));
-
-    QLabel * mainLabel = new QLabel(this);
-    mainLabel->setWordWrap(true);
-    mainLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Maximum);
-
-    QHBoxLayout * titleLayout = new QHBoxLayout();
-    titleLayout->setContentsMargins(5,2,5,2);
-    titleLayout->setSpacing(5);
-    titleLayout->addWidget(iconLabel);
-    titleLayout->addWidget(mainLabel);
-
-    QDialogButtonBox* buttonBox = new QDialogButtonBox(this);
-    buttonBox->setStandardButtons(QDialogButtonBox::Close);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-
-    QVBoxLayout * layout = new QVBoxLayout(this);
-    layout->addLayout(titleLayout);
-    layout->addWidget(htmlView);
-    layout->addWidget(buttonBox);
-
-    m_extendedHTMLError = extendedMessage;
-    mainLabel->setText(i18nc("@label", "There was an unhandled Bugzilla error: %1.<br />"
-                              "Below is the HTML that DrKonqi received. "
-                              "Try to perform the action again or save this error page "
-                              "to submit a bug against DrKonqi.").arg(error));
-    htmlView->setHtml(extendedMessage);
-
-    show();
-}
-
-void UnhandledErrorDialog::saveErrorMessage()
-{
-    QString defaultName = QLatin1String("drkonqi-unhandled-bugzilla-error.html");
-    QPointer<QFileDialog> dlg(new QFileDialog(this));
-    dlg->selectFile(defaultName);
-    dlg->setWindowTitle(i18nc("@title:window","Select Filename"));
-    dlg->setAcceptMode(QFileDialog::AcceptSave);
-    dlg->setFileMode(QFileDialog::AnyFile);
-    dlg->setConfirmOverwrite(true);
-
-    if ( dlg->exec() == QDialog::Accepted )
-    {
-        if (!dlg) {
-            //Dialog closed externally (ex. via DBus)
-            return;
-        }
-
-        QUrl fileUrl;
-        if(!dlg->selectedUrls().isEmpty())
-            fileUrl = dlg->selectedUrls().first();
-
-        if (fileUrl.isValid()) {
-            QTemporaryFile tf;
-            if (tf.open()) {
-                QTextStream ts(&tf);
-                ts << m_extendedHTMLError;
-                ts.flush();
-            } else {
-                KMessageBox::sorry(this, xi18nc("@info","Cannot open file <filename>%1</filename> "
-                                                "for writing.", tf.fileName()));
-                delete dlg;
-                return;
-            }
-
-            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl);
-            KJobWidgets::setWindow(job, this);
-            if (!job->exec()) {
-                KMessageBox::sorry(this, job->errorString());
-            }
-        }
-    }
-    delete dlg;
-
-}
-
-//END UnhandledErrorDialog

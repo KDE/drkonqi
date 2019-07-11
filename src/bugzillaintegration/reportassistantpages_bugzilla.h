@@ -50,7 +50,7 @@ private Q_SLOTS:
     bool canLogin() const;
     void login();
     void loginFinished(bool);
-    void loginError(const QString &, const QString &);
+    void loginError(const QString &error);
 
     void walletLogin();
 
@@ -131,7 +131,7 @@ public:
 
 private Q_SLOTS:
     void sent(int);
-    void sendError(const QString &, const QString &);
+    void sendError(const QString &errorString);
 
     void retryClicked();
     void finishClicked();
@@ -146,21 +146,6 @@ private:
 
 Q_SIGNALS:
     void finished(bool);
-
-};
-
-class UnhandledErrorDialog: public QDialog
-{
-    Q_OBJECT
-
-public:
-    UnhandledErrorDialog(QWidget * parent, const QString &, const QString &);
-
-private Q_SLOTS:
-    void saveErrorMessage();
-
-private:
-    QString    m_extendedHTMLError;
 };
 
 #endif

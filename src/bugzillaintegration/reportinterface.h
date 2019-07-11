@@ -101,7 +101,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void reportSent(int);
-    void sendReportError(const QString &, const QString &);
+    void sendReportError(const QString &);
 
 private:
     QString generateAttachmentComment() const;

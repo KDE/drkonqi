@@ -79,14 +79,14 @@ Q_SIGNALS:
     void bugzillaVersionFound();
 
     /* Bugzilla actions had errors */
-    void loginError(const QString &errorMsg, const QString & xtendedErrorMsg = QString());
+    void loginError(const QString &errorMsg);
     void bugReportError(const QString &errorMsg, QObject *jobOwner);
     void commentsError(const QString &errorMsg, QObject *jobOwner);
     void searchError(const QString &errorMsg);
-    void sendReportError(const QString &errorMsg, const QString &extendedErrorMsg = QString());
+    void sendReportError(const QString &errorMsg);
     void sendReportErrorInvalidValues(); //To use default values
-    void attachToReportError(const QString &errorMsg, const QString &extendedErrorMsg = QString());
-    void addMeToCCError(const QString &errorMsg, const QString &extendedErrorMsg = QString());
+    void attachToReportError(const QString &errorMsg);
+    void addMeToCCError(const QString &errorMsg);
     void productInfoError();
     void bugzillaVersionError(const QString &errorMsg);
 
