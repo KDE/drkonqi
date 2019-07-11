@@ -211,13 +211,13 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem * current , 
 
     //Save data of the previous page
     if (before) {
-        ReportAssistantPage* beforePage = dynamic_cast<ReportAssistantPage*>(before->widget());
+        ReportAssistantPage *beforePage = qobject_cast<ReportAssistantPage *>(before->widget());
         beforePage->aboutToHide();
     }
 
     //Load data of the current(new) page
     if (current) {
-        ReportAssistantPage* currentPage = dynamic_cast<ReportAssistantPage*>(current->widget());
+        ReportAssistantPage *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
         nextButton()->setEnabled(currentPage->isComplete());
         currentPage->aboutToShow();
     }
@@ -232,7 +232,7 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem * current , 
 
 void ReportAssistantDialog::completeChanged(ReportAssistantPage* page, bool isComplete)
 {
-    if (page == dynamic_cast<ReportAssistantPage*>(currentPage()->widget())) {
+    if (page == qobject_cast<ReportAssistantPage *>(currentPage()->widget())) {
         nextButton()->setEnabled(isComplete);
     }
 }
@@ -281,11 +281,9 @@ void ReportAssistantDialog::next()
     // just skip over the page).
 
     //Allow the widget to Ask a question to the user before changing the page
-    ReportAssistantPage * page = dynamic_cast<ReportAssistantPage*>(currentPage()->widget());
-    if (page) {
-        if (!page->showNextPage()) {
-            return;
-        }
+    ReportAssistantPage *page = qobject_cast<ReportAssistantPage *>(currentPage()->widget());
+    if (page && !page->showNextPage()) {
+        return;
     }
 
     const QString name = currentPage()->name();
