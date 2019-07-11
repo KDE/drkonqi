@@ -32,6 +32,11 @@
 #include "backtracegenerator.h"
 #include "applicationdetailsexamples.h"
 
+// Max size a report may have. This is enforced in bugzilla, hardcoded, and
+// cannot be queried through the API, so handle this client-side in a hardcoded
+// fashion as well.
+static int s_maxReportSize = 65535;
+
 ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent),
       m_duplicate(0)
@@ -134,7 +139,7 @@ void ReportInterface::setPossibleDuplicates(const QStringList & list)
     m_possibleDuplicates = list;
 }
 
-QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
+QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace inlineBacktrace) const
 {
     //Note: no translations should be done in this function's strings
 
@@ -192,10 +197,29 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
     }
 
     //Backtrace
-    report.append(QStringLiteral("-- Backtrace:\n"));
+    switch (inlineBacktrace) {
+    case Backtrace::Complete:
+        report.append(QStringLiteral("-- Backtrace:\n"));
+        break;
+    case Backtrace::Reduced:
+        report.append(QStringLiteral("-- Backtrace (Reduced):\n"));
+        break;
+    case Backtrace::Exclude:
+        report.append(QStringLiteral("The backtrace was excluded and likely attached as a file.\n"));
+        break;
+    }
     if (!m_backtrace.isEmpty()) {
-        QString formattedBacktrace = m_backtrace.trimmed();
-        report.append(formattedBacktrace + QLatin1Char('\n'));
+        switch (inlineBacktrace) {
+        case Backtrace::Complete:
+            report.append(m_backtrace.trimmed() + QLatin1Char('\n'));
+            break;
+        case Backtrace::Reduced:
+            report.append(DrKonqi::debuggerManager()->backtraceGenerator()->parser()->simplifiedBacktrace() + QLatin1Char('\n'));
+            break;
+        case Backtrace::Exclude:
+            report.append(QStringLiteral("The backtrace is attached as a comment due to length constraints\n"));
+            break;
+        }
     } else {
         report.append(QStringLiteral("A useful backtrace could not be generated\n"));
     }
@@ -225,8 +249,12 @@ QString ReportInterface::generateReportFullText(bool drKonqiStamp) const
         report.append(QStringLiteral("Possible duplicates by query: %1\n").arg(duplicatesString));
     }
 
-    if (drKonqiStamp) {
+    switch (stamp) {
+    case DrKonqiStamp::Include:
         report.append(QLatin1String("\nReported using DrKonqi"));
+        break;
+    case DrKonqiStamp::Exclude:
+        break;
     }
 
     return report;
@@ -283,23 +311,52 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     return bug;
 }
 
-void ReportInterface::sendBugReport() const
+void ReportInterface::sendBugReport()
 {
     if (m_attachToBugNumber > 0)
     {
         //We are going to attach the report to an existent one
-        connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::addedToCC);
+        connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::attachBacktraceWithReport);
         connect(m_bugzillaManager, &BugzillaManager::addMeToCCError, this, &ReportInterface::sendReportError);
         //First add the user to the CC list, then attach
         m_bugzillaManager->addMeToCC(m_attachToBugNumber);
     } else {
         //Creating a new bug report
+        bool attach = false;
         Bugzilla::NewBug report = newBugReportTemplate();
-        report.description = generateReportFullText(true);
+        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                                    ReportInterface::Backtrace::Complete);
+
+        // If the report is too long try to reduce it, try to not include the
+        // backtrace and eventually give up.
+        // Bugzilla has a hard-limit on the server side, if we cannot strip the
+        // report down enough the submission will simply not work.
+        // Exhausting the cap with just user input is nigh impossible, so we'll
+        // forego handling of the report being too long even without without
+        // backtrace.
+        // https://bugs.kde.org/show_bug.cgi?id=248807
+        if (report.description.size() >= s_maxReportSize) {
+            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                                        ReportInterface::Backtrace::Reduced);
+            attach = true;
+        }
+        if (report.description.size() >= s_maxReportSize) {
+            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                                        ReportInterface::Backtrace::Exclude);
+            attach = true;
+        }
         Q_ASSERT(!report.description.isEmpty());
 
         connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
-        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, &ReportInterface::reportSent);
+        connect(m_bugzillaManager, &BugzillaManager::reportSent,
+                this, [=](int bugId) {
+            if (attach) {
+                m_attachToBugNumber = bugId;
+                attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
+            } else {
+                emit reportSent(bugId);
+            }
+        });
         connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
         m_bugzillaManager->sendReport(report);
     }
@@ -313,18 +370,24 @@ void ReportInterface::sendUsingDefaultProduct() const
     bug.product = QLatin1String("kde");
     bug.component = QLatin1String("general");
     bug.platform = QLatin1String("unspecified");
-    bug.description = generateReportFullText(true);
+    bug.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                             ReportInterface::Backtrace::Complete);
     m_bugzillaManager->sendReport(bug);
 }
 
-void ReportInterface::addedToCC()
+void ReportInterface::attachBacktraceWithReport()
+{
+    attachBacktrace(generateAttachmentComment());
+}
+
+void ReportInterface::attachBacktrace(const QString &comment)
 {
     //The user was added to the CC list, proceed with the attachment
     connect(m_bugzillaManager, &BugzillaManager::attachToReportSent, this, &ReportInterface::attachSent);
     connect(m_bugzillaManager, &BugzillaManager::attachToReportError, this, &ReportInterface::sendReportError);
 
-    QString reportText = generateReportFullText(true);
-    QString comment = generateAttachmentComment();
+    QString reportText = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                                ReportInterface::Backtrace::Complete);
     QString filename = getSuggestedKCrashFilename(DrKonqi::crashedApplication());
     QLatin1String summary("New crash information added by DrKonqi");
 
@@ -425,5 +488,3 @@ ApplicationDetailsExamples * ReportInterface::appDetailsExamples() const
 {
     return m_appDetailsExamples;
 }
-
-

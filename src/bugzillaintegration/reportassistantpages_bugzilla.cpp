@@ -613,7 +613,8 @@ BugzillaPreviewPage::BugzillaPreviewPage(ReportAssistantDialog * parent)
 
 void BugzillaPreviewPage::aboutToShow()
 {
-    ui.m_previewEdit->setText(reportInterface()->generateReportFullText(true));
+    ui.m_previewEdit->setText(reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Include,
+                                                                        ReportInterface::Backtrace::Complete));
     assistant()->setAboutToSend(true);
 }
 
@@ -733,7 +734,8 @@ void BugzillaSendPage::openReportContents()
 {
     if (!m_contentsDialog)
     {
-        QString report = reportInterface()->generateReportFullText(false) + QLatin1Char('\n') +
+        QString report = reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Exclude,
+                                                                   ReportInterface::Backtrace::Complete) + QLatin1Char('\n') +
                             i18nc("@info report to KDE bugtracker address","Report to %1",
                                   DrKonqi::crashedApplication()->bugReportAddress());
         m_contentsDialog = new ReportInformationDialog(report);

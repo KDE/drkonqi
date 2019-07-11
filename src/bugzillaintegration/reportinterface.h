@@ -39,6 +39,17 @@ public:
     enum Reproducible { ReproducibleUnsure, ReproducibleNever,
         ReproducibleSometimes, ReproducibleEverytime };
 
+    enum class Backtrace {
+        Complete,
+        Reduced,
+        Exclude
+    };
+
+    enum class DrKonqiStamp {
+        Include,
+        Exclude
+    };
+
     explicit ReportInterface(QObject *parent = nullptr);
 
     void setBugAwarenessPageData(bool, Reproducible, bool, bool, bool);
@@ -58,7 +69,8 @@ public:
     void setDetailText(const QString & text);
     void setPossibleDuplicates(const QStringList & duplicatesList);
 
-    QString generateReportFullText(bool drKonqiStamp) const;
+    QString generateReportFullText(DrKonqiStamp stamp,
+                                   Backtrace inlineBacktrace) const;
 
     Bugzilla::NewBug newBugReportTemplate() const;
 
@@ -92,11 +104,12 @@ public:
     }
 
 public Q_SLOTS:
-    void sendBugReport() const;
+    void sendBugReport();
 
 private Q_SLOTS:
     void sendUsingDefaultProduct() const;
-    void addedToCC();
+    // Attach backtrace to bug and use collected report as comment.
+    void attachBacktraceWithReport();
     void attachSent(int);
 
 Q_SIGNALS:
@@ -104,6 +117,10 @@ Q_SIGNALS:
     void sendReportError(const QString &);
 
 private:
+    // Attach backtrace to bug. Only used internally when the comment isn't
+    // meant to be the full report.
+    void attachBacktrace(const QString &comment);
+
     QString generateAttachmentComment() const;
 
     //Information the user can provide
