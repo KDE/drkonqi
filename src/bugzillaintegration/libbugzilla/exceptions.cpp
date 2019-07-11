@@ -20,8 +20,8 @@
 
 #include "exceptions.h"
 
-
 #include "apijob.h"
+#include "bugzilla_debug.h"
 
 namespace Bugzilla {
 
@@ -45,6 +45,9 @@ APIException::APIException(const QJsonObject &object)
             m_code > 0 &&
             !m_message.isNull()) {
         m_isError = true;
+    }
+    if (m_isError) {
+        qCWarning(BUGZILLA_LOG) << "APIException:" << object.toVariantHash();
     }
 }
 
@@ -73,6 +76,7 @@ ProtocolException::ProtocolException(const APIJob *job)
     : Exception()
     , m_job(job)
 {
+    qCWarning(BUGZILLA_LOG) << "ProtocolException:" << whatString();
 }
 
 ProtocolException::ProtocolException(const ProtocolException &other)
@@ -108,6 +112,7 @@ const char *Exception::what() const noexcept
 RuntimeException::RuntimeException(const QString &reason)
     : m_reason(reason)
 {
+    qCWarning(BUGZILLA_LOG) << "RuntimeException:" << whatString();
 }
 
 QString RuntimeException::whatString() const
