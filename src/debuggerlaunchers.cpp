@@ -38,7 +38,7 @@ DefaultDebuggerLauncher::DefaultDebuggerLauncher(const Debugger & debugger, Debu
 
 QString DefaultDebuggerLauncher::name() const
 {
-    return m_debugger.name();
+    return m_debugger.displayName();
 }
 
 void DefaultDebuggerLauncher::start()

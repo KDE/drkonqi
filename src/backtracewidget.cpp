@@ -306,7 +306,7 @@ void BacktraceWidget::loadData()
         ui.m_extraDetailsLabel->setText(xi18nc("@info/rich", "<strong>You need to first install the debugger "
                                                "application (%1) then click the <interface>Reload"
                                                "</interface> button.</strong>",
-                                               m_btGenerator->debugger().name()));
+                                               m_btGenerator->debugger().displayName()));
     }
 
     ui.m_reloadBacktraceButton->setEnabled(true);

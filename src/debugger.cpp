@@ -47,7 +47,7 @@ bool Debugger::isInstalled() const
 {
     QString tryexec = tryExec();
     if(tryexec.isEmpty()) {
-        qCDebug(DRKONQI_LOG) << "tryExec of" << name() << "is empty!";
+        qCDebug(DRKONQI_LOG) << "tryExec of" << codeName() << "is empty!";
         return false;
     }
 
@@ -56,7 +56,7 @@ bool Debugger::isInstalled() const
         || !QStandardPaths::findExecutable(tryexec, {QCoreApplication::applicationDirPath()}).isEmpty();
 }
 
-QString Debugger::name() const
+QString Debugger::displayName() const
 {
     return isValid() ? m_config->group("General").readEntry("Name") : QString();
 }

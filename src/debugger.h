@@ -41,7 +41,7 @@ public:
     bool isInstalled() const;
 
     /** Returns the translatable name of the debugger (eg. "GDB") */
-    QString name() const;
+    QString displayName() const;
 
     /** Returns the code name of the debugger (eg. "gdb"). */
     QString codeName() const;
