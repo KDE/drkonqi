@@ -139,24 +139,28 @@ void Debugger::expandString(QString & str, ExpandStringUsage usage, const QStrin
 //static
 QList<Debugger> Debugger::availableDebuggers(const QString & path, const QString & backend)
 {
-    QStringList debuggerDirs {
-        // Search in default path
-        QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory),
+    const QStringList debuggerDirs {
         // Search from application path, this helps when deploying an application
-        QString(QStringLiteral("%1/%2")).arg(QCoreApplication::applicationDirPath(), path)
+        // as binary blob (e.g. Windows exe).
+        QCoreApplication::applicationDirPath() + QLatin1Char('/') + path,
+        // Search in default path
+        QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory)
     };
-    QList<Debugger> result;
 
-    for (const auto & debuggerDir: debuggerDirs) {
-        QStringList debuggers = QDir(debuggerDir).entryList(QDir::Files);
-        for (const auto & debuggerFile : debuggers) {
+    QHash<QString, Debugger> result;
+    for (const auto &debuggerDir : qAsConst(debuggerDirs)) {
+        const QStringList debuggers = QDir(debuggerDir).entryList(QDir::Files);
+        for (const auto &debuggerFile : qAsConst(debuggers)) {
             Debugger debugger;
-            debugger.m_config = KSharedConfig::openConfig(QString(QStringLiteral("%1/%2")).arg(debuggerDir, debuggerFile));
+            debugger.m_config = KSharedConfig::openConfig(debuggerDir + QLatin1Char('/') + debuggerFile);
+            if (result.contains(debugger.codeName())) {
+                continue; // Already found in a higher priority location
+            }
             if (debugger.supportedBackends().contains(backend)) {
                 debugger.setUsedBackend(backend);
-                result.append(debugger);
+                result.insert(debugger.codeName(), debugger);
             }
         }
     }
-    return result;
+    return result.values();
 }
