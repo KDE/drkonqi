@@ -220,13 +220,13 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem * current , 
         ReportAssistantPage *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
         nextButton()->setEnabled(currentPage->isComplete());
         currentPage->aboutToShow();
-    }
 
-    //If the current page is the last one, disable all the buttons until the bug is sent
-    if (current->name() == QLatin1String(PAGE_BZSEND_ID)) {
-        nextButton()->setEnabled(false);
-        backButton()->setEnabled(false);
-        finishButton()->setEnabled(false);
+        // If the current page is the last one, disable all the buttons until the bug is sent
+        if (current->name() == QLatin1String(PAGE_BZSEND_ID)) {
+            nextButton()->setEnabled(false);
+            backButton()->setEnabled(false);
+            finishButton()->setEnabled(false);
+        }
     }
 }
 
