@@ -115,7 +115,7 @@ void BacktraceParserTest::btParserBenchmark()
     QSharedPointer<BacktraceParser> parser(BacktraceParser::newParser(debugger));
     parser->connectToGenerator(m_generator);
 
-    QBENCHMARK {
+    QBENCHMARK_ONCE {
         m_generator->sendData(filename);
     }
 }
