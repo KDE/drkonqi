@@ -80,6 +80,7 @@ namespace {
     }
 
     bool isShuttingDown() {
+        return true;
         if (QDBusConnection::sessionBus().isConnected()) {
             QDBusInterface remoteApp( QStringLiteral("org.kde.ksmserver"),
                                       QStringLiteral("/KSMServer"),

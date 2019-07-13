@@ -208,18 +208,18 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
 }
 
 // Helper functions for the shutdownSaveReport
-namespace {
+class ShutdownHelper : public QObject {
+    Q_OBJECT
+public:
     QString shutdownSaveString;
 
-    void removeOldFilesIn(QDir& dir) {
+    void removeOldFilesIn(QDir &dir)
+    {
         auto fileList = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot,
                                           QDir::SortFlag::Time | QDir::Reversed);
-        if (fileList.size() >= 10) {
-            int filesToRemove = fileList.size() - 9;
-            while(filesToRemove--) {
-                auto currentFile = fileList.takeFirst();
-                dir.remove(currentFile.fileName());
-            }
+        for(int i = fileList.size(); i >= 10; i--) {
+            auto currentFile = fileList.takeFirst();
+            dir.remove(currentFile.fileName());
         }
     }
 
@@ -229,7 +229,7 @@ namespace {
         // Try to create the directory to save the logs, if we can't open the directory,
         // just bail out. no need to hold the shutdown process.
         QDir dir(dirname);
-        if(!dir.mkpath(dirname)) {
+        if (!dir.mkpath(dirname)) {
             qApp->quit();
         }
 
@@ -248,6 +248,7 @@ namespace {
             ts.flush();
             shutdownSaveFile.close();
         }
+        deleteLater();
         qApp->quit();
     }
 
@@ -255,17 +256,16 @@ namespace {
     {
         shutdownSaveString += newLine;
     }
-}
+};
 
 void DrKonqi::shutdownSaveReport()
 {
     auto btGenerator = instance()->debuggerManager()->backtraceGenerator();
-    shutdownSaveString.clear();
-
-    QObject::connect(btGenerator, &BacktraceGenerator::done, &saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::someError, &saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::failedToStart, &saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::newLine, &appendNewLine);
+    auto shutdownHelper = new ShutdownHelper();
+    QObject::connect(btGenerator, &BacktraceGenerator::done, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::someError, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::failedToStart, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
+    QObject::connect(btGenerator, &BacktraceGenerator::newLine, shutdownHelper, &ShutdownHelper::appendNewLine);
     btGenerator->start();
 }
 
@@ -421,3 +421,5 @@ const QString &DrKonqi::kdeBugzillaURL()
 
     return url;
 }
+
+#include "drkonqi.moc"
