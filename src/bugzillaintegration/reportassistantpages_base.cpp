@@ -150,7 +150,8 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
     // Also listen to toggle so radio buttons are covered.
     connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled), this, &BugAwarenessPage::updateCheckBoxes);
 
-    ui.m_appSpecificDetailsExamples->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
+    ui.m_appSpecificDetailsExamplesWidget->setVisible(
+                reportInterface()->appDetailsExamples()->hasExamples());
     ui.m_appSpecificDetailsExamples->setText(
                 i18nc("@label examples about information the user can provide",
                       "Examples: %1", reportInterface()->appDetailsExamples()->examples()));
