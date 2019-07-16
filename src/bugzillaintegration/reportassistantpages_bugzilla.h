@@ -30,6 +30,8 @@
 #include "ui_assistantpage_bugzilla_preview.h"
 #include "ui_assistantpage_bugzilla_send.h"
 
+#include <clients/bugfieldclient.h>
+
 namespace KWallet { class Wallet; }
 class KCapacityBar;
 
@@ -90,16 +92,17 @@ private Q_SLOTS:
     void showDescriptionHelpExamples();
 
     void checkTexts();
+    void loadDistroCombo();
 
 private:
+    void setDistros(const Bugzilla::BugField::Ptr &field);
+    void setDistroComboError(const QString &error);
     int currentDescriptionCharactersCount();
 
     Ui::AssistantPageBugzillaInformation    ui;
     KCapacityBar *                          m_textCompleteBar;
 
     bool                                    m_textsOK;
-    bool                                    m_distributionComboSetup;
-    bool                                    m_distroComboVisible;
 
     int                                     m_requiredCharacters;
 };

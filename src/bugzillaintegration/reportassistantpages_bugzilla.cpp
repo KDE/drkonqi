@@ -31,7 +31,6 @@
 #include <QTextBrowser>
 #include <QDesktopServices>
 
-
 #include "drkonqi_debug.h"
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -333,11 +332,12 @@ BugzillaLoginPage::~BugzillaLoginPage()
 //BEGIN BugzillaInformationPage
 
 BugzillaInformationPage::BugzillaInformationPage(ReportAssistantDialog * parent)
-        : ReportAssistantPage(parent),
-        m_textsOK(false), m_distributionComboSetup(false), m_distroComboVisible(false),
-        m_requiredCharacters(1)
+        : ReportAssistantPage(parent)
+        , m_textsOK(false)
+        , m_requiredCharacters(1)
 {
     ui.setupUi(this);
+
     m_textCompleteBar = new KCapacityBar(KCapacityBar::DrawTextInline, this);
     ui.horizontalLayout_2->addWidget(m_textCompleteBar);
 
@@ -347,75 +347,25 @@ BugzillaInformationPage::BugzillaInformationPage(ReportAssistantDialog * parent)
     connect(ui.m_titleLabel, &QLabel::linkActivated, this, &BugzillaInformationPage::showTitleExamples);
     connect(ui.m_detailsLabel, &QLabel::linkActivated, this, &BugzillaInformationPage::showDescriptionHelpExamples);
 
-    ui.m_compiledSourcesCheckBox->setChecked(
-                                    DrKonqi::systemInformation()->compiledSources());
+    ui.m_compiledSourcesCheckBox->setChecked(DrKonqi::systemInformation()->compiledSources());
 
+    ui.m_messageWidget->setVisible(false);
+    auto retryAction = new QAction(QIcon::fromTheme(QStringLiteral("view-refresh")),
+                                   i18nc("@action/button retry button in error widget",
+                                         "Retry"),
+                                   ui.m_messageWidget);
+    connect(retryAction, &QAction::triggered,
+            this, [this, retryAction]{
+        ui.m_messageWidget->animatedHide();
+        loadDistroCombo();
+    });
+    ui.m_messageWidget->addAction(retryAction);
+
+    loadDistroCombo();
 }
 
 void BugzillaInformationPage::aboutToShow()
 {
-    if (!m_distributionComboSetup) {
-        //Autodetecting distro failed ?
-        if (DrKonqi::systemInformation()->bugzillaPlatform() == QLatin1String("unspecified")) {
-            m_distroComboVisible = true;
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Unspecified"),QStringLiteral("unspecified"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Archlinux"), QStringLiteral("Archlinux Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Chakra"), QStringLiteral("Chakra"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian stable"), QStringLiteral("Debian stable"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian testing"), QStringLiteral("Debian testing"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Debian unstable"), QStringLiteral("Debian unstable"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Exherbo"), QStringLiteral("Exherbo Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Fedora"), QStringLiteral("Fedora RPMs"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Gentoo"), QStringLiteral("Gentoo Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mageia"), QStringLiteral("Mageia RPMs"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mandriva"), QStringLiteral("Mandriva RPMs"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Neon"), QStringLiteral("Neon Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "OpenSUSE"), QStringLiteral("openSUSE RPMs"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Pardus"), QStringLiteral("Pardus Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "RedHat"), QStringLiteral("RedHat RPMs"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Slackware"), QStringLiteral("Slackware Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Ubuntu (and derivatives)"),
-                                                   QStringLiteral("Ubuntu Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "FreeBSD (Ports)"), QStringLiteral("FreeBSD Ports"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "NetBSD (pkgsrc)"), QStringLiteral("NetBSD pkgsrc"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "OpenBSD"), QStringLiteral("OpenBSD Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Mac OS X"), QStringLiteral("MacPorts Packages"));
-            ui.m_distroChooserCombo->addItem(i18nc("@label:listbox KDE distribution method",
-                                                   "Solaris"), QStringLiteral("Solaris Packages"));
-
-            //Restore previously selected bugzilla platform (distribution)
-            KConfigGroup config(KSharedConfig::openConfig(), "BugzillaInformationPage");
-            QString entry = config.readEntry("BugzillaPlatform","unspecified");
-            int index = ui.m_distroChooserCombo->findData(entry);
-            if ( index == -1 ) index = 0;
-            ui.m_distroChooserCombo->setCurrentIndex(index);
-        } else {
-            ui.m_distroChooserCombo->setVisible(false);
-        }
-        m_distributionComboSetup = true;
-    }
-
     //Calculate the minimum number of characters required for a description
     //If creating a new report: minimum 40, maximum 80
     //If attaching to an existent report: minimum 30, maximum 50
@@ -485,6 +435,80 @@ void BugzillaInformationPage::checkTexts()
     }
 }
 
+void BugzillaInformationPage::loadDistroCombo()
+{
+    // Alway have at least unspecified otherwise bugzilla would get to decide
+    // the platform and that would likely be index=0 which is compiledfromsource
+    ui.m_distroChooserCombo->addItem(QStringLiteral("unspecified"));
+
+    Bugzilla::BugFieldClient client;
+    auto job = client.getField(QStringLiteral("rep_platform"));
+    connect(job, &KJob::finished, this, [this, &client](KJob *job) {
+        try {
+            Bugzilla::BugField::Ptr field = client.getField(job);
+            if (!field) {
+                // This is a bit flimsy but only acts as save guard.
+                // Ideally this code path is never hit.
+                throw Bugzilla::RuntimeException(i18nc("@info/status error",
+                                                       "Failed to get platform list"));
+            }
+            setDistros(field);
+        } catch (Bugzilla::Exception &e) {
+            qCWarning(DRKONQI_LOG) << e.whatString();
+            setDistroComboError(e.whatString());
+        }
+    });
+}
+
+void BugzillaInformationPage::setDistros(const Bugzilla::BugField::Ptr &field)
+{
+    ui.m_distroChooserCombo->clear();
+    for (const auto &distro : field->values()) {
+        ui.m_distroChooserCombo->addItem(distro->name());
+    }
+
+    int index = 0;
+    bool autoDetected = false;
+
+    const QString detectedPlatform = DrKonqi::systemInformation()->bugzillaPlatform();
+    if (detectedPlatform != QLatin1String("unspecified")) {
+        index = ui.m_distroChooserCombo->findText(detectedPlatform);
+        if (index >= 0) {
+            autoDetected = true;
+        }
+    } else {
+        // Restore previously selected bugzilla platform (distribution)
+        KConfigGroup config(KSharedConfig::openConfig(), "BugzillaInformationPage");
+        const QString entry = config.readEntry("BugzillaPlatform", "unspecified");
+        index = ui.m_distroChooserCombo->findText(entry);
+    }
+
+    if (index < 0) { // failed to restore value
+        index = ui.m_distroChooserCombo->findText(QStringLiteral("unspecified"));
+    }
+    if (index < 0) { // also failed to find unspecified... shouldn't happen
+        index = 0;
+    }
+
+    ui.m_distroChooserCombo->setCurrentIndex(index);
+    ui.m_distroChooserCombo->setVisible(autoDetected);
+    ui.m_distroChooserCombo->setDisabled(false);
+}
+
+void BugzillaInformationPage::setDistroComboError(const QString &error)
+{
+    // NB: not being able to resolve the platform isn't a blocking issue.
+    // You can still file a report, it'll simply default to unspecified.
+
+    ui.m_messageWidget->setText(i18nc("@info error when talking to the bugzilla API",
+                                      "An error occured when talking to bugs.kde.org: %1",
+                                      error));
+    ui.m_messageWidget->animatedShow();
+
+    ui.m_distroChooserCombo->setVisible(true);
+    ui.m_distroChooserCombo->setDisabled(true);
+}
+
 bool BugzillaInformationPage::showNextPage()
 {
     checkTexts();
@@ -546,7 +570,7 @@ void BugzillaInformationPage::aboutToHide()
     reportInterface()->setTitle(ui.m_titleEdit->text());
     reportInterface()->setDetailText(ui.m_detailsEdit->toPlainText());
 
-    if (m_distroComboVisible) {
+    if (ui.m_distroChooserCombo->isVisible()) {
         //Save bugzilla platform (distribution)
         QString bugzillaPlatform = ui.m_distroChooserCombo->itemData(
                                         ui.m_distroChooserCombo->currentIndex()).toString();
@@ -556,7 +580,6 @@ void BugzillaInformationPage::aboutToHide()
     }
     bool compiledFromSources = ui.m_compiledSourcesCheckBox->checkState() == Qt::Checked;
     DrKonqi::systemInformation()->setCompiledSources(compiledFromSources);
-
 }
 
 void BugzillaInformationPage::showTitleExamples()
