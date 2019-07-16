@@ -3,21 +3,6 @@ if(NOT BUILD_TESTING)
     return()
 endif()
 
-if(BUILD_COVERAGE)
-    add_custom_target(coverage)
-    add_custom_command(TARGET coverage
-        COMMAND ctest
-        COMMAND lcov -o ${CMAKE_BINARY_DIR}/lcov.report -c -d ${CMAKE_BINARY_DIR}
-        COMMAND genhtml -o ${CMAKE_BINARY_DIR}/coverage ${CMAKE_BINARY_DIR}/lcov.report
-        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v
-        DEPENDS test
-    )
-    add_custom_target(show-coverage
-        COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html
-        DEPENDS coverage
-    )
-endif()
-
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(Qt5Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)

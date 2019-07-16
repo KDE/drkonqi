@@ -132,3 +132,18 @@ install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${K
 add_subdirectory( tests )
 
 add_subdirectory(bugzillaintegration/libbugzilla/autotests)
+
+if(BUILD_COVERAGE AND BUILD_TESTING) # coverage without tests make no sense
+    add_custom_target(coverage)
+    add_custom_command(TARGET coverage
+        COMMAND ctest
+        COMMAND lcov -o ${CMAKE_BINARY_DIR}/lcov.report -c -d ${CMAKE_BINARY_DIR}
+        COMMAND genhtml -o ${CMAKE_BINARY_DIR}/coverage ${CMAKE_BINARY_DIR}/lcov.report
+        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v
+        DEPENDS test
+    )
+    add_custom_target(show-coverage
+        COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html
+        DEPENDS coverage
+    )
+endif()
