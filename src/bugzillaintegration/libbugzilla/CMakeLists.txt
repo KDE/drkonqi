@@ -6,6 +6,7 @@ set(lib_SRCS
 
     clients/attachmentclient.cpp
     clients/bugclient.cpp
+    clients/bugfieldclient.cpp
     clients/commentclient.cpp
     clients/clientbase.cpp
     clients/productclient.cpp
@@ -18,6 +19,7 @@ set(lib_SRCS
     clients/commands/querycommand.cpp
 
     models/bug.cpp
+    models/bugfield.cpp
     models/comment.cpp
     models/logindetails.cpp
     models/product.cpp

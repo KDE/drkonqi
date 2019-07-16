@@ -12,6 +12,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ecm_add_tests(
     attachmenttest.cpp
     bugtest.cpp
+    bugfieldtest.cpp
     bugzillatest.cpp
     commenttest.cpp
     connectiontest.cpp
