@@ -23,33 +23,10 @@
 
 #include <clients/productclient.h>
 
+#include "jobdouble.h"
+
 namespace Bugzilla
 {
-
-class JobDouble : public APIJob
-{
-    Q_OBJECT
-public:
-    using APIJob::APIJob;
-
-    JobDouble(QString fixture)
-        : m_fixture(fixture)
-    {
-    }
-
-    virtual QByteArray data() const override
-    {
-        Q_ASSERT(!m_fixture.isEmpty());
-        QFile file(m_fixture);
-        if (!file.open(QFile::ReadOnly | QFile::Text)) {
-            return {};
-        }
-        QTextStream in(&file);
-        return in.readAll().toUtf8();
-    }
-
-    QString m_fixture;
-};
 
 class ConnectionDouble : public Connection
 {

@@ -25,6 +25,8 @@
 #include "../clients/bugclient.h"
 #include "../clients/productclient.h"
 
+#include "jobdouble.h"
+
 namespace Bugzilla
 {
 
@@ -51,31 +53,6 @@ static void compareUpdateBugHash(const QVariantHash &hash, bool *ok)
     QCOMPARE(hash["cc"].toHash()["remove"].toStringList(), QStringList({ "you@host.com" }));
     *ok = true;
 }
-
-class JobDouble : public APIJob
-{
-    Q_OBJECT
-public:
-    using APIJob::APIJob;
-
-    JobDouble(QString fixture)
-        : m_fixture(fixture)
-    {
-    }
-
-    virtual QByteArray data() const override
-    {
-        Q_ASSERT(!m_fixture.isEmpty());
-        QFile file(m_fixture);
-        if (!file.open(QFile::ReadOnly | QFile::Text)) {
-            return {};
-        }
-        QTextStream in(&file);
-        return in.readAll().toUtf8();
-    }
-
-    QString m_fixture;
-};
 
 class ConnectionDouble : public Connection
 {
