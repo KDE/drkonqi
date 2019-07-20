@@ -31,7 +31,7 @@ GdbHighlighter::GdbHighlighter(QTextDocument* parent, const QList<BacktraceLine>
         l += line.toString().count(QLatin1Char('\n'));
     }
 
-    // setup formates
+    // setup formats
     KColorScheme scheme(QPalette::Active);
 
     crashFormat.setForeground(scheme.foreground(KColorScheme::NegativeText));

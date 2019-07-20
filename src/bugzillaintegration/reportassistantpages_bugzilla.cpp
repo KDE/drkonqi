@@ -501,7 +501,7 @@ void BugzillaInformationPage::setDistroComboError(const QString &error)
     // You can still file a report, it'll simply default to unspecified.
 
     ui.m_messageWidget->setText(i18nc("@info error when talking to the bugzilla API",
-                                      "An error occured when talking to bugs.kde.org: %1",
+                                      "An error occurred when talking to bugs.kde.org: %1",
                                       error));
     ui.m_messageWidget->animatedShow();
 

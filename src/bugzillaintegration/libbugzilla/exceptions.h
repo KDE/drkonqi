@@ -66,7 +66,7 @@ private:
 };
 
 /**
- * Translates an API error into an excpetion for easy handling.
+ * Translates an API error into an exception for easy handling.
  * Specifically when the API sends an error object in the body attempting to
  * access the JSON blob through one of the convenience accessors
  * (e.g. job.object()) will instead raise an exception.

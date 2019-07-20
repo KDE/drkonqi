@@ -145,7 +145,7 @@ void BacktraceGenerator::slotReadInput()
         if (line.startsWith(QLatin1String("Process ")) && line.endsWith(QLatin1String(" detached"))) {
             // lldb is acting on a detach command (in lldbrc)
             // Anything following this line doesn't interest us, and lldb has been known
-            // to turn into a zombie instead of exitting, thereby blocking us.
+            // to turn into a zombie instead of exiting, thereby blocking us.
             // Tell the process to quit if it's still running, and pretend it did.
             if (m_proc && m_proc->state() == QProcess::Running) {
                 m_proc->terminate();

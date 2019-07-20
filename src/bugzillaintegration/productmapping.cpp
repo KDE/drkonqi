@@ -147,7 +147,7 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
         }
     }
 
-    // check whether that verions is disabled for new reports, which
+    // check whether that versions is disabled for new reports, which
     // usually means that version is outdated and not supported anymore.
     const QStringList &inactiveVersions = product->inactiveVersions();
     m_bugzillaVersionDisabled = inactiveVersions.contains(m_bugzillaVersionString);

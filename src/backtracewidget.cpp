@@ -318,7 +318,7 @@ void BacktraceWidget::backtraceNewLine(const QString & line)
 {
     // We absolutely must not have a highlighter attached. The highlighter has
     // a static list of lines to highlight from. When we are loading lines
-    // this static list does not match reality breaking text lenght expecations
+    // this static list does not match reality breaking text length expectations
     // and resulting in segfaults.
     Q_ASSERT(!m_highlighter);
     //While loading the backtrace (unparsed) a new line was sent from the debugger, append it

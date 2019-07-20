@@ -49,7 +49,7 @@ public:
 
     enum class Resolution {
         Unknown, // First value is default if QMetaEnum can't map the key.
-        NONE, // Fake value, expresses unresoled. On the REST side this is an empty string.
+        NONE, // Fake value, expresses unresolved. On the REST side this is an empty string.
         FIXED,
         INVALID,
         WONTFIX,

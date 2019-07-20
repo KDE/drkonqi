@@ -43,7 +43,7 @@ struct QMessageFilterContainer {
 
     QString filter(const QString &msg);
 
-    // Message handler is called across threads. Syncronize for good meassure.
+    // Message handler is called across threads. Synchronize for good measure.
     QReadWriteLock lock;
     QtMessageHandler handler;
 
@@ -251,7 +251,7 @@ void BugzillaManager::searchBugs(const QStringList &products,
     search.products = products;
     search.severity = severity;
     search.longdesc = comment;
-    // Order descedingly by bug_id. This allows us to offset through the results
+    // Order descendingly by bug_id. This allows us to offset through the results
     // from newest to oldest.
     // The UI will later order our data anyway, so the order at which we receive
     // the data is not important for the UI (outside the fact that we want
