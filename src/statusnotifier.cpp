@@ -19,6 +19,7 @@
 
 #include <QAction>
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QMenu>
 #include <QTimer>
 
@@ -89,6 +90,23 @@ StatusNotifier::StatusNotifier(QObject *parent)
     sniMenu->addAction(action);
 
     m_sni->setContextMenu(sniMenu);
+
+    // Should the SNI host implode and not return within 10s, automatically
+    // open the dialog.
+    // We are tracking the related Notifications service here, because actually
+    // tracking the Host interface is fairly involved with no tangible advantage.
+    auto activateTimer = new QTimer(this);
+    activateTimer->setInterval(10000);
+    connect(activateTimer, &QTimer::timeout, this, &StatusNotifier::activated);
+
+    auto watcher = new QDBusServiceWatcher(QStringLiteral("org.freedesktop.Notifications"),
+                                           QDBusConnection::sessionBus(),
+                                           QDBusServiceWatcher::WatchForOwnerChange,
+                                           this);
+    connect(watcher, &QDBusServiceWatcher::serviceUnregistered,
+            activateTimer, QOverload<>::of(&QTimer::start));
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered,
+            activateTimer, &QTimer::stop);
 
     // make sure the user doesn't miss the SNI by stopping the auto hide timer when the session becomes idle
     int idleId = KIdleTime::instance()->addIdleTimeout(30000);
