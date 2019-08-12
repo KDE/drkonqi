@@ -43,7 +43,7 @@ private Q_SLOTS:
 
     void testDefaultRoot()
     {
-        // Make sure the defautl root is well formed.
+        // Make sure the default root is well formed.
         // This talks to bugzilla directly! To avoid flakeyness the actual
         // HTTP interaction is qwaiting and retrying a bunch of times.
         // Obviously still not ideal.
