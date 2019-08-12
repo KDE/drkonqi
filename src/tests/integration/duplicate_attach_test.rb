@@ -50,7 +50,7 @@ bug_id,"bug_severity","priority","bug_status","product","short_desc","resolution
 
       if req.request_uri.path.include?('show_bug.cgi')
         if req.request_uri.query.include?('id=375161')
-          resp.body = File.read("#{__dir__}/xml-data/show_bug.cgi?id=375161&ctype=xml")
+          resp.body = File.read("#{__dir__}/xml-data/show_bug.cgi_375161")
           return
         end
 
