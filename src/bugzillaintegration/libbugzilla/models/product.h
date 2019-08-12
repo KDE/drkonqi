@@ -52,8 +52,8 @@ private:
 class ProductComponent : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int id READ id WRITE setId CONSTANT)
-    Q_PROPERTY(QString name READ name WRITE setName CONSTANT)
+    Q_PROPERTY(int id READ id WRITE setId)
+    Q_PROPERTY(QString name READ name WRITE setName)
 public:
     int id() const { return m_id; }
     QString name() const { return m_name; }
@@ -70,9 +70,9 @@ private:
 class Product : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool is_active READ isActive WRITE setActive CONSTANT)
-    Q_PROPERTY(QList<Bugzilla::ProductComponent *> components READ components WRITE setComponents CONSTANT)
-    Q_PROPERTY(QList<Bugzilla::ProductVersion *> versions READ versions WRITE setVersions CONSTANT)
+    Q_PROPERTY(bool is_active READ isActive WRITE setActive)
+    Q_PROPERTY(QList<Bugzilla::ProductComponent *> components READ components WRITE setComponents)
+    Q_PROPERTY(QList<Bugzilla::ProductVersion *> versions READ versions WRITE setVersions)
 public:
     typedef QSharedPointer<Product> Ptr;
 
