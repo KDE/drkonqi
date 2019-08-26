@@ -31,7 +31,9 @@
 #include <QIcon>
 
 #include <KAboutData>
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QTemporaryFile>
@@ -70,8 +72,12 @@ namespace {
     #endif
     }
 
-    void requestDrKonqiDialog(bool restarted) {
+    void requestDrKonqiDialog(bool restarted, bool interactionAllowed) {
         StatusNotifier *statusNotifier = new StatusNotifier();
+        statusNotifier->setActivationAllowed(interactionAllowed);
+        if (interactionAllowed) {
+            statusNotifier->show();
+        }
         if (!restarted) {
             statusNotifier->notify();
         }
@@ -210,18 +216,26 @@ int main(int argc, char* argv[])
 
     app.setQuitOnLastWindowClosed(false);
 
-
     const bool restarted = parser.isSet(restartedOption);
+
+    // Whether the user should be encouraged to file a bug report
+    const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), "General").readEntry("InteractionAllowed", true);
+    const bool shuttingDown = isShuttingDown();
+
+    // For automatically restarted services or during shutdown, do nothing in case no interaction is allowed
+    if (!forceDialog && !interactionAllowed && (restarted || shuttingDown)) {
+        return 0;
+    }
 
     // if no notification service is running (eg. shell crashed, or other desktop environment)
     // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
     // and emitting a desktop notification.
-    if (isShuttingDown()) {
+    if (shuttingDown) {
         DrKonqi::shutdownSaveReport();
     } else if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
         openDrKonqiDialog();
     } else {
-        requestDrKonqiDialog(restarted);
+        requestDrKonqiDialog(restarted, interactionAllowed);
     }
 
     return app.exec();

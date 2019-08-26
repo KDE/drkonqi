@@ -41,6 +41,23 @@ StatusNotifier::StatusNotifier(QObject *parent)
 
     // this is used for both the SNI tooltip as well as the notification
     m_title = i18nc("Placeholder is an application name; it crashed", "%1 Closed Unexpectedly", crashedApp->name());
+}
+
+StatusNotifier::~StatusNotifier() = default;
+
+bool StatusNotifier::activationAllowed() const
+{
+    return m_activationAllowed;
+}
+
+void StatusNotifier::setActivationAllowed(bool allowed)
+{
+    m_activationAllowed = allowed;
+}
+
+void StatusNotifier::show()
+{
+    CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
     // if nobody bothered to look at the crash after 1 minute, just close
     m_autoCloseTimer->setSingleShot(true);
@@ -49,16 +66,11 @@ StatusNotifier::StatusNotifier(QObject *parent)
     connect(m_autoCloseTimer, &QTimer::timeout, this, &StatusNotifier::expired);
     connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
 
-    KService::Ptr service = KService::serviceByStorageId(crashedApp->fakeExecutableBaseName());
-    if (service) {
-        m_iconName = service->icon();
-    }
-
     m_sni->setTitle(m_title);
     m_sni->setIconByName(QStringLiteral("tools-report-bug"));
     m_sni->setStatus(KStatusNotifierItem::Active);
     m_sni->setCategory(KStatusNotifierItem::SystemServices);
-    m_sni->setToolTip(!m_iconName.isEmpty() ? m_iconName : m_sni->iconName(), m_sni->title(), i18n("Please report this error to help improve this software."));
+    m_sni->setToolTip(m_sni->iconName(), m_sni->title(), i18n("Please report this error to help improve this software."));
     connect(m_sni, &KStatusNotifierItem::activateRequested, this, &StatusNotifier::activated);
 
     // you cannot turn off that "Do you really want to quit?" message, so we'll add our own below
@@ -124,21 +136,25 @@ StatusNotifier::StatusNotifier(QObject *parent)
     });
 }
 
-StatusNotifier::~StatusNotifier() = default;
-
 void StatusNotifier::notify()
 {
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
+    const QString title = m_activationAllowed ? m_title : crashedApp->name();
+    const QString message = m_activationAllowed ? i18nc("Notification text", "Please report this error to help improve this software.")
+                                                : i18nc("Notification text", "The application closed unexpectedly.");
+
     KNotification *notification = KNotification::event(QStringLiteral("applicationcrash"),
-                                                       m_title,
-                                                       i18n("Please report this error to help improve this software."),
-                                                       !m_iconName.isEmpty() ? m_iconName : QStringLiteral("tools-report-bug"),
+                                                       title,
+                                                       message,
+                                                       QStringLiteral("tools-report-bug"),
                                                        nullptr,
                                                        KNotification::DefaultEvent | KNotification::SkipGrouping);
 
-    QStringList actions = {i18nc("Notification action button, keep short", "Report Bug")};
-
+    QStringList actions;
+    if (m_activationAllowed) {
+        actions << i18nc("Notification action button, keep short", "Report Bug");
+    }
     if (canBeRestarted(crashedApp)) {
         actions << i18nc("Notification action button, keep short", "Restart App");
     }
@@ -147,20 +163,21 @@ void StatusNotifier::notify()
 
     connect(notification, static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated),
             this, [this, crashedApp](int actionIndex) {
-        // 0 = default action (NOTE this is not implemented by Plasma, clicking notification popup just closes it)
-        // 1 = "Report Bug" button
-        // 2 = "Restart App" button
-        if (actionIndex == 0 || actionIndex == 1) {
+        if (actionIndex == 1 && m_activationAllowed) {
             emit activated();
-        } else if (actionIndex == 2) {
+        } else if (canBeRestarted(crashedApp)) {
             crashedApp->restart();
-            // keep status notifier there to allow reporting a bug when user chose to restart app
         }
     });
 
     // when the SNI disappears you won't be able to interact with the notification anymore anyway, so close it
-    connect(this, &StatusNotifier::activated, notification, &KNotification::close);
-    connect(this, &StatusNotifier::expired, notification, &KNotification::close);
+    if (m_activationAllowed) {
+        connect(this, &StatusNotifier::activated, notification, &KNotification::close);
+        connect(this, &StatusNotifier::expired, notification, &KNotification::close);
+    } else {
+        // No SNI means we should quit when the notification is gone
+        connect(notification, &KNotification::closed, this, &StatusNotifier::expired);
+    }
 }
 
 bool StatusNotifier::notificationServiceRegistered()

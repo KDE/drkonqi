@@ -34,6 +34,10 @@ public:
     explicit StatusNotifier(QObject *parent = nullptr);
     ~StatusNotifier() override;
 
+    bool activationAllowed() const;
+    void setActivationAllowed(bool allowed);
+
+    void show();
     void notify();
 
     static bool notificationServiceRegistered();
@@ -48,8 +52,9 @@ private:
     QTimer *m_autoCloseTimer = nullptr;
     KStatusNotifierItem *m_sni = nullptr;
 
+    bool m_activationAllowed = true;
+
     QString m_title;
-    QString m_iconName;
 
 };
 
