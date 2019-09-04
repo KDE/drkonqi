@@ -38,7 +38,7 @@ QUrlQuery QueryCommand::expandQuery(QUrlQuery &query, const QSet<QString> &seen)
         const auto name = QString::fromLatin1(property.name());
         const auto value = property.read(this);
 
-        if (query.hasQueryItem(name) || seen.contains(name) || name == QLatin1Literal("objectName")) {
+        if (query.hasQueryItem(name) || seen.contains(name) || name == QLatin1String("objectName")) {
             // The element was manually set or builtin property.
             continue;
         }

@@ -196,10 +196,10 @@ QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) cons
     }
 
     // Debian has multiple platforms.
-    if (distroInfo.contains(QStringLiteral("debian"), Qt::CaseInsensitive)) {
-        if (distroInfo.contains(QStringLiteral("unstable"), Qt::CaseInsensitive)) {
+    if (distroInfo.contains(QLatin1String("debian"), Qt::CaseInsensitive)) {
+        if (distroInfo.contains(QLatin1String("unstable"), Qt::CaseInsensitive)) {
             return QStringLiteral("Debian unstable");
-        } else if (distroInfo.contains(QStringLiteral("testing"), Qt::CaseInsensitive)) {
+        } else if (distroInfo.contains(QLatin1String("testing"), Qt::CaseInsensitive)) {
             return QStringLiteral("Debian testing");
         } else {
             return QStringLiteral("Debian stable");

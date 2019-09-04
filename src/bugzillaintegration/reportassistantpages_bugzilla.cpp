@@ -598,19 +598,19 @@ void BugzillaInformationPage::showDescriptionHelpExamples()
     QString descriptionHelp = i18nc("@info:tooltip help and examples of good bug descriptions",
                                   "Describe in as much detail as possible the crash circumstances:");
     if (reportInterface()->userCanProvideActionsAppDesktop()) {
-        descriptionHelp += QStringLiteral("<br />") +
+        descriptionHelp += QLatin1String("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Detail which actions were you taking inside and outside the "
                                  "application an instant before the crash.");
     }
     if (reportInterface()->userCanProvideUnusualBehavior()) {
-        descriptionHelp += QStringLiteral("<br />") +
+        descriptionHelp += QLatin1String("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Note if you noticed any unusual behavior in the application "
                                  "or in the whole environment.");
     }
     if (reportInterface()->userCanProvideApplicationConfigDetails()) {
-        descriptionHelp += QStringLiteral("<br />") +
+        descriptionHelp += QLatin1String("<br />") +
                            i18nc("@info:tooltip help and examples of good bug descriptions",
                                  "- Note any non-default configuration in the application.");
         if (reportInterface()->appDetailsExamples()->hasExamples()) {

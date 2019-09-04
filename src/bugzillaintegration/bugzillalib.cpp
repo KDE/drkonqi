@@ -300,7 +300,7 @@ void BugzillaManager::attachTextToReport(const QString & text, const QString & f
     attachment.file_name = filename;
     attachment.summary = summary;
     attachment.comment = comment;
-    attachment.content_type = QLatin1Literal("text/plain");
+    attachment.content_type = QLatin1String("text/plain");
 
     auto job = Bugzilla::AttachmentClient().createAttachment(bugId, attachment);
     connect(job, &KJob::finished, this, [this](KJob *job) {

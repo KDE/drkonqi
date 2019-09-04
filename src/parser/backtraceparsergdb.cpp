@@ -47,13 +47,13 @@ void BacktraceLineGdb::parse()
 {
     QRegExp regExp;
 
-    if (d->m_line == QLatin1String("\n")) {
+    if (d->m_line == QLatin1Char('\n')) {
         d->m_type = EmptyLine;
         return;
     } else if (d->m_line == QLatin1String("[KCrash Handler]\n")) {
         d->m_type = KCrash;
         return;
-    } else if (d->m_line.contains(QStringLiteral("<signal handler called>"))) {
+    } else if (d->m_line.contains(QLatin1String("<signal handler called>"))) {
         d->m_type = SignalHandlerStart;
         return;
     }

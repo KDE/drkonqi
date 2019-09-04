@@ -224,7 +224,7 @@ void BugzillaDuplicatesPage::searchMore()
 
     bugzillaManager()->searchBugs(reportInterface()->relatedBugzillaProducts(),
                                   severity,
-                                  reportInterface()->firstBacktraceFunctions().join(QStringLiteral(" ")),
+                                  reportInterface()->firstBacktraceFunctions().join(QLatin1Char(' ')),
                                   m_offset);
 }
 

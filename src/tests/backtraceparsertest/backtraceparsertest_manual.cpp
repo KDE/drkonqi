@@ -58,10 +58,10 @@ int main(int argc, char **argv)
     QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
                                 BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
     QTextStream(stdout) << "Usefulness: " << metaUsefulness.valueToKey(btparser->backtraceUsefulness()) << endl;
-    QTextStream(stdout) << "First valid functions: " << btparser->firstValidFunctions().join(QStringLiteral(" ")) << endl;
+    QTextStream(stdout) << "First valid functions: " << btparser->firstValidFunctions().join(QLatin1Char(' ')) << endl;
     QTextStream(stdout) << "Simplified backtrace:\n" << btparser->simplifiedBacktrace() << endl;
     QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols().toList());
-    QTextStream(stdout) << "Missing dbgsym libs: " << l.join(QStringLiteral(" ")) << endl;
+    QTextStream(stdout) << "Missing dbgsym libs: " << l.join(QLatin1Char(' ')) << endl;
 
     return 0;
 }

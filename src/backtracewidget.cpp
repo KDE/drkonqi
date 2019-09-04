@@ -398,7 +398,7 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
             + QStringLiteral("<br /><ul>");
 
         Q_FOREACH(const QString & string, missingDbgForFiles) {
-            message += QStringLiteral("<li>") + string + QStringLiteral("</li>");
+            message += QLatin1String("<li>") + string + QLatin1String("</li>");
         }
 
         message += QStringLiteral("</ul></html>");

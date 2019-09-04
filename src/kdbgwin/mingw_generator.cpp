@@ -126,7 +126,7 @@ int MingwGenerator::GetLine()
 void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
 {
     QString symbolFile = module;
-    symbolFile.truncate(symbolFile.length() - 4);
+    symbolFile.chop(4);
     symbolFile.append(QStringLiteral(".sym"));
 
     m_symbolsMap[module] = false; // default

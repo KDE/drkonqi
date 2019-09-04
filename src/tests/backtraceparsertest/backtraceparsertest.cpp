@@ -88,7 +88,7 @@ void BacktraceParserTest::btParserFunctionsTest()
     m_generator->sendData(filename);
 
     //compare
-    QString functions = parser->firstValidFunctions().join(QStringLiteral("|"));
+    QString functions = parser->firstValidFunctions().join(QLatin1Char('|'));
     QCOMPARE(functions, result);
 }
 

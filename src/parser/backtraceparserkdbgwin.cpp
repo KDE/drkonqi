@@ -43,7 +43,7 @@ BacktraceLineKdbgwin::BacktraceLineKdbgwin(const QString & line)
 
 void BacktraceLineKdbgwin::parse()
 {
-    if (d->m_line == QLatin1String("\n")) {
+    if (d->m_line == QLatin1Char('\n')) {
         d->m_type = EmptyLine;
         return;
     } else if (d->m_line == QLatin1String("[KCrash Handler]\n")) {

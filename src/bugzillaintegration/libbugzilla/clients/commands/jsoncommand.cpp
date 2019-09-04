@@ -44,7 +44,7 @@ QVariantHash JsonCommand::toVariantHash() const
         const auto name = QString::fromLatin1(property.name());
         const auto value = property.read(this);
 
-        if (name == QStringLiteral("objectName")) { // Builtin property.
+        if (name == QLatin1String("objectName")) { // Builtin property.
             continue;
         }
 
