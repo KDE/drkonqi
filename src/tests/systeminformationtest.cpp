@@ -92,6 +92,6 @@ private Q_SLOTS:
     }
 };
 
-QTEST_MAIN(SystemInformationTest)
+QTEST_GUILESS_MAIN(SystemInformationTest)
 
 #include "systeminformationtest.moc"
