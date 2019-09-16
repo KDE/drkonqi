@@ -78,7 +78,9 @@ endif()
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-
+if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
+   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+endif()
 add_subdirectory(src)
 
 if (${ECM_VERSION} STRGREATER "5.58.0")

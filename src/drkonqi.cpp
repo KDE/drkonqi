@@ -165,7 +165,7 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
         dlg->setWindowTitle(i18nc("@title:window","Select Filename"));
         dlg->setAcceptMode(QFileDialog::AcceptSave);
         dlg->setFileMode(QFileDialog::AnyFile);
-        dlg->setConfirmOverwrite(true);
+        dlg->setOption(QFileDialog::DontResolveSymlinks, false);
         if (dlg->exec() != QDialog::Accepted) {
             return;
         }
