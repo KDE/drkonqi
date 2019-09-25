@@ -22,8 +22,7 @@
 #include <QSizePolicy>
 #include <QHBoxLayout>
 
-#include <KPixmapSequenceWidget>
-#include <KPixmapSequence>
+#include <KBusyIndicatorWidget>
 
 StatusWidget::StatusWidget(QWidget * parent) :
         QStackedWidget(parent),
@@ -52,8 +51,7 @@ StatusWidget::StatusWidget(QWidget * parent) :
     statusLayout->addWidget(m_statusLabel);
 
     //Busy widget
-    m_throbberWidget = new KPixmapSequenceWidget();
-    m_throbberWidget->setSequence(KPixmapSequence(QStringLiteral("process-working"), 22));
+    m_throbberWidget = new KBusyIndicatorWidget(this);
     m_throbberWidget->setSizePolicy(QSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed));
 
     m_busyLabel = new WrapLabel();

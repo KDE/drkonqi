@@ -25,7 +25,7 @@
 #include <QTextDocument>
 
 class WrapLabel;
-class KPixmapSequenceWidget;
+class KBusyIndicatorWidget;
 class QHideEvent;
 
 class StatusWidget: public QStackedWidget
@@ -48,7 +48,7 @@ private:
 
     WrapLabel *         m_statusLabel;
 
-    KPixmapSequenceWidget * m_throbberWidget;
+    KBusyIndicatorWidget *m_throbberWidget;
     WrapLabel *             m_busyLabel;
 
     QWidget *           m_statusPage;

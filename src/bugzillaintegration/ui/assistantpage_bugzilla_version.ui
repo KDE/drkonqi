@@ -28,15 +28,12 @@
        </spacer>
       </item>
       <item>
-       <widget class="QProgressBar" name="progressBar">
-        <property name="minimum">
-         <number>0</number>
-        </property>
-        <property name="maximum">
-         <number>0</number>
-        </property>
-        <property name="value">
-         <number>-1</number>
+       <widget class="KBusyIndicatorWidget" name="kbusyindicatorwidget">
+        <property name="minimumSize">
+         <size>
+          <width>64</width>
+          <height>64</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -150,6 +147,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KBusyIndicatorWidget</class>
+   <extends>QWidget</extends>
+   <header>kbusyindicatorwidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

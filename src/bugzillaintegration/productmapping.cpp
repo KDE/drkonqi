@@ -145,13 +145,26 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
         if (allVersions.contains(shorterVersion)) {
             m_bugzillaVersionString = shorterVersion;
         }
+    } else if (!allVersions.contains(m_bugzillaVersionString)) {
+        // No good match found, make sure the default is sound...
+        // If our hardcoded fallback is not in bugzilla it was likely
+        // renamed so we'll find the version with the lowest id instead
+        // and that should technically have been the "default" version.
+        Bugzilla::ProductVersion *lowestVersion = nullptr;
+        for (const auto &version : product->versions()) {
+            if (!lowestVersion || lowestVersion->id() > version->id()) {
+                lowestVersion = version;
+            }
+        }
+        if (lowestVersion) {
+            m_bugzillaVersionString = lowestVersion->name();
+        }
     }
 
     // check whether that versions is disabled for new reports, which
     // usually means that version is outdated and not supported anymore.
     const QStringList &inactiveVersions = product->inactiveVersions();
     m_bugzillaVersionDisabled = inactiveVersions.contains(m_bugzillaVersionString);
-
 }
 
 QStringList ProductMapping::relatedBugzillaProducts() const
