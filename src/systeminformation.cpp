@@ -37,6 +37,7 @@
 #include <kcoreaddons_version.h>
 #include <KCoreAddons>
 #include <KOSRelease>
+#include <KWindowSystem>
 #include <QStandardPaths>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
@@ -288,4 +289,17 @@ QString SystemInformation::frameworksVersion() const
 bool SystemInformation::complete() const
 {
     return m_complete;
+}
+
+QString SystemInformation::windowSystem() const
+{
+    switch (KWindowSystem::platform()) {
+    case KWindowSystem::Platform::Unknown:
+        return QStringLiteral("Unknown");
+    case KWindowSystem::Platform::X11:
+        return QStringLiteral("X11");
+    case KWindowSystem::Platform::Wayland:
+        return QStringLiteral("Wayland");
+    }
+    return QStringLiteral("Unknown");
 }

@@ -56,6 +56,7 @@ class SystemInformation: public QObject
 
         QString qtVersion() const;
         QString frameworksVersion() const;
+        QString windowSystem() const;
 
         /// All helpers finished and the data is complete
         bool complete() const;

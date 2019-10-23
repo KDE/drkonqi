@@ -26,10 +26,7 @@ find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test 
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service
     ConfigWidgets JobWidgets KIO Crash Completion WidgetsAddons Wallet
-    Notifications IdleTime)
-if(APPLE)
-    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS WindowSystem)
-endif()
+    Notifications IdleTime WindowSystem)
 find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
 set_package_properties(Qt5X11Extras PROPERTIES TYPE RECOMMENDED PURPOSE "Recommended for better integration on X11.")
 

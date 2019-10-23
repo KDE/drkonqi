@@ -95,6 +95,7 @@ target_link_libraries(DrKonqiInternal
     KF5::KIOCore
     KF5::Crash
     KF5::Completion
+    KF5::WindowSystem
     Qt5::DBus
 
     KF5::WidgetsAddons
@@ -109,11 +110,6 @@ target_link_libraries(DrKonqiInternal
 if (${Qt5X11Extras_FOUND})
     target_link_libraries(DrKonqiInternal
         Qt5::X11Extras
-    )
-endif()
-if (APPLE)
-    target_link_libraries(DrKonqiInternal
-        KF5::WindowSystem
     )
 endif()
 
