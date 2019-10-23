@@ -2,11 +2,11 @@
 
 Drkonqi also doesn't technically require a process to actually crash, you can
 simply run it manually on any old pid. Do note that in most cases you only need
-to define the pid, however not giving certin cmdline options can change
+to define the pid, however not giving certain cmdline options can change
 behavior somewhat drastically (e.g. kdeinit vs. notkdeinit behaves radically
 different as far as process name detection goes)
 
-sample command to doctor a running dolphin:
+example command to doctor a running dolphin:
 
 ```
 DRKONQI_HTTP_DELAY_MS=1000 \
@@ -34,7 +34,7 @@ The following environment variables may be used to test drkonqi with actual repo
 # Backends
 
 Drkonqi has a number of backends that may be used. Backends are stacked by
-order of perference, backends in the directory of the binary are most preferred.
+order of preference, backends in the directory of the binary are most preferred.
 This means that you can dump debuggers/internal/ into your build's bin/
 directory and override for example gdb. This essentially allows you to replace
 the gdb debugger with a `cat` of a fixture file to not have to trace live
