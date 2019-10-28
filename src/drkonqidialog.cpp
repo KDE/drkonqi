@@ -128,6 +128,14 @@ void DrKonqiDialog::buildIntroWidget()
                                             "(including the backtrace from the "
                                             "<interface>Developer Information</interface> "
                                             "tab.)</para>", crashedApp->bugReportAddress());
+        } else if (crashedApp->hasDeletedFiles()) {
+            reportMessage = xi18nc("@info", "<para>The reporting assistant is disabled because "
+                                            "the crashed application appears to have been updated or "
+                                            "uninstalled since it had been started. This prevents accurate "
+                                            "crash reporting and can also be the cause of this crash.</para>"
+                                            "<para>After updating it is always a good idea to log out and back "
+                                            "in to make sure the update is fully applied and will not cause "
+                                            "any side effects.</para>");
         } else {
             reportMessage = xi18nc("@info", "<para>You can help us improve KDE Software by reporting "
                                             "this error.<nl /><link url='%1'>Learn "
@@ -209,7 +217,7 @@ void DrKonqiDialog::buildDialogButtons()
 
     reportButton->setEnabled(!crashedApp->bugReportAddress().isEmpty() &&
                              crashedApp->fakeExecutableBaseName() != QLatin1String("drkonqi") &&
-                             !DrKonqi::isSafer());
+                             !DrKonqi::isSafer() && !crashedApp->hasDeletedFiles());
     connect(reportButton, &QPushButton::clicked, this, &DrKonqiDialog::startBugReportAssistant);
 
     //Restart application button

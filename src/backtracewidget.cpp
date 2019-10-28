@@ -76,6 +76,12 @@ BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent,
                           "install the missing debug symbols packages.")));
     ui.m_installDebugButton->setVisible(false);
     connect(ui.m_installDebugButton, &QPushButton::clicked, this, &BacktraceWidget::installDebugPackages);
+    if (DrKonqi::crashedApplication()->hasDeletedFiles()) {
+        ui.m_installDebugButton->setEnabled(false);
+        ui.m_installDebugButton->setToolTip(i18nc("@info:tooltip",
+                                                  "Symbol installation is unavailable because the application "
+                                                  "was updated or uninstalled after it had been started."));
+    }
 
     KGuiItem::assign(ui.m_copyButton, KGuiItem2(QString(), QIcon::fromTheme(QStringLiteral("edit-copy")),
                                           i18nc("@info:tooltip", "Use this button to copy the "

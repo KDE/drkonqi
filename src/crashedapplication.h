@@ -66,6 +66,9 @@ public:
 
     const QDateTime& datetime() const;
 
+    /** @returns whether mmap'd files have been deleted, e.g. updated since start of app */
+    bool hasDeletedFiles() const;
+
 public Q_SLOTS:
     void restart();
 
@@ -86,6 +89,7 @@ protected:
     bool m_restarted;
     int m_thread;
     QDateTime m_datetime;
+    bool m_hasDeletedFiles;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication* app);

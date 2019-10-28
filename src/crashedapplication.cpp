@@ -146,6 +146,11 @@ const QDateTime& CrashedApplication::datetime() const
     return m_datetime;
 }
 
+bool CrashedApplication::hasDeletedFiles() const
+{
+    return m_hasDeletedFiles;
+}
+
 void CrashedApplication::restart()
 {
     if (m_restarted) {

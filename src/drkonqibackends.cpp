@@ -23,6 +23,7 @@
 
 #include <QTimer>
 #include <QDir>
+#include <QRegularExpression>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -125,16 +126,52 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     a->m_thread = DrKonqi::thread();
 
     //try to determine the executable that crashed
-    if ( QFileInfo(QStringLiteral("/proc/%1/exe").arg(a->m_pid)).exists() ) {
+    const QString procPath(QStringLiteral("/proc/%1").arg(a->m_pid));
+    const QString exeProcPath(procPath + QStringLiteral("/exe"));
+    if (QFileInfo(exeProcPath).exists()) {
         //on linux, the fastest and most reliable way is to get the path from /proc
         qCDebug(DRKONQI_LOG) << "Using /proc to determine executable path";
-        a->m_executable.setFile(QFile::symLinkTarget(QStringLiteral("/proc/%1/exe").arg(a->m_pid)));
+        const QString exePath = QFile::symLinkTarget(exeProcPath);
 
+        a->m_executable.setFile(exePath);
         if (DrKonqi::isKdeinit() ||
             a->m_executable.fileName().startsWith(QLatin1String("python")) ) {
-
             a->m_fakeBaseName = DrKonqi::appName();
         }
+
+        QDir mapFilesDir(procPath + QStringLiteral("/map_files"));
+        mapFilesDir.setFilter(mapFilesDir.filter() | QDir::System); // proc is system!
+
+        // "/bin/foo (deleted)" is how the kernel tells us that a file has been deleted since
+        // it was mmap'd.
+        QRegularExpression expression(QStringLiteral("(?<path>.+) \\(deleted\\)$"));
+        // For the map_files we filter only .so files to ensure that
+        // we don't trip over cache files or the like, as a result we
+        // manually need to check if the main exe was deleted and add
+        // it.
+        // NB: includes .so* and .py* since we also implicitly support snakes to
+        //   a degree
+        QRegularExpression soExpression(QStringLiteral("(?<path>.+\\.(so|py)([^/]*)) \\(deleted\\)$"));
+
+        bool hasDeletedFiles = false;
+
+        const auto exeMatch = expression.match(exePath);
+        if (exeMatch.isValid() && exeMatch.hasMatch()) {
+            hasDeletedFiles = true;
+        }
+
+        const auto list = mapFilesDir.entryInfoList();
+        for (auto it = list.constBegin(); !hasDeletedFiles && it != list.constEnd(); ++it) {
+            const auto match = soExpression.match(it->symLinkTarget());
+            if (!match.isValid() || !match.hasMatch()) {
+                continue;
+            }
+            hasDeletedFiles = true;
+        }
+
+        a->m_hasDeletedFiles = hasDeletedFiles;
+
+        qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
     } else {
         if ( DrKonqi::isKdeinit() ) {
             a->m_executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
