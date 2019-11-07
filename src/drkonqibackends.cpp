@@ -166,6 +166,11 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
             if (!match.isValid() || !match.hasMatch()) {
                 continue;
             }
+            const QString path = match.captured(QStringLiteral("path"));
+            if (path.startsWith(QStringLiteral("/memfd"))) {
+                // Qml.so's JIT shows up under memfd. This is a false positive against our regex.
+                continue;
+            }
             hasDeletedFiles = true;
         }
 
