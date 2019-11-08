@@ -47,7 +47,9 @@ APIJob *login(const QString &username, const QString &password, const Connection
 {
     QUrlQuery query;
     query.addQueryItem(QStringLiteral("login"), username);
-    query.addQueryItem(QStringLiteral("password"), password);
+    // https://bugs.kde.org/show_bug.cgi?id=413920
+    // Force encoding. QUrlQuery by default woudn't encode '+' and bugzilla doesn't like that.
+    query.addQueryItem(QStringLiteral("password"), QString::fromUtf8(QUrl::toPercentEncoding(password)));
     query.addQueryItem(QStringLiteral("restrict_login"), QStringLiteral("true"));
     return connection.get(QStringLiteral("/login"), query);
 }
