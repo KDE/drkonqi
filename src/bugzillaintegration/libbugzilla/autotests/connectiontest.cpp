@@ -78,7 +78,13 @@ private Q_SLOTS:
             qDebug() << httpBlob;
             // The query is important to see if this actually gets properly
             // passed along!
-            if (httpBlob.startsWith("GET /hi?informal=yes")) {
+            // Reason it has a plus:
+            // https://bugs.kde.org/show_bug.cgi?id=413920
+            // QUrlQuery doesn't encode plus characters, bugzilla serverside however
+            // needs it encoded which is a bit weird because it doesn't actually
+            // require full-form encoding either (i.e. space becomes plus and
+            // plus becomes encoded).
+            if (httpBlob.startsWith("GET /hi?informal=yes%2Bcertainly")) {
                 QFile file(QFINDTESTDATA("data/hi.http"));
                 file.open(QFile::ReadOnly | QFile::Text);
                 socket->write(file.readAll());
@@ -95,7 +101,7 @@ private Q_SLOTS:
         root.setPort(t.serverPort());
         HTTPConnection c(root);
         QUrlQuery query;
-        query.addQueryItem("informal", "yes");
+        query.addQueryItem("informal", "yes+certainly");
         auto job = c.get("/hi", query);
         job->exec();
         QCOMPARE(job->data(), "Hello!\n");
