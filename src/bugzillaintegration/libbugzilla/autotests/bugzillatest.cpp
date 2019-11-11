@@ -43,8 +43,6 @@ public:
             return new JobDouble { QFINDTESTDATA("data/bugzilla.version.json") };
         } else if (path == "/login" && query.toString() == "login=auser&password=apass&restrict_login=true") {
             return new JobDouble { QFINDTESTDATA("data/bugzilla.login.json") };
-        } else if (path == "/login" && query.toString() == "login=auser&password=a%2Bpa ss&restrict_login=true") {
-            return new JobDouble { QFINDTESTDATA("data/bugzilla.login.json") };
         }
         Q_ASSERT_X(false, "get",
                    qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
@@ -91,21 +89,6 @@ private Q_SLOTS:
     void testLogin()
     {
         KJob *job = Bugzilla::login("auser", "apass");
-        job->start();
-        auto details = Bugzilla::login(job);
-        QCOMPARE(details.id, 52960);
-        QCOMPARE(details.token, "52960-aaaaaaaaaa");
-    }
-
-    void testLoginWithPlusAndSpacePassword()
-    {
-        // https://bugs.kde.org/show_bug.cgi?id=413920
-        // QUrlQuery doesn't encode plus characters, bugzilla serverside however
-        // needs it encoded which is a bit weird because it doesn't actually
-        // require full-form encoding either (i.e. space becomes plus and
-        // plus becomes encoded).
-        // Test + and space but only expect + to be encoded.
-        KJob *job = Bugzilla::login("auser", "a+pa ss");
         job->start();
         auto details = Bugzilla::login(job);
         QCOMPARE(details.id, 52960);
