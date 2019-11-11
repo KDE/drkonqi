@@ -106,7 +106,17 @@ QUrl HTTPConnection::url(const QString &appendix, QUrlQuery query) const
         query.addQueryItem(QStringLiteral("token"), m_token);
     }
 
-    url.setQuery(query);
+    // https://bugs.kde.org/show_bug.cgi?id=413920
+    // Force encoding. QUrlQuery by default wouldn't encode '+' and bugzilla doesn't like that...
+    // For any query argument. Tested with username, password, and products (for bug search)
+    // on bugzilla 5.0.6. As a result let's force full encoding on every argument.
+    QUrlQuery escapedQuery(query); // copy delimiter properties and the like
+    escapedQuery.clear(); // but then throw away the values
+    for (const auto &pair : query.queryItems(QUrl::FullyDecoded)) {
+        escapedQuery.addQueryItem(pair.first, QString::fromUtf8(QUrl::toPercentEncoding(pair.second)));
+    }
+
+    url.setQuery(escapedQuery);
     return url;
 }
 
