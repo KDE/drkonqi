@@ -24,6 +24,11 @@
 
 namespace Bugzilla {
 
+NewBug::NewBug(QObject *parent)
+    : JsonCommand(parent)
+{
+}
+
 NewBug::NewBug(const NewBug &other)
     : JsonCommand(other.parent())
 {
