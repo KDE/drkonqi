@@ -24,10 +24,8 @@
 
 #include <KCoreAddons>
 
-#if HAVE_UNAME
-# include <errno.h>
-# include <sys/utsname.h>
-#endif
+#include <errno.h>
+#include <sys/utsname.h>
 
 #include <systeminformation.h>
 
@@ -35,8 +33,6 @@ class SystemInformationTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
-
-#if HAVE_UNAME
     static int uname(utsname *buf)
     {
         strcpy(buf->sysname, "FreeBSD");
@@ -44,7 +40,6 @@ private Q_SLOTS:
         strcpy(buf->machine, "x86_64");
         return 0;
     }
-#endif
 
     void initTestCase()
     {

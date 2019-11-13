@@ -39,7 +39,8 @@ class NewBug : public JsonCommand
     BUGZILLA_MEMBER_PROPERTY(QString, severity);
     BUGZILLA_MEMBER_PROPERTY(QStringList, keywords); // not documented but also supported
 public:
-    using JsonCommand::JsonCommand;
+    // only needed because we impl the copy ctor, otherwise this could be `using`
+    explicit NewBug(QObject *parent = nullptr);
     NewBug(const NewBug &other);
 };
 
