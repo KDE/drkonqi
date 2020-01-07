@@ -25,6 +25,8 @@
 #include <kaboutdata.h>
 #include <KLocalizedString>
 
+#include <iostream>
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
@@ -46,7 +48,7 @@ int main(int argc, char **argv)
     QString file = parser.positionalArguments().first();
 
     if (!QFile::exists(file)) {
-        QTextStream(stderr) << "The specified file does not exist" << endl;
+        std::cerr << "The specified file does not exist" << std::endl;
         return 1;
     }
 
@@ -57,11 +59,11 @@ int main(int argc, char **argv)
 
     QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
                                 BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
-    QTextStream(stdout) << "Usefulness: " << metaUsefulness.valueToKey(btparser->backtraceUsefulness()) << endl;
-    QTextStream(stdout) << "First valid functions: " << btparser->firstValidFunctions().join(QLatin1Char(' ')) << endl;
-    QTextStream(stdout) << "Simplified backtrace:\n" << btparser->simplifiedBacktrace() << endl;
-    QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols().values());
-    QTextStream(stdout) << "Missing dbgsym libs: " << l.join(QLatin1Char(' ')) << endl;
+    std::cout << "Usefulness: " << qPrintable(metaUsefulness.valueToKey(btparser->backtraceUsefulness())) << std::endl;
+    std::cout << "First valid functions: " << qPrintable(btparser->firstValidFunctions().join(QLatin1Char(' '))) << std::endl;
+    std::cout << "Simplified backtrace:\n" << qPrintable(btparser->simplifiedBacktrace()) << std::endl;
+    const QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols().values());
+    std::cout << "Missing dbgsym libs: " << qPrintable(l.join(QLatin1Char(' '))) << std::endl;
 
     return 0;
 }
