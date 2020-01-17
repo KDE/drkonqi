@@ -83,7 +83,7 @@ do
     shift
 done
 
-run_in_terminal "sudo zypper install -C $packages"
+run_in_terminal "sudo zypper --plus-content debug install -C $packages"
 
 if [ "$?" = "1" ]; then
     exit 3
