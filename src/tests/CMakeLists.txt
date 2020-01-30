@@ -24,6 +24,14 @@ add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 
+ecm_add_tests(
+    gdbbacktracelinetest
+    LINK_LIBRARIES
+        Qt5::Core
+        Qt5::Test
+        drkonqi_backtrace_parser
+)
+
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)
         find_program(RUBY_EXECUTABLE ruby)
