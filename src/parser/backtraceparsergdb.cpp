@@ -19,18 +19,9 @@
 #include "backtraceparser_p.h"
 #include "drkonqi_parser_debug.h"
 #include <QRegExp>
+#include <QFileInfo>
 
 //BEGIN BacktraceLineGdb
-
-class BacktraceLineGdb : public BacktraceLine
-{
-public:
-    BacktraceLineGdb(const QString & line);
-
-private:
-    void parse();
-    void rate();
-};
 
 BacktraceLineGdb::BacktraceLineGdb(const QString & lineStr)
         : BacktraceLine()
@@ -60,7 +51,7 @@ void BacktraceLineGdb::parse()
 
     regExp.setPattern(QStringLiteral("^#([0-9]+)" //matches the stack frame number, ex. "#0"
                       "[\\s]+(0x[0-9a-f]+[\\s]+in[\\s]+)?" // matches " 0x0000dead in " (optionally)
-                      "((\\(anonymous namespace\\)::)?[^\\(]+)" //matches the function name
+                      "((\\(anonymous namespace\\)::)?[^\\(]+)?" //matches the function name
                       //(anything except left parenthesis, which is the start of the arguments section)
                       //and optionally the prefix "(anonymous namespace)::"
                       "(\\(.*\\))?" //matches the function arguments
@@ -81,7 +72,13 @@ void BacktraceLineGdb::parse()
         d->m_functionName = regExp.cap(3).trimmed();
 
         if (!regExp.cap(7).isEmpty()) { //we have file information (stuff after from|at)
-            if (regExp.cap(8) == QLatin1String("at")) { //'at' means we have a source file
+            bool file = regExp.cap(8) == QLatin1String("at"); //'at' means we have a source file (likely)
+            // Gdb isn't entirely consistent here, when it uses 'from' it always refers to a library, but
+            // sometimes the stack can resolve to a library even when it uses the 'at' key word.
+            // This specifically seems to happen when a frame has no function name.
+            const QString path = regExp.cap(9);
+            file = file && !QFileInfo(path).completeSuffix().contains(QLatin1String(".so"));
+            if (file) {
                 d->m_file = regExp.cap(9);
             } else { //'from' means we have a library
                 d->m_library = regExp.cap(9);

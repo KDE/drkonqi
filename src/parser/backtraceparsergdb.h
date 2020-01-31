@@ -21,6 +21,16 @@
 #include "backtraceparser.h"
 class BacktraceParserGdbPrivate;
 
+class BacktraceLineGdb : public BacktraceLine
+{
+public:
+    BacktraceLineGdb(const QString & line);
+
+private:
+    void parse();
+    void rate();
+};
+
 class BacktraceParserGdb : public BacktraceParser
 {
     Q_OBJECT
