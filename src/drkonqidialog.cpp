@@ -29,6 +29,7 @@
 #include <QDesktopServices>
 #include <QTabBar>
 #include <QTabWidget>
+#include <QLocale>
 
 #include "drkonqi.h"
 #include "backtracewidget.h"
@@ -154,6 +155,7 @@ void DrKonqiDialog::buildIntroWidget()
 
     ui.detailsTitleLabel->setText(QStringLiteral("<strong>%1</strong>").arg(i18nc("@label","Details:")));
 
+    QLocale locale;
     ui.detailsLabel->setText(xi18nc("@info Note the time information is divided into date and time parts",
                                             "<para>Executable: <application>%1"
                                             "</application> PID: %2 Signal: %3 (%4) "
@@ -168,10 +170,10 @@ void DrKonqiDialog::buildIntroWidget()
                                              //so it doesn't make sense to display them in decimal
                                              QString().asprintf("0x%8x", crashedApp->signalNumber()),
                                     #endif
-                                             crashedApp->datetime().date().toString(Qt::DefaultLocaleShortDate),
+                                             locale.toString(crashedApp->datetime().date(), QLocale::ShortFormat),
 
-                                             crashedApp->datetime().time().toString()
-                                             ));
+                                             locale.toString(crashedApp->datetime().time()))
+                     );
 }
 
 void DrKonqiDialog::buildDialogButtons()
