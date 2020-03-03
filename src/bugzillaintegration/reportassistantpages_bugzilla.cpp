@@ -151,8 +151,11 @@ void BugzillaLoginPage::aboutToShow()
                                       QLatin1String(KDE_BUGZILLA_SHORT_URL),
                                       bugzillaManager()->getUsername()));
     } else {
-        //Try to show wallet dialog once this dialog is shown
+        // Try to show wallet dialog once this dialog is shown
         QTimer::singleShot(100, this, &BugzillaLoginPage::walletLogin);
+        // ...also reset focus. walletLogin may be fully no-op and not set focus
+        // if it failed to do anything which leaves the focus elsewhere
+        ui.m_userEdit->setFocus(Qt::OtherFocusReason);
     }
 }
 
