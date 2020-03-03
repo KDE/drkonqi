@@ -146,11 +146,15 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
                                      "What I was doing when the application \"%1\" crashed",
                                          DrKonqi::crashedApplication()->name()));
 
-    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked),
-            this, &BugAwarenessPage::updateCheckBoxes);
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &BugAwarenessPage::updateCheckBoxes);
     // Also listen to toggle so radio buttons are covered.
-    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled),
-            this, &BugAwarenessPage::updateCheckBoxes);
+    connect(ui.m_rememberGroup, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled), this, &BugAwarenessPage::updateCheckBoxes);
+#else
+    connect(ui.m_rememberGroup, &QButtonGroup::buttonClicked, this, &BugAwarenessPage::updateCheckBoxes);
+    // Also listen to toggle so radio buttons are covered.
+    connect(ui.m_rememberGroup, &QButtonGroup::buttonToggled, this, &BugAwarenessPage::updateCheckBoxes);
+#endif
 
     ui.m_appSpecificDetailsExamplesWidget->setVisible(
                 reportInterface()->appDetailsExamples()->hasExamples());
