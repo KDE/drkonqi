@@ -62,7 +62,11 @@ void ProductMapping::mapUsingInternalFile(const QString & appName)
     if (mappings.hasKey(appName)) {
         QString mappingString = mappings.readEntry(appName);
         if (!mappingString.isEmpty()) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
             QStringList list = mappingString.split(QLatin1Char('|'), QString::SkipEmptyParts);
+#else
+            QStringList list = mappingString.split(QLatin1Char('|'), Qt::SkipEmptyParts);
+#endif
             if (list.count()==2) {
                 m_bugzillaProduct = list.at(0);
                 m_bugzillaComponent = list.at(1);
@@ -94,7 +98,11 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
                             "(or there was an error when reading)";
             return;
         }
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
         groups = group.split(QLatin1Char('|'), QString::SkipEmptyParts);
+#else
+        groups = group.split(QLatin1Char('|'), Qt::SkipEmptyParts);
+#endif
     }
 
     //All KDE apps use the KDE Platform (basic libs)
@@ -109,7 +117,11 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzill
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);
             if (!bzGroup.isEmpty()) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                 QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), QString::SkipEmptyParts);
+#else
+                QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), Qt::SkipEmptyParts);
+#endif
                 if (relatedGroups.size()>0) {
                     m_relatedBugzillaProducts.append(relatedGroups);
                 }

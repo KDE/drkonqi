@@ -139,7 +139,11 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
 
     const int nVersionParts = 3;
     QString seps = QLatin1String("[._-]");
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     QStringList digits = version.split(QRegExp(seps), QString::SkipEmptyParts);
+#else
+    QStringList digits = version.split(QRegExp(seps), Qt::SkipEmptyParts);
+#endif
     while (digits.count() < nVersionParts) {
         digits << QLatin1String("0");
     }

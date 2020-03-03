@@ -76,7 +76,11 @@ QString Debugger::tryExec() const
 QStringList Debugger::supportedBackends() const
 {
     return isValid() ? m_config->group("General").readEntry("Backends")
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                                    .split(QLatin1Char('|'), QString::SkipEmptyParts) : QStringList();
+#else
+                                   .split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
+#endif
 }
 
 void Debugger::setUsedBackend(const QString & backendName)
