@@ -166,7 +166,7 @@ void DrKonqiDialog::buildIntroWidget()
                                     #else
                                              //windows uses weird big numbers for exception codes,
                                              //so it doesn't make sense to display them in decimal
-                                             QString().sprintf("0x%8x", crashedApp->signalNumber()),
+                                             QString().asprintf("0x%8x", crashedApp->signalNumber()),
                                     #endif
                                              crashedApp->datetime().date().toString(Qt::DefaultLocaleShortDate),
 
