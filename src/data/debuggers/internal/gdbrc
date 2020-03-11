@@ -75,4 +75,4 @@ Backends=KCrash
 
 [KCrash]
 Exec=gdb -nw -n -batch -x %tempfile -p %pid %execpath
-BatchCommands=set width 200\nthread\nthread apply all bt
+BatchCommands=set width 200\nprint "Content of s_kcrashErrorMessage:"\nprint s_kcrashErrorMessage.constData()\nthread\nthread apply all bt

@@ -36,7 +36,7 @@
 #include <QApplication>
 #include <KAboutData>
 
-enum CrashType { Crash, Malloc, Div0, Assert, QAssert, Threads };
+enum CrashType { Crash, Malloc, Div0, Assert, QAssert, Threads, FatalErrorMessage };
 
 struct SomeStruct
 {
@@ -88,6 +88,12 @@ void do_threads()
     QtConcurrent::blockingMap(foo, map_function);
 }
 
+void do_fatalErrorMessage()
+{
+    KCrash::setErrorMessage(QStringLiteral("So long, my friends..."));
+    qFatal("So long!\n");
+}
+
 void level4(int t)
 {
   if (t == Malloc)
@@ -100,6 +106,8 @@ void level4(int t)
     do_qassert();
   else if (t == Threads)
     do_threads();
+  else if (t == FatalErrorMessage)
+    do_fatalErrorMessage();
   else
     do_crash();
 }
@@ -131,7 +139,7 @@ int main(int argc, char *argv[])
   QCommandLineParser parser;
   parser.addOption(QCommandLineOption(QStringLiteral("autorestart"), i18n("Automatically restart")));
   parser.addOption(QCommandLineOption(QStringLiteral("kdeinit"), i18n("Start DrKonqi using kdeinit")));
-  parser.addPositionalArgument(QStringLiteral("type"), i18n("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads"));
+  parser.addPositionalArgument(QStringLiteral("type"), i18n("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads|fatal"));
   aboutData.setupCommandLine(&parser);
   parser.process(app);
   aboutData.processCommandLine(&parser);
@@ -157,6 +165,8 @@ int main(int argc, char *argv[])
     crashtype = QAssert;
   else if (type == "threads")
     crashtype = Threads;
+  else if (type == "fatal")
+    crashtype = FatalErrorMessage;
   level1(crashtype);
   return app.exec();
 }
