@@ -77,7 +77,11 @@ void BacktraceLineGdb::parse()
             // sometimes the stack can resolve to a library even when it uses the 'at' key word.
             // This specifically seems to happen when a frame has no function name.
             const QString path = regExp.cap(9);
-            file = file && !QFileInfo(path).completeSuffix().contains(QLatin1String(".so"));
+            const auto completeSuffix = QFileInfo(path).completeSuffix();
+            file = file
+                    && completeSuffix != QLatin1String("so") /* libf.so (so) */
+                    && !completeSuffix.startsWith(QLatin1String("so.")) /* libf.so.1 (so.1) */
+                    && !completeSuffix.contains(QLatin1String(".so") /* libf-1.0.so.1 (0.so.1)*/);
             if (file) {
                 d->m_file = regExp.cap(9);
             } else { //'from' means we have a library
