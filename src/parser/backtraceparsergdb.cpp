@@ -129,13 +129,13 @@ void BacktraceLineGdb::rate()
     if (!fileName().isEmpty()) {
         r = Good;
     } else if (!libraryName().isEmpty()) {
-        if (functionName() == QLatin1String("??")) {
+        if (functionName() == QLatin1String("??") || functionName().isEmpty()) {
             r = MissingFunction;
         } else {
             r = MissingSourceFile;
         }
     } else {
-        if (functionName() == QLatin1String("??")) {
+        if (functionName() == QLatin1String("??") || functionName().isEmpty()) {
             r = MissingEverything;
         } else {
             r = MissingLibrary;
