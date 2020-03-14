@@ -22,7 +22,8 @@
 #include "backtraceparsercdb.h"
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
-#include <QRegExp>
+
+#include <QRegularExpression>
 #include <QMetaEnum>
 
 //factory
@@ -145,24 +146,25 @@ static bool lineIsStackBase(const BacktraceLine & line)
         || line.rating() == BacktraceLine::MissingFunction )
         return false;
 
-    //this is the base frame for all threads except the main thread
-    //FIXME that probably works only on linux
-    if ( line.functionName() == QLatin1String("start_thread") )
+    // "start_thread" is the base frame for all threads except the main thread, FIXME "start_thread"
+    // probably works only on linux
+    // main() or kdemain() is the base for the main thread
+    if (line.functionName() == QLatin1String("start_thread")
+        || line.functionName() == QLatin1String("main")
+        || line.functionName() == QLatin1String("kdemain")) {
         return true;
-
-    QRegExp regExp;
-    regExp.setPattern(QStringLiteral("(kde)?main")); //main() or kdemain() is the base for the main thread
-    if ( regExp.exactMatch(line.functionName()) )
-        return true;
+    }
 
     //HACK for better rating. we ignore all stack frames below any function that matches
     //the following regular expression. The functions that match this expression are usually
     //"QApplicationPrivate::notify_helper", "QApplication::notify" and similar, which
     //are used to send any kind of event to the Qt application. All stack frames below this,
     //with or without debug symbols, are useless to KDE developers, so we ignore them.
-    regExp.setPattern(QStringLiteral("(Q|K)(Core)?Application(Private)?::notify.*"));
-    if ( regExp.exactMatch(line.functionName()) )
+    const QRegularExpression re(QRegularExpression::anchoredPattern(
+                                    QStringLiteral("(Q|K)(Core)?Application(Private)?::notify.*")));
+    if (re.match(line.functionName()).hasMatch()) {
         return true;
+    }
 
     //attempt to recognize crashes that happen after main has returned (bug 200993)
     if ( line.functionName() == QLatin1String("~KCleanUpGlobalStatic") ||

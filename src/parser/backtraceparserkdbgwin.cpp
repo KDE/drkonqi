@@ -19,6 +19,8 @@
 #include "backtraceparser_p.h"
 #include "drkonqi_parser_debug.h"
 
+#include <QRegularExpression>
+
 //BEGIN BacktraceLineKdbgwin
 
 class BacktraceLineKdbgwin : public BacktraceLine
@@ -54,17 +56,18 @@ void BacktraceLineKdbgwin::parse()
         return;
     }
 
-    QRegExp regExp;
-    regExp.setPattern(QStringLiteral("([^!]+)!" //match the module name, followed by !
-                      "([^\\(]+)\\(\\) " //match the function name, followed by ()
-                      "\\[([^@]+)@ [\\-\\d]+\\] " // [filename @ line]
-                      "at 0x.*")); //at 0xdeadbeef
+    static const QRegularExpression re(QRegularExpression::anchoredPattern(QStringLiteral(
+                                        "([^!]+)!" //match the module name, followed by !
+                                        "([^\\(]+)\\(\\) " //match the function name, followed by ()
+                                        "\\[([^@]+)@ [\\-\\d]+\\] " // [filename @ line]
+                                        "at 0x.*"))); //at 0xdeadbeef
 
-    if (regExp.exactMatch(d->m_line)) {
+    const QRegularExpressionMatch match = re.match(d->m_line);
+    if (match.hasMatch()) {
         d->m_type = StackFrame;
-        d->m_library = regExp.cap(1);
-        d->m_functionName = regExp.cap(2);
-        d->m_file = regExp.cap(3).trimmed();
+        d->m_library = match.captured(1);
+        d->m_functionName = match.captured(2);
+        d->m_file = match.captured(3).trimmed();
 
         qCDebug(DRKONQI_PARSER_LOG) << d->m_functionName << d->m_file << d->m_library;
         return;

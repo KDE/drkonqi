@@ -18,8 +18,9 @@
 #include "backtraceparsergdb.h"
 #include "backtraceparser_p.h"
 #include "drkonqi_parser_debug.h"
-#include <QRegExp>
+
 #include <QFileInfo>
+#include <QRegularExpression>
 
 //BEGIN BacktraceLineGdb
 
@@ -36,7 +37,6 @@ BacktraceLineGdb::BacktraceLineGdb(const QString & lineStr)
 
 void BacktraceLineGdb::parse()
 {
-    QRegExp regExp;
 
     if (d->m_line == QLatin1Char('\n')) {
         d->m_type = EmptyLine;
@@ -49,14 +49,20 @@ void BacktraceLineGdb::parse()
         return;
     }
 
-    regExp.setPattern(QStringLiteral("^#([0-9]+)" //matches the stack frame number, ex. "#0"
-                      "[\\s]+(0x[0-9a-f]+[\\s]+in[\\s]+)?" // matches " 0x0000dead in " (optionally)
-                      "((\\(anonymous namespace\\)::)?[^\\(]+)?" //matches the function name
+    static QRegularExpression regExp;
+    // make dot "." char match new lines, to match e.g.:
+    // "#5  0x00007f50e99f776f in QWidget::testAttribute_helper (this=0x6e6440,\n    attribute=Qt::WA_WState_Created) at kernel/qwidget.cpp:9081\n"
+    // gdb breaks long stack frame lines into multiple ones for readability
+    regExp.setPatternOptions(QRegularExpression::DotMatchesEverythingOption);
+    regExp.setPattern(QStringLiteral(
+                      "^#([0-9]+)" //matches the stack frame number, ex. "#0"
+                      "[\\s]+(?:0x[0-9a-f]+[\\s]+in[\\s]+)?" // matches " 0x0000dead in " (optionally)
+                      "((?:\\(anonymous namespace\\)::)?[^\\(]+)?" //matches the function name
                       //(anything except left parenthesis, which is the start of the arguments section)
                       //and optionally the prefix "(anonymous namespace)::"
-                      "(\\(.*\\))?" //matches the function arguments
+                      "(?:\\(.*\\))?" //matches the function arguments
                                     //(when the app doesn't have debugging symbols)
-                      "[\\s]+(const[\\s]+)?" //matches a traling const, if it exists
+                      "[\\s]+(?:const[\\s]+)?" //matches a traling const, if it exists
                       "\\(.*\\)" //matches the arguments of the function with their values
                                  //(when the app has debugging symbols)
                       "([\\s]+" //beginning of optional file information
@@ -66,22 +72,23 @@ void BacktraceLineGdb::parse()
                     //the )? at the end closes the parenthesis before [\\s]+(from|at) and
                     //notes that the whole expression from there is optional.
 
-    if (regExp.exactMatch(d->m_line)) {
+    QRegularExpressionMatch match = regExp.match(d->m_line);
+    if (match.hasMatch()) {
         d->m_type = StackFrame;
-        d->m_stackFrameNumber = regExp.cap(1).toInt();
-        d->m_functionName = regExp.cap(3).trimmed();
+        d->m_stackFrameNumber = match.captured(1).toInt();
+        d->m_functionName = match.captured(2).trimmed();
 
-        if (!regExp.cap(7).isEmpty()) { //we have file information (stuff after from|at)
-            bool file = regExp.cap(8) == QLatin1String("at"); //'at' means we have a source file (likely)
+        if (!match.captured(3).isEmpty()) { //we have file information (stuff after from|at)
+            bool file = match.captured(4) == QLatin1String("at"); //'at' means we have a source file (likely)
             // Gdb isn't entirely consistent here, when it uses 'from' it always refers to a library, but
             // sometimes the stack can resolve to a library even when it uses the 'at' key word.
             // This specifically seems to happen when a frame has no function name.
-            const QString path = regExp.cap(9);
+            const QString path = match.captured(5);
             file = file && !QFileInfo(path).completeSuffix().contains(QLatin1String(".so"));
             if (file) {
-                d->m_file = regExp.cap(9);
+                d->m_file = match.captured(5);
             } else { //'from' means we have a library
-                d->m_library = regExp.cap(9);
+                d->m_library = match.captured(5);
             }
         }
 
@@ -94,21 +101,21 @@ void BacktraceLineGdb::parse()
                       ".*\\[New .*|"
                       "0x[0-9a-f]+.*|"
                       "Current language:.*"));
-    if (regExp.exactMatch(d->m_line)) {
+    if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "garbage detected:" << d->m_line;
         d->m_type = Crap;
         return;
     }
 
     regExp.setPattern(QStringLiteral("Thread [0-9]+\\s+\\(Thread [0-9a-fx]+\\s+\\(.*\\)\\):\n"));
-    if (regExp.exactMatch(d->m_line)) {
+    if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "thread start detected:" << d->m_line;
         d->m_type = ThreadStart;
         return;
     }
 
     regExp.setPattern(QStringLiteral("\\[Current thread is [0-9]+ \\(.*\\)\\]\n"));
-    if (regExp.exactMatch(d->m_line)) {
+    if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "thread indicator detected:" << d->m_line;
         d->m_type = ThreadIndicator;
         return;

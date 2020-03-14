@@ -17,6 +17,7 @@
 */
 #include "gdbhighlighter.h"
 
+#include <QRegularExpression>
 #include <QTextDocument>
 
 #include <KColorScheme>
@@ -51,7 +52,7 @@ void GdbHighlighter::highlightBlock(const QString& text)
     int cur = 0;
     int next;
     int diff;
-    const QRegExp hexptrPattern(QStringLiteral("0x[0-9a-f]+"), Qt::CaseSensitive, QRegExp::RegExp2);
+    const static QRegularExpression hexptrPattern(QStringLiteral("0x[0-9a-f]+"));
     int lineNr = currentBlock().firstLineNumber();
     while ( cur < text.length() ) {
         next = text.indexOf(QLatin1Char('\n'), cur);
@@ -122,12 +123,12 @@ void GdbHighlighter::highlightBlock(const QString& text)
                 }
             }
             // highlight hexadecimal ptrs
-            int idx = 0;
-            while ((idx = hexptrPattern.indexIn(lineStr, idx)) != -1) {
-                if (hexptrPattern.cap() == QLatin1String("0x0")) {
-                    setFormat(idx, hexptrPattern.matchedLength(), nullptrFormat);
+            QRegularExpressionMatchIterator iter = hexptrPattern.globalMatch(lineStr);
+            while (iter.hasNext()) {
+                const QRegularExpressionMatch match = iter.next();
+                if (match.captured(0) == QLatin1String("0x0")) {
+                    setFormat(match.capturedStart(0), match.capturedLength(0), nullptrFormat);
                 }
-                idx += hexptrPattern.matchedLength();
             }
         }
 

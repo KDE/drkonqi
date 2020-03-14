@@ -22,6 +22,7 @@
 #include "bugzillalib.h"
 
 #include <QReadWriteLock>
+#include <QRegularExpression>
 
 #include "libbugzilla/clients/commentclient.h"
 #include "libbugzilla/connection.h"
@@ -138,11 +139,10 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
     // the change should actually be implemented.
 
     const int nVersionParts = 3;
-    QString seps = QLatin1String("[._-]");
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QStringList digits = version.split(QRegExp(seps), QString::SkipEmptyParts);
+    QStringList digits = version.split(QRegularExpression(QStringLiteral("[._-]")), QString::SkipEmptyParts);
 #else
-    QStringList digits = version.split(QRegExp(seps), Qt::SkipEmptyParts);
+    QStringList digits = version.split(QRegularExpression(QStringLiteral("[._-]")), Qt::SkipEmptyParts);
 #endif
     while (digits.count() < nVersionParts) {
         digits << QLatin1String("0");
