@@ -31,9 +31,8 @@
 #include <kaboutdata.h>
 #include <assert.h>
 #include <QtConcurrentMap>
-#include <KLocalizedString>
 #include <QCommandLineParser>
-#include <QApplication>
+#include <QGuiApplication>
 #include <KAboutData>
 
 enum CrashType { Crash, Malloc, Div0, Assert, QAssert, Threads, FatalErrorMessage };
@@ -129,17 +128,17 @@ void level1(int t)
 
 int main(int argc, char *argv[])
 {
-  QApplication app(argc, argv);
-  KAboutData aboutData(QStringLiteral("crashtext"), i18n("Crash Test for DrKonqi"),
+  QGuiApplication app(argc, argv);
+  KAboutData aboutData(QStringLiteral("crashtest"), QStringLiteral("Crash Test for DrKonqi"),
                        QStringLiteral("1.1"),
-                       i18n("Crash Test for DrKonqi"),
+                       QStringLiteral("Crash Test for DrKonqi"),
                        KAboutLicense::GPL,
-                       i18n("(c) 2000-2002 David Faure, Waldo Bastian"));
+                       QStringLiteral("(c) 2000-2002 David Faure, Waldo Bastian"));
 
   QCommandLineParser parser;
-  parser.addOption(QCommandLineOption(QStringLiteral("autorestart"), i18n("Automatically restart")));
-  parser.addOption(QCommandLineOption(QStringLiteral("kdeinit"), i18n("Start DrKonqi using kdeinit")));
-  parser.addPositionalArgument(QStringLiteral("type"), i18n("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads|fatal"));
+  parser.addOption(QCommandLineOption(QStringLiteral("autorestart"), QStringLiteral("Automatically restart")));
+  parser.addOption(QCommandLineOption(QStringLiteral("kdeinit"), QStringLiteral("Start DrKonqi using kdeinit")));
+  parser.addPositionalArgument(QStringLiteral("type"), QStringLiteral("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads|fatal"));
   aboutData.setupCommandLine(&parser);
   parser.process(app);
   aboutData.processCommandLine(&parser);
