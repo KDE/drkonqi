@@ -198,20 +198,21 @@ static bool lineIsStackTop(const BacktraceLine & line)
    for some reason. Currently it ignores all libc/libstdc++/libpthread functions. */
 static bool lineShouldBeIgnored(const BacktraceLine & line)
 {
-    if ( line.libraryName().contains(QLatin1String("libc.so"))
-        || line.libraryName().contains(QLatin1String("libstdc++.so"))
-        || line.functionName().startsWith(QLatin1String("*__GI_")) //glibc2.9 uses *__GI_ as prefix
-        || line.libraryName().contains(QLatin1String("libpthread.so"))
-        || line.libraryName().contains(QLatin1String("libglib-2.0.so"))
-#ifdef Q_OS_MACOS
-        || (line.libraryName().startsWith(QLatin1String("libsystem_")) && line.libraryName().endsWith(QLatin1String(".dylib")))
-        || line.libraryName().contains(QLatin1String("Foundation`"))
-#endif
-        || line.libraryName().contains(QLatin1String("ntdll.dll"))
-        || line.libraryName().contains(QLatin1String("kernel32.dll"))
-        || line.functionName().contains(QLatin1String("_tmain"))
-        || line.functionName() == QLatin1String("WinMain") )
+    if (line.libraryName().contains(QLatin1String("libc.so"))
+            || line.libraryName().contains(QLatin1String("libstdc++.so"))
+            || line.functionName().startsWith(QLatin1String("*__GI_")) //glibc2.9 uses *__GI_ as prefix
+            || line.libraryName().contains(QLatin1String("libpthread.so"))
+            || line.libraryName().contains(QLatin1String("libglib-2.0.so"))
+        #ifdef Q_OS_MACOS
+            || (line.libraryName().startsWith(QLatin1String("libsystem_")) && line.libraryName().endsWith(QLatin1String(".dylib")))
+            || line.libraryName().contains(QLatin1String("Foundation`"))
+        #endif
+            || line.libraryName().contains(QLatin1String("ntdll.dll"))
+            || line.libraryName().contains(QLatin1String("kernel32.dll"))
+            || line.functionName().contains(QLatin1String("_tmain"))
+            || line.functionName() == QLatin1String("WinMain")) {
         return true;
+    }
 
     return false;
 }
