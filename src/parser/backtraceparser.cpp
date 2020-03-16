@@ -203,6 +203,8 @@ static bool lineShouldBeIgnored(const BacktraceLine & line)
             || line.functionName().startsWith(QLatin1String("*__GI_")) //glibc2.9 uses *__GI_ as prefix
             || line.libraryName().contains(QLatin1String("libpthread.so"))
             || line.libraryName().contains(QLatin1String("libglib-2.0.so"))
+            || line.functionName() == QLatin1String("__libc_start_main") // below main on apps without symbols
+            || line.functionName() == QLatin1String("_start") // below main on apps without symbols
         #ifdef Q_OS_MACOS
             || (line.libraryName().startsWith(QLatin1String("libsystem_")) && line.libraryName().endsWith(QLatin1String(".dylib")))
             || line.libraryName().contains(QLatin1String("Foundation`"))
