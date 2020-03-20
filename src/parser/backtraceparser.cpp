@@ -389,10 +389,10 @@ void BacktraceParser::calculateRatingData()
     //if there is no stack base, the executable is probably stripped,
     //so we need to be more strict with rating
     if ( !haveSeenStackBase ) {
-        //less than 4 stack frames is useless
-        if ( counter < 4 ) {
+        //less than 1 stack frame is useless
+        if ( counter < 1 ) {
             d->m_usefulness = Useless;
-        //more than 4 stack frames might have some value, so let's not be so strict, just lower the rating
+        //more than 1 stack frames might have some value, so let's not be so strict, just lower the rating
         } else if ( d->m_usefulness > Useless ) {
             d->m_usefulness = (Usefulness) (d->m_usefulness - 1);
         }
