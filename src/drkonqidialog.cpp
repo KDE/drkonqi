@@ -161,10 +161,12 @@ void DrKonqiDialog::buildIntroWidget()
                                             "</application> PID: %2 Signal: %3 (%4) "
                                             "Time: %5 %6</para>",
                                              crashedApp->fakeExecutableBaseName(),
-                                             crashedApp->pid(),
+                                             // prevent number localization by ki18n
+                                             QString::number(crashedApp->pid()),
                                              crashedApp->signalName(),
                                     #if defined(Q_OS_UNIX)
-                                             crashedApp->signalNumber(),
+                                              // prevent number localization by ki18n
+                                             QString::number(crashedApp->signalNumber()),
                                     #else
                                              //windows uses weird big numbers for exception codes,
                                              //so it doesn't make sense to display them in decimal
