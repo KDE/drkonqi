@@ -37,7 +37,6 @@ set(drkonqi_SRCS
     ptracer.cpp
     debuggermanager.cpp
     applicationdetailsexamples.cpp
-    gdbhighlighter.cpp
     statusnotifier.cpp
 )
 
@@ -103,6 +102,8 @@ target_link_libraries(DrKonqiInternal
 
     KF5::Notifications # for status notifier
     KF5::IdleTime # hide status notifier only if user saw it
+
+    KF5::SyntaxHighlighting # Backtrace Highlighting
 
     drkonqi_backtrace_parser
     qbugzilla

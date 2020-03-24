@@ -25,7 +25,9 @@
 #include "debugpackageinstaller.h"
 #include "ui_backtracewidget.h"
 
-class QSyntaxHighlighter;
+namespace KSyntaxHighlighting {
+    class SyntaxHighlighter;
+}
 class BacktraceRatingWidget;
 class BacktraceGenerator;
 
@@ -54,7 +56,7 @@ private:
     BacktraceGenerator * m_btGenerator = nullptr;
     Ui::Form    ui;
     BacktraceRatingWidget *   m_backtraceRatingWidget = nullptr;
-    QSyntaxHighlighter *m_highlighter = nullptr;
+    KSyntaxHighlighting::SyntaxHighlighter *m_highlighter = nullptr;
     DebugPackageInstaller * m_debugPackageInstaller = nullptr;
 
     void setAsLoading();

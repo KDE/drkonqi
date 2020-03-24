@@ -21,9 +21,14 @@
 
 #include <QLabel>
 #include <QScrollBar>
+#include <QDebug>
 
 #include <KMessageBox>
 #include <KLocalizedString>
+#include <KSyntaxHighlighting/SyntaxHighlighter>
+#include <KSyntaxHighlighting/Repository>
+#include <KSyntaxHighlighting/Theme>
+#include <KSyntaxHighlighting/Definition>
 #include <qdesktopservices.h>
 
 #include "drkonqi.h"
@@ -33,7 +38,6 @@
 #include "parser/backtraceparser.h"
 #include "drkonqi_globals.h"
 #include "debuggermanager.h"
-#include "gdbhighlighter.h"
 
 static const char extraDetailsLabelMargin[] = " margin: 5px; ";
 
@@ -221,8 +225,14 @@ void BacktraceWidget::loadData()
 
         // highlight if possible
         if (m_btGenerator->debugger().codeName() == QLatin1String("gdb")) {
-            m_highlighter = new GdbHighlighter(ui.m_backtraceEdit->document(),
-                                               m_btGenerator->parser()->parsedBacktraceLines());
+            KSyntaxHighlighting::Repository repository;
+            m_highlighter = new KSyntaxHighlighting::SyntaxHighlighter(ui.m_backtraceEdit->document());
+            m_highlighter->setTheme((palette().color(QPalette::Base).lightness() < 128)
+                 ? repository.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                 : repository.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+
+            const auto def = repository.definitionForName(QStringLiteral("GDB Backtrace"));
+            m_highlighter->setDefinition(def);
         }
 
         BacktraceParser * btParser = m_btGenerator->parser();
@@ -322,11 +332,6 @@ void BacktraceWidget::loadData()
 
 void BacktraceWidget::backtraceNewLine(const QString & line)
 {
-    // We absolutely must not have a highlighter attached. The highlighter has
-    // a static list of lines to highlight from. When we are loading lines
-    // this static list does not match reality breaking text length expectations
-    // and resulting in segfaults.
-    Q_ASSERT(!m_highlighter);
     //While loading the backtrace (unparsed) a new line was sent from the debugger, append it
     ui.m_backtraceEdit->append(line.trimmed());
 }
