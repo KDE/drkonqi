@@ -39,4 +39,4 @@ Backends=KCrash
 [KCrash]
 Exec=lldb -p %pid
 ExecInputFile=%tempfile
-BatchCommands=settings set term-width 200\nprint "Content of s_kcrashErrorMessage:"\nprint s_kcrashErrorMessage\nthread info\nbt all\ndetach
+BatchCommands=settings set term-width 200\nthread info\nbt all

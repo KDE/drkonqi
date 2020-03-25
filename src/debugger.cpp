@@ -103,6 +103,12 @@ QString Debugger::backtraceBatchCommands() const
         ? m_config->group(m_backend).readPathEntry("BatchCommands", QString())
         : QString();
 }
+QString Debugger::preambleCommands() const
+{
+    return (isValid() && m_config->hasGroup(m_backend))
+        ? m_config->group(m_backend).readPathEntry("PreambleCommands", QString())
+        : QString();
+}
 
 bool Debugger::runInTerminal() const
 {
@@ -119,7 +125,7 @@ QString Debugger::backendValueOfParameter(const QString &key) const
 }
 
 //static
-void Debugger::expandString(QString & str, ExpandStringUsage usage, const QString & tempFile)
+void Debugger::expandString(QString & str, ExpandStringUsage usage, const QString & tempFile, const QString & preambleFile)
 {
     const CrashedApplication *appInfo = DrKonqi::crashedApplication();
     const QHash<QString, QString> map = {
@@ -130,6 +136,7 @@ void Debugger::expandString(QString & str, ExpandStringUsage usage, const QStrin
         { QLatin1String("signame"), appInfo->signalName() },
         { QLatin1String("pid"), QString::number(appInfo->pid()) },
         { QLatin1String("tempfile"), tempFile },
+        { QLatin1String("preamblefile"), preambleFile },
         { QLatin1String("thread"), QString::number(appInfo->thread()) },
     };
 

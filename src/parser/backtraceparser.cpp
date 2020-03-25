@@ -405,4 +405,11 @@ void BacktraceParser::calculateRatingData()
     qCDebug(DRKONQI_PARSER_LOG) << "Have seen stack base:" << haveSeenStackBase << "Lines counted:" << counter;
 }
 
-
+QString BacktraceParser::informationLines() const
+{
+    Q_D(const BacktraceParser);
+    QString ret = d->m_infoLines.join(QLatin1Char('\n'));
+    if (!ret.endsWith(QLatin1Char('\n')))
+        ret += QLatin1Char('\n');
+    return ret;
+}

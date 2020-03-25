@@ -74,5 +74,6 @@ TryExec=gdb
 Backends=KCrash
 
 [KCrash]
-Exec=gdb -nw -n -batch -x %tempfile -p %pid %execpath
-BatchCommands=set width 200\nprint "Content of s_kcrashErrorMessage:"\nprint s_kcrashErrorMessage\nthread\nthread apply all bt
+Exec=gdb -nw -n -batch -x %preamblefile -x %tempfile -p %pid %execpath
+PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+BatchCommands=thread\nthread apply all bt

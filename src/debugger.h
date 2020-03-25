@@ -67,6 +67,11 @@ public:
      */
     QString backtraceBatchCommands() const;
 
+    /** Returns the commands that should be given to the debugger before
+     * getting the backtrace
+     */
+    QString preambleCommands() const;
+
     /** If this is an external debugger, it returns whether it should be run in a terminal or not */
     bool runInTerminal() const;
 
@@ -79,7 +84,7 @@ public:
     };
 
     static void expandString(QString & str, ExpandStringUsage usage = ExpansionUsagePlainText,
-                             const QString & tempFile = QString());
+                             const QString & tempFile = QString(), const QString & preambleFile = QString());
 
 private:
     static QList<Debugger> availableDebuggers(const QString &path, const QString & backend);

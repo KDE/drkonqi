@@ -40,6 +40,7 @@ public:
 
     QString parsedBacktrace() const override;
     QList<BacktraceLine> parsedBacktraceLines() const override;
+    static const QLatin1String KCRASH_INFO_MESSAGE;
 
 protected:
     BacktraceParserPrivate *constructPrivate() const override;

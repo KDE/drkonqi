@@ -92,9 +92,15 @@ bool BacktraceGenerator::start()
     m_temp->write("\n", 1);
     m_temp->flush();
 
+    auto preamble = new QTemporaryFile(m_proc);
+    preamble->open();
+    preamble->write(m_debugger.preambleCommands().toUtf8());
+    preamble->write("\n", 1);
+    preamble->flush();
+
     // start the debugger
     QString str = m_debugger.command();
-    Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName());
+    Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
 
     *m_proc << KShell::splitArgs(str);
     m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
@@ -102,7 +108,7 @@ bool BacktraceGenerator::start()
     // check if the debugger should take its input from a file we'll generate,
     // and take the appropriate steps if so
     QString stdinFile = m_debugger.backendValueOfParameter(QStringLiteral("ExecInputFile"));
-    Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName());
+    Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
     if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
         m_proc->setStandardInputFile(stdinFile);
     }
@@ -182,7 +188,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     QString tmp(QStringLiteral("Application: %progname (%execname), signal: %signame\n"));
     Debugger::expandString(tmp);
 
-    m_parsedBacktrace = tmp + m_parser->parsedBacktrace();
+    m_parsedBacktrace = tmp + m_parser->informationLines() + m_parser->parsedBacktrace();
     m_state = Loaded;
 
 #ifdef BACKTRACE_PARSER_DEBUG

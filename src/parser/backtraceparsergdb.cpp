@@ -24,8 +24,10 @@
 
 //BEGIN BacktraceLineGdb
 
+const QLatin1String BacktraceParserGdb::KCRASH_INFO_MESSAGE("KCRASH_INFO_MESSAGE: ");
+
 BacktraceLineGdb::BacktraceLineGdb(const QString & lineStr)
-        : BacktraceLine()
+    : BacktraceLine()
 {
     d->m_line = lineStr;
     d->m_functionName = QLatin1String("??");
@@ -93,6 +95,12 @@ void BacktraceLineGdb::parse()
         }
 
         qCDebug(DRKONQI_PARSER_LOG) << d->m_stackFrameNumber << d->m_functionName << d->m_file << d->m_library;
+        return;
+    }
+
+    if (d->m_line.contains(BacktraceParserGdb::KCRASH_INFO_MESSAGE)) {
+        qCDebug(DRKONQI_PARSER_LOG) << "info:" << d->m_line;
+        d->m_type = Info;
         return;
     }
 
@@ -203,6 +211,9 @@ void BacktraceParserGdb::parseLine(const QString & lineStr)
     switch (line.type()) {
     case BacktraceLine::Crap:
         break; //we don't want crap in the backtrace ;)
+    case BacktraceLine::Info:
+        d->m_infoLines << line.toString().mid(KCRASH_INFO_MESSAGE.size());
+        break;
     case BacktraceLine::ThreadStart:
         d->m_linesList.append(line);
         d->m_possibleKCrashStart = d->m_linesList.size();

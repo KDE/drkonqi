@@ -35,7 +35,8 @@ public:
         ThreadStart, //line indicates the start of a thread's stack.
         SignalHandlerStart, //line indicates the signal handler start
                             //(contains "<signal handler called>")
-        StackFrame //line is a normal stack frame
+        StackFrame, //line is a normal stack frame
+        Info //< additional information on the bt
     };
 
     enum LineRating {

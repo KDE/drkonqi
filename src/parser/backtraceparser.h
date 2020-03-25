@@ -67,6 +67,8 @@ public:
     /*! Returns a list of libraries/executables that are missing debug symbols. */
     virtual QSet<QString> librariesWithMissingDebugSymbols() const;
 
+    QString informationLines() const;
+
 private Q_SLOTS:
     void resetState();
 

@@ -26,6 +26,7 @@ public:
     BacktraceParserPrivate() : m_usefulness(BacktraceParser::InvalidUsefulness) {}
     ~BacktraceParserPrivate() {}
 
+    QStringList m_infoLines;
     QList<BacktraceLine> m_linesList;
     QList<BacktraceLine> m_linesToRate;
     QStringList m_firstUsefulFunctions;
