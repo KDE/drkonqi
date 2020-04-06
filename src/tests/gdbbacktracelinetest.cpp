@@ -65,13 +65,43 @@ private Q_SLOTS:
         // couldn't deal with the function name being missing entirely.
         // As a result this line used to rate as 'Good' -.-
         // https://bugs.kde.org/show_bug.cgi?id=416923
-        BacktraceLineGdb line("#13 0x00007fe6059971b1 in  () at /usr/lib/libglib-2.0.so.0\n");
-        QCOMPARE(line.type(), BacktraceLine::StackFrame);
-        QCOMPARE(line.frameNumber(), 13);
-        QCOMPARE(line.functionName(), "");
-        QCOMPARE(line.fileName(), "");
-        QCOMPARE(line.libraryName(), "/usr/lib/libglib-2.0.so.0");
-        QCOMPARE(line.rating(), BacktraceLine::MissingSourceFile);
+        // https://bugs.kde.org/show_bug.cgi?id=418538
+        { // glib
+            BacktraceLineGdb line("#13 0x00007fe6059971b1 in  () at /usr/lib/libglib-2.0.so.0\n");
+            QCOMPARE(line.type(), BacktraceLine::StackFrame);
+            QCOMPARE(line.frameNumber(), 13);
+            QCOMPARE(line.functionName(), "");
+            QCOMPARE(line.fileName(), "");
+            QCOMPARE(line.libraryName(), "/usr/lib/libglib-2.0.so.0");
+            QCOMPARE(line.rating(), BacktraceLine::MissingSourceFile);
+        }
+        { // library without -2.0 (trips up suffix detection)
+            BacktraceLineGdb line("#13 0x00007fe6059971b1 in  () at /usr/lib/libpackagekit-qt.so.12\n");
+            QCOMPARE(line.type(), BacktraceLine::StackFrame);
+            QCOMPARE(line.frameNumber(), 13);
+            QCOMPARE(line.functionName(), "");
+            QCOMPARE(line.fileName(), "");
+            QCOMPARE(line.libraryName(), "/usr/lib/libpackagekit-qt.so.12");
+            QCOMPARE(line.rating(), BacktraceLine::MissingSourceFile);
+        }
+        { // library without any soversion
+            BacktraceLineGdb line("#13 0x00007fe6059971b1 in  () at /usr/lib/libpackagekit-qt.so\n");
+            QCOMPARE(line.type(), BacktraceLine::StackFrame);
+            QCOMPARE(line.frameNumber(), 13);
+            QCOMPARE(line.functionName(), "");
+            QCOMPARE(line.fileName(), "");
+            QCOMPARE(line.libraryName(), "/usr/lib/libpackagekit-qt.so");
+            QCOMPARE(line.rating(), BacktraceLine::MissingSourceFile);
+        }
+        { // library without any soversion but name suffix
+            BacktraceLineGdb line("#13 0x00007fe6059971b1 in  () at /usr/lib/libpackagekit-1.0.so\n");
+            QCOMPARE(line.type(), BacktraceLine::StackFrame);
+            QCOMPARE(line.frameNumber(), 13);
+            QCOMPARE(line.functionName(), "");
+            QCOMPARE(line.fileName(), "");
+            QCOMPARE(line.libraryName(), "/usr/lib/libpackagekit-1.0.so");
+            QCOMPARE(line.rating(), BacktraceLine::MissingSourceFile);
+        }
     }
 
     void testOnlyFunctionNofile()
