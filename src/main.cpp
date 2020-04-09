@@ -65,6 +65,7 @@ static const char description[] = I18N_NOOP("The KDE Crash Handler gives the use
 namespace {
     void openDrKonqiDialog () {
         DrKonqiDialog *w = new DrKonqiDialog();
+        QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
         QObject::connect(w, &DrKonqiDialog::rejected, qApp, &QApplication::quit);
         w->show();
     #ifdef Q_OS_MACOS
