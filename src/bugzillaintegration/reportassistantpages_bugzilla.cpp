@@ -30,6 +30,7 @@
 #include <QTemporaryFile>
 #include <QTextBrowser>
 #include <QDesktopServices>
+#include <QWindow>
 
 #include "drkonqi_debug.h"
 #include <KMessageBox>
@@ -170,9 +171,16 @@ void BugzillaLoginPage::openWallet()
 {
     //Store if the wallet was previously opened so we can know if we should close it later
     m_walletWasOpenedBefore = KWallet::Wallet::isOpen(KWallet::Wallet::NetworkWallet());
+
     //Request open the wallet
-    m_wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(),
-                                    static_cast<QWidget*>(this->parent())->winId());
+    WId windowId = 0;
+    const auto *widget = qobject_cast<QWidget*>(this->parent());
+    QWindow *window = widget->windowHandle();
+    if (window) {
+        windowId = window->winId();
+    }
+
+    m_wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), windowId);
 }
 
 void BugzillaLoginPage::walletLogin()
