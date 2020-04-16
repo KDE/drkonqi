@@ -76,7 +76,7 @@ ProtocolException::ProtocolException(const APIJob *job)
     : Exception()
     , m_job(job)
 {
-    qCWarning(BUGZILLA_LOG) << "ProtocolException:" << whatString();
+    qCWarning(BUGZILLA_LOG) << "ProtocolException:" << whatString() << job->error() << job->errorText() << job->errorString();
 }
 
 ProtocolException::ProtocolException(const ProtocolException &other)
