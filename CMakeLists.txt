@@ -75,9 +75,6 @@ endif()
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-endif()
 add_subdirectory(src)
 
 # add clang-format target for all our real source files
