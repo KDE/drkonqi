@@ -40,6 +40,10 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
     addMetaData(QStringLiteral("UserAgent"), QStringLiteral("DrKonqi"));
     // We don't want HTML blobs but proper job errors + text!
     addMetaData(QStringLiteral("errorPage"), QStringLiteral("false"));
+    // Disable automatic cookie injection. We don't need cookies but they
+    // can mess up requests (supposedly by being unexpected or invalid or outdated ...)
+    // https://bugs.kde.org/show_bug.cgi?id=419646
+    addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
 
     connect(m_transferJob, &KIO::TransferJob::data,
             this, [this](KIO::Job *, const QByteArray &data) {
