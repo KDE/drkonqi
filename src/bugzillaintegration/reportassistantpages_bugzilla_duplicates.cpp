@@ -1009,20 +1009,11 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
 
     connect(ui.buttonGroupProceed, SIGNAL(buttonClicked(int)), this, SLOT(checkProceed()));
     connect(ui.buttonGroupProceedQuestion, SIGNAL(buttonClicked(int)), this, SLOT(checkProceed()));
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     // Also listen to toggle so radio buttons are covered.
     connect(ui.buttonGroupProceed, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled),
             this, &BugzillaReportConfirmationDialog::checkProceed);
     connect(ui.buttonGroupProceedQuestion, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled),
             this, &BugzillaReportConfirmationDialog::checkProceed);
-#else
-    // Also listen to toggle so radio buttons are covered.
-    connect(ui.buttonGroupProceed, &QButtonGroup::buttonToggled,
-            this, &BugzillaReportConfirmationDialog::checkProceed);
-    connect(ui.buttonGroupProceedQuestion, &QButtonGroup::buttonToggled,
-            this, &BugzillaReportConfirmationDialog::checkProceed);
-#endif
-
 
     if (!m_showProceedQuestion) {
         ui.proceedLabel->setEnabled(false);
