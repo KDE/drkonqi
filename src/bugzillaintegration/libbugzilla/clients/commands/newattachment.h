@@ -34,8 +34,8 @@ class NewAttachment : public JsonCommand
     BUGZILLA_MEMBER_PROPERTY(QString, summary);
     BUGZILLA_MEMBER_PROPERTY(QString, content_type);
     BUGZILLA_MEMBER_PROPERTY(QString, comment);
-    BUGZILLA_MEMBER_PROPERTY(bool, is_patch);
-    BUGZILLA_MEMBER_PROPERTY(bool, is_private);
+    BUGZILLA_MEMBER_PROPERTY(bool, is_patch) = false;
+    BUGZILLA_MEMBER_PROPERTY(bool, is_private) = false;
 
     // flags property is not supported at this time
 
