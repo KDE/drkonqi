@@ -188,7 +188,8 @@ QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) cons
         { QStringLiteral("solaris"), QStringLiteral("Solaris Packages") },
         { QStringLiteral("chakra"), QStringLiteral("Chakra") },
         { QStringLiteral("ms windows"), QStringLiteral("MS Windows") },
-        { QStringLiteral("arch"), QStringLiteral("Archlinux Packages") }
+        { QStringLiteral("arch"), QStringLiteral("Archlinux Packages") },
+        { QStringLiteral("kde neon"), QStringLiteral("Neon Packages") }
     };
     for (auto it = platforms.constBegin(); it != platforms.constEnd(); ++it) {
         if (distroInfo.contains(it.key(), Qt::CaseInsensitive)) {
