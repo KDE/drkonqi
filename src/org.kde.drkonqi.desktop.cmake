@@ -41,6 +41,7 @@ Name[sv]=Dr Konqi
 Name[tg]=Dr Konqi
 Name[tr]=Dr Konqi
 Name[uk]=Dr Konqi
+Name[x-test]=xxDr Konqixx
 Name[zh_CN]=Dr Konqi
 Name[zh_TW]=Dr Konqi
 Icon=tools-report-bug
