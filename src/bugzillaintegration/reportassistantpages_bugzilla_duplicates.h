@@ -31,7 +31,7 @@
 #include "ui_assistantpage_bugzilla_duplicates_dialog_confirmation.h"
 #include <QDate>
 #include <QDialog>
-#include <kguiitem.h>
+#include <KGuiItem>
 
 class QDate;
 class QTreeWidgetItem;

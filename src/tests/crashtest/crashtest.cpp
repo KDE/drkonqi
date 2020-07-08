@@ -27,8 +27,8 @@
  *****************************************************************/
 
 // Let's crash.
-#include <kcrash.h>
-#include <kaboutdata.h>
+#include <KCrash>
+#include <KAboutData>
 #include <assert.h>
 #include <QtConcurrentMap>
 #include <QCommandLineParser>

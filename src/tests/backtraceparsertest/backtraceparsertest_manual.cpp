@@ -22,7 +22,7 @@
 #include <QMetaEnum>
 #include <QCoreApplication>
 #include <QCommandLineParser>
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <KLocalizedString>
 
 #include <iostream>

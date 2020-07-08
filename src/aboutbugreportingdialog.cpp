@@ -25,7 +25,7 @@
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QTextBrowser>
-#include <qboxlayout.h>
+#include <QBoxLayout>
 #include <QDialogButtonBox>
 #include <qdesktopservices.h>
 #include <QPushButton>
