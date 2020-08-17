@@ -56,8 +56,8 @@ void BacktraceLineGdb::parse()
     // "#5  0x00007f50e99f776f in QWidget::testAttribute_helper (this=0x6e6440,\n    attribute=Qt::WA_WState_Created) at kernel/qwidget.cpp:9081\n"
     // gdb breaks long stack frame lines into multiple ones for readability
     regExp.setPatternOptions(QRegularExpression::DotMatchesEverythingOption);
-    regExp.setPattern(QStringLiteral(
-                      "^#([0-9]+)" //matches the stack frame number, ex. "#0"
+    regExp.setPattern(QRegularExpression::anchoredPattern(QStringLiteral(
+                      "#([0-9]+)" //matches the stack frame number, ex. "#0"
                       "[\\s]+(?:0x[0-9a-f]+[\\s]+in[\\s]+)?" // matches " 0x0000dead in " (optionally)
                       "((?:\\(anonymous namespace\\)::)?[^\\(]+)?" //matches the function name
                       //(anything except left parenthesis, which is the start of the arguments section)
@@ -70,7 +70,7 @@ void BacktraceLineGdb::parse()
                       "([\\s]+" //beginning of optional file information
                       "(from|at)[\\s]+" //matches "from " or "at "
                       "(.+)" //matches the filename (source file or shared library file)
-                      ")?\n$")); //matches trailing newline.
+                      ")?\n"))); //matches trailing newline.
                     //the )? at the end closes the parenthesis before [\\s]+(from|at) and
                     //notes that the whole expression from there is optional.
 
@@ -108,25 +108,30 @@ void BacktraceLineGdb::parse()
         return;
     }
 
-    regExp.setPattern(QStringLiteral(".*\\(no debugging symbols found\\).*|"
-                      ".*\\[Thread debugging using libthread_db enabled\\].*|"
-                      ".*\\[New .*|"
-                      "0x[0-9a-f]+.*|"
-                      "Current language:.*"));
+    regExp.setPatternOptions(regExp.patternOptions() & ~QRegularExpression::DotMatchesEverythingOption);
+
+    regExp.setPattern(QRegularExpression::anchoredPattern(
+                        QStringLiteral(".*\\(no debugging symbols found\\).*|"
+                                       ".*\\[Thread debugging using libthread_db enabled\\].*|"
+                                       ".*\\[New .*|"
+                                       "0x[0-9a-f]+.*|"
+                                       "Current language:.*")));
     if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "garbage detected:" << d->m_line;
         d->m_type = Crap;
         return;
     }
 
-    regExp.setPattern(QStringLiteral("Thread [0-9]+\\s+\\(Thread [0-9a-fx]+\\s+\\(.*\\)\\):\n"));
+    regExp.setPattern(QRegularExpression::anchoredPattern(
+                        QStringLiteral("Thread [0-9]+\\s+\\(Thread [0-9a-fx]+\\s+\\(.*\\)\\):\n")));
     if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "thread start detected:" << d->m_line;
         d->m_type = ThreadStart;
         return;
     }
 
-    regExp.setPattern(QStringLiteral("\\[Current thread is [0-9]+ \\(.*\\)\\]\n"));
+    regExp.setPattern(QRegularExpression::anchoredPattern(
+                        QStringLiteral("\\[Current thread is [0-9]+ \\(.*\\)\\]\n")));
     if (regExp.match(d->m_line).hasMatch()) {
         qCDebug(DRKONQI_PARSER_LOG) << "thread indicator detected:" << d->m_line;
         d->m_type = ThreadIndicator;
