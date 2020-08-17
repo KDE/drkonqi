@@ -121,6 +121,24 @@ private Q_SLOTS:
         QCOMPARE(line.type(), BacktraceLine::Unknown);
         QCOMPARE(line.rating(), BacktraceLine::InvalidRating);
     }
+
+    void testThreadStart()
+    {
+        const QString input = QStringLiteral("Thread 35 (Thread 0x7f77f57fa700 (LWP 8133)):\n");
+        BacktraceLineGdb line(input);
+        QCOMPARE(line.type(), BacktraceLineGdb::ThreadStart);
+        QCOMPARE(line.rating(), BacktraceLine::InvalidRating);
+        QCOMPARE(line.toString(), input);
+    }
+
+    void testThreadIndicator()
+    {
+        const QString input = QStringLiteral("[Current thread is 1 (Thread 0x7f78847c7c80 (LWP 7806))]\n");
+        BacktraceLineGdb line(input);
+        QCOMPARE(line.type(), BacktraceLineGdb::ThreadIndicator);
+        QCOMPARE(line.rating(), BacktraceLine::InvalidRating);
+        QCOMPARE(line.toString(), input);
+    }
 };
 
 QTEST_GUILESS_MAIN(GdbBacktraceLineTest)
