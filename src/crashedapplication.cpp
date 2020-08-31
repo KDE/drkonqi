@@ -172,7 +172,7 @@ QString getSuggestedKCrashFilename(const CrashedApplication* app)
 {
     QString filename = app->fakeExecutableBaseName() + QLatin1Char('-') +
                        app->datetime().toString(QStringLiteral("yyyyMMdd-hhmmss")) +
-                       QStringLiteral(".kcrash.txt");
+                       QStringLiteral(".kcrash");
 
     if (filename.contains(QLatin1Char('/'))) {
         filename = filename.mid(filename.lastIndexOf(QLatin1Char('/')) + 1);

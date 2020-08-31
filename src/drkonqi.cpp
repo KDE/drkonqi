@@ -144,7 +144,7 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
 {
     if (isSafer()) {
         QTemporaryFile tf;
-        tf.setFileTemplate(QStringLiteral("XXXXXX.kcrash.txt"));
+        tf.setFileTemplate(QStringLiteral("XXXXXX.kcrash"));
         tf.setAutoRemove(false);
 
         if (tf.open()) {
