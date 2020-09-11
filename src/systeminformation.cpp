@@ -1,21 +1,10 @@
 /*******************************************************************
 * systeminformation.cpp
-* Copyright 2009    Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* Copyright 2009    George Kiagiadakis <gkiagia@users.sourceforge.net>
-* Copyright 2019    Harald Sitter <sitter@kde.org>
+* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+* SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
 *
-* modify it under the terms of the GNU General Public License as
-* This program is free software; you can redistribute it and/or
-* published by the Free Software Foundation; either version 2 of
-* the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* SPDX-License-Identifier: GPL-2.0-or-later
 *
 ******************************************************************/
 
