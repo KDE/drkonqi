@@ -12,9 +12,6 @@
 class QJsonDocument;
 class QJsonObject;
 
-namespace KIO {
-class TransferJob;
-}
 
 namespace Bugzilla {
 
