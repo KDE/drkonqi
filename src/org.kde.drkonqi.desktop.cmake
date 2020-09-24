@@ -38,7 +38,6 @@ Name[sr]=Др Конки
 Name[sr@ijekavian]=Др Конки
 Name[sr@ijekavianlatin]=DrKonqi
 Name[sr@latin]=DrKonqi
-Name[sv]=Dr Konqi
 Name[tg]=Dr Konqi
 Name[tr]=Dr Konqi
 Name[uk]=Dr Konqi
