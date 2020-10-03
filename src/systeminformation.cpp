@@ -210,7 +210,7 @@ QString SystemInformation::fetchOSDetailInformation() const
 
     auto unameFunc = &uname;
     if (m_infoConfig.unameFunc) {
-        unameFunc = (int (*)(utsname*))m_infoConfig.unameFunc;
+        unameFunc = (decltype(&uname))m_infoConfig.unameFunc;
     }
 
     if ((*unameFunc)(&buf) == -1) {
