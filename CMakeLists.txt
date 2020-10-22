@@ -31,7 +31,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service
 find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
 set_package_properties(Qt5X11Extras PROPERTIES TYPE RECOMMENDED PURPOSE "Recommended for better integration on X11.")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054C00)
 
 if (MINGW)
     find_package(ZLIB REQUIRED)
