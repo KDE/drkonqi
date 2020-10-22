@@ -999,9 +999,9 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     connect(ui.buttonGroupProceed, SIGNAL(buttonClicked(int)), this, SLOT(checkProceed()));
     connect(ui.buttonGroupProceedQuestion, SIGNAL(buttonClicked(int)), this, SLOT(checkProceed()));
     // Also listen to toggle so radio buttons are covered.
-    connect(ui.buttonGroupProceed, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled),
+    connect(ui.buttonGroupProceed, &QButtonGroup::idPressed,
             this, &BugzillaReportConfirmationDialog::checkProceed);
-    connect(ui.buttonGroupProceedQuestion, static_cast<void (QButtonGroup::*)(int, bool)>(&QButtonGroup::buttonToggled),
+    connect(ui.buttonGroupProceedQuestion, &QButtonGroup::idPressed,
             this, &BugzillaReportConfirmationDialog::checkProceed);
 
     if (!m_showProceedQuestion) {
