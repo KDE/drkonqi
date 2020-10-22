@@ -49,7 +49,6 @@ private:
     DebugPackageInstaller * m_debugPackageInstaller = nullptr;
 
     void setAsLoading();
-    void adjustWindowSize();
 
 private Q_SLOTS:
     void loadData();

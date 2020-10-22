@@ -79,7 +79,6 @@ public:
     // Convenience methods to get useful content out of the
     QStringList componentNames() const;
     QStringList allVersions() const;
-    QStringList activeVersions() const;
     QStringList inactiveVersions() const;
 
 private:
