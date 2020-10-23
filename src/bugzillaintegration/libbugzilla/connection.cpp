@@ -6,7 +6,6 @@
 
 #include "connection.h"
 
-#include <QUrlQuery>
 
 #include <KIOCore/KIO/TransferJob>
 

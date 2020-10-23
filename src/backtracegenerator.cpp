@@ -8,7 +8,6 @@
  *****************************************************************/
 #include "backtracegenerator.h"
 
-#include <QTemporaryFile>
 #include "drkonqi_debug.h"
 #include <KShell>
 #include <KProcess>
