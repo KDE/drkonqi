@@ -111,7 +111,7 @@ void StatusNotifier::show()
 
     // make sure the user doesn't miss the SNI by stopping the auto hide timer when the session becomes idle
     int idleId = KIdleTime::instance()->addIdleTimeout(30000);
-    connect(KIdleTime::instance(), static_cast<void (KIdleTime::*)(int)>(&KIdleTime::timeoutReached), this, [this, idleId](int id) {
+    connect(KIdleTime::instance(), static_cast<void (KIdleTime::*)(int, int)>(&KIdleTime::timeoutReached), this, [this, idleId](int id) {
         if (idleId == id) {
             m_autoCloseTimer->stop();
         }
