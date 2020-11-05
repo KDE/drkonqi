@@ -17,6 +17,7 @@
 #include <sys/un.h>
 
 #include <unistd.h>
+#include <errno.h>
 
 void setPtracer(qint64 debuggerpid, qint64 debuggeepid)
 {
