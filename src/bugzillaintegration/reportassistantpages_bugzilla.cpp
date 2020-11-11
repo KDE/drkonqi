@@ -413,6 +413,14 @@ void BugzillaInformationPage::checkTexts()
     ui.m_titleEdit->setVisible(showTitle);
     ui.m_titleLabel->setVisible(showTitle);
 
+    // Force focus on the first input field for ease of use.
+    // https://bugs.kde.org/show_bug.cgi?id=428350
+    if (showTitle) {
+        ui.m_titleEdit->setFocus();
+    } else {
+        ui.m_detailsEdit->setFocus();
+    }
+
     bool ok = !((ui.m_titleEdit->isVisible() && ui.m_titleEdit->text().isEmpty())
         || ui.m_detailsEdit->toPlainText().isEmpty());
 
