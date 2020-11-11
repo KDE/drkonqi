@@ -355,7 +355,7 @@ BugzillaInformationPage::BugzillaInformationPage(ReportAssistantDialog * parent)
                                          "Retry"),
                                    ui.m_messageWidget);
     connect(retryAction, &QAction::triggered,
-            this, [this, retryAction]{
+            this, [this]{
         ui.m_messageWidget->animatedHide();
         loadDistroCombo();
     });
