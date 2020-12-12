@@ -95,7 +95,7 @@ DBusInterfaceAdaptor::DBusInterfaceAdaptor(DebuggerManager *parent)
 {
     Q_ASSERT(parent);
 
-    if (QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.drkonqi-%1").arg(pid()))) {
+    if (QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.drkonqi.PID%1").arg(pid()))) {
         QDBusConnection::sessionBus().registerObject(QStringLiteral("/debugger"), parent);
     }
 }
