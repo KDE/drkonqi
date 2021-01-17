@@ -24,7 +24,7 @@ public:
         SignalHandlerStart, //line indicates the signal handler start
                             //(contains "<signal handler called>")
         StackFrame, //line is a normal stack frame
-        Info //< additional information on the bt
+        Info, //< additional information on the bt
     };
 
     enum LineRating {
@@ -34,7 +34,7 @@ public:
         MissingLibrary = 2, // #0 0x0000dead in foobar()
         MissingSourceFile = 3, // #0 0x0000dead in FooBar::FooBar () from /usr/lib/libfoobar.so.4
         Good = 4, // #0 0x0000dead in FooBar::crash (this=0x0) at /home/user/foobar.cpp:204
-        InvalidRating = -1 // (dummy invalid value)
+        InvalidRating = -1, // (dummy invalid value)
     };
 
     static const LineRating BestRating = Good;

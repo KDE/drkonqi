@@ -29,7 +29,7 @@ public:
         RESOLVED,
         NEEDSINFO,
         VERIFIED,
-        CLOSED
+        CLOSED,
     };
     Q_ENUM(Status)
 
@@ -48,7 +48,7 @@ public:
         DOWNSTREAM,
         WAITINGFORINFO,
         BACKTRACE,
-        UNMAINTAINED
+        UNMAINTAINED,
     };
     Q_ENUM(Resolution)
 

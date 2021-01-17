@@ -22,7 +22,7 @@ class BacktraceGenerator : public QObject
     Q_OBJECT
 
 public:
-    enum State { NotLoaded, Loading, Loaded, Failed, FailedToStart };
+    enum State { NotLoaded, Loading, Loaded, Failed, FailedToStart, };
 
     BacktraceGenerator(const Debugger & debugger, QObject *parent);
     ~BacktraceGenerator() override;

@@ -16,7 +16,7 @@
 #include <QGuiApplication>
 #include <KAboutData>
 
-enum CrashType { Crash, Malloc, Div0, Assert, QAssert, Threads, FatalErrorMessage };
+enum CrashType { Crash, Malloc, Div0, Assert, QAssert, Threads, FatalErrorMessage, };
 
 struct SomeStruct
 {

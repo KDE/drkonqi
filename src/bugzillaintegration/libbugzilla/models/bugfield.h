@@ -63,7 +63,7 @@ public:
         SeeAlso = 7,
         Keywords = 8,
         Date = 9,
-        Integer = 10
+        Integer = 10,
     };
 
     typedef QPointer<BugField> Ptr;
