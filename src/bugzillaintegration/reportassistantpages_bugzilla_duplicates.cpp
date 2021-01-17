@@ -36,11 +36,10 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
 
     ui.setupUi(this);
     ui.information->hide();
-
-    connect(ui.m_bugListWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
-             this, SLOT(itemClicked(QTreeWidgetItem*,int)));
-    connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged,
-            this, &BugzillaDuplicatesPage::itemSelectionChanged);
+    // clang-format off
+    connect(ui.m_bugListWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)), this, SLOT(itemClicked(QTreeWidgetItem*,int)));
+    connect(ui.m_bugListWidget, &QTreeWidget::itemSelectionChanged, this, &BugzillaDuplicatesPage::itemSelectionChanged);
+    // clang-format on
 
     QHeaderView * header = ui.m_bugListWidget->header();
     header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
@@ -90,8 +89,9 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
     connect(ui.m_stopSearchButton, &QAbstractButton::clicked, this, &BugzillaDuplicatesPage::stopCurrentSearch);
 
     //Possible duplicates list and buttons
-    connect(ui.m_selectedDuplicatesList, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-             this, SLOT(itemClicked(QListWidgetItem*)));
+    // clang-format off
+    connect(ui.m_selectedDuplicatesList, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(itemClicked(QListWidgetItem*)));
+    // clang-format on
     connect(ui.m_selectedDuplicatesList, &QListWidget::itemSelectionChanged,
              this, &BugzillaDuplicatesPage::possibleDuplicateSelectionChanged);
 

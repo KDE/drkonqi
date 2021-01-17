@@ -69,7 +69,7 @@ public:
 
     enum ExpandStringUsage {
         ExpansionUsagePlainText,
-        ExpansionUsageShell
+        ExpansionUsageShell,
     };
 
     static void expandString(QString & str, ExpandStringUsage usage = ExpansionUsagePlainText,

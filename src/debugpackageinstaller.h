@@ -19,7 +19,7 @@ class DebugPackageInstaller: public QObject
     Q_OBJECT
 
     enum Results { ResultInstalled = 0, ResultError = 1,
-                   ResultSymbolsNotFound = 2, ResultCanceled = 3 };
+                   ResultSymbolsNotFound = 2, ResultCanceled = 3, };
 
     public:
         explicit DebugPackageInstaller(QObject *parent = nullptr);

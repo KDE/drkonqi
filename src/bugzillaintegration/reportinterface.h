@@ -26,17 +26,17 @@ class ReportInterface : public QObject
     Q_OBJECT
 public:
     enum Reproducible { ReproducibleUnsure, ReproducibleNever,
-        ReproducibleSometimes, ReproducibleEverytime };
+        ReproducibleSometimes, ReproducibleEverytime, };
 
     enum class Backtrace {
         Complete,
         Reduced,
-        Exclude
+        Exclude,
     };
 
     enum class DrKonqiStamp {
         Include,
-        Exclude
+        Exclude,
     };
 
     explicit ReportInterface(QObject *parent = nullptr);

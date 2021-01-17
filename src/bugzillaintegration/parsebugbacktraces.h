@@ -31,7 +31,7 @@ class ParseBugBacktraces : QObject
             PerfectDuplicate,//functionnames and stackframe numer match
             MostLikelyDuplicate,//functionnames and stackframe numer match >=90%
             MaybeDuplicate,//functionnames and stackframe numer match >=60%
-            NoDuplicate//functionnames and stackframe numer match <60%
+            NoDuplicate,//functionnames and stackframe numer match <60%
         };
 
         DuplicateRating findDuplicate(const QList<BacktraceLine> &backtrace);
