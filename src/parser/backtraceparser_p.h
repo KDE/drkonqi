@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009-2010 George Kiagiadakis <kiagiadakis.george@gmail.com>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -26,6 +27,7 @@ public:
     QString m_simplifiedBacktrace;
     QSet<QString> m_librariesWithMissingDebugSymbols;
     BacktraceParser::Usefulness m_usefulness;
+    bool m_compositorCrashed = false;
 };
 
 #endif // BACKTRACEPARSER_P_H

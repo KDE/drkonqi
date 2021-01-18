@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009-2010 George Kiagiadakis <kiagiadakis.george@gmail.com>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -60,6 +61,11 @@ public:
 
     /*! Returns a list of libraries/executables that are missing debug symbols. */
     virtual QSet<QString> librariesWithMissingDebugSymbols() const;
+
+    /*! Check if the crash is because of the client aborting after a compositor crash.
+     * https://bugs.kde.org/show_bug.cgi?id=431561
+     */
+    bool hasCompositorCrashed() const;
 
     QString informationLines() const;
 
