@@ -2,6 +2,7 @@
  * reportassistantpages_base.cpp
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2009 A. L. Spehr <spehr@kde.org>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -202,6 +203,10 @@ ConclusionPage::ConclusionPage(ReportAssistantDialog *parent)
                                      "report information about this crash.")));
     connect(ui.m_showReportInformationButton, &QPushButton::clicked, this, &ConclusionPage::openReportInformation);
 
+    connect(ui.m_explanationLabel, &QLabel::linkActivated, this, [](const QString &link) {
+        QDesktopServices::openUrl(QUrl(link));
+    });
+
     ui.m_restartAppOnFinish->setVisible(false);
 }
 
@@ -245,6 +250,26 @@ void ConclusionPage::aboutToShow()
     const bool isDuplicate = reportInterface()->duplicateId() && !reportInterface()->attachToBugNumber();
     m_needToReport = reportInterface()->isWorthReporting() && !isDuplicate;
     emitCompleteChanged();
+
+    if (DrKonqi::debuggerManager()->backtraceGenerator()->parser()->hasCompositorCrashed()) {
+        ui.m_conclusionsLabel->setText(i18nc("@info",
+                                             "It appears that this crash is actually the result of an earlier crash in the compositor and cannot be "
+                                             "submitted as it lacks the required information to resolve the problem."));
+        ui.m_explanationLabel->setText(xi18nc(
+            "@info",
+            "KDE developers would appreciate if you could find and attach the crash log for the compositor. You may be able to retrieve it using the "
+            "coredumpctl utility. For more information, see "
+            "<link "
+            "url='https://community.kde.org/Guidelines_and_HOWTOs/Debugging/How_to_create_useful_crash_reports#Retrieving_a_backtrace_using_coredumpctl'>the "
+            "KDE Community Wiki</"
+            "link>."));
+        ui.m_showReportInformationButton->setVisible(false); // Don't give access to the report, lest people file them manually.
+        if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
+            ui.m_restartAppOnFinish->setVisible(true);
+        }
+        emit finished(false /* don't enable back button - the user can't improve this result*/);
+        return;
+    }
 
     BugReportAddress reportAddress = DrKonqi::crashedApplication()->bugReportAddress();
     BacktraceParser::Usefulness use = DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();

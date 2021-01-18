@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -24,6 +25,8 @@ private Q_SLOTS:
     void btParserFunctionsTest();
     void btParserBenchmark_data();
     void btParserBenchmark();
+    void btParserCompositorCrashTest_data();
+    void btParserCompositorCrashTest();
 
 private:
     void fetchData(const QString &group);

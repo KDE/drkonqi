@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -21,6 +22,7 @@ void BacktraceParserTest::fetchData(const QString &group)
     QTest::addColumn<QString>("filename");
     QTest::addColumn<QString>("result");
     QTest::addColumn<QString>("debugger");
+    QTest::addColumn<bool>("compositorCrash");
 
     m_settings.beginGroup(group);
     QStringList keys = m_settings.allKeys();
@@ -28,7 +30,8 @@ void BacktraceParserTest::fetchData(const QString &group)
 
     foreach (const QString &key, keys) {
         QTest::newRow(qPrintable(key)) << QString(DATA_DIR + QLatin1Char('/') + key) << m_settings.value(group + QLatin1Char('/') + key).toString()
-                                       << m_settings.value(QStringLiteral("debugger/") + key).toString();
+                                       << m_settings.value(QStringLiteral("debugger/") + key).toString()
+                                       << m_settings.value(QStringLiteral("compositorCrash/") + key).toBool();
     }
 }
 
@@ -102,6 +105,25 @@ void BacktraceParserTest::btParserBenchmark()
     QBENCHMARK_ONCE {
         m_generator->sendData(filename);
     }
+}
+
+void BacktraceParserTest::btParserCompositorCrashTest_data()
+{
+    fetchData(QStringLiteral("compositorCrash"));
+}
+
+void BacktraceParserTest::btParserCompositorCrashTest()
+{
+    QFETCH(QString, filename);
+    QFETCH(QString, debugger);
+    QFETCH(bool, compositorCrash);
+    // parse
+    QSharedPointer<BacktraceParser> parser(BacktraceParser::newParser(debugger));
+    parser->connectToGenerator(m_generator);
+    m_generator->sendData(filename);
+
+    // compare
+    QCOMPARE(parser->hasCompositorCrashed(), compositorCrash);
 }
 
 QTEST_GUILESS_MAIN(BacktraceParserTest)

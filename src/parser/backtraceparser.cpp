@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009-2010 George Kiagiadakis <kiagiadakis.george@gmail.com>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -116,6 +117,19 @@ QSet<QString> BacktraceParser::librariesWithMissingDebugSymbols() const
 
     // if there is no d, the debugger has not run yet, so we have no libraries.
     return d ? d->m_librariesWithMissingDebugSymbols : QSet<QString>();
+}
+
+bool BacktraceParser::hasCompositorCrashed() const
+{
+    Q_D(const BacktraceParser);
+
+    // if there is no cached usefulness, the data calculation function has not run yet.
+    if (d && d->m_usefulness == InvalidUsefulness) {
+        const_cast<BacktraceParser *>(this)->calculateRatingData();
+    }
+
+    // if there is no d, the debugger has not run yet, so we don't know anything.
+    return d ? d->m_compositorCrashed : false;
 }
 
 void BacktraceParser::resetState()
@@ -271,6 +285,10 @@ void BacktraceParser::calculateRatingData()
 
     while (i.hasPrevious()) {
         const BacktraceLine &line = i.previous();
+
+        if (!d->m_compositorCrashed && line.toString().contains(QLatin1String("The Wayland connection broke. Did the Wayland compositor die"))) {
+            d->m_compositorCrashed = true;
+        }
 
         if (!i.hasPrevious() && line.rating() == BacktraceLine::MissingEverything) {
             // Under some circumstances, the very first stack frame is invalid (ex, calling a function

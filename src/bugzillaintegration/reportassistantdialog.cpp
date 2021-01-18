@@ -1,7 +1,7 @@
 /*******************************************************************
  * reportassistantdialog.cpp
  * SPDX-FileCopyrightText: 2009, 2010 Dario Andres Rodriguez <andresbajotierra@gmail.com>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -279,6 +279,13 @@ void ReportAssistantDialog::next()
     } else if (name == QLatin1String(PAGE_CRASHINFORMATION_ID)) {
         // Force save settings in current page
         page->aboutToHide();
+
+        // Qt aborts clients when the wayland compositor crashes. We can't do anything with these reports and immediately
+        // jump to the conclusion page. Additional handling happens there.
+        if (DrKonqi::debuggerManager()->backtraceGenerator()->parser()->hasCompositorCrashed()) {
+            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_CONCLUSIONS_ID)));
+            return;
+        }
 
         // If the crash is worth reporting and it is BKO, skip the Conclusions page
         if (m_reportInterface->isWorthReporting() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
