@@ -175,15 +175,20 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         report.append(QLatin1String("\n\n"));
     }
 
-    //Crash reproducibility (only if useful)
-    if (m_reproducible !=  ReproducibleUnsure) {
-        if (m_reproducible == ReproducibleEverytime) {
-            report.append(QStringLiteral("The crash can be reproduced every time.\n\n"));
-        } else if (m_reproducible == ReproducibleSometimes) {
-            report.append(QStringLiteral("The crash can be reproduced sometimes.\n\n"));
-        } else if (m_reproducible == ReproducibleNever) {
-            report.append(QStringLiteral("The crash does not seem to be reproducible.\n\n"));
-        }
+    // Crash reproducibility
+    switch (m_reproducible) {
+    case ReproducibleUnsure:
+        report.append(QStringLiteral("The reporter is unsure if this crash is reproducible.\n\n"));
+        break;
+    case ReproducibleNever:
+        report.append(QStringLiteral("The crash does not seem to be reproducible.\n\n"));
+        break;
+    case ReproducibleSometimes:
+        report.append(QStringLiteral("The crash can be reproduced sometimes.\n\n"));
+        break;
+    case ReproducibleEverytime:
+        report.append(QStringLiteral("The crash can be reproduced every time.\n\n"));
+        break;
     }
 
     //Backtrace
