@@ -69,7 +69,6 @@ DrKonqiDialog::DrKonqiDialog(QWidget * parent) :
     buildDialogButtons();
 
     KWindowConfig::restoreWindowSize(windowHandle(), config);
-    setLayout(l);
 
     // Force a 16:9 ratio for nice appearance by default.
     QSize aspect(16, 9);
