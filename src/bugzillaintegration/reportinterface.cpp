@@ -149,7 +149,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
-    report.append(QStringLiteral("Windowing system: %1\n").arg(sysInfo->windowSystem()));
+    report.append(QStringLiteral("Windowing System: %1\n").arg(sysInfo->windowSystem()));
 
     //LSB output or manually selected distro
     if ( !sysInfo->distributionPrettyName().isEmpty() ) {
