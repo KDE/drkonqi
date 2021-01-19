@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 
 #include "drkonqi.h"
+#include "config-drkonqi.h"
 #include "bugzillalib.h"
 #include "productmapping.h"
 #include "systeminformation.h"
@@ -150,6 +151,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
     report.append(QStringLiteral("Windowing System: %1\n").arg(sysInfo->windowSystem()));
+    report.append(QStringLiteral("Drkonqi Version: %1\n").arg(QString::fromLatin1(PROJECT_VERSION)));
 
     //LSB output or manually selected distro
     if ( !sysInfo->distributionPrettyName().isEmpty() ) {
