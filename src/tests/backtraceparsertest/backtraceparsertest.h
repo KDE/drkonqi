@@ -6,7 +6,8 @@
 #ifndef BACKTRACEPARSERTEST_H
 #define BACKTRACEPARSERTEST_H
 
-#include <QtTest>
+#include <QTest>
+#include <QSettings>
 #include "fakebacktracegenerator.h"
 #include "../../parser/backtraceparser.h"
 
