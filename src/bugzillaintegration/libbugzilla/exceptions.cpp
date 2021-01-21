@@ -9,8 +9,8 @@
 #include "apijob.h"
 #include "bugzilla_debug.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 APIException::APIException(const QJsonDocument &document)
     : APIException(document.object())
 {
@@ -27,9 +27,7 @@ APIException::APIException(const QJsonObject &object)
     // Our bugzilla is a bit bugged. It doesn't necessarily set error to true
     // but instead keeps it at null. Because of this we need to possibly shimy
     // the bool to align with reality.
-    if (object.value(QStringLiteral("error")).type() == QJsonValue::Null &&
-            m_code > 0 &&
-            !m_message.isNull()) {
+    if (object.value(QStringLiteral("error")).type() == QJsonValue::Null && m_code > 0 && !m_message.isNull()) {
         m_isError = true;
     }
     if (m_isError) {
@@ -107,4 +105,3 @@ QString RuntimeException::whatString() const
 }
 
 } // namespace Bugzilla
-

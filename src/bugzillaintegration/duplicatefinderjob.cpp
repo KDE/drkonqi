@@ -1,37 +1,33 @@
 /*******************************************************************
-* duplicatefinderjob.cpp
-* SPDX-FileCopyrightText: 2011 Matthias Fuchs <mat69@gmx.net>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * duplicatefinderjob.cpp
+ * SPDX-FileCopyrightText: 2011 Matthias Fuchs <mat69@gmx.net>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "duplicatefinderjob.h"
 
 #include "drkonqi_debug.h"
 
 #include "backtracegenerator.h"
-#include "parser/backtraceparser.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "parsebugbacktraces.h"
+#include "parser/backtraceparser.h"
 
 DuplicateFinderJob::DuplicateFinderJob(const QList<Bugzilla::Bug::Ptr> &bugs, BugzillaManager *manager, QObject *parent)
-  : KJob(parent),
-    m_manager(manager),
-    m_bugs(bugs)
+    : KJob(parent)
+    , m_manager(manager)
+    , m_bugs(bugs)
 {
     qCDebug(DRKONQI_LOG) << "Possible duplicates:" << m_bugs.size();
-    connect(m_manager, &BugzillaManager::bugReportFetched,
-            this, &DuplicateFinderJob::slotBugReportFetched);
-    connect(m_manager, &BugzillaManager::bugReportError,
-            this, &DuplicateFinderJob::slotError);
+    connect(m_manager, &BugzillaManager::bugReportFetched, this, &DuplicateFinderJob::slotBugReportFetched);
+    connect(m_manager, &BugzillaManager::bugReportError, this, &DuplicateFinderJob::slotError);
 
-    connect(m_manager, &BugzillaManager::commentsFetched,
-            this, &DuplicateFinderJob::slotCommentsFetched);
-    connect(m_manager, &BugzillaManager::commentsError,
-            this, &DuplicateFinderJob::slotError);
+    connect(m_manager, &BugzillaManager::commentsFetched, this, &DuplicateFinderJob::slotCommentsFetched);
+    connect(m_manager, &BugzillaManager::commentsError, this, &DuplicateFinderJob::slotError);
 }
 
 DuplicateFinderJob::~DuplicateFinderJob()
@@ -101,7 +97,7 @@ void DuplicateFinderJob::slotCommentsFetched(const QList<Bugzilla::Comment::Ptr>
     const ParseBugBacktraces::DuplicateRating rating = parse.findDuplicate(btGenerator->parser()->parsedBacktraceLines());
     qCDebug(DRKONQI_LOG) << "Duplicate rating:" << rating;
 
-    //TODO handle more cases here
+    // TODO handle more cases here
     if (rating != ParseBugBacktraces::PerfectDuplicate) {
         qCDebug(DRKONQI_LOG) << "Bug" << m_bug->id() << "most likely not a duplicate:" << rating;
         analyzeNextBug();
@@ -111,7 +107,7 @@ void DuplicateFinderJob::slotCommentsFetched(const QList<Bugzilla::Comment::Ptr>
     bool unknownStatus = (m_bug->status() == Bugzilla::Bug::Status::Unknown);
     bool unknownResolution = (m_bug->resolution() == Bugzilla::Bug::Resolution::Unknown);
 
-    //The Bug is a duplicate, now find out the status and resolution of the existing report
+    // The Bug is a duplicate, now find out the status and resolution of the existing report
     if (m_bug->resolution() == Bugzilla::Bug::Resolution::DUPLICATE) {
         qCDebug(DRKONQI_LOG) << "Found duplicate is a duplicate itself.";
         if (!m_result.duplicate) {
@@ -132,8 +128,7 @@ void DuplicateFinderJob::slotCommentsFetched(const QList<Bugzilla::Comment::Ptr>
         m_result.parentDuplicate = m_bug->id();
         m_result.status = m_bug->status();
         m_result.resolution = m_bug->resolution();
-        qCDebug(DRKONQI_LOG) << "Found duplicate information (id/status/resolution):"
-                             << m_bug->id() << m_bug->status() << m_bug->resolution();
+        qCDebug(DRKONQI_LOG) << "Found duplicate information (id/status/resolution):" << m_bug->id() << m_bug->status() << m_bug->resolution();
         emitResult();
     }
 }
@@ -146,4 +141,3 @@ void DuplicateFinderJob::slotError(const QString &message, QObject *owner)
     qCDebug(DRKONQI_LOG) << "Error fetching bug:" << message;
     analyzeNextBug();
 }
-

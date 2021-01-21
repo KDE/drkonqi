@@ -7,24 +7,24 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+#include <QFileDialog>
 #include <QPointer>
+#include <QTemporaryFile>
 #include <QTextStream>
 #include <QTimerEvent>
-#include <QTemporaryFile>
-#include <QFileDialog>
 
-#include <KMessageBox>
 #include <KCrash>
-#include <KLocalizedString>
 #include <KJobWidgets>
-#include <kio/filecopyjob.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QApplication>
+#include <kio/filecopyjob.h>
 
-#include "systeminformation.h"
-#include "crashedapplication.h"
-#include "drkonqibackends.h"
-#include "debuggermanager.h"
 #include "backtracegenerator.h"
+#include "crashedapplication.h"
+#include "debuggermanager.h"
+#include "drkonqibackends.h"
+#include "systeminformation.h"
 
 DrKonqi::DrKonqi()
     : m_signal(0)
@@ -45,22 +45,25 @@ DrKonqi::~DrKonqi()
     delete m_backend;
 }
 
-//static
+// static
 DrKonqi *DrKonqi::instance()
 {
     static DrKonqi drKonqiInstance;
     return &drKonqiInstance;
 }
 
-//based on KCrashDelaySetHandler from kdeui/util/kcrash.cpp
+// based on KCrashDelaySetHandler from kdeui/util/kcrash.cpp
 class EnableCrashCatchingDelayed : public QObject
 {
 public:
-    EnableCrashCatchingDelayed() {
+    EnableCrashCatchingDelayed()
+    {
         startTimer(10000); // 10 s
     }
+
 protected:
-    void timerEvent(QTimerEvent *event) override {
+    void timerEvent(QTimerEvent *event) override
+    {
         qCDebug(DRKONQI_LOG) << "Enabling drkonqi crash catching";
         KCrash::setDrKonqiEnabled(true);
         killTimer(event->timerId());
@@ -72,7 +75,7 @@ bool DrKonqi::init()
 {
     if (!instance()->m_backend->init()) {
         return false;
-    } else { //all ok, continue initialization
+    } else { // all ok, continue initialization
         // Set drkonqi to handle its own crashes, but only if the crashed app
         // is not drkonqi already. If it is drkonqi, delay enabling crash catching
         // to prevent recursive crashes (in case it crashes at startup)
@@ -86,26 +89,26 @@ bool DrKonqi::init()
     }
 }
 
-//static
+// static
 SystemInformation *DrKonqi::systemInformation()
 {
     return instance()->m_systemInformation;
 }
 
-//static
-DebuggerManager* DrKonqi::debuggerManager()
+// static
+DebuggerManager *DrKonqi::debuggerManager()
 {
     return instance()->m_backend->debuggerManager();
 }
 
-//static
+// static
 CrashedApplication *DrKonqi::crashedApplication()
 {
     return instance()->m_backend->crashedApplication();
 }
 
-//static
-void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
+// static
+void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
 {
     if (isSafer()) {
         QTemporaryFile tf;
@@ -116,18 +119,16 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
             QTextStream textStream(&tf);
             textStream << reportText;
             textStream.flush();
-            KMessageBox::information(parent, xi18nc("@info",
-                                                    "Report saved to <filename>%1</filename>.",
-                                                    tf.fileName()));
+            KMessageBox::information(parent, xi18nc("@info", "Report saved to <filename>%1</filename>.", tf.fileName()));
         } else {
-            KMessageBox::sorry(parent, i18nc("@info","Could not create a file in which to save the report."));
+            KMessageBox::sorry(parent, i18nc("@info", "Could not create a file in which to save the report."));
         }
     } else {
         QString defname = getSuggestedKCrashFilename(crashedApplication());
 
         QPointer<QFileDialog> dlg(new QFileDialog(parent, defname));
         dlg->selectFile(defname);
-        dlg->setWindowTitle(i18nc("@title:window","Select Filename"));
+        dlg->setWindowTitle(i18nc("@title:window", "Select Filename"));
         dlg->setAcceptMode(QFileDialog::AcceptSave);
         dlg->setFileMode(QFileDialog::AnyFile);
         dlg->setOption(QFileDialog::DontResolveSymlinks, false);
@@ -136,13 +137,13 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
         }
 
         if (!dlg) {
-            //Dialog is invalid, it was probably deleted (ex. via DBus call)
-            //return and do not crash
+            // Dialog is invalid, it was probably deleted (ex. via DBus call)
+            // return and do not crash
             return;
         }
 
         QUrl fileUrl;
-        if(!dlg->selectedUrls().isEmpty())
+        if (!dlg->selectedUrls().isEmpty())
             fileUrl = dlg->selectedUrls().first();
         delete dlg;
 
@@ -153,17 +154,17 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
                 ts << reportText;
                 ts.flush();
             } else {
-                KMessageBox::sorry(parent, xi18nc("@info","Cannot open file <filename>%1</filename> "
-                                                          "for writing.", tf.fileName()));
+                KMessageBox::sorry(parent,
+                                   xi18nc("@info",
+                                          "Cannot open file <filename>%1</filename> "
+                                          "for writing.",
+                                          tf.fileName()));
                 return;
             }
 
             // QFileDialog was run with confirmOverwrite, so we can safely
             // overwrite as necessary.
-            KIO::FileCopyJob* job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()),
-                                                   fileUrl,
-                                                   -1,
-                                                   KIO::DefaultFlags | KIO::Overwrite);
+            KIO::FileCopyJob *job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl, -1, KIO::DefaultFlags | KIO::Overwrite);
             KJobWidgets::setWindow(job, parent);
             if (!job->exec()) {
                 KMessageBox::sorry(parent, job->errorString());
@@ -173,16 +174,16 @@ void DrKonqi::saveReport(const QString & reportText, QWidget *parent)
 }
 
 // Helper functions for the shutdownSaveReport
-class ShutdownHelper : public QObject {
+class ShutdownHelper : public QObject
+{
     Q_OBJECT
 public:
     QString shutdownSaveString;
 
     void removeOldFilesIn(QDir &dir)
     {
-        auto fileList = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot,
-                                          QDir::SortFlag::Time | QDir::Reversed);
-        for(int i = fileList.size(); i >= 10; i--) {
+        auto fileList = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot, QDir::SortFlag::Time | QDir::Reversed);
+        for (int i = fileList.size(); i >= 10; i--) {
             auto currentFile = fileList.takeFirst();
             dir.remove(currentFile.fileName());
         }
@@ -199,12 +200,8 @@ public:
         }
 
         removeOldFilesIn(dir);
-        const QString defname = dirname
-                        + QLatin1Char('/') 
-                        + QStringLiteral("pid-")
-                        + QString::number(DrKonqi::pid())
-                        + QLatin1Char('-')
-                        + getSuggestedKCrashFilename(DrKonqi::crashedApplication());
+        const QString defname = dirname + QLatin1Char('/') + QStringLiteral("pid-") + QString::number(DrKonqi::pid()) + QLatin1Char('-')
+            + getSuggestedKCrashFilename(DrKonqi::crashedApplication());
 
         QFile shutdownSaveFile(defname);
         if (shutdownSaveFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -217,7 +214,7 @@ public:
         qApp->quit();
     }
 
-    void appendNewLine(const QString& newLine)
+    void appendNewLine(const QString &newLine)
     {
         shutdownSaveString += newLine;
     }
@@ -356,8 +353,7 @@ int DrKonqi::thread()
 
 bool DrKonqi::ignoreQuality()
 {
-    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") ||
-            qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
+    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") || qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
     return ignore;
 }
 

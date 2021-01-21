@@ -1,11 +1,11 @@
 /*******************************************************************
-* reportinterface.h
-* SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportinterface.h
+ * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef REPORTINTERFACE__H
 #define REPORTINTERFACE__H
@@ -13,7 +13,8 @@
 #include <QObject>
 #include <QStringList>
 
-namespace Bugzilla {
+namespace Bugzilla
+{
 class NewBug;
 }
 
@@ -25,8 +26,12 @@ class ReportInterface : public QObject
 {
     Q_OBJECT
 public:
-    enum Reproducible { ReproducibleUnsure, ReproducibleNever,
-        ReproducibleSometimes, ReproducibleEverytime, };
+    enum Reproducible {
+        ReproducibleUnsure,
+        ReproducibleNever,
+        ReproducibleSometimes,
+        ReproducibleEverytime,
+    };
 
     enum class Backtrace {
         Complete,
@@ -47,19 +52,18 @@ public:
     int selectedOptionsRating() const;
 
     QStringList firstBacktraceFunctions() const;
-    void setFirstBacktraceFunctions(const QStringList & functions);
+    void setFirstBacktraceFunctions(const QStringList &functions);
 
     QString backtrace() const;
-    void setBacktrace(const QString & backtrace);
+    void setBacktrace(const QString &backtrace);
 
     QString title() const;
-    void setTitle(const QString & text);
+    void setTitle(const QString &text);
 
-    void setDetailText(const QString & text);
-    void setPossibleDuplicates(const QStringList & duplicatesList);
+    void setDetailText(const QString &text);
+    void setPossibleDuplicates(const QStringList &duplicatesList);
 
-    QString generateReportFullText(DrKonqiStamp stamp,
-                                   Backtrace inlineBacktrace) const;
+    QString generateReportFullText(DrKonqiStamp stamp, Backtrace inlineBacktrace) const;
 
     Bugzilla::NewBug newBugReportTemplate() const;
 
@@ -67,28 +71,31 @@ public:
 
     bool isWorthReporting() const;
 
-    //Zero means creating a new bug report
+    // Zero means creating a new bug report
     void setAttachToBugNumber(uint);
     uint attachToBugNumber() const;
 
-    //Zero means there is no duplicate
+    // Zero means there is no duplicate
     void setDuplicateId(uint);
     uint duplicateId() const;
 
     void setPossibleDuplicatesByQuery(const QStringList &);
 
-    BugzillaManager * bugzillaManager() const;
-    ApplicationDetailsExamples * appDetailsExamples() const;
+    BugzillaManager *bugzillaManager() const;
+    ApplicationDetailsExamples *appDetailsExamples() const;
 
-    bool userCanProvideActionsAppDesktop() const {
+    bool userCanProvideActionsAppDesktop() const
+    {
         return m_provideActionsApplicationDesktop;
     }
 
-    bool userCanProvideUnusualBehavior() const {
+    bool userCanProvideUnusualBehavior() const
+    {
         return m_provideUnusualBehavior;
     }
 
-    bool userCanProvideApplicationConfigDetails() const {
+    bool userCanProvideApplicationConfigDetails() const
+    {
         return m_provideApplicationConfigurationDetails;
     }
 
@@ -112,29 +119,28 @@ private:
 
     QString generateAttachmentComment() const;
 
-    //Information the user can provide
-    bool        m_userRememberCrashSituation;
+    // Information the user can provide
+    bool m_userRememberCrashSituation;
     Reproducible m_reproducible;
-    bool        m_provideActionsApplicationDesktop;
-    bool        m_provideUnusualBehavior;
-    bool        m_provideApplicationConfigurationDetails;
+    bool m_provideActionsApplicationDesktop;
+    bool m_provideUnusualBehavior;
+    bool m_provideApplicationConfigurationDetails;
 
-
-    QString     m_backtrace;
+    QString m_backtrace;
     QStringList m_firstBacktraceFunctions;
 
-    QString     m_reportTitle;
-    QString     m_reportDetailText;
+    QString m_reportTitle;
+    QString m_reportDetailText;
     QStringList m_possibleDuplicates;
 
     QStringList m_allPossibleDuplicatesByQuery;
 
-    uint     m_attachToBugNumber;
-    uint     m_duplicate;
+    uint m_attachToBugNumber;
+    uint m_duplicate;
 
-    ProductMapping *    m_productMapping = nullptr;
-    BugzillaManager *   m_bugzillaManager = nullptr;
-    ApplicationDetailsExamples * m_appDetailsExamples = nullptr;
+    ProductMapping *m_productMapping = nullptr;
+    BugzillaManager *m_bugzillaManager = nullptr;
+    ApplicationDetailsExamples *m_appDetailsExamples = nullptr;
 };
 
 #endif

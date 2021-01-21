@@ -11,8 +11,8 @@
 
 #include "commandbase.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class JsonCommand : public QObject
 {
     Q_OBJECT

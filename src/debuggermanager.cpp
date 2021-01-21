@@ -7,22 +7,20 @@
 
 #include <KConfigGroup>
 
+#include "backtracegenerator.h"
 #include "debugger.h"
 #include "debuggerlaunchers.h"
-#include "backtracegenerator.h"
 
-struct DebuggerManager::Private
-{
+struct DebuggerManager::Private {
     BacktraceGenerator *btGenerator;
     bool debuggerRunning;
-    QList<AbstractDebuggerLauncher*> externalDebuggers;
+    QList<AbstractDebuggerLauncher *> externalDebuggers;
     DBusInterfaceAdaptor *dbusInterfaceAdaptor;
 };
 
-DebuggerManager::DebuggerManager(const Debugger & internalDebugger,
-                                 const QList<Debugger> & externalDebuggers,
-                                 QObject *parent)
-    : QObject(parent), d(new Private)
+DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, QObject *parent)
+    : QObject(parent)
+    , d(new Private)
 {
     d->debuggerRunning = false;
     d->btGenerator = new BacktraceGenerator(internalDebugger, this);
@@ -31,21 +29,21 @@ DebuggerManager::DebuggerManager(const Debugger & internalDebugger,
     connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
 
-    foreach(const Debugger & debugger, externalDebuggers) {
+    foreach (const Debugger &debugger, externalDebuggers) {
         if (debugger.isInstalled()) {
             // TODO: use TerminalDebuggerLauncher instead
             addDebugger(new DefaultDebuggerLauncher(debugger, this));
         }
     }
 
-    //setup kdevelop compatibility
+    // setup kdevelop compatibility
     d->dbusInterfaceAdaptor = new DBusInterfaceAdaptor(this);
 }
 
 DebuggerManager::~DebuggerManager()
 {
     if (d->btGenerator->state() == BacktraceGenerator::Loading) {
-        //if the debugger is running, kill it and continue the process.
+        // if the debugger is running, kill it and continue the process.
         delete d->btGenerator;
         onDebuggerFinished();
     }
@@ -64,12 +62,12 @@ bool DebuggerManager::showExternalDebuggers() const
     return config.readEntry("ShowDebugButton", false);
 }
 
-QList<AbstractDebuggerLauncher*> DebuggerManager::availableExternalDebuggers() const
+QList<AbstractDebuggerLauncher *> DebuggerManager::availableExternalDebuggers() const
 {
     return d->externalDebuggers;
 }
 
-BacktraceGenerator* DebuggerManager::backtraceGenerator() const
+BacktraceGenerator *DebuggerManager::backtraceGenerator() const
 {
     return d->btGenerator;
 }
@@ -101,7 +99,7 @@ void DebuggerManager::onDebuggerFinished()
 
 void DebuggerManager::onDebuggerInvalidated()
 {
-    AbstractDebuggerLauncher *launcher = qobject_cast<AbstractDebuggerLauncher*>(sender());
+    AbstractDebuggerLauncher *launcher = qobject_cast<AbstractDebuggerLauncher *>(sender());
     Q_ASSERT(launcher);
     int index = d->externalDebuggers.indexOf(launcher);
     Q_ASSERT(index >= 0);

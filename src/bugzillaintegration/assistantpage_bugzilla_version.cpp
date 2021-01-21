@@ -1,8 +1,8 @@
 /*******************************************************************
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-******************************************************************/
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ ******************************************************************/
 
 #include "assistantpage_bugzilla_version.h"
 #include "ui_assistantpage_bugzilla_version.h"
@@ -27,24 +27,19 @@ BugzillaVersionPage::BugzillaVersionPage(ReportAssistantDialog *parent)
 
     ui->errorIconLabel->setPixmap(QIcon::fromTheme(QStringLiteral("state-error")).pixmap(ui->errorIconLabel->size()));
 
-    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound,
-            this, [=] {
+    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound, this, [=] {
         // Don't show this page ever again!
         assistant()->setAppropriate(m_item, false);
         if (assistant()->currentPage() == m_item) {
             assistant()->next();
         }
     });
-    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionError,
-            this, [=](const QString &error) {
+    connect(bugzillaManager(), &BugzillaManager::bugzillaVersionError, this, [=](const QString &error) {
         ui->busyWidget->hide();
         ui->errorWidget->show();
-        ui->errorLabel->setText(xi18nc("@info %1 is an error message from the backend",
-                                       "Failed to contact bugs.kde.org: <message>%1</message>",
-                                       error));
+        ui->errorLabel->setText(xi18nc("@info %1 is an error message from the backend", "Failed to contact bugs.kde.org: <message>%1</message>", error));
     });
-    connect(ui->retryButton, &QPushButton::clicked,
-            this, [=] {
+    connect(ui->retryButton, &QPushButton::clicked, this, [=] {
         ui->busyWidget->show();
         ui->errorWidget->hide();
         bugzillaManager()->lookupVersion();

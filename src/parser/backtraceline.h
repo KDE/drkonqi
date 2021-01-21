@@ -13,17 +13,17 @@ class BacktraceLine
 {
 public:
     enum LineType {
-        Unknown, //unknown type. the default
-        EmptyLine, //line is empty
-        Crap, //line is gdb's crap (like "(no debugging symbols found)",
+        Unknown, // unknown type. the default
+        EmptyLine, // line is empty
+        Crap, // line is gdb's crap (like "(no debugging symbols found)",
               //"[New Thread 0x4275c950 (LWP 11931)]", etc...)
-        KCrash, //line is "[KCrash Handler]"
-        ThreadIndicator, //line indicates the current thread,
-                         //ex. "[Current thread is 0 (process 11313)]"
-        ThreadStart, //line indicates the start of a thread's stack.
-        SignalHandlerStart, //line indicates the signal handler start
+        KCrash, // line is "[KCrash Handler]"
+        ThreadIndicator, // line indicates the current thread,
+                         // ex. "[Current thread is 0 (process 11313)]"
+        ThreadStart, // line indicates the start of a thread's stack.
+        SignalHandlerStart, // line indicates the signal handler start
                             //(contains "<signal handler called>")
-        StackFrame, //line is a normal stack frame
+        StackFrame, // line is a normal stack frame
         Info, //< additional information on the bt
     };
 
@@ -39,28 +39,38 @@ public:
 
     static const LineRating BestRating = Good;
 
-    BacktraceLine() : d(new Data) {}
+    BacktraceLine()
+        : d(new Data)
+    {
+    }
 
-    QString toString() const {
+    QString toString() const
+    {
         return d->m_line;
     }
-    LineType type() const {
+    LineType type() const
+    {
         return d->m_type;
     }
-    LineRating rating() const {
+    LineRating rating() const
+    {
         return d->m_rating;
     }
 
-    int frameNumber() const {
+    int frameNumber() const
+    {
         return d->m_stackFrameNumber;
     }
-    QString functionName() const {
+    QString functionName() const
+    {
         return d->m_functionName;
     }
-    QString fileName() const {
+    QString fileName() const
+    {
         return d->m_file;
     }
-    QString libraryName() const {
+    QString libraryName() const
+    {
         return d->m_library;
     }
 
@@ -68,8 +78,12 @@ protected:
     class Data : public QSharedData
     {
     public:
-        Data() : m_type(Unknown), m_rating(InvalidRating),
-                 m_stackFrameNumber(-1) {}
+        Data()
+            : m_type(Unknown)
+            , m_rating(InvalidRating)
+            , m_stackFrameNumber(-1)
+        {
+        }
 
         QString m_line;
         LineType m_type;

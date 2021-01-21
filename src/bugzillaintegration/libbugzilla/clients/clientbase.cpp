@@ -6,8 +6,8 @@
 
 #include "clientbase.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 ClientBase::ClientBase(const Connection &connection)
     : m_connection(connection)
 {

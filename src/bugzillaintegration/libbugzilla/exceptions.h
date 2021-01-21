@@ -12,9 +12,8 @@
 class QJsonDocument;
 class QJsonObject;
 
-
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class APIJob;
 
 /**
@@ -41,7 +40,10 @@ class RuntimeException : public Exception
 {
 public:
     RuntimeException(const QString &reason);
-    virtual RuntimeException *clone() const override { return new RuntimeException(*this); }
+    virtual RuntimeException *clone() const override
+    {
+        return new RuntimeException(*this);
+    }
     virtual QString whatString() const override;
 
 private:
@@ -61,11 +63,20 @@ public:
     APIException(const QJsonObject &object);
     APIException(const APIException &other);
 
-    virtual void raise() const override { throw *this; }
-    virtual APIException *clone() const override { return new APIException(*this); }
+    virtual void raise() const override
+    {
+        throw *this;
+    }
+    virtual APIException *clone() const override
+    {
+        return new APIException(*this);
+    }
     virtual QString whatString() const override;
 
-    bool isError() const { return m_isError; }
+    bool isError() const
+    {
+        return m_isError;
+    }
 
     static void maybeThrow(const QJsonDocument &document);
 
@@ -84,8 +95,14 @@ public:
     ProtocolException(const APIJob *job);
     ProtocolException(const ProtocolException &other);
 
-    virtual void raise() const override { throw *this; }
-    virtual ProtocolException *clone() const override { return new ProtocolException(*this); }
+    virtual void raise() const override
+    {
+        throw *this;
+    }
+    virtual ProtocolException *clone() const override
+    {
+        return new ProtocolException(*this);
+    }
     virtual QString whatString() const override;
 
     static void maybeThrow(const APIJob *job);

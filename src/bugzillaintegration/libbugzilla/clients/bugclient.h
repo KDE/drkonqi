@@ -14,8 +14,8 @@
 
 #include <models/bug.h>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class BugClient : public ClientBase
 {
 public:

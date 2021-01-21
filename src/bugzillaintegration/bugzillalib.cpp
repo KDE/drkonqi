@@ -1,22 +1,22 @@
 /*******************************************************************
-* bugzillalib.cpp
-* SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * bugzillalib.cpp
+ * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "bugzillalib.h"
 
 #include <QReadWriteLock>
 #include <QRegularExpression>
 
+#include "drkonqi_debug.h"
+#include "libbugzilla/bugzilla.h"
 #include "libbugzilla/clients/commentclient.h"
 #include "libbugzilla/connection.h"
-#include "libbugzilla/bugzilla.h"
-#include "drkonqi_debug.h"
 
 static const char showBugUrl[] = "show_bug.cgi?id=%1";
 
@@ -45,12 +45,9 @@ Q_GLOBAL_STATIC(QMessageFilterContainer, s_messageFilter)
 
 QMessageFilterContainer::QMessageFilterContainer()
 {
-    handler =
-            qInstallMessageHandler([](QtMsgType type,
-                                   const QMessageLogContext &context,
-                                   const QString &msg) {
-            s_messageFilter->handler(type, context, s_messageFilter->filter(msg));
-});
+    handler = qInstallMessageHandler([](QtMsgType type, const QMessageLogContext &context, const QString &msg) {
+        s_messageFilter->handler(type, context, s_messageFilter->filter(msg));
+    });
 }
 
 QMessageFilterContainer::~QMessageFilterContainer()
@@ -85,10 +82,10 @@ void QMessageFilterContainer::clear()
 }
 
 BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
-        : QObject(parent)
-        , m_bugTrackerUrl(bugTrackerUrl)
-        , m_logged(false)
-        , m_searchJob(nullptr)
+    : QObject(parent)
+    , m_bugTrackerUrl(bugTrackerUrl)
+    , m_logged(false)
+    , m_searchJob(nullptr)
 {
     Q_ASSERT(bugTrackerUrl.endsWith(QLatin1Char('/')));
     Bugzilla::setConnection(new Bugzilla::HTTPConnection(QUrl(m_bugTrackerUrl + QStringLiteral("rest"))));
@@ -111,7 +108,7 @@ void BugzillaManager::lookupVersion()
     });
 }
 
-void BugzillaManager::setFeaturesForVersion(const QString& version)
+void BugzillaManager::setFeaturesForVersion(const QString &version)
 {
     // A procedure to change Dr Konqi behaviour automatically when Bugzilla
     // software versions change.
@@ -133,7 +130,8 @@ void BugzillaManager::setFeaturesForVersion(const QString& version)
         digits << QLatin1String("0");
     }
     if (digits.count() > nVersionParts) {
-        qCWarning(DRKONQI_LOG) << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
+        qCWarning(DRKONQI_LOG)
+            << QStringLiteral("Current Bugzilla version %1 has more than %2 parts. Check that this is not a problem.").arg(version).arg(nVersionParts);
     }
 
     qCDebug(DRKONQI_LOG) << "VERSION" << version;
@@ -231,10 +229,7 @@ void BugzillaManager::fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobO
 // TODO: This would kinda benefit from an actual pagination class,
 // currently this implicitly relies on the caller to handle offests correctly.
 // Fortunately we only have one caller so it makes no difference.
-void BugzillaManager::searchBugs(const QStringList &products,
-                                 const QString &severity,
-                                 const QString &comment,
-                                 int offset)
+void BugzillaManager::searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset)
 {
     Bugzilla::BugSearch search;
     search.products = products;
@@ -280,11 +275,10 @@ void BugzillaManager::sendReport(const Bugzilla::NewBug &bug)
     });
 }
 
-void BugzillaManager::attachTextToReport(const QString & text, const QString & filename,
-    const QString & summary, int bugId, const QString & comment)
+void BugzillaManager::attachTextToReport(const QString &text, const QString &filename, const QString &summary, int bugId, const QString &comment)
 {
     Bugzilla::NewAttachment attachment;
-    attachment.ids = QList<int> { bugId };
+    attachment.ids = QList<int>{bugId};
     attachment.data = text;
     attachment.file_name = filename;
     attachment.summary = summary;
@@ -347,7 +341,7 @@ QString BugzillaManager::urlForBug(int bug_number) const
 
 void BugzillaManager::stopCurrentSearch()
 {
-    if (m_searchJob) { //Stop previous searchJob
+    if (m_searchJob) { // Stop previous searchJob
         m_searchJob->disconnect();
         m_searchJob->kill();
         m_searchJob = nullptr;

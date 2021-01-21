@@ -10,13 +10,13 @@
 #define DATA_DIR QFINDTESTDATA("backtraceparsertest_data")
 
 BacktraceParserTest::BacktraceParserTest(QObject *parent)
-    : QObject(parent),
-      m_settings(DATA_DIR + QLatin1Char('/') + QStringLiteral("data.ini"), QSettings::IniFormat),
-      m_generator(new FakeBacktraceGenerator(this))
+    : QObject(parent)
+    , m_settings(DATA_DIR + QLatin1Char('/') + QStringLiteral("data.ini"), QSettings::IniFormat)
+    , m_generator(new FakeBacktraceGenerator(this))
 {
 }
 
-void BacktraceParserTest::fetchData(const QString & group)
+void BacktraceParserTest::fetchData(const QString &group)
 {
     QTest::addColumn<QString>("filename");
     QTest::addColumn<QString>("result");
@@ -26,11 +26,9 @@ void BacktraceParserTest::fetchData(const QString & group)
     QStringList keys = m_settings.allKeys();
     m_settings.endGroup();
 
-    foreach(const QString & key, keys) {
-        QTest::newRow(qPrintable(key))
-            << QString(DATA_DIR + QLatin1Char('/') + key)
-            << m_settings.value(group + QLatin1Char('/') + key).toString()
-            << m_settings.value(QStringLiteral("debugger/") + key).toString();
+    foreach (const QString &key, keys) {
+        QTest::newRow(qPrintable(key)) << QString(DATA_DIR + QLatin1Char('/') + key) << m_settings.value(group + QLatin1Char('/') + key).toString()
+                                       << m_settings.value(QStringLiteral("debugger/") + key).toString();
     }
 }
 
@@ -45,17 +43,16 @@ void BacktraceParserTest::btParserUsefulnessTest()
     QFETCH(QString, result);
     QFETCH(QString, debugger);
 
-    //parse
+    // parse
     QSharedPointer<BacktraceParser> parser(BacktraceParser::newParser(debugger));
     parser->connectToGenerator(m_generator);
     m_generator->sendData(filename);
 
-    //convert usefulness to string
-    QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
-                                    BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
+    // convert usefulness to string
+    QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
     QString btUsefulness = QString::fromLatin1(metaUsefulness.valueToKey(parser->backtraceUsefulness()));
 
-    //compare
+    // compare
     QEXPECT_FAIL("test_e", "Working on it", Continue);
     QCOMPARE(btUsefulness, result);
 }
@@ -71,12 +68,12 @@ void BacktraceParserTest::btParserFunctionsTest()
     QFETCH(QString, result);
     QFETCH(QString, debugger);
 
-    //parse
+    // parse
     QSharedPointer<BacktraceParser> parser(BacktraceParser::newParser(debugger));
     parser->connectToGenerator(m_generator);
     m_generator->sendData(filename);
 
-    //compare
+    // compare
     QString functions = parser->firstValidFunctions().join(QLatin1Char('|'));
     QCOMPARE(functions, result);
 }
@@ -88,10 +85,8 @@ void BacktraceParserTest::btParserBenchmark_data()
 
     m_settings.beginGroup(QStringLiteral("debugger"));
     QStringList keys = m_settings.allKeys();
-    foreach(const QString & key, keys) {
-        QTest::newRow(qPrintable(key))
-            << QString(DATA_DIR + QLatin1Char('/') + key)
-            << m_settings.value(key).toString();
+    foreach (const QString &key, keys) {
+        QTest::newRow(qPrintable(key)) << QString(DATA_DIR + QLatin1Char('/') + key) << m_settings.value(key).toString();
     }
     m_settings.endGroup();
 }
@@ -110,4 +105,3 @@ void BacktraceParserTest::btParserBenchmark()
 }
 
 QTEST_GUILESS_MAIN(BacktraceParserTest)
-

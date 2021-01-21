@@ -9,8 +9,8 @@
 
 #include "jsoncommand.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class NewBug : public JsonCommand
 {
     Q_OBJECT

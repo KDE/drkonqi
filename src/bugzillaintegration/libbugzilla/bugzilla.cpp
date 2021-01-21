@@ -6,8 +6,8 @@
 
 #include "bugzilla.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QString version(KJob *kjob)
 {
     const APIJob *job = qobject_cast<APIJob *>(kjob);
@@ -26,7 +26,7 @@ LoginDetails login(KJob *kjob)
     const auto obj = job->object();
     const QString token = obj.value(QLatin1String("token")).toString();
     const int id = obj.value(QLatin1String("id")).toInt(-1);
-    return LoginDetails { id, token };
+    return LoginDetails{id, token};
 }
 
 APIJob *login(const QString &username, const QString &password, const Connection &connection)
@@ -39,4 +39,3 @@ APIJob *login(const QString &username, const QString &password, const Connection
 }
 
 } // namespace Bugzilla
-

@@ -18,7 +18,10 @@ class AbstractDebuggerLauncher : public QObject
     Q_OBJECT
     Q_PROPERTY(QString name READ name)
 public:
-    explicit AbstractDebuggerLauncher(QObject *parent = nullptr) : QObject(parent) {}
+    explicit AbstractDebuggerLauncher(QObject *parent = nullptr)
+        : QObject(parent)
+    {
+    }
     virtual QString name() const = 0;
 
 public Q_SLOTS:
@@ -34,7 +37,7 @@ class DefaultDebuggerLauncher : public AbstractDebuggerLauncher
 {
     Q_OBJECT
 public:
-    explicit DefaultDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent = nullptr);
+    explicit DefaultDebuggerLauncher(const Debugger &debugger, DebuggerManager *parent = nullptr);
     QString name() const override;
 
 public Q_SLOTS:
@@ -95,7 +98,7 @@ Q_SIGNALS:
     void acceptDebuggingApplication(const QString &name);
 
 private:
-    QHash<QString, DBusInterfaceLauncher*> m_launchers;
+    QHash<QString, DBusInterfaceLauncher *> m_launchers;
 };
 
 #endif // DEBUGGERLAUNCHERS_H

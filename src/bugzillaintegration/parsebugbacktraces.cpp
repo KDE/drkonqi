@@ -1,10 +1,10 @@
 /*******************************************************************
-* parsebugbacktraces.cpp
-* SPDX-FileCopyrightText: 2011 Matthias Fuchs <mat69@gmx.net>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * parsebugbacktraces.cpp
+ * SPDX-FileCopyrightText: 2011 Matthias Fuchs <mat69@gmx.net>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "parsebugbacktraces.h"
 
@@ -16,15 +16,15 @@ BacktraceConstIterator findCrashStackFrame(BacktraceConstIterator it, BacktraceC
 {
     BacktraceConstIterator result = itEnd;
 
-    //find the beginning of the crash
-    for ( ; it != itEnd; ++it) {
+    // find the beginning of the crash
+    for (; it != itEnd; ++it) {
         if (it->type() == BacktraceLine::KCrash) {
             result = it;
             break;
         }
     }
 
-    //find the beginning of the stack frame
+    // find the beginning of the stack frame
     for (it = result; it != itEnd; ++it) {
         if (it->type() == BacktraceLine::StackFrame) {
             result = it;
@@ -35,7 +35,7 @@ BacktraceConstIterator findCrashStackFrame(BacktraceConstIterator it, BacktraceC
     return result;
 }
 
-//TODO improve this stuff, it is just a HACK
+// TODO improve this stuff, it is just a HACK
 ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceConstIterator itEnd, BacktraceConstIterator it2, BacktraceConstIterator itEnd2)
 {
     int matches = 0;
@@ -55,7 +55,7 @@ ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceC
             continue;
         }
 
-        //if iters do not point to emptylines or a stackframe increase them
+        // if iters do not point to emptylines or a stackframe increase them
         if (it->type() != BacktraceLine::StackFrame && it->type() != BacktraceLine::EmptyLine) {
             ++it;
             continue;
@@ -65,7 +65,7 @@ ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceC
             continue;
         }
 
-        //one bt is shorter than the other
+        // one bt is shorter than the other
         if (it->type() == BacktraceLine::StackFrame && it2->type() == BacktraceLine::EmptyLine) {
             ++lines;
             ++it;
@@ -78,7 +78,7 @@ ParseBugBacktraces::DuplicateRating rating(BacktraceConstIterator it, BacktraceC
         }
 
         if (it->type() == BacktraceLine::EmptyLine && it2->type() == BacktraceLine::EmptyLine) {
-            //done
+            // done
             break;
         }
     }
@@ -126,7 +126,7 @@ void ParseBugBacktraces::parse(const QString &comment)
         emit newLine(comment.mid(start, (end != -1 ? end - start + 1 : end)));
     } while (end != -1);
 
-    //accepts anything as backtrace, the start of the backtrace is searched later anyway
+    // accepts anything as backtrace, the start of the backtrace is searched later anyway
     m_backtraces << m_parser->parsedBacktraceLines();
 }
 
@@ -139,8 +139,8 @@ ParseBugBacktraces::DuplicateRating ParseBugBacktraces::findDuplicate(const QLis
     DuplicateRating bestRating = NoDuplicate;
     DuplicateRating currentRating = NoDuplicate;
 
-    QList<QList<BacktraceLine> >::const_iterator itBts;
-    QList<QList<BacktraceLine> >::const_iterator itEndBts = m_backtraces.constEnd();
+    QList<QList<BacktraceLine>>::const_iterator itBts;
+    QList<QList<BacktraceLine>>::const_iterator itEndBts = m_backtraces.constEnd();
     for (itBts = m_backtraces.constBegin(); itBts != itEndBts; ++itBts) {
         currentRating = rating(backtrace.constBegin(), backtrace.constEnd(), itBts->constBegin(), itBts->constEnd());
         if (currentRating < bestRating) {
@@ -154,5 +154,3 @@ ParseBugBacktraces::DuplicateRating ParseBugBacktraces::findDuplicate(const QLis
 
     return bestRating;
 }
-
-

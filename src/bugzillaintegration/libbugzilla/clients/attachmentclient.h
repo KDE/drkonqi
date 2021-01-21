@@ -10,8 +10,8 @@
 #include "clientbase.h"
 #include "commands/newattachment.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class AttachmentClient : public ClientBase
 {
 public:

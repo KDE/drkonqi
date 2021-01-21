@@ -13,12 +13,15 @@ class FakeBacktraceGenerator : public QObject
 {
     Q_OBJECT
 public:
-    explicit FakeBacktraceGenerator(QObject *parent = nullptr) : QObject(parent) {}
-    void sendData(const QString & filename);
+    explicit FakeBacktraceGenerator(QObject *parent = nullptr)
+        : QObject(parent)
+    {
+    }
+    void sendData(const QString &filename);
 
 Q_SIGNALS:
     void starting();
-    void newLine(const QString & line);
+    void newLine(const QString &line);
 };
 
 #endif // FAKEBACKTRACEGENERATOR_H

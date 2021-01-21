@@ -7,10 +7,10 @@
 #ifndef COMMANDBASE_H
 #define COMMANDBASE_H
 
-#define BUGZILLA_MEMBER_PROPERTY(type, member) \
-    private: \
-    Q_PROPERTY(type member MEMBER member) \
-    public: \
+#define BUGZILLA_MEMBER_PROPERTY(type, member)                                                                                                                 \
+private:                                                                                                                                                       \
+    Q_PROPERTY(type member MEMBER member)                                                                                                                      \
+public:                                                                                                                                                        \
     type member
 
 #endif // COMMANDBASE_H

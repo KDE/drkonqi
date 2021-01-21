@@ -6,13 +6,12 @@
 
 #include "connection.h"
 
-
 #include <KIOCore/KIO/TransferJob>
 
 #include "bugzilla_debug.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 // Static container for global default connection.
 // We need a container here because the connection may be anything derived from
 // Connection and its effective type may change (e.g. in autotests).
@@ -106,4 +105,3 @@ QUrl HTTPConnection::url(const QString &appendix, QUrlQuery query) const
 }
 
 } // namespace Bugzilla
-

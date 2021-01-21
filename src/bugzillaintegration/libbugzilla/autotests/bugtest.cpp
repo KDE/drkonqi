@@ -15,7 +15,6 @@
 
 namespace Bugzilla
 {
-
 static void compareNewBugHash(const QVariantHash &hash, bool *ok)
 {
     *ok = false;
@@ -28,15 +27,15 @@ static void compareNewBugHash(const QVariantHash &hash, bool *ok)
     QCOMPARE(hash["platform"], "aplatform");
     QCOMPARE(hash["priority"], "apriority");
     QCOMPARE(hash["severity"], "aseverity");
-    QCOMPARE(hash["keywords"], QStringList({ "aword", "anotherword" }));
+    QCOMPARE(hash["keywords"], QStringList({"aword", "anotherword"}));
     *ok = true;
 }
 
 static void compareUpdateBugHash(const QVariantHash &hash, bool *ok)
 {
     *ok = false;
-    QCOMPARE(hash["cc"].toHash()["add"].toStringList(), QStringList({ "me@host.com" }));
-    QCOMPARE(hash["cc"].toHash()["remove"].toStringList(), QStringList({ "you@host.com" }));
+    QCOMPARE(hash["cc"].toHash()["add"].toStringList(), QStringList({"me@host.com"}));
+    QCOMPARE(hash["cc"].toHash()["remove"].toStringList(), QStringList({"you@host.com"}));
     *ok = true;
 }
 
@@ -50,23 +49,19 @@ public:
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path,
-                        const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override
     {
         if (path == "/bug" && query.toString() == "product=dragonplayer") {
-            return new JobDouble { QFINDTESTDATA("data/bugs.dragonplayer.json") };
+            return new JobDouble{QFINDTESTDATA("data/bugs.dragonplayer.json")};
         }
         if (path == "/bug" && query.toString() == "product=dragonplayer2") {
-            return new JobDouble { QFINDTESTDATA("data/bugs.unresolved.json") };
+            return new JobDouble{QFINDTESTDATA("data/bugs.unresolved.json")};
         }
-        Q_ASSERT_X(false, "get",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "get", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path,
-                         const QByteArray &data,
-                         const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *post(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override
     {
         qDebug() << path << query.toString();
         if (path == "/bug" && query.isEmpty()) {
@@ -78,16 +73,13 @@ public:
             compareNewBugHash(hash, &ok);
             Q_ASSERT(ok);
 
-            return new JobDouble { QFINDTESTDATA("data/bugs.new.json") };
+            return new JobDouble{QFINDTESTDATA("data/bugs.new.json")};
         }
-        Q_ASSERT_X(false, "post",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "post", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &path,
-                        const QByteArray &data,
-                        const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *put(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override
     {
         if (path == "/bug/54321" && query.isEmpty()) {
             QJsonParseError e;
@@ -98,10 +90,9 @@ public:
             compareUpdateBugHash(hash, &ok);
             Q_ASSERT(ok);
 
-            return new JobDouble { QFINDTESTDATA("data/bugs.update.json") };
+            return new JobDouble{QFINDTESTDATA("data/bugs.update.json")};
         }
-        Q_ASSERT_X(false, "put",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "put", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 };
@@ -119,7 +110,7 @@ private Q_SLOTS:
     void testSearch()
     {
         Bugzilla::BugSearch search;
-        search.products = QStringList { "dragonplayer" };
+        search.products = QStringList{"dragonplayer"};
         auto job = Bugzilla::BugClient().search(search);
         job->start();
         QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
@@ -150,7 +141,7 @@ private Q_SLOTS:
     void testSearchUnresolved()
     {
         Bugzilla::BugSearch search;
-        search.products = QStringList { "dragonplayer2" };
+        search.products = QStringList{"dragonplayer2"};
         auto job = Bugzilla::BugClient().search(search);
         job->start();
         QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
@@ -173,7 +164,7 @@ private Q_SLOTS:
         bug.platform = "aplatform";
         bug.priority = "apriority";
         bug.severity = "aseverity";
-        bug.keywords = QStringList { "aword", "anotherword" };
+        bug.keywords = QStringList{"aword", "anotherword"};
 
         auto job = Bugzilla::BugClient().create(bug);
         job->start();

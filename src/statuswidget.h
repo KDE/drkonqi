@@ -1,30 +1,30 @@
 /*******************************************************************
-* statuswidget.h
-* SPDX-FileCopyrightText: 2009, 2010 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * statuswidget.h
+ * SPDX-FileCopyrightText: 2009, 2010 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 #ifndef STATUSWIDGET__H
 #define STATUSWIDGET__H
 
 #include <QEvent>
-#include <QStackedWidget>
 #include <QLabel>
+#include <QStackedWidget>
 #include <QTextDocument>
 
 class WrapLabel;
 class KBusyIndicatorWidget;
 class QHideEvent;
 
-class StatusWidget: public QStackedWidget
+class StatusWidget : public QStackedWidget
 {
     Q_OBJECT
 public:
-    explicit StatusWidget(QWidget * parent = nullptr);
+    explicit StatusWidget(QWidget *parent = nullptr);
 
-    void setBusy(const QString&);
-    void setIdle(const QString&);
+    void setBusy(const QString &);
+    void setIdle(const QString &);
 
     void addCustomStatusWidget(QWidget *);
 
@@ -35,33 +35,37 @@ private:
     void setBusyCursor();
     void setIdleCursor();
 
-    WrapLabel *         m_statusLabel;
+    WrapLabel *m_statusLabel;
 
     KBusyIndicatorWidget *m_throbberWidget;
-    WrapLabel *             m_busyLabel;
+    WrapLabel *m_busyLabel;
 
-    QWidget *           m_statusPage;
-    QWidget *           m_busyPage;
+    QWidget *m_statusPage;
+    QWidget *m_busyPage;
 
-    int                 m_cursorStackCount;
-    bool                m_busy;
+    int m_cursorStackCount;
+    bool m_busy;
 };
 
-//Dummy class to avoid a QLabel+wordWrap height bug
-class WrapLabel: public QLabel
+// Dummy class to avoid a QLabel+wordWrap height bug
+class WrapLabel : public QLabel
 {
     Q_OBJECT
 public:
-    explicit WrapLabel(QWidget * parent = nullptr) : QLabel(parent){
+    explicit WrapLabel(QWidget *parent = nullptr)
+        : QLabel(parent)
+    {
         setWordWrap(true);
     }
 
-    void setText(const QString & text) {
+    void setText(const QString &text)
+    {
         QLabel::setText(text);
         adjustHeight();
     }
 
-    bool event(QEvent * e) override {
+    bool event(QEvent *e) override
+    {
         if (e->type() == QEvent::ApplicationFontChange || e->type() == QEvent::Resize) {
             adjustHeight();
         }
@@ -69,12 +73,12 @@ public:
     }
 
 private:
-    void adjustHeight() {
+    void adjustHeight()
+    {
         QTextDocument document(text());
         document.setTextWidth(width());
         setMaximumHeight(document.size().height());
     }
-
 };
 
 #endif

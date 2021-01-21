@@ -11,9 +11,10 @@
 
 #include "msvc_generator.h"
 
-MsvcGenerator::MsvcGenerator(const Process& process)
+MsvcGenerator::MsvcGenerator(const Process &process)
     : AbstractBTGenerator(process)
-{}
+{
+}
 
 bool MsvcGenerator::Init()
 {
@@ -26,23 +27,20 @@ void MsvcGenerator::UnInit()
 
 QString MsvcGenerator::GetFunctionName()
 {
-    PSYMBOL_INFO symbol =
-        (PSYMBOL_INFO) malloc(sizeof(SYMBOL_INFO) + MAX_SYMBOL_NAME);
+    PSYMBOL_INFO symbol = (PSYMBOL_INFO)malloc(sizeof(SYMBOL_INFO) + MAX_SYMBOL_NAME);
     ZeroMemory(symbol, sizeof(symbol) + MAX_SYMBOL_NAME);
     symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
     symbol->MaxNameLen = MAX_SYMBOL_NAME;
 
     DWORD64 dwDisplacement = 0;
 
-    if (!SymFromAddr(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, symbol))
-    {
+    if (!SymFromAddr(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, symbol)) {
         qCCritical(DRKONQI_LOG) << "SymFromAddr() failed: " << GetLastError();
         return QString::fromLatin1(DEFAULT_FUNC);
     }
 
     char undecoratedName[MAX_PATH] = {0};
-    if (!UnDecorateSymbolName(symbol->Name, undecoratedName, MAX_PATH, UNDNAME_COMPLETE))
-    {
+    if (!UnDecorateSymbolName(symbol->Name, undecoratedName, MAX_PATH, UNDNAME_COMPLETE)) {
         // if this fails, show the decorated name anyway, don't fail
         qCCritical(DRKONQI_LOG) << "UnDecorateSymbolName() failed: " << GetLastError();
         return QString::fromLatin1(symbol->Name);
@@ -58,8 +56,7 @@ QString MsvcGenerator::GetFile()
     line.SizeOfStruct = sizeof(IMAGEHLP_LINE64);
     DWORD dwDisplacement = 0;
 
-    if (!SymGetLineFromAddr64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, &line))
-    {
+    if (!SymGetLineFromAddr64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, &line)) {
         qCCritical(DRKONQI_LOG) << "SymGetLineFromAddr64 failed: " << GetLastError();
         return QString::fromLatin1(DEFAULT_FILE);
     }
@@ -74,16 +71,15 @@ int MsvcGenerator::GetLine()
     line.SizeOfStruct = sizeof(IMAGEHLP_LINE64);
     DWORD dwDisplacement = 0;
 
-    if (!SymGetLineFromAddr64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, &line))
-    {
-        //qCCritical(DRKONQI_LOG) << "SymGetLineFromAddr64 failed: " << GetLastError();
+    if (!SymGetLineFromAddr64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &dwDisplacement, &line)) {
+        // qCCritical(DRKONQI_LOG) << "SymGetLineFromAddr64 failed: " << GetLastError();
         return DEFAULT_LINE;
     }
 
-    return (int) line.LineNumber;
+    return (int)line.LineNumber;
 }
 
-void MsvcGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
+void MsvcGenerator::LoadSymbol(const QString &module, DWORD64 dwBaseAddr)
 {
     QString strOutput;
 
@@ -94,8 +90,7 @@ void MsvcGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
 
     m_symbolsMap[module] = false; // default
     QString symbolType;
-    switch (moduleInfo.SymType)
-    {
+    switch (moduleInfo.SymType) {
     case SymNone:
         symbolType = QString::fromLatin1("no symbols loaded");
         break;
@@ -118,8 +113,7 @@ void MsvcGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
         break;
     }
 
-    strOutput = QString::fromLatin1("Loaded %1 (%2)")
-        .arg(module).arg(symbolType);
+    strOutput = QString::fromLatin1("Loaded %1 (%2)").arg(module).arg(symbolType);
 
     emit DebugLine(strOutput);
 }

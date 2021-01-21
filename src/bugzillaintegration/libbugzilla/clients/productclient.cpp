@@ -6,12 +6,12 @@
 
 #include "productclient.h"
 
-#include <QMetaObject>
 #include <QMetaMethod>
+#include <QMetaObject>
 #include <QMetaType>
 #include <QSharedPointer>
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 Product::Ptr ProductClient::get(KJob *kjob)
 {
     auto job = qobject_cast<APIJob *>(kjob);

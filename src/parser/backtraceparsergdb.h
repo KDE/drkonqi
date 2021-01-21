@@ -12,7 +12,7 @@ class BacktraceParserGdbPrivate;
 class BacktraceLineGdb : public BacktraceLine
 {
 public:
-    BacktraceLineGdb(const QString & line);
+    BacktraceLineGdb(const QString &line);
 
 private:
     void parse();
@@ -34,10 +34,10 @@ protected:
     BacktraceParserPrivate *constructPrivate() const override;
 
 protected Q_SLOTS:
-    void newLine(const QString & lineStr) override;
+    void newLine(const QString &lineStr) override;
 
 private:
-    void parseLine(const QString & lineStr);
+    void parseLine(const QString &lineStr);
 };
 
 #endif // BACKTRACEPARSERGDB_H

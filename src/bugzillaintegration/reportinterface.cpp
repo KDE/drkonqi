@@ -1,26 +1,26 @@
 /*******************************************************************
-* reportinterface.cpp
-* SPDX-FileCopyrightText: 2009, 2010, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportinterface.cpp
+ * SPDX-FileCopyrightText: 2009, 2010, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "reportinterface.h"
 
 #include <KLocalizedString>
 
-#include "drkonqi.h"
-#include "config-drkonqi.h"
+#include "applicationdetailsexamples.h"
+#include "backtracegenerator.h"
 #include "bugzillalib.h"
-#include "productmapping.h"
-#include "systeminformation.h"
+#include "config-drkonqi.h"
 #include "crashedapplication.h"
 #include "debuggermanager.h"
+#include "drkonqi.h"
 #include "parser/backtraceparser.h"
-#include "backtracegenerator.h"
-#include "applicationdetailsexamples.h"
+#include "productmapping.h"
+#include "systeminformation.h"
 
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
 // cannot be queried through the API, so handle this client-side in a hardcoded
@@ -28,8 +28,8 @@
 static int s_maxReportSize = 65535;
 
 ReportInterface::ReportInterface(QObject *parent)
-    : QObject(parent),
-      m_duplicate(0)
+    : QObject(parent)
+    , m_duplicate(0)
 {
     m_bugzillaManager = new BugzillaManager(KDE_BUGZILLA_URL, this);
 
@@ -37,22 +37,20 @@ ReportInterface::ReportInterface(QObject *parent)
 
     m_appDetailsExamples = new ApplicationDetailsExamples(this);
 
-    //Information the user can provide about the crash
+    // Information the user can provide about the crash
     m_userRememberCrashSituation = false;
     m_reproducible = ReproducibleUnsure;
     m_provideActionsApplicationDesktop = false;
     m_provideUnusualBehavior = false;
     m_provideApplicationConfigurationDetails = false;
 
-    //Do not attach the bug report to any other existent report (create a new one)
+    // Do not attach the bug report to any other existent report (create a new one)
     m_attachToBugNumber = 0;
 }
 
-void ReportInterface::setBugAwarenessPageData(bool rememberSituation,
-                                                   Reproducible reproducible, bool actions,
-                                                   bool unusual, bool configuration)
+void ReportInterface::setBugAwarenessPageData(bool rememberSituation, Reproducible reproducible, bool actions, bool unusual, bool configuration)
 {
-    //Save the information the user can provide about the crash from the assistant page
+    // Save the information the user can provide about the crash from the assistant page
     m_userRememberCrashSituation = rememberSituation;
     m_reproducible = reproducible;
     m_provideActionsApplicationDesktop = actions;
@@ -62,20 +60,18 @@ void ReportInterface::setBugAwarenessPageData(bool rememberSituation,
 
 bool ReportInterface::isBugAwarenessPageDataUseful() const
 {
-    //Determine if the assistant should proceed, considering the amount of information
-    //the user can provide
+    // Determine if the assistant should proceed, considering the amount of information
+    // the user can provide
     int rating = selectedOptionsRating();
 
-    //Minimum information required even for a good backtrace.
-    bool useful = m_userRememberCrashSituation &&
-                  (rating >= 2 || (m_reproducible==ReproducibleSometimes ||
-                                 m_reproducible==ReproducibleEverytime));
+    // Minimum information required even for a good backtrace.
+    bool useful = m_userRememberCrashSituation && (rating >= 2 || (m_reproducible == ReproducibleSometimes || m_reproducible == ReproducibleEverytime));
     return useful;
 }
 
 int ReportInterface::selectedOptionsRating() const
 {
-    //Check how many information the user can provide and generate a rating
+    // Check how many information the user can provide and generate a rating
     int rating = 0;
     if (m_provideActionsApplicationDesktop) {
         rating += 3;
@@ -94,7 +90,7 @@ QString ReportInterface::backtrace() const
     return m_backtrace;
 }
 
-void ReportInterface::setBacktrace(const QString & backtrace)
+void ReportInterface::setBacktrace(const QString &backtrace)
 {
     m_backtrace = backtrace;
 }
@@ -104,7 +100,7 @@ QStringList ReportInterface::firstBacktraceFunctions() const
     return m_firstBacktraceFunctions;
 }
 
-void ReportInterface::setFirstBacktraceFunctions(const QStringList & functions)
+void ReportInterface::setFirstBacktraceFunctions(const QStringList &functions)
 {
     m_firstBacktraceFunctions = functions;
 }
@@ -114,34 +110,33 @@ QString ReportInterface::title() const
     return m_reportTitle;
 }
 
-void ReportInterface::setTitle(const QString & text)
+void ReportInterface::setTitle(const QString &text)
 {
     m_reportTitle = text;
 }
 
-void ReportInterface::setDetailText(const QString & text)
+void ReportInterface::setDetailText(const QString &text)
 {
     m_reportDetailText = text;
 }
 
-void ReportInterface::setPossibleDuplicates(const QStringList & list)
+void ReportInterface::setPossibleDuplicates(const QStringList &list)
 {
     m_possibleDuplicates = list;
 }
 
 QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace inlineBacktrace) const
 {
-    //Note: no translations should be done in this function's strings
+    // Note: no translations should be done in this function's strings
 
-    const CrashedApplication * crashedApp = DrKonqi::crashedApplication();
-    const SystemInformation * sysInfo = DrKonqi::systemInformation();
+    const CrashedApplication *crashedApp = DrKonqi::crashedApplication();
+    const SystemInformation *sysInfo = DrKonqi::systemInformation();
 
     QString report;
 
-    //Program name and versions
-    report.append(QStringLiteral("Application: %1 (%2)\n").arg(crashedApp->fakeExecutableBaseName(),
-                                                        crashedApp->version()));
-    if ( sysInfo->compiledSources() ) {
+    // Program name and versions
+    report.append(QStringLiteral("Application: %1 (%2)\n").arg(crashedApp->fakeExecutableBaseName(), crashedApp->version()));
+    if (sysInfo->compiledSources()) {
         report.append(QStringLiteral(" (Compiled from sources)\n"));
     } else {
         report.append(QLatin1Char('\n'));
@@ -153,26 +148,25 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     report.append(QStringLiteral("Windowing System: %1\n").arg(sysInfo->windowSystem()));
     report.append(QStringLiteral("Drkonqi Version: %1\n").arg(QString::fromLatin1(PROJECT_VERSION)));
 
-    //LSB output or manually selected distro
-    if ( !sysInfo->distributionPrettyName().isEmpty() ) {
+    // LSB output or manually selected distro
+    if (!sysInfo->distributionPrettyName().isEmpty()) {
         report.append(QStringLiteral("Distribution: %1\n").arg(sysInfo->distributionPrettyName()));
-    } else if ( !sysInfo->bugzillaPlatform().isEmpty() &&
-                        sysInfo->bugzillaPlatform() != QLatin1String("unspecified")) {
-        report.append(QStringLiteral("Distribution (Platform): %1\n").arg(
-                                                        sysInfo->bugzillaPlatform()));
+    } else if (!sysInfo->bugzillaPlatform().isEmpty() && sysInfo->bugzillaPlatform() != QLatin1String("unspecified")) {
+        report.append(QStringLiteral("Distribution (Platform): %1\n").arg(sysInfo->bugzillaPlatform()));
     }
     report.append(QLatin1Char('\n'));
 
-    //Details of the crash situation
+    // Details of the crash situation
     if (isBugAwarenessPageDataUseful()) {
         report.append(QStringLiteral("-- Information about the crash:\n"));
         if (!m_reportDetailText.isEmpty()) {
             report.append(m_reportDetailText.trimmed());
         } else {
-            //If the user manual reports this crash, he/she should know what to put in here.
-            //This message is the only one translated in this function
-            report.append(xi18nc("@info/plain","<placeholder>In detail, tell us what you were doing "
-                                               " when the application crashed.</placeholder>"));
+            // If the user manual reports this crash, he/she should know what to put in here.
+            // This message is the only one translated in this function
+            report.append(xi18nc("@info/plain",
+                                 "<placeholder>In detail, tell us what you were doing "
+                                 " when the application crashed.</placeholder>"));
         }
         report.append(QLatin1String("\n\n"));
     }
@@ -193,7 +187,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         break;
     }
 
-    //Backtrace
+    // Backtrace
     switch (inlineBacktrace) {
     case Backtrace::Complete:
         report.append(QStringLiteral("-- Backtrace:\n"));
@@ -221,28 +215,26 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         report.append(QStringLiteral("A useful backtrace could not be generated\n"));
     }
 
-    //Possible duplicates (selected by the user)
+    // Possible duplicates (selected by the user)
     if (!m_possibleDuplicates.isEmpty()) {
         report.append(QLatin1Char('\n'));
         QString duplicatesString;
-        Q_FOREACH(const QString & dupe, m_possibleDuplicates) {
+        Q_FOREACH (const QString &dupe, m_possibleDuplicates) {
             duplicatesString += QLatin1String("bug ") + dupe + QLatin1String(", ");
         }
-        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + QLatin1Char('.');
-        report.append(QStringLiteral("The reporter indicates this bug may be a duplicate of or related to %1\n")
-                        .arg(duplicatesString));
+        duplicatesString = duplicatesString.left(duplicatesString.length() - 2) + QLatin1Char('.');
+        report.append(QStringLiteral("The reporter indicates this bug may be a duplicate of or related to %1\n").arg(duplicatesString));
     }
 
-    //Several possible duplicates (by bugzilla query)
+    // Several possible duplicates (by bugzilla query)
     if (!m_allPossibleDuplicatesByQuery.isEmpty()) {
         report.append(QLatin1Char('\n'));
         QString duplicatesString;
         int count = m_allPossibleDuplicatesByQuery.count();
-        for(int i=0; i < count && i < 5; i++) {
-            duplicatesString += QLatin1String("bug ") + m_allPossibleDuplicatesByQuery.at(i) +
-                                QLatin1String(", ");
+        for (int i = 0; i < count && i < 5; i++) {
+            duplicatesString += QLatin1String("bug ") + m_allPossibleDuplicatesByQuery.at(i) + QLatin1String(", ");
         }
-        duplicatesString = duplicatesString.left(duplicatesString.length()-2) + QLatin1Char('.');
+        duplicatesString = duplicatesString.left(duplicatesString.length() - 2) + QLatin1Char('.');
         report.append(QStringLiteral("Possible duplicates by query: %1\n").arg(duplicatesString));
     }
 
@@ -259,28 +251,24 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
 
 QString ReportInterface::generateAttachmentComment() const
 {
-    //Note: no translations should be done in this function's strings
+    // Note: no translations should be done in this function's strings
 
-    const CrashedApplication * crashedApp = DrKonqi::crashedApplication();
-    const SystemInformation * sysInfo = DrKonqi::systemInformation();
+    const CrashedApplication *crashedApp = DrKonqi::crashedApplication();
+    const SystemInformation *sysInfo = DrKonqi::systemInformation();
 
     QString comment;
 
-    //Program name and versions
-    comment.append(QStringLiteral("%1 (%2) using Qt %4\n\n")
-                   .arg(crashedApp->fakeExecutableBaseName())
-                   .arg(crashedApp->version())
-                   .arg(sysInfo->qtVersion()));
+    // Program name and versions
+    comment.append(QStringLiteral("%1 (%2) using Qt %4\n\n").arg(crashedApp->fakeExecutableBaseName()).arg(crashedApp->version()).arg(sysInfo->qtVersion()));
 
-    //Details of the crash situation
+    // Details of the crash situation
     if (isBugAwarenessPageDataUseful()) {
         comment.append(QStringLiteral("%1\n\n").arg(m_reportDetailText.trimmed()));
     }
 
-    //Backtrace (only 6 lines)
+    // Backtrace (only 6 lines)
     comment.append(QStringLiteral("-- Backtrace (Reduced):\n"));
-    QString reducedBacktrace =
-                DrKonqi::debuggerManager()->backtraceGenerator()->parser()->simplifiedBacktrace();
+    QString reducedBacktrace = DrKonqi::debuggerManager()->backtraceGenerator()->parser()->simplifiedBacktrace();
     comment.append(reducedBacktrace.trimmed());
 
     return comment;
@@ -296,11 +284,11 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     bug.version = m_productMapping->bugzillaVersion();
     bug.op_sys = sysInfo->bugzillaOperatingSystem();
     if (sysInfo->compiledSources()) {
-       bug.platform = QLatin1String("Compiled Sources");
+        bug.platform = QLatin1String("Compiled Sources");
     } else {
         bug.platform = sysInfo->bugzillaPlatform();
     }
-    bug.keywords = QStringList { QStringLiteral("drkonqi") };
+    bug.keywords = QStringList{QStringLiteral("drkonqi")};
     bug.priority = QLatin1String("NOR");
     bug.severity = QLatin1String("crash");
     bug.summary = m_reportTitle;
@@ -310,19 +298,17 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
 
 void ReportInterface::sendBugReport()
 {
-    if (m_attachToBugNumber > 0)
-    {
-        //We are going to attach the report to an existent one
+    if (m_attachToBugNumber > 0) {
+        // We are going to attach the report to an existent one
         connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::attachBacktraceWithReport);
         connect(m_bugzillaManager, &BugzillaManager::addMeToCCError, this, &ReportInterface::sendReportError);
-        //First add the user to the CC list, then attach
+        // First add the user to the CC list, then attach
         m_bugzillaManager->addMeToCC(m_attachToBugNumber);
     } else {
-        //Creating a new bug report
+        // Creating a new bug report
         bool attach = false;
         Bugzilla::NewBug report = newBugReportTemplate();
-        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
-                                                    ReportInterface::Backtrace::Complete);
+        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Complete);
 
         // If the report is too long try to reduce it, try to not include the
         // backtrace and eventually give up.
@@ -333,20 +319,17 @@ void ReportInterface::sendBugReport()
         // backtrace.
         // https://bugs.kde.org/show_bug.cgi?id=248807
         if (report.description.size() >= s_maxReportSize) {
-            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
-                                                        ReportInterface::Backtrace::Reduced);
+            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Reduced);
             attach = true;
         }
         if (report.description.size() >= s_maxReportSize) {
-            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
-                                                        ReportInterface::Backtrace::Exclude);
+            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Exclude);
             attach = true;
         }
         Q_ASSERT(!report.description.isEmpty());
 
         connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
-        connect(m_bugzillaManager, &BugzillaManager::reportSent,
-                this, [=](int bugId) {
+        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, [=](int bugId) {
             if (attach) {
                 m_attachToBugNumber = bugId;
                 attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
@@ -361,14 +344,13 @@ void ReportInterface::sendBugReport()
 
 void ReportInterface::sendUsingDefaultProduct() const
 {
-    //Fallback function: if some of the custom values fail, we need to reset all the fields to the default
+    // Fallback function: if some of the custom values fail, we need to reset all the fields to the default
     //(and valid) bugzilla values; and try to resend
     Bugzilla::NewBug bug = newBugReportTemplate();
     bug.product = QLatin1String("kde");
     bug.component = QLatin1String("general");
     bug.platform = QLatin1String("unspecified");
-    bug.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
-                                             ReportInterface::Backtrace::Complete);
+    bug.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Complete);
     m_bugzillaManager->sendReport(bug);
 }
 
@@ -379,25 +361,23 @@ void ReportInterface::attachBacktraceWithReport()
 
 void ReportInterface::attachBacktrace(const QString &comment)
 {
-    //The user was added to the CC list, proceed with the attachment
+    // The user was added to the CC list, proceed with the attachment
     connect(m_bugzillaManager, &BugzillaManager::attachToReportSent, this, &ReportInterface::attachSent);
     connect(m_bugzillaManager, &BugzillaManager::attachToReportError, this, &ReportInterface::sendReportError);
 
-    QString reportText = generateReportFullText(ReportInterface::DrKonqiStamp::Include,
-                                                ReportInterface::Backtrace::Complete);
+    QString reportText = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Complete);
     QString filename = getSuggestedKCrashFilename(DrKonqi::crashedApplication());
     QLatin1String summary("New crash information added by DrKonqi");
 
-    //Attach the report. The comment of the attachment also includes the bug description
-    m_bugzillaManager->attachTextToReport(reportText, filename, summary,
-                                          m_attachToBugNumber, comment);
+    // Attach the report. The comment of the attachment also includes the bug description
+    m_bugzillaManager->attachTextToReport(reportText, filename, summary, m_attachToBugNumber, comment);
 }
 
 void ReportInterface::attachSent(int attachId)
 {
     Q_UNUSED(attachId);
 
-    //The bug was attached, consider it "sent"
+    // The bug was attached, consider it "sent"
     emit reportSent(m_attachToBugNumber);
 }
 
@@ -412,38 +392,36 @@ bool ReportInterface::isWorthReporting() const
         return true;
     }
 
-    //Evaluate if the provided information is useful enough to enable the automatic report
+    // Evaluate if the provided information is useful enough to enable the automatic report
     bool needToReport = false;
 
     if (!m_userRememberCrashSituation) {
-        //This should never happen... but...
+        // This should never happen... but...
         return false;
     }
 
     int rating = selectedOptionsRating();
 
-    BacktraceParser::Usefulness use =
-                DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
+    BacktraceParser::Usefulness use = DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
 
     switch (use) {
     case BacktraceParser::ReallyUseful: {
-        //Perfect backtrace: require at least one option or a 100%-50% reproducible crash
-        needToReport = (rating >=2) ||
-            (m_reproducible == ReproducibleEverytime || m_reproducible == ReproducibleSometimes);
+        // Perfect backtrace: require at least one option or a 100%-50% reproducible crash
+        needToReport = (rating >= 2) || (m_reproducible == ReproducibleEverytime || m_reproducible == ReproducibleSometimes);
         break;
     }
     case BacktraceParser::MayBeUseful: {
-        //Not perfect backtrace: require at least two options or a 100% reproducible crash
-        needToReport = (rating >=3) || (m_reproducible == ReproducibleEverytime);
+        // Not perfect backtrace: require at least two options or a 100% reproducible crash
+        needToReport = (rating >= 3) || (m_reproducible == ReproducibleEverytime);
         break;
     }
     case BacktraceParser::ProbablyUseless:
-        //Bad backtrace: require at least two options and always reproducible (strict)
-        needToReport = (rating >=5) && (m_reproducible == ReproducibleEverytime);
+        // Bad backtrace: require at least two options and always reproducible (strict)
+        needToReport = (rating >= 5) && (m_reproducible == ReproducibleEverytime);
         break;
     case BacktraceParser::Useless:
     case BacktraceParser::InvalidUsefulness: {
-        needToReport =  false;
+        needToReport = false;
     }
     }
 
@@ -452,7 +430,7 @@ bool ReportInterface::isWorthReporting() const
 
 void ReportInterface::setAttachToBugNumber(uint bugNumber)
 {
-    //If bugNumber>0, the report is going to be attached to bugNumber
+    // If bugNumber>0, the report is going to be attached to bugNumber
     m_attachToBugNumber = bugNumber;
 }
 
@@ -471,17 +449,17 @@ uint ReportInterface::duplicateId() const
     return m_duplicate;
 }
 
-void ReportInterface::setPossibleDuplicatesByQuery(const QStringList & list)
+void ReportInterface::setPossibleDuplicatesByQuery(const QStringList &list)
 {
     m_allPossibleDuplicatesByQuery = list;
 }
 
-BugzillaManager * ReportInterface::bugzillaManager() const
+BugzillaManager *ReportInterface::bugzillaManager() const
 {
     return m_bugzillaManager;
 }
 
-ApplicationDetailsExamples * ReportInterface::appDetailsExamples() const
+ApplicationDetailsExamples *ReportInterface::appDetailsExamples() const
 {
     return m_appDetailsExamples;
 }

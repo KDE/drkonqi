@@ -12,14 +12,12 @@
 
 namespace Bugzilla
 {
-     QString version(KJob *kjob);
-     APIJob *version(const Connection &connection = Bugzilla::connection());
+QString version(KJob *kjob);
+APIJob *version(const Connection &connection = Bugzilla::connection());
 
-     // https://bugzilla.readthedocs.io/en/5.0/api/core/v1/user.html#login
-     LoginDetails login(KJob *kjob);
-     APIJob *login(const QString &username,
-                   const QString &password,
-                   const Connection &connection = Bugzilla::connection());
+// https://bugzilla.readthedocs.io/en/5.0/api/core/v1/user.html#login
+LoginDetails login(KJob *kjob);
+APIJob *login(const QString &username, const QString &password, const Connection &connection = Bugzilla::connection());
 } // namespace Bugzilla
 
 #endif // BUGZILLA_H

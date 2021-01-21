@@ -25,5 +25,5 @@ protected:
 class BacktraceLineCdb : public BacktraceLine
 {
 public:
-    BacktraceLineCdb(const QString & line);
+    BacktraceLineCdb(const QString &line);
 };

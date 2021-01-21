@@ -17,31 +17,26 @@
 #endif
 
 // first: windows & compiler includes
-#include <tchar.h>
-#include <windows.h>
-#include <dbghelp.h>
 #include <assert.h>
-#include <shlwapi.h>
+#include <dbghelp.h>
 #include <psapi.h>
+#include <shlwapi.h>
+#include <tchar.h>
 #include <tlhelp32.h>
+#include <windows.h>
 
 #include "drkonqi_debug.h"
 
 // second: Qt includes
 
-
 // third: KDE includes
 
-
 // common defines
-#define SafeCloseHandle(h) \
-    CloseHandle(h); \
+#define SafeCloseHandle(h)                                                                                                                                     \
+    CloseHandle(h);                                                                                                                                            \
     h = NULL;
 
 #define ArrayCount(x) (sizeof(x) / sizeof(x[0]))
-
-
-
 
 // Documentation
 /**

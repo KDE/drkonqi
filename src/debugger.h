@@ -13,8 +13,8 @@
 class Debugger
 {
 public:
-    static QList<Debugger> availableInternalDebuggers(const QString & backend);
-    static QList<Debugger> availableExternalDebuggers(const QString & backend);
+    static QList<Debugger> availableInternalDebuggers(const QString &backend);
+    static QList<Debugger> availableExternalDebuggers(const QString &backend);
 
     /** Returns true if this Debugger instance is valid, or false otherwise.
      * Debugger instances are valid only if they have been constructed from
@@ -46,7 +46,7 @@ public:
     /** Sets the backend to be used. This function must be called before using
      * command(), backtraceBatchCommands() or runInTerminal().
      */
-    void setUsedBackend(const QString & backendName);
+    void setUsedBackend(const QString &backendName);
 
     /** Returns the command that should be run to use the debugger */
     QString command() const;
@@ -72,11 +72,11 @@ public:
         ExpansionUsageShell,
     };
 
-    static void expandString(QString & str, ExpandStringUsage usage = ExpansionUsagePlainText,
-                             const QString & tempFile = QString(), const QString & preambleFile = QString());
+    static void
+    expandString(QString &str, ExpandStringUsage usage = ExpansionUsagePlainText, const QString &tempFile = QString(), const QString &preambleFile = QString());
 
 private:
-    static QList<Debugger> availableDebuggers(const QString &path, const QString & backend);
+    static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
     KSharedConfig::Ptr m_config;
     QString m_backend;
 };

@@ -17,7 +17,7 @@ public:
     explicit BacktraceParserLldb(QObject *parent = nullptr);
 
 protected Q_SLOTS:
-    virtual void newLine(const QString & lineStr) override;
+    virtual void newLine(const QString &lineStr) override;
 
 protected:
     virtual BacktraceParserPrivate *constructPrivate() const override;

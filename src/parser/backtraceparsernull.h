@@ -15,7 +15,7 @@ public:
     explicit BacktraceParserNull(QObject *parent = nullptr);
 
 protected Q_SLOTS:
-    void newLine(const QString & lineStr) override;
+    void newLine(const QString &lineStr) override;
 
 protected:
     BacktraceParserPrivate *constructPrivate() const override;

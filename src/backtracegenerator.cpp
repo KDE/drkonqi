@@ -9,21 +9,23 @@
 #include "backtracegenerator.h"
 
 #include "drkonqi_debug.h"
-#include <KShell>
 #include <KProcess>
+#include <KShell>
 
 #include "parser/backtraceparser.h"
 
-BacktraceGenerator::BacktraceGenerator(const Debugger & debugger, QObject *parent)
-        : QObject(parent),
-          m_debugger(debugger), m_proc(nullptr),
-          m_temp(nullptr), m_state(NotLoaded)
+BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent)
+    : QObject(parent)
+    , m_debugger(debugger)
+    , m_proc(nullptr)
+    , m_temp(nullptr)
+    , m_state(NotLoaded)
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);
 
 #ifdef BACKTRACE_PARSER_DEBUG
-    m_debugParser = BacktraceParser::newParser(QString(), this);   //uses the null parser
+    m_debugParser = BacktraceParser::newParser(QString(), this); // uses the null parser
     m_debugParser->connectToGenerator(this);
 #endif
 }
@@ -48,7 +50,7 @@ BacktraceGenerator::~BacktraceGenerator()
 
 bool BacktraceGenerator::start()
 {
-    //they should always be null before entering this function.
+    // they should always be null before entering this function.
     Q_ASSERT(!m_proc);
     Q_ASSERT(!m_temp);
 
@@ -64,7 +66,7 @@ bool BacktraceGenerator::start()
     }
 
     m_proc = new KProcess;
-    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));   // force C locale
+    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C")); // force C locale
 
     m_temp = new QTemporaryFile;
     m_temp->open();
@@ -97,7 +99,7 @@ bool BacktraceGenerator::start()
 
     m_proc->start();
     if (!m_proc->waitForStarted()) {
-        //we mustn't keep these around...
+        // we mustn't keep these around...
         m_proc->deleteLater();
         m_temp->deleteLater();
         m_proc = nullptr;
@@ -149,13 +151,13 @@ void BacktraceGenerator::slotReadInput()
 
 void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    //these are useless now
+    // these are useless now
     m_proc->deleteLater();
     m_temp->deleteLater();
     m_proc = nullptr;
     m_temp = nullptr;
 
-    //mark the end of the backtrace for the parser
+    // mark the end of the backtrace for the parser
     emit newLine(QString());
 
     if (exitStatus != QProcess::NormalExit || exitCode != 0) {
@@ -164,7 +166,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
         return;
     }
 
-    //no translation, string appears in the report
+    // no translation, string appears in the report
     QString tmp(QStringLiteral("Application: %progname (%execname), signal: %signame\n"));
     Debugger::expandString(tmp);
 
@@ -172,12 +174,10 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     m_state = Loaded;
 
 #ifdef BACKTRACE_PARSER_DEBUG
-    //append the raw unparsed backtrace
+    // append the raw unparsed backtrace
     m_parsedBacktrace += "\n------------ Unparsed Backtrace ------------\n";
-    m_parsedBacktrace += m_debugParser->parsedBacktrace(); //it's not really parsed, it's from the null parser.
+    m_parsedBacktrace += m_debugParser->parsedBacktrace(); // it's not really parsed, it's from the null parser.
 #endif
 
     emit done();
 }
-
-

@@ -1,10 +1,10 @@
 /*******************************************************************
-* productmapping.h
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * productmapping.h
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef PRODUCTMAPPING__H
 #define PRODUCTMAPPING__H
@@ -22,9 +22,9 @@ class CrashedApplication;
 /**
  * Maps our crashed entity to a bugzilla product/component/version.
  */
-class ProductMapping: public QObject
+class ProductMapping : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     explicit ProductMapping(const CrashedApplication *, BugzillaManager *, QObject *parent = nullptr);
 
@@ -40,9 +40,9 @@ private Q_SLOTS:
     void checkProductInfo(const Bugzilla::Product::Ptr);
 
 private:
-    void map(const QString&);
-    void mapUsingInternalFile(const QString&);
-    void getRelatedProductsUsingInternalFile(const QString&);
+    void map(const QString &);
+    void mapUsingInternalFile(const QString &);
+    void getRelatedProductsUsingInternalFile(const QString &);
 
     QStringList m_relatedBugzillaProducts;
     QString m_bugzillaProduct;

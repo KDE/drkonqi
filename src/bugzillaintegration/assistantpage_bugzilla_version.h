@@ -1,8 +1,8 @@
 /*******************************************************************
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-******************************************************************/
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ ******************************************************************/
 
 #ifndef ASSISTANTPAGE_BUGZILLA_VERSION_H
 #define ASSISTANTPAGE_BUGZILLA_VERSION_H
@@ -12,7 +12,8 @@
 #include "reportassistantpage.h"
 
 class ReportAssistantDialog;
-namespace Ui {
+namespace Ui
+{
 class BugzillaVersionPage;
 }
 

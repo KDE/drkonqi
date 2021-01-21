@@ -24,7 +24,7 @@
 class Callbacks
 {
 public:
-    static BOOL    KDBGWIN_CALL_TYPE ReadProcessMemory(HANDLE, DWORD64, PVOID, DWORD, LPDWORD);
-    static PVOID   KDBGWIN_CALL_TYPE SymFunctionTableAccess64(HANDLE, DWORD64);
+    static BOOL KDBGWIN_CALL_TYPE ReadProcessMemory(HANDLE, DWORD64, PVOID, DWORD, LPDWORD);
+    static PVOID KDBGWIN_CALL_TYPE SymFunctionTableAccess64(HANDLE, DWORD64);
     static DWORD64 KDBGWIN_CALL_TYPE SymGetModuleBase64(HANDLE, DWORD64);
 };

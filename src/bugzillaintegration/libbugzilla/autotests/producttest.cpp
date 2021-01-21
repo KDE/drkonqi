@@ -13,7 +13,6 @@
 
 namespace Bugzilla
 {
-
 class ConnectionDouble : public Connection
 {
 public:
@@ -24,31 +23,25 @@ public:
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path,
-                        const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
         if (path == "/product/dragonplayer") {
-            return new JobDouble { QFINDTESTDATA("data/product.dragonplayer.json") };
+            return new JobDouble{QFINDTESTDATA("data/product.dragonplayer.json")};
         }
-        Q_ASSERT_X(false, "get",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "get", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path,
-                         const QByteArray &,
-                         const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *post(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
     {
         qDebug() << path << query.toString();
         Q_UNREACHABLE();
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &,
-                        const QByteArray &,
-                        const QUrlQuery & = QUrlQuery()) const override
+    virtual APIJob *put(const QString &, const QByteArray &, const QUrlQuery & = QUrlQuery()) const override
     {
         Q_UNREACHABLE();
     }
@@ -73,9 +66,7 @@ private Q_SLOTS:
         QCOMPARE(product->isActive(), true);
         QCOMPARE(product->componentNames(), QStringList({"general"}));
         QCOMPARE(product->allVersions(),
-                 QStringList({"2.0", "2.0-beta1", "2.0-git", "2.0.x", "17.04",
-                              "17.08", "17.12", "18.04", "18.08", "18.12",
-                              "SVN", "unspecified"}));
+                 QStringList({"2.0", "2.0-beta1", "2.0-git", "2.0.x", "17.04", "17.08", "17.12", "18.04", "18.08", "18.12", "SVN", "unspecified"}));
 
         QCOMPARE(product->versions().size(), 12);
         auto version = product->versions()[0];

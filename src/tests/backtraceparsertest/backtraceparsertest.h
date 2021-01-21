@@ -6,10 +6,10 @@
 #ifndef BACKTRACEPARSERTEST_H
 #define BACKTRACEPARSERTEST_H
 
-#include <QTest>
-#include <QSettings>
-#include "fakebacktracegenerator.h"
 #include "../../parser/backtraceparser.h"
+#include "fakebacktracegenerator.h"
+#include <QSettings>
+#include <QTest>
 
 class BacktraceParserTest : public QObject
 {
@@ -26,7 +26,7 @@ private Q_SLOTS:
     void btParserBenchmark();
 
 private:
-    void fetchData(const QString & group);
+    void fetchData(const QString &group);
 
     QSettings m_settings;
     FakeBacktraceGenerator *m_generator = nullptr;

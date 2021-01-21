@@ -5,11 +5,11 @@
 */
 
 #include "querycommand.h"
-#include <QVariant>
 #include <QMetaProperty>
+#include <QVariant>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QUrlQuery QueryCommand::toQuery() const
 {
     QUrlQuery query;
@@ -37,8 +37,7 @@ QUrlQuery QueryCommand::expandQuery(QUrlQuery &query, const QSet<QString> &seen)
         }
 
         // Lists must be serialized manually. They could have a number of representations.
-        Q_ASSERT_X(value.type() != QVariant::StringList, Q_FUNC_INFO,
-                   qPrintable(QStringLiteral("Trying to auto serialize string list %1").arg(name)));
+        Q_ASSERT_X(value.type() != QVariant::StringList, Q_FUNC_INFO, qPrintable(QStringLiteral("Trying to auto serialize string list %1").arg(name)));
 
         // Either can't serialize or not set.
         if (value.toString().isEmpty()) {
@@ -52,4 +51,3 @@ QUrlQuery QueryCommand::expandQuery(QUrlQuery &query, const QSet<QString> &seen)
 }
 
 } // namespace Bugzilla
-

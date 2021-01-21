@@ -9,19 +9,19 @@
 
 #include <QRegularExpression>
 
-//BEGIN BacktraceLineKdbgwin
+// BEGIN BacktraceLineKdbgwin
 
 class BacktraceLineKdbgwin : public BacktraceLine
 {
 public:
-    BacktraceLineKdbgwin(const QString & line);
+    BacktraceLineKdbgwin(const QString &line);
 
 private:
     void parse();
     void rate();
 };
 
-BacktraceLineKdbgwin::BacktraceLineKdbgwin(const QString & line)
+BacktraceLineKdbgwin::BacktraceLineKdbgwin(const QString &line)
     : BacktraceLine()
 {
     d->m_line = line;
@@ -40,15 +40,15 @@ void BacktraceLineKdbgwin::parse()
         d->m_type = KCrash;
         return;
     } else if (d->m_line.startsWith(QLatin1String("Loaded"))) {
-        d->m_type = Crap; //FIXME that's not exactly crap
+        d->m_type = Crap; // FIXME that's not exactly crap
         return;
     }
 
-    static const QRegularExpression re(QRegularExpression::anchoredPattern(QStringLiteral(
-                                        "([^!]+)!" //match the module name, followed by !
-                                        "([^\\(]+)\\(\\) " //match the function name, followed by ()
-                                        "\\[([^@]+)@ [\\-\\d]+\\] " // [filename @ line]
-                                        "at 0x.*"))); //at 0xdeadbeef
+    static const QRegularExpression re(
+        QRegularExpression::anchoredPattern(QStringLiteral("([^!]+)!" // match the module name, followed by !
+                                                           "([^\\(]+)\\(\\) " // match the function name, followed by ()
+                                                           "\\[([^@]+)@ [\\-\\d]+\\] " // [filename @ line]
+                                                           "at 0x.*"))); // at 0xdeadbeef
 
     const QRegularExpressionMatch match = re.match(d->m_line);
     if (match.hasMatch()) {
@@ -68,7 +68,7 @@ void BacktraceLineKdbgwin::rate()
 {
     LineRating r;
 
-    //for explanations, see the LineRating enum definition
+    // for explanations, see the LineRating enum definition
     if (fileName() != QLatin1String("[unknown]")) {
         r = Good;
     } else if (libraryName() != QLatin1String("[unknown]")) {
@@ -88,23 +88,23 @@ void BacktraceLineKdbgwin::rate()
     d->m_rating = r;
 }
 
-//END BacktraceLineKdbgwin
+// END BacktraceLineKdbgwin
 
-//BEGIN BacktraceParserKdbgwin
+// BEGIN BacktraceParserKdbgwin
 
 BacktraceParserKdbgwin::BacktraceParserKdbgwin(QObject *parent)
     : BacktraceParser(parent)
 {
 }
 
-void BacktraceParserKdbgwin::newLine(const QString & lineStr)
+void BacktraceParserKdbgwin::newLine(const QString &lineStr)
 {
     Q_D(BacktraceParser);
 
     BacktraceLineKdbgwin line(lineStr);
-    switch(line.type()) {
+    switch (line.type()) {
     case BacktraceLine::Crap:
-        break; //we don't want crap in the backtrace ;)
+        break; // we don't want crap in the backtrace ;)
     case BacktraceLine::StackFrame:
         d->m_linesToRate.append(line);
         Q_FALLTHROUGH();
@@ -113,6 +113,4 @@ void BacktraceParserKdbgwin::newLine(const QString & lineStr)
     }
 }
 
-//END BacktraceParserKdbgwin
-
-
+// END BacktraceParserKdbgwin

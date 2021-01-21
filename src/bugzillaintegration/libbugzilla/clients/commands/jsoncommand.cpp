@@ -11,8 +11,8 @@
 #include <QJsonObject>
 #include <QMetaProperty>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QByteArray JsonCommand::toJson() const
 {
     QJsonDocument doc;
@@ -52,4 +52,3 @@ QVariantHash JsonCommand::toVariantHash() const
 }
 
 } // namespace Bugzilla
-

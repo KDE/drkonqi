@@ -9,10 +9,9 @@
 
 #include <QString>
 
-namespace Bugzilla {
-
-struct LoginDetails
+namespace Bugzilla
 {
+struct LoginDetails {
     int id;
     QString token;
 };

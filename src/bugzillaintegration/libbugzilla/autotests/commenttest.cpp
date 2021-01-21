@@ -12,7 +12,6 @@
 
 namespace Bugzilla
 {
-
 class ConnectionDouble : public Connection
 {
 public:
@@ -23,39 +22,31 @@ public:
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path,
-                        const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override
     {
         if (path == "/bug/407363/comment" && query.toString().isEmpty()) {
-            return new JobDouble { QFINDTESTDATA("data/comments.json") };
+            return new JobDouble{QFINDTESTDATA("data/comments.json")};
         }
         if (path == "/bug/1/comment" && query.toString().isEmpty()) {
-            return new JobDouble { QFINDTESTDATA("data/error.nobug.invalid.json") };
+            return new JobDouble{QFINDTESTDATA("data/error.nobug.invalid.json")};
         }
-        Q_ASSERT_X(false, "get",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "get", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path,
-                         const QByteArray &,
-                         const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *post(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
-        Q_ASSERT_X(false, "post",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "post", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &path,
-                        const QByteArray &,
-                        const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *put(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
-        Q_ASSERT_X(false, "put",
-                   qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
+        Q_ASSERT_X(false, "put", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 };

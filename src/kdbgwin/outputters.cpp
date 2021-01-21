@@ -11,11 +11,12 @@
 
 #include "outputters.h"
 
-Outputter::Outputter() : stream(stdout)
+Outputter::Outputter()
+    : stream(stdout)
 {
 }
 
-void Outputter::OnDebugLine(const QString& line)
+void Outputter::OnDebugLine(const QString &line)
 {
     stream << line << '\n';
 }

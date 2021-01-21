@@ -9,8 +9,8 @@
 
 #include "querycommand.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class BugSearch : public QueryCommand
 {
     Q_OBJECT
@@ -22,6 +22,7 @@ class BugSearch : public QueryCommand
     BUGZILLA_MEMBER_PROPERTY(qint64, offset) = -1;
     BUGZILLA_MEMBER_PROPERTY(QString, longdesc);
     BUGZILLA_MEMBER_PROPERTY(QStringList, order);
+
 public:
     virtual QUrlQuery toQuery() const override;
 };

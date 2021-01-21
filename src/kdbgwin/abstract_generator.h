@@ -16,13 +16,13 @@
 
 #include <QObject>
 
-const static char*      BACKTRACE_FORMAT    = "%1!%2() [%3 @ %4] at 0x%5";
+const static char *BACKTRACE_FORMAT = "%1!%2() [%3 @ %4] at 0x%5";
 // module.dll!KClass::function() [c:\file.cpp @ 10] at 0x0001000
 
-const static char*      DEFAULT_MODULE  = "[unknown]";
-const static char*      DEFAULT_FUNC    = "[unknown]";
-const static char*      DEFAULT_FILE    = "[unknown]";
-const static int        DEFAULT_LINE    = -1;
+const static char *DEFAULT_MODULE = "[unknown]";
+const static char *DEFAULT_FUNC = "[unknown]";
+const static char *DEFAULT_FILE = "[unknown]";
+const static int DEFAULT_LINE = -1;
 
 /**
  * \brief Base generator class
@@ -39,7 +39,7 @@ protected:
     /// A Process instance, corresponding to the process for which we generate the backtrace
     Process m_process;
 
-    /// The current stack frame. It is kept as a member 
+    /// The current stack frame. It is kept as a member
     STACKFRAME64 m_currentFrame;
 
     /// The definition of a map of symbols
@@ -50,7 +50,7 @@ protected:
 
 public:
     /// Constructor
-    AbstractBTGenerator(const Process& process);
+    AbstractBTGenerator(const Process &process);
     virtual ~AbstractBTGenerator();
 
     /// Abstract virtual: Initialize this generator
@@ -83,26 +83,26 @@ public:
 
     /// Abstract virtual: get current line
     /// @return the current line in the file
-    virtual int     GetLine() = 0;
+    virtual int GetLine() = 0;
 
     /// Checks if symbols are loaded for the specified module
     /// @return true if symbols are loaded
-    virtual bool IsSymbolLoaded(const QString& module);
+    virtual bool IsSymbolLoaded(const QString &module);
 
     /// Tries to load symbols for all loaded modules
     virtual void LoadSymbols();
 
     /// Tries to load a symbol file for a module loaded at dwBaseAddr
-    virtual void LoadSymbol(const QString& module, DWORD64 dwBaseAddr) = 0;
+    virtual void LoadSymbol(const QString &module, DWORD64 dwBaseAddr) = 0;
 Q_SIGNALS:
     /// This will be emitted whenever the generator wishes to output information. It can either be
     /// module information (in the form: "Loaded C:\path\to.dll (symbols loaded)", a stack frame line,
     /// or newlines
-    void DebugLine(const QString&);
+    void DebugLine(const QString &);
 
     /// This signal is emitted when a module is loaded, and its symbols are missing. This is
     /// caught by the PackageSuggester
-    void MissingSymbol(const QString&);
+    void MissingSymbol(const QString &);
 
     /// Will be emitted when the generation finishes
     void Finished();

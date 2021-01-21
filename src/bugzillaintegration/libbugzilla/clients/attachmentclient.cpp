@@ -8,8 +8,8 @@
 
 #include <QVariant>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QList<int> AttachmentClient::createAttachment(KJob *kjob)
 {
     APIJob *job = qobject_cast<APIJob *>(kjob);
@@ -31,8 +31,7 @@ QList<int> AttachmentClient::createAttachment(KJob *kjob)
 
 KJob *AttachmentClient::createAttachment(int bugId, const NewAttachment &attachment)
 {
-    return m_connection.post(QStringLiteral("/bug/%1/attachment").arg(bugId),
-                             attachment.toJson());
+    return m_connection.post(QStringLiteral("/bug/%1/attachment").arg(bugId), attachment.toJson());
 }
 
 } // namespace Bugzilla

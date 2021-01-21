@@ -22,24 +22,34 @@ class BacktraceGenerator : public QObject
     Q_OBJECT
 
 public:
-    enum State { NotLoaded, Loading, Loaded, Failed, FailedToStart, };
+    enum State {
+        NotLoaded,
+        Loading,
+        Loaded,
+        Failed,
+        FailedToStart,
+    };
 
-    BacktraceGenerator(const Debugger & debugger, QObject *parent);
+    BacktraceGenerator(const Debugger &debugger, QObject *parent);
     ~BacktraceGenerator() override;
 
-    State state() const {
+    State state() const
+    {
         return m_state;
     }
 
-    BacktraceParser *parser() const {
+    BacktraceParser *parser() const
+    {
         return m_parser;
     }
 
-    QString backtrace() const {
+    QString backtrace() const
+    {
         return m_parsedBacktrace;
     }
 
-    const Debugger debugger() const {
+    const Debugger debugger() const
+    {
         return m_debugger;
     }
 
@@ -58,16 +68,16 @@ private Q_SLOTS:
     void slotReadInput();
 
 private:
-    const Debugger    m_debugger;
-    KProcess *        m_proc = nullptr;
-    QTemporaryFile *  m_temp = nullptr;
-    QByteArray        m_output;
-    State             m_state;
-    BacktraceParser * m_parser = nullptr;
-    QString           m_parsedBacktrace;
+    const Debugger m_debugger;
+    KProcess *m_proc = nullptr;
+    QTemporaryFile *m_temp = nullptr;
+    QByteArray m_output;
+    State m_state;
+    BacktraceParser *m_parser = nullptr;
+    QString m_parsedBacktrace;
 
 #ifdef BACKTRACE_PARSER_DEBUG
-    BacktraceParser * m_debugParser = nullptr;
+    BacktraceParser *m_debugParser = nullptr;
 #endif
 };
 

@@ -1,12 +1,12 @@
 /*******************************************************************
-* bugzillalib.h
-* SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * bugzillalib.h
+ * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef BUGZILLALIB__H
 #define BUGZILLALIB__H
@@ -14,11 +14,12 @@
 #include <QObject>
 #include <QString>
 
+#include "libbugzilla/clients/attachmentclient.h"
 #include "libbugzilla/clients/bugclient.h"
 #include "libbugzilla/clients/productclient.h"
-#include "libbugzilla/clients/attachmentclient.h"
 
-namespace KIO {
+namespace KIO
+{
 class KJob;
 }
 
@@ -42,9 +43,7 @@ public:
     void fetchBugReport(int, QObject *jobOwner = nullptr);
     void searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset);
     void sendReport(const Bugzilla::NewBug &bug);
-    void attachTextToReport(const QString &text, const QString &filename,
-                            const QString &description, int bugId,
-                            const QString &comment);
+    void attachTextToReport(const QString &text, const QString &filename, const QString &description, int bugId, const QString &comment);
     void addMeToCC(int bugId);
     void fetchProductInfo(const QString &);
 
@@ -73,7 +72,7 @@ Q_SIGNALS:
     void commentsError(const QString &errorMsg, QObject *jobOwner);
     void searchError(const QString &errorMsg);
     void sendReportError(const QString &errorMsg);
-    void sendReportErrorInvalidValues(); //To use default values
+    void sendReportErrorInvalidValues(); // To use default values
     void attachToReportError(const QString &errorMsg);
     void addMeToCCError(const QString &errorMsg);
     void productInfoError();

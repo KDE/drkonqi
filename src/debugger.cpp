@@ -15,14 +15,14 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
-//static
-QList<Debugger> Debugger::availableInternalDebuggers(const QString & backend)
+// static
+QList<Debugger> Debugger::availableInternalDebuggers(const QString &backend)
 {
     return availableDebuggers(QStringLiteral("debuggers/internal"), backend);
 }
 
-//static
-QList<Debugger> Debugger::availableExternalDebuggers(const QString & backend)
+// static
+QList<Debugger> Debugger::availableExternalDebuggers(const QString &backend)
 {
     return availableDebuggers(QStringLiteral("debuggers/external"), backend);
 }
@@ -35,14 +35,13 @@ bool Debugger::isValid() const
 bool Debugger::isInstalled() const
 {
     QString tryexec = tryExec();
-    if(tryexec.isEmpty()) {
+    if (tryexec.isEmpty()) {
         qCDebug(DRKONQI_LOG) << "tryExec of" << codeName() << "is empty!";
         return false;
     }
 
     // Find for executable in PATH and in our application path
-    return !QStandardPaths::findExecutable(tryexec).isEmpty()
-        || !QStandardPaths::findExecutable(tryexec, {QCoreApplication::applicationDirPath()}).isEmpty();
+    return !QStandardPaths::findExecutable(tryexec).isEmpty() || !QStandardPaths::findExecutable(tryexec, {QCoreApplication::applicationDirPath()}).isEmpty();
 }
 
 QString Debugger::displayName() const
@@ -52,8 +51,8 @@ QString Debugger::displayName() const
 
 QString Debugger::codeName() const
 {
-    //fall back to the "TryExec" string if "CodeName" is not specified.
-    //for most debuggers those strings should be the same
+    // fall back to the "TryExec" string if "CodeName" is not specified.
+    // for most debuggers those strings should be the same
     return isValid() ? m_config->group("General").readEntry("CodeName", tryExec()) : QString();
 }
 
@@ -64,11 +63,10 @@ QString Debugger::tryExec() const
 
 QStringList Debugger::supportedBackends() const
 {
-    return isValid() ? m_config->group("General").readEntry("Backends")
-                                   .split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
+    return isValid() ? m_config->group("General").readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
 }
 
-void Debugger::setUsedBackend(const QString & backendName)
+void Debugger::setUsedBackend(const QString &backendName)
 {
     if (supportedBackends().contains(backendName)) {
         m_backend = backendName;
@@ -77,52 +75,42 @@ void Debugger::setUsedBackend(const QString & backendName)
 
 QString Debugger::command() const
 {
-    return (isValid() && m_config->hasGroup(m_backend))
-        ? m_config->group(m_backend).readPathEntry("Exec", QString())
-        : QString();
+    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("Exec", QString()) : QString();
 }
 
 QString Debugger::backtraceBatchCommands() const
 {
-    return (isValid() && m_config->hasGroup(m_backend))
-        ? m_config->group(m_backend).readPathEntry("BatchCommands", QString())
-        : QString();
+    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("BatchCommands", QString()) : QString();
 }
 QString Debugger::preambleCommands() const
 {
-    return (isValid() && m_config->hasGroup(m_backend))
-        ? m_config->group(m_backend).readPathEntry("PreambleCommands", QString())
-        : QString();
+    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("PreambleCommands", QString()) : QString();
 }
 
 bool Debugger::runInTerminal() const
 {
-    return (isValid() && m_config->hasGroup(m_backend))
-        ? m_config->group(m_backend).readEntry("Terminal", false)
-        : false;
+    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readEntry("Terminal", false) : false;
 }
 
 QString Debugger::backendValueOfParameter(const QString &key) const
 {
-    return (isValid() && m_config->hasGroup(m_backend))
-        ? m_config->group(m_backend).readEntry(key, QString())
-        : QString();
+    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readEntry(key, QString()) : QString();
 }
 
-//static
-void Debugger::expandString(QString & str, ExpandStringUsage usage, const QString & tempFile, const QString & preambleFile)
+// static
+void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString &tempFile, const QString &preambleFile)
 {
     const CrashedApplication *appInfo = DrKonqi::crashedApplication();
     const QHash<QString, QString> map = {
-        { QLatin1String("progname"), appInfo->name() },
-        { QLatin1String("execname"), appInfo->fakeExecutableBaseName() },
-        { QLatin1String("execpath"), appInfo->executable().absoluteFilePath() },
-        { QLatin1String("signum"), QString::number(appInfo->signalNumber()) },
-        { QLatin1String("signame"), appInfo->signalName() },
-        { QLatin1String("pid"), QString::number(appInfo->pid()) },
-        { QLatin1String("tempfile"), tempFile },
-        { QLatin1String("preamblefile"), preambleFile },
-        { QLatin1String("thread"), QString::number(appInfo->thread()) },
+        {QLatin1String("progname"), appInfo->name()},
+        {QLatin1String("execname"), appInfo->fakeExecutableBaseName()},
+        {QLatin1String("execpath"), appInfo->executable().absoluteFilePath()},
+        {QLatin1String("signum"), QString::number(appInfo->signalNumber())},
+        {QLatin1String("signame"), appInfo->signalName()},
+        {QLatin1String("pid"), QString::number(appInfo->pid())},
+        {QLatin1String("tempfile"), tempFile},
+        {QLatin1String("preamblefile"), preambleFile},
+        {QLatin1String("thread"), QString::number(appInfo->thread())},
     };
 
     if (usage == ExpansionUsageShell) {
@@ -132,16 +120,14 @@ void Debugger::expandString(QString & str, ExpandStringUsage usage, const QStrin
     }
 }
 
-//static
-QList<Debugger> Debugger::availableDebuggers(const QString & path, const QString & backend)
+// static
+QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString &backend)
 {
-    const QStringList debuggerDirs {
-        // Search from application path, this helps when deploying an application
-        // as binary blob (e.g. Windows exe).
-        QCoreApplication::applicationDirPath() + QLatin1Char('/') + path,
-        // Search in default path
-        QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory)
-    };
+    const QStringList debuggerDirs{// Search from application path, this helps when deploying an application
+                                   // as binary blob (e.g. Windows exe).
+                                   QCoreApplication::applicationDirPath() + QLatin1Char('/') + path,
+                                   // Search in default path
+                                   QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory)};
 
     QHash<QString, Debugger> result;
     for (const auto &debuggerDir : qAsConst(debuggerDirs)) {

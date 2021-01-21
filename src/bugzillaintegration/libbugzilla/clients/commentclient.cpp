@@ -8,8 +8,8 @@
 
 #include <QVariantHash>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QList<Comment::Ptr> CommentClient::getFromBug(KJob *kjob)
 {
     APIJob *job = qobject_cast<APIJob *>(kjob);

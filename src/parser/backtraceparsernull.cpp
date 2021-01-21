@@ -6,26 +6,29 @@
 #include "backtraceparsernull.h"
 #include "backtraceparser_p.h"
 
-//BEGIN BacktraceLineNull
+// BEGIN BacktraceLineNull
 
 class BacktraceLineNull : public BacktraceLine
 {
 public:
-    BacktraceLineNull(const QString & line);
+    BacktraceLineNull(const QString &line);
 };
 
-BacktraceLineNull::BacktraceLineNull(const QString & line)
+BacktraceLineNull::BacktraceLineNull(const QString &line)
     : BacktraceLine()
 {
     d->m_line = line;
     d->m_rating = MissingEverything;
 }
 
-//END BacktraceLineNull
+// END BacktraceLineNull
 
-//BEGIN BacktraceParserNull
+// BEGIN BacktraceParserNull
 
-BacktraceParserNull::BacktraceParserNull(QObject *parent) : BacktraceParser(parent) {}
+BacktraceParserNull::BacktraceParserNull(QObject *parent)
+    : BacktraceParser(parent)
+{
+}
 
 BacktraceParserPrivate *BacktraceParserNull::constructPrivate() const
 {
@@ -34,12 +37,9 @@ BacktraceParserPrivate *BacktraceParserNull::constructPrivate() const
     return d;
 }
 
-void BacktraceParserNull::newLine(const QString & lineStr)
+void BacktraceParserNull::newLine(const QString &lineStr)
 {
     d_ptr->m_linesList.append(BacktraceLineNull(lineStr));
 }
 
-
-//END BacktraceParserNull
-
-
+// END BacktraceParserNull

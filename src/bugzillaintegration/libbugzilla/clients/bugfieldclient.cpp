@@ -6,8 +6,8 @@
 
 #include "bugfieldclient.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 KJob *BugFieldClient::getFields(const QString &idOrName)
 {
     return m_connection.get(QStringLiteral("/field/bug/") + idOrName);

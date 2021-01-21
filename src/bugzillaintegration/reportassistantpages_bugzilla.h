@@ -1,11 +1,11 @@
 /*******************************************************************
-* reportassistantpages_bugzilla.h
-* SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportassistantpages_bugzilla.h
+ * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef REPORTASSISTANTPAGES__BUGZILLA__H
 #define REPORTASSISTANTPAGES__BUGZILLA__H
@@ -14,18 +14,21 @@
 
 #include "reportassistantpages_base.h"
 
-#include "ui_assistantpage_bugzilla_login.h"
 #include "ui_assistantpage_bugzilla_information.h"
+#include "ui_assistantpage_bugzilla_login.h"
 #include "ui_assistantpage_bugzilla_preview.h"
 #include "ui_assistantpage_bugzilla_send.h"
 
 #include <clients/bugfieldclient.h>
 
-namespace KWallet { class Wallet; }
+namespace KWallet
+{
+class Wallet;
+}
 class KCapacityBar;
 
 /** Bugzilla login **/
-class BugzillaLoginPage: public ReportAssistantPage
+class BugzillaLoginPage : public ReportAssistantPage
 {
     Q_OBJECT
 
@@ -52,14 +55,14 @@ Q_SIGNALS:
 
 private:
     void updateWidget(bool enabled);
-    bool kWalletEntryExists(const QString&);
+    bool kWalletEntryExists(const QString &);
     void openWallet();
 
-    Ui::AssistantPageBugzillaLogin      ui;
+    Ui::AssistantPageBugzillaLogin ui;
 
-    KWallet::Wallet *                   m_wallet;
-    bool                                m_walletWasOpenedBefore;
-    bool                                m_bugzillaVersionFound;
+    KWallet::Wallet *m_wallet;
+    bool m_walletWasOpenedBefore;
+    bool m_bugzillaVersionFound;
 };
 
 /** Title and details page **/
@@ -88,12 +91,12 @@ private:
     void setDistroComboError(const QString &error);
     int currentDescriptionCharactersCount();
 
-    Ui::AssistantPageBugzillaInformation    ui;
-    KCapacityBar *                          m_textCompleteBar;
+    Ui::AssistantPageBugzillaInformation ui;
+    KCapacityBar *m_textCompleteBar;
 
-    bool                                    m_textsOK;
+    bool m_textsOK;
 
-    int                                     m_requiredCharacters;
+    int m_requiredCharacters;
 };
 
 /** Preview report page **/
@@ -108,7 +111,7 @@ public:
     void aboutToHide() override;
 
 private:
-    Ui::AssistantPageBugzillaPreview    ui;
+    Ui::AssistantPageBugzillaPreview ui;
 };
 
 /** Send crash report page **/
@@ -131,10 +134,10 @@ private Q_SLOTS:
     void openReportContents();
 
 private:
-    Ui::AssistantPageBugzillaSend           ui;
-    QString                                 reportUrl;
+    Ui::AssistantPageBugzillaSend ui;
+    QString reportUrl;
 
-    QPointer<QDialog>                       m_contentsDialog;
+    QPointer<QDialog> m_contentsDialog;
 
 Q_SIGNALS:
     void finished(bool);

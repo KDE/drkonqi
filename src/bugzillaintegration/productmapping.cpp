@@ -1,22 +1,22 @@
 /*******************************************************************
-* productmapping.cpp
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * productmapping.cpp
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "productmapping.h"
 
+#include "drkonqi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include "drkonqi_debug.h"
 #include <QStandardPaths>
 
 #include "bugzillalib.h"
 #include "crashedapplication.h"
 
-ProductMapping::ProductMapping(const CrashedApplication * crashedApp, BugzillaManager * bzManager, QObject * parent)
+ProductMapping::ProductMapping(const CrashedApplication *crashedApp, BugzillaManager *bzManager, QObject *parent)
     : QObject(parent)
     , m_crashedAppPtr(crashedApp)
     , m_bugzillaManagerPtr(bzManager)
@@ -24,7 +24,7 @@ ProductMapping::ProductMapping(const CrashedApplication * crashedApp, BugzillaMa
     , m_bugzillaVersionDisabled(false)
 
 {
-    //Default "fallback" values
+    // Default "fallback" values
     m_bugzillaProduct = crashedApp->fakeExecutableBaseName();
     m_bugzillaComponent = QStringLiteral("general");
     m_bugzillaVersionString = QStringLiteral("unspecified");
@@ -32,19 +32,19 @@ ProductMapping::ProductMapping(const CrashedApplication * crashedApp, BugzillaMa
 
     map(crashedApp->fakeExecutableBaseName());
 
-    //Get valid versions
+    // Get valid versions
     connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoFetched, this, &ProductMapping::checkProductInfo);
 
     m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
 }
 
-void ProductMapping::map(const QString & appName)
+void ProductMapping::map(const QString &appName)
 {
     mapUsingInternalFile(appName);
     getRelatedProductsUsingInternalFile(m_bugzillaProduct);
 }
 
-void ProductMapping::mapUsingInternalFile(const QString & appName)
+void ProductMapping::mapUsingInternalFile(const QString &appName)
 {
     KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::AppDataLocation);
     const KConfigGroup mappings = mappingsFile.group("Mappings");
@@ -52,7 +52,7 @@ void ProductMapping::mapUsingInternalFile(const QString & appName)
         QString mappingString = mappings.readEntry(appName);
         if (!mappingString.isEmpty()) {
             QStringList list = mappingString.split(QLatin1Char('|'), Qt::SkipEmptyParts);
-            if (list.count()==2) {
+            if (list.count() == 2) {
                 m_bugzillaProduct = list.at(0);
                 m_bugzillaComponent = list.at(1);
                 m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
@@ -61,50 +61,50 @@ void ProductMapping::mapUsingInternalFile(const QString & appName)
             }
         } else {
             qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
-                            "(or there was an error when reading)";
+                                      "(or there was an error when reading)";
         }
     }
 }
 
-void ProductMapping::getRelatedProductsUsingInternalFile(const QString & bugzillaProduct)
+void ProductMapping::getRelatedProductsUsingInternalFile(const QString &bugzillaProduct)
 {
-    //ProductGroup ->  kontact=kdepim
-    //Groups -> kdepim=kontact|kmail|korganizer|akonadi|pimlibs..etc
+    // ProductGroup ->  kontact=kdepim
+    // Groups -> kdepim=kontact|kmail|korganizer|akonadi|pimlibs..etc
 
     KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::AppDataLocation);
     const KConfigGroup productGroup = mappingsFile.group("ProductGroup");
 
-    //Get groups of the application
+    // Get groups of the application
     QStringList groups;
     if (productGroup.hasKey(bugzillaProduct)) {
         QString group = productGroup.readEntry(bugzillaProduct);
         if (group.isEmpty()) {
             qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
-                            "(or there was an error when reading)";
+                                      "(or there was an error when reading)";
             return;
         }
         groups = group.split(QLatin1Char('|'), Qt::SkipEmptyParts);
     }
 
-    //All KDE apps use the KDE Platform (basic libs)
+    // All KDE apps use the KDE Platform (basic libs)
     groups << QLatin1String("kdeplatform");
 
-    //Add the product itself
+    // Add the product itself
     m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
 
-    //Get related products of each related group
-    Q_FOREACH( const QString & group, groups ) {
+    // Get related products of each related group
+    Q_FOREACH (const QString &group, groups) {
         const KConfigGroup bzGroups = mappingsFile.group("BZGroups");
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);
             if (!bzGroup.isEmpty()) {
                 QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), Qt::SkipEmptyParts);
-                if (relatedGroups.size()>0) {
+                if (relatedGroups.size() > 0) {
                     m_relatedBugzillaProducts.append(relatedGroups);
                 }
             } else {
                 qCWarning(DRKONQI_LOG) << "Error while reading mapping entry. Entry exists but it is empty "
-                                "(or there was an error when reading)";
+                                          "(or there was an error when reading)";
             }
         }
     }
@@ -126,10 +126,10 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
     const QStringList &allVersions = product->allVersions();
 
     if (allVersions.contains(version)) {
-        //The version the crash application provided is a valid bugzilla version: use it !
+        // The version the crash application provided is a valid bugzilla version: use it !
         m_bugzillaVersionString = version;
     } else if (version.endsWith(QLatin1String(".00"))) {
-        //check if there is a version on bugzilla with just ".0"
+        // check if there is a version on bugzilla with just ".0"
         const QString shorterVersion = version.left(version.size() - 1);
         if (allVersions.contains(shorterVersion)) {
             m_bugzillaVersionString = shorterVersion;
