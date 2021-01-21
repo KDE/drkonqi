@@ -6,5 +6,6 @@
 
 #include "bugupdate.h"
 
-namespace Bugzilla {
+namespace Bugzilla
+{
 } // namespace Bugzilla

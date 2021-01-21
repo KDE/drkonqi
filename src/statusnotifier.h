@@ -44,7 +44,6 @@ private:
     bool m_activationAllowed = true;
 
     QString m_title;
-
 };
 
 #endif // DRKONQI_STATUSNOTIFIER_H

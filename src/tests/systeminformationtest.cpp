@@ -40,7 +40,7 @@ private Q_SLOTS:
         config.basicOperatingSystem = "Linux"; // other parts getting filled depends on OS
         config.lsbReleasePath = QFINDTESTDATA("lsb_release"); // double binary
         config.osReleasePath.clear();
-        config.unameFunc = (void *) &uname;
+        config.unameFunc = (void *)&uname;
 
         SystemInformation info(config);
         QTRY_VERIFY(info.complete());
@@ -59,7 +59,7 @@ private Q_SLOTS:
         config.basicOperatingSystem = "Linux"; // other parts getting filled depends on OS
         config.lsbReleasePath.clear();
         config.osReleasePath = QFINDTESTDATA("data/os-release"); // fixture
-        config.unameFunc = (void *) &uname;
+        config.unameFunc = (void *)&uname;
 
         SystemInformation info(config);
         QTRY_VERIFY(info.complete());

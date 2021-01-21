@@ -14,7 +14,7 @@
 
 #include <QStringList>
 
-AbstractBTGenerator::AbstractBTGenerator(const Process& process)
+AbstractBTGenerator::AbstractBTGenerator(const Process &process)
     : m_process(process)
 {
     assert(process.IsValid());
@@ -30,8 +30,7 @@ QString AbstractBTGenerator::GetModuleName()
     ZeroMemory(&module, sizeof(module));
     module.SizeOfStruct = sizeof(IMAGEHLP_MODULE64);
 
-    if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module))
-    {
+    if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module)) {
         qCCritical(DRKONQI_LOG) << "SymGetModuleInfo64 failed: " << GetLastError();
         return QLatin1String(DEFAULT_MODULE);
     }
@@ -46,8 +45,7 @@ QString AbstractBTGenerator::GetModulePath()
     ZeroMemory(&module, sizeof(module));
     module.SizeOfStruct = sizeof(IMAGEHLP_MODULE64);
 
-    if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module))
-    {
+    if (!SymGetModuleInfo64(m_process.GetHandle(), m_currentFrame.AddrPC.Offset, &module)) {
         qCCritical(DRKONQI_LOG) << "SymGetModuleInfo64 failed: " << GetLastError();
         return QLatin1String(DEFAULT_MODULE);
     }
@@ -60,55 +58,47 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
     assert(m_process.IsValid());
     assert(hThread);
 
-    if (!Init())
-    {
+    if (!Init()) {
         assert(false);
         return;
     }
 
-    //HANDLE hFile = CreateFile(L"C:\\test\\test.dmp", FILE_ALL_ACCESS, FILE_SHARE_WRITE|FILE_SHARE_READ, NULL, CREATE_ALWAYS, 0, NULL);
-    //if (!MiniDumpWriteDump(m_process.GetHandle(), m_process.GetId(), hFile,
+    // HANDLE hFile = CreateFile(L"C:\\test\\test.dmp", FILE_ALL_ACCESS, FILE_SHARE_WRITE|FILE_SHARE_READ, NULL, CREATE_ALWAYS, 0, NULL);
+    // if (!MiniDumpWriteDump(m_process.GetHandle(), m_process.GetId(), hFile,
     //    MiniDumpNormal, NULL, NULL, NULL))
     //{
     //    HRESULT hres = (HRESULT) GetLastError();
     //    printf("%08X\n\n", hres);
     //}
-    //SafeCloseHandle(hFile);
+    // SafeCloseHandle(hFile);
 
     DWORD dw = SuspendThread(hThread);
     assert(dw != DWORD(-1));
-    if (dw == DWORD(-1))
-    {
+    if (dw == DWORD(-1)) {
         qCCritical(DRKONQI_LOG) << "SuspendThread() failed: " << GetLastError();
         return;
     }
 
     CONTEXT context;
     ZeroMemory(&context, sizeof(context));
-    if (!bFaultingThread)
-    {
+    if (!bFaultingThread) {
         // if it's not the faulting thread, get its context
         context.ContextFlags = CONTEXT_FULL;
-        if (!GetThreadContext(hThread, &context))
-        {
+        if (!GetThreadContext(hThread, &context)) {
             ResumeThread(hThread);
             assert(false);
             qCCritical(DRKONQI_LOG) << "GetThreadContext() failed: " << GetLastError();
             return;
         }
-    }
-    else
-    {
+    } else {
         // if it is, get it from KCrash
         HANDLE hMapFile = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, L"Local\\KCrashShared");
-        if (hMapFile == NULL)
-        {
+        if (hMapFile == NULL) {
             qCCritical(DRKONQI_LOG) << "OpenFileMapping() failed: " << GetLastError();
             return;
         }
-        CONTEXT *othercontext = (CONTEXT*) MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(CONTEXT));
-        if (othercontext == NULL)
-        {
+        CONTEXT *othercontext = (CONTEXT *)MapViewOfFile(hMapFile, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(CONTEXT));
+        if (othercontext == NULL) {
             qCCritical(DRKONQI_LOG) << "MapViewOfFile() failed: " << GetLastError();
             SafeCloseHandle(hMapFile);
             return;
@@ -132,7 +122,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
     m_currentFrame.AddrFrame.Offset = context.Rbp;
     m_currentFrame.AddrStack.Offset = context.Rsp;
 #else
-# error This architecture is not supported.
+#error This architecture is not supported.
 #endif
     m_currentFrame.AddrPC.Mode = AddrModeFlat;
     m_currentFrame.AddrFrame.Mode = AddrModeFlat;
@@ -143,26 +133,23 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
 
     LoadSymbols();
 
-    for (int i = 0; /*nothing*/; i++)
-    {
+    for (int i = 0; /*nothing*/; i++) {
         SetLastError(0);
 
-        if (!StackWalk64(
-            machineType,
-            m_process.GetHandle(),
-            hThread,
-            &m_currentFrame,
-            &context,
-            &Callbacks::ReadProcessMemory,
-            &Callbacks::SymFunctionTableAccess64,
-            &Callbacks::SymGetModuleBase64,
-            NULL))
-        {
+        if (!StackWalk64(machineType,
+                         m_process.GetHandle(),
+                         hThread,
+                         &m_currentFrame,
+                         &context,
+                         &Callbacks::ReadProcessMemory,
+                         &Callbacks::SymFunctionTableAccess64,
+                         &Callbacks::SymGetModuleBase64,
+                         NULL)) {
             emit Finished();
             qCDebug(DRKONQI_LOG) << "Stackwalk finished; GetLastError=" << GetLastError();
             break;
         }
-        
+
         FrameChanged();
 
         QString modulename = GetModuleName();
@@ -171,9 +158,8 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
         int line = GetLine();
         QString address = QString::number(m_currentFrame.AddrPC.Offset, 16);
 
-        QString debugLine = QString::fromLatin1(BACKTRACE_FORMAT).
-            arg(modulename).arg(functionname).arg(file).arg(line).arg(address);
-        
+        QString debugLine = QString::fromLatin1(BACKTRACE_FORMAT).arg(modulename).arg(functionname).arg(file).arg(line).arg(address);
+
         emit DebugLine(debugLine);
     }
 
@@ -184,10 +170,9 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
     SymCleanup(m_process.GetHandle());
 }
 
-bool AbstractBTGenerator::IsSymbolLoaded(const QString& module)
+bool AbstractBTGenerator::IsSymbolLoaded(const QString &module)
 {
-    if (m_symbolsMap.contains(module))
-    {
+    if (m_symbolsMap.contains(module)) {
         return m_symbolsMap[module];
     }
     return false;
@@ -196,28 +181,25 @@ bool AbstractBTGenerator::IsSymbolLoaded(const QString& module)
 void AbstractBTGenerator::LoadSymbols()
 {
     TModulesMap modules = m_process.GetModules();
-    for (TModulesMap::iterator i = modules.begin(); i != modules.end(); i++)
-    {
+    for (TModulesMap::iterator i = modules.begin(); i != modules.end(); i++) {
         MODULEINFO modInfo;
         ZeroMemory(&modInfo, sizeof(modInfo));
 
         QString strModule = i.key();
 
         GetModuleInformation(m_process.GetHandle(), i.value(), &modInfo, sizeof(modInfo));
-        SymLoadModuleEx(
-            m_process.GetHandle(),
-            NULL,
-            (CHAR*) i.key().toLatin1().constData(),
-            (CHAR*) i.key().toLatin1().constData(),
-            (DWORD64) modInfo.lpBaseOfDll,
-            modInfo.SizeOfImage,
-            NULL,
-            0);
+        SymLoadModuleEx(m_process.GetHandle(),
+                        NULL,
+                        (CHAR *)i.key().toLatin1().constData(),
+                        (CHAR *)i.key().toLatin1().constData(),
+                        (DWORD64)modInfo.lpBaseOfDll,
+                        modInfo.SizeOfImage,
+                        NULL,
+                        0);
 
-        LoadSymbol(strModule, (DWORD64) modInfo.lpBaseOfDll);
+        LoadSymbol(strModule, (DWORD64)modInfo.lpBaseOfDll);
 
-        if (!IsSymbolLoaded(strModule))
-        {
+        if (!IsSymbolLoaded(strModule)) {
             emit MissingSymbol(strModule);
         }
     }

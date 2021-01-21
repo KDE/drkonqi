@@ -14,8 +14,8 @@
 
 #include "commandbase.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class QueryCommand : public QObject
 {
 public:

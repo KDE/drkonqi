@@ -1,10 +1,10 @@
 /*******************************************************************
-* backtracewidget.h
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * backtracewidget.h
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef BACKTRACEWIDGET__H
 #define BACKTRACEWIDGET__H
@@ -14,19 +14,19 @@
 #include "debugpackageinstaller.h"
 #include "ui_backtracewidget.h"
 
-namespace KSyntaxHighlighting {
-    class SyntaxHighlighter;
+namespace KSyntaxHighlighting
+{
+class SyntaxHighlighter;
 }
 class BacktraceRatingWidget;
 class BacktraceGenerator;
 
-class BacktraceWidget: public QWidget
+class BacktraceWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit BacktraceWidget(BacktraceGenerator *generator, QWidget *parent = nullptr,
-                             bool showToggleBacktrace = false);
+    explicit BacktraceWidget(BacktraceGenerator *generator, QWidget *parent = nullptr, bool showToggleBacktrace = false);
 
     bool canInstallDebugPackages() const;
 
@@ -42,11 +42,11 @@ Q_SIGNALS:
     void stateChanged();
 
 private:
-    BacktraceGenerator * m_btGenerator = nullptr;
-    Ui::Form    ui;
-    BacktraceRatingWidget *   m_backtraceRatingWidget = nullptr;
+    BacktraceGenerator *m_btGenerator = nullptr;
+    Ui::Form ui;
+    BacktraceRatingWidget *m_backtraceRatingWidget = nullptr;
     KSyntaxHighlighting::SyntaxHighlighter *m_highlighter = nullptr;
-    DebugPackageInstaller * m_debugPackageInstaller = nullptr;
+    DebugPackageInstaller *m_debugPackageInstaller = nullptr;
 
     void setAsLoading();
 

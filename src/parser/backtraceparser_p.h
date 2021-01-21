@@ -11,8 +11,13 @@
 class BacktraceParserPrivate
 {
 public:
-    BacktraceParserPrivate() : m_usefulness(BacktraceParser::InvalidUsefulness) {}
-    ~BacktraceParserPrivate() {}
+    BacktraceParserPrivate()
+        : m_usefulness(BacktraceParser::InvalidUsefulness)
+    {
+    }
+    ~BacktraceParserPrivate()
+    {
+    }
 
     QStringList m_infoLines;
     QList<BacktraceLine> m_linesList;
@@ -23,4 +28,4 @@ public:
     BacktraceParser::Usefulness m_usefulness;
 };
 
-#endif //BACKTRACEPARSER_P_H
+#endif // BACKTRACEPARSER_P_H

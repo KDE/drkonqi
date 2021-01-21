@@ -10,8 +10,8 @@
 #include "clientbase.h"
 #include "models/bugfield.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class BugFieldClient : public ClientBase
 {
 public:

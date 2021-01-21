@@ -6,12 +6,11 @@
 
 #include "product.h"
 
-
 #include <QMetaMethod>
 #include <QMetaType>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 Product::Product(const QVariantHash &object, const Connection &connection, QObject *parent)
     : QObject(parent)
     , m_connection(connection)
@@ -102,9 +101,7 @@ void Product::registerVariantConverters()
     }
     convertersRegistered = true;
 
-    QMetaType::registerConverter<QVariantList, QList<ProductComponent *>>(
-                [](QVariantList v) -> QList<ProductComponent *>
-    {
+    QMetaType::registerConverter<QVariantList, QList<ProductComponent *>>([](QVariantList v) -> QList<ProductComponent *> {
         QList<ProductComponent *> list;
         list.reserve(v.size());
         for (const QVariant &variant : qAsConst(v)) {
@@ -113,9 +110,7 @@ void Product::registerVariantConverters()
         return list;
     });
 
-    QMetaType::registerConverter<QVariantList, QList<ProductVersion *>>(
-                [](QVariantList v) -> QList<ProductVersion *>
-    {
+    QMetaType::registerConverter<QVariantList, QList<ProductVersion *>>([](QVariantList v) -> QList<ProductVersion *> {
         QList<ProductVersion *> list;
         list.reserve(v.size());
         for (const QVariant &variant : qAsConst(v)) {

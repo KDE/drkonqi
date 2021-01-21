@@ -6,8 +6,8 @@
 
 #include "bugfield.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 BugField::BugField(const QVariantHash &obj, QObject *parent)
     : QObject(parent)
 {
@@ -36,9 +36,7 @@ void BugField::registerVariantConverters()
     }
     convertersRegistered = true;
 
-    QMetaType::registerConverter<QVariantList, QList<BugFieldValue *>>(
-                [](QVariantList v) -> QList<BugFieldValue *>
-    {
+    QMetaType::registerConverter<QVariantList, QList<BugFieldValue *>>([](QVariantList v) -> QList<BugFieldValue *> {
         QList<BugFieldValue *> list;
         list.reserve(v.size());
         for (const QVariant &variant : qAsConst(v)) {

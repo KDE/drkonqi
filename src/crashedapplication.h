@@ -6,9 +6,9 @@
 #ifndef CRASHEDAPPLICATION_H
 #define CRASHEDAPPLICATION_H
 
-#include <QObject>
 #include <QDateTime>
 #include <QFileInfo>
+#include <QObject>
 
 #include "bugreportaddress.h"
 
@@ -53,7 +53,7 @@ public:
 
     int thread() const;
 
-    const QDateTime& datetime() const;
+    const QDateTime &datetime() const;
 
     /** @returns whether mmap'd files have been deleted, e.g. updated since start of app */
     bool hasDeletedFiles() const;
@@ -81,6 +81,6 @@ protected:
     bool m_hasDeletedFiles;
 };
 
-QString getSuggestedKCrashFilename(const CrashedApplication* app);
+QString getSuggestedKCrashFilename(const CrashedApplication *app);
 
 #endif // CRASHEDAPPLICATION_H

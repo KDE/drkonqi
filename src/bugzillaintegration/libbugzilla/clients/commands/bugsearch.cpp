@@ -6,9 +6,8 @@
 
 #include "bugsearch.h"
 
-
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QUrlQuery BugSearch::toQuery() const
 {
     QUrlQuery query;

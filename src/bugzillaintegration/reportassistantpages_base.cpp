@@ -1,58 +1,58 @@
 /*******************************************************************
-* reportassistantpages_base.cpp
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2009 A. L. Spehr <spehr@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportassistantpages_base.cpp
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2009 A. L. Spehr <spehr@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include "reportassistantpages_base.h"
 
 #include <QCheckBox>
-#include <QFontDatabase>
 #include <QDesktopServices>
+#include <QFontDatabase>
 
-#include <KToolInvocation>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <KToolInvocation>
 #include <KWindowConfig>
 
-#include "drkonqi.h"
-#include "debuggermanager.h"
-#include "crashedapplication.h"
-#include "reportinterface.h"
-#include "parser/backtraceparser.h"
+#include "applicationdetailsexamples.h"
 #include "backtracegenerator.h"
 #include "backtracewidget.h"
+#include "crashedapplication.h"
+#include "debuggermanager.h"
+#include "drkonqi.h"
 #include "drkonqi_globals.h"
-#include "applicationdetailsexamples.h"
+#include "parser/backtraceparser.h"
+#include "reportinterface.h"
 
-//BEGIN IntroductionPage
+// BEGIN IntroductionPage
 
-IntroductionPage::IntroductionPage(ReportAssistantDialog * parent)
-        : ReportAssistantPage(parent)
+IntroductionPage::IntroductionPage(ReportAssistantDialog *parent)
+    : ReportAssistantPage(parent)
 {
     ui.setupUi(this);
-    ui.m_warningIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(64,64));
+    ui.m_warningIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-warning")).pixmap(64, 64));
 }
 
-//END IntroductionPage
+// END IntroductionPage
 
-//BEGIN CrashInformationPage
+// BEGIN CrashInformationPage
 
-CrashInformationPage::CrashInformationPage(ReportAssistantDialog * parent)
-        : ReportAssistantPage(parent)
+CrashInformationPage::CrashInformationPage(ReportAssistantDialog *parent)
+    : ReportAssistantPage(parent)
 {
     m_backtraceWidget = new BacktraceWidget(DrKonqi::debuggerManager()->backtraceGenerator(), this, true);
     connect(m_backtraceWidget, &BacktraceWidget::stateChanged, this, &CrashInformationPage::emitCompleteChanged);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setContentsMargins(0,0,0,0);
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(m_backtraceWidget);
-    layout->addSpacing(10); //We need this for better usability until we get something better
+    layout->addSpacing(10); // We need this for better usability until we get something better
 
-    //If the backtrace was already fetched on the main dialog, save it.
+    // If the backtrace was already fetched on the main dialog, save it.
     BacktraceGenerator *btGenerator = DrKonqi::debuggerManager()->backtraceGenerator();
     if (btGenerator->state() == BacktraceGenerator::Loaded) {
         BacktraceParser::Usefulness use = btGenerator->parser()->backtraceUsefulness();
@@ -83,73 +83,69 @@ void CrashInformationPage::aboutToHide()
 bool CrashInformationPage::isComplete()
 {
     BacktraceGenerator *generator = DrKonqi::debuggerManager()->backtraceGenerator();
-    return (generator->state() != BacktraceGenerator::NotLoaded &&
-            generator->state() != BacktraceGenerator::Loading);
+    return (generator->state() != BacktraceGenerator::NotLoaded && generator->state() != BacktraceGenerator::Loading);
 }
 
 bool CrashInformationPage::showNextPage()
 {
-    BacktraceParser::Usefulness use =
-                    DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
+    BacktraceParser::Usefulness use = DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
 
     if (DrKonqi::ignoreQuality()) {
         return true;
     }
 
-    if ((use == BacktraceParser::InvalidUsefulness || use == BacktraceParser::ProbablyUseless
-            || use == BacktraceParser::Useless) && m_backtraceWidget->canInstallDebugPackages()) {
-        if ( KMessageBox::Yes == KMessageBox::questionYesNo(this,
-                                i18nc("@info","This crash information is not useful enough, "
-                                              "do you want to try to improve it? You will need "
-                                              "to install some debugging packages."),
-                                i18nc("@title:window","Crash Information is not useful enough")) ) {
+    if ((use == BacktraceParser::InvalidUsefulness || use == BacktraceParser::ProbablyUseless || use == BacktraceParser::Useless)
+        && m_backtraceWidget->canInstallDebugPackages()) {
+        if (KMessageBox::Yes
+            == KMessageBox::questionYesNo(this,
+                                          i18nc("@info",
+                                                "This crash information is not useful enough, "
+                                                "do you want to try to improve it? You will need "
+                                                "to install some debugging packages."),
+                                          i18nc("@title:window", "Crash Information is not useful enough"))) {
             m_backtraceWidget->hilightExtraDetailsLabel(true);
             m_backtraceWidget->focusImproveBacktraceButton();
-            return false; //Cancel show next, to allow the user to write more
+            return false; // Cancel show next, to allow the user to write more
         } else {
-            return true; //Allow to continue
+            return true; // Allow to continue
         }
     } else {
         return true;
     }
 }
 
-//END CrashInformationPage
+// END CrashInformationPage
 
-//BEGIN BugAwarenessPage
+// BEGIN BugAwarenessPage
 
-static QHash<int, ReportInterface::Reproducible> s_reproducibleIndex {
-    { 0, ReportInterface::ReproducibleUnsure },
-    { 1, ReportInterface::ReproducibleNever },
-    { 2, ReportInterface::ReproducibleSometimes },
-    { 3, ReportInterface::ReproducibleEverytime }
-};
+static QHash<int, ReportInterface::Reproducible> s_reproducibleIndex{{0, ReportInterface::ReproducibleUnsure},
+                                                                     {1, ReportInterface::ReproducibleNever},
+                                                                     {2, ReportInterface::ReproducibleSometimes},
+                                                                     {3, ReportInterface::ReproducibleEverytime}};
 
-BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog * parent)
-        : ReportAssistantPage(parent)
+BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog *parent)
+    : ReportAssistantPage(parent)
 {
     ui.setupUi(this);
 
-    ui.m_actionsInsideApp->setText(i18nc("@option:check kind of information the user can provide "
-                                    "about the crash, %1 is the application name",
-                                     "What I was doing when the application \"%1\" crashed",
-                                         DrKonqi::crashedApplication()->name()));
+    ui.m_actionsInsideApp->setText(
+        i18nc("@option:check kind of information the user can provide "
+              "about the crash, %1 is the application name",
+              "What I was doing when the application \"%1\" crashed",
+              DrKonqi::crashedApplication()->name()));
 
     connect(ui.m_rememberGroup, &QButtonGroup::idClicked, this, &BugAwarenessPage::updateCheckBoxes);
     // Also listen to toggle so radio buttons are covered.
     connect(ui.m_rememberGroup, &QButtonGroup::idClicked, this, &BugAwarenessPage::updateCheckBoxes);
 
-    ui.m_appSpecificDetailsExamplesWidget->setVisible(
-                reportInterface()->appDetailsExamples()->hasExamples());
+    ui.m_appSpecificDetailsExamplesWidget->setVisible(reportInterface()->appDetailsExamples()->hasExamples());
     ui.m_appSpecificDetailsExamples->setText(
-                i18nc("@label examples about information the user can provide",
-                      "Examples: %1", reportInterface()->appDetailsExamples()->examples()));
+        i18nc("@label examples about information the user can provide", "Examples: %1", reportInterface()->appDetailsExamples()->examples()));
     ui.m_appSpecificDetailsExamples->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
 
     if (qEnvironmentVariableIsSet("DRKONQI_TEST_MODE")) {
         ui.m_rememberCrashSituationYes->setChecked(true);
-        ui.m_reproducibleBox->setCurrentIndex(
-                    s_reproducibleIndex.key(ReportInterface::ReproducibleEverytime));
+        ui.m_reproducibleBox->setCurrentIndex(s_reproducibleIndex.key(ReportInterface::ReproducibleEverytime));
     }
 }
 
@@ -160,7 +156,7 @@ void BugAwarenessPage::aboutToShow()
 
 void BugAwarenessPage::aboutToHide()
 {
-    //Save data
+    // Save data
     ReportInterface::Reproducible reproducible = ReportInterface::ReproducibleUnsure;
     reproducible = s_reproducibleIndex.value(ui.m_reproducibleBox->currentIndex());
 
@@ -186,23 +182,24 @@ void BugAwarenessPage::updateCheckBoxes()
     ui.m_appSpecificDetailsExamples->setEnabled(rememberSituation);
 }
 
-//END BugAwarenessPage
+// END BugAwarenessPage
 
-//BEGIN ConclusionPage
+// BEGIN ConclusionPage
 
-ConclusionPage::ConclusionPage(ReportAssistantDialog * parent)
-        : ReportAssistantPage(parent)
-        , m_needToReport(false)
+ConclusionPage::ConclusionPage(ReportAssistantDialog *parent)
+    : ReportAssistantPage(parent)
+    , m_needToReport(false)
 {
     m_isBKO = DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
 
     ui.setupUi(this);
 
     KGuiItem::assign(ui.m_showReportInformationButton,
-                    KGuiItem2(i18nc("@action:button", "&Show Contents of the Report"),
-                            QIcon::fromTheme(QStringLiteral("document-preview")),
-                            i18nc("@info:tooltip", "Use this button to show the generated "
-                            "report information about this crash.")));
+                     KGuiItem2(i18nc("@action:button", "&Show Contents of the Report"),
+                               QIcon::fromTheme(QStringLiteral("document-preview")),
+                               i18nc("@info:tooltip",
+                                     "Use this button to show the generated "
+                                     "report information about this crash.")));
     connect(ui.m_showReportInformationButton, &QPushButton::clicked, this, &ConclusionPage::openReportInformation);
 
     ui.m_restartAppOnFinish->setVisible(false);
@@ -210,33 +207,32 @@ ConclusionPage::ConclusionPage(ReportAssistantDialog * parent)
 
 void ConclusionPage::finishClicked()
 {
-    //Manual report
+    // Manual report
     if (m_needToReport && !m_isBKO) {
         const CrashedApplication *crashedApp = DrKonqi::crashedApplication();
         BugReportAddress reportAddress = crashedApp->bugReportAddress();
-        QString report = reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Exclude,
-                                                                   ReportInterface::Backtrace::Complete);
+        QString report = reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Exclude, ReportInterface::Backtrace::Complete);
 
         if (reportAddress.isEmail()) {
             QString subject = QStringLiteral("[%1] [%2] Automatic crash report generated by DrKonqi");
-            subject= subject.arg(crashedApp->name());
-            subject= subject.arg(crashedApp->datetime().toString(QStringLiteral("yyyy-MM-dd")));
-            KToolInvocation::invokeMailer(reportAddress, QLatin1String(""), QLatin1String("") , subject, report);
+            subject = subject.arg(crashedApp->name());
+            subject = subject.arg(crashedApp->datetime().toString(QStringLiteral("yyyy-MM-dd")));
+            KToolInvocation::invokeMailer(reportAddress, QLatin1String(""), QLatin1String(""), subject, report);
         } else {
             QUrl url(reportAddress);
-            if (QUrl(reportAddress).isRelative()) { //Scheme is missing
+            if (QUrl(reportAddress).isRelative()) { // Scheme is missing
                 url = QUrl(QString::fromLatin1("https://%1").arg(reportAddress));
             }
             QDesktopServices::openUrl(url);
         }
 
-        //Show a copy of the bug reported
+        // Show a copy of the bug reported
         openReportInformation();
     }
 
-    //Restart application
+    // Restart application
     if (ui.m_restartAppOnFinish->isChecked()) {
-         DrKonqi::crashedApplication()->restart();
+        DrKonqi::crashedApplication()->restart();
     }
 }
 
@@ -251,29 +247,34 @@ void ConclusionPage::aboutToShow()
     emitCompleteChanged();
 
     BugReportAddress reportAddress = DrKonqi::crashedApplication()->bugReportAddress();
-    BacktraceParser::Usefulness use =
-                DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
+    BacktraceParser::Usefulness use = DrKonqi::debuggerManager()->backtraceGenerator()->parser()->backtraceUsefulness();
 
     QString explanationHTML = QLatin1String("<p><ul>");
 
     bool backtraceGenerated = true;
     switch (use) {
     case BacktraceParser::ReallyUseful: {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The automatically generated "
-                                                            "crash information is useful."));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(i18nc("@info",
+                                          "The automatically generated "
+                                          "crash information is useful."));
         break;
     }
     case BacktraceParser::MayBeUseful: {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The automatically generated "
-                                                            "crash information lacks some "
-                                                            "details "
-                                                            "but may be still be useful."));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(i18nc("@info",
+                                          "The automatically generated "
+                                          "crash information lacks some "
+                                          "details "
+                                          "but may be still be useful."));
         break;
     }
     case BacktraceParser::ProbablyUseless: {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The automatically generated "
-                                                        "crash information lacks important details "
-                                                        "and it is probably not helpful."));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(i18nc("@info",
+                                          "The automatically generated "
+                                          "crash information lacks important details "
+                                          "and it is probably not helpful."));
         break;
     }
     case BacktraceParser::Useless:
@@ -281,68 +282,84 @@ void ConclusionPage::aboutToShow()
         BacktraceGenerator::State state = DrKonqi::debuggerManager()->backtraceGenerator()->state();
         if (state == BacktraceGenerator::NotLoaded) {
             backtraceGenerated = false;
-            explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The crash information was "
-                                        "not generated because it was not needed."));
+            explanationHTML += QStringLiteral("<li>%1</li>")
+                                   .arg(i18nc("@info",
+                                              "The crash information was "
+                                              "not generated because it was not needed."));
         } else {
-            explanationHTML += QStringLiteral("<li>%1<br />%2</li>").arg(
-                                        i18nc("@info","The automatically generated crash "
-                                        "information does not contain enough information to be "
-                                        "helpful."),
-                                        xi18nc("@info","<note>You can improve it by "
-                                        "installing debugging packages and reloading the crash on "
-                                        "the Crash Information page. You can get help with the Bug "
-                                        "Reporting Guide by clicking on the "
-                                        "<interface>Help</interface> button.</note>"));
-                                    //but this guide doesn't mention bt packages? that's techbase
-                                    //->>and the help guide mention techbase page...
+            explanationHTML += QStringLiteral("<li>%1<br />%2</li>")
+                                   .arg(i18nc("@info",
+                                              "The automatically generated crash "
+                                              "information does not contain enough information to be "
+                                              "helpful."),
+                                        xi18nc("@info",
+                                               "<note>You can improve it by "
+                                               "installing debugging packages and reloading the crash on "
+                                               "the Crash Information page. You can get help with the Bug "
+                                               "Reporting Guide by clicking on the "
+                                               "<interface>Help</interface> button.</note>"));
+            // but this guide doesn't mention bt packages? that's techbase
+            //->>and the help guide mention techbase page...
         }
         break;
     }
     }
 
-    //User can provide enough information
+    // User can provide enough information
     if (reportInterface()->isBugAwarenessPageDataUseful()) {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The information you can "
-                                                            "provide could be considered helpful."));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(i18nc("@info",
+                                          "The information you can "
+                                          "provide could be considered helpful."));
     } else {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(i18nc("@info","The information you can "
-                                        "provide is not considered helpful enough in this case."));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(i18nc("@info",
+                                          "The information you can "
+                                          "provide is not considered helpful enough in this case."));
     }
 
     if (isDuplicate) {
-        explanationHTML += QStringLiteral("<li>%1</li>").arg(xi18nc("@info","Your problem has already been "
-                                                            "reported as bug %1.", QString::number(reportInterface()->duplicateId())));
+        explanationHTML += QStringLiteral("<li>%1</li>")
+                               .arg(xi18nc("@info",
+                                           "Your problem has already been "
+                                           "reported as bug %1.",
+                                           QString::number(reportInterface()->duplicateId())));
     }
 
     explanationHTML += QLatin1String("</ul></p>");
 
     ui.m_explanationLabel->setText(explanationHTML);
 
-    //Hide the "Show contents of the report" button if the backtrace was not generated
+    // Hide the "Show contents of the report" button if the backtrace was not generated
     ui.m_showReportInformationButton->setVisible(backtraceGenerated);
 
     if (m_needToReport) {
-        ui.m_conclusionsLabel->setText(QStringLiteral("<p><strong>%1</strong>").arg(i18nc("@info","This "
-                                           "report is considered helpful.")));
+        ui.m_conclusionsLabel->setText(QStringLiteral("<p><strong>%1</strong>")
+                                           .arg(i18nc("@info",
+                                                      "This "
+                                                      "report is considered helpful.")));
 
         if (m_isBKO) {
             emitCompleteChanged();
-            ui.m_howToProceedLabel->setText(xi18nc("@info","This application's bugs are reported "
-                                            "to the KDE bug tracking system: click <interface>Next"
-                                            "</interface> to start the reporting process. "
-                                            "You can manually report at <link>%1</link>",
-                                                  reportAddress));
+            ui.m_howToProceedLabel->setText(xi18nc("@info",
+                                                   "This application's bugs are reported "
+                                                   "to the KDE bug tracking system: click <interface>Next"
+                                                   "</interface> to start the reporting process. "
+                                                   "You can manually report at <link>%1</link>",
+                                                   reportAddress));
 
         } else {
             if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
                 ui.m_restartAppOnFinish->setVisible(true);
             }
 
-            ui.m_howToProceedLabel->setText(xi18nc("@info","This application is not supported in the "
-                                                "KDE bug tracking system. Click <interface>"
-                                                "Finish</interface> to report this bug to "
-                                                "the application maintainer. Also, you can manually "
-                                                "report at <link>%1</link>.", reportAddress));
+            ui.m_howToProceedLabel->setText(xi18nc("@info",
+                                                   "This application is not supported in the "
+                                                   "KDE bug tracking system. Click <interface>"
+                                                   "Finish</interface> to report this bug to "
+                                                   "the application maintainer. Also, you can manually "
+                                                   "report at <link>%1</link>.",
+                                                   reportAddress));
 
             emit finished(false);
         }
@@ -352,29 +369,34 @@ void ConclusionPage::aboutToShow()
             ui.m_restartAppOnFinish->setVisible(true);
         }
 
-        ui.m_conclusionsLabel->setText(QStringLiteral("<p><strong>%1</strong><br />%2</p>").arg(
-                            i18nc("@info","This report does not contain enough information for the "
-                            "developers, so the automated bug reporting process is not "
-                            "enabled for this crash."),
-                            i18nc("@info","If you wish, you can go back and change your "
-                            "answers. ")));
+        ui.m_conclusionsLabel->setText(QStringLiteral("<p><strong>%1</strong><br />%2</p>")
+                                           .arg(i18nc("@info",
+                                                      "This report does not contain enough information for the "
+                                                      "developers, so the automated bug reporting process is not "
+                                                      "enabled for this crash."),
+                                                i18nc("@info",
+                                                      "If you wish, you can go back and change your "
+                                                      "answers. ")));
 
-        //Only mention "manual reporting" if the backtrace was generated.
-        //FIXME separate the texts "manual reporting" / "click finish to close"
+        // Only mention "manual reporting" if the backtrace was generated.
+        // FIXME separate the texts "manual reporting" / "click finish to close"
         //"manual reporting" should be ~"manual report using the contents of the report"....
-        //FIXME for 4.5 (workflow, see ToDo)
+        // FIXME for 4.5 (workflow, see ToDo)
         if (backtraceGenerated) {
             if (m_isBKO) {
-                ui.m_howToProceedLabel->setText(xi18nc("@info","You can manually report this bug "
-                                                "at <link>%1</link>. "
-                                                "Click <interface>Finish</interface> to close the "
-                                                "assistant.",
-                                                reportAddress));
+                ui.m_howToProceedLabel->setText(xi18nc("@info",
+                                                       "You can manually report this bug "
+                                                       "at <link>%1</link>. "
+                                                       "Click <interface>Finish</interface> to close the "
+                                                       "assistant.",
+                                                       reportAddress));
             } else {
-                ui.m_howToProceedLabel->setText(xi18nc("@info","You can manually report this "
-                                                  "bug to its maintainer at <link>%1</link>. "
-                                                  "Click <interface>Finish</interface> to close the "
-                                                  "assistant.", reportAddress));
+                ui.m_howToProceedLabel->setText(xi18nc("@info",
+                                                       "You can manually report this "
+                                                       "bug to its maintainer at <link>%1</link>. "
+                                                       "Click <interface>Finish</interface> to close the "
+                                                       "assistant.",
+                                                       reportAddress));
             }
         }
         emit finished(true);
@@ -389,11 +411,8 @@ void ConclusionPage::aboutToHide()
 void ConclusionPage::openReportInformation()
 {
     if (!m_infoDialog) {
-        QString info = reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Exclude,
-                                                                 ReportInterface::Backtrace::Complete)
-                + QLatin1Char('\n') +
-                            i18nc("@info report to url/mail address","Report to %1",
-                                  DrKonqi::crashedApplication()->bugReportAddress());
+        QString info = reportInterface()->generateReportFullText(ReportInterface::DrKonqiStamp::Exclude, ReportInterface::Backtrace::Complete)
+            + QLatin1Char('\n') + i18nc("@info report to url/mail address", "Report to %1", DrKonqi::crashedApplication()->bugReportAddress());
 
         m_infoDialog = new ReportInformationDialog(info);
     }
@@ -407,26 +426,28 @@ bool ConclusionPage::isComplete()
     return (m_isBKO && m_needToReport);
 }
 
-//END ConclusionPage
+// END ConclusionPage
 
-//BEGIN ReportInformationDialog
+// BEGIN ReportInformationDialog
 
-ReportInformationDialog::ReportInformationDialog(const QString & reportText)
+ReportInformationDialog::ReportInformationDialog(const QString &reportText)
     : QDialog()
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
-    setWindowTitle(i18nc("@title:window","Contents of the Report"));
+    setWindowTitle(i18nc("@title:window", "Contents of the Report"));
 
     ui.setupUi(this);
     ui.m_reportInformationBrowser->setPlainText(reportText);
 
-    QPushButton* saveButton = new QPushButton(ui.buttonBox);
-    KGuiItem::assign(saveButton, KGuiItem2(i18nc("@action:button", "&Save to File..."),
-                                               QIcon::fromTheme(QStringLiteral("document-save")),
-                                               i18nc("@info:tooltip", "Use this button to save the "
-                                               "generated crash report information to "
-                                               "a file. You can use this option to report the "
-                                               "bug later.")));
+    QPushButton *saveButton = new QPushButton(ui.buttonBox);
+    KGuiItem::assign(saveButton,
+                     KGuiItem2(i18nc("@action:button", "&Save to File..."),
+                               QIcon::fromTheme(QStringLiteral("document-save")),
+                               i18nc("@info:tooltip",
+                                     "Use this button to save the "
+                                     "generated crash report information to "
+                                     "a file. You can use this option to report the "
+                                     "bug later.")));
     connect(saveButton, &QPushButton::clicked, this, &ReportInformationDialog::saveReport);
     ui.buttonBox->addButton(saveButton, QDialogButtonBox::ActionRole);
 
@@ -445,5 +466,4 @@ void ReportInformationDialog::saveReport()
     DrKonqi::saveReport(ui.m_reportInformationBrowser->toPlainText(), this);
 }
 
-//END ReportInformationDialog
-
+// END ReportInformationDialog

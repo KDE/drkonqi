@@ -1,10 +1,10 @@
 /*******************************************************************
-* applicationdetailsexamples.h
-* SPDX-FileCopyrightText: 2010 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * applicationdetailsexamples.h
+ * SPDX-FileCopyrightText: 2010 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef APPLICATIONDETAILSEXAMPLES__H
 #define APPLICATIONDETAILSEXAMPLES__H
@@ -14,9 +14,9 @@
 
 class ApplicationDetailsExamples : QObject
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit ApplicationDetailsExamples(QObject * parent);
+    explicit ApplicationDetailsExamples(QObject *parent);
     bool hasExamples() const;
     QString examples() const;
 

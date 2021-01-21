@@ -10,8 +10,8 @@
 #include "clientbase.h"
 #include "models/product.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class ProductClient : public ClientBase
 {
 public:

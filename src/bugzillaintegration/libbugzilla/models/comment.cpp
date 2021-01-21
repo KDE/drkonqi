@@ -8,8 +8,8 @@
 
 #include <QVariantHash>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 Comment::Comment(const QVariantHash &object, QObject *parent)
     : QObject(parent)
 {

@@ -12,7 +12,8 @@
 #include <QTimerEvent>
 
 DetachedProcessMonitor::DetachedProcessMonitor(QObject *parent)
-        : QObject(parent), m_pid(0)
+    : QObject(parent)
+    , m_pid(0)
 {
 }
 
@@ -32,5 +33,3 @@ void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
         emit processFinished();
     }
 }
-
-

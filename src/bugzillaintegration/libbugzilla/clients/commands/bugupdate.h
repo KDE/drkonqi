@@ -9,13 +9,14 @@
 
 #include "jsoncommand.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class BugUpdateCC : public JsonCommand
 {
     Q_OBJECT
     BUGZILLA_MEMBER_PROPERTY(QStringList, add);
     BUGZILLA_MEMBER_PROPERTY(QStringList, remove);
+
 public:
     using JsonCommand::JsonCommand;
 };

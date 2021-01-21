@@ -13,7 +13,7 @@
 
 #include "abstract_generator.h"
 
-const static DWORD      MAX_SYMBOL_NAME     = 256 * sizeof(TCHAR);
+const static DWORD MAX_SYMBOL_NAME = 256 * sizeof(TCHAR);
 
 /**
  * \brief Generator for MSVC.
@@ -29,16 +29,16 @@ class MsvcGenerator : public AbstractBTGenerator
     Q_OBJECT
 public:
     /// Constructor
-    MsvcGenerator(const Process& process);
+    MsvcGenerator(const Process &process);
 
     virtual bool Init();
     virtual void UnInit();
 
-    virtual void FrameChanged() {};
+    virtual void FrameChanged(){};
 
     virtual QString GetFunctionName();
     virtual QString GetFile();
-    virtual int     GetLine();
+    virtual int GetLine();
 
-    virtual void LoadSymbol(const QString& module, DWORD64 dwBaseAddr);
+    virtual void LoadSymbol(const QString &module, DWORD64 dwBaseAddr);
 };

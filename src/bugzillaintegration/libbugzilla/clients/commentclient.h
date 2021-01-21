@@ -10,8 +10,8 @@
 #include "clientbase.h"
 #include "models/comment.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class CommentClient : public ClientBase
 {
 public:

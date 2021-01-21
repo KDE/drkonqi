@@ -21,8 +21,8 @@ private Q_SLOTS:
     void testComplete()
     {
         BacktraceLineGdb line(
-                    "#7  0x00007f468b177bfa in KMime::DateFormatterPrivate::localized (t=t@entry=1579263464, shortFormat=shortFormat@entry=true, lang=...) at /usr/src/debug/kmime-19.12.1-lp151.150.1.x86_64/src/kmime_dateformatter.cpp:310\n"
-                    );
+            "#7  0x00007f468b177bfa in KMime::DateFormatterPrivate::localized (t=t@entry=1579263464, shortFormat=shortFormat@entry=true, lang=...) at "
+            "/usr/src/debug/kmime-19.12.1-lp151.150.1.x86_64/src/kmime_dateformatter.cpp:310\n");
         QCOMPARE(line.type(), BacktraceLine::StackFrame);
         QCOMPARE(line.frameNumber(), 7);
         QCOMPARE(line.functionName(), "KMime::DateFormatterPrivate::localized");

@@ -6,15 +6,15 @@
 #include "backtraceparserlldb.h"
 #include "backtraceparser_p.h"
 
-//BEGIN BacktraceParserLldb
+// BEGIN BacktraceParserLldb
 
 class BacktraceLineLldb : public BacktraceLine
 {
 public:
-    BacktraceLineLldb(const QString & line);
+    BacktraceLineLldb(const QString &line);
 };
 
-BacktraceLineLldb::BacktraceLineLldb(const QString & line)
+BacktraceLineLldb::BacktraceLineLldb(const QString &line)
     : BacktraceLine()
 {
     d->m_line = line;
@@ -23,11 +23,14 @@ BacktraceLineLldb::BacktraceLineLldb(const QString & line)
     d->m_rating = Good;
 }
 
-//END BacktraceLineLldb
+// END BacktraceLineLldb
 
-//BEGIN BacktraceParserLldb
+// BEGIN BacktraceParserLldb
 
-BacktraceParserLldb::BacktraceParserLldb(QObject *parent) : BacktraceParser(parent) {}
+BacktraceParserLldb::BacktraceParserLldb(QObject *parent)
+    : BacktraceParser(parent)
+{
+}
 
 BacktraceParserPrivate *BacktraceParserLldb::constructPrivate() const
 {
@@ -36,10 +39,9 @@ BacktraceParserPrivate *BacktraceParserLldb::constructPrivate() const
     return d;
 }
 
-void BacktraceParserLldb::newLine(const QString & lineStr)
+void BacktraceParserLldb::newLine(const QString &lineStr)
 {
     d_ptr->m_linesList.append(BacktraceLineLldb(lineStr));
 }
 
-
-//END BacktraceParserLldb
+// END BacktraceParserLldb

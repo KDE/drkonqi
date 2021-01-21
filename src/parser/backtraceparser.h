@@ -7,10 +7,10 @@
 #define BACKTRACEPARSER_H
 
 #include "backtraceline.h"
-#include <QObject>
-#include <QStringList>
 #include <QMetaType>
+#include <QObject>
 #include <QSet>
+#include <QStringList>
 class BacktraceParserPrivate;
 
 class BacktraceParser : public QObject
@@ -18,10 +18,16 @@ class BacktraceParser : public QObject
     Q_OBJECT
     Q_DECLARE_PRIVATE(BacktraceParser)
 public:
-    enum Usefulness { InvalidUsefulness, Useless, ProbablyUseless, MayBeUseful, ReallyUseful, };
+    enum Usefulness {
+        InvalidUsefulness,
+        Useless,
+        ProbablyUseless,
+        MayBeUseful,
+        ReallyUseful,
+    };
     Q_ENUM(Usefulness)
 
-    static BacktraceParser *newParser(const QString & debuggerName, QObject *parent = nullptr);
+    static BacktraceParser *newParser(const QString &debuggerName, QObject *parent = nullptr);
     ~BacktraceParser() override;
 
     /*! Connects the parser to the backtrace generator.
@@ -66,7 +72,7 @@ protected Q_SLOTS:
      * If the line is useful for rating as well, it should also be inserted in the m_linesToRate
      * field, so that calculateRatingData() can use it.
      */
-    virtual void newLine(const QString & lineStr) = 0;
+    virtual void newLine(const QString &lineStr) = 0;
 
 protected:
     explicit BacktraceParser(QObject *parent = nullptr);

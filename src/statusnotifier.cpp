@@ -18,8 +18,8 @@
 #include <KService>
 #include <KStatusNotifierItem>
 
-#include "drkonqi.h"
 #include "crashedapplication.h"
+#include "drkonqi.h"
 
 StatusNotifier::StatusNotifier(QObject *parent)
     : QObject(parent)
@@ -66,15 +66,13 @@ void StatusNotifier::show()
     m_sni->setStandardActionsEnabled(false);
 
     QMenu *sniMenu = new QMenu();
-    QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("tools-report-bug")),
-                                  i18n("Report &Bug"), nullptr);
+    QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("tools-report-bug")), i18n("Report &Bug"), nullptr);
     connect(action, &QAction::triggered, this, &StatusNotifier::activated);
     sniMenu->addAction(action);
     sniMenu->setDefaultAction(action);
 
     if (canBeRestarted(crashedApp)) {
-        action = new QAction(QIcon::fromTheme(QStringLiteral("system-reboot")),
-                             i18n("&Restart Application"), nullptr);
+        action = new QAction(QIcon::fromTheme(QStringLiteral("system-reboot")), i18n("&Restart Application"), nullptr);
         connect(action, &QAction::triggered, crashedApp, &CrashedApplication::restart);
         // once restarted successfully, disable restart option
         connect(crashedApp, &CrashedApplication::restarted, action, [action](bool success) {
@@ -85,8 +83,7 @@ void StatusNotifier::show()
 
     sniMenu->addSeparator();
 
-    action = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")),
-                         i18nc("Allows the user to hide this notifier item", "Hide"), nullptr);
+    action = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18nc("Allows the user to hide this notifier item", "Hide"), nullptr);
     connect(action, &QAction::triggered, this, &StatusNotifier::expired);
     sniMenu->addAction(action);
 
@@ -100,14 +97,10 @@ void StatusNotifier::show()
     activateTimer->setInterval(10000);
     connect(activateTimer, &QTimer::timeout, this, &StatusNotifier::activated);
 
-    auto watcher = new QDBusServiceWatcher(QStringLiteral("org.freedesktop.Notifications"),
-                                           QDBusConnection::sessionBus(),
-                                           QDBusServiceWatcher::WatchForOwnerChange,
-                                           this);
-    connect(watcher, &QDBusServiceWatcher::serviceUnregistered,
-            activateTimer, QOverload<>::of(&QTimer::start));
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered,
-            activateTimer, &QTimer::stop);
+    auto watcher =
+        new QDBusServiceWatcher(QStringLiteral("org.freedesktop.Notifications"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, activateTimer, QOverload<>::of(&QTimer::start));
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, activateTimer, &QTimer::stop);
 
     // make sure the user doesn't miss the SNI by stopping the auto hide timer when the session becomes idle
     int idleId = KIdleTime::instance()->addIdleTimeout(30000);
@@ -150,8 +143,7 @@ void StatusNotifier::notify()
 
     notification->setActions(actions);
 
-    connect(notification, static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated),
-            this, [this, crashedApp](int actionIndex) {
+    connect(notification, static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated), this, [this, crashedApp](int actionIndex) {
         if (actionIndex == 1 && m_activationAllowed) {
             emit activated();
         } else if (canBeRestarted(crashedApp)) {

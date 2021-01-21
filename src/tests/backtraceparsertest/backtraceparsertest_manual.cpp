@@ -3,16 +3,16 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "fakebacktracegenerator.h"
 #include "../../parser/backtraceparser.h"
-#include <QFile>
-#include <QSharedPointer>
-#include <QTextStream>
-#include <QMetaEnum>
-#include <QCoreApplication>
-#include <QCommandLineParser>
+#include "fakebacktracegenerator.h"
 #include <KAboutData>
 #include <KLocalizedString>
+#include <QCommandLineParser>
+#include <QCoreApplication>
+#include <QFile>
+#include <QMetaEnum>
+#include <QSharedPointer>
+#include <QTextStream>
 
 #include <iostream>
 
@@ -23,14 +23,15 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addOption(QCommandLineOption(QStringLiteral("debugger"), i18n("The debugger name passed to the parser factory"), QStringLiteral("name"), QStringLiteral("gdb")));
+    parser.addOption(
+        QCommandLineOption(QStringLiteral("debugger"), i18n("The debugger name passed to the parser factory"), QStringLiteral("name"), QStringLiteral("gdb")));
     parser.addPositionalArgument(QStringLiteral("file"), i18n("A file containing the backtrace."), QStringLiteral("[file]"));
     aboutData.setupCommandLine(&parser);
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
     QString debugger = parser.value(QStringLiteral("debugger"));
-    if(parser.positionalArguments().isEmpty()) {
+    if (parser.positionalArguments().isEmpty()) {
         parser.showHelp(1);
         return 1;
     }
@@ -46,8 +47,7 @@ int main(int argc, char **argv)
     btparser->connectToGenerator(&generator);
     generator.sendData(file);
 
-    QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(
-                                BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
+    QMetaEnum metaUsefulness = BacktraceParser::staticMetaObject.enumerator(BacktraceParser::staticMetaObject.indexOfEnumerator("Usefulness"));
     std::cout << "Usefulness: " << qPrintable(metaUsefulness.valueToKey(btparser->backtraceUsefulness())) << std::endl;
     std::cout << "First valid functions: " << qPrintable(btparser->firstValidFunctions().join(QLatin1Char(' '))) << std::endl;
     std::cout << "Simplified backtrace:\n" << qPrintable(btparser->simplifiedBacktrace()) << std::endl;

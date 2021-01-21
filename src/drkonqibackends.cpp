@@ -5,25 +5,25 @@
 */
 #include "drkonqibackends.h"
 
-#include <cstdlib>
 #include <cerrno>
-#include <sys/types.h>
+#include <cstdlib>
 #include <signal.h>
+#include <sys/types.h>
 
-#include <QTimer>
 #include <QDir>
 #include <QRegularExpression>
+#include <QTimer>
 
+#include "drkonqi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <KCrash>
 #include <QStandardPaths>
-#include "drkonqi_debug.h"
 
+#include "backtracegenerator.h"
 #include "crashedapplication.h"
 #include "debugger.h"
 #include "debuggermanager.h"
-#include "backtracegenerator.h"
 #include "drkonqi.h"
 
 #ifdef Q_OS_MACOS
@@ -41,9 +41,10 @@ bool AbstractDrKonqiBackend::init()
     return true;
 }
 
-
 KCrashBackend::KCrashBackend()
-    : QObject(), AbstractDrKonqiBackend(), m_state(ProcessRunning)
+    : QObject()
+    , AbstractDrKonqiBackend()
+    , m_state(ProcessRunning)
 {
 }
 
@@ -56,7 +57,7 @@ bool KCrashBackend::init()
 {
     AbstractDrKonqiBackend::init();
 
-    //check whether the attached process exists and whether we have permissions to inspect it
+    // check whether the attached process exists and whether we have permissions to inspect it
     if (crashedApplication()->pid() <= 0) {
         qCWarning(DRKONQI_LOG) << "Invalid pid specified";
         return false;
@@ -78,7 +79,7 @@ bool KCrashBackend::init()
     }
 
     //--keeprunning means: generate backtrace instantly and let the process continue execution
-    if(DrKonqi::isKeepRunning()) {
+    if (DrKonqi::isKeepRunning()) {
         stopAttachedProcess();
         debuggerManager()->backtraceGenerator()->start();
         connect(debuggerManager(), &DebuggerManager::debuggerFinished, this, &KCrashBackend::continueAttachedProcess);
@@ -86,17 +87,17 @@ bool KCrashBackend::init()
         connect(debuggerManager(), &DebuggerManager::debuggerStarting, this, &KCrashBackend::onDebuggerStarting);
         connect(debuggerManager(), &DebuggerManager::debuggerFinished, this, &KCrashBackend::onDebuggerFinished);
 
-        //stop the process to avoid high cpu usage by other threads (bug 175362).
-        //if the process was started by kdeinit, we need to wait a bit for KCrash
-        //to reach the alarm(0); call in kdeui/util/kcrash.cpp line 406 or else
-        //if we stop it before this call, pending alarm signals will kill the
-        //process when we try to continue it.
+        // stop the process to avoid high cpu usage by other threads (bug 175362).
+        // if the process was started by kdeinit, we need to wait a bit for KCrash
+        // to reach the alarm(0); call in kdeui/util/kcrash.cpp line 406 or else
+        // if we stop it before this call, pending alarm signals will kill the
+        // process when we try to continue it.
         QTimer::singleShot(2000, this, &KCrashBackend::stopAttachedProcess);
     }
 #endif
 
-    //Handle drkonqi crashes
-    s_pid = crashedApplication()->pid(); //copy pid for use by the crash handler, so that it is safer
+    // Handle drkonqi crashes
+    s_pid = crashedApplication()->pid(); // copy pid for use by the crash handler, so that it is safer
     KCrash::setEmergencySaveFunction(emergencySaveFunction);
 
     return true;
@@ -114,17 +115,16 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     a->m_restarted = DrKonqi::isRestarted();
     a->m_thread = DrKonqi::thread();
 
-    //try to determine the executable that crashed
+    // try to determine the executable that crashed
     const QString procPath(QStringLiteral("/proc/%1").arg(a->m_pid));
     const QString exeProcPath(procPath + QStringLiteral("/exe"));
     if (QFileInfo(exeProcPath).exists()) {
-        //on linux, the fastest and most reliable way is to get the path from /proc
+        // on linux, the fastest and most reliable way is to get the path from /proc
         qCDebug(DRKONQI_LOG) << "Using /proc to determine executable path";
         const QString exePath = QFile::symLinkTarget(exeProcPath);
 
         a->m_executable.setFile(exePath);
-        if (DrKonqi::isKdeinit() ||
-            a->m_executable.fileName().startsWith(QLatin1String("python")) ) {
+        if (DrKonqi::isKdeinit() || a->m_executable.fileName().startsWith(QLatin1String("python"))) {
             a->m_fakeBaseName = DrKonqi::appName();
         }
 
@@ -167,14 +167,14 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
         qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
     } else {
-        if ( DrKonqi::isKdeinit() ) {
+        if (DrKonqi::isKdeinit()) {
             a->m_executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
             a->m_fakeBaseName = DrKonqi::appName();
         } else {
             QFileInfo execPath(DrKonqi::appName());
-            if ( execPath.isAbsolute() ) {
+            if (execPath.isAbsolute()) {
                 a->m_executable = execPath;
-            } else if ( !DrKonqi::appPath().isEmpty() ) {
+            } else if (!DrKonqi::appPath().isEmpty()) {
                 QDir execDir(DrKonqi::appPath());
                 a->m_executable = execDir.absoluteFilePath(execPath.fileName());
             } else {
@@ -202,9 +202,8 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 #endif
 
     Debugger firstKnownGoodDebugger, preferredDebugger;
-    foreach (const Debugger & debugger, internalDebuggers) {
-        qCDebug(DRKONQI_LOG) << "Check debugger if"
-                             << debugger.displayName() << "[" << debugger.codeName() << "]"
+    foreach (const Debugger &debugger, internalDebuggers) {
+        qCDebug(DRKONQI_LOG) << "Check debugger if" << debugger.displayName() << "[" << debugger.codeName() << "]"
                              << "is installed:" << debugger.isInstalled();
         if (!firstKnownGoodDebugger.isValid() && debugger.isInstalled()) {
             firstKnownGoodDebugger = debugger;
@@ -259,10 +258,10 @@ void KCrashBackend::onDebuggerFinished()
     stopAttachedProcess();
 }
 
-//static
+// static
 qint64 KCrashBackend::s_pid = 0;
 
-//static
+// static
 void KCrashBackend::emergencySaveFunction(int signal)
 {
     // In case drkonqi itself crashes, we need to get rid of the process being debugged,

@@ -6,9 +6,8 @@
 
 #include "bugclient.h"
 
-
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QList<Bug::Ptr> BugClient::search(KJob *kjob)
 {
     APIJob *job = qobject_cast<APIJob *>(kjob);
@@ -39,8 +38,7 @@ qint64 BugClient::create(KJob *kjob)
 
 KJob *BugClient::create(const NewBug &bug)
 {
-    return m_connection.post(QStringLiteral("/bug"),
-                             bug.toJson());
+    return m_connection.post(QStringLiteral("/bug"), bug.toJson());
 }
 
 qint64 BugClient::update(KJob *kjob)

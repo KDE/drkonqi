@@ -16,14 +16,12 @@ class DebuggerManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit DebuggerManager(const Debugger & internalDebugger,
-                    const QList<Debugger> & externalDebuggers,
-                    QObject *parent = nullptr);
+    explicit DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, QObject *parent = nullptr);
     ~DebuggerManager() override;
 
     bool debuggerIsRunning() const;
     bool showExternalDebuggers() const;
-    QList<AbstractDebuggerLauncher*> availableExternalDebuggers() const;
+    QList<AbstractDebuggerLauncher *> availableExternalDebuggers() const;
     BacktraceGenerator *backtraceGenerator() const;
     void addDebugger(AbstractDebuggerLauncher *launcher, bool emitsignal = false);
 

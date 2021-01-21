@@ -6,5 +6,6 @@
 
 #include "logindetails.h"
 
-namespace Bugzilla {
+namespace Bugzilla
+{
 } // namespace Bugzilla

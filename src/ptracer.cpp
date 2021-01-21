@@ -16,12 +16,11 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 
-#include <unistd.h>
 #include <errno.h>
+#include <unistd.h>
 
 void setPtracer(qint64 debuggerpid, qint64 debuggeepid)
 {
-
     int sfd = socket(PF_UNIX, SOCK_STREAM, 0);
     if (sfd < 0) {
         qCWarning(DRKONQI_LOG) << "socket to set ptracer not accessible";
@@ -31,9 +30,7 @@ void setPtracer(qint64 debuggerpid, qint64 debuggeepid)
     static struct sockaddr_un server;
     static socklen_t sl = sizeof(server);
     server.sun_family = AF_UNIX;
-    const QString socketPath =
-        QStringLiteral("%1/kcrash_%2").arg(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation))
-                                      .arg(debuggeepid);
+    const QString socketPath = QStringLiteral("%1/kcrash_%2").arg(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation)).arg(debuggeepid);
 
     if (socketPath.size() >= static_cast<int>(sizeof(server.sun_path))) {
         qCWarning(DRKONQI_LOG) << "socket path is too long";
@@ -59,7 +56,7 @@ void setPtracer(qint64 debuggerpid, qint64 debuggeepid)
             struct pollfd fd;
             fd.fd = sfd;
             fd.events = POLLIN;
-            while ((r = poll(&fd, 1, 1000)) == -1 && errno == EINTR) {}
+            while ((r = poll(&fd, 1, 1000)) == -1 && errno == EINTR) { }
             if (r > 0 && (fd.revents & POLLIN)) {
                 char rmsg[msize];
                 bytes = 0;

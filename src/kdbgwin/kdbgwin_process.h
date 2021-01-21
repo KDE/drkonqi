@@ -13,11 +13,11 @@
 
 #include "common.h"
 
-#include <QString>
 #include <QMap>
+#include <QString>
 
-typedef QMap<DWORD, HANDLE>     TThreadsMap;
-typedef QMap<QString, HMODULE>   TModulesMap;
+typedef QMap<DWORD, HANDLE> TThreadsMap;
+typedef QMap<QString, HMODULE> TModulesMap;
 
 /**
  * \brief Describes a process.
@@ -30,24 +30,24 @@ class Process
 {
 private:
     /// Flag to check if the information about this process is valid and can be used
-    BOOL        m_bValid;
+    BOOL m_bValid;
 
     /// Process ID
-    DWORD       m_dwPid;
+    DWORD m_dwPid;
 
     /// Failing thread ID - I need this because for the crashing thread, I need to get
     /// the CONTEXT from a piece of shared memory in KCrash
-    DWORD       m_dwThread;
+    DWORD m_dwThread;
 
     /// A handle to the process
-    HANDLE      m_hProcess;
+    HANDLE m_hProcess;
 
     /// A QMap<DWORD, HANDLE> which associates thread IDs with opened handles for each
     /// of them
     TThreadsMap m_threads;
 
     /// The full path to the executable file which started this process
-    QString     m_path;
+    QString m_path;
 
     /// A QMap<QString, HMODULE> which contains the paths to the loaded modules and
     /// handles to each of them
@@ -64,33 +64,51 @@ public:
 public:
     /// Attaches to the process and gets all required information
     /// @return TRUE if operation succeeds
-    BOOL GetInfo(const char* pid, const char* threadId);
+    BOOL GetInfo(const char *pid, const char *threadId);
 
     /// Checks if the information is valid
     BOOL IsValid() const
-    { assert(m_bValid); return m_bValid; }
+    {
+        assert(m_bValid);
+        return m_bValid;
+    }
 
     /// Get the process ID
     DWORD GetId() const
-    { assert(m_dwPid); return m_dwPid; }
+    {
+        assert(m_dwPid);
+        return m_dwPid;
+    }
 
     /// Returns an open handle to the process (opened with PROCESS_ALL_ACCESS)
     HANDLE GetHandle() const
-    { assert(m_hProcess); return m_hProcess; }
+    {
+        assert(m_hProcess);
+        return m_hProcess;
+    }
 
     /// Returns the thread ID of the thread that caused the exception
     DWORD GetThreadId() const
-    { assert(m_dwThread); return m_dwThread; }
+    {
+        assert(m_dwThread);
+        return m_dwThread;
+    }
 
     /// Returns the threads map
-    const TThreadsMap& GetThreads() const
-    { return m_threads; }
+    const TThreadsMap &GetThreads() const
+    {
+        return m_threads;
+    }
 
     /// Returns the full path to the executable on the disk
-    const QString& GetPath() const
-    { return m_path; }
+    const QString &GetPath() const
+    {
+        return m_path;
+    }
 
     /// Returns a map of all the loaded modules
-    const TModulesMap& GetModules() const
-    { return m_modules; }
+    const TModulesMap &GetModules() const
+    {
+        return m_modules;
+    }
 };

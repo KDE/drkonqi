@@ -13,27 +13,39 @@
 #include <bfd.h>
 #include <cxxabi.h>
 
-MingwGenerator::MingwGenerator(const Process& process)
-    : AbstractBTGenerator(process), file(NULL), func(NULL), line(0) 
-{}
-
-struct MyBFD
+MingwGenerator::MingwGenerator(const Process &process)
+    : AbstractBTGenerator(process)
+    , file(NULL)
+    , func(NULL)
+    , line(0)
 {
+}
+
+struct MyBFD {
     QString module;
-    bfd* abfd;
-    asymbol** syms;
-    MyBFD() : abfd(0), syms(0)
-    {}
-    MyBFD(const QString& module, bfd* abfd, asymbol** syms)
-    { this->module = module; this->abfd = abfd; this->syms = syms; }
-    bool operator==(const MyBFD& other)
-    { return module == other.module; }
+    bfd *abfd;
+    asymbol **syms;
+    MyBFD()
+        : abfd(0)
+        , syms(0)
+    {
+    }
+    MyBFD(const QString &module, bfd *abfd, asymbol **syms)
+    {
+        this->module = module;
+        this->abfd = abfd;
+        this->syms = syms;
+    }
+    bool operator==(const MyBFD &other)
+    {
+        return module == other.module;
+    }
 };
 
 typedef QList<MyBFD> TBFDList;
 TBFDList bfds;
 
-asection* text = NULL;
+asection *text = NULL;
 
 bool MingwGenerator::Init()
 {
@@ -50,14 +62,12 @@ void MingwGenerator::FrameChanged()
     QString modPath = GetModulePath();
     bool existsSymbol = false;
     TSymbolsMap::const_iterator i = m_symbolsMap.constFind(modPath);
-    if (i == m_symbolsMap.cend())
-    {
+    if (i == m_symbolsMap.cend()) {
         return;
     }
     MyBFD dummy(modPath, NULL, NULL);
     int pos = bfds.indexOf(dummy);
-    if (pos == -1)
-    {
+    if (pos == -1) {
         return;
     }
     MyBFD bfd = bfds[pos];
@@ -66,25 +76,20 @@ void MingwGenerator::FrameChanged()
     file = DEFAULT_FILE;
     func = DEFAULT_FUNC;
     line = DEFAULT_LINE;
-    if (offset > 0)
-    {
-        bfd_find_nearest_line(bfd.abfd, text, bfd.syms, offset, &file, &func, (unsigned int*) &line);
+    if (offset > 0) {
+        bfd_find_nearest_line(bfd.abfd, text, bfd.syms, offset, &file, &func, (unsigned int *)&line);
     }
 }
 
 QString MingwGenerator::GetFunctionName()
 {
-    if (func != NULL)
-    {
-        char* realname = abi::__cxa_demangle(func, NULL, NULL, NULL);
-        if (realname != NULL)
-        {
+    if (func != NULL) {
+        char *realname = abi::__cxa_demangle(func, NULL, NULL, NULL);
+        if (realname != NULL) {
             QString strReturn = QString::fromLatin1(realname);
             free(realname);
             return strReturn;
-        }
-        else
-        {
+        } else {
             return QString::fromLatin1(func);
         }
     }
@@ -93,8 +98,7 @@ QString MingwGenerator::GetFunctionName()
 
 QString MingwGenerator::GetFile()
 {
-    if (file != NULL)
-    {
+    if (file != NULL) {
         return QString::fromLatin1(file);
     }
     return QString::fromLatin1(DEFAULT_FILE);
@@ -102,14 +106,13 @@ QString MingwGenerator::GetFile()
 
 int MingwGenerator::GetLine()
 {
-    if (line > 0)
-    {
+    if (line > 0) {
         return line;
     }
     return -1;
 }
 
-void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
+void MingwGenerator::LoadSymbol(const QString &module, DWORD64 dwBaseAddr)
 {
     QString symbolFile = module;
     symbolFile.chop(4);
@@ -117,27 +120,23 @@ void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
 
     m_symbolsMap[module] = false; // default
     QString symbolType;
-    do
-    {
-        bfd* abfd = bfd_openr(symbolFile.toLatin1().data(), NULL);
-        if (abfd == NULL)
-        {
+    do {
+        bfd *abfd = bfd_openr(symbolFile.toLatin1().data(), NULL);
+        if (abfd == NULL) {
             symbolType = QString::fromLatin1("no symbols loaded");
             break;
         }
         bfd_check_format(abfd, bfd_object);
         unsigned storage_needed = bfd_get_symtab_upper_bound(abfd);
         assert(storage_needed > 4);
-        if (storage_needed <= 4)
-        {
+        if (storage_needed <= 4) {
             // i don't know why the minimum value for this var is 4...
             symbolType = QString::fromLatin1("no symbols loaded");
             break;
         }
-        asymbol** syms = (asymbol **) malloc(storage_needed);
+        asymbol **syms = (asymbol **)malloc(storage_needed);
         assert(syms);
-        if (syms == NULL)
-        {
+        if (syms == NULL) {
             symbolType = QString::fromLatin1("no symbols loaded");
             break;
         }
@@ -145,10 +144,8 @@ void MingwGenerator::LoadSymbol(const QString& module, DWORD64 dwBaseAddr)
         m_symbolsMap[module] = true;
 
         bfds.push_back(MyBFD(module, abfd, syms));
-    }
-    while (0);
+    } while (0);
 
-    QString strOutput = QString::fromLatin1("Loaded %1 (%2)")
-        .arg(module).arg(symbolType);
+    QString strOutput = QString::fromLatin1("Loaded %1 (%2)").arg(module).arg(symbolType);
     emit DebugLine(strOutput);
 }

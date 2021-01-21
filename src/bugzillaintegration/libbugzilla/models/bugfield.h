@@ -11,8 +11,8 @@
 #include <QPointer>
 #include <QVariantHash>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 /// https://bugzilla.readthedocs.io/en/5.0/api/core/v1/field.html
 class BugFieldValue : public QObject
 {

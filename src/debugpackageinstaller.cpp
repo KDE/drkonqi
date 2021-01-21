@@ -1,27 +1,29 @@
 /*******************************************************************
-* debugpackageinstaller.cpp
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * debugpackageinstaller.cpp
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include <config-drkonqi.h>
 
 #include "debugpackageinstaller.h"
 
-#include <QStandardPaths>
-#include <KProcess>
 #include <KLocalizedString>
+#include <KProcess>
 #include <QProgressDialog>
+#include <QStandardPaths>
 
-#include "drkonqi.h"
 #include "crashedapplication.h"
+#include "drkonqi.h"
 
 DebugPackageInstaller::DebugPackageInstaller(QObject *parent)
-    : QObject(parent), m_installerProcess(nullptr), m_progressDialog(nullptr)
+    : QObject(parent)
+    , m_installerProcess(nullptr)
+    , m_progressDialog(nullptr)
 {
-    m_executablePath = QStandardPaths::findExecutable(QString::fromLatin1(DEBUG_PACKAGE_INSTALLER_NAME)); //defined from CMakeLists.txt
+    m_executablePath = QStandardPaths::findExecutable(QString::fromLatin1(DEBUG_PACKAGE_INSTALLER_NAME)); // defined from CMakeLists.txt
 }
 
 bool DebugPackageInstaller::canInstallDebugPackages() const
@@ -29,7 +31,7 @@ bool DebugPackageInstaller::canInstallDebugPackages() const
     return !m_executablePath.isEmpty();
 }
 
-void DebugPackageInstaller::setMissingLibraries(const QStringList & libraries)
+void DebugPackageInstaller::setMissingLibraries(const QStringList &libraries)
 {
     m_missingLibraries = libraries;
 }
@@ -39,18 +41,21 @@ void DebugPackageInstaller::installDebugPackages()
     Q_ASSERT(canInstallDebugPackages());
 
     if (!m_installerProcess) {
-        //Run process
+        // Run process
         m_installerProcess = new KProcess(this);
-        connect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
-                this, &DebugPackageInstaller::processFinished);
+        connect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished), this, &DebugPackageInstaller::processFinished);
 
-        *m_installerProcess << m_executablePath
-                            << DrKonqi::crashedApplication()->executable().absoluteFilePath()
-                            << m_missingLibraries;
+        *m_installerProcess << m_executablePath << DrKonqi::crashedApplication()->executable().absoluteFilePath() << m_missingLibraries;
         m_installerProcess->start();
 
-        //Show dialog
-        m_progressDialog = new QProgressDialog(i18nc("@info:progress", "Requesting installation of missing " "debug symbols packages..."), i18n("Cancel"), 0, 0, qobject_cast<QWidget*>(parent()));
+        // Show dialog
+        m_progressDialog = new QProgressDialog(i18nc("@info:progress",
+                                                     "Requesting installation of missing "
+                                                     "debug symbols packages..."),
+                                               i18n("Cancel"),
+                                               0,
+                                               0,
+                                               qobject_cast<QWidget *>(parent()));
         connect(m_progressDialog, &QProgressDialog::canceled, this, &DebugPackageInstaller::progressDialogCanceled);
         m_progressDialog->setWindowTitle(i18nc("@title:window", "Missing debug symbols"));
         m_progressDialog->show();
@@ -64,11 +69,9 @@ void DebugPackageInstaller::progressDialogCanceled()
 
     if (m_installerProcess) {
         if (m_installerProcess->state() == QProcess::Running) {
-            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
-                       this, &DebugPackageInstaller::processFinished);
+            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished), this, &DebugPackageInstaller::processFinished);
             m_installerProcess->kill();
-            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished),
-                       m_installerProcess, &KProcess::deleteLater);
+            disconnect(m_installerProcess, QOverload<int, QProcess::ExitStatus>::of(&KProcess::finished), m_installerProcess, &KProcess::deleteLater);
         }
         m_installerProcess = nullptr;
     }
@@ -78,27 +81,24 @@ void DebugPackageInstaller::progressDialogCanceled()
 
 void DebugPackageInstaller::processFinished(int exitCode, QProcess::ExitStatus)
 {
-    switch(exitCode) {
-    case ResultInstalled:
-    {
+    switch (exitCode) {
+    case ResultInstalled: {
         emit packagesInstalled();
         break;
     }
-    case ResultSymbolsNotFound:
-    {
+    case ResultSymbolsNotFound: {
         emit error(i18nc("@info", "Could not find debug symbol packages for this application."));
         break;
     }
-    case ResultCanceled:
-    {
+    case ResultCanceled: {
         emit canceled();
         break;
     }
     case ResultError:
-    default:
-    {
-        emit error(i18nc("@info", "An error was encountered during the installation "
-                                  "of the debug symbol packages."));
+    default: {
+        emit error(i18nc("@info",
+                         "An error was encountered during the installation "
+                         "of the debug symbol packages."));
         break;
     }
     }

@@ -11,8 +11,8 @@
 
 #include "connection.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class ProductVersion : public QObject
 {
     Q_OBJECT
@@ -20,15 +20,34 @@ class ProductVersion : public QObject
     Q_PROPERTY(QString name READ name WRITE setName)
     Q_PROPERTY(bool active READ isActive WRITE setActive)
 public:
-    int id() const { return m_id; }
-    QString name() const { return m_name; }
-    bool isActive() const { return m_active; }
+    int id() const
+    {
+        return m_id;
+    }
+    QString name() const
+    {
+        return m_name;
+    }
+    bool isActive() const
+    {
+        return m_active;
+    }
 
     explicit ProductVersion(const QVariantHash &object, QObject *parent = nullptr);
+
 private:
-    void setId(int id) { m_id = id; }
-    void setName(const QString &name) { m_name = name; }
-    void setActive(bool active) { m_active = active; }
+    void setId(int id)
+    {
+        m_id = id;
+    }
+    void setName(const QString &name)
+    {
+        m_name = name;
+    }
+    void setActive(bool active)
+    {
+        m_active = active;
+    }
 
     int m_id = -1;
     QString m_name = QString();
@@ -41,13 +60,26 @@ class ProductComponent : public QObject
     Q_PROPERTY(int id READ id WRITE setId)
     Q_PROPERTY(QString name READ name WRITE setName)
 public:
-    int id() const { return m_id; }
-    QString name() const { return m_name; }
+    int id() const
+    {
+        return m_id;
+    }
+    QString name() const
+    {
+        return m_name;
+    }
 
     explicit ProductComponent(const QVariantHash &object, QObject *parent = nullptr);
+
 private:
-    void setId(int id) { m_id = id; }
-    void setName(const QString &name) { m_name = name; }
+    void setId(int id)
+    {
+        m_id = id;
+    }
+    void setName(const QString &name)
+    {
+        m_name = name;
+    }
 
     int m_id = -1;
     QString m_name = QString();
@@ -62,9 +94,7 @@ class Product : public QObject
 public:
     typedef QSharedPointer<Product> Ptr;
 
-    explicit Product(const QVariantHash &object,
-                     const Connection &connection = Bugzilla::connection(),
-                     QObject *parent = nullptr);
+    explicit Product(const QVariantHash &object, const Connection &connection = Bugzilla::connection(), QObject *parent = nullptr);
     ~Product();
 
     bool isActive() const;

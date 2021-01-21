@@ -9,15 +9,14 @@
 #include <QSignalSpy>
 #include <QTcpServer>
 #include <QTest>
-#include <QTimer>
 #include <QThread>
+#include <QTimer>
 #include <QWaitCondition>
 
 #include "../connection.h"
 
 namespace Bugzilla
 {
-
 class ConnectionTest : public QObject
 {
     Q_OBJECT
@@ -35,18 +34,20 @@ private Q_SLOTS:
         // Obviously still not ideal.
         Bugzilla::HTTPConnection c;
         QVERIFY(c.root().toString().endsWith("/rest"));
-        QVERIFY(QTest::qWaitFor([&]() {
-            APIJob *job = c.get("/version");
-            job->exec();
-            try {
-                job->document();
-            } catch (Bugzilla::Exception &e) {
-                QTest::qSleep(1000);
-                return false;
-            }
+        QVERIFY(QTest::qWaitFor(
+            [&]() {
+                APIJob *job = c.get("/version");
+                job->exec();
+                try {
+                    job->document();
+                } catch (Bugzilla::Exception &e) {
+                    QTest::qSleep(1000);
+                    return false;
+                }
 
-            return true;
-        }, 5000));
+                return true;
+            },
+            5000));
     }
 
     void testGet()
@@ -56,8 +57,7 @@ private Q_SLOTS:
         // http socketing.
         QTcpServer t;
         QCOMPARE(t.listen(QHostAddress::LocalHost, 0), true);
-        connect(&t, &QTcpServer::newConnection,
-              &t, [&t]() {
+        connect(&t, &QTcpServer::newConnection, &t, [&t]() {
             QTcpSocket *socket = t.nextPendingConnection();
             socket->waitForReadyRead();
             QString httpBlob = socket->readAll();
@@ -100,8 +100,7 @@ private Q_SLOTS:
         // http socketing.
         QTcpServer t;
         QCOMPARE(t.listen(QHostAddress::LocalHost, 0), true);
-        connect(&t, &QTcpServer::newConnection,
-              &t, [&t]() {
+        connect(&t, &QTcpServer::newConnection, &t, [&t]() {
             QTcpSocket *socket = t.nextPendingConnection();
             socket->waitForReadyRead();
             QString httpBlob = socket->readAll();
@@ -138,18 +137,14 @@ private Q_SLOTS:
 
         QString readBlob; // lambda member essentially
 
-        connect(server, &QTcpServer::newConnection,
-              server, [server, &readBlob]() {
+        connect(server, &QTcpServer::newConnection, server, [server, &readBlob]() {
             QCOMPARE(server->thread(), QThread::currentThread());
             QTcpSocket *socket = server->nextPendingConnection();
-            connect(socket, &QTcpSocket::readyRead,
-                    socket, [&readBlob, socket] {
+            connect(socket, &QTcpSocket::readyRead, socket, [&readBlob, socket] {
                 readBlob += socket->readAll();
                 readBlob.replace("\r\n", "\n");
                 auto parts = readBlob.split("\n");
-                if (parts.contains("PUT /put HTTP/1.1") &&
-                        parts.contains("Content-Length: 12") &&
-                        parts.contains("hello there!")) {
+                if (parts.contains("PUT /put HTTP/1.1") && parts.contains("Content-Length: 12") && parts.contains("hello there!")) {
                     QFile file(QFINDTESTDATA("data/put.http"));
                     file.open(QFile::ReadOnly | QFile::Text);
                     QByteArray ret = file.readAll();

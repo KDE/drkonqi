@@ -1,29 +1,29 @@
 /*******************************************************************
-* reportassistantpages_base.h
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportassistantpages_base.h
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef REPORTASSISTANTPAGES__BASE__H
 #define REPORTASSISTANTPAGES__BASE__H
 
-#include <QPointer>
 #include <QDialog>
+#include <QPointer>
 
 #include "reportassistantdialog.h"
 #include "reportassistantpage.h"
 
-#include "ui_assistantpage_introduction.h"
 #include "ui_assistantpage_bugawareness.h"
 #include "ui_assistantpage_conclusions.h"
 #include "ui_assistantpage_conclusions_dialog.h"
+#include "ui_assistantpage_introduction.h"
 
 class BacktraceWidget;
 
 /** Introduction page **/
-class IntroductionPage: public ReportAssistantPage
+class IntroductionPage : public ReportAssistantPage
 {
     Q_OBJECT
 
@@ -31,11 +31,11 @@ public:
     explicit IntroductionPage(ReportAssistantDialog *);
 
 private:
-    Ui::AssistantPageIntroduction   ui;
+    Ui::AssistantPageIntroduction ui;
 };
 
 /** Backtrace page **/
-class CrashInformationPage: public ReportAssistantPage
+class CrashInformationPage : public ReportAssistantPage
 {
     Q_OBJECT
 
@@ -48,11 +48,11 @@ public:
     bool showNextPage() override;
 
 private:
-    BacktraceWidget *        m_backtraceWidget;
+    BacktraceWidget *m_backtraceWidget;
 };
 
 /** Bug Awareness page **/
-class BugAwarenessPage: public ReportAssistantPage
+class BugAwarenessPage : public ReportAssistantPage
 {
     Q_OBJECT
 
@@ -66,7 +66,7 @@ private Q_SLOTS:
     void updateCheckBoxes();
 
 private:
-    Ui::AssistantPageBugAwareness   ui;
+    Ui::AssistantPageBugAwareness ui;
 };
 
 /** Conclusions page **/
@@ -88,12 +88,12 @@ private Q_SLOTS:
     void openReportInformation();
 
 private:
-    Ui::AssistantPageConclusions            ui;
+    Ui::AssistantPageConclusions ui;
 
-    QPointer<QDialog>                       m_infoDialog;
+    QPointer<QDialog> m_infoDialog;
 
-    bool                                    m_isBKO;
-    bool                                    m_needToReport;
+    bool m_isBKO;
+    bool m_needToReport;
 
 Q_SIGNALS:
     void finished(bool);
@@ -103,7 +103,7 @@ class ReportInformationDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ReportInformationDialog(const QString & reportText);
+    explicit ReportInformationDialog(const QString &reportText);
     ~ReportInformationDialog() override;
 
 private Q_SLOTS:

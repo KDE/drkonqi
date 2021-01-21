@@ -8,8 +8,8 @@
 
 #include <QMetaProperty>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 NewBug::NewBug(QObject *parent)
     : JsonCommand(parent)
 {

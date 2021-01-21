@@ -14,8 +14,8 @@
 
 #include "comment.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 // Models a bugzilla bug.
 class Bug : public QObject
 {

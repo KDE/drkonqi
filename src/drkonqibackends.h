@@ -17,11 +17,13 @@ public:
     virtual ~AbstractDrKonqiBackend();
     virtual bool init();
 
-    inline CrashedApplication *crashedApplication() const {
+    inline CrashedApplication *crashedApplication() const
+    {
         return m_crashedApplication;
     }
 
-    inline DebuggerManager *debuggerManager() const {
+    inline DebuggerManager *debuggerManager() const
+    {
         return m_debuggerManager;
     }
 
@@ -54,7 +56,7 @@ private Q_SLOTS:
 
 private:
     static void emergencySaveFunction(int signal);
-    static qint64 s_pid; //for use by the emergencySaveFunction
+    static qint64 s_pid; // for use by the emergencySaveFunction
 
     enum State { ProcessRunning, ProcessStopped, DebuggerRunning };
     State m_state;

@@ -7,7 +7,7 @@
 #include <QFile>
 #include <QTextStream>
 
-void FakeBacktraceGenerator::sendData(const QString & filename)
+void FakeBacktraceGenerator::sendData(const QString &filename)
 {
     QFile file(filename);
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -19,5 +19,3 @@ void FakeBacktraceGenerator::sendData(const QString & filename)
     }
     emit newLine(QString());
 }
-
-

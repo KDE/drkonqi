@@ -1,16 +1,16 @@
 /*******************************************************************
-* drkonqidialog.h
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * drkonqidialog.h
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef DRKONQIDIALOG__H
 #define DRKONQIDIALOG__H
 
-#include <QPointer>
 #include <QHash>
+#include <QPointer>
 
 #include <QDialog>
 
@@ -23,16 +23,16 @@ class AbstractDebuggerLauncher;
 class QDialogButtonBox;
 class QMenu;
 
-class DrKonqiDialog: public QDialog
+class DrKonqiDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit DrKonqiDialog(QWidget * parent = nullptr);
+    explicit DrKonqiDialog(QWidget *parent = nullptr);
     ~DrKonqiDialog() override;
 
 private Q_SLOTS:
-    void linkActivated(const QString&);
+    void linkActivated(const QString &);
     void startBugReportAssistant();
 
     void applicationRestarted(bool success);
@@ -41,7 +41,7 @@ private Q_SLOTS:
     void removeDebugger(AbstractDebuggerLauncher *launcher);
     void enableDebugMenu(bool);
 
-    //GUI
+    // GUI
     void buildIntroWidget();
     void buildDialogButtons();
 
@@ -50,21 +50,21 @@ private Q_SLOTS:
 private:
     void showAboutBugReporting();
 
-    QTabWidget *                        m_tabWidget = nullptr;
+    QTabWidget *m_tabWidget = nullptr;
 
-    QPointer<AboutBugReportingDialog>   m_aboutBugReportingDialog;
+    QPointer<AboutBugReportingDialog> m_aboutBugReportingDialog;
 
-    QWidget *                           m_introWidget = nullptr;
-    Ui::MainWidget                      ui;
+    QWidget *m_introWidget = nullptr;
+    Ui::MainWidget ui;
 
-    BacktraceWidget *                   m_backtraceWidget = nullptr;
+    BacktraceWidget *m_backtraceWidget = nullptr;
 
     QMenu *m_debugMenu;
-    QHash<AbstractDebuggerLauncher*, QAction*> m_debugMenuActions;
-    QDialogButtonBox*                   m_buttonBox = nullptr;
-    QPushButton*                        m_debugButton = nullptr;
-    QPushButton*                        m_restartButton = nullptr;
-    bool                                m_debugButtonInBox = false;
+    QHash<AbstractDebuggerLauncher *, QAction *> m_debugMenuActions;
+    QDialogButtonBox *m_buttonBox = nullptr;
+    QPushButton *m_debugButton = nullptr;
+    QPushButton *m_restartButton = nullptr;
+    bool m_debugButtonInBox = false;
 };
 
 #endif

@@ -8,8 +8,8 @@
 
 #include <QVariantHash>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 QVariantHash NewAttachment::toVariantHash() const
 {
     auto hash = JsonCommand::toVariantHash();

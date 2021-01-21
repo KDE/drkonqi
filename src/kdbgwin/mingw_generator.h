@@ -26,14 +26,15 @@ class MingwGenerator : public AbstractBTGenerator
     Q_OBJECT
 protected:
     /// The current file
-    const char* file;
+    const char *file;
     /// The current function
-    const char* func;
+    const char *func;
     /// The current line
     int line;
+
 public:
     /// Constructor
-    MingwGenerator(const Process& process);
+    MingwGenerator(const Process &process);
 
     virtual bool Init();
     virtual void UnInit();
@@ -42,7 +43,7 @@ public:
 
     virtual QString GetFunctionName();
     virtual QString GetFile();
-    virtual int     GetLine();
+    virtual int GetLine();
 
-    virtual void LoadSymbol(const QString& module, DWORD64 dwBaseAddr);
+    virtual void LoadSymbol(const QString &module, DWORD64 dwBaseAddr);
 };

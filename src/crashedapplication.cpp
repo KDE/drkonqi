@@ -9,21 +9,22 @@
 #include "crashedapplication.h"
 
 #if HAVE_STRSIGNAL && defined(Q_OS_UNIX)
-# include <clocale>
-# include <cstring>
-# include <cstdlib>
+#include <clocale>
+#include <cstdlib>
+#include <cstring>
 #else
-# if defined(Q_OS_UNIX)
-#  include <signal.h>
-# else
-#  include <windows.h>
-# endif
+#if defined(Q_OS_UNIX)
+#include <signal.h>
+#else
+#include <windows.h>
+#endif
 #endif
 
 #include <KToolInvocation>
 
 CrashedApplication::CrashedApplication(QObject *parent)
-    : QObject(parent), m_restarted(false)
+    : QObject(parent)
+    , m_restarted(false)
 {
 }
 
@@ -73,8 +74,8 @@ int CrashedApplication::signalNumber() const
 QString CrashedApplication::signalName() const
 {
 #if HAVE_STRSIGNAL && defined(Q_OS_UNIX)
-    const char * oldLocale = std::setlocale(LC_MESSAGES, nullptr);
-    char * savedLocale;
+    const char *oldLocale = std::setlocale(LC_MESSAGES, nullptr);
+    char *savedLocale;
     if (oldLocale) {
         savedLocale = strdup(oldLocale);
     } else {
@@ -87,35 +88,61 @@ QString CrashedApplication::signalName() const
     return QString::fromLocal8Bit(name ? name : "Unknown");
 #else
     switch (m_signalNumber) {
-# if defined(Q_OS_UNIX)
-    case SIGILL: return QLatin1String("SIGILL");
-    case SIGABRT: return QLatin1String("SIGABRT");
-    case SIGFPE: return QLatin1String("SIGFPE");
-    case SIGSEGV: return QLatin1String("SIGSEGV");
-    case SIGBUS: return QLatin1String("SIGBUS");
-# else
-    case EXCEPTION_ACCESS_VIOLATION: return QLatin1String("EXCEPTION_ACCESS_VIOLATION");
-    case EXCEPTION_DATATYPE_MISALIGNMENT: return QLatin1String("EXCEPTION_DATATYPE_MISALIGNMENT");
-    case EXCEPTION_BREAKPOINT: return QLatin1String("EXCEPTION_BREAKPOINT");
-    case EXCEPTION_SINGLE_STEP: return QLatin1String("EXCEPTION_SINGLE_STEP");
-    case EXCEPTION_ARRAY_BOUNDS_EXCEEDED: return QLatin1String("EXCEPTION_ARRAY_BOUNDS_EXCEEDED");
-    case EXCEPTION_FLT_DENORMAL_OPERAND: return QLatin1String("EXCEPTION_FLT_DENORMAL_OPERAND");
-    case EXCEPTION_FLT_DIVIDE_BY_ZERO: return QLatin1String("EXCEPTION_FLT_DIVIDE_BY_ZERO");
-    case EXCEPTION_FLT_INEXACT_RESULT: return QLatin1String("EXCEPTION_FLT_INEXACT_RESULT");
-    case EXCEPTION_FLT_INVALID_OPERATION: return QLatin1String("EXCEPTION_FLT_INVALID_OPERATION");
-    case EXCEPTION_FLT_OVERFLOW: return QLatin1String("EXCEPTION_FLT_OVERFLOW");
-    case EXCEPTION_FLT_STACK_CHECK: return QLatin1String("EXCEPTION_FLT_STACK_CHECK");
-    case EXCEPTION_FLT_UNDERFLOW: return QLatin1String("EXCEPTION_FLT_UNDERFLOW");
-    case EXCEPTION_INT_DIVIDE_BY_ZERO: return QLatin1String("EXCEPTION_INT_DIVIDE_BY_ZERO");
-    case EXCEPTION_INT_OVERFLOW: return QLatin1String("EXCEPTION_INT_OVERFLOW");
-    case EXCEPTION_PRIV_INSTRUCTION: return QLatin1String("EXCEPTION_PRIV_INSTRUCTION");
-    case EXCEPTION_IN_PAGE_ERROR: return QLatin1String("EXCEPTION_IN_PAGE_ERROR");
-    case EXCEPTION_ILLEGAL_INSTRUCTION: return QLatin1String("EXCEPTION_ILLEGAL_INSTRUCTION");
-    case EXCEPTION_NONCONTINUABLE_EXCEPTION: return QLatin1String("EXCEPTION_NONCONTINUABLE_EXCEPTION");
-    case EXCEPTION_STACK_OVERFLOW: return QLatin1String("EXCEPTION_STACK_OVERFLOW");
-    case EXCEPTION_INVALID_DISPOSITION: return QLatin1String("EXCEPTION_INVALID_DISPOSITION");
-# endif
-    default: return QLatin1String("Unknown");
+#if defined(Q_OS_UNIX)
+    case SIGILL:
+        return QLatin1String("SIGILL");
+    case SIGABRT:
+        return QLatin1String("SIGABRT");
+    case SIGFPE:
+        return QLatin1String("SIGFPE");
+    case SIGSEGV:
+        return QLatin1String("SIGSEGV");
+    case SIGBUS:
+        return QLatin1String("SIGBUS");
+#else
+    case EXCEPTION_ACCESS_VIOLATION:
+        return QLatin1String("EXCEPTION_ACCESS_VIOLATION");
+    case EXCEPTION_DATATYPE_MISALIGNMENT:
+        return QLatin1String("EXCEPTION_DATATYPE_MISALIGNMENT");
+    case EXCEPTION_BREAKPOINT:
+        return QLatin1String("EXCEPTION_BREAKPOINT");
+    case EXCEPTION_SINGLE_STEP:
+        return QLatin1String("EXCEPTION_SINGLE_STEP");
+    case EXCEPTION_ARRAY_BOUNDS_EXCEEDED:
+        return QLatin1String("EXCEPTION_ARRAY_BOUNDS_EXCEEDED");
+    case EXCEPTION_FLT_DENORMAL_OPERAND:
+        return QLatin1String("EXCEPTION_FLT_DENORMAL_OPERAND");
+    case EXCEPTION_FLT_DIVIDE_BY_ZERO:
+        return QLatin1String("EXCEPTION_FLT_DIVIDE_BY_ZERO");
+    case EXCEPTION_FLT_INEXACT_RESULT:
+        return QLatin1String("EXCEPTION_FLT_INEXACT_RESULT");
+    case EXCEPTION_FLT_INVALID_OPERATION:
+        return QLatin1String("EXCEPTION_FLT_INVALID_OPERATION");
+    case EXCEPTION_FLT_OVERFLOW:
+        return QLatin1String("EXCEPTION_FLT_OVERFLOW");
+    case EXCEPTION_FLT_STACK_CHECK:
+        return QLatin1String("EXCEPTION_FLT_STACK_CHECK");
+    case EXCEPTION_FLT_UNDERFLOW:
+        return QLatin1String("EXCEPTION_FLT_UNDERFLOW");
+    case EXCEPTION_INT_DIVIDE_BY_ZERO:
+        return QLatin1String("EXCEPTION_INT_DIVIDE_BY_ZERO");
+    case EXCEPTION_INT_OVERFLOW:
+        return QLatin1String("EXCEPTION_INT_OVERFLOW");
+    case EXCEPTION_PRIV_INSTRUCTION:
+        return QLatin1String("EXCEPTION_PRIV_INSTRUCTION");
+    case EXCEPTION_IN_PAGE_ERROR:
+        return QLatin1String("EXCEPTION_IN_PAGE_ERROR");
+    case EXCEPTION_ILLEGAL_INSTRUCTION:
+        return QLatin1String("EXCEPTION_ILLEGAL_INSTRUCTION");
+    case EXCEPTION_NONCONTINUABLE_EXCEPTION:
+        return QLatin1String("EXCEPTION_NONCONTINUABLE_EXCEPTION");
+    case EXCEPTION_STACK_OVERFLOW:
+        return QLatin1String("EXCEPTION_STACK_OVERFLOW");
+    case EXCEPTION_INVALID_DISPOSITION:
+        return QLatin1String("EXCEPTION_INVALID_DISPOSITION");
+#endif
+    default:
+        return QLatin1String("Unknown");
     }
 #endif
 }
@@ -130,7 +157,7 @@ int CrashedApplication::thread() const
     return m_thread;
 }
 
-const QDateTime& CrashedApplication::datetime() const
+const QDateTime &CrashedApplication::datetime() const
 {
     return m_datetime;
 }
@@ -146,8 +173,8 @@ void CrashedApplication::restart()
         return;
     }
 
-    //start the application via kdeinit, as it needs to have a pristine environment and
-    //KProcess::startDetached() can't start a new process with custom environment variables.
+    // start the application via kdeinit, as it needs to have a pristine environment and
+    // KProcess::startDetached() can't start a new process with custom environment variables.
     // if m_fakeBaseName is set, this means m_executable is the path to kdeinit4
     // so we need to use the fakeBaseName to restart the app
     const int ret = KToolInvocation::kdeinitExec(!m_fakeBaseName.isEmpty() ? m_fakeBaseName : m_executable.absoluteFilePath());
@@ -157,11 +184,10 @@ void CrashedApplication::restart()
     emit restarted(success);
 }
 
-QString getSuggestedKCrashFilename(const CrashedApplication* app)
+QString getSuggestedKCrashFilename(const CrashedApplication *app)
 {
-    QString filename = app->fakeExecutableBaseName() + QLatin1Char('-') +
-                       app->datetime().toString(QStringLiteral("yyyyMMdd-hhmmss")) +
-                       QStringLiteral(".kcrash");
+    QString filename =
+        app->fakeExecutableBaseName() + QLatin1Char('-') + app->datetime().toString(QStringLiteral("yyyyMMdd-hhmmss")) + QStringLiteral(".kcrash");
 
     if (filename.contains(QLatin1Char('/'))) {
         filename = filename.mid(filename.lastIndexOf(QLatin1Char('/')) + 1);
@@ -169,5 +195,3 @@ QString getSuggestedKCrashFilename(const CrashedApplication* app)
 
     return filename;
 }
-
-

@@ -1,11 +1,11 @@
 /*******************************************************************
-* reportassistantdialog.h
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * reportassistantdialog.h
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #ifndef REPORTASSISTANTDIALOG__H
 #define REPORTASSISTANTDIALOG__H
@@ -20,15 +20,16 @@ class AboutBugReportingDialog;
 class ReportInterface;
 class QCloseEvent;
 
-class ReportAssistantDialog: public KAssistantDialog
+class ReportAssistantDialog : public KAssistantDialog
 {
     Q_OBJECT
 
 public:
-    explicit ReportAssistantDialog(QWidget * parent = nullptr);
+    explicit ReportAssistantDialog(QWidget *parent = nullptr);
     ~ReportAssistantDialog() override;
 
-    ReportInterface *reportInterface() const {
+    ReportInterface *reportInterface() const
+    {
         return m_reportInterface;
     }
 
@@ -41,7 +42,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void currentPageChanged_slot(KPageWidgetItem *, KPageWidgetItem *);
 
-    void completeChanged(ReportAssistantPage*, bool);
+    void completeChanged(ReportAssistantPage *, bool);
 
     void loginFinished();
 
@@ -49,19 +50,19 @@ private Q_SLOTS:
 
     void showHelp();
 
-    //Override default reject method
+    // Override default reject method
     void reject() override;
 
 private:
     void connectSignals(ReportAssistantPage *);
-    void closeEvent(QCloseEvent*) override;
+    void closeEvent(QCloseEvent *) override;
 
-    QHash<QLatin1String, KPageWidgetItem*>       m_pageWidgetMap;
+    QHash<QLatin1String, KPageWidgetItem *> m_pageWidgetMap;
 
-    QPointer<AboutBugReportingDialog>   m_aboutBugReportingDialog;
-    ReportInterface *                m_reportInterface = nullptr;
+    QPointer<AboutBugReportingDialog> m_aboutBugReportingDialog;
+    ReportInterface *m_reportInterface = nullptr;
 
-    bool                        m_canClose;
+    bool m_canClose;
 
     QIcon m_nextButtonIconCache;
     QString m_nextButtonTextCache;

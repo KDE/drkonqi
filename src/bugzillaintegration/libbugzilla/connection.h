@@ -11,11 +11,11 @@
 #include <QUrl>
 #include <QUrlQuery>
 
-#include "exceptions.h"
 #include "apijob.h"
+#include "exceptions.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class APIJob;
 
 /**
@@ -42,8 +42,7 @@ class HTTPConnection : public Connection
 {
     Q_OBJECT
 public:
-    explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")),
-                            QObject *parent = nullptr);
+    explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")), QObject *parent = nullptr);
     ~HTTPConnection();
 
     virtual void setToken(const QString &authToken) override;

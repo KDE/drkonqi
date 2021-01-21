@@ -14,7 +14,6 @@
 
 namespace Bugzilla
 {
-
 class JobDouble : public APIJob
 {
 public:

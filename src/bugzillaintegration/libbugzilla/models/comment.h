@@ -10,8 +10,8 @@
 #include <QObject>
 #include <QPointer>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class Comment : public QObject
 {
     Q_OBJECT

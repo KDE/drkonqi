@@ -1,33 +1,32 @@
 /*******************************************************************
-* systeminformation.cpp
-* SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
-* SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
-* SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
-*
-* SPDX-License-Identifier: GPL-2.0-or-later
-*
-******************************************************************/
+ * systeminformation.cpp
+ * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ *
+ ******************************************************************/
 
 #include <config-drkonqi.h>
 
 #include "systeminformation.h"
 
 #if HAVE_UNAME
-# include <errno.h>
-# include <sys/utsname.h>
+#include <errno.h>
+#include <sys/utsname.h>
 #endif
 
-
-#include <KProcess>
 #include "drkonqi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <kcoreaddons_version.h>
 #include <KCoreAddons>
 #include <KOSRelease>
+#include <KProcess>
+#include <KSharedConfig>
 #include <KWindowSystem>
 #include <QStandardPaths>
+#include <kcoreaddons_version.h>
 
 static const QString OS_UNSPECIFIED = QStringLiteral("unspecified");
 static const QString PLATFORM_UNSPECIFIED = QStringLiteral("unspecified");
@@ -114,7 +113,7 @@ void SystemInformation::tryToSetBugzillaPlatform()
 
 void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
 {
-    //Run lsb_release async
+    // Run lsb_release async
     QString lsb_release = m_infoConfig.lsbReleasePath;
     if (!lsb_release.isEmpty()) {
         qCDebug(DRKONQI_LOG) << "found lsb_release";
@@ -126,8 +125,8 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
         process->start();
     } else {
         // when lsb_release is unavailable, turn to /etc/os-release
-        const QString& osReleaseInfo = fetchOSReleaseInformation();
-        const QString& platform = guessBugzillaPlatform(osReleaseInfo);
+        const QString &osReleaseInfo = fetchOSReleaseInformation();
+        const QString &platform = guessBugzillaPlatform(osReleaseInfo);
         setBugzillaPlatform(platform);
         m_complete = true;
     }
@@ -135,17 +134,17 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
 
 void SystemInformation::lsbReleaseFinished()
 {
-    KProcess *process = qobject_cast<KProcess*>(sender());
+    KProcess *process = qobject_cast<KProcess *>(sender());
     Q_ASSERT(process);
     m_distributionPrettyName = QString::fromLocal8Bit(process->readAllStandardOutput().trimmed());
     process->deleteLater();
 
-    //Guess distro string
+    // Guess distro string
     QString platform = guessBugzillaPlatform(m_distributionPrettyName);
 
     // if lsb_release doesn't work well, turn to the /etc/os-release file
     if (platform == PLATFORM_UNSPECIFIED) {
-        const QString& osReleaseInfo = fetchOSReleaseInformation();
+        const QString &osReleaseInfo = fetchOSReleaseInformation();
         platform = guessBugzillaPlatform(osReleaseInfo);
     }
 
@@ -153,33 +152,31 @@ void SystemInformation::lsbReleaseFinished()
     m_complete = true;
 }
 
-//this function maps the distribution information to an "Hardware Platform"    .
-//value that is accepted by bugs.kde.org.  If the values change on the server    .
-//side, they need to be updated here as well                                   .
-QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) const
+// this function maps the distribution information to an "Hardware Platform"    .
+// value that is accepted by bugs.kde.org.  If the values change on the server    .
+// side, they need to be updated here as well                                   .
+QString SystemInformation::guessBugzillaPlatform(const QString &distroInfo) const
 {
-    static QHash<QString, QString> platforms {
-        { QStringLiteral("suse"), QStringLiteral("openSUSE RPMs") },
-        { QStringLiteral("mint"), QStringLiteral("Mint (Ubuntu Based)") },
-        { QStringLiteral("lmde"), QStringLiteral("Mint (Debian Based)") },
-        { QStringLiteral("ubuntu"), QStringLiteral("Ubuntu Packages") },
-        { QStringLiteral("fedora"), QStringLiteral("Fedora RPMs") },
-        { QStringLiteral("redhat"), QStringLiteral("RedHat RPMs") },
-        { QStringLiteral("gentoo"), QStringLiteral("Gentoo Packages") },
-        { QStringLiteral("mandriva"), QStringLiteral("Mandriva RPMs") },
-        { QStringLiteral("mageia"), QStringLiteral("Mageia RPMs") },
-        { QStringLiteral("slack"), QStringLiteral("Slackware Packages") },
-        { QStringLiteral("pclinuxos"), QStringLiteral("PCLinuxOS") },
-        { QStringLiteral("pardus"), QStringLiteral("Pardus Packages") },
-        { QStringLiteral("freebsd"), QStringLiteral("FreeBSD Ports") },
-        { QStringLiteral("netbsd"), QStringLiteral("NetBSD pkgsrc") },
-        { QStringLiteral("openbsd"), QStringLiteral("OpenBSD Packages") },
-        { QStringLiteral("solaris"), QStringLiteral("Solaris Packages") },
-        { QStringLiteral("chakra"), QStringLiteral("Chakra") },
-        { QStringLiteral("ms windows"), QStringLiteral("MS Windows") },
-        { QStringLiteral("arch"), QStringLiteral("Archlinux Packages") },
-        { QStringLiteral("kde neon"), QStringLiteral("Neon Packages") }
-    };
+    static QHash<QString, QString> platforms{{QStringLiteral("suse"), QStringLiteral("openSUSE RPMs")},
+                                             {QStringLiteral("mint"), QStringLiteral("Mint (Ubuntu Based)")},
+                                             {QStringLiteral("lmde"), QStringLiteral("Mint (Debian Based)")},
+                                             {QStringLiteral("ubuntu"), QStringLiteral("Ubuntu Packages")},
+                                             {QStringLiteral("fedora"), QStringLiteral("Fedora RPMs")},
+                                             {QStringLiteral("redhat"), QStringLiteral("RedHat RPMs")},
+                                             {QStringLiteral("gentoo"), QStringLiteral("Gentoo Packages")},
+                                             {QStringLiteral("mandriva"), QStringLiteral("Mandriva RPMs")},
+                                             {QStringLiteral("mageia"), QStringLiteral("Mageia RPMs")},
+                                             {QStringLiteral("slack"), QStringLiteral("Slackware Packages")},
+                                             {QStringLiteral("pclinuxos"), QStringLiteral("PCLinuxOS")},
+                                             {QStringLiteral("pardus"), QStringLiteral("Pardus Packages")},
+                                             {QStringLiteral("freebsd"), QStringLiteral("FreeBSD Ports")},
+                                             {QStringLiteral("netbsd"), QStringLiteral("NetBSD pkgsrc")},
+                                             {QStringLiteral("openbsd"), QStringLiteral("OpenBSD Packages")},
+                                             {QStringLiteral("solaris"), QStringLiteral("Solaris Packages")},
+                                             {QStringLiteral("chakra"), QStringLiteral("Chakra")},
+                                             {QStringLiteral("ms windows"), QStringLiteral("MS Windows")},
+                                             {QStringLiteral("arch"), QStringLiteral("Archlinux Packages")},
+                                             {QStringLiteral("kde neon"), QStringLiteral("Neon Packages")}};
     for (auto it = platforms.constBegin(); it != platforms.constEnd(); ++it) {
         if (distroInfo.contains(it.key(), Qt::CaseInsensitive)) {
             return it.value();
@@ -202,7 +199,7 @@ QString SystemInformation::guessBugzillaPlatform(const QString& distroInfo) cons
 
 QString SystemInformation::fetchOSDetailInformation() const
 {
-    //Get complete OS string (and fallback to base string)
+    // Get complete OS string (and fallback to base string)
     QString operatingSystem = m_bugzillaOperatingSystem;
 
 #if HAVE_UNAME
@@ -216,8 +213,7 @@ QString SystemInformation::fetchOSDetailInformation() const
     if ((*unameFunc)(&buf) == -1) {
         qCDebug(DRKONQI_LOG) << "call to uname failed" << errno;
     } else {
-        operatingSystem = QString::fromLocal8Bit(buf.sysname) + QLatin1Char(' ')
-            + QString::fromLocal8Bit(buf.release) + QLatin1Char(' ')
+        operatingSystem = QString::fromLocal8Bit(buf.sysname) + QLatin1Char(' ') + QString::fromLocal8Bit(buf.release) + QLatin1Char(' ')
             + QString::fromLocal8Bit(buf.machine);
     }
 #endif
@@ -246,7 +242,7 @@ QString SystemInformation::bugzillaPlatform() const
     return m_bugzillaPlatform;
 }
 
-void SystemInformation::setBugzillaPlatform(const QString & platform)
+void SystemInformation::setBugzillaPlatform(const QString &platform)
 {
     m_bugzillaPlatform = platform;
 }

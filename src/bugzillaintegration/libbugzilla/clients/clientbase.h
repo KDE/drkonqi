@@ -9,8 +9,8 @@
 
 #include "connection.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 class ClientBase
 {
 public:

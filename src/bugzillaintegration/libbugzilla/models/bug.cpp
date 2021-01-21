@@ -8,8 +8,8 @@
 
 #include <QDebug>
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 Bug::Bug(const QVariantHash &obj, QObject *parent)
     : QObject(parent)
 {
@@ -22,9 +22,7 @@ Bug::Bug(const QVariantHash &obj, QObject *parent)
     const QString status = obj.value(QStringLiteral("status")).toString();
     if (m_status == Status::Unknown) {
         // Intentionally uncategorized. Very important warning!
-        qWarning() << "Drkonqi status mapping failed on bug"
-                   << id() << ":" << status
-                   << "Please file a bug at bugs.kde.org";
+        qWarning() << "Drkonqi status mapping failed on bug" << id() << ":" << status << "Please file a bug at bugs.kde.org";
     }
 
     const QString resolution = obj.value(QStringLiteral("resolution")).toString();
@@ -34,9 +32,7 @@ Bug::Bug(const QVariantHash &obj, QObject *parent)
         // the mapping guard.
     } else if (m_resolution == Resolution::Unknown) {
         // Intentionally uncategorized. Very important warning!
-        qWarning() << "Drkonqi resolution mapping failed on bug"
-                   << id() << ":" << resolution
-                   << "Please file a bug at bugs.kde.org";
+        qWarning() << "Drkonqi resolution mapping failed on bug" << id() << ":" << resolution << "Please file a bug at bugs.kde.org";
     }
 }
 

@@ -14,8 +14,8 @@
 #include "bugzilla_debug.h"
 #include "exceptions.h"
 
-namespace Bugzilla {
-
+namespace Bugzilla
+{
 TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
     : APIJob(parent)
     , m_transferJob(transferJob)
@@ -31,25 +31,25 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
     // https://bugs.kde.org/show_bug.cgi?id=419646
     addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
 
-    connect(m_transferJob, &KIO::TransferJob::data,
-            this, [this](KIO::Job *, const QByteArray &data) {
+    connect(m_transferJob, &KIO::TransferJob::data, this, [this](KIO::Job *, const QByteArray &data) {
         m_data += data;
     });
 
-    connect(m_transferJob, &KIO::TransferJob::finished,
-            this, [this](KJob *job) {
+    connect(m_transferJob, &KIO::TransferJob::finished, this, [this](KJob *job) {
         // Set errors, they are read by document() when the consumer reads
         // the data and possibly raised as exception.
         setError(job->error());
         setErrorText(job->errorText());
 
-        Q_ASSERT(!((KIO::TransferJob*)job)->isErrorPage());
+        Q_ASSERT(!((KIO::TransferJob *)job)->isErrorPage());
 
         // Force a delay on all API actions if configured. This allows
         // simulation of slow connections.
         static int delay = qEnvironmentVariableIntValue("DRKONQI_HTTP_DELAY_MS");
         if (delay > 0) {
-            QTimer::singleShot(delay, [this] { emitResult(); });
+            QTimer::singleShot(delay, [this] {
+                emitResult();
+            });
             return;
         }
 
@@ -89,8 +89,7 @@ void TransferAPIJob::setPutData(const QByteArray &data)
     }
     Q_ASSERT(allLengths == data.size());
 
-    connect(m_transferJob, &KIO::TransferJob::dataReq,
-            this, [this](KIO::Job *, QByteArray &dataForSending) {
+    connect(m_transferJob, &KIO::TransferJob::dataReq, this, [this](KIO::Job *, QByteArray &dataForSending) {
         if (m_dataSegments.isEmpty()) {
             return;
         }
@@ -128,4 +127,3 @@ void APIJob::connectNotify(const QMetaMethod &signal)
 }
 
 } // namespace Bugzilla
-
