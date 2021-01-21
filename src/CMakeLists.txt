@@ -80,7 +80,8 @@ ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_bugzilla_version.ui
 )
 
-ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi)
+ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi
+     DESCRIPTION "drkonqi" EXPORT DRKONQI)
 
 # transient static lib we can use to link autotests against
 add_library(DrKonqiInternal STATIC ${drkonqi_SRCS})

@@ -29,7 +29,8 @@ ecm_qt_declare_logging_category(lib_SRCS
     HEADER bugzilla_debug.h
     IDENTIFIER BUGZILLA_LOG
     CATEGORY_NAME org.kde.drkonqi.bugzilla
-    DEFAULT_SEVERITY Warning)
+    DEFAULT_SEVERITY Warning
+    DESCRIPTION "drkonqi bugzilla" EXPORT DRKONQI)
 
 add_library(qbugzilla STATIC ${lib_SRCS})
 target_link_libraries(qbugzilla
