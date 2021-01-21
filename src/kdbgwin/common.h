@@ -16,16 +16,18 @@
 #define _UNICODE
 #endif
 
+// clang-format off
 // first: windows & compiler includes
-#include <assert.h>
-#include <dbghelp.h>
-#include <psapi.h>
-#include <shlwapi.h>
 #include <tchar.h>
-#include <tlhelp32.h>
 #include <windows.h>
+#include <dbghelp.h>
+#include <assert.h>
+#include <shlwapi.h>
+#include <psapi.h>
+#include <tlhelp32.h>
 
 #include "drkonqi_debug.h"
+// clang-format on
 
 // second: Qt includes
 
