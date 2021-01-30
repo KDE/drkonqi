@@ -96,7 +96,7 @@ target_link_libraries(DrKonqiInternal
     KF5::Crash
     KF5::Completion
     KF5::WindowSystem
-    Qt5::DBus
+    Qt::DBus
 
     KF5::WidgetsAddons
     KF5::Wallet
@@ -111,7 +111,7 @@ target_link_libraries(DrKonqiInternal
 )
 if (${Qt5X11Extras_FOUND})
     target_link_libraries(DrKonqiInternal
-        Qt5::X11Extras
+        Qt::X11Extras
     )
 endif()
 

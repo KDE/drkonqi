@@ -14,7 +14,7 @@ set(kdbgwin_SRCS
     ${CMAKE_CURRENT_BINARY_DIR}/../drkonqi_debug.cpp
 )
 
-set(COMMON_LIBS dbghelp psapi shlwapi Qt5::Core)
+set(COMMON_LIBS dbghelp psapi shlwapi Qt::Core)
 
 if ( MINGW )
     add_executable(kdbgwin ${kdbgwin_SRCS} mingw_generator.h mingw_generator.cpp)

@@ -18,9 +18,9 @@ ecm_add_tests(
     connectiontest.cpp
     producttest.cpp
     LINK_LIBRARIES
-        Qt5::Core
-        Qt5::Test
-        Qt5::Network
+        Qt::Core
+        Qt::Test
+        Qt::Network
 
         qbugzilla
 )

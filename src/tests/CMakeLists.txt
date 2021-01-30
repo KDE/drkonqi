@@ -14,8 +14,8 @@ if(HAVE_UNAME)
     ecm_add_tests(
         systeminformationtest
         LINK_LIBRARIES
-            Qt5::Core
-            Qt5::Test
+            Qt::Core
+            Qt::Test
             DrKonqiInternal
     )
 endif()
@@ -27,8 +27,8 @@ add_subdirectory(bugzillalibtest)
 ecm_add_tests(
     gdbbacktracelinetest
     LINK_LIBRARIES
-        Qt5::Core
-        Qt5::Test
+        Qt::Core
+        Qt::Test
         drkonqi_backtrace_parser
 )
 
