@@ -1,6 +1,7 @@
 /*******************************************************************
  * productmapping.cpp
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -34,6 +35,8 @@ ProductMapping::ProductMapping(const CrashedApplication *crashedApp, BugzillaMan
 
     // Get valid versions
     connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoFetched, this, &ProductMapping::checkProductInfo);
+    // Holding the connection so we can easily disconnect in the fallback logic.
+    m_productInfoErrorConnection = connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoError, this, &ProductMapping::fallBackToKDE);
 
     m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
 }
@@ -156,6 +159,20 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
     m_bugzillaVersionDisabled = inactiveVersions.contains(m_bugzillaVersionString);
 }
 
+void ProductMapping::fallBackToKDE()
+{
+    // Fall back to the generic kde product when we couldn't find an explicit mapping.
+    // This is in an effort to make it as easy as possible to file a bug, unfortunately it means someone will
+    // have to triage it accordingly.
+    // Disconnect to safe-guard against infinite loop should kde also fail for some reason....
+    //   An argument could be made that we should raise a user error if this fails again,
+    //   'kde' not resolving shouldn't ever happen and points at a huge problem somewhere.
+    disconnect(m_productInfoErrorConnection);
+    m_bugzillaProductOriginal = m_bugzillaProduct;
+    m_bugzillaProduct = QStringLiteral("kde");
+    m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
+}
+
 QStringList ProductMapping::relatedBugzillaProducts() const
 {
     return m_relatedBugzillaProducts;
@@ -184,4 +201,9 @@ bool ProductMapping::bugzillaProductDisabled() const
 bool ProductMapping::bugzillaVersionDisabled() const
 {
     return m_bugzillaVersionDisabled;
+}
+
+QString ProductMapping::bugzillaProductOriginal() const
+{
+    return m_bugzillaProductOriginal;
 }

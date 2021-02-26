@@ -2,6 +2,7 @@
  * reportinterface.cpp
  * SPDX-FileCopyrightText: 2009, 2010, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -239,9 +240,18 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     }
 
     switch (stamp) {
-    case DrKonqiStamp::Include:
+    case DrKonqiStamp::Include: {
         report.append(QLatin1String("\nReported using DrKonqi"));
+        const QString product = m_productMapping->bugzillaProduct();
+        const QString originalProduct = m_productMapping->bugzillaProductOriginal();
+        if (!originalProduct.isEmpty()) {
+            report.append(
+                QStringLiteral(
+                    "\nThis report was filed against '%1' because the product '%2' could not be located in Bugzilla. Add it to drkonqi's mappings file!")
+                    .arg(product, originalProduct));
+        }
         break;
+    }
     case DrKonqiStamp::Exclude:
         break;
     }
