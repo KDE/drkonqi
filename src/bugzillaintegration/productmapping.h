@@ -1,6 +1,7 @@
 /*******************************************************************
  * productmapping.h
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -29,6 +30,8 @@ public:
     explicit ProductMapping(const CrashedApplication *, BugzillaManager *, QObject *parent = nullptr);
 
     QString bugzillaProduct() const;
+    // If bugzillaProduct is a fallback product, then this is non-empty original product string we tried to find.
+    QString bugzillaProductOriginal() const;
     QString bugzillaComponent() const;
     QString bugzillaVersion() const;
     QStringList relatedBugzillaProducts() const;
@@ -38,6 +41,8 @@ public:
 
 private Q_SLOTS:
     void checkProductInfo(const Bugzilla::Product::Ptr);
+    // Fall back to generic product because the product failed to resolve.
+    void fallBackToKDE();
 
 private:
     void map(const QString &);
@@ -46,6 +51,7 @@ private:
 
     QStringList m_relatedBugzillaProducts;
     QString m_bugzillaProduct;
+    QString m_bugzillaProductOriginal;
     QString m_bugzillaComponent;
 
     QString m_bugzillaVersionString;
@@ -55,6 +61,8 @@ private:
 
     bool m_bugzillaProductDisabled;
     bool m_bugzillaVersionDisabled;
+
+    QMetaObject::Connection m_productInfoErrorConnection;
 };
 
 #endif
