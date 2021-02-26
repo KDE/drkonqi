@@ -383,6 +383,18 @@ void BugzillaInformationPage::aboutToShow()
         }
         ui.m_detailsEdit->setText(descriptionTemplate);
     }
+    // If attaching this report to an existing one then the title is not needed
+    bool showTitle = (reportInterface()->attachToBugNumber() == 0);
+    ui.m_titleEdit->setVisible(showTitle);
+    ui.m_titleLabel->setVisible(showTitle);
+
+    // Force focus on the first input field for ease of use.
+    // https://bugs.kde.org/show_bug.cgi?id=428350
+    if (showTitle) {
+        ui.m_titleEdit->setFocus();
+    } else {
+        ui.m_detailsEdit->setFocus();
+    }
 
     checkTexts(); // May be the options (canDetail) changed and we need to recheck
 }
@@ -405,19 +417,6 @@ int BugzillaInformationPage::currentDescriptionCharactersCount()
 
 void BugzillaInformationPage::checkTexts()
 {
-    // If attaching this report to an existing one then the title is not needed
-    bool showTitle = (reportInterface()->attachToBugNumber() == 0);
-    ui.m_titleEdit->setVisible(showTitle);
-    ui.m_titleLabel->setVisible(showTitle);
-
-    // Force focus on the first input field for ease of use.
-    // https://bugs.kde.org/show_bug.cgi?id=428350
-    if (showTitle) {
-        ui.m_titleEdit->setFocus();
-    } else {
-        ui.m_detailsEdit->setFocus();
-    }
-
     bool ok = !((ui.m_titleEdit->isVisible() && ui.m_titleEdit->text().isEmpty()) || ui.m_detailsEdit->toPlainText().isEmpty());
 
     QString message;
