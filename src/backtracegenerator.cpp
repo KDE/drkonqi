@@ -60,6 +60,7 @@ bool BacktraceGenerator::start()
     emit starting();
 
     if (!m_debugger.isValid() || !m_debugger.isInstalled()) {
+        qCWarning(DRKONQI_LOG) << "Debugger not valid" << m_debugger.isValid() << "not installed" << m_debugger.isInstalled();
         m_state = FailedToStart;
         emit failedToStart();
         return false;
@@ -99,6 +100,8 @@ bool BacktraceGenerator::start()
 
     m_proc->start();
     if (!m_proc->waitForStarted()) {
+        qCWarning(DRKONQI_LOG) << "Debugger process failed to start" << m_proc->program() << m_proc->arguments() << m_proc->environment();
+
         // we mustn't keep these around...
         m_proc->deleteLater();
         m_temp->deleteLater();
