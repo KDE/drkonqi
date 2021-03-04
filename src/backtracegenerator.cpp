@@ -60,7 +60,7 @@ bool BacktraceGenerator::start()
     emit starting();
 
     if (!m_debugger.isValid() || !m_debugger.isInstalled()) {
-        qCWarning(DRKONQI_LOG) << "Debugger not valid" << m_debugger.isValid() << "not installed" << m_debugger.isInstalled();
+        qCWarning(DRKONQI_LOG) << "Debugger valid" << m_debugger.isValid() << "installed" << m_debugger.isInstalled();
         m_state = FailedToStart;
         emit failedToStart();
         return false;
