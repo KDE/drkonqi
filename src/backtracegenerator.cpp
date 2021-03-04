@@ -98,6 +98,8 @@ bool BacktraceGenerator::start()
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
 
     m_proc->start();
+    // FIXME: don't call wait functions on the GUI thread, instead connect to errorOcurred signal.
+    //   Requires refactoring because this function returns a bool :|
     if (!m_proc->waitForStarted()) {
         // we mustn't keep these around...
         m_proc->deleteLater();
