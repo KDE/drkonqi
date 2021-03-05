@@ -16,6 +16,7 @@
 #include <KMessageBox>
 
 #include "drkonqi.h"
+#include "drkonqi_debug.h"
 
 #include "backtracegenerator.h"
 #include "debuggermanager.h"
@@ -59,8 +60,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
         m_pageWidgetMap.insert(QLatin1String(PAGE_INTRODUCTION_ID), m_introductionPage);
         m_introductionPage->setHeader(i18nc("@title", "Welcome to the Reporting Assistant"));
         m_introductionPage->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
-
-        addPage(m_introductionPage);
+        m_pageItems.push_back(m_introductionPage);
     }
 
     //-Bug Awareness Page
@@ -140,16 +140,21 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     m_bugzillaSendPage->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet")));
     connect(m_bugzillaSend, &BugzillaSendPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
-    // TODO Remember to keep the pages ordered
-    addPage(m_awarenessPage);
-    addPage(m_backtracePage);
-    addPage(m_conclusionsPage);
-    addPage(versionPage->item());
-    addPage(m_bugzillaLoginPage);
-    addPage(m_bugzillaDuplicatesPage);
-    addPage(m_bugzillaInformationPage);
-    addPage(m_bugzillaPreviewPage);
-    addPage(m_bugzillaSendPage);
+    // Need to append because the welcome page is conditionally pushed early on.
+    m_pageItems.insert(m_pageItems.end(),
+                       {m_awarenessPage,
+                        m_backtracePage,
+                        m_conclusionsPage,
+                        versionPage->item(),
+                        m_bugzillaLoginPage,
+                        m_bugzillaDuplicatesPage,
+                        m_bugzillaInformationPage,
+                        m_bugzillaPreviewPage,
+                        m_bugzillaSendPage});
+
+    for (const auto pageItem : m_pageItems) {
+        addPage(pageItem);
+    }
 
     // Force a 16:9 ratio for nice appearance by default.
     QSize aspect(16, 9);
@@ -197,6 +202,57 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem *current, KP
     // Load data of the current(new) page
     if (current) {
         ReportAssistantPage *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
+
+        if (!currentPage->isAppropriate()) {
+            // The page is inappropriate. Find where to go next. This is extra exhausting because
+            // we can't just find the next or previous appropriate page because next() and back() implement lots of
+            // bespoke movement rules. So we in fact constantly need to go through those functions and then check again here.
+            // WARNING: when no page is appropriate this produces an ininfinite loop. There is no way to
+            //   prevent this right now. next() and back() would need to stop hacking in shortcuts for us to reliably
+            //   determine where to go and when we can't go anywhere.
+            enum class Movement { Unknown, Forward, Backward };
+            auto move = Movement::Unknown;
+            for (auto it = m_pageItems.cbegin(); it != m_pageItems.cend(); ++it) {
+                if (*it == before && move == Movement::Unknown) {
+                    // Found previous item first, we are moving forward ->
+                    move = Movement::Forward;
+                    continue; // continue finding current item, depending on where it is in the container we may need to reverse
+                }
+                if (*it == current) {
+                    if (move == Movement::Unknown) {
+                        // Current item first, we are moving backward <-
+                        move = Movement::Backward;
+                        if (it == m_pageItems.cbegin()) {
+                            // Turn around if this item is first but inappropriate.
+                            move = Movement::Forward;
+                        }
+                    } else if ((it + 1) == m_pageItems.cend()) {
+                        // Turn around if this item is last but inappropriate.
+                        move = Movement::Backward;
+                    }
+                    break;
+                }
+            }
+
+            qCDebug(DRKONQI_LOG) << "page inappropriate, skipping";
+
+            switch (move) {
+            case Movement::Unknown:
+                qCDebug(DRKONQI_LOG) << "unknown";
+                Q_UNREACHABLE();
+                Q_FALLTHROUGH(); // do whatever at this point but do something, the page is inappropriate.
+            case Movement::Forward:
+                qCDebug(DRKONQI_LOG) << "forward";
+                next();
+                return;
+            case Movement::Backward:
+                qCDebug(DRKONQI_LOG) << "backward";
+                back();
+                return;
+            }
+            return;
+        }
+
         nextButton()->setEnabled(currentPage->isComplete());
         currentPage->aboutToShow();
 

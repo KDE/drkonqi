@@ -1,5 +1,5 @@
 /*******************************************************************
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  ******************************************************************/
@@ -29,7 +29,7 @@ BugzillaVersionPage::BugzillaVersionPage(ReportAssistantDialog *parent)
 
     connect(bugzillaManager(), &BugzillaManager::bugzillaVersionFound, this, [=] {
         // Don't show this page ever again!
-        assistant()->setAppropriate(m_item, false);
+        appropriate = false;
         if (assistant()->currentPage() == m_item) {
             assistant()->next();
         }
@@ -57,6 +57,11 @@ BugzillaVersionPage::~BugzillaVersionPage()
 bool BugzillaVersionPage::isComplete()
 {
     return false;
+}
+
+bool BugzillaVersionPage::isAppropriate()
+{
+    return appropriate;
 }
 
 KPageWidgetItem *BugzillaVersionPage::item() const

@@ -1,6 +1,7 @@
 /*******************************************************************
  * reportassistantpage.h
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -34,6 +35,13 @@ public:
     }
     /** Tells the KAssistantDialog to enable the Next button **/
     virtual bool isComplete();
+
+    /**
+     * Whether this page is fit for displaying. An inappropriate page is skipped.
+     * This replicates KAssistantDialog's appropriateness system as it'd mess with our (manual) button state management.
+     * An in appropriate page will be skipped.
+     */
+    virtual bool isAppropriate();
 
     /** Last time checks to see if you can turn the page **/
     virtual bool showNextPage();

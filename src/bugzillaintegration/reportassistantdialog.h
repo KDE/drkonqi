@@ -1,7 +1,7 @@
 /*******************************************************************
  * reportassistantdialog.h
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -66,6 +66,8 @@ private:
 
     QIcon m_nextButtonIconCache;
     QString m_nextButtonTextCache;
+    // Page sequence.
+    std::vector<KPageWidgetItem *> m_pageItems;
 };
 
 #endif

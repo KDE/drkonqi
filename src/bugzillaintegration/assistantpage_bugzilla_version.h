@@ -1,5 +1,5 @@
 /*******************************************************************
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  ******************************************************************/
@@ -27,10 +27,12 @@ public:
 
     KPageWidgetItem *item() const;
     virtual bool isComplete() override;
+    virtual bool isAppropriate() override;
 
 private:
     Ui::BugzillaVersionPage *ui = nullptr;
     KPageWidgetItem *m_item = nullptr;
+    bool appropriate = true;
 };
 
 #endif // ASSISTANTPAGE_BUGZILLA_VERSION_H
