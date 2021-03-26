@@ -105,27 +105,22 @@ bool KCrashBackend::init()
 
 CrashedApplication *KCrashBackend::constructCrashedApplication()
 {
-    CrashedApplication *a = new CrashedApplication(this);
-    a->m_datetime = QDateTime::currentDateTime();
-    a->m_name = DrKonqi::programName();
-    a->m_version = DrKonqi::appVersion();
-    a->m_reportAddress = BugReportAddress(DrKonqi::bugAddress());
-    a->m_pid = DrKonqi::pid();
-    a->m_signalNumber = DrKonqi::signal();
-    a->m_restarted = DrKonqi::isRestarted();
-    a->m_thread = DrKonqi::thread();
+    const auto pid = DrKonqi::pid();
+    QFileInfo executable;
+    QString fakeBaseName;
+    bool hasDeletedFiles = false;
 
     // try to determine the executable that crashed
-    const QString procPath(QStringLiteral("/proc/%1").arg(a->m_pid));
+    const QString procPath(QStringLiteral("/proc/%1").arg(pid));
     const QString exeProcPath(procPath + QStringLiteral("/exe"));
     if (QFileInfo(exeProcPath).exists()) {
         // on linux, the fastest and most reliable way is to get the path from /proc
         qCDebug(DRKONQI_LOG) << "Using /proc to determine executable path";
         const QString exePath = QFile::symLinkTarget(exeProcPath);
 
-        a->m_executable.setFile(exePath);
-        if (DrKonqi::isKdeinit() || a->m_executable.fileName().startsWith(QLatin1String("python"))) {
-            a->m_fakeBaseName = DrKonqi::appName();
+        executable.setFile(exePath);
+        if (DrKonqi::isKdeinit() || executable.fileName().startsWith(QLatin1String("python"))) {
+            fakeBaseName = DrKonqi::appName();
         }
 
         QDir mapFilesDir(procPath + QStringLiteral("/map_files"));
@@ -141,8 +136,6 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
         // NB: includes .so* and .py* since we also implicitly support snakes to
         //   a degree
         QRegularExpression soExpression(QStringLiteral("(?<path>.+\\.(so|py)([^/]*)) \\(deleted\\)$"));
-
-        bool hasDeletedFiles = false;
 
         const auto exeMatch = expression.match(exePath);
         if (exeMatch.isValid() && exeMatch.hasMatch()) {
@@ -163,30 +156,39 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
             hasDeletedFiles = true;
         }
 
-        a->m_hasDeletedFiles = hasDeletedFiles;
-
         qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
     } else {
         if (DrKonqi::isKdeinit()) {
-            a->m_executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
-            a->m_fakeBaseName = DrKonqi::appName();
+            executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
+            fakeBaseName = DrKonqi::appName();
         } else {
             QFileInfo execPath(DrKonqi::appName());
             if (execPath.isAbsolute()) {
-                a->m_executable = execPath;
+                executable = execPath;
             } else if (!DrKonqi::appPath().isEmpty()) {
                 QDir execDir(DrKonqi::appPath());
-                a->m_executable = execDir.absoluteFilePath(execPath.fileName());
+                executable = execDir.absoluteFilePath(execPath.fileName());
             } else {
-                a->m_executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
+                executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
             }
         }
     }
 
-    qCDebug(DRKONQI_LOG) << "Executable is:" << a->m_executable.absoluteFilePath();
-    qCDebug(DRKONQI_LOG) << "Executable exists:" << a->m_executable.exists();
+    qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
+    qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();
 
-    return a;
+    return new CrashedApplication(pid,
+                                  DrKonqi::thread(),
+                                  DrKonqi::signal(),
+                                  executable,
+                                  DrKonqi::appVersion(),
+                                  BugReportAddress(DrKonqi::bugAddress()),
+                                  DrKonqi::programName(),
+                                  QDateTime::currentDateTime(),
+                                  DrKonqi::isRestarted(),
+                                  hasDeletedFiles,
+                                  fakeBaseName,
+                                  this);
 }
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()

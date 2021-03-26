@@ -18,6 +18,19 @@ class CrashedApplication : public QObject
 {
     Q_OBJECT
 public:
+    CrashedApplication(int pid,
+                       int thread,
+                       int signalNumber,
+                       const QFileInfo &executable,
+                       const QString &version,
+                       const BugReportAddress &reportAddress,
+                       const QString &name = QString(),
+                       const QDateTime &datetime = QDateTime::currentDateTime(),
+                       bool restarted = false,
+                       bool hasDeletedFiles = false,
+                       const QString &fakeBaseName = QString(),
+                       QObject *parent = nullptr);
+
     ~CrashedApplication() override;
 
     /** Returns the crashed program's name, possibly translated (ex. "The KDE Crash Handler") */
@@ -65,9 +78,6 @@ Q_SIGNALS:
     void restarted(bool success);
 
 protected:
-    friend class KCrashBackend;
-    CrashedApplication(QObject *parent = nullptr);
-
     int m_pid;
     int m_signalNumber;
     QString m_name;

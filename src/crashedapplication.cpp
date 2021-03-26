@@ -22,9 +22,32 @@
 
 #include <KToolInvocation>
 
-CrashedApplication::CrashedApplication(QObject *parent)
+CrashedApplication::CrashedApplication(int pid,
+                                       int thread,
+                                       int signalNumber,
+                                       const QFileInfo &executable,
+                                       const QString &version,
+                                       const BugReportAddress &reportAddress,
+                                       const QString &name,
+                                       const QDateTime &datetime,
+                                       bool restarted,
+                                       bool hasDeletedFiles,
+                                       const QString &fakeBaseName,
+                                       QObject *parent)
+
     : QObject(parent)
-    , m_restarted(false)
+    , m_pid(pid)
+    , m_signalNumber(signalNumber)
+    , m_name(name)
+    , m_executable(executable)
+    , m_fakeBaseName(fakeBaseName)
+    , m_version(version)
+    , m_reportAddress(reportAddress)
+    , m_restarted(restarted)
+    , m_thread(thread)
+    , m_datetime(datetime)
+    , m_hasDeletedFiles(hasDeletedFiles)
+
 {
 }
 
