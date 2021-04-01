@@ -38,6 +38,7 @@ set(drkonqi_SRCS
     debuggermanager.cpp
     applicationdetailsexamples.cpp
     statusnotifier.cpp
+    linuxprocmapsparser.cpp
 )
 
 ki18n_wrap_ui(drkonqi_SRCS

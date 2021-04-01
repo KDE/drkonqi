@@ -32,6 +32,14 @@ ecm_add_tests(
         drkonqi_backtrace_parser
 )
 
+ecm_add_tests(
+    linuxprocmapsparsertest
+    LINK_LIBRARIES
+        Qt::Core
+        Qt::Test
+        DrKonqiInternal
+)
+
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)
         find_program(RUBY_EXECUTABLE ruby)

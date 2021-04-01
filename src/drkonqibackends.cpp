@@ -25,6 +25,7 @@
 #include "debugger.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
+#include "linuxprocmapsparser.h"
 
 #ifdef Q_OS_MACOS
 #include <AvailabilityMacros.h>
@@ -123,37 +124,12 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
             fakeBaseName = DrKonqi::appName();
         }
 
-        QDir mapFilesDir(procPath + QStringLiteral("/map_files"));
-        mapFilesDir.setFilter(mapFilesDir.filter() | QDir::System); // proc is system!
-
-        // "/bin/foo (deleted)" is how the kernel tells us that a file has been deleted since
-        // it was mmap'd.
-        QRegularExpression expression(QStringLiteral("(?<path>.+) \\(deleted\\)$"));
-        // For the map_files we filter only .so files to ensure that
-        // we don't trip over cache files or the like, as a result we
-        // manually need to check if the main exe was deleted and add
-        // it.
-        // NB: includes .so* and .py* since we also implicitly support snakes to
-        //   a degree
-        QRegularExpression soExpression(QStringLiteral("(?<path>.+\\.(so|py)([^/]*)) \\(deleted\\)$"));
-
-        const auto exeMatch = expression.match(exePath);
-        if (exeMatch.isValid() && exeMatch.hasMatch()) {
-            hasDeletedFiles = true;
-        }
-
-        const auto list = mapFilesDir.entryInfoList();
-        for (auto it = list.constBegin(); !hasDeletedFiles && it != list.constEnd(); ++it) {
-            const auto match = soExpression.match(it->symLinkTarget());
-            if (!match.isValid() || !match.hasMatch()) {
-                continue;
-            }
-            const QString path = match.captured(QStringLiteral("path"));
-            if (path.startsWith(QStringLiteral("/memfd"))) {
-                // Qml.so's JIT shows up under memfd. This is a false positive against our regex.
-                continue;
-            }
-            hasDeletedFiles = true;
+        const QString mapsPath = procPath + QStringLiteral("/maps");
+        QFile mapsFile(mapsPath);
+        if (mapsFile.open(QFile::ReadOnly)) {
+            hasDeletedFiles = LinuxProc::hasMapsDeletedFiles(exePath, mapsFile.readAll(), LinuxProc::Check::DeletedMarker);
+        } else {
+            qCWarning(DRKONQI_LOG) << "failed to open maps file" << mapsPath;
         }
 
         qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
