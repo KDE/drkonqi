@@ -10,9 +10,9 @@
 #include <QObject>
 #include <QSet>
 #include <QString>
-#include <QUrlQuery>
 
 #include "commandbase.h"
+#include "query.h"
 
 namespace Bugzilla
 {
@@ -21,8 +21,8 @@ class QueryCommand : public QObject
 public:
     using QObject::QObject;
 
-    virtual QUrlQuery toQuery() const;
-    QUrlQuery expandQuery(QUrlQuery &query, const QSet<QString> &seen) const;
+    virtual Query toQuery() const;
+    Query expandQuery(Query &query, const QSet<QString> &seen) const;
 };
 
 } // namespace Bugzilla

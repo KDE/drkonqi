@@ -9,10 +9,10 @@
 
 #include <QObject>
 #include <QUrl>
-#include <QUrlQuery>
 
 #include "apijob.h"
 #include "exceptions.h"
+#include "query.h"
 
 namespace Bugzilla
 {
@@ -30,9 +30,9 @@ public:
 
     virtual void setToken(const QString &authToken) = 0;
 
-    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const = 0;
-    virtual APIJob *post(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const = 0;
-    virtual APIJob *put(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const = 0;
+    virtual APIJob *get(const QString &path, const Query &query = Query()) const = 0;
+    virtual APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const = 0;
+    virtual APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const = 0;
 };
 
 /**
@@ -41,20 +41,22 @@ public:
 class HTTPConnection : public Connection
 {
     Q_OBJECT
+    friend class ConnectionTest;
+
 public:
     explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")), QObject *parent = nullptr);
     ~HTTPConnection();
 
     virtual void setToken(const QString &authToken) override;
 
-    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override;
-    virtual APIJob *post(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override;
-    virtual APIJob *put(const QString &path, const QByteArray &data, const QUrlQuery &query = QUrlQuery()) const override;
+    virtual APIJob *get(const QString &path, const Query &query = Query()) const override;
+    virtual APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
+    virtual APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
 
     QUrl root() const;
 
 private:
-    QUrl url(const QString &appendix, QUrlQuery query) const;
+    QUrl url(const QString &appendix, Query query) const;
 
     QUrl m_root;
     QString m_token;

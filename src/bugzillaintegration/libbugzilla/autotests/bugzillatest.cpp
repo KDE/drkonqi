@@ -22,7 +22,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         if (path == "/version") {
             return new JobDouble{QFINDTESTDATA("data/bugzilla.version.json")};
@@ -33,13 +33,13 @@ public:
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_ASSERT_X(false, "post", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *put(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_ASSERT_X(false, "put", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;

@@ -31,7 +31,7 @@ LoginDetails login(KJob *kjob)
 
 APIJob *login(const QString &username, const QString &password, const Connection &connection)
 {
-    QUrlQuery query;
+    Query query;
     query.addQueryItem(QStringLiteral("login"), username);
     query.addQueryItem(QStringLiteral("password"), password);
     query.addQueryItem(QStringLiteral("restrict_login"), QStringLiteral("true"));

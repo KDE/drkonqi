@@ -10,13 +10,13 @@
 
 namespace Bugzilla
 {
-QUrlQuery QueryCommand::toQuery() const
+Query QueryCommand::toQuery() const
 {
-    QUrlQuery query;
+    Query query;
     return expandQuery(query, QSet<QString>());
 }
 
-QUrlQuery QueryCommand::expandQuery(QUrlQuery &query, const QSet<QString> &seen) const
+Query QueryCommand::expandQuery(Query &query, const QSet<QString> &seen) const
 {
     const auto propertyCount = metaObject()->propertyCount();
     for (int i = 0; i < propertyCount; ++i) {

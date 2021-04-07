@@ -23,7 +23,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path, const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
@@ -34,14 +34,14 @@ public:
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path, const QByteArray &, const QUrlQuery &query = QUrlQuery()) const override
+    virtual APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         qDebug() << path << query.toString();
         Q_UNREACHABLE();
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &, const QByteArray &, const QUrlQuery & = QUrlQuery()) const override
+    virtual APIJob *put(const QString &, const QByteArray &, const Query & = Query()) const override
     {
         Q_UNREACHABLE();
     }

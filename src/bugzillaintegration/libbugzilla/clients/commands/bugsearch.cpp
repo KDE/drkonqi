@@ -8,9 +8,9 @@
 
 namespace Bugzilla
 {
-QUrlQuery BugSearch::toQuery() const
+Query BugSearch::toQuery() const
 {
-    QUrlQuery query;
+    Query query;
     QSet<QString> seen;
 
     for (const QString &product : products) {
