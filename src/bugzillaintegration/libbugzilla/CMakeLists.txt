@@ -3,6 +3,7 @@ set(lib_SRCS
     bugzilla.cpp
     connection.cpp
     exceptions.cpp
+    query.cpp
 
     clients/attachmentclient.cpp
     clients/bugclient.cpp

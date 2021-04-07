@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -7,6 +7,7 @@
 #include "connection.h"
 
 #include <KIOCore/KIO/TransferJob>
+#include <QUrlQuery>
 
 #include "bugzilla_debug.h"
 
@@ -54,21 +55,21 @@ void HTTPConnection::setToken(const QString &authToken)
     m_token = authToken;
 }
 
-APIJob *HTTPConnection::get(const QString &path, const QUrlQuery &query) const
+APIJob *HTTPConnection::get(const QString &path, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
     auto job = new TransferAPIJob(KIO::get(url(path, query), KIO::Reload, KIO::HideProgressInfo));
     return job;
 }
 
-APIJob *HTTPConnection::post(const QString &path, const QByteArray &data, const QUrlQuery &query) const
+APIJob *HTTPConnection::post(const QString &path, const QByteArray &data, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
     auto job = new TransferAPIJob(KIO::http_post(url(path, query), data, KIO::HideProgressInfo));
     return job;
 }
 
-APIJob *HTTPConnection::put(const QString &path, const QByteArray &data, const QUrlQuery &query) const
+APIJob *HTTPConnection::put(const QString &path, const QByteArray &data, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
     auto job = new TransferAPIJob(KIO::put(url(path, query), KIO::HideProgressInfo));
@@ -81,7 +82,7 @@ QUrl HTTPConnection::root() const
     return m_root;
 }
 
-QUrl HTTPConnection::url(const QString &appendix, QUrlQuery query) const
+QUrl HTTPConnection::url(const QString &appendix, Query query) const
 {
     QUrl url(m_root);
     url.setPath(m_root.path() + appendix);
@@ -91,13 +92,12 @@ QUrl HTTPConnection::url(const QString &appendix, QUrlQuery query) const
     }
 
     // https://bugs.kde.org/show_bug.cgi?id=413920
-    // Force encoding. QUrlQuery by default wouldn't encode '+' and bugzilla doesn't like that...
+    // Force encoding. Query by default wouldn't encode '+' and bugzilla doesn't like that...
     // For any query argument. Tested with username, password, and products (for bug search)
     // on bugzilla 5.0.6. As a result let's force full encoding on every argument.
-    QUrlQuery escapedQuery(query); // copy delimiter properties and the like
-    escapedQuery.clear(); // but then throw away the values
-    for (const auto &pair : query.queryItems(QUrl::FullyDecoded)) {
-        escapedQuery.addQueryItem(pair.first, QString::fromUtf8(QUrl::toPercentEncoding(pair.second)));
+    QUrlQuery escapedQuery;
+    for (auto it = query.cbegin(); it != query.cend(); ++it) {
+        escapedQuery.addQueryItem(it.key(), QString::fromUtf8(it.value().toUtf8().toPercentEncoding()));
     }
 
     url.setQuery(escapedQuery);
