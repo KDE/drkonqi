@@ -2,6 +2,7 @@
  * drkonqi - The KDE Crash Handler
  *
  * SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
@@ -66,6 +67,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus);
     void slotReadInput();
+    void slotOnErrorOccurred(QProcess::ProcessError error);
 
 private:
     const Debugger m_debugger;

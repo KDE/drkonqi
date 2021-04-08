@@ -3,6 +3,7 @@
  *
  * SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
@@ -97,22 +98,9 @@ void BacktraceGenerator::start()
     }
     connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
+    connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
 
     m_proc->start();
-    // FIXME: don't call wait functions on the GUI thread, instead connect to errorOcurred signal.
-    //   Requires refactoring because this function returns a bool :|
-    if (!m_proc->waitForStarted()) {
-        qCWarning(DRKONQI_LOG) << "Debugger process failed to start" << m_proc->program() << m_proc->arguments() << m_proc->environment();
-
-        // we mustn't keep these around...
-        m_proc->deleteLater();
-        m_temp->deleteLater();
-        m_proc = nullptr;
-        m_temp = nullptr;
-
-        m_state = FailedToStart;
-        emit failedToStart();
-    }
 }
 
 void BacktraceGenerator::slotReadInput()
@@ -182,4 +170,26 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
 #endif
 
     emit done();
+}
+
+void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
+{
+    qCWarning(DRKONQI_LOG) << "Debugger process had an error" << error << m_proc->program() << m_proc->arguments() << m_proc->environment();
+
+    // we mustn't keep these around...
+    m_proc->deleteLater();
+    m_temp->deleteLater();
+    m_proc = nullptr;
+    m_temp = nullptr;
+
+    switch (error) {
+    case QProcess::FailedToStart:
+        m_state = FailedToStart;
+        emit failedToStart();
+        break;
+    default:
+        m_state = Failed;
+        emit someError();
+        break;
+    }
 }
