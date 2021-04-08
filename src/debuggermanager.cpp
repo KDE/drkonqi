@@ -12,17 +12,16 @@
 #include "debuggerlaunchers.h"
 
 struct DebuggerManager::Private {
-    BacktraceGenerator *btGenerator;
-    bool debuggerRunning;
+    BacktraceGenerator *btGenerator = nullptr;
+    bool debuggerRunning = false;
     QList<AbstractDebuggerLauncher *> externalDebuggers;
-    DBusInterfaceAdaptor *dbusInterfaceAdaptor;
+    DBusInterfaceAdaptor *dbusInterfaceAdaptor = nullptr;
 };
 
 DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, QObject *parent)
     : QObject(parent)
     , d(new Private)
 {
-    d->debuggerRunning = false;
     d->btGenerator = new BacktraceGenerator(internalDebugger, this);
     connect(d->btGenerator, &BacktraceGenerator::starting, this, &DebuggerManager::onDebuggerStarting);
     connect(d->btGenerator, &BacktraceGenerator::done, this, &DebuggerManager::onDebuggerFinished);
