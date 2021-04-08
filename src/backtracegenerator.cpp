@@ -48,7 +48,7 @@ BacktraceGenerator::~BacktraceGenerator()
     }
 }
 
-bool BacktraceGenerator::start()
+void BacktraceGenerator::start()
 {
     // they should always be null before entering this function.
     Q_ASSERT(!m_proc);
@@ -63,7 +63,7 @@ bool BacktraceGenerator::start()
         qCWarning(DRKONQI_LOG) << "Debugger valid" << m_debugger.isValid() << "installed" << m_debugger.isInstalled();
         m_state = FailedToStart;
         emit failedToStart();
-        return false;
+        return;
     }
 
     m_proc = new KProcess;
@@ -112,10 +112,7 @@ bool BacktraceGenerator::start()
 
         m_state = FailedToStart;
         emit failedToStart();
-        return false;
     }
-
-    return true;
 }
 
 void BacktraceGenerator::slotReadInput()

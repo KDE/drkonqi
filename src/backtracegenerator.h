@@ -54,7 +54,7 @@ public:
     }
 
 public Q_SLOTS:
-    bool start();
+    void start();
 
 Q_SIGNALS:
     void starting();
