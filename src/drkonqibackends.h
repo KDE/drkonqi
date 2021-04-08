@@ -11,9 +11,11 @@
 class CrashedApplication;
 class DebuggerManager;
 
-class AbstractDrKonqiBackend
+class AbstractDrKonqiBackend : public QObject
 {
+    Q_OBJECT
 public:
+    using QObject::QObject;
     virtual ~AbstractDrKonqiBackend();
     virtual bool init();
 
@@ -36,7 +38,7 @@ private:
     DebuggerManager *m_debuggerManager = nullptr;
 };
 
-class KCrashBackend : public QObject, public AbstractDrKonqiBackend
+class KCrashBackend : public AbstractDrKonqiBackend
 {
     Q_OBJECT
 public:

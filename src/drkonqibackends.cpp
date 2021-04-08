@@ -44,7 +44,6 @@ bool AbstractDrKonqiBackend::init()
 }
 
 KCrashBackend::KCrashBackend()
-    : QObject()
     , AbstractDrKonqiBackend()
     , m_state(ProcessRunning)
 {
