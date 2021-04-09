@@ -39,8 +39,13 @@ DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<D
         }
     }
 
-    // setup kdevelop compatibility
-    d->dbusInterfaceAdaptor = new DBusInterfaceAdaptor(this);
+    // DBus API to inject additional external debuggers at runtime. Used by KDevelop to add itself.
+    if (qobject_cast<KCrashBackend *>(backendParent)) {
+        // Runtime debugger injection is only allowed with KCrash because the API sports no interfaces for the debugger
+        // to describe its compatibility and it was introduced when only KCrash was around. To not have apps break
+        // randomly on different backends we require that our backend be KCrash.
+        d->dbusInterfaceAdaptor = new DBusInterfaceAdaptor(this);
+    }
 }
 
 DebuggerManager::~DebuggerManager()
