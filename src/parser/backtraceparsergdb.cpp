@@ -51,7 +51,7 @@ void BacktraceLineGdb::parse()
                                                            // and optionally the prefix "(anonymous namespace)::"
                                                            "(?:\\(.*\\))?" // matches the function arguments
                                                                            //(when the app doesn't have debugging symbols)
-                                                           "[\\s]+(?:const[\\s]+)?" // matches a traling const, if it exists
+                                                           "[\\s]+(?:const[\\s]+)?" // matches a trailing const, if it exists
                                                            "\\(.*\\)" // matches the arguments of the function with their values
                                                                       //(when the app has debugging symbols)
                                                            "([\\s]+" // beginning of optional file information
