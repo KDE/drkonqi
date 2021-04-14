@@ -113,12 +113,12 @@ private Q_SLOTS:
         search.products = QStringList{"dragonplayer"};
         auto job = Bugzilla::BugClient().search(search);
         job->start();
-        QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
+        const QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
         QCOMPARE(bugs.size(), 2);
         Bug::Ptr bug;
-        for (auto it = bugs.begin(); it != bugs.end(); ++it) {
-            if ((*it)->id() == 156514) {
-                bug = *it;
+        for (const auto &b : bugs) {
+            if (b->id() == 156514) {
+                bug = b;
             }
         }
 
