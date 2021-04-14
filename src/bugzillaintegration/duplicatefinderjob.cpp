@@ -30,9 +30,7 @@ DuplicateFinderJob::DuplicateFinderJob(const QList<Bugzilla::Bug::Ptr> &bugs, Bu
     connect(m_manager, &BugzillaManager::commentsError, this, &DuplicateFinderJob::slotError);
 }
 
-DuplicateFinderJob::~DuplicateFinderJob()
-{
-}
+DuplicateFinderJob::~DuplicateFinderJob() = default;
 
 void DuplicateFinderJob::start()
 {

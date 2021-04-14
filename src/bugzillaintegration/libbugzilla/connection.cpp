@@ -46,9 +46,7 @@ HTTPConnection::HTTPConnection(const QUrl &root, QObject *parent)
 {
 }
 
-HTTPConnection::~HTTPConnection()
-{
-}
+HTTPConnection::~HTTPConnection() = default;
 
 void HTTPConnection::setToken(const QString &authToken)
 {

@@ -51,9 +51,7 @@ CrashedApplication::CrashedApplication(int pid,
 {
 }
 
-CrashedApplication::~CrashedApplication()
-{
-}
+CrashedApplication::~CrashedApplication() = default;
 
 QString CrashedApplication::name() const
 {

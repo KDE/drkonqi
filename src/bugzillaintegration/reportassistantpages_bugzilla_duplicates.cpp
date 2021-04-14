@@ -114,9 +114,7 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
     showDuplicatesPanel(false);
 }
 
-BugzillaDuplicatesPage::~BugzillaDuplicatesPage()
-{
-}
+BugzillaDuplicatesPage::~BugzillaDuplicatesPage() = default;
 
 void BugzillaDuplicatesPage::aboutToShow()
 {
@@ -1031,9 +1029,7 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     checkProceed();
 }
 
-BugzillaReportConfirmationDialog::~BugzillaReportConfirmationDialog()
-{
-}
+BugzillaReportConfirmationDialog::~BugzillaReportConfirmationDialog() = default;
 
 void BugzillaReportConfirmationDialog::checkProceed()
 {

@@ -162,9 +162,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     resize(aspect);
 }
 
-ReportAssistantDialog::~ReportAssistantDialog()
-{
-}
+ReportAssistantDialog::~ReportAssistantDialog() = default;
 
 void ReportAssistantDialog::setAboutToSend(bool aboutTo)
 {

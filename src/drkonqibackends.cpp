@@ -31,9 +31,7 @@
 #include <AvailabilityMacros.h>
 #endif
 
-AbstractDrKonqiBackend::~AbstractDrKonqiBackend()
-{
-}
+AbstractDrKonqiBackend::~AbstractDrKonqiBackend() = default;
 
 bool AbstractDrKonqiBackend::init()
 {
