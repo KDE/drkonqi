@@ -18,12 +18,12 @@ class ConnectionDouble : public Connection
 public:
     using Connection::Connection;
 
-    virtual void setToken(const QString &) override
+    void setToken(const QString &) override
     {
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path, const Query &query = Query()) const override
+    APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
@@ -34,14 +34,14 @@ public:
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
+    APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         qDebug() << path << query.toString();
         Q_UNREACHABLE();
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &, const QByteArray &, const Query & = Query()) const override
+    APIJob *put(const QString &, const QByteArray &, const Query & = Query()) const override
     {
         Q_UNREACHABLE();
     }

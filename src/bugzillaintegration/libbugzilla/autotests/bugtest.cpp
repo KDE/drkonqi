@@ -44,12 +44,12 @@ class ConnectionDouble : public Connection
 public:
     using Connection::Connection;
 
-    virtual void setToken(const QString &) override
+    void setToken(const QString &) override
     {
         Q_UNREACHABLE();
     }
 
-    virtual APIJob *get(const QString &path, const Query &query = Query()) const override
+    APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         if (path == "/bug" && query.toString() == "product=dragonplayer") {
             return new JobDouble{QFINDTESTDATA("data/bugs.dragonplayer.json")};
@@ -61,7 +61,7 @@ public:
         return nullptr;
     }
 
-    virtual APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override
+    APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override
     {
         qDebug() << path << query.toString();
         if (path == "/bug" && query.isEmpty()) {
@@ -79,7 +79,7 @@ public:
         return nullptr;
     }
 
-    virtual APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override
+    APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override
     {
         if (path == "/bug/54321" && query.isEmpty()) {
             QJsonParseError e;
