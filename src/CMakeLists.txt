@@ -2,6 +2,9 @@ include (CheckFunctionExists)
 
 check_function_exists("strsignal" HAVE_STRSIGNAL)
 check_function_exists("uname" HAVE_UNAME)
+if(TARGET Qt::X11Extras)
+    set(HAVE_X11 TRUE)
+endif()
 
 if (NOT DEBUG_PACKAGE_INSTALLER_NAME)
     set (DEBUG_PACKAGE_INSTALLER_NAME "installdbgsymbols.sh")
@@ -109,12 +112,9 @@ target_link_libraries(DrKonqiInternal
 
     drkonqi_backtrace_parser
     qbugzilla
+
+    "$<$<BOOL:${HAVE_X11}>:Qt::X11Extras>"
 )
-if (${Qt5X11Extras_FOUND})
-    target_link_libraries(DrKonqiInternal
-        Qt::X11Extras
-    )
-endif()
 
 if (WIN32)
     target_link_libraries(DrKonqiInternal kdewin)
