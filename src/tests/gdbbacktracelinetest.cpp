@@ -14,7 +14,7 @@ class GdbBacktraceLineTest : public QObject
 private Q_SLOTS:
 
     // rating() is often times somewhat misleading because it is an exclusive state
-    // but in practise a frame may have multiple issues. for purposes of rating all
+    // but in practice a frame may have multiple issues. for purposes of rating all
     // issues are considered equal. it's not ideal though, a frame that is missing
     // multiple elements is objectively worse than a frame that is just missing one.
 

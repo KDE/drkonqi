@@ -73,8 +73,8 @@ private Q_SLOTS:
             //
             // This further broke because we force-recoded the query items but then that caused over-decoding (%FF)
             // because QUrlQuery internally stores the DecodeReserved variant and we blindly FullDecode leading to the
-            // verbatim percent value getting decoded at the same time we can't DecodeReserved because that would
-            // still decode verbatim reserved sequences form the input password (e.g. the password containing %3C aka <).
+            // verbatim percent value getting decoded. At the same time we can't DecodeReserved because that would
+            // still decode verbatim reserved sequences in the input password (e.g. the password containing %3C aka <).
             // https://bugs.kde.org/show_bug.cgi?id=435442
             if (httpBlob.startsWith("GET /hi?informal=yes%2Bcertainly&password=%253C___m%26T9zSZ%3E0%2Cq%25FFDN")) {
                 QFile file(QFINDTESTDATA("data/hi.http"));
