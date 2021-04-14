@@ -49,7 +49,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    APIJob *get(const QString &path, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         if (path == "/bug" && query.toString() == "product=dragonplayer") {
             return new JobDouble{QFINDTESTDATA("data/bugs.dragonplayer.json")};
@@ -61,7 +61,7 @@ public:
         return nullptr;
     }
 
-    APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override
     {
         qDebug() << path << query.toString();
         if (path == "/bug" && query.isEmpty()) {
@@ -79,7 +79,7 @@ public:
         return nullptr;
     }
 
-    APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override
     {
         if (path == "/bug/54321" && query.isEmpty()) {
             QJsonParseError e;

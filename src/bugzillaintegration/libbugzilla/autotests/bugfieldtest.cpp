@@ -22,7 +22,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    APIJob *get(const QString &path, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         if (path == "/field/bug/rep_platform" && query.toString() == "") {
             return new JobDouble{QFINDTESTDATA("data/field.rep_platform.json")};
@@ -31,13 +31,13 @@ public:
         return nullptr;
     }
 
-    APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_ASSERT_X(false, "post", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
 
-    APIJob *put(const QString &path, const QByteArray &, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *put(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_ASSERT_X(false, "put", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;

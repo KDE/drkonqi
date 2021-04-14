@@ -22,7 +22,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    APIJob *get(const QString &path, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *get(const QString &path, const Query &query = Query()) const override
     {
         if (path == "/bug/407363/comment" && query.toString().isEmpty()) {
             return new JobDouble{QFINDTESTDATA("data/comments.json")};
@@ -34,7 +34,7 @@ public:
         return nullptr;
     }
 
-    APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *post(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
@@ -42,7 +42,7 @@ public:
         return nullptr;
     }
 
-    APIJob *put(const QString &path, const QByteArray &, const Query &query = Query()) const override
+    [[nodiscard]] APIJob *put(const QString &path, const QByteArray &, const Query &query = Query()) const override
     {
         Q_UNUSED(path);
         Q_UNUSED(query);
