@@ -33,7 +33,6 @@ static const char extraDetailsLabelMargin[] = " margin: 5px; ";
 BacktraceWidget::BacktraceWidget(BacktraceGenerator *generator, QWidget *parent, bool showToggleBacktrace)
     : QWidget(parent)
     , m_btGenerator(generator)
-    , m_highlighter(nullptr)
 {
     ui.setupUi(this);
 

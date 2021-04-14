@@ -18,9 +18,6 @@
 BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent)
     : QObject(parent)
     , m_debugger(debugger)
-    , m_proc(nullptr)
-    , m_temp(nullptr)
-    , m_state(NotLoaded)
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);

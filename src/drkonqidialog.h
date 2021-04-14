@@ -59,7 +59,7 @@ private:
 
     BacktraceWidget *m_backtraceWidget = nullptr;
 
-    QMenu *m_debugMenu;
+    QMenu *m_debugMenu = nullptr;
     QHash<AbstractDebuggerLauncher *, QAction *> m_debugMenuActions;
     QDialogButtonBox *m_buttonBox = nullptr;
     QPushButton *m_debugButton = nullptr;

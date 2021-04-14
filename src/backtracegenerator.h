@@ -74,7 +74,7 @@ private:
     KProcess *m_proc = nullptr;
     QTemporaryFile *m_temp = nullptr;
     QByteArray m_output;
-    State m_state;
+    State m_state = NotLoaded;
     BacktraceParser *m_parser = nullptr;
     QString m_parsedBacktrace;
 

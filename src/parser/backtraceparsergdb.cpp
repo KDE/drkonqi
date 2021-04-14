@@ -156,20 +156,13 @@ void BacktraceLineGdb::rate()
 class BacktraceParserGdbPrivate : public BacktraceParserPrivate
 {
 public:
-    BacktraceParserGdbPrivate()
-        : BacktraceParserPrivate()
-        , m_possibleKCrashStart(0)
-        , m_threadsCount(0)
-        , m_isBelowSignalHandler(false)
-        , m_frameZeroAppeared(false)
-    {
-    }
+    using BacktraceParserPrivate::BacktraceParserPrivate;
 
     QString m_lineInputBuffer;
-    int m_possibleKCrashStart;
-    int m_threadsCount;
-    bool m_isBelowSignalHandler;
-    bool m_frameZeroAppeared;
+    int m_possibleKCrashStart = 0;
+    int m_threadsCount = 0;
+    bool m_isBelowSignalHandler = false;
+    bool m_frameZeroAppeared = false;
 };
 
 BacktraceParserGdb::BacktraceParserGdb(QObject *parent)

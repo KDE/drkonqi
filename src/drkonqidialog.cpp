@@ -35,8 +35,6 @@ static QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral("enter
 
 DrKonqiDialog::DrKonqiDialog(QWidget *parent)
     : QDialog(parent)
-    , m_aboutBugReportingDialog(nullptr)
-    , m_backtraceWidget(nullptr)
 {
     setAttribute(Qt::WA_DeleteOnClose, true);
 
