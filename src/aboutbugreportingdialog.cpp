@@ -28,7 +28,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget *parent)
     setWindowIcon(QIcon::fromTheme(QStringLiteral("help-hint")));
     setWindowTitle(i18nc("@title title of the dialog", "About Bug Reporting - Help"));
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     m_textBrowser = new QTextBrowser(this);
     m_textBrowser->setMinimumSize(QSize(600, 300));
     connect(m_textBrowser, &QTextBrowser::anchorClicked, this, &AboutBugReportingDialog::handleInternalLinks);
@@ -222,7 +222,7 @@ AboutBugReportingDialog::AboutBugReportingDialog(QWidget *parent)
 
     layout->addWidget(m_textBrowser);
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    auto *box = new QDialogButtonBox(QDialogButtonBox::Close, this);
     connect(box->button(QDialogButtonBox::Close), &QPushButton::clicked, this, &AboutBugReportingDialog::close);
     layout->addWidget(box);
 

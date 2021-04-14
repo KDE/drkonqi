@@ -44,7 +44,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget *parent)
     setWindowTitle(DrKonqi::crashedApplication()->name());
     setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
 
-    QVBoxLayout *l = new QVBoxLayout(this);
+    auto *l = new QVBoxLayout(this);
     m_tabWidget = new QTabWidget(this);
     l->addWidget(m_tabWidget);
     m_buttonBox = new QDialogButtonBox(this);
@@ -205,7 +205,7 @@ void DrKonqiDialog::buildDialogButtons()
     connect(debuggerManager, &DebuggerManager::debuggerRunning, this, &DrKonqiDialog::enableDebugMenu);
 
     // Report bug button: User1
-    QPushButton *reportButton = new QPushButton(m_buttonBox);
+    auto *reportButton = new QPushButton(m_buttonBox);
     KGuiItem2 reportItem(i18nc("@action:button", "Report &Bug"),
                          QIcon::fromTheme(QStringLiteral("tools-report-bug")),
                          i18nc("@info:tooltip", "Starts the bug report assistant."));
@@ -238,9 +238,9 @@ void DrKonqiDialog::buildDialogButtons()
 
 void DrKonqiDialog::addDebugger(AbstractDebuggerLauncher *launcher)
 {
-    QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("applications-development")),
-                                  i18nc("@action:inmenu 1 is the debugger name", "Debug in %1", launcher->name()),
-                                  m_debugMenu);
+    auto *action = new QAction(QIcon::fromTheme(QStringLiteral("applications-development")),
+                               i18nc("@action:inmenu 1 is the debugger name", "Debug in %1", launcher->name()),
+                               m_debugMenu);
     m_debugMenu->addAction(action);
     connect(action, &QAction::triggered, launcher, &AbstractDebuggerLauncher::start);
     m_debugMenuActions.insert(launcher, action);
@@ -286,7 +286,7 @@ void DrKonqiDialog::enableDebugMenu(bool debuggerRunning)
 
 void DrKonqiDialog::startBugReportAssistant()
 {
-    ReportAssistantDialog *bugReportAssistant = new ReportAssistantDialog();
+    auto *bugReportAssistant = new ReportAssistantDialog();
     bugReportAssistant->show();
     connect(bugReportAssistant, &QObject::destroyed, this, &DrKonqiDialog::reject);
 

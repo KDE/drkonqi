@@ -48,7 +48,7 @@ namespace
 {
 void openDrKonqiDialog()
 {
-    DrKonqiDialog *w = new DrKonqiDialog();
+    auto *w = new DrKonqiDialog();
     QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
     QObject::connect(w, &DrKonqiDialog::rejected, qApp, &QApplication::quit);
     w->show();
@@ -59,7 +59,7 @@ void openDrKonqiDialog()
 
 void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
 {
-    StatusNotifier *statusNotifier = new StatusNotifier();
+    auto *statusNotifier = new StatusNotifier();
     statusNotifier->setActivationAllowed(interactionAllowed);
     if (interactionAllowed) {
         statusNotifier->show();

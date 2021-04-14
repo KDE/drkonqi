@@ -12,7 +12,7 @@ namespace Bugzilla
 {
 QList<Comment::Ptr> CommentClient::getFromBug(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
     QJsonObject bugs = job->object().value(QStringLiteral("bugs")).toObject();
 
     // The API should never return anything other than the single bug we asked for.

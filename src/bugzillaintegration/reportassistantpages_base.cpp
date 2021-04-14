@@ -48,7 +48,7 @@ CrashInformationPage::CrashInformationPage(ReportAssistantDialog *parent)
     m_backtraceWidget = new BacktraceWidget(DrKonqi::debuggerManager()->backtraceGenerator(), this, true);
     connect(m_backtraceWidget, &BacktraceWidget::stateChanged, this, &CrashInformationPage::emitCompleteChanged);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(m_backtraceWidget);
     layout->addSpacing(10); // We need this for better usability until we get something better
@@ -464,7 +464,7 @@ ReportInformationDialog::ReportInformationDialog(const QString &reportText)
     ui.setupUi(this);
     ui.m_reportInformationBrowser->setPlainText(reportText);
 
-    QPushButton *saveButton = new QPushButton(ui.buttonBox);
+    auto *saveButton = new QPushButton(ui.buttonBox);
     KGuiItem::assign(saveButton,
                      KGuiItem2(i18nc("@action:button", "&Save to File..."),
                                QIcon::fromTheme(QStringLiteral("document-save")),

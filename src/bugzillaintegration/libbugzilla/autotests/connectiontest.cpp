@@ -139,7 +139,7 @@ private Q_SLOTS:
         // in the wrong thread!) and may fail assertions inside Qt when built
         // in debug mode as destruction entails posting events, which is ENOGOOD
         // across threads.
-        QTcpServer *server = new QTcpServer;
+        auto *server = new QTcpServer;
         server->moveToThread(&thread);
 
         QString readBlob; // lambda member essentially

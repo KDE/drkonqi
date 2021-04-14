@@ -33,7 +33,7 @@ StatusWidget::StatusWidget(QWidget *parent)
     m_statusLabel->setTextFormat(Qt::RichText);
     // m_statusLabel->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum));
 
-    QHBoxLayout *statusLayout = new QHBoxLayout();
+    auto *statusLayout = new QHBoxLayout();
     statusLayout->setContentsMargins(0, 0, 0, 0);
     m_statusPage->setLayout(statusLayout);
 
@@ -46,7 +46,7 @@ StatusWidget::StatusWidget(QWidget *parent)
     m_busyLabel = new WrapLabel();
     // m_busyLabel->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum));
 
-    QHBoxLayout *busyLayout = new QHBoxLayout();
+    auto *busyLayout = new QHBoxLayout();
     busyLayout->setContentsMargins(0, 0, 0, 0);
     m_busyPage->setLayout(busyLayout);
 
@@ -75,7 +75,7 @@ void StatusWidget::setIdle(const QString &idleMessage)
 
 void StatusWidget::addCustomStatusWidget(QWidget *widget)
 {
-    QHBoxLayout *statusLayout = static_cast<QHBoxLayout *>(m_statusPage->layout());
+    auto *statusLayout = static_cast<QHBoxLayout *>(m_statusPage->layout());
 
     statusLayout->addWidget(widget);
     statusLayout->setAlignment(widget, Qt::AlignVCenter);

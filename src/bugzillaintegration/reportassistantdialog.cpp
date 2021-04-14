@@ -54,9 +54,9 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     const bool skipIntroduction = group.readEntry("SkipIntroduction", false);
 
     if (!skipIntroduction) {
-        IntroductionPage *m_introduction = new IntroductionPage(this);
+        auto *m_introduction = new IntroductionPage(this);
 
-        KPageWidgetItem *m_introductionPage = new KPageWidgetItem(m_introduction, QLatin1String(PAGE_INTRODUCTION_ID));
+        auto *m_introductionPage = new KPageWidgetItem(m_introduction, QLatin1String(PAGE_INTRODUCTION_ID));
         m_pageWidgetMap.insert(QLatin1String(PAGE_INTRODUCTION_ID), m_introductionPage);
         m_introductionPage->setHeader(i18nc("@title", "Welcome to the Reporting Assistant"));
         m_introductionPage->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
@@ -64,77 +64,77 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     }
 
     //-Bug Awareness Page
-    BugAwarenessPage *m_awareness = new BugAwarenessPage(this);
+    auto *m_awareness = new BugAwarenessPage(this);
     connectSignals(m_awareness);
 
-    KPageWidgetItem *m_awarenessPage = new KPageWidgetItem(m_awareness, QLatin1String(PAGE_AWARENESS_ID));
+    auto *m_awarenessPage = new KPageWidgetItem(m_awareness, QLatin1String(PAGE_AWARENESS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_AWARENESS_ID), m_awarenessPage);
     m_awarenessPage->setHeader(i18nc("@title", "What do you know about the crash?"));
     m_awarenessPage->setIcon(QIcon::fromTheme(QStringLiteral("checkbox")));
 
     //-Crash Information Page
-    CrashInformationPage *m_backtrace = new CrashInformationPage(this);
+    auto *m_backtrace = new CrashInformationPage(this);
     connectSignals(m_backtrace);
 
-    KPageWidgetItem *m_backtracePage = new KPageWidgetItem(m_backtrace, QLatin1String(PAGE_CRASHINFORMATION_ID));
+    auto *m_backtracePage = new KPageWidgetItem(m_backtrace, QLatin1String(PAGE_CRASHINFORMATION_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_CRASHINFORMATION_ID), m_backtracePage);
     m_backtracePage->setHeader(i18nc("@title", "Fetching the Backtrace (Automatic Crash Information)"));
     m_backtracePage->setIcon(QIcon::fromTheme(QStringLiteral("run-build")));
 
     //-Results Page
-    ConclusionPage *m_conclusions = new ConclusionPage(this);
+    auto *m_conclusions = new ConclusionPage(this);
     connectSignals(m_conclusions);
 
-    KPageWidgetItem *m_conclusionsPage = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
+    auto *m_conclusionsPage = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_CONCLUSIONS_ID), m_conclusionsPage);
     m_conclusionsPage->setHeader(i18nc("@title", "Results of the Analyzed Crash Details"));
     m_conclusionsPage->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
     connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
 
     // Version check page
-    BugzillaVersionPage *versionPage = new BugzillaVersionPage(this);
+    auto *versionPage = new BugzillaVersionPage(this);
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZVERSION_ID), versionPage->item());
 
     //-Bugzilla Login
-    BugzillaLoginPage *m_bugzillaLogin = new BugzillaLoginPage(this);
+    auto *m_bugzillaLogin = new BugzillaLoginPage(this);
     connectSignals(m_bugzillaLogin);
 
-    KPageWidgetItem *m_bugzillaLoginPage = new KPageWidgetItem(m_bugzillaLogin, QLatin1String(PAGE_BZLOGIN_ID));
+    auto *m_bugzillaLoginPage = new KPageWidgetItem(m_bugzillaLogin, QLatin1String(PAGE_BZLOGIN_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZLOGIN_ID), m_bugzillaLoginPage);
     m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n(KDE_BUGZILLA_DESCRIPTION)));
     m_bugzillaLoginPage->setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
     connect(m_bugzillaLogin, &BugzillaLoginPage::loggedTurnToNextPage, this, &ReportAssistantDialog::loginFinished);
 
     //-Bugzilla duplicates
-    BugzillaDuplicatesPage *m_bugzillaDuplicates = new BugzillaDuplicatesPage(this);
+    auto *m_bugzillaDuplicates = new BugzillaDuplicatesPage(this);
     connectSignals(m_bugzillaDuplicates);
 
-    KPageWidgetItem *m_bugzillaDuplicatesPage = new KPageWidgetItem(m_bugzillaDuplicates, QLatin1String(PAGE_BZDUPLICATES_ID));
+    auto *m_bugzillaDuplicatesPage = new KPageWidgetItem(m_bugzillaDuplicates, QLatin1String(PAGE_BZDUPLICATES_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZDUPLICATES_ID), m_bugzillaDuplicatesPage);
     m_bugzillaDuplicatesPage->setHeader(i18nc("@title", "Look for Possible Duplicate Reports"));
     m_bugzillaDuplicatesPage->setIcon(QIcon::fromTheme(QStringLiteral("repository")));
 
     //-Bugzilla information
-    BugzillaInformationPage *m_bugzillaInformation = new BugzillaInformationPage(this);
+    auto *m_bugzillaInformation = new BugzillaInformationPage(this);
     connectSignals(m_bugzillaInformation);
 
-    KPageWidgetItem *m_bugzillaInformationPage = new KPageWidgetItem(m_bugzillaInformation, QLatin1String(PAGE_BZDETAILS_ID));
+    auto *m_bugzillaInformationPage = new KPageWidgetItem(m_bugzillaInformation, QLatin1String(PAGE_BZDETAILS_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZDETAILS_ID), m_bugzillaInformationPage);
     m_bugzillaInformationPage->setHeader(i18nc("@title", "Enter the Details about the Crash"));
     m_bugzillaInformationPage->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
 
     //-Bugzilla Report Preview
-    BugzillaPreviewPage *m_bugzillaPreview = new BugzillaPreviewPage(this);
+    auto *m_bugzillaPreview = new BugzillaPreviewPage(this);
 
-    KPageWidgetItem *m_bugzillaPreviewPage = new KPageWidgetItem(m_bugzillaPreview, QLatin1String(PAGE_BZPREVIEW_ID));
+    auto *m_bugzillaPreviewPage = new KPageWidgetItem(m_bugzillaPreview, QLatin1String(PAGE_BZPREVIEW_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZPREVIEW_ID), m_bugzillaPreviewPage);
     m_bugzillaPreviewPage->setHeader(i18nc("@title", "Preview the Report"));
     m_bugzillaPreviewPage->setIcon(QIcon::fromTheme(QStringLiteral("document-preview")));
 
     //-Bugzilla commit
-    BugzillaSendPage *m_bugzillaSend = new BugzillaSendPage(this);
+    auto *m_bugzillaSend = new BugzillaSendPage(this);
 
-    KPageWidgetItem *m_bugzillaSendPage = new KPageWidgetItem(m_bugzillaSend, QLatin1String(PAGE_BZSEND_ID));
+    auto *m_bugzillaSendPage = new KPageWidgetItem(m_bugzillaSend, QLatin1String(PAGE_BZSEND_ID));
     m_pageWidgetMap.insert(QLatin1String(PAGE_BZSEND_ID), m_bugzillaSendPage);
     m_bugzillaSendPage->setHeader(i18nc("@title", "Sending the Crash Report"));
     m_bugzillaSendPage->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet")));
@@ -193,13 +193,13 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem *current, KP
 
     // Save data of the previous page
     if (before) {
-        ReportAssistantPage *beforePage = qobject_cast<ReportAssistantPage *>(before->widget());
+        auto *beforePage = qobject_cast<ReportAssistantPage *>(before->widget());
         beforePage->aboutToHide();
     }
 
     // Load data of the current(new) page
     if (current) {
-        ReportAssistantPage *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
+        auto *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
 
         if (!currentPage->isAppropriate()) {
             // The page is inappropriate. Find where to go next. This is extra exhausting because
@@ -314,7 +314,7 @@ void ReportAssistantDialog::next()
     // just skip over the page).
 
     // Allow the widget to Ask a question to the user before changing the page
-    ReportAssistantPage *page = qobject_cast<ReportAssistantPage *>(currentPage()->widget());
+    auto *page = qobject_cast<ReportAssistantPage *>(currentPage()->widget());
     if (page && !page->showNextPage()) {
         return;
     }

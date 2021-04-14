@@ -117,7 +117,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
     QString lsb_release = m_infoConfig.lsbReleasePath;
     if (!lsb_release.isEmpty()) {
         qCDebug(DRKONQI_LOG) << "found lsb_release";
-        KProcess *process = new KProcess();
+        auto *process = new KProcess();
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
         process->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));
         *process << lsb_release << QStringLiteral("-sd");
@@ -134,7 +134,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
 
 void SystemInformation::lsbReleaseFinished()
 {
-    KProcess *process = qobject_cast<KProcess *>(sender());
+    auto *process = qobject_cast<KProcess *>(sender());
     Q_ASSERT(process);
     m_distributionPrettyName = QString::fromLocal8Bit(process->readAllStandardOutput().trimmed());
     process->deleteLater();

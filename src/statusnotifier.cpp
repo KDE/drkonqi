@@ -65,8 +65,8 @@ void StatusNotifier::show()
     // you cannot turn off that "Do you really want to quit?" message, so we'll add our own below
     m_sni->setStandardActionsEnabled(false);
 
-    QMenu *sniMenu = new QMenu();
-    QAction *action = new QAction(QIcon::fromTheme(QStringLiteral("tools-report-bug")), i18n("Report &Bug"), nullptr);
+    auto *sniMenu = new QMenu();
+    auto *action = new QAction(QIcon::fromTheme(QStringLiteral("tools-report-bug")), i18n("Report &Bug"), nullptr);
     connect(action, &QAction::triggered, this, &StatusNotifier::activated);
     sniMenu->addAction(action);
     sniMenu->setDefaultAction(action);

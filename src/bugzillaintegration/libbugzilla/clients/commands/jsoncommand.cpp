@@ -40,7 +40,7 @@ QVariantHash JsonCommand::toVariantHash() const
 
         // If this is a nested representation, serialize it and glue it in.
         if (value.canConvert<JsonCommand *>()) {
-            JsonCommand *repValue = value.value<JsonCommand *>();
+            auto *repValue = value.value<JsonCommand *>();
             hash.insert(name, repValue->toVariantHash());
             continue;
         }

@@ -12,7 +12,7 @@ namespace Bugzilla
 {
 QList<int> AttachmentClient::createAttachment(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
 
     auto ary = job->object().value(QStringLiteral("ids")).toArray();
     // It's unclear if this can happen. When the ids would be empty there was

@@ -10,7 +10,7 @@ namespace Bugzilla
 {
 QList<Bug::Ptr> BugClient::search(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
 
     auto ary = job->object().value(QStringLiteral("bugs")).toArray();
 
@@ -29,7 +29,7 @@ KJob *BugClient::search(const BugSearch &search)
 
 qint64 BugClient::create(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
 
     qint64 ret = job->object().value(QStringLiteral("id")).toInt(-1);
     Q_ASSERT(ret != -1);
@@ -43,7 +43,7 @@ KJob *BugClient::create(const NewBug &bug)
 
 qint64 BugClient::update(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
 
     auto ary = job->object().value(QStringLiteral("bugs")).toArray();
     // It's unclear if this can happen. When the ids would be empty there was

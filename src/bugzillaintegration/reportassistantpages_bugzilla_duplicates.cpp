@@ -44,9 +44,8 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
     header->setSectionResizeMode(1, QHeaderView::Interactive);
 
     // Create manual bug report entry (first one)
-    QTreeWidgetItem *customBugItem =
-        new QTreeWidgetItem(QStringList() << i18nc("@item:intable custom/manaul bug report number", "Manual")
-                                          << i18nc("@item:intable custom bug report number description", "Manually enter a bug report ID"));
+    auto *customBugItem = new QTreeWidgetItem(QStringList() << i18nc("@item:intable custom/manaul bug report number", "Manual")
+                                                            << i18nc("@item:intable custom bug report number description", "Manually enter a bug report ID"));
     customBugItem->setData(0, Qt::UserRole, QLatin1String("custom"));
     customBugItem->setIcon(1, QIcon::fromTheme(QStringLiteral("edit-rename")));
 
@@ -329,7 +328,7 @@ void BugzillaDuplicatesPage::searchFinished(const QList<Bugzilla::Bug::Ptr> &lis
 
             QStringList fields = QStringList() << QString::number(bug->id()) << title;
 
-            QTreeWidgetItem *item = new QTreeWidgetItem(fields);
+            auto *item = new QTreeWidgetItem(fields);
             item->setToolTip(0, bug->summary());
             item->setToolTip(1, bug->summary());
 
@@ -338,7 +337,7 @@ void BugzillaDuplicatesPage::searchFinished(const QList<Bugzilla::Bug::Ptr> &lis
 
         if (!m_foundDuplicate) {
             markAsSearching(true);
-            DuplicateFinderJob *job = new DuplicateFinderJob(list, bugzillaManager(), this);
+            auto *job = new DuplicateFinderJob(list, bugzillaManager(), this);
             connect(job, &KJob::result, this, &BugzillaDuplicatesPage::analyzedDuplicates);
             job->start();
         }
@@ -401,7 +400,7 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
 {
     markAsSearching(false);
 
-    DuplicateFinderJob *job = static_cast<DuplicateFinderJob *>(j);
+    auto *job = static_cast<DuplicateFinderJob *>(j);
     m_result = job->result();
     m_foundDuplicate = m_result.parentDuplicate;
     reportInterface()->setDuplicateId(m_result.parentDuplicate);
@@ -520,7 +519,7 @@ void BugzillaDuplicatesPage::showReportInformationDialog(int bugNumber, bool rel
         return;
     }
 
-    BugzillaReportInformationDialog *infoDialog = new BugzillaReportInformationDialog(this);
+    auto *infoDialog = new BugzillaReportInformationDialog(this);
     connect(infoDialog, &BugzillaReportInformationDialog::possibleDuplicateSelected, this, &BugzillaDuplicatesPage::addPossibleDuplicateNumber);
     connect(infoDialog, &BugzillaReportInformationDialog::attachToBugReportSelected, this, &BugzillaDuplicatesPage::attachToBugReport);
 
@@ -809,7 +808,7 @@ void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment:
     Q_ASSERT(m_bug);
 
     // Generate html for comments (with proper numbering)
-    QLatin1String duplicatesMark = QLatin1String("has been marked as a duplicate of this bug.");
+    auto duplicatesMark = QLatin1String("has been marked as a duplicate of this bug.");
 
     // TODO: the way comment objects are turned into comment strings is fairly
     //    awkward and does not particularly object-centric. May benefit from a
@@ -828,7 +827,7 @@ void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment:
             comments +=
                 i18nc("comment $number to use as subtitle", "<h4>Comment %1:</h4>", (i + 1)) + QStringLiteral("<p>") + comment + QStringLiteral("</p><hr />");
             // Count the inline attached crashes (DrKonqi feature)
-            QLatin1String attachedCrashMark = QLatin1String("New crash information added by DrKonqi");
+            auto attachedCrashMark = QLatin1String("New crash information added by DrKonqi");
             if (comment.contains(attachedCrashMark)) {
                 m_duplicatesCount++;
             }
@@ -910,7 +909,7 @@ void BugzillaReportInformationDialog::cancelAssistant()
 
 void BugzillaReportInformationDialog::relatedReportClicked()
 {
-    BugzillaReportConfirmationDialog *confirmation = new BugzillaReportConfirmationDialog(m_bugNumber, (m_duplicatesCount >= 10), m_closedStateString, this);
+    auto *confirmation = new BugzillaReportConfirmationDialog(m_bugNumber, (m_duplicatesCount >= 10), m_closedStateString, this);
     confirmation->show();
 }
 

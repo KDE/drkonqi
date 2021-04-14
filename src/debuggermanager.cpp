@@ -98,7 +98,7 @@ void DebuggerManager::onDebuggerFinished()
 
 void DebuggerManager::onDebuggerInvalidated()
 {
-    AbstractDebuggerLauncher *launcher = qobject_cast<AbstractDebuggerLauncher *>(sender());
+    auto *launcher = qobject_cast<AbstractDebuggerLauncher *>(sender());
     Q_ASSERT(launcher);
     int index = d->externalDebuggers.indexOf(launcher);
     Q_ASSERT(index >= 0);

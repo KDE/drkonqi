@@ -15,7 +15,7 @@ KJob *BugFieldClient::getFields(const QString &idOrName)
 
 QList<BugField::Ptr> BugFieldClient::getFields(KJob *kjob)
 {
-    APIJob *job = qobject_cast<APIJob *>(kjob);
+    auto *job = qobject_cast<APIJob *>(kjob);
 
     const auto ary = job->object().value(QStringLiteral("fields")).toArray();
 
