@@ -409,7 +409,7 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
         QString message = QStringLiteral("<html>") + i18n("The packages containing debug information for the following application and libraries are missing:")
             + QStringLiteral("<br /><ul>");
 
-        Q_FOREACH (const QString &string, missingDbgForFiles) {
+        for (const QString &string : std::as_const(missingDbgForFiles)) {
             message += QLatin1String("<li>") + string + QLatin1String("</li>");
         }
 

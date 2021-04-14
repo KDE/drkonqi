@@ -96,7 +96,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString &bugzilla
     m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
 
     // Get related products of each related group
-    Q_FOREACH (const QString &group, groups) {
+    for (const QString &group : std::as_const(groups)) {
         const KConfigGroup bzGroups = mappingsFile.group("BZGroups");
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);

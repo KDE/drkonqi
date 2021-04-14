@@ -413,7 +413,7 @@ void BugzillaDuplicatesPage::analyzedDuplicates(KJob *j)
     if (m_foundDuplicate) {
         const QList<QTreeWidgetItem *> items = ui.m_bugListWidget->findItems(QString::number(parentDuplicate), Qt::MatchExactly, 0);
         const QBrush brush = KColorScheme(QPalette::Active, KColorScheme::View).background(KColorScheme::NeutralBackground);
-        Q_FOREACH (QTreeWidgetItem *item, items) {
+        for (QTreeWidgetItem *item : std::as_const(items)) {
             for (int i = 0; i < item->columnCount(); ++i) {
                 item->setBackground(i, brush);
             }

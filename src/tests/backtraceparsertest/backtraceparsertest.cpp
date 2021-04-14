@@ -25,10 +25,10 @@ void BacktraceParserTest::fetchData(const QString &group)
     QTest::addColumn<bool>("compositorCrash");
 
     m_settings.beginGroup(group);
-    QStringList keys = m_settings.allKeys();
+    const QStringList keys = m_settings.allKeys();
     m_settings.endGroup();
 
-    foreach (const QString &key, keys) {
+    for (const QString &key : keys) {
         QTest::newRow(qPrintable(key)) << QString(DATA_DIR + QLatin1Char('/') + key) << m_settings.value(group + QLatin1Char('/') + key).toString()
                                        << m_settings.value(QStringLiteral("debugger/") + key).toString()
                                        << m_settings.value(QStringLiteral("compositorCrash/") + key).toBool();
@@ -87,8 +87,8 @@ void BacktraceParserTest::btParserBenchmark_data()
     QTest::addColumn<QString>("debugger");
 
     m_settings.beginGroup(QStringLiteral("debugger"));
-    QStringList keys = m_settings.allKeys();
-    foreach (const QString &key, keys) {
+    const QStringList keys = m_settings.allKeys();
+    for (const QString &key : keys) {
         QTest::newRow(qPrintable(key)) << QString(DATA_DIR + QLatin1Char('/') + key) << m_settings.value(key).toString();
     }
     m_settings.endGroup();

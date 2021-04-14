@@ -220,7 +220,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     if (!m_possibleDuplicates.isEmpty()) {
         report.append(QLatin1Char('\n'));
         QString duplicatesString;
-        Q_FOREACH (const QString &dupe, m_possibleDuplicates) {
+        for (const QString &dupe : std::as_const(m_possibleDuplicates)) {
             duplicatesString += QLatin1String("bug ") + dupe + QLatin1String(", ");
         }
         duplicatesString = duplicatesString.left(duplicatesString.length() - 2) + QLatin1Char('.');

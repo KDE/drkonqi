@@ -28,7 +28,7 @@ DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<D
     connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
 
-    foreach (const Debugger &debugger, externalDebuggers) {
+    for (const Debugger &debugger : std::as_const(externalDebuggers)) {
         if (debugger.isInstalled()) {
             // TODO: use TerminalDebuggerLauncher instead
             addDebugger(new DefaultDebuggerLauncher(debugger, this));

@@ -192,7 +192,7 @@ void DrKonqiDialog::buildDialogButtons()
     // Only add the debugger if requested by the config or if a KDevelop session is running.
     const bool showExternal = debuggerManager->showExternalDebuggers();
     QList<AbstractDebuggerLauncher *> debuggers = debuggerManager->availableExternalDebuggers();
-    foreach (AbstractDebuggerLauncher *launcher, debuggers) {
+    for (AbstractDebuggerLauncher *launcher : std::as_const(debuggers)) {
         if (showExternal || qobject_cast<DBusInterfaceLauncher *>(launcher)) {
             addDebugger(launcher);
         }
