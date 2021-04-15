@@ -54,6 +54,9 @@ public:
         return m_debugger;
     }
 
+    // Called by manager when it is ready for us.
+    void setBackendPrepared();
+
 public Q_SLOTS:
     void start();
 
@@ -63,6 +66,7 @@ Q_SIGNALS:
     void someError();
     void failedToStart();
     void done();
+    void preparing();
 
 private Q_SLOTS:
     void slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus);

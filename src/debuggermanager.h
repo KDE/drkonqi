@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -11,12 +12,13 @@
 class BacktraceGenerator;
 class Debugger;
 class AbstractDebuggerLauncher;
+class AbstractDrKonqiBackend;
 
 class DebuggerManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, QObject *parent = nullptr);
+    explicit DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, AbstractDrKonqiBackend *backendParent);
     ~DebuggerManager() override;
 
     bool debuggerIsRunning() const;

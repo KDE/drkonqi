@@ -43,6 +43,10 @@ bool AbstractDrKonqiBackend::init()
     return true;
 }
 
+void AbstractDrKonqiBackend::prepareForDebugger()
+{
+    Q_EMIT preparedForDebugger();
+}
 
 KCrashBackend::~KCrashBackend()
 {

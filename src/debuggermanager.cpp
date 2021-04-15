@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -10,6 +11,7 @@
 #include "backtracegenerator.h"
 #include "debugger.h"
 #include "debuggerlaunchers.h"
+#include "drkonqibackends.h"
 
 struct DebuggerManager::Private {
     BacktraceGenerator *btGenerator = nullptr;
@@ -18,8 +20,8 @@ struct DebuggerManager::Private {
     DBusInterfaceAdaptor *dbusInterfaceAdaptor = nullptr;
 };
 
-DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, QObject *parent)
-    : QObject(parent)
+DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, AbstractDrKonqiBackend *backendParent)
+    : QObject(backendParent)
     , d(new Private)
 {
     d->btGenerator = new BacktraceGenerator(internalDebugger, this);
@@ -27,6 +29,8 @@ DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<D
     connect(d->btGenerator, &BacktraceGenerator::done, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
+    connect(d->btGenerator, &BacktraceGenerator::preparing, backendParent, &AbstractDrKonqiBackend::prepareForDebugger);
+    connect(backendParent, &AbstractDrKonqiBackend::preparedForDebugger, d->btGenerator, &BacktraceGenerator::setBackendPrepared);
 
     for (const Debugger &debugger : std::as_const(externalDebuggers)) {
         if (debugger.isInstalled()) {

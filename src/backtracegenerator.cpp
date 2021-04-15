@@ -53,9 +53,6 @@ void BacktraceGenerator::start()
     Q_ASSERT(!m_temp);
 
     m_parsedBacktrace.clear();
-    m_state = Loading;
-
-    emit starting();
 
     if (!m_debugger.isValid() || !m_debugger.isInstalled()) {
         qCWarning(DRKONQI_LOG) << "Debugger valid" << m_debugger.isValid() << "installed" << m_debugger.isInstalled();
@@ -64,40 +61,9 @@ void BacktraceGenerator::start()
         return;
     }
 
-    m_proc = new KProcess;
-    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C")); // force C locale
-
-    m_temp = new QTemporaryFile;
-    m_temp->open();
-    m_temp->write(m_debugger.backtraceBatchCommands().toLatin1());
-    m_temp->write("\n", 1);
-    m_temp->flush();
-
-    auto preamble = new QTemporaryFile(m_proc);
-    preamble->open();
-    preamble->write(m_debugger.preambleCommands().toUtf8());
-    preamble->write("\n", 1);
-    preamble->flush();
-
-    // start the debugger
-    QString str = m_debugger.command();
-    Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
-
-    *m_proc << KShell::splitArgs(str);
-    m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
-    m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
-    // check if the debugger should take its input from a file we'll generate,
-    // and take the appropriate steps if so
-    QString stdinFile = m_debugger.backendValueOfParameter(QStringLiteral("ExecInputFile"));
-    Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
-    if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
-        m_proc->setStandardInputFile(stdinFile);
-    }
-    connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
-    connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
-    connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
-
-    m_proc->start();
+    m_state = Loading;
+    Q_EMIT preparing();
+    // DebuggerManager calls setBackendPrepared when it is ready for us to actually start.
 }
 
 void BacktraceGenerator::slotReadInput()
@@ -189,4 +155,50 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
         emit someError();
         break;
     }
+}
+
+void BacktraceGenerator::setBackendPrepared()
+{
+    // they should always be null before entering this function.
+    Q_ASSERT(!m_proc);
+    Q_ASSERT(!m_temp);
+
+    Q_ASSERT(m_state == Loading);
+
+    Q_EMIT starting();
+
+    m_proc = new KProcess;
+    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C")); // force C locale
+
+    m_temp = new QTemporaryFile;
+    m_temp->open();
+    m_temp->write(m_debugger.backtraceBatchCommands().toLatin1());
+    m_temp->write("\n", 1);
+    m_temp->flush();
+
+    auto preamble = new QTemporaryFile(m_proc);
+    preamble->open();
+    preamble->write(m_debugger.preambleCommands().toUtf8());
+    preamble->write("\n", 1);
+    preamble->flush();
+
+    // start the debugger
+    QString str = m_debugger.command();
+    Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
+
+    *m_proc << KShell::splitArgs(str);
+    m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
+    m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
+    // check if the debugger should take its input from a file we'll generate,
+    // and take the appropriate steps if so
+    QString stdinFile = m_debugger.backendValueOfParameter(QStringLiteral("ExecInputFile"));
+    Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
+    if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
+        m_proc->setStandardInputFile(stdinFile);
+    }
+    connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
+    connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
+    connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
+
+    m_proc->start();
 }

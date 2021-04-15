@@ -18,6 +18,7 @@ public:
     using QObject::QObject;
     virtual ~AbstractDrKonqiBackend();
     virtual bool init();
+    virtual void prepareForDebugger();
 
     inline CrashedApplication *crashedApplication() const
     {
@@ -28,6 +29,9 @@ public:
     {
         return m_debuggerManager;
     }
+
+Q_SIGNALS:
+    void preparedForDebugger();
 
 protected:
     virtual CrashedApplication *constructCrashedApplication() = 0;
