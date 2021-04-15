@@ -27,7 +27,9 @@
 #include "systeminformation.h"
 
 DrKonqi::DrKonqi()
-    : m_signal(0)
+    : m_systemInformation(new SystemInformation())
+    , m_backend(new KCrashBackend())
+    , m_signal(0)
     , m_pid(0)
     , m_kdeinit(false)
     , m_safer(false)
@@ -35,8 +37,6 @@ DrKonqi::DrKonqi()
     , m_keepRunning(false)
     , m_thread(0)
 {
-    m_backend = new KCrashBackend();
-    m_systemInformation = new SystemInformation();
 }
 
 DrKonqi::~DrKonqi()
