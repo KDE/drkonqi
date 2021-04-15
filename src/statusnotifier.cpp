@@ -6,6 +6,8 @@
 
 #include "statusnotifier.h"
 
+#include <chrono>
+
 #include <QAction>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
@@ -20,6 +22,8 @@
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
+
+using namespace std::chrono_literals;
 
 StatusNotifier::StatusNotifier(QObject *parent)
     : QObject(parent)
@@ -50,7 +54,7 @@ void StatusNotifier::show()
 
     // if nobody bothered to look at the crash after 1 minute, just close
     m_autoCloseTimer->setSingleShot(true);
-    m_autoCloseTimer->setInterval(60000);
+    m_autoCloseTimer->setInterval(1min);
     m_autoCloseTimer->start();
     connect(m_autoCloseTimer, &QTimer::timeout, this, &StatusNotifier::expired);
     connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
@@ -94,7 +98,7 @@ void StatusNotifier::show()
     // We are tracking the related Notifications service here, because actually
     // tracking the Host interface is fairly involved with no tangible advantage.
     auto activateTimer = new QTimer(this);
-    activateTimer->setInterval(10000);
+    activateTimer->setInterval(10s);
     connect(activateTimer, &QTimer::timeout, this, &StatusNotifier::activated);
 
     auto watcher =
@@ -103,7 +107,7 @@ void StatusNotifier::show()
     connect(watcher, &QDBusServiceWatcher::serviceRegistered, activateTimer, &QTimer::stop);
 
     // make sure the user doesn't miss the SNI by stopping the auto hide timer when the session becomes idle
-    int idleId = KIdleTime::instance()->addIdleTimeout(30000);
+    int idleId = KIdleTime::instance()->addIdleTimeout(int(std::chrono::milliseconds(30s).count()));
     connect(KIdleTime::instance(), static_cast<void (KIdleTime::*)(int, int)>(&KIdleTime::timeoutReached), this, [this, idleId](int id) {
         if (idleId == id) {
             m_autoCloseTimer->stop();

@@ -7,6 +7,8 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+#include <chrono>
+
 #include <QFileDialog>
 #include <QPointer>
 #include <QTemporaryFile>
@@ -25,6 +27,8 @@
 #include "debuggermanager.h"
 #include "drkonqibackends.h"
 #include "systeminformation.h"
+
+using namespace std::chrono_literals;
 
 DrKonqi::DrKonqi()
     : m_systemInformation(new SystemInformation())
@@ -58,7 +62,7 @@ class EnableCrashCatchingDelayed : public QObject
 public:
     EnableCrashCatchingDelayed()
     {
-        startTimer(10000); // 10 s
+        startTimer(10s);
     }
 
 protected:

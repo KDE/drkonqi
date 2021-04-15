@@ -9,6 +9,8 @@
 
 #include "reportassistantpages_bugzilla.h"
 
+#include <chrono>
+
 #include <QAction>
 #include <QCheckBox>
 #include <QCursor>
@@ -42,6 +44,8 @@
 #include "reportinterface.h"
 #include "statuswidget.h"
 #include "systeminformation.h"
+
+using namespace std::chrono_literals;
 
 static const char kWalletEntryName[] = "drkonqi_bugzilla";
 static const char kWalletEntryUsername[] = "username";
@@ -152,7 +156,7 @@ void BugzillaLoginPage::aboutToShow()
                   bugzillaManager()->getUsername()));
     } else {
         // Try to show wallet dialog once this dialog is shown
-        QTimer::singleShot(100, this, &BugzillaLoginPage::walletLogin);
+        QTimer::singleShot(100ms, this, &BugzillaLoginPage::walletLogin);
         // ...also reset focus. walletLogin may be fully no-op and not set focus
         // if it failed to do anything which leaves the focus elsewhere
         ui.m_userEdit->setFocus(Qt::OtherFocusReason);

@@ -6,6 +6,7 @@
 #include "drkonqibackends.h"
 
 #include <cerrno>
+#include <chrono>
 #include <cstdlib>
 #include <signal.h>
 #include <sys/types.h>
@@ -30,6 +31,8 @@
 #ifdef Q_OS_MACOS
 #include <AvailabilityMacros.h>
 #endif
+
+using namespace std::chrono_literals;
 
 AbstractDrKonqiBackend::~AbstractDrKonqiBackend() = default;
 
@@ -91,7 +94,7 @@ bool KCrashBackend::init()
         // to reach the alarm(0); call in kdeui/util/kcrash.cpp line 406 or else
         // if we stop it before this call, pending alarm signals will kill the
         // process when we try to continue it.
-        QTimer::singleShot(2000, this, &KCrashBackend::stopAttachedProcess);
+        QTimer::singleShot(2s, this, &KCrashBackend::stopAttachedProcess);
     }
 #endif
 

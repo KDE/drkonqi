@@ -6,10 +6,13 @@
 #include "detachedprocessmonitor.h"
 #include "drkonqi_debug.h"
 
+#include <chrono>
 #include <errno.h>
 #include <signal.h>
 
 #include <QTimerEvent>
+
+using namespace std::chrono_literals;
 
 DetachedProcessMonitor::DetachedProcessMonitor(QObject *parent)
     : QObject(parent)
@@ -20,7 +23,7 @@ DetachedProcessMonitor::DetachedProcessMonitor(QObject *parent)
 void DetachedProcessMonitor::startMonitoring(int pid)
 {
     m_pid = pid;
-    startTimer(10);
+    startTimer(10ms);
 }
 
 void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
