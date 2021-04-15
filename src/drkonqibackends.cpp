@@ -43,11 +43,6 @@ bool AbstractDrKonqiBackend::init()
     return true;
 }
 
-KCrashBackend::KCrashBackend()
-    , AbstractDrKonqiBackend()
-    , m_state(ProcessRunning)
-{
-}
 
 KCrashBackend::~KCrashBackend()
 {

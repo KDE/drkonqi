@@ -42,7 +42,7 @@ class KCrashBackend : public AbstractDrKonqiBackend
 {
     Q_OBJECT
 public:
-    KCrashBackend();
+    using AbstractDrKonqiBackend::AbstractDrKonqiBackend;
     ~KCrashBackend() override;
     bool init() override;
 
@@ -61,7 +61,7 @@ private:
     static qint64 s_pid; // for use by the emergencySaveFunction
 
     enum State { ProcessRunning, ProcessStopped, DebuggerRunning };
-    State m_state;
+    State m_state = ProcessRunning;
 };
 
 #endif // DRKONQIBACKENDS_H
