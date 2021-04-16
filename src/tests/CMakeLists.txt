@@ -12,7 +12,7 @@ if(HAVE_UNAME)
     add_executable(lsb_release lsb_release_double.c)
 
     ecm_add_tests(
-        systeminformationtest
+        systeminformationtest.cpp
         LINK_LIBRARIES
             Qt::Core
             Qt::Test
@@ -25,7 +25,7 @@ add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 
 ecm_add_tests(
-    gdbbacktracelinetest
+    gdbbacktracelinetest.cpp
     LINK_LIBRARIES
         Qt::Core
         Qt::Test
@@ -33,7 +33,7 @@ ecm_add_tests(
 )
 
 ecm_add_tests(
-    linuxprocmapsparsertest
+    linuxprocmapsparsertest.cpp
     LINK_LIBRARIES
         Qt::Core
         Qt::Test
