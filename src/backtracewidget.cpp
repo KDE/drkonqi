@@ -347,12 +347,12 @@ void BacktraceWidget::saveClicked()
     DrKonqi::saveReport(m_btGenerator->backtrace(), this);
 }
 
-void BacktraceWidget::hilightExtraDetailsLabel(bool hilight)
+void BacktraceWidget::highlightExtraDetailsLabel(bool highlight)
 {
-    const QString stylesheet = ((!hilight) ? QLatin1String("border-width: 0px;")
-                                           : QLatin1String("border-width: 2px; "
-                                                           "border-style: solid; "
-                                                           "border-color: red;"))
+    const QString stylesheet = ((!highlight) ? QLatin1String("border-width: 0px;")
+                                             : QLatin1String("border-width: 2px; "
+                                                             "border-style: solid; "
+                                                             "border-color: red;"))
         + QLatin1String(extraDetailsLabelMargin);
 
     ui.m_extraDetailsLabel->setStyleSheet(stylesheet);

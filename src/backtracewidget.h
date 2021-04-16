@@ -32,7 +32,7 @@ public:
 
 public Q_SLOTS:
     void generateBacktrace();
-    void hilightExtraDetailsLabel(bool hilight);
+    void highlightExtraDetailsLabel(bool highlight);
     void focusImproveBacktraceButton();
 
     void toggleBacktrace(bool show);

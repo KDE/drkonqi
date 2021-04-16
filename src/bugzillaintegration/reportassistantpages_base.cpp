@@ -66,7 +66,7 @@ CrashInformationPage::CrashInformationPage(ReportAssistantDialog *parent)
 void CrashInformationPage::aboutToShow()
 {
     m_backtraceWidget->generateBacktrace();
-    m_backtraceWidget->hilightExtraDetailsLabel(false);
+    m_backtraceWidget->highlightExtraDetailsLabel(false);
     emitCompleteChanged();
 }
 
@@ -104,7 +104,7 @@ bool CrashInformationPage::showNextPage()
                                                 "do you want to try to improve it? You will need "
                                                 "to install some debugging packages."),
                                           i18nc("@title:window", "Crash Information is not useful enough"))) {
-            m_backtraceWidget->hilightExtraDetailsLabel(true);
+            m_backtraceWidget->highlightExtraDetailsLabel(true);
             m_backtraceWidget->focusImproveBacktraceButton();
             return false; // Cancel show next, to allow the user to write more
         } else {
