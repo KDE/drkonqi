@@ -1,3 +1,8 @@
+<!--
+    SPDX-License-Identifier: CC0-1.0
+    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+-->
+
 # Exec
 
 Drkonqi also doesn't technically require a process to actually crash, you can
