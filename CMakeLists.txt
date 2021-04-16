@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} )
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -90,6 +90,12 @@ kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
     kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 endif()
+
+# cmake-format target
+include(KDECMakeFormat)
+file(GLOB_RECURSE ALL_CMAKE_FORMAT_SOURCE_FILES CMakeLists.txt)
+kde_cmake_format(${ALL_CMAKE_FORMAT_SOURCE_FILES})
+# TODO: git hook
 
 ecm_qt_install_logging_categories(
         EXPORT DRKONQI
