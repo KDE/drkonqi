@@ -17,12 +17,7 @@ ecm_add_tests(
     commenttest.cpp
     connectiontest.cpp
     producttest.cpp
-    LINK_LIBRARIES
-        Qt::Core
-        Qt::Test
-        Qt::Network
-
-        qbugzilla
+    LINK_LIBRARIES Qt::Core Qt::Test Qt::Network qbugzilla
 )
 
 ecm_mark_nongui_executable(bugzillatest)

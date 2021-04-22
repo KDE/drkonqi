@@ -1,5 +1,5 @@
 if(NOT BUILD_TESTING)
-     # Skip everything. Particularly trying to look for integration test deps.
+    # Skip everything. Particularly trying to look for integration test deps.
     return()
 endif()
 
@@ -11,42 +11,23 @@ find_package(Qt5Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
 if(HAVE_UNAME)
     add_executable(lsb_release lsb_release_double.c)
 
-    ecm_add_tests(
-        systeminformationtest.cpp
-        LINK_LIBRARIES
-            Qt::Core
-            Qt::Test
-            DrKonqiInternal
-    )
+    ecm_add_tests(systeminformationtest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 endif()
 
 add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 
-ecm_add_tests(
-    gdbbacktracelinetest.cpp
-    LINK_LIBRARIES
-        Qt::Core
-        Qt::Test
-        drkonqi_backtrace_parser
-)
+ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_backtrace_parser)
 
-ecm_add_tests(
-    linuxprocmapsparsertest.cpp
-    LINK_LIBRARIES
-        Qt::Core
-        Qt::Test
-        DrKonqiInternal
-)
+ecm_add_tests(linuxprocmapsparsertest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)
         find_program(RUBY_EXECUTABLE ruby)
     endif()
     if(RUBY_EXECUTABLE)
-        execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'atspi'"
-            RESULT_VARIABLE RUBY_ATSPI)
+        execute_process(COMMAND ${RUBY_EXECUTABLE} -e "require 'atspi'" RESULT_VARIABLE RUBY_ATSPI)
     endif()
     if(NOT GDB_EXECUTABLE)
         # Needed so drkonqi can actually trace something.
@@ -58,27 +39,39 @@ if(NOT APPLE)
 
     set(ATSPI_PATHS
         /usr/lib/at-spi2-core/ # debians
-        /usr/lib/at-spi2/      # suses
+        /usr/lib/at-spi2/ # suses
     )
     if(NOT ATSPI_BUS_LAUNCHER_EXECUTABLE)
-        find_program(ATSPI_BUS_LAUNCHER_EXECUTABLE
+        find_program(
+            ATSPI_BUS_LAUNCHER_EXECUTABLE
             NAMES at-spi-bus-launcher
             PATHS ${ATSPI_PATHS}
-            DOC "AT-SPI accessibility dbus launcher")
+            DOC "AT-SPI accessibility dbus launcher"
+        )
     endif()
     if(NOT ATSPI_REGISTRYD_EXECUTABLE)
-        find_program(ATSPI_REGISTRYD_EXECUTABLE
+        find_program(
+            ATSPI_REGISTRYD_EXECUTABLE
             NAMES at-spi2-registryd
             PATHS ${ATSPI_PATHS}
-            DOC "AT-SPI accessibility registry daemon")
+            DOC "AT-SPI accessibility registry daemon"
+        )
     endif()
 
-    if(RUBY_EXECUTABLE AND XVFB_RUN_EXECTUABLE AND ATSPI_BUS_LAUNCHER_EXECUTABLE
-       AND ATSPI_REGISTRYD_EXECUTABLE AND GDB_EXECUTABLE
-       AND RUBY_ATSPI EQUAL 0)
+    if(
+        RUBY_EXECUTABLE
+        AND XVFB_RUN_EXECTUABLE
+        AND ATSPI_BUS_LAUNCHER_EXECUTABLE
+        AND ATSPI_REGISTRYD_EXECUTABLE
+        AND GDB_EXECUTABLE
+        AND RUBY_ATSPI EQUAL 0
+    )
         set(WITH_DRKONI_INTEGRATION_TESTING TRUE)
         add_subdirectory(integration)
     endif()
-    add_feature_info(DrKonqiIntegrationTesting WITH_DRKONI_INTEGRATION_TESTING
-        "Needs Ruby, functional atspi gem, gdb, as well as xvfb-run.")
+    add_feature_info(
+        DrKonqiIntegrationTesting
+        WITH_DRKONI_INTEGRATION_TESTING
+        "Needs Ruby, functional atspi gem, gdb, as well as xvfb-run."
+    )
 endif()

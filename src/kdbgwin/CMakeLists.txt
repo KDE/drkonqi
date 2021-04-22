@@ -16,13 +16,13 @@ set(kdbgwin_SRCS
 
 set(COMMON_LIBS dbghelp psapi shlwapi Qt::Core)
 
-if ( MINGW )
+if(MINGW)
     add_executable(kdbgwin ${kdbgwin_SRCS} mingw_generator.h mingw_generator.cpp)
     target_link_libraries(kdbgwin PRIVATE ${COMMON_LIBS} bfd iberty intl ZLIB::ZLIB)
-endif ()
-if ( MSVC OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel"))
+endif()
+if(MSVC OR ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel"))
     add_executable(kdbgwin ${kdbgwin_SRCS} msvc_generator.h msvc_generator.cpp)
     target_link_libraries(kdbgwin ${COMMON_LIBS})
-endif ()
+endif()
 
 install(TARGETS kdbgwin DESTINATION ${KDE_INSTALL_LIBEXECDIR})

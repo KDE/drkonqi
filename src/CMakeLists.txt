@@ -1,4 +1,4 @@
-include (CheckFunctionExists)
+include(CheckFunctionExists)
 
 check_function_exists("strsignal" HAVE_STRSIGNAL)
 check_function_exists("uname" HAVE_UNAME)
@@ -6,21 +6,21 @@ if(TARGET Qt::X11Extras)
     set(HAVE_X11 TRUE)
 endif()
 
-if (NOT DEBUG_PACKAGE_INSTALLER_NAME)
-    set (DEBUG_PACKAGE_INSTALLER_NAME "installdbgsymbols.sh")
-endif ()
+if(NOT DEBUG_PACKAGE_INSTALLER_NAME)
+    set(DEBUG_PACKAGE_INSTALLER_NAME "installdbgsymbols.sh")
+endif()
 
-configure_file (config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h )
+configure_file(config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h)
 
-add_subdirectory( bugzillaintegration/libbugzilla )
-add_subdirectory( data )
-add_subdirectory( parser )
-if ( WIN32 )
+add_subdirectory(bugzillaintegration/libbugzilla)
+add_subdirectory(data)
+add_subdirectory(parser)
+if(WIN32)
     find_package(KDEWin REQUIRED)
     # for finding drkonqi_debug.h
     include_directories(${CMAKE_CURRENT_BINARY_DIR})
-    add_subdirectory( kdbgwin )
-endif ()
+    add_subdirectory(kdbgwin)
+endif()
 
 set(drkonqi_SRCS
     drkonqidialog.cpp
@@ -54,7 +54,6 @@ ki18n_wrap_ui(drkonqi_SRCS
 # Comment this out for release.
 #add_definitions(-DBACKTRACE_PARSER_DEBUG)
 
-
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
     bugzillaintegration/assistantpage_bugzilla_version.cpp
@@ -84,13 +83,20 @@ ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_bugzilla_version.ui
 )
 
-ecm_qt_declare_logging_category(drkonqi_SRCS HEADER drkonqi_debug.h IDENTIFIER DRKONQI_LOG CATEGORY_NAME org.kde.drkonqi
-     DESCRIPTION "drkonqi" EXPORT DRKONQI)
+ecm_qt_declare_logging_category(
+    drkonqi_SRCS
+    HEADER drkonqi_debug.h
+    IDENTIFIER DRKONQI_LOG
+    CATEGORY_NAME org.kde.drkonqi
+    DESCRIPTION "drkonqi"
+    EXPORT DRKONQI
+)
 
 # transient static lib we can use to link autotests against
 add_library(DrKonqiInternal STATIC ${drkonqi_SRCS})
 
-target_link_libraries(DrKonqiInternal
+target_link_libraries(
+    DrKonqiInternal
     KF5::I18n
     KF5::CoreAddons
     KF5::Service
@@ -101,22 +107,17 @@ target_link_libraries(DrKonqiInternal
     KF5::Completion
     KF5::WindowSystem
     Qt::DBus
-
     KF5::WidgetsAddons
     KF5::Wallet
-
     KF5::Notifications # for status notifier
     KF5::IdleTime # hide status notifier only if user saw it
-
     KF5::SyntaxHighlighting # Backtrace Highlighting
-
     drkonqi_backtrace_parser
     qbugzilla
-
     "$<$<BOOL:${HAVE_X11}>:Qt::X11Extras>"
 )
 
-if (WIN32)
+if(WIN32)
     target_link_libraries(DrKonqiInternal kdewin)
 endif()
 
@@ -128,21 +129,18 @@ install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop)
 install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
-add_subdirectory( tests )
+add_subdirectory(tests)
 
 add_subdirectory(bugzillaintegration/libbugzilla/autotests)
 
 if(BUILD_COVERAGE AND BUILD_TESTING) # coverage without tests make no sense
     add_custom_target(coverage)
-    add_custom_command(TARGET coverage
+    add_custom_command(
+        TARGET coverage
         COMMAND ctest
         COMMAND lcov -o ${CMAKE_BINARY_DIR}/lcov.report -c -d ${CMAKE_BINARY_DIR}
         COMMAND genhtml -o ${CMAKE_BINARY_DIR}/coverage ${CMAKE_BINARY_DIR}/lcov.report
-        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v
-        DEPENDS test
+        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v DEPENDS test
     )
-    add_custom_target(show-coverage
-        COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html
-        DEPENDS coverage
-    )
+    add_custom_target(show-coverage COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html DEPENDS coverage)
 endif()

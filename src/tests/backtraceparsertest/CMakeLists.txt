@@ -1,4 +1,6 @@
-ecm_add_test(fakebacktracegenerator.cpp backtraceparsertest.cpp
+ecm_add_test(
+    fakebacktracegenerator.cpp
+    backtraceparsertest.cpp
     TEST_NAME backtraceparsertest
     LINK_LIBRARIES Qt::Test Qt::Core KF5::KIOWidgets drkonqi_backtrace_parser
 )

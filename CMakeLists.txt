@@ -31,50 +31,65 @@ kde_enable_exceptions()
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent)
 
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS I18n CoreAddons Service
-    ConfigWidgets JobWidgets KIO Crash Completion WidgetsAddons Wallet
-    Notifications IdleTime WindowSystem SyntaxHighlighting)
+find_package(
+    KF5
+    ${KF5_MIN_VERSION}
+    REQUIRED
+    COMPONENTS
+        I18n
+        CoreAddons
+        Service
+        ConfigWidgets
+        JobWidgets
+        KIO
+        Crash
+        Completion
+        WidgetsAddons
+        Wallet
+        Notifications
+        IdleTime
+        WindowSystem
+        SyntaxHighlighting
+)
 find_package(Qt5X11Extras ${QT_MIN_VERSION} CONFIG)
 set_package_properties(Qt5X11Extras PROPERTIES TYPE RECOMMENDED PURPOSE "Recommended for better integration on X11.")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
 
-if (MINGW)
+if(MINGW)
     find_package(ZLIB REQUIRED)
     find_library(INTL_LIBRARY NAMES intl)
     find_library(IBERTY_LIBRARY NAMES iberty)
     find_library(BFD_LIBRARY NAMES bfd)
-    if (IBERTY_LIBRARY)
+    if(IBERTY_LIBRARY)
         set(iberty_FOUND 1)
     else()
         set(msg "iberty")
     endif()
-    if (BFD_LIBRARY)
+    if(BFD_LIBRARY)
         set(bfd_FOUND 1)
     else()
         set(msg "${msg} bfd")
     endif()
-    if (INTL_LIBRARY)
+    if(INTL_LIBRARY)
         set(intl_FOUND 1)
     else()
         set(msg "${msg} intl")
     endif()
-    if (msg)
+    if(msg)
         message(FATAL_ERROR "could not find ${msg}")
     endif()
 
     add_library(intl SHARED IMPORTED)
-    set_target_properties(intl PROPERTIES
-        IMPORTED_IMPLIB ${INTL_LIBRARY}
-    )
+    set_target_properties(intl PROPERTIES IMPORTED_IMPLIB ${INTL_LIBRARY})
     add_library(iberty STATIC IMPORTED)
-    set_target_properties(iberty PROPERTIES
-        IMPORTED_LOCATION ${IBERTY_LIBRARY}
-    )
+    set_target_properties(iberty PROPERTIES IMPORTED_LOCATION ${IBERTY_LIBRARY})
     add_library(bfd STATIC IMPORTED)
-    set_target_properties(bfd PROPERTIES
-        IMPORTED_LOCATION ${BFD_LIBRARY}
-        # bfd header requires this to be defined
-        INTERFACE_COMPILE_DEFINITIONS "PACKAGE;PACKAGE_VERSION"
+    set_target_properties(
+        bfd
+        PROPERTIES
+            IMPORTED_LOCATION ${BFD_LIBRARY}
+            # bfd header requires this to be defined
+            INTERFACE_COMPILE_DEFINITIONS "PACKAGE;PACKAGE_VERSION"
     )
     find_path(BFD_INCLUDE_DIR bfd.h)
     include_directories(${BFD_INCLUDE_DIR})
@@ -92,9 +107,9 @@ if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
 endif()
 
 ecm_qt_install_logging_categories(
-        EXPORT DRKONQI
-        FILE drkonqi.categories
-        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+    EXPORT DRKONQI
+    FILE drkonqi.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

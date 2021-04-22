@@ -4,21 +4,18 @@ set(lib_SRCS
     connection.cpp
     exceptions.cpp
     query.cpp
-
     clients/attachmentclient.cpp
     clients/bugclient.cpp
     clients/bugfieldclient.cpp
     clients/commentclient.cpp
     clients/clientbase.cpp
     clients/productclient.cpp
-
     clients/commands/bugsearch.cpp
     clients/commands/bugupdate.cpp
     clients/commands/jsoncommand.cpp
     clients/commands/newattachment.cpp
     clients/commands/newbug.cpp
     clients/commands/querycommand.cpp
-
     models/bug.cpp
     models/bugfield.cpp
     models/comment.cpp
@@ -26,18 +23,15 @@ set(lib_SRCS
     models/product.cpp
 )
 
-ecm_qt_declare_logging_category(lib_SRCS
+ecm_qt_declare_logging_category(
+    lib_SRCS
     HEADER bugzilla_debug.h
     IDENTIFIER BUGZILLA_LOG
     CATEGORY_NAME org.kde.drkonqi.bugzilla
     DEFAULT_SEVERITY Warning
-    DESCRIPTION "drkonqi bugzilla" EXPORT DRKONQI)
+    DESCRIPTION "drkonqi bugzilla"
+    EXPORT DRKONQI
+)
 
 add_library(qbugzilla STATIC ${lib_SRCS})
-target_link_libraries(qbugzilla
-    PUBLIC
-        Qt::Core
-        Qt::Network
-        KF5::CoreAddons
-        KF5::KIOCore
-)
+target_link_libraries(qbugzilla PUBLIC Qt::Core Qt::Network KF5::CoreAddons KF5::KIOCore)
