@@ -101,8 +101,8 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString &bugzilla
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);
             if (!bzGroup.isEmpty()) {
-                QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), Qt::SkipEmptyParts);
-                if (relatedGroups.size() > 0) {
+                const QStringList relatedGroups = bzGroup.split(QLatin1Char('|'), Qt::SkipEmptyParts);
+                if (!relatedGroups.isEmpty()) {
                     m_relatedBugzillaProducts.append(relatedGroups);
                 }
             } else {
