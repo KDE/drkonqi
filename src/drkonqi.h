@@ -32,6 +32,7 @@ public:
     static void setAppVersion(const QString &appVersion);
     static void setBugAddress(const QString &bugAddress);
     static void setProgramName(const QString &programName);
+    static void setProductName(const QString &productName);
     static void setPid(int pid);
     static void setKdeinit(bool kdeinit);
     static void setSafer(bool safer);
@@ -46,6 +47,7 @@ public:
     static const QString &appVersion();
     static const QString &bugAddress();
     static const QString &programName();
+    static const QString &productName();
     static int pid();
     static bool isKdeinit();
     static bool isSafer();
@@ -70,6 +72,7 @@ private:
     QString m_appVersion;
     QString m_bugAddress;
     QString m_programName;
+    QString m_productName;
     int m_pid;
     bool m_kdeinit;
     bool m_safer;

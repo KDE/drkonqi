@@ -31,6 +31,17 @@ ProductMapping::ProductMapping(const CrashedApplication *crashedApp, BugzillaMan
     m_bugzillaVersionString = QStringLiteral("unspecified");
     m_relatedBugzillaProducts = QStringList() << m_bugzillaProduct;
 
+    if (!crashedApp->productName().isEmpty()) {
+        const auto l = crashedApp->productName().split(QLatin1Char('/'), Qt::SkipEmptyParts);
+        if (l.size() == 2) {
+            m_bugzillaProduct = l[0];
+            m_bugzillaComponent = l[1];
+        } else {
+            m_bugzillaProduct = crashedApp->productName();
+        }
+        m_hasExternallyProvidedProductName = true;
+    }
+
     map(crashedApp->fakeExecutableBaseName());
 
     // Get valid versions
@@ -52,6 +63,10 @@ void ProductMapping::mapUsingInternalFile(const QString &appName)
     KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::AppDataLocation);
     const KConfigGroup mappings = mappingsFile.group("Mappings");
     if (mappings.hasKey(appName)) {
+        if (m_hasExternallyProvidedProductName) {
+            qCWarning(DRKONQI_LOG) << "Mapping found despite product information being provided by the application. Consider removing the mapping entry"
+                                   << appName;
+        }
         QString mappingString = mappings.readEntry(appName);
         if (!mappingString.isEmpty()) {
             QStringList list = mappingString.split(QLatin1Char('|'), Qt::SkipEmptyParts);

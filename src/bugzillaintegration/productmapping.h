@@ -61,6 +61,7 @@ private:
 
     bool m_bugzillaProductDisabled;
     bool m_bugzillaVersionDisabled;
+    bool m_hasExternallyProvidedProductName = false;
 
     QMetaObject::Connection m_productInfoErrorConnection;
 };

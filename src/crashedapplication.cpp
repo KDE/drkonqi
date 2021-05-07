@@ -29,6 +29,7 @@ CrashedApplication::CrashedApplication(int pid,
                                        const QString &version,
                                        const BugReportAddress &reportAddress,
                                        const QString &name,
+                                       const QString &productName,
                                        const QDateTime &datetime,
                                        bool restarted,
                                        bool hasDeletedFiles,
@@ -43,6 +44,7 @@ CrashedApplication::CrashedApplication(int pid,
     , m_fakeBaseName(fakeBaseName)
     , m_version(version)
     , m_reportAddress(reportAddress)
+    , m_productName(productName)
     , m_restarted(restarted)
     , m_thread(thread)
     , m_datetime(datetime)
@@ -80,6 +82,11 @@ QString CrashedApplication::version() const
 BugReportAddress CrashedApplication::bugReportAddress() const
 {
     return m_reportAddress;
+}
+
+QString CrashedApplication::productName() const
+{
+    return m_productName;
 }
 
 int CrashedApplication::pid() const

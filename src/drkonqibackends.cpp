@@ -159,6 +159,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
                                   DrKonqi::appVersion(),
                                   BugReportAddress(DrKonqi::bugAddress()),
                                   DrKonqi::programName(),
+                                  DrKonqi::productName(),
                                   QDateTime::currentDateTime(),
                                   DrKonqi::isRestarted(),
                                   hasDeletedFiles,

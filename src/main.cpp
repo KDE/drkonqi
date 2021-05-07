@@ -122,6 +122,7 @@ int main(int argc, char *argv[])
     const QCommandLineOption appVersionOption(QStringLiteral("appversion"), i18nc("@info:shell", "The <version> of the program"), QStringLiteral("version"));
     const QCommandLineOption bugAddressOption(QStringLiteral("bugaddress"), i18nc("@info:shell", "The bug <address> to use"), QStringLiteral("address"));
     const QCommandLineOption programNameOption(QStringLiteral("programname"), i18nc("@info:shell", "Translated <name> of the program"), QStringLiteral("name"));
+    const QCommandLineOption productNameOption(QStringLiteral("productname"), i18nc("@info:shell", "Bugzilla product name"), QStringLiteral("name"));
     const QCommandLineOption pidOption(QStringLiteral("pid"), i18nc("@info:shell", "The <PID> of the program"), QStringLiteral("pid"));
     const QCommandLineOption startupIdOption(QStringLiteral("startupid"), i18nc("@info:shell", "Startup <ID> of the program"), QStringLiteral("id"));
     const QCommandLineOption kdeinitOption(QStringLiteral("kdeinit"), i18nc("@info:shell", "The program was started by kdeinit"));
@@ -140,6 +141,7 @@ int main(int argc, char *argv[])
                        appVersionOption,
                        bugAddressOption,
                        programNameOption,
+                       productNameOption,
                        pidOption,
                        startupIdOption,
                        kdeinitOption,
@@ -176,6 +178,7 @@ int main(int argc, char *argv[])
     DrKonqi::setAppVersion(parser.value(appVersionOption));
     DrKonqi::setBugAddress(parser.value(bugAddressOption));
     DrKonqi::setProgramName(parser.value(programNameOption));
+    DrKonqi::setProductName(parser.value(productNameOption));
     DrKonqi::setPid(parser.value(pidOption).toInt());
     DrKonqi::setKdeinit(parser.isSet(kdeinitOption));
     DrKonqi::setSafer(parser.isSet(saferOption));

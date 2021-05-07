@@ -25,6 +25,7 @@ public:
                        const QString &version,
                        const BugReportAddress &reportAddress,
                        const QString &name = QString(),
+                       const QString &productName = QString(),
                        const QDateTime &datetime = QDateTime::currentDateTime(),
                        bool restarted = false,
                        bool hasDeletedFiles = false,
@@ -52,6 +53,9 @@ public:
 
     /** Returns the address where the bug report for this application should go */
     BugReportAddress bugReportAddress() const;
+
+    /** Bugzialla product name, if the crashed application has explicitly specified that. */
+    QString productName() const;
 
     /** Returns the pid of the crashed program */
     int pid() const;
@@ -85,6 +89,7 @@ protected:
     QString m_fakeBaseName;
     QString m_version;
     BugReportAddress m_reportAddress;
+    QString m_productName;
     bool m_restarted;
     int m_thread;
     QDateTime m_datetime;

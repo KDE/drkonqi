@@ -265,6 +265,11 @@ void DrKonqi::setProgramName(const QString &programName)
     instance()->m_programName = programName;
 }
 
+void DrKonqi::setProductName(const QString &productName)
+{
+    instance()->m_productName = productName;
+}
+
 void DrKonqi::setPid(int pid)
 {
     instance()->m_pid = pid;
@@ -328,6 +333,11 @@ const QString &DrKonqi::bugAddress()
 const QString &DrKonqi::programName()
 {
     return instance()->m_programName;
+}
+
+const QString &DrKonqi::productName()
+{
+    return instance()->m_productName;
 }
 
 int DrKonqi::pid()
