@@ -295,6 +295,11 @@ void DrKonqi::setThread(int thread)
     instance()->m_thread = thread;
 }
 
+void DrKonqi::setStartupId(const QString &startupId)
+{
+    instance()->m_startupId = startupId;
+}
+
 int DrKonqi::signal()
 {
     return instance()->m_signal;
@@ -385,6 +390,11 @@ const QString &DrKonqi::kdeBugzillaURL()
     }
 
     return url;
+}
+
+const QString &DrKonqi::startupId()
+{
+    return instance()->m_startupId;
 }
 
 #include "drkonqi.moc"

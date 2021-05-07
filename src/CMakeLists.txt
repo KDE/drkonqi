@@ -2,9 +2,6 @@ include(CheckFunctionExists)
 
 check_function_exists("strsignal" HAVE_STRSIGNAL)
 check_function_exists("uname" HAVE_UNAME)
-if(TARGET Qt::X11Extras)
-    set(HAVE_X11 TRUE)
-endif()
 
 if(NOT DEBUG_PACKAGE_INSTALLER_NAME)
     set(DEBUG_PACKAGE_INSTALLER_NAME "installdbgsymbols.sh")
@@ -103,6 +100,7 @@ target_link_libraries(
     KF5::ConfigWidgets
     KF5::JobWidgets
     KF5::KIOCore
+    KF5::KIOGui
     KF5::Crash
     KF5::Completion
     KF5::WindowSystem
@@ -114,7 +112,6 @@ target_link_libraries(
     KF5::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
-    "$<$<BOOL:${HAVE_X11}>:Qt::X11Extras>"
 )
 
 if(WIN32)

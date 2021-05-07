@@ -38,6 +38,7 @@ public:
     static void setRestarted(bool restarted);
     static void setKeepRunning(bool keepRunning);
     static void setThread(int thread);
+    static void setStartupId(const QString &startupId);
 
     static int signal();
     static const QString &appName();
@@ -53,6 +54,7 @@ public:
     static int thread();
     static bool ignoreQuality();
     static const QString &kdeBugzillaURL();
+    static const QString &startupId();
 
 private:
     DrKonqi();
@@ -74,6 +76,7 @@ private:
     bool m_restarted;
     bool m_keepRunning;
     int m_thread;
+    QString m_startupId;
 };
 
 #endif

@@ -20,7 +20,7 @@
 #endif
 #endif
 
-#include <KToolInvocation>
+#include <KIO/CommandLauncherJob>
 
 CrashedApplication::CrashedApplication(int pid,
                                        int thread,
@@ -187,15 +187,18 @@ void CrashedApplication::restart()
         return;
     }
 
-    // start the application via kdeinit, as it needs to have a pristine environment and
-    // KProcess::startDetached() can't start a new process with custom environment variables.
+    // start the application via CommandLauncherJob so it runs in a new cgroup if possible.
     // if m_fakeBaseName is set, this means m_executable is the path to kdeinit4
     // so we need to use the fakeBaseName to restart the app
-    const int ret = KToolInvocation::kdeinitExec(!m_fakeBaseName.isEmpty() ? m_fakeBaseName : m_executable.absoluteFilePath());
-    const bool success = (ret == 0);
-
-    m_restarted = success;
-    emit restarted(success);
+    auto job = new KIO::CommandLauncherJob(!m_fakeBaseName.isEmpty() ? m_fakeBaseName : m_executable.absoluteFilePath());
+    if (const QString &id = DrKonqi::startupId(); !id.isEmpty()) {
+        job->setStartupId(id.toUtf8());
+    }
+    connect(job, &KIO::CommandLauncherJob::result, this, [job, this] {
+        m_restarted = (job->error() == KJob::NoError);
+        Q_EMIT restarted(m_restarted);
+    });
+    job->start();
 }
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app)

@@ -25,9 +25,7 @@
 #include <QDBusReply>
 
 #include <config-drkonqi.h>
-#if HAVE_X11
-#include <QX11Info>
-#endif
+
 #ifdef Q_OS_MACOS
 #include <KWindowSystem>
 #endif
@@ -184,14 +182,8 @@ int main(int argc, char *argv[])
     DrKonqi::setRestarted(parser.isSet(restartedOption));
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
+    DrKonqi::setStartupId(parser.value(startupIdOption));
     auto forceDialog = parser.isSet(dialogOption);
-
-#if HAVE_X11
-    const QString startupId = parser.value(startupIdOption);
-    if (!startupId.isEmpty()) {
-        QX11Info::setNextStartupId(startupId.toUtf8());
-    }
-#endif
 
     if (!DrKonqi::init()) {
         return 1;
