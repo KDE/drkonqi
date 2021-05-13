@@ -145,7 +145,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
                          &Callbacks::SymFunctionTableAccess64,
                          &Callbacks::SymGetModuleBase64,
                          NULL)) {
-            emit Finished();
+            Q_EMIT Finished();
             qCDebug(DRKONQI_LOG) << "Stackwalk finished; GetLastError=" << GetLastError();
             break;
         }
@@ -160,7 +160,7 @@ void AbstractBTGenerator::Run(HANDLE hThread, bool bFaultingThread)
 
         QString debugLine = QString::fromLatin1(BACKTRACE_FORMAT).arg(modulename).arg(functionname).arg(file).arg(line).arg(address);
 
-        emit DebugLine(debugLine);
+        Q_EMIT DebugLine(debugLine);
     }
 
     // Resume the target thread now, or else the crashing process will not
@@ -200,9 +200,9 @@ void AbstractBTGenerator::LoadSymbols()
         LoadSymbol(strModule, (DWORD64)modInfo.lpBaseOfDll);
 
         if (!IsSymbolLoaded(strModule)) {
-            emit MissingSymbol(strModule);
+            Q_EMIT MissingSymbol(strModule);
         }
     }
-    emit DebugLine(QString());
-    emit DebugLine(QString());
+    Q_EMIT DebugLine(QString());
+    Q_EMIT DebugLine(QString());
 }

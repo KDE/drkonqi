@@ -41,21 +41,21 @@ void DefaultDebuggerLauncher::start()
     QString str = m_debugger.command();
     Debugger::expandString(str, Debugger::ExpansionUsageShell);
 
-    emit starting();
+    Q_EMIT starting();
     int pid = KProcess::startDetached(KShell::splitArgs(str));
     if (pid > 0) {
         setPtracer(pid, DrKonqi::pid());
         m_monitor->startMonitoring(pid);
     } else {
         qCWarning(DRKONQI_LOG) << "Could not start debugger:" << name();
-        emit finished();
+        Q_EMIT finished();
     }
 }
 
 void DefaultDebuggerLauncher::onProcessFinished()
 {
     setPtracer(QCoreApplication::applicationPid(), DrKonqi::pid());
-    emit finished();
+    Q_EMIT finished();
 }
 
 #if 0
@@ -84,11 +84,11 @@ QString DBusInterfaceLauncher::name() const
 
 void DBusInterfaceLauncher::start()
 {
-    emit starting();
+    Q_EMIT starting();
 
     setPtracer(m_pid, DrKonqi::pid());
 
-    emit static_cast<DBusInterfaceAdaptor *>(parent())->acceptDebuggingApplication(m_name);
+    Q_EMIT static_cast<DBusInterfaceAdaptor *>(parent())->acceptDebuggingApplication(m_name);
 }
 
 DBusInterfaceAdaptor::DBusInterfaceAdaptor(DebuggerManager *parent)
@@ -120,7 +120,7 @@ void DBusInterfaceAdaptor::debuggingFinished(const QString &name)
     auto it = m_launchers.find(name);
     if (it != m_launchers.end()) {
         setPtracer(QCoreApplication::applicationPid(), DrKonqi::pid());
-        emit it.value()->finished();
+        Q_EMIT it.value()->finished();
     }
 }
 
@@ -128,7 +128,7 @@ void DBusInterfaceAdaptor::debuggerClosed(const QString &name)
 {
     auto it = m_launchers.find(name);
     if (it != m_launchers.end()) {
-        emit it.value()->invalidated();
+        Q_EMIT it.value()->invalidated();
         m_launchers.erase(it);
     }
 }

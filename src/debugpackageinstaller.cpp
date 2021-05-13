@@ -74,29 +74,29 @@ void DebugPackageInstaller::progressDialogCanceled()
         m_installerProcess = nullptr;
     }
 
-    emit canceled();
+    Q_EMIT canceled();
 }
 
 void DebugPackageInstaller::processFinished(int exitCode, QProcess::ExitStatus)
 {
     switch (exitCode) {
     case ResultInstalled: {
-        emit packagesInstalled();
+        Q_EMIT packagesInstalled();
         break;
     }
     case ResultSymbolsNotFound: {
-        emit error(i18nc("@info", "Could not find debug symbol packages for this application."));
+        Q_EMIT error(i18nc("@info", "Could not find debug symbol packages for this application."));
         break;
     }
     case ResultCanceled: {
-        emit canceled();
+        Q_EMIT canceled();
         break;
     }
     case ResultError:
     default: {
-        emit error(i18nc("@info",
-                         "An error was encountered during the installation "
-                         "of the debug symbol packages."));
+        Q_EMIT error(i18nc("@info",
+                           "An error was encountered during the installation "
+                           "of the debug symbol packages."));
         break;
     }
     }

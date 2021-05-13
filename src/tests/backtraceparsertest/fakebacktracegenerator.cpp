@@ -13,9 +13,9 @@ void FakeBacktraceGenerator::sendData(const QString &filename)
     file.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream stream(&file);
 
-    emit starting();
+    Q_EMIT starting();
     while (!stream.atEnd()) {
-        emit newLine(stream.readLine() + QLatin1Char('\n'));
+        Q_EMIT newLine(stream.readLine() + QLatin1Char('\n'));
     }
-    emit newLine(QString());
+    Q_EMIT newLine(QString());
 }

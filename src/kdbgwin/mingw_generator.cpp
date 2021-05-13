@@ -147,5 +147,5 @@ void MingwGenerator::LoadSymbol(const QString &module, DWORD64 dwBaseAddr)
     } while (0);
 
     QString strOutput = QString::fromLatin1("Loaded %1 (%2)").arg(module).arg(symbolType);
-    emit DebugLine(strOutput);
+    Q_EMIT DebugLine(strOutput);
 }

@@ -344,7 +344,7 @@ void ReportInterface::sendBugReport()
                 m_attachToBugNumber = bugId;
                 attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
             } else {
-                emit reportSent(bugId);
+                Q_EMIT reportSent(bugId);
             }
         });
         connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
@@ -388,7 +388,7 @@ void ReportInterface::attachSent(int attachId)
     Q_UNUSED(attachId);
 
     // The bug was attached, consider it "sent"
-    emit reportSent(m_attachToBugNumber);
+    Q_EMIT reportSent(m_attachToBugNumber);
 }
 
 QStringList ReportInterface::relatedBugzillaProducts() const

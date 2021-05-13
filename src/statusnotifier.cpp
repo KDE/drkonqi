@@ -149,7 +149,7 @@ void StatusNotifier::notify()
 
     connect(notification, static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated), this, [this, crashedApp](int actionIndex) {
         if (actionIndex == 1 && m_activationAllowed) {
-            emit activated();
+            Q_EMIT activated();
         } else if (canBeRestarted(crashedApp)) {
             crashedApp->restart();
         }

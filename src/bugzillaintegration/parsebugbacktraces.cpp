@@ -116,14 +116,14 @@ void ParseBugBacktraces::parse()
 
 void ParseBugBacktraces::parse(const QString &comment)
 {
-    emit starting();
+    Q_EMIT starting();
 
     int start = 0;
     int end = -1;
     do {
         start = end + 1;
         end = comment.indexOf(QLatin1Char('\n'), start);
-        emit newLine(comment.mid(start, (end != -1 ? end - start + 1 : end)));
+        Q_EMIT newLine(comment.mid(start, (end != -1 ? end - start + 1 : end)));
     } while (end != -1);
 
     // accepts anything as backtrace, the start of the backtrace is searched later anyway

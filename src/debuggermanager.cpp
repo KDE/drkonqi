@@ -87,22 +87,22 @@ void DebuggerManager::addDebugger(AbstractDebuggerLauncher *launcher, bool emits
     connect(launcher, &AbstractDebuggerLauncher::finished, this, &DebuggerManager::onDebuggerFinished);
     connect(launcher, &AbstractDebuggerLauncher::invalidated, this, &DebuggerManager::onDebuggerInvalidated);
     if (emitsignal) {
-        emit externalDebuggerAdded(launcher);
+        Q_EMIT externalDebuggerAdded(launcher);
     }
 }
 
 void DebuggerManager::onDebuggerStarting()
 {
     d->debuggerRunning = true;
-    emit debuggerStarting();
-    emit debuggerRunning(true);
+    Q_EMIT debuggerStarting();
+    Q_EMIT debuggerRunning(true);
 }
 
 void DebuggerManager::onDebuggerFinished()
 {
     d->debuggerRunning = false;
-    emit debuggerFinished();
-    emit debuggerRunning(false);
+    Q_EMIT debuggerFinished();
+    Q_EMIT debuggerRunning(false);
 }
 
 void DebuggerManager::onDebuggerInvalidated()
@@ -112,5 +112,5 @@ void DebuggerManager::onDebuggerInvalidated()
     int index = d->externalDebuggers.indexOf(launcher);
     Q_ASSERT(index >= 0);
     d->externalDebuggers.removeAt(index);
-    emit externalDebuggerRemoved(launcher);
+    Q_EMIT externalDebuggerRemoved(launcher);
 }

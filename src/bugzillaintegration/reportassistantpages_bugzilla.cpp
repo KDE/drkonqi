@@ -317,7 +317,7 @@ void BugzillaLoginPage::loginFinished(bool logged)
             }
         }
 
-        emit loggedTurnToNextPage();
+        Q_EMIT loggedTurnToNextPage();
     } else {
         ui.m_statusWidget->setIdle(i18nc("@info:status", "<b>Error: Invalid e-mail address or password</b>"));
         updateWidget(true);
@@ -737,7 +737,7 @@ void BugzillaSendPage::sent(int bug_id)
                                        "You can now close this window.",
                                        reportUrl));
 
-    emit finished(false);
+    Q_EMIT finished(false);
 }
 
 void BugzillaSendPage::sendError(const QString &errorString)

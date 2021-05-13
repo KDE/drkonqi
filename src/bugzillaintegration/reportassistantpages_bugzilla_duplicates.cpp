@@ -674,7 +674,7 @@ void BugzillaReportInformationDialog::showBugReport(int bugNumber, bool relatedB
     KConfigGroup config(KSharedConfig::openConfig(), "BugzillaReportInformationDialog");
     bool showOwnBacktrace = config.readEntry("ShowOwnBacktrace", false);
     ui.m_showOwnBacktraceCheckBox->setChecked(showOwnBacktrace);
-    if (!showOwnBacktrace) { // setChecked(false) will not emit toggled(false)
+    if (!showOwnBacktrace) { // setChecked(false) will not Q_EMIT toggled(false)
         toggleShowOwnBacktrace(false);
     }
 
@@ -891,13 +891,13 @@ void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment:
 
 void BugzillaReportInformationDialog::markAsDuplicate()
 {
-    emit possibleDuplicateSelected(m_bugNumber);
+    Q_EMIT possibleDuplicateSelected(m_bugNumber);
     hide();
 }
 
 void BugzillaReportInformationDialog::attachToBugReport()
 {
-    emit attachToBugReportSelected(m_bugNumber);
+    Q_EMIT attachToBugReportSelected(m_bugNumber);
     hide();
 }
 

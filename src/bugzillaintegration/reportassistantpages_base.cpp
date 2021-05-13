@@ -267,7 +267,7 @@ void ConclusionPage::aboutToShow()
         if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
             ui.m_restartAppOnFinish->setVisible(true);
         }
-        emit finished(false /* don't enable back button - the user can't improve this result*/);
+        Q_EMIT finished(false /* don't enable back button - the user can't improve this result*/);
         return;
     }
 
@@ -386,7 +386,7 @@ void ConclusionPage::aboutToShow()
                                                    "report at <link>%1</link>.",
                                                    reportAddress));
 
-            emit finished(false);
+            Q_EMIT finished(false);
         }
 
     } else { // (m_needToReport)
@@ -424,7 +424,7 @@ void ConclusionPage::aboutToShow()
                                                        reportAddress));
             }
         }
-        emit finished(true);
+        Q_EMIT finished(true);
     }
 }
 

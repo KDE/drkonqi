@@ -48,5 +48,5 @@ ReportAssistantDialog *ReportAssistantPage::assistant() const
 
 void ReportAssistantPage::emitCompleteChanged()
 {
-    emit completeChanged(this, isComplete());
+    Q_EMIT completeChanged(this, isComplete());
 }

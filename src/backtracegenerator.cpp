@@ -57,7 +57,7 @@ void BacktraceGenerator::start()
     if (!m_debugger.isValid() || !m_debugger.isInstalled()) {
         qCWarning(DRKONQI_LOG) << "Debugger valid" << m_debugger.isValid() << "installed" << m_debugger.isInstalled();
         m_state = FailedToStart;
-        emit failedToStart();
+        Q_EMIT failedToStart();
         return;
     }
 
@@ -81,7 +81,7 @@ void BacktraceGenerator::slotReadInput()
         QString line = QString::fromLocal8Bit(m_output.constData(), pos + 1);
         m_output.remove(0, pos + 1);
 
-        emit newLine(line);
+        Q_EMIT newLine(line);
         line = line.simplified();
         if (line.startsWith(QLatin1String("Process ")) && line.endsWith(QLatin1String(" detached"))) {
             // lldb is acting on a detach command (in lldbrc)
@@ -111,11 +111,11 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     m_temp = nullptr;
 
     // mark the end of the backtrace for the parser
-    emit newLine(QString());
+    Q_EMIT newLine(QString());
 
     if (exitStatus != QProcess::NormalExit || exitCode != 0) {
         m_state = Failed;
-        emit someError();
+        Q_EMIT someError();
         return;
     }
 
@@ -132,7 +132,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     m_parsedBacktrace += m_debugParser->parsedBacktrace(); // it's not really parsed, it's from the null parser.
 #endif
 
-    emit done();
+    Q_EMIT done();
 }
 
 void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
@@ -148,11 +148,11 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
     switch (error) {
     case QProcess::FailedToStart:
         m_state = FailedToStart;
-        emit failedToStart();
+        Q_EMIT failedToStart();
         break;
     default:
         m_state = Failed;
-        emit someError();
+        Q_EMIT someError();
         break;
     }
 }

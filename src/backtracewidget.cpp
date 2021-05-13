@@ -160,7 +160,7 @@ void BacktraceWidget::regenerateBacktrace()
         anotherDebuggerRunning();
     }
 
-    emit stateChanged();
+    Q_EMIT stateChanged();
 }
 
 void BacktraceWidget::generateBacktrace()
@@ -171,11 +171,11 @@ void BacktraceWidget::generateBacktrace()
     } else if (m_btGenerator->state() == BacktraceGenerator::Loading) {
         // Set in loading state, the widget will catch the backtrace events anyway
         setAsLoading();
-        emit stateChanged();
+        Q_EMIT stateChanged();
     } else {
         //*Finished* states
         setAsLoading();
-        emit stateChanged();
+        Q_EMIT stateChanged();
         // Load already generated information
         loadData();
     }
@@ -327,7 +327,7 @@ void BacktraceWidget::loadData()
 
     ui.m_reloadBacktraceButton->setEnabled(true);
 
-    emit stateChanged();
+    Q_EMIT stateChanged();
 }
 
 void BacktraceWidget::backtraceNewLine(const QString &line)

@@ -33,6 +33,6 @@ void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
         qCDebug(DRKONQI_LOG) << "Process" << m_pid << "finished. kill(2) returned errno:" << errno;
         killTimer(event->timerId());
         m_pid = 0;
-        emit processFinished();
+        Q_EMIT processFinished();
     }
 }
