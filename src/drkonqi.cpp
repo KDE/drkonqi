@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -28,11 +29,31 @@
 #include "drkonqibackends.h"
 #include "systeminformation.h"
 
+#ifdef SYSTEMD_AVAILABLE
+#include "coredumpbackend.h"
+#endif
+
 using namespace std::chrono_literals;
+
+static AbstractDrKonqiBackend *factorizeBackend()
+{
+    // This is controlled by the environment because doing it as a cmdline option is supremely horrible because
+    // DrKonqi is a singleton that gets created at a random point in time, while options are only set on it afterwards.
+    // Since we don't want a nullptr backend we'll need the backend factorization to be independent of the cmdline.
+    // This could maybe be changed but would require substantial rejiggering of the singleton to not have points in
+    // time where there is no backend behind it.
+#ifdef SYSTEMD_AVAILABLE
+    if (qgetenv("DRKONQI_BACKEND") == QByteArrayLiteral("COREDUMPD")) {
+        qunsetenv("DRKONQI_BACKEND");
+        return new CoredumpBackend;
+    }
+#endif
+    return new KCrashBackend();
+}
 
 DrKonqi::DrKonqi()
     : m_systemInformation(new SystemInformation())
-    , m_backend(new KCrashBackend())
+    , m_backend(factorizeBackend())
     , m_signal(0)
     , m_pid(0)
     , m_kdeinit(false)
@@ -226,6 +247,11 @@ public:
 
 void DrKonqi::shutdownSaveReport()
 {
+    if (!DrKonqi::isEphemeralCrash()) { // No need to make a backtrace if the crash isn't ephemeral (e.g. from coredumpd)
+        qApp->quit();
+        return;
+    }
+
     auto btGenerator = instance()->debuggerManager()->backtraceGenerator();
     auto shutdownHelper = new ShutdownHelper();
     QObject::connect(btGenerator, &BacktraceGenerator::done, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
@@ -405,6 +431,16 @@ const QString &DrKonqi::kdeBugzillaURL()
 const QString &DrKonqi::startupId()
 {
     return instance()->m_startupId;
+}
+
+bool DrKonqi::isEphemeralCrash()
+{
+    return qobject_cast<CoredumpBackend *>(instance()->m_backend) == nullptr; // not coredumpd backend => ephemeral
+}
+
+void DrKonqi::cleanupBeforeQuit()
+{
+    instance()->m_backend->cleanup();
 }
 
 #include "drkonqi.moc"

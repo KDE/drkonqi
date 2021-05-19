@@ -75,6 +75,8 @@ public:
     static void
     expandString(QString &str, ExpandStringUsage usage = ExpansionUsagePlainText, const QString &tempFile = QString(), const QString &preambleFile = QString());
 
+    static Debugger findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName);
+
 private:
     static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
     KSharedConfig::Ptr m_config;

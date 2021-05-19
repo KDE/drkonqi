@@ -114,6 +114,16 @@ target_link_libraries(
     qbugzilla
 )
 
+if(Systemd_FOUND)
+    add_subdirectory(coredump)
+
+    target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp)
+    target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
+    if(Systemd_VERSION GREATER 247)
+        add_compile_definitions(COREDUMPD_SUPPORTS_DEBUGGER_ARGUMENTS)
+    endif()
+endif()
+
 if(WIN32)
     target_link_libraries(DrKonqiInternal kdewin)
 endif()

@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -19,6 +20,7 @@ public:
     virtual ~AbstractDrKonqiBackend();
     virtual bool init();
     virtual void prepareForDebugger();
+    void cleanup(); // cleanup on-disk caches
 
     inline CrashedApplication *crashedApplication() const
     {
@@ -29,6 +31,8 @@ public:
     {
         return m_debuggerManager;
     }
+
+    static QString metadataPath();
 
 Q_SIGNALS:
     void preparedForDebugger();
@@ -48,6 +52,7 @@ class KCrashBackend : public AbstractDrKonqiBackend
 public:
     using AbstractDrKonqiBackend::AbstractDrKonqiBackend;
     ~KCrashBackend() override;
+
     bool init() override;
 
 protected:

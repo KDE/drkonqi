@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -57,6 +58,16 @@ public:
     static bool ignoreQuality();
     static const QString &kdeBugzillaURL();
     static const QString &startupId();
+
+    // An ephemeral crash is one that cannot be restarted at a later point.
+    // e.g. KCrashBackend is ephemeral, CoredumpBackend is not.
+    static bool isEphemeralCrash();
+
+    // Clean before quitting. This is not meant to ever get called if the quitting isn't the direct result of
+    // an intentional quit. The primary effect of this function is that the backend will clean up persistent
+    // backing data, such as coredumpd metadata files. We only want this to happen when we are certain
+    // that the user has seen the crash but chosen to ignore it (e.g. closed the dialog window)
+    static void cleanupBeforeQuit();
 
 private:
     DrKonqi();

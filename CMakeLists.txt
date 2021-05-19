@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} )
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -52,6 +52,20 @@ find_package(
         SyntaxHighlighting
 )
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
+
+find_package(Systemd)
+set_package_properties(Systemd PROPERTIES TYPE RECOMMENDED PURPOSE "Coredumpd integration.")
+
+if(Systemd_FOUND)
+    find_package(coredumpctl)
+    set_package_properties(
+        coredumpctl
+        PROPERTIES
+        TYPE RUNTIME
+        DESCRIPTION "coredumpd CLI. part of systemd"
+        PURPOSE "Required for coredumpd support to work at runtime!"
+    )
+endif()
 
 if(MINGW)
     find_package(ZLIB REQUIRED)

@@ -72,9 +72,19 @@ Name[x-test]=xxgdbxx
 Name[zh_CN]=gdb
 Name[zh_TW]=gdb
 TryExec=gdb
-Backends=KCrash
+Backends=KCrash|coredumpd|coredumpd-248+
 
 [KCrash]
 Exec=gdb -nw -n -batch -x %preamblefile -x %tempfile -p %pid %execpath
+PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+BatchCommands=thread\nthread apply all bt
+
+[coredumpd]
+Exec=gdb --nw --nx --batch --command=%preamblefile --command=%tempfile --core=%corefile %execpath
+PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+BatchCommands=thread\nthread apply all bt
+
+[coredumpd-248+]
+Exec=coredumpctl debug --debugger=gdb --debugger-arguments="--nw --nx --batch --command=%preamblefile --command=%tempfile %execpath" %pid
 PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
 BatchCommands=thread\nthread apply all bt

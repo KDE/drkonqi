@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -111,6 +112,7 @@ void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString
         {QLatin1String("tempfile"), tempFile},
         {QLatin1String("preamblefile"), preambleFile},
         {QLatin1String("thread"), QString::number(appInfo->thread())},
+        {QStringLiteral("corefile"), appInfo->m_coreFile},
     };
 
     if (usage == ExpansionUsageShell) {
@@ -145,4 +147,33 @@ QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString 
         }
     }
     return result.values();
+}
+
+Debugger Debugger::findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName)
+{
+    Debugger firstKnownGoodDebugger;
+    Debugger preferredDebugger;
+    for (const Debugger &debugger : debuggers) {
+        qCDebug(DRKONQI_LOG) << "Check debugger if" << debugger.displayName() << "[" << debugger.codeName() << "]"
+                             << "is installed:" << debugger.isInstalled();
+        if (!firstKnownGoodDebugger.isValid() && debugger.isInstalled()) {
+            firstKnownGoodDebugger = debugger;
+        }
+        if (debugger.codeName() == defaultDebuggerCodeName) {
+            preferredDebugger = debugger;
+        }
+        if (firstKnownGoodDebugger.isValid() && preferredDebugger.isValid()) {
+            break;
+        }
+    }
+
+    if (!preferredDebugger.isInstalled()) {
+        if (firstKnownGoodDebugger.isValid()) {
+            preferredDebugger = firstKnownGoodDebugger;
+        } else {
+            qCWarning(DRKONQI_LOG) << "Unable to find an internal debugger that can work with the crash backend";
+        }
+    }
+
+    return preferredDebugger;
 }

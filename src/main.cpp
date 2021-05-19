@@ -2,6 +2,7 @@
  * drkonqi - The KDE Crash Handler
  *
  * SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
+ * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
@@ -44,11 +45,19 @@ static const char description[] = I18N_NOOP(
 
 namespace
 {
+// Clean on-disk data before quitting. This ought to only happen if we are
+// certain that the user doesn't want the crash to appear again.
+void cleanupAfterUserQuit()
+{
+    DrKonqi::cleanupBeforeQuit();
+    qApp->quit();
+}
+
 void openDrKonqiDialog()
 {
     auto *w = new DrKonqiDialog();
     QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
-    QObject::connect(w, &DrKonqiDialog::rejected, qApp, &QApplication::quit);
+    QObject::connect(w, &DrKonqiDialog::rejected, qApp, &cleanupAfterUserQuit);
     w->show();
 #ifdef Q_OS_MACOS
     KWindowSystem::forceActiveWindow(w->winId());
@@ -65,7 +74,7 @@ void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
     if (!restarted) {
         statusNotifier->notify();
     }
-    QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &QApplication::quit);
+    QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &cleanupAfterUserQuit);
     QObject::connect(statusNotifier, &StatusNotifier::activated, &openDrKonqiDialog);
 }
 

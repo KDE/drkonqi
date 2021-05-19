@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -94,6 +95,10 @@ protected:
     int m_thread;
     QDateTime m_datetime;
     bool m_hasDeletedFiles;
+
+public:
+    // Only set for the 'coredumpd' backend. Path to on-disk core dump.
+    QString m_coreFile;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app);

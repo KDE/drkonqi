@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -22,6 +23,7 @@
 #include <QStandardPaths>
 
 #include "backtracegenerator.h"
+#include "coredump/metadata.h"
 #include "crashedapplication.h"
 #include "debugger.h"
 #include "debuggermanager.h"
@@ -46,6 +48,34 @@ bool AbstractDrKonqiBackend::init()
 void AbstractDrKonqiBackend::prepareForDebugger()
 {
     Q_EMIT preparedForDebugger();
+}
+
+void AbstractDrKonqiBackend::cleanup()
+{
+    // Cleanup of a potential metadata.
+    // NOTE: This MUST be run regardless of the backend. If drkonqi has not crashed or quit because of a session logout
+    // we must clean the metadata. Otherwise the coredump helper may produce a second drkonqi instance.
+    // Lack of a metadata file indicates that drkonqi had been run on the crash already.
+    qCDebug(DRKONQI_LOG) << "Cleaning up" << metadataPath();
+    if (!metadataPath().isEmpty()) {
+        QFile::remove(metadataPath());
+    }
+}
+
+static QString resolveMetadataPath()
+{
+    const QString envPath = qEnvironmentVariable("DRKONQI_METADATA_FILE");
+    if (!envPath.isEmpty()) {
+        qunsetenv("DRKONQI_METADATA_FILE");
+        return envPath;
+    }
+    return Metadata::resolveMetadataPath(DrKonqi::pid()); // resolve manually
+}
+
+QString AbstractDrKonqiBackend::metadataPath()
+{
+    static QString path = resolveMetadataPath();
+    return path;
 }
 
 KCrashBackend::~KCrashBackend()
@@ -169,7 +199,6 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
-    QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
     KConfigGroup config(KSharedConfig::openConfig(), "DrKonqi");
 #if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED > 1070
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("lldb"));
@@ -179,31 +208,12 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("cdb"));
 #endif
 
-    Debugger firstKnownGoodDebugger, preferredDebugger;
-    for (const Debugger &debugger : std::as_const(internalDebuggers)) {
-        qCDebug(DRKONQI_LOG) << "Check debugger if" << debugger.displayName() << "[" << debugger.codeName() << "]"
-                             << "is installed:" << debugger.isInstalled();
-        if (!firstKnownGoodDebugger.isValid() && debugger.isInstalled()) {
-            firstKnownGoodDebugger = debugger;
-        }
-        if (debugger.codeName() == defaultDebuggerName) {
-            preferredDebugger = debugger;
-        }
-        if (firstKnownGoodDebugger.isValid() && preferredDebugger.isValid()) {
-            break;
-        }
-    }
+    const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
+    const QList<Debugger> externalDebuggers = Debugger::availableExternalDebuggers(QStringLiteral("KCrash"));
 
-    if (!preferredDebugger.isInstalled()) {
-        if (firstKnownGoodDebugger.isValid()) {
-            preferredDebugger = firstKnownGoodDebugger;
-        } else {
-            qCWarning(DRKONQI_LOG) << "Unable to find an internal debugger that can work with the KCrash backend";
-        }
-    }
-
+    const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, defaultDebuggerName));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
-    return new DebuggerManager(preferredDebugger, Debugger::availableExternalDebuggers(QStringLiteral("KCrash")), this);
+    return new DebuggerManager(preferredDebugger, externalDebuggers, this);
 }
 
 void KCrashBackend::stopAttachedProcess()
