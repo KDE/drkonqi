@@ -15,6 +15,7 @@
 #include <cerrno>
 #include <memory>
 #include <utility>
+#include <optional>
 
 #include <sys/resource.h>
 #include <sys/socket.h>
