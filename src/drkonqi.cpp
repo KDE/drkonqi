@@ -435,7 +435,11 @@ const QString &DrKonqi::startupId()
 
 bool DrKonqi::isEphemeralCrash()
 {
+#ifdef SYSTEMD_AVAILABLE
     return qobject_cast<CoredumpBackend *>(instance()->m_backend) == nullptr; // not coredumpd backend => ephemeral
+#else
+    return true;
+#endif
 }
 
 void DrKonqi::cleanupBeforeQuit()
