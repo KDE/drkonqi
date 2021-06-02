@@ -97,29 +97,32 @@ void StatusNotifier::show()
     // open the dialog.
     // We are tracking the related Notifications service here, because actually
     // tracking the Host interface is fairly involved with no tangible advantage.
-    auto activateTimer = new QTimer(this);
-    activateTimer->setInterval(10s);
-    connect(activateTimer, &QTimer::timeout, this, &StatusNotifier::activated);
 
-    auto watcher =
-        new QDBusServiceWatcher(QStringLiteral("org.freedesktop.Notifications"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, activateTimer, QOverload<>::of(&QTimer::start));
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered, activateTimer, &QTimer::stop);
+    const QDBusConnection sessionBus = QDBusConnection::sessionBus();
+    const QDBusConnectionInterface *sessionInterface = sessionBus.interface();
+    Q_ASSERT(sessionInterface);
 
-    // make sure the user doesn't miss the SNI by stopping the auto hide timer when the session becomes idle
-    int idleId = KIdleTime::instance()->addIdleTimeout(int(std::chrono::milliseconds(30s).count()));
-    connect(KIdleTime::instance(), static_cast<void (KIdleTime::*)(int, int)>(&KIdleTime::timeoutReached), this, [this, idleId](int id) {
-        if (idleId == id) {
-            m_autoCloseTimer->stop();
+    auto watcher = new QDBusServiceWatcher(this);
+    watcher->setConnection(sessionBus);
+    watcher->setWatchMode(QDBusServiceWatcher::WatchForOwnerChange);
+
+    // org.kde.StatusNotifierWatcher (kded5): SNI won't be registered
+    // org.freedesktop.Notifications (plasmashell): SNI won't be visualized
+    for (const auto &serviceName : {QStringLiteral("org.kde.StatusNotifierWatcher"), QStringLiteral("org.freedesktop.Notifications")}) {
+        auto activationTimer = new QTimer(this);
+        activationTimer->setInterval(10s);
+        connect(activationTimer, &QTimer::timeout, this, &StatusNotifier::activated);
+
+        watcher->addWatchedService(serviceName);
+        connect(watcher, &QDBusServiceWatcher::serviceUnregistered, activationTimer, QOverload<>::of(&QTimer::start));
+        connect(watcher, &QDBusServiceWatcher::serviceRegistered, activationTimer, &QTimer::stop);
+
+        // if not currently available queue the activation - this is in case the service isn't available *right now*
+        // in which case we'll not get any registration events
+        if (!sessionInterface->isServiceRegistered(serviceName)) {
+            activationTimer->start();
         }
-        // this is apparently needed or else resumingFromIdle is never called
-        KIdleTime::instance()->catchNextResumeEvent();
-    });
-    connect(KIdleTime::instance(), &KIdleTime::resumingFromIdle, this, [this] {
-        if (!m_autoCloseTimer->isActive()) {
-            m_autoCloseTimer->start();
-        }
-    });
+    }
 }
 
 void StatusNotifier::notify()
