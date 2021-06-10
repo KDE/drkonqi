@@ -87,7 +87,7 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                                                                 DrKonqi::programName(),
                                                                 DrKonqi::productName(),
                                                                 datetime,
-                                                                true, // pretend its been restarted since we can't tell with coredump
+                                                                true, // pretend it's been restarted since we can't tell with coredump
                                                                 hasDeletedFiles);
 
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
