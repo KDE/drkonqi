@@ -17,4 +17,4 @@ RuntimeMaxSec=30 minutes
 # left over should then get cleaned up (if the file is old enough).
 # Since we currently lack the UI infrastructure for that we had better clean up on login
 # unconditionally.
-WantedBy=plasma-core.target
+WantedBy=default.target
