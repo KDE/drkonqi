@@ -370,6 +370,33 @@ BugzillaInformationPage::BugzillaInformationPage(ReportAssistantDialog *parent)
     loadDistroCombo();
 }
 
+// Helps to track textual blocks we insert into text edits.
+// This is intended to ensure the cursor is at the end of the first block
+// e.g.
+//   foo:\n
+//    <- cursor here
+//   bar:\n
+// To that end the function accepts an input position which is -1 when not initialized.
+// The first block initializes it to the position after appending, all subsquent blocks
+// return the input position again. Blocks prepend themselves when the position is >=0
+// Nice to have and easy to do but not strictly necessary -> https://bugs.kde.org/show_bug.cgi?id=438736
+static int appendAndKeepPosition(QTextEdit *edit, const QString &text, int position)
+{
+    const bool hasPosition = position >= 0;
+
+    if (hasPosition) {
+        edit->append(QString()); // append empty paragraph in case there was previous block (i.e. add extra newline)
+    }
+
+    edit->append(text); // modifies cursor
+
+    if (!hasPosition) {
+        return edit->textCursor().position();
+    }
+
+    return position;
+}
+
 void BugzillaInformationPage::aboutToShow()
 {
     // Calculate the minimum number of characters required for a description
@@ -379,18 +406,22 @@ void BugzillaInformationPage::aboutToShow()
     m_requiredCharacters = 20 + (reportInterface()->selectedOptionsRating() * multiplier);
 
     // Fill the description textedit with some headings:
-    QString descriptionTemplate;
     if (ui.m_detailsEdit->toPlainText().isEmpty()) {
+        int position = -1;
         if (reportInterface()->userCanProvideActionsAppDesktop()) {
-            descriptionTemplate += QLatin1String("- What I was doing when the application crashed:\n\n");
+            position = appendAndKeepPosition(ui.m_detailsEdit, QStringLiteral("- What I was doing when the application crashed:\n"), position);
         }
         if (reportInterface()->userCanProvideUnusualBehavior()) {
-            descriptionTemplate += QLatin1String("- Unusual behavior I noticed:\n\n");
+            position = appendAndKeepPosition(ui.m_detailsEdit, QStringLiteral("- Unusual behavior I noticed:\n"), position);
         }
         if (reportInterface()->userCanProvideApplicationConfigDetails()) {
-            descriptionTemplate += QLatin1String("- Custom settings of the application:\n\n");
+            position = appendAndKeepPosition(ui.m_detailsEdit, QStringLiteral("- Custom settings of the application:\n"), position);
         }
-        ui.m_detailsEdit->setText(descriptionTemplate);
+        if (position >= 0) {
+            QTextCursor cursor = ui.m_detailsEdit->textCursor();
+            cursor.setPosition(position);
+            ui.m_detailsEdit->setTextCursor(cursor);
+        }
     }
     // If attaching this report to an existing one then the title is not needed
     bool showTitle = (reportInterface()->attachToBugNumber() == 0);
