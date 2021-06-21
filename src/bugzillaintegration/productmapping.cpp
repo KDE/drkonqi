@@ -172,6 +172,8 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
     // usually means that version is outdated and not supported anymore.
     const QStringList &inactiveVersions = product->inactiveVersions();
     m_bugzillaVersionDisabled = inactiveVersions.contains(m_bugzillaVersionString);
+
+    Q_EMIT resolved();
 }
 
 void ProductMapping::fallBackToKDE()
@@ -186,6 +188,8 @@ void ProductMapping::fallBackToKDE()
     m_bugzillaProductOriginal = m_bugzillaProduct;
     m_bugzillaProduct = QStringLiteral("kde");
     m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
+
+    Q_EMIT resolved();
 }
 
 QStringList ProductMapping::relatedBugzillaProducts() const

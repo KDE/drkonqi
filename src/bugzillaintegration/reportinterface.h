@@ -83,6 +83,7 @@ public:
 
     BugzillaManager *bugzillaManager() const;
     ApplicationDetailsExamples *appDetailsExamples() const;
+    ProductMapping *productMapping() const;
 
     bool userCanProvideActionsAppDesktop() const
     {

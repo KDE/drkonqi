@@ -35,6 +35,7 @@ public:
 #define PAGE_AWARENESS_ID "AwarenessID"
 #define PAGE_CONCLUSIONS_ID "ConclusionsID"
 #define PAGE_BZVERSION_ID "BugzillaVersionID"
+#define PAGE_BZENTITIES_ID "BugzillaSupportedEntitiesID"
 #define PAGE_BZLOGIN_ID "BugzillaLoginID"
 #define PAGE_BZDUPLICATES_ID "BugzillaDuplicatesID"
 #define PAGE_BZDETAILS_ID "BugzillaDetailsID"

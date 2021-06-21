@@ -23,6 +23,7 @@
 #include "parser/backtraceparser.h"
 
 #include "aboutbugreportingdialog.h"
+#include "assistantpage_bugzilla_supported_entities.h"
 #include "assistantpage_bugzilla_version.h"
 #include "crashedapplication.h"
 #include "reportassistantpages_base.h"
@@ -63,6 +64,14 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
         m_pageItems.push_back(m_introductionPage);
     }
 
+    // Version check page
+    auto *versionPage = new BugzillaVersionPage(this);
+    m_pageWidgetMap.insert(QLatin1String(PAGE_BZVERSION_ID), versionPage->item());
+
+    // Product and version are valid page
+    auto *entityPage = new BugzillaSupportedEntitiesPage(this);
+    m_pageWidgetMap.insert(QLatin1String(PAGE_BZENTITIES_ID), entityPage->item());
+
     //-Bug Awareness Page
     auto *m_awareness = new BugAwarenessPage(this);
     connectSignals(m_awareness);
@@ -90,10 +99,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     m_conclusionsPage->setHeader(i18nc("@title", "Results of the Analyzed Crash Details"));
     m_conclusionsPage->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
     connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
-
-    // Version check page
-    auto *versionPage = new BugzillaVersionPage(this);
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZVERSION_ID), versionPage->item());
 
     //-Bugzilla Login
     auto *m_bugzillaLogin = new BugzillaLoginPage(this);
@@ -142,10 +147,11 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
 
     // Need to append because the welcome page is conditionally pushed early on.
     m_pageItems.insert(m_pageItems.end(),
-                       {m_awarenessPage,
+                       {versionPage->item(),
+                        entityPage->item(),
+                        m_awarenessPage,
                         m_backtracePage,
                         m_conclusionsPage,
-                        versionPage->item(),
                         m_bugzillaLoginPage,
                         m_bugzillaDuplicatesPage,
                         m_bugzillaInformationPage,

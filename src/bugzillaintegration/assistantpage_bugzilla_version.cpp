@@ -10,12 +10,18 @@
 #include <QGuiApplication>
 
 #include "bugzillalib.h"
+#include "crashedapplication.h"
+#include "drkonqi.h"
 
 BugzillaVersionPage::BugzillaVersionPage(ReportAssistantDialog *parent)
     : ReportAssistantPage(parent)
     , ui(new Ui::BugzillaVersionPage)
     , m_item(new KPageWidgetItem(this))
 {
+    if (!DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
+        appropriate = false;
+        return; // never appropriate as bugzilla doesn't matter
+    }
     // This item is intentionally not titled. The page should usually not show
     // up when when it shows up it should focus on the bare essentials!
     m_item->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));

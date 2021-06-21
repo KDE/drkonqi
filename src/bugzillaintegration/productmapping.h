@@ -39,6 +39,8 @@ public:
     bool bugzillaProductDisabled() const;
     bool bugzillaVersionDisabled() const;
 
+    Q_SIGNAL void resolved();
+
 private Q_SLOTS:
     void checkProductInfo(const Bugzilla::Product::Ptr);
     // Fall back to generic product because the product failed to resolve.
