@@ -43,7 +43,7 @@ BugzillaSupportedEntitiesPage::BugzillaSupportedEntitiesPage(ReportAssistantDial
         }
         if (mapping->bugzillaVersionDisabled()) {
             ui->errorLabel->setText(xi18nc("@info",
-                                           "The Version <resource>%1</resource> of the prodcut <resource>%2</resource> is no longer supported.",
+                                           "The Version <resource>%1</resource> of the product <resource>%2</resource> is no longer supported.",
                                            mapping->bugzillaVersion(),
                                            mapping->bugzillaProduct()));
             errorOut();
