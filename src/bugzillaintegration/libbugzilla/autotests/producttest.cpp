@@ -67,12 +67,21 @@ private Q_SLOTS:
         QCOMPARE(product->componentNames(), QStringList({"general"}));
         QCOMPARE(product->allVersions(),
                  QStringList({"2.0", "2.0-beta1", "2.0-git", "2.0.x", "17.04", "17.08", "17.12", "18.04", "18.08", "18.12", "SVN", "unspecified"}));
+        QCOMPARE(product->inactiveVersions(), QStringList({"2.0", "2.0-beta1", "2.0-git", "2.0.x", "SVN"}));
 
         QCOMPARE(product->versions().size(), 12);
-        auto version = product->versions()[0];
-        QCOMPARE(version->id(), 4408);
-        QCOMPARE(version->name(), "2.0");
-        QCOMPARE(version->isActive(), false);
+        { // inactive version
+            auto version = product->versions()[0];
+            QCOMPARE(version->id(), 4408);
+            QCOMPARE(version->name(), "2.0");
+            QCOMPARE(version->isActive(), false);
+        }
+        { // active version
+            auto version = product->versions()[11];
+            QCOMPARE(version->id(), 3239);
+            QCOMPARE(version->name(), "unspecified");
+            QCOMPARE(version->isActive(), true);
+        }
 
         QCOMPARE(product->components().size(), 1);
         auto component = product->components()[0];

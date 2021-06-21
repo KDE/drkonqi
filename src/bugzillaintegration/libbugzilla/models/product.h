@@ -18,7 +18,7 @@ class ProductVersion : public QObject
     Q_OBJECT
     Q_PROPERTY(int id READ id WRITE setId)
     Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(bool active READ isActive WRITE setActive)
+    Q_PROPERTY(bool is_active READ isActive WRITE setActive)
 public:
     int id() const
     {
