@@ -14,8 +14,8 @@
 
 #include <cerrno>
 #include <memory>
-#include <utility>
 #include <optional>
+#include <utility>
 
 #include <sys/resource.h>
 #include <sys/socket.h>
@@ -47,7 +47,7 @@ struct Expected {
 // Wrapper around C double pointer API of which we must take ownership.
 // errno may or may not be
 template<typename T, typename Func, typename... Args>
-Expected<T> owning_ptr_call(Func func, Args &&... args)
+Expected<T> owning_ptr_call(Func func, Args &&...args)
 {
     T *raw = nullptr;
     const int ret = func(&raw, std::forward<Args>(args)...);
@@ -56,7 +56,7 @@ Expected<T> owning_ptr_call(Func func, Args &&... args)
 
 // Same as owning_ptr_call but for (sd_journal *, foo **, ...) API
 template<typename T, typename Func, typename... Args>
-Expected<T> contextual_owning_ptr_call(Func func, sd_journal *context, Args &&... args)
+Expected<T> contextual_owning_ptr_call(Func func, sd_journal *context, Args &&...args)
 {
     T *raw = nullptr;
     const int ret = func(context, &raw, std::forward<Args>(args)...);
