@@ -9,12 +9,12 @@
 
 #include "duplicatefinderjob.h"
 
-#include "drkonqi_debug.h"
+#include <QtConcurrent>
 
 #include "backtracegenerator.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
-#include "parsebugbacktraces.h"
+#include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 
 DuplicateFinderJob::DuplicateFinderJob(const QList<Bugzilla::Bug::Ptr> &bugs, BugzillaManager *manager, QObject *parent)
@@ -88,11 +88,26 @@ void DuplicateFinderJob::slotCommentsFetched(const QList<Bugzilla::Comment::Ptr>
     //   request the comments again instead of holding the potentially very large
     //   comments in memory.
 
-    ParseBugBacktraces parse(comments, this);
-    parse.parse();
-
     BacktraceGenerator *btGenerator = DrKonqi::debuggerManager()->backtraceGenerator();
-    const ParseBugBacktraces::DuplicateRating rating = parse.findDuplicate(btGenerator->parser()->parsedBacktraceLines());
+    const QList<BacktraceLine> ourTraceLines = btGenerator->parser()->parsedBacktraceLines();
+
+    // QFuture the parsing. We'll not want to block the GUI thread with this nonesense.
+    auto watcher = new QFutureWatcher<ParseBugBacktraces::DuplicateRating>(this);
+    connect(watcher, &std::remove_pointer_t<decltype(watcher)>::finished, this, [this, watcher] {
+        // runs on our thread again
+        watcher->deleteLater();
+        commentsParsed(watcher->result());
+    });
+    auto future = QtConcurrent::run([comments, ourTraceLines]() -> ParseBugBacktraces::DuplicateRating {
+        ParseBugBacktraces parse(comments);
+        parse.parse();
+        return parse.findDuplicate(ourTraceLines);
+    });
+    watcher->setFuture(future);
+}
+
+void DuplicateFinderJob::commentsParsed(ParseBugBacktraces::DuplicateRating rating)
+{
     qCDebug(DRKONQI_LOG) << "Duplicate rating:" << rating;
 
     // TODO handle more cases here

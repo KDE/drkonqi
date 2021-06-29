@@ -15,6 +15,7 @@
 #include <KJob>
 
 #include "bugzillalib.h"
+#include "parsebugbacktraces.h"
 
 /**
  * Looks if of the current backtrace is a
@@ -69,6 +70,7 @@ private Q_SLOTS:
 private:
     void analyzeNextBug();
     void fetchBug(int bugId);
+    void commentsParsed(ParseBugBacktraces::DuplicateRating rating);
 
 private:
     BugzillaManager *m_manager = nullptr;
