@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <QMap>
+#include <QMultiMap>
 #include <QString>
 
 namespace Bugzilla
@@ -20,10 +20,10 @@ namespace Bugzilla
 //   through QUrlQuery to prevent encoding confusion.
 //
 // QMap is used as base because order makes test assertions easier to check.
-class Query : public QMap<QString, QString>
+class Query : public QMultiMap<QString, QString>
 {
 public:
-    using QMap<QString, QString>::QMap;
+    using QMultiMap<QString, QString>::QMultiMap;
 
     // Compat rigging so this feels like QUrlQuery and reduces porting
     // noise for bugfix backport.

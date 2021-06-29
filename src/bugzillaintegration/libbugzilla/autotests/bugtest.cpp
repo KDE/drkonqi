@@ -57,6 +57,10 @@ public:
         if (path == "/bug" && query.toString() == "product=dragonplayer2") {
             return new JobDouble{QFINDTESTDATA("data/bugs.unresolved.json")};
         }
+        if (path == "/bug" && query.toString() == "product=dragonplayerSecondProduct&product=dragonplayerFirstProduct") {
+            // simply to test the query params. returns regular unresolved result
+            return new JobDouble{QFINDTESTDATA("data/bugs.unresolved.json")};
+        }
         Q_ASSERT_X(false, "get", qUtf8Printable(QStringLiteral("unmapped: %1; %2").arg(path, query.toString())));
         return nullptr;
     }
@@ -148,6 +152,19 @@ private Q_SLOTS:
         QCOMPARE(bugs.size(), 1);
         // resolution:"" maps to NONE
         QCOMPARE(bugs.at(0)->resolution(), Bug::Resolution::NONE);
+        // None of the above should fail assertions or exception tests.
+    }
+
+    void testSearchMultipleProducts()
+    {
+        // Queries support the same argument more than once and indeed the API does too and we rely on this behavior.
+        // Make sure multiple keys are properly sent in the request.
+        Bugzilla::BugSearch search;
+        search.products = QStringList{"dragonplayerFirstProduct", "dragonplayerSecondProduct"};
+        auto job = Bugzilla::BugClient().search(search);
+        job->start();
+        QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
+        QCOMPARE(bugs.size(), 1);
         // None of the above should fail assertions or exception tests.
     }
 
