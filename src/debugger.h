@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -78,6 +79,9 @@ public:
     static Debugger findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName);
 
 private:
+    // Similar to expandString but specifically for "staticish" expansion of commands with paths resolved at runtime.
+    // Conceivably this could be changed to apply on (almost) every config read really.
+    QString expandCommand(const QString &command) const;
     static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
     KSharedConfig::Ptr m_config;
     QString m_backend;
