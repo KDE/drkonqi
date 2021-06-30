@@ -76,7 +76,7 @@ Backends=KCrash|coredumpd|coredumpd-248+
 
 [KCrash]
 Exec=gdb -nw -n -batch -x %preamblefile -x %tempfile -p %pid %execpath
-PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
 
 [coredumpd]

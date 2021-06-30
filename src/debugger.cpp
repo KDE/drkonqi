@@ -76,16 +76,34 @@ void Debugger::setUsedBackend(const QString &backendName)
 
 QString Debugger::command() const
 {
-    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("Exec", QString()) : QString();
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return {};
+    }
+    return expandCommand(m_config->group(m_backend).readPathEntry("Exec", QString()));
 }
 
 QString Debugger::backtraceBatchCommands() const
 {
-    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("BatchCommands", QString()) : QString();
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return {};
+    }
+    return expandCommand(m_config->group(m_backend).readPathEntry("BatchCommands", QString()));
 }
+
 QString Debugger::preambleCommands() const
 {
-    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readPathEntry("PreambleCommands", QString()) : QString();
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return {};
+    }
+    return expandCommand(m_config->group(m_backend).readPathEntry("PreambleCommands", QString()));
+}
+
+QString Debugger::expandCommand(const QString &command) const
+{
+    static QHash<QString, QString> map = {
+        {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName(), QStandardPaths::LocateDirectory)},
+    };
+    return KMacroExpander::expandMacros(command, map);
 }
 
 bool Debugger::runInTerminal() const
