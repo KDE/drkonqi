@@ -433,6 +433,11 @@ const QString &DrKonqi::startupId()
     return instance()->m_startupId;
 }
 
+QString DrKonqi::backendClassName()
+{
+    return QString::fromLatin1(instance()->m_backend->metaObject()->className());
+}
+
 bool DrKonqi::isEphemeralCrash()
 {
 #ifdef SYSTEMD_AVAILABLE

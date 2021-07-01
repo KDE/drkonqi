@@ -58,6 +58,7 @@ public:
     static bool ignoreQuality();
     static const QString &kdeBugzillaURL();
     static const QString &startupId();
+    static QString backendClassName();
 
     // An ephemeral crash is one that cannot be restarted at a later point.
     // e.g. KCrashBackend is ephemeral, CoredumpBackend is not.
