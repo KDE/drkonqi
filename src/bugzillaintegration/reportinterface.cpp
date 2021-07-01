@@ -147,7 +147,6 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
     report.append(QStringLiteral("Windowing System: %1\n").arg(sysInfo->windowSystem()));
-    report.append(QStringLiteral("DrKonqi: %1 [%2]\n").arg(QString::fromLatin1(PROJECT_VERSION), DrKonqi::backendClassName()));
 
     // LSB output or manually selected distro
     if (!sysInfo->distributionPrettyName().isEmpty()) {
@@ -155,6 +154,8 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     } else if (!sysInfo->bugzillaPlatform().isEmpty() && sysInfo->bugzillaPlatform() != QLatin1String("unspecified")) {
         report.append(QStringLiteral("Distribution (Platform): %1\n").arg(sysInfo->bugzillaPlatform()));
     }
+
+    report.append(QStringLiteral("DrKonqi: %1 [%2]\n").arg(QString::fromLatin1(PROJECT_VERSION), DrKonqi::backendClassName()));
     report.append(QLatin1Char('\n'));
 
     // Details of the crash situation
