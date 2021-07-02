@@ -104,6 +104,7 @@ target_link_libraries(
     KF5::Completion
     KF5::WindowSystem
     Qt::DBus
+    Qt::Concurrent
     KF5::WidgetsAddons
     KF5::Wallet
     KF5::Notifications # for status notifier
