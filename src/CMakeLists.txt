@@ -96,7 +96,6 @@ target_link_libraries(
     DrKonqiInternal
     KF5::I18n
     KF5::CoreAddons
-    KF5::Service
     KF5::ConfigWidgets
     KF5::JobWidgets
     KF5::KIOCore

@@ -17,7 +17,6 @@
 #include <KIdleTime>
 #include <KLocalizedString>
 #include <KNotification>
-#include <KService>
 #include <KStatusNotifierItem>
 
 #include "crashedapplication.h"
