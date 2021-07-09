@@ -43,20 +43,6 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
     header->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     header->setSectionResizeMode(1, QHeaderView::Interactive);
 
-    // Create manual bug report entry (first one)
-    auto *customBugItem = new QTreeWidgetItem(QStringList() << i18nc("@item:intable custom/manaul bug report number", "Manual")
-                                                            << i18nc("@item:intable custom bug report number description", "Manually enter a bug report ID"));
-    customBugItem->setData(0, Qt::UserRole, QLatin1String("custom"));
-    customBugItem->setIcon(1, QIcon::fromTheme(QStringLiteral("edit-rename")));
-
-    QString helpMessage = i18nc("@info:tooltip / whatsthis", "Select this option to manually load a specific bug report");
-    customBugItem->setToolTip(0, helpMessage);
-    customBugItem->setToolTip(1, helpMessage);
-    customBugItem->setWhatsThis(0, helpMessage);
-    customBugItem->setWhatsThis(1, helpMessage);
-
-    ui.m_bugListWidget->addTopLevelItem(customBugItem);
-
     m_searchMoreGuiItem = KGuiItem2(i18nc("@action:button", "Search for more reports"),
                                     QIcon::fromTheme(QStringLiteral("edit-find")),
                                     i18nc("@info:tooltip",
@@ -118,7 +104,7 @@ BugzillaDuplicatesPage::~BugzillaDuplicatesPage() = default;
 void BugzillaDuplicatesPage::aboutToShow()
 {
     // Perform initial search if we are not currently searching and if there are no results yet
-    if (!m_searching && ui.m_bugListWidget->topLevelItemCount() == 1 && canSearchMore()) {
+    if (!m_searching && ui.m_bugListWidget->topLevelItemCount() <= 0 && canSearchMore()) {
         searchMore();
     }
 }
@@ -138,7 +124,7 @@ void BugzillaDuplicatesPage::aboutToHide()
     // Save possible duplicates by query
     QStringList duplicatesByQuery;
     count = ui.m_bugListWidget->topLevelItemCount();
-    for (int i = 1; i < count; i++) {
+    for (int i = 0; i < count; i++) {
         duplicatesByQuery << ui.m_bugListWidget->topLevelItem(i)->text(0);
     }
     reportInterface()->setPossibleDuplicatesByQuery(duplicatesByQuery);
@@ -152,7 +138,7 @@ bool BugzillaDuplicatesPage::isComplete()
 bool BugzillaDuplicatesPage::showNextPage()
 {
     // Ask the user to check all the possible duplicates...
-    if (ui.m_bugListWidget->topLevelItemCount() != 1 && ui.m_selectedDuplicatesList->count() == 0 && reportInterface()->attachToBugNumber() == 0
+    if (ui.m_bugListWidget->topLevelItemCount() > 0 && ui.m_selectedDuplicatesList->count() == 0 && reportInterface()->attachToBugNumber() == 0
         && !m_foundDuplicate) {
         // The user didn't selected any possible duplicate nor a report to attach the new info.
         // Double check this, we need to reduce the duplicate count.
@@ -490,22 +476,7 @@ void BugzillaDuplicatesPage::openSelectedReport()
 void BugzillaDuplicatesPage::itemClicked(QTreeWidgetItem *item, int col)
 {
     Q_UNUSED(col);
-
-    int bugNumber = 0;
-    if (item->data(0, Qt::UserRole) == QLatin1String("custom")) {
-        bool ok = false;
-        bugNumber = QInputDialog::getInt(this,
-                                         i18nc("@title:window", "Enter a custom bug report number"),
-                                         i18nc("@label", "Enter the number of the bug report you want to check"),
-                                         0,
-                                         0,
-                                         1000000,
-                                         1,
-                                         &ok);
-    } else {
-        bugNumber = item->text(0).toInt();
-    }
-    showReportInformationDialog(bugNumber);
+    showReportInformationDialog(item->text(0).toInt());
 }
 
 void BugzillaDuplicatesPage::itemClicked(QListWidgetItem *item)
@@ -860,14 +831,6 @@ void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment:
             "adding a comment or a note if you can provide new valuable "
             "information which was not already mentioned.</i></note></p>",
             m_duplicatesCount);
-    }
-
-    // A manually entered bug ID could represent a normal bug
-    if (m_bug->severity() != QLatin1String("crash") && m_bug->severity() != QLatin1String("major") && m_bug->severity() != QLatin1String("grave")
-        && m_bug->severity() != QLatin1String("critical")) {
-        notes += xi18n(
-            "<p><note>This bug report is not about a crash or about any other "
-            "critical bug.</note></p>");
     }
 
     // Generate HTML text
