@@ -6,33 +6,15 @@
 #---
 
 [Mappings]
-
-#KDE Platform (kdelibs)
-kdebugdialog=kdelibs|general
-kdeinit4=kdelibs|general
-kdepasswd=kdelibs|kpasswdserver
-kdialog=kdelibs|general
-keditfiletype=kdelibs|general
-kfmclient=kdelibs|general
-kglobalaccel=kdelibs|general
-kiconfinder=kdelibs|general
-kuiserver=kdelibs|general
-kded4=kdelibs|kded
-kcmshell4=systemsettings|general
-systemsettings5=systemsettings|general
-kwalletd=kdelibs|kwallet
-kwrited=konsole|kwrited
-kbuildsycoca4=kdelibs|ksycoca
-knotify4=kdelibs|knotify
-kcminit=kde|general
-
-#KDE Frameworks
+# KDE Frameworks
 kdeinit5=frameworks-kinit|general
-
-#KDE Platform (KIO)
-kioclient=kio|general
-ktrash=kio|trash
+kwalletd5=frameworks-kwallet|kwallet
+kded5=frameworks-kded|kded
+kbuildsycoca5=frameworks-kservice|ksycoca
+ktrash5=frameworks-kio|Trash
 kiod5=frameworks-kio|general
+kpackagetool5=frameworks-kpackage|general
+plasmapkg2=frameworks-plasma|general
 
 #KDE Platform (Baloo)
 baloo_file=frameworks-baloo|Baloo File Daemon
@@ -49,28 +31,18 @@ bluedevil-network-panu=Bluedevil|general
 bluedevil-sendfile=Bluedevil|general
 bluedevil-wizard=Bluedevil/wizard
 
-#KPackage
-kpackagetool5=kpackage|general
-
 #KDE Plasma Desktop (Plasma & KRunner)
-plasma-desktop=plasma|general
-plasma-mid=plasma|general
-plasma-overlay=plasma|general
-plasma2jolie=plasma|general
-plasmagik=plasma|general
-plasmapkg=plasma|general
-knotificationareaitemtest=plasma|widget-systemtray
-knotificationicontest=plasma|widget-systemtray
-lancelot=plasma|widget-lancelot
-plasma-netbook=plasma|plasma-netbook
 kactivitymanagerd=kactivities|general
-plasma-windowed=plasma|general
-plasma-device=Active|General
+plasma-windowed=plasmashell|general
 plasmashell=plasmashell|general
 plasma-discover=Discover|discover
 plasma-discover-update=Discover|Updates (offline)
 DiscoverNotifier=Discover|discover
 org_kde_powerdevil=Powerdevil|general
+keditfiletype5=kde-cli-tools|general
+kcmshell5=kde-cli-tools|general
+systemsettings5=systemsettings|general
+kioclient5=kde-cli-tools|general
 
 #KDE Plasma SDK (Plasmate)
 plasmaengineexplorer=plasmate|general
