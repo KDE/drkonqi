@@ -81,10 +81,10 @@ BatchCommands=thread\nthread apply all bt
 
 [coredumpd]
 Exec=gdb --nw --nx --batch --command=%preamblefile --command=%tempfile --core=%corefile %execpath
-PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
 
 [coredumpd-248+]
 Exec=coredumpctl debug --debugger=gdb --debugger-arguments="--nw --nx --batch --command=%preamblefile --command=%tempfile %execpath" %pid
-PreambleCommands=set width 200\nprintf "KCRASH_INFO_MESSAGE: Content of s_kcrashErrorMessage: %s\\n", s_kcrashErrorMessage
+PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
