@@ -50,4 +50,6 @@ private:
     QPushButton *m_suggestButton;
 
     Bugzilla::Bug::Ptr m_bug = nullptr;
+
+    Q_DISABLE_COPY_MOVE(BugzillaReportInformationDialog) // rule of 5
 };

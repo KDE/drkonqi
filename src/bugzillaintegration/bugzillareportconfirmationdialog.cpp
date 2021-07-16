@@ -94,8 +94,6 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     checkProceed();
 }
 
-BugzillaReportConfirmationDialog::~BugzillaReportConfirmationDialog() = default;
-
 void BugzillaReportConfirmationDialog::checkProceed()
 {
     bool yes = ui.proceedRadioYes->isChecked();

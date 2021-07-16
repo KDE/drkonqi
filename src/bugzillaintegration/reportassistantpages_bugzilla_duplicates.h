@@ -27,7 +27,6 @@ class BugzillaDuplicatesPage : public ReportAssistantPage
 
 public:
     explicit BugzillaDuplicatesPage(ReportAssistantDialog *);
-    ~BugzillaDuplicatesPage() override;
 
     void aboutToShow() override;
     void aboutToHide() override;

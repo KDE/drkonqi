@@ -18,7 +18,6 @@ class BugzillaReportConfirmationDialog : public QDialog
 
 public:
     BugzillaReportConfirmationDialog(int bugNumber, bool commonCrash, QString closedState, BugzillaReportInformationDialog *parent);
-    ~BugzillaReportConfirmationDialog() override;
 
 private Q_SLOTS:
     void proceedClicked();

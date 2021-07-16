@@ -95,8 +95,6 @@ BugzillaDuplicatesPage::BugzillaDuplicatesPage(ReportAssistantDialog *parent)
     showDuplicatesPanel(false);
 }
 
-BugzillaDuplicatesPage::~BugzillaDuplicatesPage() = default;
-
 void BugzillaDuplicatesPage::aboutToShow()
 {
     // Perform initial search if we are not currently searching and if there are no results yet
