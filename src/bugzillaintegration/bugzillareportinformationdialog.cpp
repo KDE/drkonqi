@@ -332,7 +332,7 @@ void BugzillaReportInformationDialog::relatedReportClicked()
     confirmation->show();
 }
 
-void BugzillaReportInformationDialog::bugFetchError(QString err, QObject *jobOwner)
+void BugzillaReportInformationDialog::bugFetchError(const QString &err, QObject *jobOwner)
 {
     if (jobOwner == this && isVisible()) {
         KMessageBox::error(this,

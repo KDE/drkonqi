@@ -44,7 +44,7 @@ private Q_SLOTS:
     bool canSearchMore();
 
     void searchFinished(const QList<Bugzilla::Bug::Ptr> &);
-    void searchError(QString);
+    void searchError(const QString &);
     void analyzedDuplicates(KJob *job);
 
     /* Duplicates list related methods */

@@ -17,7 +17,7 @@
 
 BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber,
                                                                    bool commonCrash,
-                                                                   QString closedState,
+                                                                   const QString &closedState,
                                                                    BugzillaReportInformationDialog *parent)
     : QDialog(parent)
     , m_parent(parent)

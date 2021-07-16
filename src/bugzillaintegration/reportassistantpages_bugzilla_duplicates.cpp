@@ -440,7 +440,7 @@ void BugzillaDuplicatesPage::informationClicked(const QString &activatedLink)
     }
 }
 
-void BugzillaDuplicatesPage::searchError(QString err)
+void BugzillaDuplicatesPage::searchError(const QString &err)
 {
     KGuiItem::assign(ui.m_searchMoreButton, m_retrySearchGuiItem);
     markAsSearching(false);

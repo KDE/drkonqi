@@ -30,7 +30,7 @@ public:
 private Q_SLOTS:
     void bugFetchFinished(Bugzilla::Bug::Ptr bug, QObject *);
     void onCommentsFetched(QList<Bugzilla::Comment::Ptr> bugComments, QObject *jobOwner);
-    void bugFetchError(QString, QObject *);
+    void bugFetchError(const QString &, QObject *);
     void reloadReport();
     void relatedReportClicked();
     void toggleShowOwnBacktrace(bool);
