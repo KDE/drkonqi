@@ -12,20 +12,11 @@
 
 #include "reportassistantpage.h"
 
+#include <KGuiItem>
+
 #include "bugzillalib.h"
 #include "duplicatefinderjob.h"
-
 #include "ui_assistantpage_bugzilla_duplicates.h"
-#include "ui_assistantpage_bugzilla_duplicates_dialog.h"
-#include "ui_assistantpage_bugzilla_duplicates_dialog_confirmation.h"
-#include <KGuiItem>
-#include <QDate>
-#include <QDialog>
-
-class QDate;
-class QTreeWidgetItem;
-
-class KGuiItem;
 
 class BugzillaReportInformationDialog;
 
@@ -91,70 +82,4 @@ private:
     bool m_atEnd = false;
 };
 
-/** Internal bug-info dialog **/
-class BugzillaReportInformationDialog : public QDialog
-{
-    Q_OBJECT
-
-public:
-    explicit BugzillaReportInformationDialog(BugzillaDuplicatesPage *parent = nullptr);
-    ~BugzillaReportInformationDialog() override;
-
-    void showBugReport(int bugNumber, bool relatedButtonEnabled = true);
-
-    void markAsDuplicate();
-    void attachToBugReport();
-    void cancelAssistant();
-
-private Q_SLOTS:
-    void bugFetchFinished(Bugzilla::Bug::Ptr bug, QObject *);
-    void onCommentsFetched(QList<Bugzilla::Comment::Ptr> bugComments, QObject *jobOwner);
-
-    void bugFetchError(QString, QObject *);
-
-    void reloadReport();
-
-    void relatedReportClicked();
-
-    void toggleShowOwnBacktrace(bool);
-
-Q_SIGNALS:
-    void possibleDuplicateSelected(int);
-    void attachToBugReportSelected(int);
-
-private:
-    Ui::AssistantPageBugzillaDuplicatesDialog ui;
-    bool m_relatedButtonEnabled;
-    BugzillaDuplicatesPage *m_parent;
-
-    int m_bugNumber;
-    QString m_closedStateString;
-    int m_duplicatesCount;
-    QPushButton *m_suggestButton;
-
-    Bugzilla::Bug::Ptr m_bug = nullptr;
-};
-
-class BugzillaReportConfirmationDialog : public QDialog
-{
-    Q_OBJECT
-
-public:
-    BugzillaReportConfirmationDialog(int bugNumber, bool commonCrash, QString closedState, BugzillaReportInformationDialog *parent);
-    ~BugzillaReportConfirmationDialog() override;
-
-private Q_SLOTS:
-    void proceedClicked();
-
-    void checkProceed();
-
-private:
-    Ui::ConfirmationDialog ui;
-
-    BugzillaReportInformationDialog *m_parent;
-
-    bool m_showProceedQuestion;
-
-    int m_bugNumber;
-};
 #endif

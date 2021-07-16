@@ -64,6 +64,8 @@ set(drkonqi_SRCS
     bugzillaintegration/productmapping.cpp
     bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
+    bugzillaintegration/bugzillareportconfirmationdialog.cpp
+    bugzillaintegration/bugzillareportinformationdialog.cpp
 )
 ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_introduction.ui
