@@ -242,7 +242,7 @@ void BugzillaReportInformationDialog::onCommentsFetched(QList<Bugzilla::Comment:
     //    slight redesign.
     QString comments;
     QString description; // aka first comment
-    if (bugComments.size() > 0) {
+    if (!bugComments.isEmpty()) {
         description = bugComments.takeFirst()->text();
     }
     for (auto it = bugComments.constBegin(); it != bugComments.constEnd(); ++it) {
