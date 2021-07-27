@@ -8,6 +8,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KFileUtils>
 #include <KMacroExpander>
 #include <QCoreApplication>
 #include <QDir>
@@ -148,23 +149,18 @@ QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString 
                                    QCoreApplication::applicationDirPath() + QLatin1Char('/') + path,
                                    // Search in default path
                                    QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory)};
+    const QStringList debuggerFiles = KFileUtils::findAllUniqueFiles(debuggerDirs);
 
-    QHash<QString, Debugger> result;
-    for (const auto &debuggerDir : qAsConst(debuggerDirs)) {
-        const QStringList debuggers = QDir(debuggerDir).entryList(QDir::Files);
-        for (const auto &debuggerFile : qAsConst(debuggers)) {
-            Debugger debugger;
-            debugger.m_config = KSharedConfig::openConfig(debuggerDir + QLatin1Char('/') + debuggerFile);
-            if (result.contains(debugger.codeName())) {
-                continue; // Already found in a higher priority location
-            }
-            if (debugger.supportedBackends().contains(backend)) {
-                debugger.setUsedBackend(backend);
-                result.insert(debugger.codeName(), debugger);
-            }
+    QList<Debugger> result;
+    for (const auto &debuggerFile : debuggerFiles) {
+        Debugger debugger;
+        debugger.m_config = KSharedConfig::openConfig(debuggerFile);
+        if (debugger.supportedBackends().contains(backend)) {
+            debugger.setUsedBackend(backend);
+            result << debugger;
         }
     }
-    return result.values();
+    return result;
 }
 
 Debugger Debugger::findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName)
