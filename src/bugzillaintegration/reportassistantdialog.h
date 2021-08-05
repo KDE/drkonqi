@@ -39,6 +39,8 @@ public Q_SLOTS:
     void next() override;
     void back() override;
 
+    void assistantFinished(bool);
+
 private Q_SLOTS:
     void currentPageChanged_slot(KPageWidgetItem *, KPageWidgetItem *);
 
@@ -46,7 +48,6 @@ private Q_SLOTS:
 
     void loginFinished();
 
-    void assistantFinished(bool);
 
     void showHelp();
 

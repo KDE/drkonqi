@@ -54,6 +54,7 @@ ki18n_wrap_ui(drkonqi_SRCS
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
     bugzillaintegration/assistantpage_bugzilla_version.cpp
+    bugzillaintegration/assistantpage_bugzilla_supported_entities.cpp
     bugzillaintegration/bugzillalib.cpp
     bugzillaintegration/reportassistantdialog.cpp
     bugzillaintegration/reportassistantpage.cpp
@@ -80,6 +81,7 @@ ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_bugzilla_preview.ui
     bugzillaintegration/ui/assistantpage_bugzilla_send.ui
     bugzillaintegration/ui/assistantpage_bugzilla_version.ui
+    bugzillaintegration/ui/assistantpage_bugzilla_supported_entities.ui
 )
 
 ecm_qt_declare_logging_category(

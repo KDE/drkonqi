@@ -474,3 +474,8 @@ ApplicationDetailsExamples *ReportInterface::appDetailsExamples() const
 {
     return m_appDetailsExamples;
 }
+
+ProductMapping *ReportInterface::productMapping() const
+{
+    return m_productMapping;
+}
