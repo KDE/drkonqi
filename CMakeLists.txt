@@ -26,6 +26,10 @@ include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(ECMDeprecationSettings)
 include(ECMFindQmlModule)
+include(ECMSourceVersionControl)
+include(CMakeDependentOption)
+
+option(WITH_SENTRY "Submit crashes to KDE's Sentry instance" ${ECM_SOURCE_UNDER_VERSION_CONTROL})
 
 kde_enable_exceptions()
 
@@ -52,6 +56,9 @@ find_package(
         WindowSystem
         SyntaxHighlighting
 )
+
+find_package(KUserFeedback)
+set_package_properties(KUserFeedback PROPERTIES TYPE REQUIRED PURPOSE "Checking whether feedback is enabled or not")
 
 ecm_find_qmlmodule(org.kde.kirigami 2.19)
 ecm_find_qmlmodule(org.kde.kitemmodels 1.0)

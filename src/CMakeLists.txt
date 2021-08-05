@@ -67,6 +67,7 @@ set(drkonqi_SRCS
     bugzillaintegration/productmapping.cpp
     bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
+    bugzillaintegration/sentrybeacon.cpp
 )
 
 ecm_qt_declare_logging_category(
@@ -102,6 +103,7 @@ target_link_libraries(
     drkonqi_backtrace_parser
     qbugzilla
     KF5::Declarative
+    KUserFeedbackCore
 )
 
 if(Systemd_FOUND)

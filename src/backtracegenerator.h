@@ -2,13 +2,15 @@
  * drkonqi - The KDE Crash Handler
  *
  * SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
- * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
 
 #ifndef BACKTRACEGENERATOR_H
 #define BACKTRACEGENERATOR_H
+
+#include <memory>
 
 #include <QProcess>
 #include <QTemporaryFile>
@@ -17,6 +19,7 @@
 
 class KProcess;
 class BacktraceParser;
+class QTemporaryDir;
 
 class BacktraceGenerator : public QObject
 {
@@ -56,6 +59,7 @@ public:
 
     Q_INVOKABLE bool debuggerIsGDB() const;
     Q_INVOKABLE QString debuggerName() const;
+    QByteArray sentryPayload() const;
 
 public Q_SLOTS:
     void start();
@@ -82,6 +86,7 @@ private:
     State m_state = NotLoaded;
     BacktraceParser *m_parser = nullptr;
     QString m_parsedBacktrace;
+    std::unique_ptr<QTemporaryDir> m_tempDirectory;
 
 #ifdef BACKTRACE_PARSER_DEBUG
     BacktraceParser *m_debugParser = nullptr;

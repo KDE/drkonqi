@@ -3,13 +3,18 @@
  *
  * SPDX-FileCopyrightText: 2000-2003 Hans Petter Bieker <bieker@kde.org>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
- * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
 #include "backtracegenerator.h"
 
+#include "config-drkonqi.h"
+#include "drkonqi.h"
 #include "drkonqi_debug.h"
+
+#include <QTemporaryDir>
+
 #include <KProcess>
 #include <KShell>
 
@@ -176,6 +181,23 @@ void BacktraceGenerator::setBackendPrepared()
     m_proc = new KProcess;
     m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C")); // force C locale
 
+    // Temporary directory for the preeamble.py to write data into, we can then conveniently pick it up from there.
+    // Only useful for data that is not meant to appear in the trace (e.g. sentry payloads).
+    if (!m_tempDirectory) {
+        m_tempDirectory = std::make_unique<QTemporaryDir>();
+    }
+    if (!m_tempDirectory->isValid()) {
+        qCWarning(DRKONQI_LOG) << "Failed to create temporary directory for generator!";
+    } else {
+#ifdef WITH_SENTRY
+        m_proc->setEnv(QStringLiteral("DRKONQI_WITH_SENTRY"), QStringLiteral("1"));
+#endif
+        m_proc->setEnv(QStringLiteral("DRKONQI_TMP_DIR"), m_tempDirectory->path());
+        m_proc->setEnv(QStringLiteral("DRKONQI_VERSION"), QStringLiteral(PROJECT_VERSION));
+        m_proc->setEnv(QStringLiteral("DRKONQI_APP_VERSION"), DrKonqi::appVersion());
+        m_proc->setEnv(QStringLiteral("DRKONQI_SIGNAL"), QString::number(DrKonqi::signal()));
+    }
+
     m_temp = new QTemporaryFile;
     m_temp->open();
     m_temp->write(m_debugger.backtraceBatchCommands().toLatin1());
@@ -218,3 +240,14 @@ QString BacktraceGenerator::debuggerName() const
 {
     return m_debugger.displayName();
 }
+
+QByteArray BacktraceGenerator::sentryPayload() const
+{
+    const QString sentryPayloadFile = m_tempDirectory->path() + QLatin1String("/sentry_payload.json");
+    QFile file(sentryPayloadFile);
+    if (!file.open(QFile::ReadOnly)) {
+        qCWarning(DRKONQI_LOG) << "Could not open sentry payload file" << sentryPayloadFile;
+        return {};
+    }
+    return file.readAll();
+};

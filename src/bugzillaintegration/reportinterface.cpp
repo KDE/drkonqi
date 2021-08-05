@@ -10,7 +10,11 @@
 
 #include "reportinterface.h"
 
+#include <chrono>
+
+#include <KIO/TransferJob>
 #include <KLocalizedString>
+#include <KUserFeedback/Provider>
 
 #include "backtracegenerator.h"
 #include "bugzillalib.h"
@@ -18,8 +22,10 @@
 #include "crashedapplication.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
+#include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
+#include "sentrybeacon.h"
 #include "systeminformation.h"
 
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
@@ -44,6 +50,21 @@ ReportInterface::ReportInterface(QObject *parent)
 
     // Do not attach the bug report to any other existent report (create a new one)
     m_attachToBugNumber = 0;
+
+    connect(&m_sentryBeacon, &SentryBeacon::eventSent, this, [this] {
+        m_sentryEventSent = true;
+        maybeDone();
+    });
+    connect(&m_sentryBeacon, &SentryBeacon::userFeedbackSent, this, [this] {
+        m_sentryUserFeedbackSent = true;
+        maybeDone();
+    });
+    if (KUserFeedback::Provider provider; provider.isEnabled()) {
+        metaObject()->invokeMethod(this, [this] {
+            // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
+            sendCrashEvent();
+        });
+    }
 }
 
 void ReportInterface::setBugAwarenessPageData(bool rememberSituation, Reproducible reproducible, bool actions, bool unusual, bool configuration)
@@ -307,8 +328,38 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     return bug;
 }
 
+void ReportInterface::sendCrashEvent()
+{
+#ifdef WITH_SENTRY
+    if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
+        m_sentryBeacon.sendEvent();
+        return;
+    }
+    static bool connected = false;
+    if (!connected) {
+        connected = true;
+        connect(DrKonqi::debuggerManager()->backtraceGenerator(), &BacktraceGenerator::done, this, [this] {
+            m_sentryBeacon.sendEvent();
+        });
+    }
+    if (DrKonqi::debuggerManager()->backtraceGenerator()->state() != BacktraceGenerator::Loading) {
+        DrKonqi::debuggerManager()->backtraceGenerator()->start();
+    }
+#endif
+}
+
+void ReportInterface::sendCrashComment()
+{
+#ifdef WITH_SENTRY
+    m_sentryBeacon.sendUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
+                                    + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
+#endif
+}
+
 void ReportInterface::sendBugReport()
 {
+    sendCrashEvent();
+
     if (m_attachToBugNumber > 0) {
         // We are going to attach the report to an existent one
         connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::attachBacktraceWithReport);
@@ -345,7 +396,9 @@ void ReportInterface::sendBugReport()
                 m_attachToBugNumber = bugId;
                 attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
             } else {
-                Q_EMIT reportSent(bugId);
+                m_sentReport = bugId;
+                sendCrashComment();
+                maybeDone();
             }
         });
         connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
@@ -389,7 +442,9 @@ void ReportInterface::attachSent(int attachId)
     Q_UNUSED(attachId);
 
     // The bug was attached, consider it "sent"
-    Q_EMIT reportSent(m_attachToBugNumber);
+    m_sentReport = attachId;
+    sendCrashComment();
+    maybeDone();
 }
 
 QStringList ReportInterface::relatedBugzillaProducts() const
@@ -476,3 +531,10 @@ ProductMapping *ReportInterface::productMapping() const
 {
     return m_productMapping;
 }
+
+void ReportInterface::maybeDone()
+{
+    if (m_sentReport != 0 && m_sentryEventSent && m_sentryUserFeedbackSent) {
+        Q_EMIT done();
+    }
+};

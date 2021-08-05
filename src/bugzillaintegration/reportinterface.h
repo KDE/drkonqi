@@ -14,6 +14,8 @@
 #include <QObject>
 #include <QStringList>
 
+#include "sentrybeacon.h"
+
 namespace Bugzilla
 {
 class NewBug;
@@ -40,6 +42,8 @@ class ReportInterface : public QObject
 
     Q_PROPERTY(uint attachToBugNumber READ attachToBugNumber WRITE setAttachToBugNumber NOTIFY attachToBugNumberChanged)
     Q_PROPERTY(uint duplicateId READ duplicateId WRITE setDuplicateId NOTIFY duplicateIdChanged)
+
+    Q_PROPERTY(uint sentReport MEMBER m_sentReport NOTIFY done)
 public:
     enum Reproducible {
         ReproducibleUnsure,
@@ -124,6 +128,8 @@ public:
     }
 
 public Q_SLOTS:
+    void sendCrashEvent();
+    void sendCrashComment();
     void sendBugReport();
 
 private Q_SLOTS:
@@ -133,7 +139,7 @@ private Q_SLOTS:
     void attachSent(int);
 
 Q_SIGNALS:
-    void reportSent(int);
+    void done();
     void sendReportError(const QString &);
     void provideUnusualBehaviorChanged();
 
@@ -141,6 +147,8 @@ private:
     // Attach backtrace to bug. Only used internally when the comment isn't
     // meant to be the full report.
     void attachBacktrace(const QString &comment);
+    void sendToSentry();
+    void maybeDone();
 
     QString generateAttachmentComment() const;
 
@@ -165,6 +173,11 @@ private:
 
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;
+
+    SentryBeacon m_sentryBeacon;
+    bool m_sentryEventSent = false;
+    bool m_sentryUserFeedbackSent = false;
+    uint m_sentReport = 0;
 };
 
 #endif
