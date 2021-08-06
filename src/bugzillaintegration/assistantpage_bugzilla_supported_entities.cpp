@@ -39,7 +39,7 @@ BugzillaSupportedEntitiesPage::BugzillaSupportedEntitiesPage(ReportAssistantDial
         if (mapping->bugzillaProductDisabled()) {
             ui->errorLabel->setText(xi18nc("@info",
                                            "Thanks for wanting to help improve our software! Unfortunately <resource>%1</resource> is no longer supported. "
-                                           "We may have alterantive supported software on offer on <link url='https://apps.kde.org/'>KDE.org</link>.",
+                                           "We may have alternative supported software on offer on <link url='https://apps.kde.org/'>KDE.org</link>.",
                                            mapping->bugzillaProduct()));
             errorOut();
             return;
