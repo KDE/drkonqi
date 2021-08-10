@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -11,19 +11,6 @@
 
 namespace Bugzilla
 {
-// Hack around our production install giving out is_active:null on everything.
-// It pretty much breaks version activity tracking. We must assume everything is active lest reports
-// get rejected because null translates to bool(false) marking all versions inactive.
-// https://phabricator.kde.org/T14767
-Q_REQUIRED_RESULT static bool applyActiveHack(QObject *object, const QString &key, const QVariant &value)
-{
-    if (key == QLatin1String("is_active") && value.isNull()) {
-        object->setProperty(qPrintable(key), true);
-        return true;
-    }
-    return false;
-}
-
 Product::Product(const QVariantHash &object, const Connection &connection, QObject *parent)
     : QObject(parent)
     , m_connection(connection)
@@ -31,10 +18,6 @@ Product::Product(const QVariantHash &object, const Connection &connection, QObje
     registerVariantConverters();
 
     for (auto it = object.constBegin(); it != object.constEnd(); ++it) {
-        if (applyActiveHack(this, it.key(), it.value())) {
-            continue;
-        }
-
         setProperty(qPrintable(it.key()), it.value());
     }
 }
@@ -146,10 +129,6 @@ ProductVersion::ProductVersion(const QVariantHash &object, QObject *parent)
     : QObject(parent)
 {
     for (auto it = object.constBegin(); it != object.constEnd(); ++it) {
-        if (applyActiveHack(this, it.key(), it.value())) {
-            continue;
-        }
-
         setProperty(qPrintable(it.key()), it.value());
     }
 }
