@@ -48,7 +48,6 @@
 
 using namespace std::chrono_literals;
 
-static const char kWalletEntryName[] = "drkonqi_bugzilla";
 static const char kWalletEntryUsername[] = "username";
 static const char kWalletEntryPassword[] = "password";
 
@@ -60,6 +59,7 @@ static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 
 BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog *parent)
     : ReportAssistantPage(parent)
+    , m_walletEntryName(DrKonqi::isTestingBugzilla() ? QStringLiteral("drkonqi_bugzilla_test_mode") : QStringLiteral("drkonqi_bugzilla"))
     , m_wallet(nullptr)
     , m_walletWasOpenedBefore(false)
 {
@@ -188,7 +188,7 @@ void BugzillaLoginPage::openWallet()
 void BugzillaLoginPage::walletLogin()
 {
     if (!m_wallet) {
-        if (kWalletEntryExists(QLatin1String(kWalletEntryName))) { // Key exists!
+        if (kWalletEntryExists(m_walletEntryName)) { // Key exists!
             openWallet();
             ui.m_savePasswordCheckBox->setCheckState(Qt::Checked);
             // Was the wallet opened?
@@ -197,9 +197,9 @@ void BugzillaLoginPage::walletLogin()
 
                 // Use wallet data to try login
                 QMap<QString, QString> values;
-                m_wallet->readMap(QLatin1String(kWalletEntryName), values);
-                QString username = values.value(QLatin1String(kWalletEntryUsername));
-                QString password = values.value(QLatin1String(kWalletEntryPassword));
+                m_wallet->readMap(m_walletEntryName, values);
+                QString username = values.value(m_walletEntryName);
+                QString password = values.value(m_walletEntryName);
 
                 if (!username.isEmpty() && !password.isEmpty()) {
                     ui.m_userEdit->setText(username);
@@ -223,7 +223,7 @@ void BugzillaLoginPage::walletLogin()
                     values.clear();
                     values.insert(QLatin1String(kWalletEntryUsername), username);
                     values.insert(QLatin1String(kWalletEntryPassword), password);
-                    m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
+                    m_wallet->writeMap(m_walletEntryName, values);
 
                     ui.m_savePasswordCheckBox->setCheckState(Qt::Checked);
 
@@ -259,17 +259,17 @@ void BugzillaLoginPage::loginClicked()
             QMap<QString, QString> values;
             values.insert(QLatin1String(kWalletEntryUsername), ui.m_userEdit->text());
             values.insert(QLatin1String(kWalletEntryPassword), ui.m_passwordEdit->password());
-            m_wallet->writeMap(QLatin1String(kWalletEntryName), values);
+            m_wallet->writeMap(m_walletEntryName, values);
         }
     } else { // User doesn't want to save or wants to remove.
-        if (kWalletEntryExists(QLatin1String(kWalletEntryName))) {
+        if (kWalletEntryExists(m_walletEntryName)) {
             if (!m_wallet) {
                 openWallet();
             }
             // Got wallet open ?
             if (m_wallet) {
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
-                m_wallet->removeEntry(QLatin1String(kWalletEntryName));
+                m_wallet->removeEntry(m_walletEntryName);
             }
         }
     }

@@ -60,6 +60,7 @@ private:
 
     Ui::AssistantPageBugzillaLogin ui;
 
+    const QString m_walletEntryName;
     KWallet::Wallet *m_wallet;
     bool m_walletWasOpenedBefore;
     bool m_bugzillaVersionFound;

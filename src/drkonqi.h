@@ -56,6 +56,8 @@ public:
     static bool isKeepRunning();
     static int thread();
     static bool ignoreQuality();
+    // Whether bugstest.kde.org is used.
+    static bool isTestingBugzilla();
     static const QString &kdeBugzillaURL();
     static const QString &startupId();
     static QString backendClassName();

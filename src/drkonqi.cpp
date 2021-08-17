@@ -402,6 +402,11 @@ bool DrKonqi::ignoreQuality()
     return ignore;
 }
 
+bool DrKonqi::isTestingBugzilla()
+{
+    return kdeBugzillaURL().contains(QLatin1String("bugstest.kde.org"));
+}
+
 const QString &DrKonqi::kdeBugzillaURL()
 {
     // WARNING: for practical reasons this cannot use the shared instance
