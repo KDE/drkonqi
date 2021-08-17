@@ -59,7 +59,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
         auto *m_introduction = new IntroductionPage(this);
 
         auto *m_introductionPage = new KPageWidgetItem(m_introduction, QLatin1String(PAGE_INTRODUCTION_ID));
-        m_pageWidgetMap.insert(QLatin1String(PAGE_INTRODUCTION_ID), m_introductionPage);
         m_introductionPage->setHeader(i18nc("@title", "Welcome to the Reporting Assistant"));
         m_introductionPage->setIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug")));
         m_pageItems.push_back(m_introductionPage);
@@ -67,18 +66,15 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
 
     // Version check page
     auto *versionPage = new BugzillaVersionPage(this);
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZVERSION_ID), versionPage->item());
 
     // Product and version are valid page
     auto *entityPage = new BugzillaSupportedEntitiesPage(this);
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZENTITIES_ID), entityPage->item());
 
     //-Bug Awareness Page
     auto *m_awareness = new BugAwarenessPage(this);
     connectSignals(m_awareness);
 
     auto *m_awarenessPage = new KPageWidgetItem(m_awareness, QLatin1String(PAGE_AWARENESS_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_AWARENESS_ID), m_awarenessPage);
     m_awarenessPage->setHeader(i18nc("@title", "What do you know about the crash?"));
     m_awarenessPage->setIcon(QIcon::fromTheme(QStringLiteral("checkbox")));
 
@@ -87,26 +83,36 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     connectSignals(m_backtrace);
 
     auto *m_backtracePage = new KPageWidgetItem(m_backtrace, QLatin1String(PAGE_CRASHINFORMATION_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_CRASHINFORMATION_ID), m_backtracePage);
     m_backtracePage->setHeader(i18nc("@title", "Fetching the Backtrace (Automatic Crash Information)"));
     m_backtracePage->setIcon(QIcon::fromTheme(QStringLiteral("run-build")));
 
     //-Results Page
     auto *m_conclusions = new ConclusionPage(this);
     connectSignals(m_conclusions);
-
-    auto *m_conclusionsPage = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_CONCLUSIONS_ID), m_conclusionsPage);
-    m_conclusionsPage->setHeader(i18nc("@title", "Results of the Analyzed Crash Details"));
-    m_conclusionsPage->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
     connect(m_conclusions, &ConclusionPage::finished, this, &ReportAssistantDialog::assistantFinished);
+    const QString conclusionHeader = i18nc("@title", "Results of the Analyzed Crash Details");
+    const QIcon conclusionIcon = QIcon::fromTheme(QStringLiteral("dialog-information"));
+
+    // We have another of possible points where the conclusion page may appear. They are all individual pageitems
+    // refering to the same page. They'll be skipped so long as the page itself doesn't become isAppropriate() at any
+    // point.
+    auto *m_conclusionsPageAwareness = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
+    m_conclusionsPageAwareness->setHeader(conclusionHeader);
+    m_conclusionsPageAwareness->setIcon(conclusionIcon);
+
+    auto *m_conclusionsPageBacktrace = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
+    m_conclusionsPageBacktrace->setHeader(conclusionHeader);
+    m_conclusionsPageBacktrace->setIcon(conclusionIcon);
+
+    auto *m_conclusionsPageDuplicate = new KPageWidgetItem(m_conclusions, QLatin1String(PAGE_CONCLUSIONS_ID));
+    m_conclusionsPageDuplicate->setHeader(conclusionHeader);
+    m_conclusionsPageDuplicate->setIcon(conclusionIcon);
 
     //-Bugzilla Login
     auto *m_bugzillaLogin = new BugzillaLoginPage(this);
     connectSignals(m_bugzillaLogin);
 
     auto *m_bugzillaLoginPage = new KPageWidgetItem(m_bugzillaLogin, QLatin1String(PAGE_BZLOGIN_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZLOGIN_ID), m_bugzillaLoginPage);
     m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n(KDE_BUGZILLA_DESCRIPTION)));
     m_bugzillaLoginPage->setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
     connect(m_bugzillaLogin, &BugzillaLoginPage::loggedTurnToNextPage, this, &ReportAssistantDialog::loginFinished);
@@ -116,7 +122,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     connectSignals(m_bugzillaDuplicates);
 
     auto *m_bugzillaDuplicatesPage = new KPageWidgetItem(m_bugzillaDuplicates, QLatin1String(PAGE_BZDUPLICATES_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZDUPLICATES_ID), m_bugzillaDuplicatesPage);
     m_bugzillaDuplicatesPage->setHeader(i18nc("@title", "Look for Possible Duplicate Reports"));
     m_bugzillaDuplicatesPage->setIcon(QIcon::fromTheme(QStringLiteral("repository")));
 
@@ -125,7 +130,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     connectSignals(m_bugzillaInformation);
 
     auto *m_bugzillaInformationPage = new KPageWidgetItem(m_bugzillaInformation, QLatin1String(PAGE_BZDETAILS_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZDETAILS_ID), m_bugzillaInformationPage);
     m_bugzillaInformationPage->setHeader(i18nc("@title", "Enter the Details about the Crash"));
     m_bugzillaInformationPage->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
 
@@ -133,7 +137,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     auto *m_bugzillaPreview = new BugzillaPreviewPage(this);
 
     auto *m_bugzillaPreviewPage = new KPageWidgetItem(m_bugzillaPreview, QLatin1String(PAGE_BZPREVIEW_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZPREVIEW_ID), m_bugzillaPreviewPage);
     m_bugzillaPreviewPage->setHeader(i18nc("@title", "Preview the Report"));
     m_bugzillaPreviewPage->setIcon(QIcon::fromTheme(QStringLiteral("document-preview")));
 
@@ -141,7 +144,6 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     auto *m_bugzillaSend = new BugzillaSendPage(this);
 
     auto *m_bugzillaSendPage = new KPageWidgetItem(m_bugzillaSend, QLatin1String(PAGE_BZSEND_ID));
-    m_pageWidgetMap.insert(QLatin1String(PAGE_BZSEND_ID), m_bugzillaSendPage);
     m_bugzillaSendPage->setHeader(i18nc("@title", "Sending the Crash Report"));
     m_bugzillaSendPage->setIcon(QIcon::fromTheme(QStringLiteral("applications-internet")));
     connect(m_bugzillaSend, &BugzillaSendPage::finished, this, &ReportAssistantDialog::assistantFinished);
@@ -151,10 +153,12 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
                        {versionPage->item(),
                         entityPage->item(),
                         m_awarenessPage,
+                        m_conclusionsPageAwareness,
                         m_backtracePage,
-                        m_conclusionsPage,
+                        m_conclusionsPageBacktrace,
                         m_bugzillaLoginPage,
                         m_bugzillaDuplicatesPage,
+                        m_conclusionsPageDuplicate,
                         m_bugzillaInformationPage,
                         m_bugzillaPreviewPage,
                         m_bugzillaSendPage});
@@ -198,77 +202,34 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem *current, KP
     buttonBox()->button(QDialogButtonBox::Cancel)->setEnabled(true);
     m_canClose = false;
 
-    qCDebug(DRKONQI_LOG) << "moving from" << before << (before ? before->name() : QString()) << "to" << current << (current ? current->name() : QString());
-
     // Save data of the previous page
     if (before) {
         auto *beforePage = qobject_cast<ReportAssistantPage *>(before->widget());
         beforePage->aboutToHide();
     }
 
-    // Load data of the current(new) page
-    if (current) {
-        auto *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
+    qCDebug(DRKONQI_LOG) << "Moving: " << (before ? before->name() : QString()) << "->" << current->name();
 
-        if (!currentPage->isAppropriate()) {
-            // The page is inappropriate. Find where to go next. This is extra exhausting because
-            // we can't just find the next or previous appropriate page because next() and back() implement lots of
-            // bespoke movement rules. So we in fact constantly need to go through those functions and then check again here.
-            // WARNING: when no page is appropriate this produces an ininfinite loop. There is no way to
-            //   prevent this right now. next() and back() would need to stop hacking in shortcuts for us to reliably
-            //   determine where to go and when we can't go anywhere.
-            enum class Movement { Unknown, Forward, Backward };
-            auto move = Movement::Unknown;
-            for (auto it = m_pageItems.cbegin(); it != m_pageItems.cend(); ++it) {
-                if (*it == before && move == Movement::Unknown) {
-                    // Found previous item first, we are moving forward ->
-                    move = Movement::Forward;
-                    continue; // continue finding current item, depending on where it is in the container we may need to reverse
-                }
-                if (*it == current) {
-                    if (move == Movement::Unknown) {
-                        // Current item first, we are moving backward <-
-                        move = Movement::Backward;
-                        if (it == m_pageItems.cbegin()) {
-                            // Turn around if this item is first but inappropriate.
-                            move = Movement::Forward;
-                        }
-                    } else if ((it + 1) == m_pageItems.cend()) {
-                        // Turn around if this item is last but inappropriate.
-                        move = Movement::Backward;
-                    }
-                    break;
-                }
-            }
+    if (!current) {
+        Q_UNREACHABLE(); // oughtn't ever happen. We always have a page to show so we always have a current page.
+        return;
+    }
 
-            qCDebug(DRKONQI_LOG) << "page inappropriate, skipping";
+    auto *currentPage = qobject_cast<ReportAssistantPage *>(current->widget());
 
-            switch (move) {
-            case Movement::Unknown:
-                qCDebug(DRKONQI_LOG) << "unknown";
-                Q_UNREACHABLE();
-                Q_FALLTHROUGH(); // do whatever at this point but do something, the page is inappropriate.
-            case Movement::Forward:
-                qCDebug(DRKONQI_LOG) << "forward";
-                next();
-                return;
-            case Movement::Backward:
-                qCDebug(DRKONQI_LOG) << "backward";
-                back();
-                return;
-            }
-            return;
-        }
+    if (!currentPage->isAppropriate()) {
+        skipInappropriatePage();
+        return;
+    }
 
-        nextButton()->setEnabled(currentPage->isComplete());
-        currentPage->aboutToShow();
+    nextButton()->setEnabled(currentPage->isComplete());
+    currentPage->aboutToShow();
 
-        // If the current page is the last one, disable all the buttons until the bug is sent
-        if (current->name() == QLatin1String(PAGE_BZSEND_ID)) {
-            nextButton()->setEnabled(false);
-            backButton()->setEnabled(false);
-            finishButton()->setEnabled(false);
-        }
+    // If the current page is the last one, disable all the buttons until the bug is sent
+    if (current == m_pageItems.back()) {
+        nextButton()->setEnabled(false);
+        backButton()->setEnabled(false);
+        finishButton()->setEnabled(false);
     }
 }
 
@@ -315,6 +276,7 @@ void ReportAssistantDialog::showHelp()
 // Override KAssistantDialog "next" page implementation
 void ReportAssistantDialog::next()
 {
+    m_move = Movement::Forward;
     // FIXME: this entire function is a bit weird. It'd likely make more sense to
     // use the page appropriateness more globally. i.e. mark pages inappropriate
     // when they are not applicable based on earlier settings done (e.g. put
@@ -327,44 +289,7 @@ void ReportAssistantDialog::next()
     if (page && !page->showNextPage()) {
         return;
     }
-
-    const QString name = currentPage()->name();
-
-    // If the information the user can provide is not useful, skip the backtrace page
-    if (name == QLatin1String(PAGE_AWARENESS_ID)) {
-        // Force save settings in the current page
-        page->aboutToHide();
-
-        if (!(m_reportInterface->isBugAwarenessPageDataUseful())) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_CONCLUSIONS_ID)));
-            return;
-        }
-    } else if (name == QLatin1String(PAGE_CRASHINFORMATION_ID)) {
-        // Force save settings in current page
-        page->aboutToHide();
-
-        // Qt aborts clients when the wayland compositor crashes. We can't do anything with these reports and immediately
-        // jump to the conclusion page. Additional handling happens there.
-        if (DrKonqi::debuggerManager()->backtraceGenerator()->parser()->hasCompositorCrashed()) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_CONCLUSIONS_ID)));
-            return;
-        }
-
-        // If the crash is worth reporting and it is BKO, skip the Conclusions page
-        if (m_reportInterface->isWorthReporting() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
-            // Depending on whether the page is appropriate either go to version
-            // check page or login page.
-            const auto loginPage = m_pageWidgetMap.value(QLatin1String(PAGE_BZLOGIN_ID));
-            setCurrentPage(loginPage);
-            return;
-        }
-    } else if (name == QLatin1String(PAGE_BZDUPLICATES_ID)) {
-        // a duplicate has been found, yet the report is not being attached
-        if (m_reportInterface->duplicateId() && !m_reportInterface->attachToBugNumber()) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_CONCLUSIONS_ID)));
-            return;
-        }
-    }
+    page->aboutToHide(); // save current page
 
     KAssistantDialog::next();
 }
@@ -373,24 +298,7 @@ void ReportAssistantDialog::next()
 // It has to mirror the custom next() implementation
 void ReportAssistantDialog::back()
 {
-    if (currentPage()->name() == QLatin1String(PAGE_CONCLUSIONS_ID)) {
-        if (m_reportInterface->duplicateId() && !m_reportInterface->attachToBugNumber()) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_BZDUPLICATES_ID)));
-            return;
-        }
-        if (!(m_reportInterface->isBugAwarenessPageDataUseful())) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_AWARENESS_ID)));
-            return;
-        }
-    }
-
-    if (currentPage()->name() == QLatin1String(PAGE_BZLOGIN_ID)) {
-        if (m_reportInterface->isWorthReporting() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
-            setCurrentPage(m_pageWidgetMap.value(QLatin1String(PAGE_CRASHINFORMATION_ID)));
-            return;
-        }
-    }
-
+    m_move = Movement::Backward;
     KAssistantDialog::back();
 }
 
@@ -456,6 +364,26 @@ void ReportAssistantDialog::closeEvent(QCloseEvent *event)
         }
     } else {
         event->accept();
+    }
+}
+
+void ReportAssistantDialog::skipInappropriatePage()
+{
+    qCDebug(DRKONQI_LOG) << "page inappropriate, skipping...";
+
+    switch (m_move) {
+    case Movement::Unknown:
+        qCDebug(DRKONQI_LOG) << "  ...unknown direction!";
+        Q_UNREACHABLE();
+        return; // do whatever at this point but do something, the page is inappropriate.
+    case Movement::Forward:
+        qCDebug(DRKONQI_LOG) << "  ...forward";
+        next();
+        return;
+    case Movement::Backward:
+        qCDebug(DRKONQI_LOG) << "   ...backward";
+        back();
+        return;
     }
 }
 

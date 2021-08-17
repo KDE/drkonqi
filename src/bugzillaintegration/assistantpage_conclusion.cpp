@@ -16,6 +16,7 @@
 #include "backtracegenerator.h"
 #include "crashedapplication.h"
 #include "debuggermanager.h"
+#include "drkonqi.h"
 #include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "reportinformationdialog.h"
@@ -283,4 +284,29 @@ void ConclusionPage::openReportInformation()
 bool ConclusionPage::isComplete()
 {
     return (m_isBKO && m_needToReport);
+}
+
+bool ConclusionPage::isAppropriate()
+{
+    if (!(reportInterface()->isBugAwarenessPageDataUseful())) {
+        qCDebug(DRKONQI_LOG) << "not aware enough";
+        return true;
+    }
+    if (DrKonqi::debuggerManager()->backtraceGenerator()->parser()->hasCompositorCrashed()) {
+        qCDebug(DRKONQI_LOG) << "compositor crashed";
+        return true;
+    }
+    if (!DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
+        qCDebug(DRKONQI_LOG) << "not bugzilla";
+        return true;
+    }
+    if (DrKonqi::debuggerManager()->backtraceGenerator()->state() != BacktraceGenerator::NotLoaded && !reportInterface()->isWorthReporting()) {
+        qCDebug(DRKONQI_LOG) << "not worth reporting";
+        return true;
+    }
+    if (reportInterface()->duplicateId() && !reportInterface()->attachToBugNumber()) {
+        qCDebug(DRKONQI_LOG) << "is a dupe";
+        return true;
+    }
+    return false;
 }

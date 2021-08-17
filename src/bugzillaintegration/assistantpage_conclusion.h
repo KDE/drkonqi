@@ -20,6 +20,7 @@ public:
     void aboutToHide() override;
 
     bool isComplete() override;
+    bool isAppropriate() override;
 
 private Q_SLOTS:
     void finishClicked();

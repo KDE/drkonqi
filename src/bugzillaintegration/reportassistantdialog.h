@@ -65,8 +65,7 @@ private Q_SLOTS:
 private:
     void connectSignals(ReportAssistantPage *);
     void closeEvent(QCloseEvent *) override;
-
-    QHash<QLatin1String, KPageWidgetItem *> m_pageWidgetMap;
+    void skipInappropriatePage();
 
     QPointer<AboutBugReportingDialog> m_aboutBugReportingDialog;
     ReportInterface *m_reportInterface = nullptr;
@@ -77,6 +76,10 @@ private:
     QString m_nextButtonTextCache;
     // Page sequence.
     std::vector<KPageWidgetItem *> m_pageItems;
+
+    // Track current movement direction. When going next()/back() we want to auto-skip inappropriate pages on-the-fly.
+    enum class Movement { Unknown, Forward, Backward };
+    Movement m_move = Movement::Unknown;
 };
 
 #endif
