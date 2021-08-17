@@ -17,7 +17,7 @@ public:
     virtual bool handle(const Coredump &dump) = 0;
 
 private:
-    Q_DISABLE_COPY_MOVE(DumpTruckInterface);
+    Q_DISABLE_COPY_MOVE(DumpTruckInterface)
 };
 
 #define DumpTruckInterface_IID "org.kde.drkonqi.DumpTruckInterface/1.0" // NOLINT

@@ -40,5 +40,5 @@ private:
     KPageWidgetItem *m_item = nullptr; // not owned by us
     bool m_appropriate = true;
 
-    Q_DISABLE_COPY_MOVE(BugzillaSupportedEntitiesPage); // rule of 5
+    Q_DISABLE_COPY_MOVE(BugzillaSupportedEntitiesPage) // rule of 5
 };

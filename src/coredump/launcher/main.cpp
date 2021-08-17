@@ -148,7 +148,7 @@ public:
     }
 
 private:
-    Q_DISABLE_COPY_MOVE(DrKonqiTruck);
+    Q_DISABLE_COPY_MOVE(DrKonqiTruck)
 };
 
 static void onNewDump(const Coredump &dump)

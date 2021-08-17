@@ -28,5 +28,5 @@ public:
     bool handle(const Coredump &dump) override;
 
 private:
-    Q_DISABLE_COPY_MOVE(NotifyTruck);
+    Q_DISABLE_COPY_MOVE(NotifyTruck)
 };

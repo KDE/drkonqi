@@ -60,5 +60,5 @@ private:
         }
         return hash;
     }
-    Q_DISABLE_COPY_MOVE(Coredump);
+    Q_DISABLE_COPY_MOVE(Coredump)
 };
