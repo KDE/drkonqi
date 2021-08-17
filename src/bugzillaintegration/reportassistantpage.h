@@ -39,7 +39,7 @@ public:
     /**
      * Whether this page is fit for displaying. An inappropriate page is skipped.
      * This replicates KAssistantDialog's appropriateness system as it'd mess with our (manual) button state management.
-     * An in appropriate page will be skipped.
+     * An inappropriate page will be skipped.
      */
     virtual bool isAppropriate();
 
