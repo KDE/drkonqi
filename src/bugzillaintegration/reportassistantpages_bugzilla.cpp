@@ -41,6 +41,7 @@
 #include "crashedapplication.h"
 #include "drkonqi.h"
 #include "drkonqi_globals.h"
+#include "reportinformationdialog.h"
 #include "reportinterface.h"
 #include "statuswidget.h"
 #include "systeminformation.h"

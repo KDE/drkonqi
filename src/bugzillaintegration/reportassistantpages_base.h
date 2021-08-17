@@ -69,48 +69,4 @@ private:
     Ui::AssistantPageBugAwareness ui;
 };
 
-/** Conclusions page **/
-class ConclusionPage : public ReportAssistantPage
-{
-    Q_OBJECT
-
-public:
-    explicit ConclusionPage(ReportAssistantDialog *);
-
-    void aboutToShow() override;
-    void aboutToHide() override;
-
-    bool isComplete() override;
-
-private Q_SLOTS:
-    void finishClicked();
-
-    void openReportInformation();
-
-private:
-    Ui::AssistantPageConclusions ui;
-
-    QPointer<QDialog> m_infoDialog;
-
-    bool m_isBKO;
-    bool m_needToReport;
-
-Q_SIGNALS:
-    void finished(bool);
-};
-
-class ReportInformationDialog : public QDialog
-{
-    Q_OBJECT
-public:
-    explicit ReportInformationDialog(const QString &reportText);
-    ~ReportInformationDialog() override;
-
-private Q_SLOTS:
-    void saveReport();
-
-private:
-    Ui::AssistantPageConclusionsDialog ui;
-};
-
 #endif

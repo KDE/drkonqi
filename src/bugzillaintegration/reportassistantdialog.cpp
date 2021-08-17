@@ -25,6 +25,7 @@
 #include "aboutbugreportingdialog.h"
 #include "assistantpage_bugzilla_supported_entities.h"
 #include "assistantpage_bugzilla_version.h"
+#include "assistantpage_conclusion.h"
 #include "crashedapplication.h"
 #include "reportassistantpages_base.h"
 #include "reportassistantpages_bugzilla.h"

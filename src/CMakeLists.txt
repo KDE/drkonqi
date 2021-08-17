@@ -53,6 +53,7 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
+    bugzillaintegration/assistantpage_conclusion.cpp
     bugzillaintegration/assistantpage_bugzilla_version.cpp
     bugzillaintegration/assistantpage_bugzilla_supported_entities.cpp
     bugzillaintegration/bugzillalib.cpp
@@ -67,6 +68,7 @@ set(drkonqi_SRCS
     bugzillaintegration/duplicatefinderjob.cpp
     bugzillaintegration/bugzillareportconfirmationdialog.cpp
     bugzillaintegration/bugzillareportinformationdialog.cpp
+    bugzillaintegration/reportinformationdialog.cpp
 )
 ki18n_wrap_ui(drkonqi_SRCS
     bugzillaintegration/ui/assistantpage_introduction.ui
