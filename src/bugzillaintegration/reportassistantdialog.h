@@ -35,6 +35,15 @@ public:
 
     void setAboutToSend(bool aboutTo);
 
+    // DO NOT CALL THIS FUNCTION. isAppropriate from KAssistantDialog is
+    // not suitable for our dialog. Use the page's individual isAppropriate()
+    // to check whether the specific page is appropriate.
+    // You can also use isItemAppropriate if you only have an item.
+    bool isAppropriate(KPageWidgetItem *page) const = delete;
+
+    // Use this function instead of isAppropriate()
+    bool isItemAppropriate(KPageWidgetItem *item) const;
+
 public Q_SLOTS:
     void next() override;
     void back() override;
@@ -47,7 +56,6 @@ private Q_SLOTS:
     void completeChanged(ReportAssistantPage *, bool);
 
     void loginFinished();
-
 
     void showHelp();
 

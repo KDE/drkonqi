@@ -197,6 +197,8 @@ void ReportAssistantDialog::currentPageChanged_slot(KPageWidgetItem *current, KP
     buttonBox()->button(QDialogButtonBox::Cancel)->setEnabled(true);
     m_canClose = false;
 
+    qCDebug(DRKONQI_LOG) << "moving from" << before << (before ? before->name() : QString()) << "to" << current << (current ? current->name() : QString());
+
     // Save data of the previous page
     if (before) {
         auto *beforePage = qobject_cast<ReportAssistantPage *>(before->widget());
@@ -351,9 +353,8 @@ void ReportAssistantDialog::next()
         if (m_reportInterface->isWorthReporting() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()) {
             // Depending on whether the page is appropriate either go to version
             // check page or login page.
-            const auto versionPage = m_pageWidgetMap.value(QLatin1String(PAGE_BZVERSION_ID));
             const auto loginPage = m_pageWidgetMap.value(QLatin1String(PAGE_BZLOGIN_ID));
-            setCurrentPage(isAppropriate(versionPage) ? versionPage : loginPage);
+            setCurrentPage(loginPage);
             return;
         }
     } else if (name == QLatin1String(PAGE_BZDUPLICATES_ID)) {
@@ -455,4 +456,17 @@ void ReportAssistantDialog::closeEvent(QCloseEvent *event)
     } else {
         event->accept();
     }
+}
+
+bool ReportAssistantDialog::isItemAppropriate(KPageWidgetItem *item) const
+{
+    // The base classes isAppropriate is not suitable for what we want, so we have a separate appropriateness system.
+    // This function helps with getting our appropriateness value. It's named differently from the same function
+    // in the base class, so we can at least try and intercept incorrect calls to that other function. It's hit and
+    // miss though since the function isn't virtual. Alas.
+    if (!item) {
+        return false;
+    }
+    auto page = qobject_cast<ReportAssistantPage *>(item->widget());
+    return page && page->isAppropriate();
 }
