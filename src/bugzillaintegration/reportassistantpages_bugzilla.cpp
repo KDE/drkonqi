@@ -198,8 +198,8 @@ void BugzillaLoginPage::walletLogin()
                 // Use wallet data to try login
                 QMap<QString, QString> values;
                 m_wallet->readMap(m_walletEntryName, values);
-                QString username = values.value(m_walletEntryName);
-                QString password = values.value(m_walletEntryName);
+                QString username = values.value(QLatin1String(kWalletEntryUsername));
+                QString password = values.value(QLatin1String(kWalletEntryPassword));
 
                 if (!username.isEmpty() && !password.isEmpty()) {
                     ui.m_userEdit->setText(username);
