@@ -322,7 +322,7 @@ void BugzillaManager::fetchProductInfo(const QString &product)
         try {
             auto ptr = Bugzilla::ProductClient().get(job);
             Q_ASSERT(ptr);
-            productInfoFetched(ptr);
+            Q_EMIT productInfoFetched(ptr);
         } catch (Bugzilla::Exception &e) {
             qCWarning(DRKONQI_LOG) << e.whatString();
             // This doesn't have a string because it is actually not used for
