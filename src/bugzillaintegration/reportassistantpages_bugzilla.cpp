@@ -614,7 +614,7 @@ void BugzillaInformationPage::aboutToHide()
 
     if (ui.m_distroChooserCombo->isVisible()) {
         // Save bugzilla platform (distribution)
-        QString bugzillaPlatform = ui.m_distroChooserCombo->itemData(ui.m_distroChooserCombo->currentIndex()).toString();
+        const QString bugzillaPlatform = ui.m_distroChooserCombo->itemText(ui.m_distroChooserCombo->currentIndex());
         KConfigGroup config(KSharedConfig::openConfig(), "BugzillaInformationPage");
         config.writeEntry("BugzillaPlatform", bugzillaPlatform);
         DrKonqi::systemInformation()->setBugzillaPlatform(bugzillaPlatform);
