@@ -145,18 +145,19 @@ int main(int argc, char *argv[])
 
     const QByteArray type = parser.positionalArguments().isEmpty() ? QByteArray() : parser.positionalArguments().constFirst().toUtf8();
     int crashtype = Crash;
-    if (type == "malloc")
+    if (type == "malloc") {
         crashtype = Malloc;
-    else if (type == "div0")
+    } else if (type == "div0") {
         crashtype = Div0;
-    else if (type == "assert")
+    } else if (type == "assert") {
         crashtype = Assert;
-    else if (type == "qassert")
+    } else if (type == "qassert") {
         crashtype = QAssert;
-    else if (type == "threads")
+    } else if (type == "threads") {
         crashtype = Threads;
-    else if (type == "fatal")
+    } else if (type == "fatal") {
         crashtype = FatalErrorMessage;
+    }
     level1(crashtype);
     return app.exec();
 }
