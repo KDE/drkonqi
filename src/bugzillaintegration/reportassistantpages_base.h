@@ -14,6 +14,7 @@
 
 #include "reportassistantdialog.h"
 #include "reportassistantpage.h"
+#include "reportinterface.h"
 
 #include "ui_assistantpage_bugawareness.h"
 #include "ui_assistantpage_conclusions.h"
@@ -67,6 +68,10 @@ private Q_SLOTS:
 
 private:
     Ui::AssistantPageBugAwareness ui;
+    const QHash<int, ReportInterface::Reproducible> m_reproducibleIndex{{0, ReportInterface::ReproducibleUnsure},
+                                                                        {1, ReportInterface::ReproducibleNever},
+                                                                        {2, ReportInterface::ReproducibleSometimes},
+                                                                        {3, ReportInterface::ReproducibleEverytime}};
 };
 
 #endif

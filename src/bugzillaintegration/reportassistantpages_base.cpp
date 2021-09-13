@@ -119,11 +119,6 @@ bool CrashInformationPage::showNextPage()
 
 // BEGIN BugAwarenessPage
 
-static QHash<int, ReportInterface::Reproducible> s_reproducibleIndex{{0, ReportInterface::ReproducibleUnsure},
-                                                                     {1, ReportInterface::ReproducibleNever},
-                                                                     {2, ReportInterface::ReproducibleSometimes},
-                                                                     {3, ReportInterface::ReproducibleEverytime}};
-
 BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog *parent)
     : ReportAssistantPage(parent)
 {
@@ -146,7 +141,7 @@ BugAwarenessPage::BugAwarenessPage(ReportAssistantDialog *parent)
 
     if (qEnvironmentVariableIsSet("DRKONQI_TEST_MODE")) {
         ui.m_rememberCrashSituationYes->setChecked(true);
-        ui.m_reproducibleBox->setCurrentIndex(s_reproducibleIndex.key(ReportInterface::ReproducibleEverytime));
+        ui.m_reproducibleBox->setCurrentIndex(m_reproducibleIndex.key(ReportInterface::ReproducibleEverytime));
     }
 }
 
@@ -159,7 +154,7 @@ void BugAwarenessPage::aboutToHide()
 {
     // Save data
     ReportInterface::Reproducible reproducible = ReportInterface::ReproducibleUnsure;
-    reproducible = s_reproducibleIndex.value(ui.m_reproducibleBox->currentIndex());
+    reproducible = m_reproducibleIndex.value(ui.m_reproducibleBox->currentIndex());
 
     reportInterface()->setBugAwarenessPageData(ui.m_rememberCrashSituationYes->isChecked(),
                                                reproducible,
