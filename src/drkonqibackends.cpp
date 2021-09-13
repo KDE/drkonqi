@@ -143,7 +143,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     // try to determine the executable that crashed
     const QString procPath(QStringLiteral("/proc/%1").arg(pid));
     const QString exeProcPath(procPath + QStringLiteral("/exe"));
-    if (QFileInfo(exeProcPath).exists()) {
+    if (QFileInfo::exists(exeProcPath)) {
         // on linux, the fastest and most reliable way is to get the path from /proc
         qCDebug(DRKONQI_LOG) << "Using /proc to determine executable path";
         const QString exePath = QFile::symLinkTarget(exeProcPath);

@@ -270,7 +270,7 @@ QString ReportInterface::generateAttachmentComment() const
     QString comment;
 
     // Program name and versions
-    comment.append(QStringLiteral("%1 (%2) using Qt %4\n\n").arg(crashedApp->fakeExecutableBaseName()).arg(crashedApp->version()).arg(sysInfo->qtVersion()));
+    comment.append(QStringLiteral("%1 (%2) using Qt %4\n\n").arg(crashedApp->fakeExecutableBaseName(), crashedApp->version(), sysInfo->qtVersion()));
 
     // Details of the crash situation
     if (isBugAwarenessPageDataUseful()) {
