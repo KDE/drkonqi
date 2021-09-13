@@ -172,7 +172,8 @@ int main(int argc, char *argv[])
     // This allows ::process to still do common argument handling for --version
     // as well as standard error handling.
     if (!parser.parse(app.arguments())) {
-        for (const QString &option : parser.unknownOptionNames()) {
+        const QStringList unknownOptionNames = parser.unknownOptionNames();
+        for (const QString &option : unknownOptionNames) {
             qWarning() << "Unknown option" << option << " - ignoring it.";
             parser.addOption(QCommandLineOption(option));
         }

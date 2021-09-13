@@ -143,7 +143,7 @@ int main(int argc, char *argv[])
         flags |= KCrash::AutoRestart;
     KCrash::setFlags(flags);
 
-    QByteArray type = parser.positionalArguments().isEmpty() ? QByteArray() : parser.positionalArguments().first().toUtf8();
+    const QByteArray type = parser.positionalArguments().isEmpty() ? QByteArray() : parser.positionalArguments().constFirst().toUtf8();
     int crashtype = Crash;
     if (type == "malloc")
         crashtype = Malloc;

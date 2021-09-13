@@ -504,7 +504,8 @@ void BugzillaInformationPage::loadDistroCombo()
 void BugzillaInformationPage::setDistros(const Bugzilla::BugField::Ptr &field)
 {
     ui.m_distroChooserCombo->clear();
-    for (const auto &distro : field->values()) {
+    const QList<Bugzilla::BugFieldValue *> distros = field->values();
+    for (const auto &distro : distros) {
         ui.m_distroChooserCombo->addItem(distro->name());
     }
 

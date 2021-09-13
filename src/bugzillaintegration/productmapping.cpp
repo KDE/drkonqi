@@ -158,7 +158,8 @@ void ProductMapping::checkProductInfo(const Bugzilla::Product::Ptr product)
         // renamed so we'll find the version with the lowest id instead
         // and that should technically have been the "default" version.
         Bugzilla::ProductVersion *lowestVersion = nullptr;
-        for (const auto &version : product->versions()) {
+        const QList<Bugzilla::ProductVersion *> versions = product->versions();
+        for (const auto &version : versions) {
             if (!lowestVersion || lowestVersion->id() > version->id()) {
                 lowestVersion = version;
             }

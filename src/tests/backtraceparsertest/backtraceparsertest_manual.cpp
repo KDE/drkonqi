@@ -35,7 +35,7 @@ int main(int argc, char **argv)
         parser.showHelp(1);
         return 1;
     }
-    QString file = parser.positionalArguments().first();
+    const QString file = parser.positionalArguments().constFirst();
 
     if (!QFile::exists(file)) {
         std::cerr << "The specified file does not exist" << std::endl;
