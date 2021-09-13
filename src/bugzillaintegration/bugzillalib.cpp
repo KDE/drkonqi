@@ -225,7 +225,7 @@ void BugzillaManager::fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobO
 }
 
 // TODO: This would kinda benefit from an actual pagination class,
-// currently this implicitly relies on the caller to handle offests correctly.
+// currently this implicitly relies on the caller to handle offsets correctly.
 // Fortunately we only have one caller so it makes no difference.
 void BugzillaManager::searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset)
 {
