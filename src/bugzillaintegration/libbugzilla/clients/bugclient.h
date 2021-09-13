@@ -21,13 +21,13 @@ class BugClient : public ClientBase
 public:
     using ClientBase::ClientBase;
 
-    QList<Bug::Ptr> search(KJob *kjob);
+    QList<Bug::Ptr> search(KJob *kjob) const;
     KJob *search(const BugSearch &search);
 
-    qint64 create(KJob *kjob);
+    qint64 create(KJob *kjob) const;
     KJob *create(const NewBug &bug);
 
-    qint64 update(KJob *kjob);
+    qint64 update(KJob *kjob) const;
     KJob *update(qint64 bugId, BugUpdate &bug);
 };
 

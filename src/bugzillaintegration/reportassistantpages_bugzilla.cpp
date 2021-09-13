@@ -485,7 +485,7 @@ void BugzillaInformationPage::loadDistroCombo()
 
     Bugzilla::BugFieldClient client;
     auto job = client.getField(QStringLiteral("rep_platform"));
-    connect(job, &KJob::finished, this, [this, &client](KJob *job) {
+    connect(job, &KJob::finished, this, [this, client](KJob *job) {
         try {
             Bugzilla::BugField::Ptr field = client.getField(job);
             if (!field) {

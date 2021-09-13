@@ -13,7 +13,7 @@ KJob *BugFieldClient::getFields(const QString &idOrName)
     return m_connection.get(QStringLiteral("/field/bug/") + idOrName);
 }
 
-QList<BugField::Ptr> BugFieldClient::getFields(KJob *kjob)
+QList<BugField::Ptr> BugFieldClient::getFields(KJob *kjob) const
 {
     auto *job = qobject_cast<APIJob *>(kjob);
 
@@ -32,7 +32,7 @@ KJob *BugFieldClient::getField(const QString &idOrName)
     return getFields(idOrName);
 }
 
-BugField::Ptr BugFieldClient::getField(KJob *kjob)
+BugField::Ptr BugFieldClient::getField(KJob *kjob) const
 {
     return getFields(kjob).value(0, nullptr);
 }

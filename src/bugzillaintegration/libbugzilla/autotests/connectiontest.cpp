@@ -144,10 +144,10 @@ private Q_SLOTS:
 
         QString readBlob; // lambda member essentially
 
-        connect(server, &QTcpServer::newConnection, server, [server, &readBlob]() {
+        connect(server, &QTcpServer::newConnection, server, [server, &readBlob]() { // clazy:exclude=lambda-in-connect
             QCOMPARE(server->thread(), QThread::currentThread());
             QTcpSocket *socket = server->nextPendingConnection();
-            connect(socket, &QTcpSocket::readyRead, socket, [&readBlob, socket] {
+            connect(socket, &QTcpSocket::readyRead, socket, [&readBlob, socket] { // clazy:exclude=lambda-in-connect
                 readBlob += socket->readAll();
                 readBlob.replace("\r\n", "\n");
                 auto parts = readBlob.split("\n");

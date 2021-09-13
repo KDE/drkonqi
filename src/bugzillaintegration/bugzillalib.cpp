@@ -193,7 +193,7 @@ void BugzillaManager::fetchBugReport(int bugnumber, QObject *jobOwner)
 
     Bugzilla::BugClient client;
     auto job = m_searchJob = client.search(search);
-    connect(job, &KJob::finished, this, [this, &client, jobOwner](KJob *job) {
+    connect(job, &KJob::finished, this, [this, client, jobOwner](KJob *job) {
         try {
             auto list = client.search(job);
             if (list.size() != 1) {
@@ -213,7 +213,7 @@ void BugzillaManager::fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobO
 {
     Bugzilla::CommentClient client;
     auto job = client.getFromBug(bug->id());
-    connect(job, &KJob::finished, this, [this, &client, jobOwner](KJob *job) {
+    connect(job, &KJob::finished, this, [this, client, jobOwner](KJob *job) {
         try {
             auto comments = client.getFromBug(job);
             Q_EMIT commentsFetched(comments, jobOwner);
@@ -246,7 +246,7 @@ void BugzillaManager::searchBugs(const QStringList &products, const QString &sev
 
     Bugzilla::BugClient client;
     auto job = m_searchJob = Bugzilla::BugClient().search(search);
-    connect(job, &KJob::finished, this, [this, &client](KJob *job) {
+    connect(job, &KJob::finished, this, [this, client](KJob *job) {
         try {
             auto list = client.search(job);
             m_searchJob = nullptr;

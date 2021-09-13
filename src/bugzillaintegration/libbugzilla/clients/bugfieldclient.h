@@ -18,11 +18,11 @@ public:
     using ClientBase::ClientBase;
 
     KJob *getFields(const QString &idOrName = QString());
-    QList<BugField::Ptr> getFields(KJob *kjob);
+    QList<BugField::Ptr> getFields(KJob *kjob) const;
 
     KJob *getField(const QString &idOrName);
     /// Ptr may be null if the idOrName matched nothing!
-    BugField::Ptr getField(KJob *kjob);
+    BugField::Ptr getField(KJob *kjob) const;
 };
 
 } // namespace Bugzilla

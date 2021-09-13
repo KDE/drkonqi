@@ -8,7 +8,7 @@
 
 namespace Bugzilla
 {
-QList<Bug::Ptr> BugClient::search(KJob *kjob)
+QList<Bug::Ptr> BugClient::search(KJob *kjob) const
 {
     auto *job = qobject_cast<APIJob *>(kjob);
 
@@ -27,7 +27,7 @@ KJob *BugClient::search(const BugSearch &search)
     return m_connection.get(QStringLiteral("/bug"), search.toQuery());
 }
 
-qint64 BugClient::create(KJob *kjob)
+qint64 BugClient::create(KJob *kjob) const
 {
     auto *job = qobject_cast<APIJob *>(kjob);
 
@@ -41,7 +41,7 @@ KJob *BugClient::create(const NewBug &bug)
     return m_connection.post(QStringLiteral("/bug"), bug.toJson());
 }
 
-qint64 BugClient::update(KJob *kjob)
+qint64 BugClient::update(KJob *kjob) const
 {
     auto *job = qobject_cast<APIJob *>(kjob);
 

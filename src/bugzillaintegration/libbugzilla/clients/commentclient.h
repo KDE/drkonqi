@@ -17,7 +17,7 @@ class CommentClient : public ClientBase
 public:
     using ClientBase::ClientBase;
 
-    QList<Comment::Ptr> getFromBug(KJob *kjob);
+    QList<Comment::Ptr> getFromBug(KJob *kjob) const;
     KJob *getFromBug(int bugId);
 };
 
