@@ -47,7 +47,7 @@ TransferAPIJob::TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent)
         // simulation of slow connections.
         static int delay = qEnvironmentVariableIntValue("DRKONQI_HTTP_DELAY_MS");
         if (delay > 0) {
-            QTimer::singleShot(delay, [this] {
+            QTimer::singleShot(delay, this, [this] {
                 emitResult();
             });
             return;
