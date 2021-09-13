@@ -38,10 +38,10 @@ public:
 
     void aboutToShow() override;
     bool isComplete() override;
+    bool canLogin() const;
 
 private Q_SLOTS:
     void loginClicked();
-    bool canLogin() const;
     void login();
     void loginFinished(bool);
     void loginError(const QString &error);
