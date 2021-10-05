@@ -39,6 +39,7 @@ set(drkonqi_SRCS
     applicationdetailsexamples.cpp
     statusnotifier.cpp
     linuxprocmapsparser.cpp
+    drkonqi_globals.cpp
 )
 
 ki18n_wrap_ui(drkonqi_SRCS

@@ -215,13 +215,8 @@ void DrKonqiDialog::buildDialogButtons()
     connect(reportButton, &QPushButton::clicked, this, &DrKonqiDialog::startBugReportAssistant);
 
     // Restart application button
-    KGuiItem2 restartItem(i18nc("@action:button", "&Restart Application"),
-                          QIcon::fromTheme(QStringLiteral("system-reboot")),
-                          i18nc("@info:tooltip",
-                                "Use this button to restart "
-                                "the crashed application."));
     m_restartButton = new QPushButton(m_buttonBox);
-    KGuiItem::assign(m_restartButton, restartItem);
+    KGuiItem::assign(m_restartButton, DrStandardGuiItem::appRestart());
     m_restartButton->setEnabled(!crashedApp->hasBeenRestarted() && crashedApp->fakeExecutableBaseName() != QLatin1String("drkonqi"));
     m_buttonBox->addButton(m_restartButton, QDialogButtonBox::ActionRole);
     connect(m_restartButton, &QAbstractButton::clicked, crashedApp, &CrashedApplication::restart);

@@ -42,7 +42,12 @@ ConclusionPage::ConclusionPage(ReportAssistantDialog *parent)
         QDesktopServices::openUrl(QUrl(link));
     });
 
-    ui.m_restartAppOnFinish->setVisible(false);
+    KGuiItem::assign(ui.m_appRestartButton, DrStandardGuiItem::appRestart());
+    connect(ui.m_appRestartButton, &QAbstractButton::clicked, DrKonqi::crashedApplication(), &CrashedApplication::restart);
+    connect(DrKonqi::crashedApplication(), &CrashedApplication::restarted, this, [this](bool restarted) {
+        ui.m_appRestartButton->setEnabled(!restarted);
+    });
+    ui.m_appRestartButton->setVisible(false);
 }
 
 void ConclusionPage::finishClicked()
@@ -69,18 +74,12 @@ void ConclusionPage::finishClicked()
         // Show a copy of the bug reported
         openReportInformation();
     }
-
-    // Restart application
-    if (ui.m_restartAppOnFinish->isChecked()) {
-        DrKonqi::crashedApplication()->restart();
-    }
 }
 
 void ConclusionPage::aboutToShow()
 {
+    ui.m_appRestartButton->setVisible(!DrKonqi::crashedApplication()->hasBeenRestarted());
     connect(assistant()->finishButton(), &QPushButton::clicked, this, &ConclusionPage::finishClicked);
-    ui.m_restartAppOnFinish->setVisible(false);
-    ui.m_restartAppOnFinish->setChecked(false);
 
     const bool isDuplicate = reportInterface()->duplicateId() && !reportInterface()->attachToBugNumber();
     m_needToReport = reportInterface()->isWorthReporting() && !isDuplicate;
@@ -99,9 +98,6 @@ void ConclusionPage::aboutToShow()
             "KDE Community Wiki</"
             "link>."));
         ui.m_showReportInformationButton->setVisible(false); // Don't give access to the report, lest people file them manually.
-        if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
-            ui.m_restartAppOnFinish->setVisible(true);
-        }
         Q_EMIT finished(false /* don't enable back button - the user can't improve this result*/);
         return;
     }
@@ -209,10 +205,6 @@ void ConclusionPage::aboutToShow()
                                                    reportAddress));
 
         } else {
-            if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
-                ui.m_restartAppOnFinish->setVisible(true);
-            }
-
             ui.m_howToProceedLabel->setText(xi18nc("@info",
                                                    "This application is not supported in the "
                                                    "KDE bug tracking system. Click <interface>"
@@ -225,10 +217,6 @@ void ConclusionPage::aboutToShow()
         }
 
     } else { // (m_needToReport)
-        if (!DrKonqi::crashedApplication()->hasBeenRestarted()) {
-            ui.m_restartAppOnFinish->setVisible(true);
-        }
-
         ui.m_conclusionsLabel->setText(QStringLiteral("<p><strong>%1</strong><br />%2</p>")
                                            .arg(i18nc("@info",
                                                       "This report does not contain enough information for the "
