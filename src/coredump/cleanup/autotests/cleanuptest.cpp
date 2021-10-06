@@ -21,7 +21,7 @@ class CleanupTest : public QObject
 private Q_SLOTS:
     void testRun()
     {
-        const QString binary = QFINDTESTDATA("bin/drkonqi-coredump-cleanup");
+        const QString binary = QFINDTESTDATA("drkonqi-coredump-cleanup");
         QTemporaryDir tempDir;
         QVERIFY(tempDir.isValid());
 
