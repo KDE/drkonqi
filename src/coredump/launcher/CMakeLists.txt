@@ -18,5 +18,5 @@ install(
 )
 
 add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp)
-target_link_libraries(KDECoredumpNotifierTruck Qt5::Core KF5::Notifications)
+target_link_libraries(KDECoredumpNotifierTruck Qt5::Core KF5::Notifications KF5::KIOGui)
 install(TARGETS KDECoredumpNotifierTruck DESTINATION ${PLUGIN_INSTALL_DIR}/drkonqi/)
