@@ -14,7 +14,6 @@
 #include <QMenu>
 #include <QTimer>
 
-#include <KIdleTime>
 #include <KLocalizedString>
 #include <KNotification>
 #include <KStatusNotifierItem>
