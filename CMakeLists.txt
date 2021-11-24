@@ -45,6 +45,7 @@ find_package(
         WidgetsAddons
         Wallet
         Notifications
+        IdleTime
         WindowSystem
         SyntaxHighlighting
 )

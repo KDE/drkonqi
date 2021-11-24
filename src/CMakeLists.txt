@@ -115,6 +115,7 @@ target_link_libraries(
     KF5::WidgetsAddons
     KF5::Wallet
     KF5::Notifications # for status notifier
+    KF5::IdleTime # hide status notifier only if user saw it
     KF5::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
