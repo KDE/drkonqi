@@ -19,8 +19,10 @@ add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 
 ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_backtrace_parser)
-
-ecm_add_tests(linuxprocmapsparsertest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
+ecm_add_tests(
+        linuxprocmapsparsertest.cpp
+        statusnotifier_activationclosetimertest.cpp
+    LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)

@@ -38,6 +38,7 @@ set(drkonqi_SRCS
     debuggermanager.cpp
     applicationdetailsexamples.cpp
     statusnotifier.cpp
+    statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
 )

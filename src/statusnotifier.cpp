@@ -6,27 +6,21 @@
 
 #include "statusnotifier.h"
 
-#include <chrono>
-
 #include <QAction>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 #include <QMenu>
-#include <QTimer>
 
-#include <KIdleTime>
 #include <KLocalizedString>
 #include <KNotification>
 #include <KStatusNotifierItem>
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
-
-using namespace std::chrono_literals;
+#include "statusnotifier_activationclosetimer.h"
 
 StatusNotifier::StatusNotifier(QObject *parent)
     : QObject(parent)
-    , m_autoCloseTimer(new QTimer(this))
     , m_sni(new KStatusNotifierItem(this))
 {
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
@@ -51,11 +45,6 @@ void StatusNotifier::show()
 {
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
-    // if nobody bothered to look at the crash after 1 minute, just close
-    m_autoCloseTimer->setSingleShot(true);
-    m_autoCloseTimer->setInterval(1min);
-    m_autoCloseTimer->start();
-    connect(m_autoCloseTimer, &QTimer::timeout, this, &StatusNotifier::expired);
     connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
 
     m_sni->setTitle(m_title);
@@ -92,36 +81,13 @@ void StatusNotifier::show()
 
     m_sni->setContextMenu(sniMenu);
 
-    // Should the SNI host implode and not return within 10s, automatically
-    // open the dialog.
-    // We are tracking the related Notifications service here, because actually
-    // tracking the Host interface is fairly involved with no tangible advantage.
-
-    const QDBusConnection sessionBus = QDBusConnection::sessionBus();
-    const QDBusConnectionInterface *sessionInterface = sessionBus.interface();
-    Q_ASSERT(sessionInterface);
-
-    auto watcher = new QDBusServiceWatcher(this);
-    watcher->setConnection(sessionBus);
-    watcher->setWatchMode(QDBusServiceWatcher::WatchForOwnerChange);
-
-    // org.kde.StatusNotifierWatcher (kded5): SNI won't be registered
-    // org.freedesktop.Notifications (plasmashell): SNI won't be visualized
-    for (const auto &serviceName : {QStringLiteral("org.kde.StatusNotifierWatcher"), QStringLiteral("org.freedesktop.Notifications")}) {
-        auto activationTimer = new QTimer(this);
-        activationTimer->setInterval(10s);
-        connect(activationTimer, &QTimer::timeout, this, &StatusNotifier::activated);
-
-        watcher->addWatchedService(serviceName);
-        connect(watcher, &QDBusServiceWatcher::serviceUnregistered, activationTimer, QOverload<>::of(&QTimer::start));
-        connect(watcher, &QDBusServiceWatcher::serviceRegistered, activationTimer, &QTimer::stop);
-
-        // if not currently available queue the activation - this is in case the service isn't available *right now*
-        // in which case we'll not get any registration events
-        if (!sessionInterface->isServiceRegistered(serviceName)) {
-            activationTimer->start();
-        }
-    }
+    // Depending on the environmental state we may auto-activate or auto-close the SNI.
+    auto timer = new ActivationCloseTimer(this);
+    connect(timer, &ActivationCloseTimer::autoActivate, this, &StatusNotifier::activated);
+    connect(timer, &ActivationCloseTimer::autoClose, this, &StatusNotifier::expired);
+    auto dbusWatcher = new DBusServiceWatcher(timer);
+    auto idleWatcher = new IdleWatcher(timer);
+    timer->start(dbusWatcher, idleWatcher);
 }
 
 void StatusNotifier::notify()

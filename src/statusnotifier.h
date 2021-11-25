@@ -38,7 +38,6 @@ Q_SIGNALS:
 private:
     static bool canBeRestarted(CrashedApplication *app);
 
-    QTimer *m_autoCloseTimer = nullptr;
     KStatusNotifierItem *m_sni = nullptr;
 
     bool m_activationAllowed = true;
