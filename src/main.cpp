@@ -39,9 +39,6 @@
 #include "statusnotifier.h"
 
 static const char version[] = PROJECT_VERSION;
-static const char description[] = I18N_NOOP(
-    "The KDE Crash Handler gives the user feedback "
-    "if a program has crashed.");
 
 namespace
 {
@@ -112,7 +109,8 @@ int main(int argc, char *argv[])
     KAboutData aboutData(QStringLiteral("drkonqi"),
                          i18n("The KDE Crash Handler"),
                          QString::fromLatin1(version),
-                         i18n(description),
+                         i18n("The KDE Crash Handler gives the user feedback "
+                              "if a program has crashed."),
                          KAboutLicense::GPL,
                          i18n("(C) 2000-2018, The DrKonqi Authors"));
     aboutData.addAuthor(i18nc("@info:credit", "Hans Petter Bieker"), QString(), QStringLiteral("bieker@kde.org"));

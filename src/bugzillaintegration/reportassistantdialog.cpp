@@ -32,8 +32,6 @@
 #include "reportassistantpages_bugzilla_duplicates.h"
 #include "reportinterface.h"
 
-static const char KDE_BUGZILLA_DESCRIPTION[] = I18N_NOOP("the KDE Bug Tracking System");
-
 ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     : KAssistantDialog(parent)
     , m_aboutBugReportingDialog(nullptr)
@@ -113,7 +111,7 @@ ReportAssistantDialog::ReportAssistantDialog(QWidget *parent)
     connectSignals(m_bugzillaLogin);
 
     auto *m_bugzillaLoginPage = new KPageWidgetItem(m_bugzillaLogin, QLatin1String(PAGE_BZLOGIN_ID));
-    m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n(KDE_BUGZILLA_DESCRIPTION)));
+    m_bugzillaLoginPage->setHeader(i18nc("@title", "Login into %1", i18n("the KDE Bug Tracking System")));
     m_bugzillaLoginPage->setIcon(QIcon::fromTheme(QStringLiteral("user-identity")));
     connect(m_bugzillaLogin, &BugzillaLoginPage::loggedTurnToNextPage, this, &ReportAssistantDialog::loginFinished);
 
