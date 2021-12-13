@@ -50,7 +50,7 @@ find_package(
         SyntaxHighlighting
 )
 
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055600)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
 
 find_package(Systemd)
