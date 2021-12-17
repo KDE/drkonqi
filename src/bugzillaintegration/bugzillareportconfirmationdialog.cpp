@@ -77,7 +77,9 @@ BugzillaReportConfirmationDialog::BugzillaReportConfirmationDialog(int bugNumber
     connect(ui.buttonGroupProceedQuestion, SIGNAL(buttonClicked(int)), this, SLOT(checkProceed()));
     // Also listen to toggle so radio buttons are covered.
     connect(ui.buttonGroupProceed, &QButtonGroup::idClicked, this, &BugzillaReportConfirmationDialog::checkProceed);
+    connect(ui.buttonGroupProceed, &QButtonGroup::idToggled, this, &BugzillaReportConfirmationDialog::checkProceed);
     connect(ui.buttonGroupProceedQuestion, &QButtonGroup::idClicked, this, &BugzillaReportConfirmationDialog::checkProceed);
+    connect(ui.buttonGroupProceed, &QButtonGroup::idToggled, this, &BugzillaReportConfirmationDialog::checkProceed);
 
     if (!m_showProceedQuestion) {
         ui.proceedLabel->setEnabled(false);
