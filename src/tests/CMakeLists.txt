@@ -41,6 +41,7 @@ if(NOT APPLE)
 
     set(ATSPI_PATHS
         /usr/lib/at-spi2-core/ # debians
+        /usr/libexec/ # newer debians
         /usr/lib/at-spi2/ # suses
     )
     if(NOT ATSPI_BUS_LAUNCHER_EXECUTABLE)
