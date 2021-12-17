@@ -40,6 +40,7 @@
 #include "bugzillalib.h"
 #include "crashedapplication.h"
 #include "drkonqi.h"
+#include "drkonqi_debug.h"
 #include "drkonqi_globals.h"
 #include "reportinformationdialog.h"
 #include "reportinterface.h"
@@ -173,6 +174,7 @@ void BugzillaLoginPage::openWallet()
 {
     // Store if the wallet was previously opened so we can know if we should close it later
     m_walletWasOpenedBefore = KWallet::Wallet::isOpen(KWallet::Wallet::NetworkWallet());
+    qCDebug(DRKONQI_LOG) << "Wallet was open?" << m_walletWasOpenedBefore;
 
     // Request open the wallet
     WId windowId = 0;
@@ -183,12 +185,15 @@ void BugzillaLoginPage::openWallet()
     }
 
     m_wallet = KWallet::Wallet::openWallet(KWallet::Wallet::NetworkWallet(), windowId);
+    qCDebug(DRKONQI_LOG) << "wallet?" << m_wallet;
 }
 
 void BugzillaLoginPage::walletLogin()
 {
     if (!m_wallet) {
+        qCDebug(DRKONQI_LOG) << "Wallet not open";
         if (kWalletEntryExists(m_walletEntryName)) { // Key exists!
+            qCDebug(DRKONQI_LOG) << "wallet entry exists";
             openWallet();
             ui.m_savePasswordCheckBox->setCheckState(Qt::Checked);
             // Was the wallet opened?
@@ -207,6 +212,7 @@ void BugzillaLoginPage::walletLogin()
                 }
             }
         } else if (kWalletEntryExists(konquerorKWalletEntryName)) {
+            qCDebug(DRKONQI_LOG) << "wallet entry does not exist";
             // If the DrKonqi entry is empty, but a Konqueror entry exists, use and copy it.
             openWallet();
             if (m_wallet) {
@@ -249,9 +255,11 @@ void BugzillaLoginPage::loginClicked()
     updateWidget(false);
 
     if (ui.m_savePasswordCheckBox->checkState() == Qt::Checked) { // Wants to save data
+        qCDebug(DRKONQI_LOG) << "trying to store credentials";
         if (!m_wallet) {
             openWallet();
         }
+        qCDebug(DRKONQI_LOG) << "Wallet opened?" << m_wallet;
         // Got wallet open ?
         if (m_wallet) {
             m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
