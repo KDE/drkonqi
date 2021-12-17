@@ -1,7 +1,7 @@
 /*******************************************************************
  * duplicatefinderjob.cpp
  * SPDX-FileCopyrightText: 2011 Matthias Fuchs <mat69@gmx.net>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -34,6 +34,11 @@ DuplicateFinderJob::~DuplicateFinderJob() = default;
 
 void DuplicateFinderJob::start()
 {
+    if (qEnvironmentVariableIntValue("DRKONQI_SKIP_DUPES") > 0) {
+        metaObject()->invokeMethod(this, &DuplicateFinderJob::emitResult);
+        return;
+    }
+
     analyzeNextBug();
 }
 

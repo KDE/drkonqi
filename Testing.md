@@ -1,6 +1,6 @@
 <!--
     SPDX-License-Identifier: CC0-1.0
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
 -->
 
 # Exec
@@ -35,6 +35,7 @@ The following environment variables may be used to test drkonqi with actual repo
   to set this to bugstest.kde.org - must end with slash)
 - DRKONQI_HTTP_DELAY_MS: introduce a delay on every single API request
   (simulates slow connection)
+- DRKONQI_SKIP_DUPES: skip duplicate checking (is faster and allows filing dupes)
 
 # Backends
 

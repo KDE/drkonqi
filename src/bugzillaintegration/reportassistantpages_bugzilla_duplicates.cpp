@@ -1,7 +1,7 @@
 /*******************************************************************
  * reportassistantpages_bugzilla_duplicates.cpp
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -173,6 +173,9 @@ void BugzillaDuplicatesPage::searchMore()
 {
     if (m_offset < 0) {
         m_offset = 0; // initialize, -1 means no search done yet
+    }
+    if (qEnvironmentVariableIntValue("DRKONQI_SKIP_DUPES") > 0) {
+        return;
     }
 
     // This is fairly inefficient, unfortunately the APIs offset/limit system
