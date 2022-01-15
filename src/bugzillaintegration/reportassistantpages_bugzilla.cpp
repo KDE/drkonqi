@@ -27,7 +27,6 @@
 #include <KCapacityBar>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcompletion_version.h>
 #include <kwallet.h>
 
 /* Unhandled error dialog includes */
@@ -83,11 +82,7 @@ BugzillaLoginPage::BugzillaLoginPage(ReportAssistantDialog *parent)
 
     connect(ui.m_loginButton, &QPushButton::clicked, this, &BugzillaLoginPage::loginClicked);
 
-#if KCOMPLETION_VERSION >= QT_VERSION_CHECK(5, 81, 0)
     connect(ui.m_userEdit, &KLineEdit::returnKeyPressed, this, &BugzillaLoginPage::loginClicked);
-#else
-    connect(ui.m_userEdit, &KLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
-#endif
     connect(ui.m_passwordEdit->lineEdit(), &QLineEdit::returnPressed, this, &BugzillaLoginPage::loginClicked);
 
     connect(ui.m_userEdit, &KLineEdit::textChanged, this, &BugzillaLoginPage::updateLoginButtonStatus);
