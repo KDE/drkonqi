@@ -14,7 +14,7 @@ install(TARGETS drkonqi-coredump-launcher DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(drkonqi-coredump-launcher@.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-launcher@.service)
 install(
     FILES drkonqi-coredump-launcher.socket ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-launcher@.service
-    DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR}
+    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
 
 add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp)
