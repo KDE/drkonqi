@@ -6,7 +6,7 @@
 
 #include "connection.h"
 
-#include <KIOCore/KIO/TransferJob>
+#include <KIO/TransferJob>
 #include <QUrlQuery>
 
 #include "bugzilla_debug.h"

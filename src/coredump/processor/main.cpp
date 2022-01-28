@@ -265,7 +265,7 @@ void CoredumpWatcher::processLog()
         QByteArray data = QJsonDocument::fromVariant(variantMap).toJson();
         while (!data.isEmpty()) {
             // NB: we need to constrain the segment size to not run into QLocalSocket::DatagramTooLargeError
-            const qint64 written = s.write(data.constData(), std::min(data.size(), Socket::DatagramSize));
+            const qint64 written = s.write(data.constData(), std::min<int>(data.size(), Socket::DatagramSize));
             if (written > 0) {
                 data = data.mid(written);
                 s.waitForBytesWritten();

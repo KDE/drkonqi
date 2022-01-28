@@ -98,7 +98,9 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication app(argc, argv);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+#endif
     KLocalizedString::setApplicationDomain("drkonqi5");
 
     // Prevent KApplication from setting the crash handler. We will set it later...

@@ -172,7 +172,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
                 executable = execPath;
             } else if (!DrKonqi::appPath().isEmpty()) {
                 QDir execDir(DrKonqi::appPath());
-                executable = execDir.absoluteFilePath(execPath.fileName());
+                executable = QFileInfo(execDir.absoluteFilePath(execPath.fileName()));
             } else {
                 executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
             }

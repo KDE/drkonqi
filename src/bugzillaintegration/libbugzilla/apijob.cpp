@@ -9,7 +9,7 @@
 #include <QMetaMethod>
 #include <QTimer>
 
-#include <KIOCore/KIO/TransferJob>
+#include <KIO/TransferJob>
 
 #include "bugzilla_debug.h"
 #include "exceptions.h"

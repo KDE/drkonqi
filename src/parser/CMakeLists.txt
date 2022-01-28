@@ -17,4 +17,4 @@ ecm_qt_declare_logging_category(
 )
 
 add_library(drkonqi_backtrace_parser STATIC ${BACKTRACEPARSER_SRCS})
-target_link_libraries(drkonqi_backtrace_parser PUBLIC Qt::Core)
+target_link_libraries(drkonqi_backtrace_parser PUBLIC Qt${QT_MAJOR_VERSION}::Core)
