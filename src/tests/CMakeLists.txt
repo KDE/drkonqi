@@ -11,18 +11,18 @@ find_package(Qt${QT_MAJOR_VERSION}Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
 if(HAVE_UNAME)
     add_executable(lsb_release lsb_release_double.c)
 
-    ecm_add_tests(systeminformationtest.cpp LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Core Qt${QT_MAJOR_VERSION}::Test DrKonqiInternal)
+    ecm_add_tests(systeminformationtest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 endif()
 
 add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 
-ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Core Qt${QT_MAJOR_VERSION}::Test drkonqi_backtrace_parser)
+ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_backtrace_parser)
 ecm_add_tests(
         linuxprocmapsparsertest.cpp
         statusnotifier_activationclosetimertest.cpp
-    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Core Qt${QT_MAJOR_VERSION}::Test DrKonqiInternal)
+    LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)

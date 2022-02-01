@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
 
 add_executable(drkonqi-coredump-processor main.cpp)
-target_link_libraries(drkonqi-coredump-processor Qt${QT_MAJOR_VERSION}::Core Qt${QT_MAJOR_VERSION}::Network Systemd::systemd)
+target_link_libraries(drkonqi-coredump-processor Qt::Core Qt::Network Systemd::systemd)
 install(TARGETS drkonqi-coredump-processor DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
 configure_file(

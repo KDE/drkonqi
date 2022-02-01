@@ -111,8 +111,8 @@ target_link_libraries(
     KF5::Crash
     KF5::Completion
     KF5::WindowSystem
-    Qt${QT_MAJOR_VERSION}::DBus
-    Qt${QT_MAJOR_VERSION}::Concurrent
+    Qt::DBus
+    Qt::Concurrent
     KF5::WidgetsAddons
     KF5::Wallet
     KF5::Notifications # for status notifier

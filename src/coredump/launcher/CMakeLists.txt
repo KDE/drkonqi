@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
 
 add_executable(drkonqi-coredump-launcher main.cpp)
-target_link_libraries(drkonqi-coredump-launcher Qt${QT_MAJOR_VERSION}::Core Qt${QT_MAJOR_VERSION}::Network Systemd::systemd)
+target_link_libraries(drkonqi-coredump-launcher Qt::Core Qt::Network Systemd::systemd)
 target_compile_options(
     drkonqi-coredump-launcher
     PRIVATE
@@ -18,5 +18,5 @@ install(
 )
 
 add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp)
-target_link_libraries(KDECoredumpNotifierTruck Qt${QT_MAJOR_VERSION}::Core KF5::Notifications KF5::KIOGui)
+target_link_libraries(KDECoredumpNotifierTruck Qt::Core KF5::Notifications KF5::KIOGui)
 install(TARGETS KDECoredumpNotifierTruck DESTINATION ${KDE_INSTALL_PLUGINDIR}/drkonqi/)
