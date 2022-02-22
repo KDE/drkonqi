@@ -1,7 +1,7 @@
 /*******************************************************************
  * reportassistantpages_bugzilla.cpp
  * SPDX-FileCopyrightText: 2009, 2010, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
- * SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -193,6 +193,7 @@ void BugzillaLoginPage::walletLogin()
             ui.m_savePasswordCheckBox->setCheckState(Qt::Checked);
             // Was the wallet opened?
             if (m_wallet) {
+                m_wallet->createFolder(KWallet::Wallet::FormDataFolder());
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
 
                 // Use wallet data to try login
@@ -211,6 +212,7 @@ void BugzillaLoginPage::walletLogin()
             // If the DrKonqi entry is empty, but a Konqueror entry exists, use and copy it.
             openWallet();
             if (m_wallet) {
+                m_wallet->createFolder(KWallet::Wallet::FormDataFolder());
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
 
                 // Fetch Konqueror data
@@ -257,6 +259,7 @@ void BugzillaLoginPage::loginClicked()
         qCDebug(DRKONQI_LOG) << "Wallet opened?" << m_wallet;
         // Got wallet open ?
         if (m_wallet) {
+            m_wallet->createFolder(KWallet::Wallet::FormDataFolder());
             m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
 
             QMap<QString, QString> values;
@@ -271,6 +274,7 @@ void BugzillaLoginPage::loginClicked()
             }
             // Got wallet open ?
             if (m_wallet) {
+                m_wallet->createFolder(KWallet::Wallet::FormDataFolder());
                 m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
                 m_wallet->removeEntry(m_walletEntryName);
             }
