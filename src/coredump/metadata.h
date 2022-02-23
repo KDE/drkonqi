@@ -12,6 +12,12 @@
 
 namespace Metadata
 {
+static QString metadataPath(int pid)
+{
+    const QString name = QStringLiteral("kcrash-metadata/%1.ini").arg(pid);
+    return QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + name;
+}
+
 // Defined in the header so it can be used by the coredump-helper as well.
 static QString resolveMetadataPath(int pid)
 {

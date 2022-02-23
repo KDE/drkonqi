@@ -53,3 +53,18 @@ feature targeted at developers:
   dangling metadata files
 * launcher's main.cpp runs through a set of DumpTruck instances, the first that wants to handle the crash may. By default
   that would be the DrkonqiTruck for crashes in KDE software
+
+### IncludeAll Mode
+
+Add into `~/.config/drkonqirc`:
+```
+[General]
+IncludeAll=true
+```
+
+This operation mode primarily targets Plasma Mobile. It effectively catches and reports **all** coredumpd tracked
+crashes. This is notably including non-KDE software for which drkonqi will only offer tracing facilities but no active
+bug reporting. The use is that for systems where we are completely in control we'll want to give our users the ability
+to differentiate a crash in middleware from one in the application space (or defects caused by the former in the latter).
+
+Please note that this mode requires correctly set up coredumpd support as outlined above.

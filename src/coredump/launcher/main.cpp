@@ -17,6 +17,7 @@
 #include <cerrno>
 #include <chrono>
 #include <memory>
+#include <tuple>
 #include <utility>
 
 #include <poll.h>
@@ -43,12 +44,64 @@ static QString drkonqiExe()
     return exec;
 }
 
+using ArgumentsPidTuple = std::tuple<QStringList, bool>;
+
+static ArgumentsPidTuple metadataArguments(const Coredump &dump, const QString &metadataPath)
+{
+    QStringList arguments;
+    bool foundPID = false;
+
+    // Parse the metadata file. Ideally we'd should even stop passing a gazillion options
+    // and instead rely on this file, then drkonqi
+    // would also be in charge of removing it instead of us here.
+    QSettings metadata(metadataPath, QSettings::IniFormat);
+    metadata.beginGroup(QStringLiteral("KCrash"));
+    const QStringList keys = metadata.allKeys();
+    for (const QString &key : keys) {
+        const QString value = metadata.value(key).toString();
+
+        if (key == QLatin1String("exe")) {
+            if (value.endsWith(QStringLiteral("/drkonqi"))) {
+                qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashd :O";
+                return {};
+            }
+            if (value != dump.exe) {
+                qWarning() << "the exe in the metadata file doesn't match the exe in the journal entry! aborting" << value << dump.exe;
+                return {};
+            }
+            // exe purely exists for our benefit, don't forward it to drkonqi.
+            continue;
+        }
+
+        if (key == QLatin1String("pid")) {
+            foundPID = true;
+        }
+
+        arguments << QStringLiteral("--%1").arg(key);
+        if (value != QLatin1String("true") && value != QLatin1String("false")) { // not a bool value, append as arg
+            arguments << value;
+        }
+    }
+    metadata.endGroup();
+
+    return {arguments, foundPID};
+}
+
+static ArgumentsPidTuple includeAllArguments(const Coredump &dump)
+{
+    // Synthesize drkonqi arguments from the dump alone, this has limited functionality and is meant for use with
+    // non-KDE apps.
+    QStringList arguments;
+    arguments << QStringLiteral("--signal") << QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL")));
+    arguments << QStringLiteral("--pid") << QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID")));
+    arguments << QStringLiteral("--restarted"); // Cannot restart foreign apps!
+    return {arguments, true};
+}
+
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString metadataPath = Metadata::resolveMetadataPath(dump.pid);
-    if (metadataPath.isEmpty()) {
-        return false;
-    }
+    const QString configFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("drkonqirc"));
 
     // Arm removal. If we return early this will ensure clean up, otherwise we dismiss it later
     auto deleteFile = qScopeGuard([metadataPath] {
@@ -68,38 +121,15 @@ static bool tryDrkonqi(const Coredump &dump)
     QStringList arguments;
     bool foundPID = false;
 
-    // Parse the metadata file. Ideally we'd should even stop passing a gazillion options
-    // and instead rely on this file, then drkonqi
-    // would also be in charge of removing it instead of us here.
-    QSettings metadata(metadataPath, QSettings::IniFormat);
-    metadata.beginGroup(QStringLiteral("KCrash"));
-    const QStringList keys = metadata.allKeys();
-    for (const QString &key : keys) {
-        const QString value = metadata.value(key).toString();
-
-        if (key == QLatin1String("exe")) {
-            if (value.endsWith(QStringLiteral("/drkonqi"))) {
-                qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashd :O";
-                return false;
-            }
-            if (value != dump.exe) {
-                qWarning() << "the exe in the metadata file doesn't match the exe in the journal entry! aborting" << value << dump.exe;
-                return false;
-            }
-            // exe purely exists for our benefit, don't forward it to drkonqi.
-            continue;
-        }
-
-        if (key == QLatin1String("pid")) {
-            foundPID = true;
-        }
-
-        arguments << QStringLiteral("--%1").arg(key);
-        if (value != QLatin1String("true") && value != QLatin1String("false")) { // not a bool value, append as arg
-            arguments << value;
-        }
+    if (!metadataPath.isEmpty()) {
+        // A KDE app crash has metadata, build arguments from that
+        std::tie(arguments, foundPID) = metadataArguments(dump, metadataPath);
+    } else if (QSettings(configFile, QSettings::IniFormat).value(QStringLiteral("IncludeAll")).toBool()) {
+        // Handle non-KDE apps when in IncludeAll mode.
+        std::tie(arguments, foundPID) = includeAllArguments(dump);
+    } else {
+        return false;
     }
-    metadata.endGroup();
 
     if (arguments.isEmpty() || !foundPID) {
         // There is a chance that somehow the metadata file writing failed or is incomplete. Do some trivial
@@ -110,6 +140,7 @@ static bool tryDrkonqi(const Coredump &dump)
     }
 
     // Append Coredump data. This allow us to not have to talk to journald again on the drkonqi side.
+    QSettings metadata(Metadata::metadataPath(dump.pid), QSettings::IniFormat);
     metadata.beginGroup(QStringLiteral("Journal"));
     for (auto it = dump.m_rawData.cbegin(); it != dump.m_rawData.cend(); ++it) {
         metadata.setValue(QString::fromUtf8(it.key()), it.value());
@@ -117,8 +148,6 @@ static bool tryDrkonqi(const Coredump &dump)
     metadata.endGroup();
     metadata.sync();
 
-    QStringList cmdline = arguments;
-    cmdline.prepend(drkonqiExe());
     setenv("DRKONQI_BACKEND", "COREDUMPD", 1);
     setenv("DRKONQI_METADATA_FILE", qPrintable(metadataPath), 1);
 
