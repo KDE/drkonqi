@@ -7,7 +7,7 @@ target_compile_options(
     drkonqi-coredump-launcher
     PRIVATE
         -DKDE_INSTALL_FULL_LIBEXECDIR=\"${KDE_INSTALL_FULL_LIBEXECDIR}\"
-        -DKDE_PLUGIN_INSTALL_DIR=\"${KDE_INSTALL_PLUGINDIR}\"
+        -DKDE_KDE_INSTALL_PLUGINDIR=\"${KDE_INSTALL_PLUGINDIR}\"
 )
 install(TARGETS drkonqi-coredump-launcher DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
