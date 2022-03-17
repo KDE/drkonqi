@@ -28,7 +28,7 @@ include(ECMDeprecationSettings)
 
 kde_enable_exceptions()
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent Quick)
 
 find_package(
     KF5
@@ -39,6 +39,7 @@ find_package(
         CoreAddons
         Service
         ConfigWidgets
+        Declarative
         JobWidgets
         KIO
         Crash
