@@ -39,7 +39,7 @@ private:
 class RuntimeException : public Exception
 {
 public:
-    RuntimeException(const QString &reason);
+    explicit RuntimeException(const QString &reason);
     RuntimeException *clone() const override
     {
         return new RuntimeException(*this);
@@ -59,8 +59,8 @@ private:
 class APIException : public Exception
 {
 public:
-    APIException(const QJsonDocument &document);
-    APIException(const QJsonObject &object);
+    explicit APIException(const QJsonDocument &document);
+    explicit APIException(const QJsonObject &object);
     APIException(const APIException &other);
 
     void raise() const override
@@ -92,7 +92,7 @@ private:
 class ProtocolException : public Exception
 {
 public:
-    ProtocolException(const APIJob *job);
+    explicit ProtocolException(const APIJob *job);
     ProtocolException(const ProtocolException &other);
 
     void raise() const override
