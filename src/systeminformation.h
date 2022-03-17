@@ -1,7 +1,7 @@
 /*******************************************************************
  * systeminformation.h
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -32,16 +32,21 @@ public:
     explicit SystemInformation(Config infoConfig = Config(), QObject *parent = nullptr);
     ~SystemInformation() override;
 
+    // TODO why is this on here rather than the reportinterface. same for compiled sources. the heck
+    Q_PROPERTY(QString bugzillaPlatform READ bugzillaPlatform WRITE setBugzillaPlatform)
     QString bugzillaPlatform() const;
     void setBugzillaPlatform(const QString &);
+    Q_SIGNAL void bugzillaPlatformChanged();
 
     QString operatingSystem() const;
     QString bugzillaOperatingSystem() const;
 
     QString distributionPrettyName() const;
 
+    Q_PROPERTY(bool compiledSources READ compiledSources WRITE setCompiledSources)
     bool compiledSources() const;
     void setCompiledSources(bool);
+    Q_SIGNAL void compiledSourcesChanged();
 
     QString qtVersion() const;
     QString frameworksVersion() const;

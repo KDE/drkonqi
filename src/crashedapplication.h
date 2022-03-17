@@ -30,6 +30,7 @@ class CrashedApplication : public QObject
     Q_PROPERTY(QString signalName READ signalName CONSTANT)
     Q_PROPERTY(bool hasBeenRestarted READ hasBeenRestarted NOTIFY restarted)
     Q_PROPERTY(QDateTime datetime READ datetime CONSTANT)
+    Q_PROPERTY(bool hasDeletedFiles READ hasDeletedFiles CONSTANT)
 public:
     CrashedApplication(int pid,
                        int thread,

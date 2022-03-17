@@ -1,6 +1,7 @@
 /*******************************************************************
  * drkonqidialog.h
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
+ * SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -17,7 +18,6 @@
 #include "ui_maindialog.h"
 
 class BacktraceWidget;
-class AboutBugReportingDialog;
 class QTabWidget;
 class AbstractDebuggerLauncher;
 class QDialogButtonBox;
@@ -31,9 +31,10 @@ public:
     explicit DrKonqiDialog(QWidget *parent = nullptr);
     ~DrKonqiDialog() override;
 
+    void show();
+
 private Q_SLOTS:
     void linkActivated(const QString &);
-    void startBugReportAssistant();
 
     void applicationRestarted(bool success);
 
@@ -48,11 +49,7 @@ private Q_SLOTS:
     void tabIndexChanged(int);
 
 private:
-    void showAboutBugReporting();
-
     QTabWidget *m_tabWidget = nullptr;
-
-    QPointer<AboutBugReportingDialog> m_aboutBugReportingDialog;
 
     QWidget *m_introWidget = nullptr;
     Ui::MainWidget ui;

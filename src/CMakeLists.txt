@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"drkonqi5\")
+
 include(CheckFunctionExists)
 
 check_function_exists("strsignal" HAVE_STRSIGNAL)
@@ -22,7 +24,6 @@ endif()
 set(drkonqi_SRCS
     drkonqidialog.cpp
     statuswidget.cpp
-    aboutbugreportingdialog.cpp
     backtraceratingwidget.cpp
     backtracewidget.cpp
     backtracegenerator.cpp
@@ -36,11 +37,17 @@ set(drkonqi_SRCS
     debuggerlaunchers.cpp
     ptracer.cpp
     debuggermanager.cpp
-    applicationdetailsexamples.cpp
     statusnotifier.cpp
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
+    qmlextensions/duplicatemodel.cpp
+    qmlextensions/platformmodel.cpp
+    qmlextensions/reproducibilitymodel.cpp
+    qmlextensions/credentialstore.cpp
+    qmlextensions/commentmodel.cpp
+    qmlextensions/qobjectlistmodel.cpp
+    qmlextensions/doctore.cpp
 )
 
 ki18n_wrap_ui(drkonqi_SRCS
@@ -55,37 +62,11 @@ ki18n_wrap_ui(drkonqi_SRCS
 
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
-    bugzillaintegration/assistantpage_conclusion.cpp
-    bugzillaintegration/assistantpage_bugzilla_version.cpp
-    bugzillaintegration/assistantpage_bugzilla_supported_entities.cpp
     bugzillaintegration/bugzillalib.cpp
-    bugzillaintegration/reportassistantdialog.cpp
-    bugzillaintegration/reportassistantpage.cpp
-    bugzillaintegration/reportassistantpages_base.cpp
-    bugzillaintegration/reportassistantpages_bugzilla.cpp
-    bugzillaintegration/reportassistantpages_bugzilla_duplicates.cpp
     bugzillaintegration/reportinterface.cpp
     bugzillaintegration/productmapping.cpp
     bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
-    bugzillaintegration/bugzillareportconfirmationdialog.cpp
-    bugzillaintegration/bugzillareportinformationdialog.cpp
-    bugzillaintegration/reportinformationdialog.cpp
-)
-ki18n_wrap_ui(drkonqi_SRCS
-    bugzillaintegration/ui/assistantpage_introduction.ui
-    bugzillaintegration/ui/assistantpage_bugawareness.ui
-    bugzillaintegration/ui/assistantpage_conclusions.ui
-    bugzillaintegration/ui/assistantpage_conclusions_dialog.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_login.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_duplicates.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_duplicates_dialog_confirmation.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_information.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_preview.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_send.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_version.ui
-    bugzillaintegration/ui/assistantpage_bugzilla_supported_entities.ui
 )
 
 ecm_qt_declare_logging_category(
@@ -120,6 +101,7 @@ target_link_libraries(
     KF5::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
+    KF5::Declarative
 )
 
 if(Systemd_FOUND)
@@ -136,7 +118,7 @@ if(WIN32)
     target_link_libraries(DrKonqiInternal kdewin)
 endif()
 
-add_executable(drkonqi main.cpp)
+add_executable(drkonqi main.cpp qml/qml.qrc)
 ecm_mark_nongui_executable(drkonqi)
 target_link_libraries(drkonqi DrKonqiInternal)
 
@@ -147,15 +129,3 @@ install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${K
 add_subdirectory(tests)
 
 add_subdirectory(bugzillaintegration/libbugzilla/autotests)
-
-if(BUILD_COVERAGE AND BUILD_TESTING) # coverage without tests make no sense
-    add_custom_target(coverage)
-    add_custom_command(
-        TARGET coverage
-        COMMAND ctest
-        COMMAND lcov -o ${CMAKE_BINARY_DIR}/lcov.report -c -d ${CMAKE_BINARY_DIR}
-        COMMAND genhtml -o ${CMAKE_BINARY_DIR}/coverage ${CMAKE_BINARY_DIR}/lcov.report
-        COMMAND find ${CMAKE_BINARY_DIR} -iname *.gcda | xargs rm -v DEPENDS test
-    )
-    add_custom_target(show-coverage COMMAND xdg-open ${CMAKE_BINARY_DIR}/coverage/index.html DEPENDS coverage)
-endif()

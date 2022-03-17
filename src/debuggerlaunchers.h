@@ -51,18 +51,6 @@ private:
     DetachedProcessMonitor *m_monitor = nullptr;
 };
 
-#if 0
-class TerminalDebuggerLauncher : public DefaultDebuggerLauncher
-{
-    Q_OBJECT
-public:
-    explicit TerminalDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent = 0);
-
-public Q_SLOTS:
-    virtual void start();
-};
-#endif
-
 class DBusInterfaceAdaptor;
 
 /** This class handles the old drkonqi dbus interface used by kdevelop */

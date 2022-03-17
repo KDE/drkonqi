@@ -21,7 +21,6 @@ class NewBug;
 
 class BugzillaManager;
 class ProductMapping;
-class ApplicationDetailsExamples;
 
 class ReportInterface : public QObject
 {
@@ -107,7 +106,6 @@ public:
     void setPossibleDuplicatesByQuery(const QStringList &);
 
     BugzillaManager *bugzillaManager() const;
-    ApplicationDetailsExamples *appDetailsExamples() const;
     ProductMapping *productMapping() const;
 
     bool userCanProvideActionsAppDesktop() const
@@ -167,7 +165,6 @@ private:
 
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;
-    ApplicationDetailsExamples *m_appDetailsExamples = nullptr;
 };
 
 #endif

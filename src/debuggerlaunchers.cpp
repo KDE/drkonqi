@@ -58,18 +58,6 @@ void DefaultDebuggerLauncher::onProcessFinished()
     Q_EMIT finished();
 }
 
-#if 0
-TerminalDebuggerLauncher::TerminalDebuggerLauncher(const Debugger & debugger, DebuggerManager *parent)
-    : DefaultDebuggerLauncher(debugger, parent)
-{
-}
-
-void TerminalDebuggerLauncher::start()
-{
-    DefaultDebuggerLauncher::start(); //FIXME
-}
-#endif
-
 DBusInterfaceLauncher::DBusInterfaceLauncher(const QString &name, qint64 pid, DBusInterfaceAdaptor *parent)
     : AbstractDebuggerLauncher(parent)
     , m_name(name)

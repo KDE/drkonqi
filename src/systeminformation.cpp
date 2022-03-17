@@ -2,7 +2,7 @@
  * systeminformation.cpp
  * SPDX-FileCopyrightText: 2009 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -245,6 +245,7 @@ QString SystemInformation::bugzillaPlatform() const
 void SystemInformation::setBugzillaPlatform(const QString &platform)
 {
     m_bugzillaPlatform = platform;
+    Q_EMIT bugzillaPlatformChanged();
 }
 
 QString SystemInformation::distributionPrettyName() const
@@ -260,6 +261,7 @@ bool SystemInformation::compiledSources() const
 void SystemInformation::setCompiledSources(bool compiled)
 {
     m_compiledSources = compiled;
+    Q_EMIT compiledSourcesChanged();
 }
 
 QString SystemInformation::qtVersion() const

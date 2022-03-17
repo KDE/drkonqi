@@ -4,7 +4,7 @@
 add_executable(drkonqi-coredump-gui main.cpp PatientModel.cpp Patient.cpp DetailsLoader.cpp qml/qml.qrc)
 target_compile_definitions(drkonqi-coredump-gui
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>
-    PRIVATE -DTRANSLATION_DOMAIN=\"drkonqi_coredump_gui\")
+    PRIVATE -DTRANSLATION_DOMAIN=\"drkonqi5\")
 
 target_link_libraries(drkonqi-coredump-gui
     DrKonqiInternal

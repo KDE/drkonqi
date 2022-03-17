@@ -12,7 +12,6 @@
 
 #include <KLocalizedString>
 
-#include "applicationdetailsexamples.h"
 #include "backtracegenerator.h"
 #include "bugzillalib.h"
 #include "config-drkonqi.h"
@@ -35,8 +34,6 @@ ReportInterface::ReportInterface(QObject *parent)
     m_bugzillaManager = new BugzillaManager(KDE_BUGZILLA_URL, this);
 
     m_productMapping = new ProductMapping(DrKonqi::crashedApplication(), m_bugzillaManager, this);
-
-    m_appDetailsExamples = new ApplicationDetailsExamples(this);
 
     // Information the user can provide about the crash
     m_userRememberCrashSituation = false;
@@ -473,11 +470,6 @@ void ReportInterface::setPossibleDuplicatesByQuery(const QStringList &list)
 BugzillaManager *ReportInterface::bugzillaManager() const
 {
     return m_bugzillaManager;
-}
-
-ApplicationDetailsExamples *ReportInterface::appDetailsExamples() const
-{
-    return m_appDetailsExamples;
 }
 
 ProductMapping *ReportInterface::productMapping() const
