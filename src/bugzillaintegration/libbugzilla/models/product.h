@@ -69,7 +69,7 @@ private:
     QString m_name = QString();
 };
 
-class Product : public QObject
+class Product final : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool is_active READ isActive MEMBER m_active NOTIFY changed)
@@ -79,7 +79,7 @@ public:
     using Ptr = QSharedPointer<Product>;
 
     explicit Product(const QVariantHash &object, const Connection &connection = Bugzilla::connection(), QObject *parent = nullptr);
-    ~Product();
+    ~Product() final;
 
     bool isActive() const;
     QList<ProductComponent *> components() const;
@@ -101,6 +101,8 @@ private:
     bool m_active = false;
     QList<ProductComponent *> m_components;
     QList<ProductVersion *> m_versions;
+
+    Q_DISABLE_COPY_MOVE(Product)
 };
 
 } // namespace Bugzilla

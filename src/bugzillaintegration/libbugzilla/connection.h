@@ -45,7 +45,7 @@ class HTTPConnection : public Connection
 
 public:
     explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")), QObject *parent = nullptr);
-    ~HTTPConnection();
+    ~HTTPConnection() override;
 
     virtual void setToken(const QString &authToken) override;
 
@@ -60,6 +60,8 @@ private:
 
     QUrl m_root;
     QString m_token;
+
+    Q_DISABLE_COPY_MOVE(HTTPConnection)
 };
 
 /**
