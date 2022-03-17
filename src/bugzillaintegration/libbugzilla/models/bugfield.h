@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -17,7 +17,7 @@ namespace Bugzilla
 class BugFieldValue : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName)
+    Q_PROPERTY(QString name READ name MEMBER m_name NOTIFY changed)
     // not mapped because of lazyness and lack of need
     //    Q_PROPERTY(int sort_key READ sort_key WRITE setSort_key)
     //    // visibility_values not mapped
@@ -29,7 +29,9 @@ public:
     explicit BugFieldValue(const QVariantHash &obj, QObject *parent = nullptr);
 
     QString name() const;
-    void setName(QString name);
+
+Q_SIGNALS:
+    void changed();
 
 private:
     QString m_name;
@@ -49,7 +51,7 @@ class BugField : public QObject
     //    Q_PROPERTY(bool is_on_bug_entry READ is_on_bug_entry WRITE setIs_on_bug_entry)
     //    Q_PROPERTY(QString visibility_field READ visibility_field WRITE setVisibility_field)
     //    Q_PROPERTY(QString value_field READ value_field WRITE setValue_field)
-    Q_PROPERTY(QList<BugFieldValue *> values READ values WRITE setValues)
+    Q_PROPERTY(QList<BugFieldValue *> values READ values MEMBER m_values NOTIFY changed)
 public:
     enum class Type {
         Invalid = -1,
@@ -72,7 +74,8 @@ public:
 
     QList<BugFieldValue *> values() const;
 
-    void setValues(QList<BugFieldValue *> values);
+Q_SIGNALS:
+    void changed();
 
 private:
     static void registerVariantConverters();

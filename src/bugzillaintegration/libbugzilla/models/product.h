@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -16,9 +16,9 @@ namespace Bugzilla
 class ProductVersion : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int id READ id WRITE setId)
-    Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(bool is_active READ isActive WRITE setActive)
+    Q_PROPERTY(int id READ id MEMBER m_id NOTIFY changed)
+    Q_PROPERTY(QString name READ name MEMBER m_name NOTIFY changed)
+    Q_PROPERTY(bool is_active READ isActive MEMBER m_active NOTIFY changed)
 public:
     int id() const
     {
@@ -35,20 +35,10 @@ public:
 
     explicit ProductVersion(const QVariantHash &object, QObject *parent = nullptr);
 
-private:
-    void setId(int id)
-    {
-        m_id = id;
-    }
-    void setName(const QString &name)
-    {
-        m_name = name;
-    }
-    void setActive(bool active)
-    {
-        m_active = active;
-    }
+Q_SIGNALS:
+    void changed();
 
+private:
     int m_id = -1;
     QString m_name = QString();
     bool m_active = false;
@@ -57,8 +47,8 @@ private:
 class ProductComponent : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int id READ id WRITE setId)
-    Q_PROPERTY(QString name READ name WRITE setName)
+    Q_PROPERTY(int id READ id MEMBER m_id NOTIFY changed)
+    Q_PROPERTY(QString name READ name MEMBER m_name NOTIFY changed)
 public:
     int id() const
     {
@@ -71,16 +61,10 @@ public:
 
     explicit ProductComponent(const QVariantHash &object, QObject *parent = nullptr);
 
-private:
-    void setId(int id)
-    {
-        m_id = id;
-    }
-    void setName(const QString &name)
-    {
-        m_name = name;
-    }
+Q_SIGNALS:
+    void changed();
 
+private:
     int m_id = -1;
     QString m_name = QString();
 };
@@ -88,9 +72,9 @@ private:
 class Product : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool is_active READ isActive WRITE setActive)
-    Q_PROPERTY(QList<Bugzilla::ProductComponent *> components READ components WRITE setComponents)
-    Q_PROPERTY(QList<Bugzilla::ProductVersion *> versions READ versions WRITE setVersions)
+    Q_PROPERTY(bool is_active READ isActive MEMBER m_active NOTIFY changed)
+    Q_PROPERTY(QList<Bugzilla::ProductComponent *> components READ components MEMBER m_components NOTIFY changed)
+    Q_PROPERTY(QList<Bugzilla::ProductVersion *> versions READ versions MEMBER m_versions NOTIFY changed)
 public:
     typedef QSharedPointer<Product> Ptr;
 
@@ -98,18 +82,16 @@ public:
     ~Product();
 
     bool isActive() const;
-    void setActive(bool active);
-
     QList<ProductComponent *> components() const;
-    void setComponents(const QList<ProductComponent *> &components);
-
     QList<ProductVersion *> versions() const;
-    void setVersions(const QList<ProductVersion *> &versions);
 
     // Convenience methods to get useful content out of the
     QStringList componentNames() const;
     QStringList allVersions() const;
     QStringList inactiveVersions() const;
+
+Q_SIGNALS:
+    void changed();
 
 private:
     static void registerVariantConverters();

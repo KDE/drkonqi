@@ -27,19 +27,9 @@ QList<ProductVersion *> Product::versions() const
     return m_versions;
 }
 
-void Product::setVersions(const QList<ProductVersion *> &versions)
-{
-    m_versions = versions;
-}
-
 QList<ProductComponent *> Product::components() const
 {
     return m_components;
-}
-
-void Product::setComponents(const QList<ProductComponent *> &components)
-{
-    m_components = components;
 }
 
 Product::~Product()
@@ -118,11 +108,6 @@ void Product::registerVariantConverters()
         }
         return list;
     });
-}
-
-void Product::setActive(bool active)
-{
-    m_active = active;
 }
 
 ProductVersion::ProductVersion(const QVariantHash &object, QObject *parent)

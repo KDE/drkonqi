@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -15,18 +15,18 @@ namespace Bugzilla
 class Comment : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(int bug_id READ bug_id WRITE setBug_id)
-    Q_PROPERTY(QString text READ text WRITE setText)
+    Q_PROPERTY(int bug_id READ bug_id MEMBER m_bug_id NOTIFY changed)
+    Q_PROPERTY(QString text READ text MEMBER m_text NOTIFY changed)
 public:
     typedef QPointer<Comment> Ptr;
 
     explicit Comment(const QVariantHash &object, QObject *parent = nullptr);
 
     int bug_id() const;
-    void setBug_id(int bug_id);
-
     QString text() const;
-    void setText(const QString &text);
+
+Q_SIGNALS:
+    void changed();
 
 private:
     int m_bug_id;

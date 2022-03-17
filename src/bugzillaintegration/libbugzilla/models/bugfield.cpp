@@ -23,11 +23,6 @@ QList<BugFieldValue *> BugField::values() const
     return m_values;
 }
 
-void BugField::setValues(QList<BugFieldValue *> values)
-{
-    m_values = values;
-}
-
 void BugField::registerVariantConverters()
 {
     static bool convertersRegistered = false;
@@ -57,11 +52,6 @@ BugFieldValue::BugFieldValue(const QVariantHash &obj, QObject *parent)
 QString BugFieldValue::name() const
 {
     return m_name;
-}
-
-void BugFieldValue::setName(QString name)
-{
-    m_name = name;
 }
 
 } // namespace Bugzilla

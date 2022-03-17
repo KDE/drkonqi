@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
@@ -54,19 +54,19 @@ public:
 
 private:
     Q_OBJECT
-    Q_PROPERTY(qint64 id READ id WRITE setId)
-    Q_PROPERTY(QString product READ product WRITE setProduct)
-    Q_PROPERTY(QString component READ component WRITE setComponent)
-    Q_PROPERTY(QString summary READ summary WRITE setSummary)
-    Q_PROPERTY(QString version READ version WRITE setVersion)
-    Q_PROPERTY(bool is_open READ is_open WRITE setIs_open)
+    Q_PROPERTY(qint64 id READ id MEMBER m_id NOTIFY changed)
+    Q_PROPERTY(QString product READ product MEMBER m_product NOTIFY changed)
+    Q_PROPERTY(QString component READ component MEMBER m_component NOTIFY changed)
+    Q_PROPERTY(QString summary READ summary MEMBER m_summary NOTIFY changed)
+    Q_PROPERTY(QString version READ version MEMBER m_version NOTIFY changed)
+    Q_PROPERTY(bool is_open READ is_open MEMBER m_is_open NOTIFY changed)
     // maybe should be camel mapped, who knows
-    Q_PROPERTY(QString op_sys READ op_sys WRITE setOp_sys)
-    Q_PROPERTY(QString priority READ priority WRITE setPriority)
-    Q_PROPERTY(QString severity READ severity WRITE setSeverity)
-    Q_PROPERTY(Status status READ status WRITE setStatus)
-    Q_PROPERTY(Resolution resolution READ resolution WRITE setResolution)
-    Q_PROPERTY(qint64 dupe_of READ dupe_of WRITE setDupe_of)
+    Q_PROPERTY(QString op_sys READ op_sys MEMBER m_op_sys NOTIFY changed)
+    Q_PROPERTY(QString priority READ priority MEMBER m_priority NOTIFY changed)
+    Q_PROPERTY(QString severity READ severity MEMBER m_severity NOTIFY changed)
+    Q_PROPERTY(Status status READ status MEMBER m_status NOTIFY changed)
+    Q_PROPERTY(Resolution resolution READ resolution MEMBER m_resolution NOTIFY changed)
+    Q_PROPERTY(qint64 dupe_of READ dupe_of MEMBER m_dupe_of NOTIFY changed)
 
     // Custom fields (versionfixedin etc) are only available via customField().
 
@@ -81,40 +81,20 @@ public:
     QVariant customField(const char *key);
 
     Status status() const;
-    void setStatus(Status status);
-
     Resolution resolution() const;
-    void setResolution(Resolution resolution);
-
     QString summary() const;
-    void setSummary(const QString &summary);
-
     QString version() const;
-    void setVersion(const QString &version);
-
     QString product() const;
-    void setProduct(const QString &product);
-
     QString component() const;
-    void setComponent(const QString &component);
-
     QString op_sys() const;
-    void setOp_sys(const QString &op_sys);
-
     QString priority() const;
-    void setPriority(const QString &priority);
-
     QString severity() const;
-    void setSeverity(const QString &severity);
-
     bool is_open() const;
-    void setIs_open(bool is_open);
-
     qint64 dupe_of() const;
-    void setDupe_of(qint64 dupe_of);
 
 Q_SIGNALS:
     void commentsChanged();
+    void changed();
 
 private:
     qint64 m_id = -1;

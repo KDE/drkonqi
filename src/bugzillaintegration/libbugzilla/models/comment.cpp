@@ -23,19 +23,9 @@ int Comment::bug_id() const
     return m_bug_id;
 }
 
-void Comment::setBug_id(int bug_id)
-{
-    m_bug_id = bug_id;
-}
-
 QString Comment::text() const
 {
     return m_text;
-}
-
-void Comment::setText(const QString &text)
-{
-    m_text = text;
 }
 
 } // namespace Bugzilla
