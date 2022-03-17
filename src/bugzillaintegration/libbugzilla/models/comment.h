@@ -29,7 +29,7 @@ Q_SIGNALS:
     void changed();
 
 private:
-    int m_bug_id;
+    int m_bug_id = -1;
     QString m_text;
 };
 
