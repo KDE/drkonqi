@@ -47,11 +47,11 @@ public:
     explicit HTTPConnection(const QUrl &root = QUrl(QStringLiteral("http://bugstest.kde.org/rest")), QObject *parent = nullptr);
     ~HTTPConnection() override;
 
-    virtual void setToken(const QString &authToken) override;
+    void setToken(const QString &authToken) override;
 
-    virtual APIJob *get(const QString &path, const Query &query = Query()) const override;
-    virtual APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
-    virtual APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
+    APIJob *get(const QString &path, const Query &query = Query()) const override;
+    APIJob *post(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
+    APIJob *put(const QString &path, const QByteArray &data, const Query &query = Query()) const override;
 
     QUrl root() const;
 

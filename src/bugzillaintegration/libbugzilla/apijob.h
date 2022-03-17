@@ -47,10 +47,10 @@ public:
     virtual QByteArray data() const = 0;
 
 private:
-    virtual void start() override
+    void start() override
     {
     }
-    virtual void connectNotify(const QMetaMethod &signal) override;
+    void connectNotify(const QMetaMethod &signal) override;
 
     bool m_autostart = true;
 };
@@ -60,7 +60,7 @@ class TransferAPIJob : public APIJob
     Q_OBJECT
     friend class HTTPConnection; // constructs us, ctor is private though
 public:
-    virtual QByteArray data() const override
+    QByteArray data() const override
     {
         return m_data;
     }

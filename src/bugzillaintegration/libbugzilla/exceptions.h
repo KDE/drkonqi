@@ -24,10 +24,10 @@ class Exception : public QException
 {
 public:
     using QException::QException;
-    virtual ~Exception();
+    ~Exception() override;
 
     virtual QString whatString() const = 0;
-    virtual const char *what() const noexcept override;
+    const char *what() const noexcept override;
 
 private:
     char *m_what = nullptr;
@@ -40,11 +40,11 @@ class RuntimeException : public Exception
 {
 public:
     RuntimeException(const QString &reason);
-    virtual RuntimeException *clone() const override
+    RuntimeException *clone() const override
     {
         return new RuntimeException(*this);
     }
-    virtual QString whatString() const override;
+    QString whatString() const override;
 
 private:
     QString m_reason;
@@ -63,15 +63,15 @@ public:
     APIException(const QJsonObject &object);
     APIException(const APIException &other);
 
-    virtual void raise() const override
+    void raise() const override
     {
         throw *this;
     }
-    virtual APIException *clone() const override
+    APIException *clone() const override
     {
         return new APIException(*this);
     }
-    virtual QString whatString() const override;
+    QString whatString() const override;
 
     bool isError() const
     {
@@ -95,15 +95,15 @@ public:
     ProtocolException(const APIJob *job);
     ProtocolException(const ProtocolException &other);
 
-    virtual void raise() const override
+    void raise() const override
     {
         throw *this;
     }
-    virtual ProtocolException *clone() const override
+    ProtocolException *clone() const override
     {
         return new ProtocolException(*this);
     }
-    virtual QString whatString() const override;
+    QString whatString() const override;
 
     static void maybeThrow(const APIJob *job);
 
