@@ -16,7 +16,7 @@
 namespace KIO
 {
 class TransferJob;
-}
+} // namespace KIO
 
 namespace Bugzilla
 {

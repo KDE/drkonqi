@@ -35,4 +35,4 @@ public:
     QString toString() const;
 };
 
-}
+} // namespace Bugzilla

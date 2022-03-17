@@ -31,4 +31,4 @@ QString Query::toString() const
     return output;
 }
 
-}
+} // namespace Bugzilla
