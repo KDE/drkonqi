@@ -68,7 +68,7 @@ public:
         Integer = 10,
     };
 
-    typedef QPointer<BugField> Ptr;
+    using Ptr = QPointer<BugField>;
 
     explicit BugField(const QVariantHash &obj, QObject *parent = nullptr);
 

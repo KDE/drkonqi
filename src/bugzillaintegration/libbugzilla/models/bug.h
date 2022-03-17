@@ -71,7 +71,7 @@ private:
     // Custom fields (versionfixedin etc) are only available via customField().
 
 public:
-    typedef QPointer<Bug> Ptr;
+    using Ptr = QPointer<Bug>;
 
     explicit Bug(const QVariantHash &object, QObject *parent = nullptr);
 

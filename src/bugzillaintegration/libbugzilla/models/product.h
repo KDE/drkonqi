@@ -76,7 +76,7 @@ class Product : public QObject
     Q_PROPERTY(QList<Bugzilla::ProductComponent *> components READ components MEMBER m_components NOTIFY changed)
     Q_PROPERTY(QList<Bugzilla::ProductVersion *> versions READ versions MEMBER m_versions NOTIFY changed)
 public:
-    typedef QSharedPointer<Product> Ptr;
+    using Ptr = QSharedPointer<Product>;
 
     explicit Product(const QVariantHash &object, const Connection &connection = Bugzilla::connection(), QObject *parent = nullptr);
     ~Product();

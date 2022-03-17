@@ -18,7 +18,7 @@ class Comment : public QObject
     Q_PROPERTY(int bug_id READ bug_id MEMBER m_bug_id NOTIFY changed)
     Q_PROPERTY(QString text READ text MEMBER m_text NOTIFY changed)
 public:
-    typedef QPointer<Comment> Ptr;
+    using Ptr = QPointer<Comment>;
 
     explicit Comment(const QVariantHash &object, QObject *parent = nullptr);
 
