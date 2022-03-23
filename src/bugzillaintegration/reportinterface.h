@@ -2,6 +2,7 @@
  * reportinterface.h
  * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
+ * SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -25,6 +26,21 @@ class ApplicationDetailsExamples;
 class ReportInterface : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(BugzillaManager *bugzilla READ bugzillaManager CONSTANT)
+    Q_PROPERTY(QString title READ title WRITE setTitle)
+    Q_PROPERTY(QString detailText MEMBER m_reportDetailText WRITE setDetailText)
+    Q_PROPERTY(bool userRememberCrashSitutation MEMBER m_userRememberCrashSituation NOTIFY awarenessChanged)
+    Q_PROPERTY(Reproducible reproducible MEMBER m_reproducible NOTIFY awarenessChanged)
+    Q_PROPERTY(bool provideActionsApplicationDesktop MEMBER m_provideActionsApplicationDesktop NOTIFY awarenessChanged)
+
+    Q_PROPERTY(bool provideUnusualBehavior MEMBER m_provideUnusualBehavior)
+    Q_PROPERTY(bool provideApplicationConfigurationDetails MEMBER m_provideApplicationConfigurationDetails NOTIFY awarenessChanged)
+    Q_PROPERTY(QString backtrace READ backtrace WRITE setBacktrace)
+
+    Q_PROPERTY(bool isBugAwarenessPageDataUseful READ isBugAwarenessPageDataUseful NOTIFY awarenessChanged)
+
+    Q_PROPERTY(uint attachToBugNumber READ attachToBugNumber WRITE setAttachToBugNumber NOTIFY attachToBugNumberChanged)
+    Q_PROPERTY(uint duplicateId READ duplicateId WRITE setDuplicateId NOTIFY duplicateIdChanged)
 public:
     enum Reproducible {
         ReproducibleUnsure,
@@ -32,27 +48,31 @@ public:
         ReproducibleSometimes,
         ReproducibleEverytime,
     };
+    Q_ENUM(Reproducible)
 
     enum class Backtrace {
         Complete,
         Reduced,
         Exclude,
     };
+    Q_ENUM(Backtrace)
 
     enum class DrKonqiStamp {
         Include,
         Exclude,
     };
+    Q_ENUM(DrKonqiStamp)
 
     explicit ReportInterface(QObject *parent = nullptr);
+    Q_SIGNAL void awarenessChanged();
 
-    void setBugAwarenessPageData(bool, Reproducible, bool, bool, bool);
+    Q_INVOKABLE void setBugAwarenessPageData(bool, ReportInterface::Reproducible, bool, bool, bool);
     bool isBugAwarenessPageDataUseful() const;
 
-    int selectedOptionsRating() const;
+    Q_INVOKABLE int selectedOptionsRating() const;
 
-    QStringList firstBacktraceFunctions() const;
-    void setFirstBacktraceFunctions(const QStringList &functions);
+    Q_INVOKABLE QStringList firstBacktraceFunctions() const;
+    Q_INVOKABLE void setFirstBacktraceFunctions(const QStringList &functions);
 
     QString backtrace() const;
     void setBacktrace(const QString &backtrace);
@@ -61,23 +81,24 @@ public:
     void setTitle(const QString &text);
 
     void setDetailText(const QString &text);
-    void setPossibleDuplicates(const QStringList &duplicatesList);
-
-    QString generateReportFullText(DrKonqiStamp stamp, Backtrace inlineBacktrace) const;
+    Q_INVOKABLE void setPossibleDuplicates(const QStringList &duplicatesList);
+    Q_INVOKABLE QString generateReportFullText(ReportInterface::DrKonqiStamp stamp, ReportInterface::Backtrace inlineBacktrace) const;
 
     Bugzilla::NewBug newBugReportTemplate() const;
 
-    QStringList relatedBugzillaProducts() const;
+    Q_INVOKABLE QStringList relatedBugzillaProducts() const;
 
     bool isWorthReporting() const;
 
     // Zero means creating a new bug report
     void setAttachToBugNumber(uint);
     uint attachToBugNumber() const;
+    Q_SIGNAL void attachToBugNumberChanged();
 
     // Zero means there is no duplicate
     void setDuplicateId(uint);
     uint duplicateId() const;
+    Q_SIGNAL void duplicateIdChanged();
 
     void setPossibleDuplicatesByQuery(const QStringList &);
 

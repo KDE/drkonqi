@@ -2,7 +2,7 @@
  * reportinterface.cpp
  * SPDX-FileCopyrightText: 2009, 2010, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
- * SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -443,6 +443,7 @@ void ReportInterface::setAttachToBugNumber(uint bugNumber)
 {
     // If bugNumber>0, the report is going to be attached to bugNumber
     m_attachToBugNumber = bugNumber;
+    Q_EMIT attachToBugNumberChanged();
 }
 
 uint ReportInterface::attachToBugNumber() const
@@ -453,6 +454,7 @@ uint ReportInterface::attachToBugNumber() const
 void ReportInterface::setDuplicateId(uint duplicate)
 {
     m_duplicate = duplicate;
+    Q_EMIT duplicateIdChanged();
 }
 
 uint ReportInterface::duplicateId() const
