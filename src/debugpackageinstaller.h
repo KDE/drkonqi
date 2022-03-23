@@ -17,19 +17,21 @@ class QProgressDialog;
 class DebugPackageInstaller : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(bool canInstallDebugPackages READ canInstallDebugPackages CONSTANT)
 
+public:
     enum Results {
         ResultInstalled = 0,
         ResultError = 1,
         ResultSymbolsNotFound = 2,
         ResultCanceled = 3,
     };
+    Q_ENUM(Results)
 
-public:
     explicit DebugPackageInstaller(QObject *parent = nullptr);
     bool canInstallDebugPackages() const;
-    void setMissingLibraries(const QStringList &);
-    void installDebugPackages();
+    Q_INVOKABLE void setMissingLibraries(const QStringList &);
+    Q_INVOKABLE void installDebugPackages();
 
 private Q_SLOTS:
     void processFinished(int, QProcess::ExitStatus);
