@@ -2,7 +2,7 @@
  * bugzillalib.h
  * SPDX-FileCopyrightText: 2009, 2011 Dario Andres Rodriguez <andresbajotierra@gmail.com>
  * SPDX-FileCopyrightText: 2012 George Kiagiadakis <kiagiadakis.george@gmail.com>
- * SPDX-FileCopyrightText: 2019 Harald Sitter <sitter@kde.org>
+ * SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
@@ -18,6 +18,8 @@
 #include "libbugzilla/clients/bugclient.h"
 #include "libbugzilla/clients/productclient.h"
 
+#include "../drkonqi_globals.h"
+
 namespace KIO
 {
 class KJob;
@@ -30,18 +32,18 @@ class BugzillaManager : public QObject
 public:
     // Note: it expect the bugTrackerUrl parameter to contain the trailing slash.
     // so it should be "https://bugs.kde.org/", not "https://bugs.kde.org"
-    explicit BugzillaManager(const QString &bugTrackerUrl, QObject *parent = nullptr);
+    explicit BugzillaManager(const QString &bugTrackerUrl = KDE_BUGZILLA_URL, QObject *parent = nullptr);
 
     /* Login methods */
-    void tryLogin(const QString &username, const QString &password);
-    void refreshToken();
+    Q_SCRIPTABLE void tryLogin(const QString &username, const QString &password);
+    Q_INVOKABLE void refreshToken();
     bool getLogged() const;
 
     QString getUsername() const;
 
     /* Bugzilla Action methods */
     void fetchBugReport(int, QObject *jobOwner = nullptr);
-    void searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset);
+    Q_INVOKABLE void searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset);
     void sendReport(const Bugzilla::NewBug &bug);
     void attachTextToReport(const QString &text, const QString &filename, const QString &description, int bugId, const QString &comment);
     void addMeToCC(int bugId);
@@ -52,7 +54,7 @@ public:
     void stopCurrentSearch();
 
     void fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobOwner);
-    void lookupVersion();
+    Q_SCRIPTABLE void lookupVersion();
 
 Q_SIGNALS:
     /* Bugzilla actions finished successfully */

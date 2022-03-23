@@ -113,4 +113,6 @@ private:
 
 } // namespace Bugzilla
 
+Q_DECLARE_METATYPE(Bugzilla::Bug *);
+
 #endif // BUG_H
