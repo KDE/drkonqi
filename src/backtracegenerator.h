@@ -22,6 +22,7 @@ class BacktraceGenerator : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(State state READ state NOTIFY stateChanged)
 public:
     enum State {
         NotLoaded,
@@ -30,6 +31,7 @@ public:
         Failed,
         FailedToStart,
     };
+    Q_ENUM(State)
 
     BacktraceGenerator(const Debugger &debugger, QObject *parent);
     ~BacktraceGenerator() override;
@@ -39,12 +41,12 @@ public:
         return m_state;
     }
 
-    BacktraceParser *parser() const
+    Q_INVOKABLE BacktraceParser *parser() const
     {
         return m_parser;
     }
 
-    QString backtrace() const
+    Q_INVOKABLE QString backtrace() const
     {
         return m_parsedBacktrace;
     }
@@ -65,6 +67,7 @@ Q_SIGNALS:
     void failedToStart();
     void done();
     void preparing();
+    void stateChanged();
 
 private Q_SLOTS:
     void slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus);

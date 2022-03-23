@@ -57,11 +57,13 @@ void BacktraceGenerator::start()
     if (!m_debugger.isValid() || !m_debugger.isInstalled()) {
         qCWarning(DRKONQI_LOG) << "Debugger valid" << m_debugger.isValid() << "installed" << m_debugger.isInstalled();
         m_state = FailedToStart;
+        Q_EMIT stateChanged();
         Q_EMIT failedToStart();
         return;
     }
 
     m_state = Loading;
+    Q_EMIT stateChanged();
     Q_EMIT preparing();
     // DebuggerManager calls setBackendPrepared when it is ready for us to actually start.
 }
@@ -115,6 +117,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
 
     if (exitStatus != QProcess::NormalExit || exitCode != 0) {
         m_state = Failed;
+        Q_EMIT stateChanged();
         Q_EMIT someError();
         return;
     }
@@ -125,6 +128,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
 
     m_parsedBacktrace = tmp + m_parser->informationLines() + m_parser->parsedBacktrace();
     m_state = Loaded;
+    Q_EMIT stateChanged();
 
 #ifdef BACKTRACE_PARSER_DEBUG
     // append the raw unparsed backtrace
@@ -148,10 +152,12 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
     switch (error) {
     case QProcess::FailedToStart:
         m_state = FailedToStart;
+        Q_EMIT stateChanged();
         Q_EMIT failedToStart();
         break;
     default:
         m_state = Failed;
+        Q_EMIT stateChanged();
         Q_EMIT someError();
         break;
     }
