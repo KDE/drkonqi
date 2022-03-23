@@ -221,7 +221,7 @@ void BacktraceWidget::loadData()
         }
 
         // highlight if possible
-        if (m_btGenerator->debugger().codeName() == QLatin1String("gdb")) {
+        if (m_btGenerator->debuggerIsGDB()) {
             KSyntaxHighlighting::Repository repository;
             m_highlighter = new KSyntaxHighlighting::SyntaxHighlighter(ui.m_backtraceEdit->document());
             m_highlighter->setTheme((palette().color(QPalette::Base).lightness() < 128) ? repository.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
@@ -322,7 +322,7 @@ void BacktraceWidget::loadData()
                                                "<strong>You need to first install the debugger "
                                                "application (%1) then click the <interface>Reload"
                                                "</interface> button.</strong>",
-                                               m_btGenerator->debugger().displayName()));
+                                               m_btGenerator->debuggerName()));
     }
 
     ui.m_reloadBacktraceButton->setEnabled(true);

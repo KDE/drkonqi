@@ -49,13 +49,11 @@ public:
         return m_parsedBacktrace;
     }
 
-    const Debugger debugger() const
-    {
-        return m_debugger;
-    }
-
     // Called by manager when it is ready for us.
     void setBackendPrepared();
+
+    Q_INVOKABLE bool debuggerIsGDB() const;
+    Q_INVOKABLE QString debuggerName() const;
 
 public Q_SLOTS:
     void start();

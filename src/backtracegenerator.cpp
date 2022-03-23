@@ -202,3 +202,13 @@ void BacktraceGenerator::setBackendPrepared()
 
     m_proc->start();
 }
+
+bool BacktraceGenerator::debuggerIsGDB() const
+{
+    return m_debugger.codeName() == QLatin1String("gdb");
+}
+
+QString BacktraceGenerator::debuggerName() const
+{
+    return m_debugger.displayName();
+}
