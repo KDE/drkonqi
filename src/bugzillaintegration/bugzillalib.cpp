@@ -83,7 +83,7 @@ void QMessageFilterContainer::clear()
 
 BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
     : QObject(parent)
-    , m_bugTrackerUrl(bugTrackerUrl)
+    , m_bugTrackerUrl(bugTrackerUrl.isEmpty() ? KDE_BUGZILLA_URL : bugTrackerUrl)
 {
     Q_ASSERT(bugTrackerUrl.endsWith(QLatin1Char('/')));
     Bugzilla::setConnection(new Bugzilla::HTTPConnection(QUrl(m_bugTrackerUrl + QStringLiteral("rest"))));

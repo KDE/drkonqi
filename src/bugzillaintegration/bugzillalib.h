@@ -32,7 +32,7 @@ class BugzillaManager : public QObject
 public:
     // Note: it expect the bugTrackerUrl parameter to contain the trailing slash.
     // so it should be "https://bugs.kde.org/", not "https://bugs.kde.org"
-    explicit BugzillaManager(const QString &bugTrackerUrl = KDE_BUGZILLA_URL, QObject *parent = nullptr);
+    explicit BugzillaManager(const QString &bugTrackerUrl = QString(), QObject *parent = nullptr);
 
     /* Login methods */
     Q_SCRIPTABLE void tryLogin(const QString &username, const QString &password);
