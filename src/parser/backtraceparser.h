@@ -52,7 +52,7 @@ public:
     virtual QString simplifiedBacktrace() const;
 
     /*! Returns a value that indicates how much useful is the backtrace that we got */
-    Q_INVOKABLE virtual Usefulness backtraceUsefulness() const;
+    Q_INVOKABLE virtual BacktraceParser::Usefulness backtraceUsefulness() const;
 
     /*! Returns a short list of the first good functions that appear in the backtrace
      * (in the crashing thread). This is used for quering for duplicate reports.

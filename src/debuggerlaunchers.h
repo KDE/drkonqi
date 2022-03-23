@@ -16,7 +16,7 @@ class DetachedProcessMonitor;
 class AbstractDebuggerLauncher : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name)
+    Q_PROPERTY(QString name READ name CONSTANT)
 public:
     explicit AbstractDebuggerLauncher(QObject *parent = nullptr)
         : QObject(parent)

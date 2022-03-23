@@ -26,7 +26,7 @@
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
 // cannot be queried through the API, so handle this client-side in a hardcoded
 // fashion as well.
-static int s_maxReportSize = 65535;
+static const int s_maxReportSize = 65535;
 
 ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent)
@@ -94,6 +94,7 @@ QString ReportInterface::backtrace() const
 void ReportInterface::setBacktrace(const QString &backtrace)
 {
     m_backtrace = backtrace;
+    Q_EMIT backtraceChanged();
 }
 
 QStringList ReportInterface::firstBacktraceFunctions() const
@@ -114,11 +115,13 @@ QString ReportInterface::title() const
 void ReportInterface::setTitle(const QString &text)
 {
     m_reportTitle = text;
+    Q_EMIT titleChanged();
 }
 
 void ReportInterface::setDetailText(const QString &text)
 {
     m_reportDetailText = text;
+    Q_EMIT detailTextChanged();
 }
 
 void ReportInterface::setPossibleDuplicates(const QStringList &list)

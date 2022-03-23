@@ -17,7 +17,7 @@
 namespace Bugzilla
 {
 class NewBug;
-}
+} // namespace Bugzilla
 
 class BugzillaManager;
 class ProductMapping;
@@ -27,15 +27,15 @@ class ReportInterface : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(BugzillaManager *bugzilla READ bugzillaManager CONSTANT)
-    Q_PROPERTY(QString title READ title WRITE setTitle)
-    Q_PROPERTY(QString detailText MEMBER m_reportDetailText WRITE setDetailText)
+    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString detailText MEMBER m_reportDetailText WRITE setDetailText NOTIFY detailTextChanged)
     Q_PROPERTY(bool userRememberCrashSitutation MEMBER m_userRememberCrashSituation NOTIFY awarenessChanged)
     Q_PROPERTY(Reproducible reproducible MEMBER m_reproducible NOTIFY awarenessChanged)
     Q_PROPERTY(bool provideActionsApplicationDesktop MEMBER m_provideActionsApplicationDesktop NOTIFY awarenessChanged)
 
-    Q_PROPERTY(bool provideUnusualBehavior MEMBER m_provideUnusualBehavior)
+    Q_PROPERTY(bool provideUnusualBehavior MEMBER m_provideUnusualBehavior NOTIFY provideUnusualBehaviorChanged)
     Q_PROPERTY(bool provideApplicationConfigurationDetails MEMBER m_provideApplicationConfigurationDetails NOTIFY awarenessChanged)
-    Q_PROPERTY(QString backtrace READ backtrace WRITE setBacktrace)
+    Q_PROPERTY(QString backtrace READ backtrace WRITE setBacktrace NOTIFY backtraceChanged)
 
     Q_PROPERTY(bool isBugAwarenessPageDataUseful READ isBugAwarenessPageDataUseful NOTIFY awarenessChanged)
 
@@ -76,11 +76,15 @@ public:
 
     QString backtrace() const;
     void setBacktrace(const QString &backtrace);
+    Q_SIGNAL void backtraceChanged();
 
     QString title() const;
     void setTitle(const QString &text);
+    Q_SIGNAL void titleChanged();
 
     void setDetailText(const QString &text);
+    Q_SIGNAL void detailTextChanged();
+
     Q_INVOKABLE void setPossibleDuplicates(const QStringList &duplicatesList);
     Q_INVOKABLE QString generateReportFullText(ReportInterface::DrKonqiStamp stamp, ReportInterface::Backtrace inlineBacktrace) const;
 
@@ -133,6 +137,7 @@ private Q_SLOTS:
 Q_SIGNALS:
     void reportSent(int);
     void sendReportError(const QString &);
+    void provideUnusualBehaviorChanged();
 
 private:
     // Attach backtrace to bug. Only used internally when the comment isn't
