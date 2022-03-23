@@ -57,10 +57,10 @@ public:
     /*! Returns a short list of the first good functions that appear in the backtrace
      * (in the crashing thread). This is used for quering for duplicate reports.
      */
-    virtual QStringList firstValidFunctions() const;
+    Q_INVOKABLE virtual QStringList firstValidFunctions() const;
 
     /*! Returns a list of libraries/executables that are missing debug symbols. */
-    virtual QSet<QString> librariesWithMissingDebugSymbols() const;
+    Q_INVOKABLE virtual QStringList librariesWithMissingDebugSymbols() const;
 
     /*! Check if the crash is because of the client aborting after a compositor crash.
      * https://bugs.kde.org/show_bug.cgi?id=431561

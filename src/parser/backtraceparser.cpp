@@ -106,7 +106,7 @@ QStringList BacktraceParser::firstValidFunctions() const
     return d ? d->m_firstUsefulFunctions : QStringList();
 }
 
-QSet<QString> BacktraceParser::librariesWithMissingDebugSymbols() const
+QStringList BacktraceParser::librariesWithMissingDebugSymbols() const
 {
     Q_D(const BacktraceParser);
 
@@ -116,7 +116,7 @@ QSet<QString> BacktraceParser::librariesWithMissingDebugSymbols() const
     }
 
     // if there is no d, the debugger has not run yet, so we have no libraries.
-    return d ? d->m_librariesWithMissingDebugSymbols : QSet<QString>();
+    return d ? d->m_librariesWithMissingDebugSymbols : QStringList();
 }
 
 bool BacktraceParser::hasCompositorCrashed() const
@@ -310,7 +310,7 @@ void BacktraceParser::calculateRatingData()
         }
 
         if (line.rating() == BacktraceLine::MissingFunction || line.rating() == BacktraceLine::MissingSourceFile) {
-            d->m_librariesWithMissingDebugSymbols.insert(line.libraryName().trimmed());
+            d->m_librariesWithMissingDebugSymbols.append(line.libraryName().trimmed());
         }
 
         uint multiplier = ++counter; // give weight to the first lines

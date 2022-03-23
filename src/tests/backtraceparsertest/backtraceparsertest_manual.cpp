@@ -51,7 +51,7 @@ int main(int argc, char **argv)
     std::cout << "Usefulness: " << qPrintable(metaUsefulness.valueToKey(btparser->backtraceUsefulness())) << std::endl;
     std::cout << "First valid functions: " << qPrintable(btparser->firstValidFunctions().join(QLatin1Char(' '))) << std::endl;
     std::cout << "Simplified backtrace:\n" << qPrintable(btparser->simplifiedBacktrace()) << std::endl;
-    const QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols().values());
+    const QStringList l = static_cast<QStringList>(btparser->librariesWithMissingDebugSymbols());
     std::cout << "Missing dbgsym libs: " << qPrintable(l.join(QLatin1Char(' '))) << std::endl;
 
     return 0;

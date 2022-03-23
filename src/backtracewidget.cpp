@@ -276,7 +276,7 @@ void BacktraceWidget::loadData()
                                                        QLatin1String("#missingDebugPackages")));
                 ui.m_installDebugButton->setVisible(true);
                 // Retrieve the libraries with missing debug info
-                QStringList missingLibraries = btParser->librariesWithMissingDebugSymbols().values();
+                const QStringList missingLibraries = btParser->librariesWithMissingDebugSymbols();
                 m_debugPackageInstaller->setMissingLibraries(missingLibraries);
             } else {
                 // No automated method to install the missing debug info
@@ -402,7 +402,7 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
     } else if (link == QLatin1String("#missingDebugPackages")) {
         BacktraceParser *btParser = m_btGenerator->parser();
 
-        QStringList missingDbgForFiles = btParser->librariesWithMissingDebugSymbols().values();
+        QStringList missingDbgForFiles = btParser->librariesWithMissingDebugSymbols();
         missingDbgForFiles.insert(0, DrKonqi::crashedApplication()->executable().absoluteFilePath());
 
         // HTML message
