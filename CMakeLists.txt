@@ -5,7 +5,7 @@ set(PROJECT_VERSION "5.24.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.90")
+set(KF5_MIN_VERSION "5.91")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -24,6 +24,7 @@ include(CheckFunctionExists)
 include(FeatureSummary)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
 
 kde_enable_exceptions()
 
@@ -50,8 +51,10 @@ find_package(
         SyntaxHighlighting
 )
 
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.92
+)
 
 find_package(Systemd)
 set_package_properties(Systemd PROPERTIES TYPE RECOMMENDED PURPOSE "Coredumpd integration.")
