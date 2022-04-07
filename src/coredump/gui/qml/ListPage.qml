@@ -17,14 +17,12 @@ Kirigami.ScrollablePage {
         visible: page.state !== "loading" && page.state !== "noData"
         Kirigami.Theme.colorSet: Kirigami.Theme.Window
         contentItem: Kirigami.SearchField {
-            autoAccept: false // FIXME by default true causing focus loss :|
             onAccepted: patientFilterModel.filterString = text
         }
     }
 
     ListView {
         id: view
-        keyNavigationEnabled: false
         reuseItems: true // We have a lot of items potentially, recycle them
 
         KItemModels.KSortFilterProxyModel { // set as model during state change
