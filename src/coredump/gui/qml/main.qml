@@ -12,8 +12,8 @@ Kirigami.ApplicationWindow {
     id: root
 
     title: i18nc("@title:window", "Intensive Care")
-    minimumWidth: Kirigami.Units.gridUnit * 22
-    minimumHeight: Kirigami.Units.gridUnit * 22
+    minimumWidth: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
+    minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
 
     pageStack.initialPage: ListPage {}
     pageStack.defaultColumnWidth: root.width // show single page
