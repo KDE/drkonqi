@@ -101,7 +101,7 @@ public:
             // Additionally we'll filter by chrono proximity, iids that are too far in the past will be discarded.
             // This is because iid on its own isn't necessarily unique in the event that it wraps around whatever
             // integer limit it has.
-            if (sd_journal_add_match(context.get(), qPrintable(QStringLiteral("_SYSTEMD_UNIT=%1").arg(instanceFilter)), 0) != 0) {
+            if (sd_journal_add_match(context.get(), qPrintable(QStringLiteral("_SYSTEMD_UNIT=%1.service").arg(instanceFilter)), 0) != 0) {
                 Q_EMIT error(QStringLiteral("Failed to install unit match"));
                 return;
             }
