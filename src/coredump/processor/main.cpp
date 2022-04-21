@@ -92,7 +92,7 @@ public:
             return;
         }
 
-        if (instance.count(QLatin1Char('-')) >= 3) {
+        if (instance.count(QLatin1Char('-')) >= 2) {
             // older systemds have a bug where %I doesn't actually expand correctly and only contains the first element.
             // This prevents us from matching through sd API. Instead processLog will filter based on the instance
             // information prefix. It's still unique enough.
