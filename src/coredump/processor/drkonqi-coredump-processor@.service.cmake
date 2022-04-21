@@ -5,7 +5,7 @@
 Description=Pass systemd-coredump journal entries to relevant user for potential DrKonqi handling
 
 [Service]
-ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-processor %b %I
+ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-processor %b %i
 # If it doesn't manage to find its relevant coredump in a short while it never will.
 # This job is instantiated when systemd-coredump@ starts. They run roughly at the
 # same time. Any slow down will at most occur on dumping in of itself.
