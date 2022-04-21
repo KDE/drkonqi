@@ -147,13 +147,6 @@ void CoredumpWatcher::start()
         }
     }
 
-    // TODO if the user can kauth maybe watch all users; mind in a processor context that is useless!
-    const QString uidMatch = QStringLiteral("COREDUMP_UID=%1").arg(getuid());
-    if (sd_journal_add_match(context.get(), qPrintable(uidMatch), 0) != 0) {
-        Q_EMIT error(QStringLiteral("Failed to install boot id match"));
-        return;
-    }
-
     const int fd = sd_journal_get_fd(context.get());
     if (fd < 0) {
         errnoError(QStringLiteral("Failed to get listening socket"), -fd);
