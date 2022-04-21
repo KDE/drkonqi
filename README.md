@@ -17,6 +17,8 @@ We need to make sure that the `drkonqi-coredump-processor@.service` is enabled s
 
 * Check it's enabled: `systemctl is-enabled drkonqi-coredump-processor@.service`
 * You can enable it with `systemctl enable drkonqi-coredump-processor@.service`
+* The user socket also needs to be present `systemctl --user is-enabled drkonqi-coredump-launcher.socket`
+* And can be enabled with `systemctl --user enable --now drkonqi-coredump-launcher.socket `
 
 To make sure the coredumpd setup is working correctly:
 
