@@ -80,6 +80,7 @@ Kirigami.ScrollablePage {
             background.visible: false
             font.family: "monospace"
             text: page.text
+            selectByMouse: Kirigami.Settings.isMobile ? false : true
 
             SyntaxHighlighter {
                 textEdit: textfield
