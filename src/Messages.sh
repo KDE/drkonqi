@@ -5,7 +5,7 @@
 # Our l10n scripting isn't working with spaces anywhere and we actively rely on word splitting in our Messages.sh.
 # shellcheck disable=SC2046
 
-${podir:?} # ensure it is defined
+podir=${podir:?} # ensure it is defined
 
 $XGETTEXT $(find . -name \*.cpp -o -name \*.h) -o "$podir"/drkonqi5.pot
 # Extract JavaScripty files as what they are, otherwise for example template literals won't work correctly (by default we extract as C++).
