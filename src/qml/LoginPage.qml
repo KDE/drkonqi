@@ -86,7 +86,7 @@ Kirigami.ScrollablePage {
             wrapMode: Text.Wrap
             text: xi18nc("@info/rich",
 `<note>You need a user account on the <link url='%1'>KDE bug tracking system</link> in order to file a bug report, because we may need to contact you later
-for requesting further information. If you do not have mone, you can freely <link url='%2'>create one here</link>. Please do not use disposable email accounts.</note>`,
+for requesting further information. If you do not have one, you can freely <link url='%2'>create one here</link>. Please do not use disposable email accounts.</note>`,
                                     CrashedApplication.bugReportAddress,
                                     Globals.bugzillaCreateAccountUrl)
             onLinkActivated: Qt.openUrlExternally(link)
