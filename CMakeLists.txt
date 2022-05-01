@@ -25,6 +25,7 @@ include(FeatureSummary)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(ECMDeprecationSettings)
+include(ECMFindQmlModule)
 
 kde_enable_exceptions()
 
@@ -52,6 +53,10 @@ find_package(
         SyntaxHighlighting
 )
 
+ecm_find_qmlmodule(org.kde.kirigami 2.19)
+ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
+ecm_find_qmlmodule(org.kde.kcm 1.6)
+ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.92
