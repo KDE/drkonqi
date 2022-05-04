@@ -5,7 +5,6 @@
 #include "credentialstore.h"
 
 #include <QVariant>
-#include <QWindow>
 
 #include "drkonqi_debug.h"
 #include "drkonqi_globals.h"

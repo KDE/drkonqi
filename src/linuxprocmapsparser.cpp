@@ -5,7 +5,6 @@
 
 #include "linuxprocmapsparser.h"
 
-#include <QByteArray>
 #include <QByteArrayList>
 #include <QDebug>
 #include <QFile>

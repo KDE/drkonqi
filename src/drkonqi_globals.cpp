@@ -5,8 +5,6 @@
 
 #include "drkonqi_globals.h"
 
-#include <QIcon>
-
 #include <KLocalizedString>
 
 KGuiItem2 DrStandardGuiItem::appRestart()

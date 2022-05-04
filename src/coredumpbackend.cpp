@@ -11,7 +11,6 @@
 #include <QProcess>
 #include <QScopeGuard>
 #include <QSettings>
-#include <memory>
 
 #include <unistd.h>
 

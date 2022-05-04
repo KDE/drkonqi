@@ -11,7 +11,6 @@
 
 #include <sys/resource.h>
 #include <sys/un.h>
-#include <systemd/sd-journal.h>
 #include <unistd.h>
 
 #include "coredump.h"
