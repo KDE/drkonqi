@@ -69,6 +69,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             id: ratingItem
             anchors.fill: parent
             failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart
+            loading: BacktraceGenerator.state === BacktraceGenerator.Loading
         }
     }
 

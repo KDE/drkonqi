@@ -10,6 +10,8 @@ import org.kde.drkonqi 1.0
 
 RowLayout {
     property bool failed: false
+    required property bool loading
+    required property bool failed
     property int usefulness: BacktraceParser.InvalidUsefulness
     property int stars: {
         switch (usefulness) {
@@ -29,9 +31,15 @@ RowLayout {
         Layout.fillWidth: true
         wrapMode: Text.Wrap
         text: {
+            const loadingMessage = i18nc("@info", "Waiting for data…")
+
+            if (loading) {
+                return loadingMessage
+            }
+
             switch (usefulness) {
             case BacktraceParser.InvalidUsefulness:
-                return i18nc("@info", "Waiting for data…")
+                return loadingMessage
             case BacktraceParser.ReallyUseful:
                 return i18nc("@info", "The generated crash information is useful");
             case BacktraceParser.MayBeUseful:
