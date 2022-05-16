@@ -9,7 +9,6 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 RowLayout {
-    property bool failed: false
     required property bool loading
     required property bool failed
     property int usefulness: BacktraceParser.InvalidUsefulness
