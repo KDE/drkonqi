@@ -35,6 +35,7 @@ Kirigami.Page {
             iconName: "system-reboot"
             text: i18nc("@action", "Restart Application")
             visible: !CrashedApplication.hasBeenRestarted
+            onTriggered: CrashedApplication.restart()
         },
         Kirigami.Action {
             iconName: "code-class"
