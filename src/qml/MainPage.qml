@@ -20,14 +20,7 @@ Kirigami.Page {
         text: i18nc("@action", "Report Bug")
         // TODO: could give context on why the button is disabled when canReport is false
         tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
-        onTriggered: {
-            // appWindow.header.backButtonEnabled = false
-            console.log(appWindow)
-            console.log(Object.keys(appWindow))
-            console.log(appWindow.header)
-            appWindow.controlsVisible = false
-            pageStack.replace("qrc:/ui/WelcomePage.qml")
-        }
+        onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
     }
 
     contextualActions: [
