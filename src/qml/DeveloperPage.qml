@@ -18,6 +18,9 @@ Kirigami.ScrollablePage {
     property alias footerActionsLeft: footerBarLeft.actions
     property alias footerActionsRight: footerBarRight.actions
 
+    padding: 0
+    bottomPadding: 0
+
     title: i18nc("@title:window", "Developer Information")
     onStateChanged: {
         console.log("state")
