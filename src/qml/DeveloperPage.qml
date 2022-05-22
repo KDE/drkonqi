@@ -50,7 +50,6 @@ installed the proper debug symbol packages and you want to obtain a better backt
         },
 
         Kirigami.Action {
-            displayHint: Kirigami.Action.DisplayHint.AlwaysHide
             iconName: "edit-copy"
             text: i18nc("@action:button", "Copy")
             tooltip: i18nc("@info:tooltip", "Use this button to copy the crash information (backtrace) to the clipboard.")
@@ -58,7 +57,6 @@ installed the proper debug symbol packages and you want to obtain a better backt
         },
 
         Kirigami.Action {
-            displayHint: Kirigami.Action.DisplayHint.AlwaysHide
             iconName: "document-save"
             text: i18nc("@action:button", "Save")
             tooltip: xi18nc("@info:tooltip",
