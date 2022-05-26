@@ -23,6 +23,7 @@ class Patient : public QObject
     MEMBER_PROPERTY(time_t, timestamp) = 0;
 #undef MEMBER_PROPERTY
     Q_PROPERTY(QString dateTime READ dateTime NOTIFY changed)
+    Q_PROPERTY(QString iconName READ iconName CONSTANT)
 public:
     explicit Patient(const Coredump &dump);
 
@@ -30,6 +31,7 @@ public:
 
     Q_INVOKABLE void debug() const;
     QString dateTime() const;
+    QString iconName() const;
 
 Q_SIGNALS:
     void changed();
@@ -37,6 +39,7 @@ Q_SIGNALS:
 private:
     const QByteArray m_coredumpExe;
     const QByteArray m_coredumpCom;
+    QString m_iconName;
 };
 
 Q_DECLARE_METATYPE(time_t)
