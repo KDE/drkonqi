@@ -42,7 +42,6 @@ Kirigami.ScrollablePage {
             enabled: BacktraceGenerator.state !== BacktraceGenerator.Loading
             iconName: "view-refresh"
             text: i18nc("@action:button", "Reload")
-            visible: !CrashedApplication.hasBeenRestarted
             tooltip: xi18nc("@info:tooltip",
 `Use this button to reload the crash information (backtrace). This is useful when you have
 installed the proper debug symbol packages and you want to obtain a better backtrace.`)
