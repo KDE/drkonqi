@@ -38,8 +38,8 @@ find_package(
     COMPONENTS
         I18n
         CoreAddons
+        Config
         Service
-        ConfigWidgets
         Declarative
         JobWidgets
         KIO
