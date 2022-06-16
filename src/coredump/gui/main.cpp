@@ -23,7 +23,9 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+#endif
     app.setApplicationName(QStringLiteral("drkonqi-coredump-gui"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), app.windowIcon()));
