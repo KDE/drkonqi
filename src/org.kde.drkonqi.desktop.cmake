@@ -6,6 +6,7 @@ Name=Dr Konqi
 Name[ar]=د.كوينكي
 Name[ast]=Dr Konqi
 Name[az]=Dr Konqi
+Name[bg]=Dr Konqi
 Name[ca]=Dr Konqi
 Name[ca@valencia]=Dr Konqi
 Name[cs]=Dr Konqi
