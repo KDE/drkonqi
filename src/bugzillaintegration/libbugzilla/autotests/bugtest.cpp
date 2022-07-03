@@ -18,16 +18,16 @@ namespace Bugzilla
 static void compareNewBugHash(const QVariantHash &hash, bool *ok)
 {
     *ok = false;
-    QCOMPARE(hash["product"], "aproduct");
-    QCOMPARE(hash["component"], "acomp");
-    QCOMPARE(hash["summary"], "asummary");
-    QCOMPARE(hash["version"], "aversion");
-    QCOMPARE(hash["description"], "adescription");
-    QCOMPARE(hash["op_sys"], "asys");
-    QCOMPARE(hash["platform"], "aplatform");
-    QCOMPARE(hash["priority"], "apriority");
-    QCOMPARE(hash["severity"], "aseverity");
-    QCOMPARE(hash["keywords"], QStringList({"aword", "anotherword"}));
+    QCOMPARE(hash["product"].toString(), QLatin1String("aproduct"));
+    QCOMPARE(hash["component"].toString(), QLatin1String("acomp"));
+    QCOMPARE(hash["summary"].toString(), QLatin1String("asummary"));
+    QCOMPARE(hash["version"].toString(), QLatin1String("aversion"));
+    QCOMPARE(hash["description"].toString(), QLatin1String("adescription"));
+    QCOMPARE(hash["op_sys"].toString(), QLatin1String("asys"));
+    QCOMPARE(hash["platform"].toString(), QLatin1String("aplatform"));
+    QCOMPARE(hash["priority"].toString(), QLatin1String("apriority"));
+    QCOMPARE(hash["severity"].toString(), QLatin1String("aseverity"));
+    QCOMPARE(hash["keywords"].toStringList(), QStringList({"aword", "anotherword"}));
     *ok = true;
 }
 
