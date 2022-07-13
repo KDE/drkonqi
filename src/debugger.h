@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
-    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -51,6 +51,12 @@ public:
 
     /** Returns the command that should be run to use the debugger */
     QString command() const;
+
+    /// Supports dynamic symbol resolution
+    bool supportsCommandWithSymbolResolution() const;
+
+    /** Returns the command that should be run to use the debugger with symbol resolution enabled */
+    QString commandWithSymbolResolution() const;
 
     /** Returns the commands that should be given to the debugger when
      * run in batch mode in order to generate a backtrace

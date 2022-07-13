@@ -6,3 +6,5 @@
 #define PROJECT_VERSION "@PROJECT_VERSION@"
 
 #cmakedefine01 WITH_SENTRY
+
+#cmakedefine01 WITH_GDB12
