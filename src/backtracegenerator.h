@@ -26,6 +26,8 @@ class BacktraceGenerator : public QObject
     Q_OBJECT
 
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
+    Q_PROPERTY(bool supportsSymbolResolution MEMBER m_supportsSymbolResolution CONSTANT)
+    Q_PROPERTY(bool symbolResolution MEMBER m_symbolResolution NOTIFY symbolResolutionChanged)
 public:
     enum State {
         NotLoaded,
@@ -72,6 +74,7 @@ Q_SIGNALS:
     void done();
     void preparing();
     void stateChanged();
+    void symbolResolutionChanged();
 
 private Q_SLOTS:
     void slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus);
@@ -87,6 +90,8 @@ private:
     BacktraceParser *m_parser = nullptr;
     QString m_parsedBacktrace;
     std::unique_ptr<QTemporaryDir> m_tempDirectory;
+    const bool m_supportsSymbolResolution = false;
+    bool m_symbolResolution = false;
 
 #ifdef BACKTRACE_PARSER_DEBUG
     BacktraceParser *m_debugParser = nullptr;

@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2009 George Kiagiadakis <gkiagia@users.sourceforge.net>
-    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -81,6 +81,22 @@ QString Debugger::command() const
         return {};
     }
     return expandCommand(m_config->group(m_backend).readPathEntry("Exec", QString()));
+}
+
+bool Debugger::supportsCommandWithSymbolResolution() const
+{
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return false;
+    }
+    return m_config->group(m_backend).hasKey("ExecWithSymbolResolution");
+}
+
+QString Debugger::commandWithSymbolResolution() const
+{
+    if (!isValid() || !m_config->hasGroup(m_backend)) {
+        return {};
+    }
+    return expandCommand(m_config->group(m_backend).readPathEntry("ExecWithSymbolResolution", command()));
 }
 
 QString Debugger::backtraceBatchCommands() const

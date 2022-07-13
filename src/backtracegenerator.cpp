@@ -23,6 +23,7 @@
 BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent)
     : QObject(parent)
     , m_debugger(debugger)
+    , m_supportsSymbolResolution(WITH_GDB12 && m_debugger.supportsCommandWithSymbolResolution())
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);
@@ -211,7 +212,7 @@ void BacktraceGenerator::setBackendPrepared()
     preamble->flush();
 
     // start the debugger
-    QString str = m_debugger.command();
+    QString str = m_symbolResolution ? m_debugger.commandWithSymbolResolution() : m_debugger.command();
     Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
 
     *m_proc << KShell::splitArgs(str);

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-// SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+// SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
@@ -31,7 +31,17 @@ Kirigami.ScrollablePage {
         id: installButton
         visible: false
         text: i18nc("@action:button", "Install Debug Symbols")
-        onTriggered: debugPackageInstaller.installDebugPackages()
+        onTriggered: {
+            if (debugPackageInstaller.canInstallDebugPackages) { // prefer the installer when available over dynamic resolution
+                debugPackageInstaller.installDebugPackages()
+            } else if (BacktraceGenerator.supportsSymbolResolution) {
+                traceArea.text = ""
+                BacktraceGenerator.symbolResolution = true
+                BacktraceGenerator.start()
+            } else {
+                console.warn("Unexpected install button state :O")
+            }
+        }
         iconName: "install"
         tooltip: i18nc("@info:tooltip", "Use this button to install the missing debug symbols packages.")
     }
@@ -142,7 +152,7 @@ used during interactive and post-mortem debugging.</para>`)
                         trace = traceArea.text // FIXME ensure this doesn't result in a binding
 
                         if (usefulness != BacktraceParser.ReallyUseful) {
-                            if (debugPackageInstaller.canInstallDebugPackages) {
+                            if (debugPackageInstaller.canInstallDebugPackages || BacktraceGenerator.supportsSymbolResolution) {
                                 detailsLabel.text = xi18nc("@info/rich",
 `You can click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
 does not work: please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
