@@ -25,6 +25,7 @@ if os.getenv('DRKONQI_WITH_SENTRY'):
             dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
             traces_sample_rate=1.0,
             release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
+            ignore_errors=[KeyboardInterrupt],
         )
     except ImportError:
         print("python sentry-sdk not installed :(")
