@@ -1,6 +1,6 @@
 /*
     SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-    SPDX-FileCopyrightText: 2019-2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 */
 
 #include <QCoreApplication>
@@ -98,6 +98,13 @@ static ArgumentsPidTuple includeAllArguments(const Coredump &dump)
     return {arguments, true};
 }
 
+static ArgumentsPidTuple includeKWinWaylandArguments(const Coredump &dump)
+{
+    auto [arguments, foundPID] = includeAllArguments(dump);
+    arguments << QStringLiteral("--bugaddress") << QStringLiteral("submit@bugs.kde.org") << QStringLiteral("--appname") << dump.exe;
+    return {arguments, foundPID};
+}
+
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString metadataPath = Metadata::resolveMetadataPath(dump.pid);
@@ -124,6 +131,9 @@ static bool tryDrkonqi(const Coredump &dump)
     if (!metadataPath.isEmpty()) {
         // A KDE app crash has metadata, build arguments from that
         std::tie(arguments, foundPID) = metadataArguments(dump, metadataPath);
+    } else if (dump.exe.endsWith(QLatin1String("/kwin_wayland"))) {
+        // When the compositor goes down it may not have time to store metadata, in that case we'll fake them.
+        std::tie(arguments, foundPID) = includeKWinWaylandArguments(dump);
     } else if (QSettings(configFile, QSettings::IniFormat).value(QStringLiteral("IncludeAll")).toBool()) {
         // Handle non-KDE apps when in IncludeAll mode.
         std::tie(arguments, foundPID) = includeAllArguments(dump);
