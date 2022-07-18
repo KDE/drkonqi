@@ -66,7 +66,7 @@ Kirigami.Page {
                     icon.name: "document-send"
                     text: i18nc("@action retry submitting bug report", "Retry Submission")
                     onTriggered: {
-                        errorContext = ""
+                        inlineMessage.errorContext = ""
                         bugzilla.refreshToken()
                     }
                 }
