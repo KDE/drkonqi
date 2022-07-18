@@ -112,4 +112,6 @@ for requesting further information. If you do not have one, you can freely <link
             }
         ]
     }
+
+    Component.onCompleted: emailField.forceActiveFocus()
 }

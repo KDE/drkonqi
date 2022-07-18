@@ -47,6 +47,7 @@ Kirigami.Page {
                 }
             }
             QQC2.TextField {
+                id: titleField
                 // FIXME: use placeholder text instead of heading??
                 Layout.fillWidth: true
                 onEditingFinished: reportInterface.title = text
@@ -143,5 +144,13 @@ Kirigami.Page {
                 onTriggered: pageStack.push("qrc:/ui/PreviewPage.qml")
             }
         ]
+    }
+
+    Component.onCompleted: {
+        if (titleField.visible) {
+            titleField.forceActiveFocus()
+        } else {
+            informationField.forceActiveFocus()
+        }
     }
 }
