@@ -17,6 +17,7 @@ import binascii
 import platform
 import psutil
 import multiprocessing
+from pathlib import Path
 
 if os.getenv('DRKONQI_WITH_SENTRY'):
     try:
@@ -29,6 +30,11 @@ if os.getenv('DRKONQI_WITH_SENTRY'):
         )
     except ImportError:
         print("python sentry-sdk not installed :(")
+
+def mangle_path(path):
+    if not path:
+        return path
+    return path.sub(str(Path.home()), "$HOME")
 
 class SentryQMLThread:
     def __init__(self):
@@ -59,7 +65,7 @@ class SentryQMLThread:
         print("level={level} func={func} at={file}:{line}".format(**frame) )
         return {
             'platform': 'other', # always different from the cpp/native frames. alas, technically this frame isn't a javascript frame
-            'filename': frame['file'],
+            'filename': mangle_path(frame['file']),
             'function': frame['func'],
             'lineno': int(frame['line']),
             'in_app': True # qml is always in the app I should think
@@ -164,7 +170,7 @@ class SentryFrame:
 
     def to_dict(self):
         return {
-            'filename': self.filename(),
+            'filename': mangle_path(self.filename()),
             'function': self.function(),
             'package': self.package(),
             'instruction_addr': self.address(),
