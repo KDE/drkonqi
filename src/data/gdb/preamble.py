@@ -34,7 +34,7 @@ if os.getenv('DRKONQI_WITH_SENTRY'):
 def mangle_path(path):
     if not path:
         return path
-    return path.sub(str(Path.home()), "$HOME")
+    return re.sub(str(Path.home()), "$HOME", path, count=1)
 
 class SentryQMLThread:
     def __init__(self):
