@@ -59,7 +59,7 @@ ReportInterface::ReportInterface(QObject *parent)
         m_sentryUserFeedbackSent = true;
         maybeDone();
     });
-    if (KUserFeedback::Provider provider; provider.isEnabled() && !DrKonqi::isTestingBugzilla()) {
+    if (KUserFeedback::Provider provider; provider.isEnabled() && !DrKonqi::isTestingBugzilla() && !DrKonqi::crashedApplication()->hasDeletedFiles()) {
         metaObject()->invokeMethod(this, [this] {
             // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
             sendCrashEvent();
