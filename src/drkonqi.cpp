@@ -146,7 +146,7 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
             textStream.flush();
             KMessageBox::information(parent, xi18nc("@info", "Report saved to <filename>%1</filename>.", tf.fileName()));
         } else {
-            KMessageBox::sorry(parent, i18nc("@info", "Could not create a file in which to save the report."));
+            KMessageBox::error(parent, i18nc("@info", "Could not create a file in which to save the report."));
         }
     } else {
         QString defname = getSuggestedKCrashFilename(crashedApplication());
@@ -179,7 +179,7 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
                 ts << reportText;
                 ts.flush();
             } else {
-                KMessageBox::sorry(parent,
+                KMessageBox::error(parent,
                                    xi18nc("@info",
                                           "Cannot open file <filename>%1</filename> "
                                           "for writing.",
@@ -192,7 +192,7 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
             KIO::FileCopyJob *job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl, -1, KIO::DefaultFlags | KIO::Overwrite);
             KJobWidgets::setWindow(job, parent);
             if (!job->exec()) {
-                KMessageBox::sorry(parent, job->errorString());
+                KMessageBox::error(parent, job->errorString());
             }
         }
     }
