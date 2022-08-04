@@ -77,7 +77,7 @@ Kirigami.ScrollablePage {
         Kirigami.PromptDialog {
             id: problemDialog
             title: i18nc("@title", "Not Sufficiently Useful")
-            subtitle: xi18nc("@info", "<para>The information you can provide is not consider helpful enough in this case. If you can't think of any more information you can close the bug report dialog.</para>")
+            subtitle: xi18nc("@info", "<para>The information you can provide is not considered helpful enough in this case. If you can't think of any more information you can close the bug report dialog.</para>")
 
             showCloseButton: true
         }
