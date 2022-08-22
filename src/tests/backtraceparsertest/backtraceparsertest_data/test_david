@@ -1,5 +1,3 @@
-Application: Discover (plasma-discover), signal: Segmentation fault
-
 [New LWP 40945]
 [New LWP 40947]
 [New LWP 40954]
@@ -133,9 +131,9 @@ Thread 2 (Thread 0x7f9ce496d700 (LWP 40947)):
 #5  0x00007f9ceb079133 in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
 
 Thread 1 (Thread 0x7f9ce664eb80 (LWP 40945)):
-#1  0x00007fddaa7e660d in KCrash::startDirectly (argv=0x7fffb2db2800) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:436
-#2  0x00007fddaa7e7581 in KCrash::defaultCrashHandler (sig=11) at /home/gkiagia/kde/src/KDE/kdelibs/kdeui/util/kcrash.cpp:340
-#3  <signal handler called>
+#0  __GI_raise (sig=<optimized out>) at ../sysdeps/unix/sysv/linux/raise.c:50
+#1  0x00007f9cecd95ff5 in KCrash::defaultCrashHandler(int) () at /usr/lib/x86_64-linux-gnu/libKF5Crash.so.5
+#2  0x00007f9ceaf9d090 in <signal handler called> () at /lib/x86_64-linux-gnu/libc.so.6
 #3  0x00007f9ced214f65 in qGetPtrHelper<QScopedPointer<QObjectData, QScopedPointerDeleter<QObjectData> > const>(QScopedPointer<QObjectData, QScopedPointerDeleter<QObjectData> > const&) (ptr=...) at /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:1143
 #4  QQuickWindow::d_func() const (this=0x91) at items/qquickwindow.h:79
 #5  QQuickWindow::mouseGrabberItem() const (this=0x91) at items/qquickwindow.cpp:1732
