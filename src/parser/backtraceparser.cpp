@@ -83,8 +83,7 @@ BacktraceParser::Usefulness BacktraceParser::backtraceUsefulness() const
 {
     Q_D(const BacktraceParser);
 
-    // if there is no cached usefulness, the data calculation function has not run yet.
-    if (d && d->m_usefulness == InvalidUsefulness) {
+    if (d) {
         const_cast<BacktraceParser *>(this)->calculateRatingData();
     }
 
