@@ -25,7 +25,6 @@
 #include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
-#include "sentrybeacon.h"
 #include "systeminformation.h"
 
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
