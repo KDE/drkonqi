@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
                          i18nc("@info program description", "Offers detailed view of past crashes"),
                          KAboutLicense::GPL,
                          i18n("(C) 2020-2022, The DrKonqi Authors"));
+    aboutData.setDesktopFileName(QStringLiteral("org.kde.drkonqi.coredump.gui"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
