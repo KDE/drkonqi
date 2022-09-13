@@ -36,14 +36,14 @@ public:
     /// Constructor
     MingwGenerator(const Process &process);
 
-    virtual bool Init();
-    virtual void UnInit();
+    bool Init() override;
+    void UnInit() override;
 
-    virtual void FrameChanged();
+    void FrameChanged() override;
 
-    virtual QString GetFunctionName();
-    virtual QString GetFile();
-    virtual int GetLine();
+    QString GetFunctionName() override;
+    QString GetFile() override;
+    int GetLine() override;
 
-    virtual void LoadSymbol(const QString &module, DWORD64 dwBaseAddr);
+    void LoadSymbol(const QString &module, DWORD64 dwBaseAddr) override;
 };
