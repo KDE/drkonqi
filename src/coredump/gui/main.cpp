@@ -10,7 +10,6 @@
 
 #include <KAboutData>
 #include <KConfigGroup>
-#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
 
 #include <config-drkonqi.h>
@@ -53,7 +52,6 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(&i18nContext);
-    KDeclarative::KDeclarative::setupEngine(&engine);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(

@@ -44,7 +44,6 @@ find_package(
         CoreAddons
         Config
         Service
-        Declarative
         JobWidgets
         KIO
         Crash

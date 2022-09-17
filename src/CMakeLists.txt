@@ -95,6 +95,7 @@ target_link_libraries(
     KF5::WindowSystem
     Qt::DBus
     Qt::Concurrent
+    Qt::Qml
     KF5::WidgetsAddons
     KF5::Wallet
     KF5::Notifications # for status notifier
@@ -102,7 +103,6 @@ target_link_libraries(
     KF5::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
-    KF5::Declarative
     KUserFeedbackCore
 )
 
