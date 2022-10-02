@@ -1,0 +1,1495 @@
+# translation of drkonqi.po to Turkish
+# Copyright (C) 2003, 2004, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the drkonqi package.
+#
+# Ömer Fadıl USTA <tulliana@gmail.com>, 2002.
+# Görkem Çetin <tulliana@gmail.com>, 2003.
+# Adil Yıldız <tulliana@gmail.com>, 2004.
+# Adem Alp Yıldız <tulliana@gmail.com>, 2004.
+# Koray Löker <tulliana@gmail.com>, 2008.
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010.
+# Gökçen Eraslan <tulliana@gmail.com>, 2010.
+# H. İbrahim Güngör <tulliana@gmail.com>, 2010, 2011.
+# Muhammet Kara <tulliana@gmail.com>, 2011, 2012.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: drkonqi\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"PO-Revision-Date: 2022-08-05 14:02+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Erol Öz, Gökçen Eraslan, Volkan Gezer, Emir SARI"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"eroloz@bilgi.edu.tr, gokcen@pardus.org.tr, volkangezer@gmail.com, "
+"emir_sari@icloud.com"
+
+#: backtracewidget.cpp:57
+#, kde-format
+msgctxt "@action:button"
+msgid "&Reload"
+msgstr "&Yeniden Yükle"
+
+#: backtracewidget.cpp:60
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to reload the crash information (backtrace). This is useful "
+"when you have installed the proper debug symbol packages and you want to "
+"obtain a better backtrace."
+msgstr ""
+"Çökme bilgilerini (geri iz) yeniden yüklemek için bu düğmeyi kullanın. Bu "
+"işlem hata ayıklama sembollerini içeren paketleri kurduğunuzda ve daha iyi "
+"geri iz almak istediğinizde kullanışlıdır."
+
+#: backtracewidget.cpp:67
+#, kde-format
+msgctxt "@action:button"
+msgid "&Install Debug Symbols"
+msgstr "&Hata Ayıklama Sembollerini Kur"
+
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Use this button to install the missing debug symbols packages."
+msgstr ""
+"Eksik hata ayıklama sembolü paketlerini kurmak için bu düğmeyi kullanın."
+
+#: backtracewidget.cpp:77
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Symbol installation is unavailable because the application was updated or "
+"uninstalled after it had been started."
+msgstr ""
+"Sembol kurulumu kullanılamıyor; çünkü başlatıldıktan sonra uygulama "
+"güncellendi veya kaldırıldı."
+
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Çökme bilgilerini (geri iz) panoya kopyalamak için bu düğmeyi kullanın."
+
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Çökme bilgilerini (geri iz) bir dosyaya kaydetmek için bu düğmeyi kullanın. "
+"Bu çökme bilgilerine göz atmanız ya da hatayı daha sonra raporlamanız için "
+"yararlı bir yoldur."
+
+#: backtracewidget.cpp:115
+#, kde-format
+msgid ""
+"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+"was happening inside the application when it crashed, so the developers may "
+"track down where the mess started. They may look meaningless to you, but "
+"they might actually contain a wealth of useful information.<br />Backtraces "
+"are commonly used during interactive and post-mortem debugging.</p>"
+msgstr ""
+"<h2>Bir \"geri iz\" nedir?</h2><p>Bir geri iz temel olarak çöktüğü zaman "
+"uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler "
+"bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız görünebilir "
+"ama aslında oldukça yararlı bilgiler içeriyor olabilirler.<br />Geri izler "
+"etkileşimli ve olay sonrası hata ayıklama sırasında yaygın olarak kullanılır."
+"</p>"
+
+#: backtracewidget.cpp:135
+#, kde-format
+msgctxt "@info:status"
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+#: backtracewidget.cpp:138
+#, kde-format
+msgctxt "@info:status"
+msgid "Generating backtrace... (this may take some time)"
+msgstr "Geri iz oluşturuluyor... (biraz zaman alabilir)"
+
+#: backtracewidget.cpp:189
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Another debugger is currently debugging the same application. The crash "
+"information could not be fetched."
+msgstr ""
+"Şu anda başka bir hata ayıklayıcı, aynı uygulamayı inceliyor. Çökme bilgisi "
+"alınamayabilir."
+
+#: backtracewidget.cpp:193
+#, kde-format
+msgctxt "@info:status"
+msgid "The crash information could not be fetched."
+msgstr "Çökme bilgileri getirilemedi."
+
+#: backtracewidget.cpp:196
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"Another debugging process is attached to the crashed application. Therefore, "
+"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
+"debugger and click <interface>Reload</interface>."
+msgstr ""
+"Çöken uygulamayı başka bir hata ayıklama süreci inceliyor. Bu nedenle "
+"DrKonqi hata ayıklayıcısı geri iz alamaz. Lütfen diğer hata ayıklayıcıyı "
+"kapatın ve <interface>Yeniden Yükle</interface> ögesine tıklayın."
+
+#: backtracewidget.cpp:241 qml/RatingItem.qml:43
+#, kde-format
+msgctxt "@info"
+msgid "The generated crash information is useful"
+msgstr "Otomatik olarak oluşturulan çökme bilgisi yararlı"
+
+#: backtracewidget.cpp:244 qml/RatingItem.qml:45
+#, kde-format
+msgctxt "@info"
+msgid "The generated crash information may be useful"
+msgstr "Oluşturulan çökme bilgisi yararlı olabilir"
+
+#: backtracewidget.cpp:247 qml/RatingItem.qml:47
+#, kde-format
+msgctxt "@info"
+msgid "The generated crash information is probably not useful"
+msgstr "Çökme bilgisi büyük olasılıkla yararlı değil"
+
+#: backtracewidget.cpp:250 qml/RatingItem.qml:49
+#, kde-format
+msgctxt "@info"
+msgid "The generated crash information is not useful"
+msgstr "Çökme bilgisi yararlı değil"
+
+#: backtracewidget.cpp:255
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The rating of this crash information is invalid. This is a bug in DrKonqi "
+"itself."
+msgstr ""
+"Çökme bilgisi derecelendirmesi geçersiz. Bu Drkonqi'nin kendisine ait bir "
+"hata."
+
+#: backtracewidget.cpp:267
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"You can click the <interface>Install Debug Symbols</interface> button in "
+"order to automatically install the missing debugging information packages. "
+"If this method does not work: please read <link url='%1'>How to create "
+"useful crash reports</link> to learn how to get a useful backtrace; install "
+"the needed packages (<link url='%2'>list of files</link>) and click the "
+"<interface>Reload</interface> button."
+msgstr ""
+"Eksik hata ayıklama paketlerini otomatik olarak kurmak için <interface>Hata "
+"Ayıklama Simgelerini Kur</interface> düğmesine tıklayabilirsiniz. Eğer bu "
+"yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
+"url='%1'>Nasıl yararlı hata raporları oluşturulur</link>  yazısını okuyun; "
+"gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
+"<interface>Yeniden Yükle</interface> düğmesine basın."
+
+#: backtracewidget.cpp:285
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"Please read <link url='%1'>How to create useful crash reports</link> to "
+"learn how to get a useful backtrace; install the needed packages (<link "
+"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
+"button."
+msgstr ""
+"Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
+"hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri kurun "
+"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
+"interface> düğmesine basın."
+
+#: backtracewidget.cpp:301
+#, kde-format
+msgctxt "@info:status"
+msgid "The debugger has quit unexpectedly."
+msgstr "Hata ayıklayıcıdan beklenmedik bir şekilde çıkıldı."
+
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
+#: qml/DeveloperPage.qml:165
+#, kde-format
+msgctxt "@info:status"
+msgid "The crash information could not be generated."
+msgstr "Çökme bilgileri oluşturulamadı."
+
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"You could try to regenerate the backtrace by clicking the <interface>Reload</"
+"interface> button."
+msgstr ""
+"<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
+"oluşturmayı deneyebilirsiniz."
+
+#: backtracewidget.cpp:316
+#, kde-format
+msgctxt "@info:status"
+msgid ""
+"<strong>The debugger application is missing or could not be launched.</"
+"strong>"
+msgstr ""
+"<strong>Hata ayıklayıcı uygulama bulunamadı ya da çalıştırılamadı.</strong>"
+
+#: backtracewidget.cpp:322
+#, kde-kuit-format
+msgctxt "@info/rich"
+msgid ""
+"<strong>You need to first install the debugger application (%1) then click "
+"the <interface>Reload</interface> button.</strong>"
+msgstr ""
+"<strong>Hata ayıklayıcı paketini (%1) kurun ve <interface>Yeniden Yükle</"
+"interface> düğmesine basın.</strong>"
+
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#, kde-format
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#, kde-format
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Şu uygulamalar ve kitaplıklar için hata ayıklama bilgisi içeren paketler "
+"eksik:"
+
+#: backtracewidget.cpp:418
+#, kde-format
+msgctxt "messagebox title"
+msgid "Missing debug information packages"
+msgstr "Eksik hata ayıklama bilgisi paketleri"
+
+#: bugzillaintegration/reportinterface.cpp:190
+#, kde-kuit-format
+msgctxt "@info/plain"
+msgid ""
+"<placeholder>In detail, tell us what you were doing  when the application "
+"crashed.</placeholder>"
+msgstr ""
+"<placeholder>Ayrıntılı olarak, bize uygulama çökerken ne yaptığınızı anlatın."
+"</placeholder>"
+
+#: coredump/gui/DetailsLoader.cpp:30
+#, kde-format
+msgctxt "@info"
+msgid "Subprocess exited with error: %1"
+msgstr "Alt süreç şu hata ile çıktı: %1"
+
+#: coredump/gui/DetailsLoader.cpp:34
+#, kde-format
+msgctxt "@info"
+msgid "Subprocess crashed. Check your installation."
+msgstr "Alt süreç çöktü. Kurulumunuzu denetleyin."
+
+#: coredump/gui/main.cpp:33
+#, kde-format
+msgctxt "@title CLI title"
+msgid "DrKonqi Intensive Care"
+msgstr "DrKonqi Yoğun Bakım"
+
+#: coredump/gui/main.cpp:35
+#, kde-format
+msgctxt "@info program description"
+msgid "Offers detailed view of past crashes"
+msgstr "Geçmiş çökmelerin ayrıntılı görünümünü sunar"
+
+#: coredump/gui/main.cpp:37
+#, kde-format
+msgid "(C) 2020-2022, The DrKonqi Authors"
+msgstr "(C) 2020-2022, DrKonqi Yazarları"
+
+#: coredump/gui/qml/DetailsPage.qml:19
+msgctxt "@title"
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: coredump/gui/qml/DetailsPage.qml:28
+msgctxt "@action"
+msgid "Copy to Clipboard"
+msgstr "Panoya Kopyala"
+
+#: coredump/gui/qml/DetailsPage.qml:37
+msgctxt "@action"
+msgid "Run Interactive Debugger"
+msgstr "Etkileşimli Hata Ayıklayıcıyı Çalıştır"
+
+#: coredump/gui/qml/ListPage.qml:14
+msgctxt "@title"
+msgid "Crashes"
+msgstr "Çökmeler"
+
+#: coredump/gui/qml/ListPage.qml:48
+msgctxt "@info place holder for empty listview"
+msgid "Loading crash reports"
+msgstr "Çökme raporları yükleniyor"
+
+#: coredump/gui/qml/ListPage.qml:56
+msgctxt "@info place holder for empty listview"
+msgid "No processes have crashed yet"
+msgstr "Henüz bir süreç çökmedi"
+
+#: coredump/gui/qml/ListPage.qml:64
+msgctxt "@info place holder for empty listview"
+msgid "No crashes matching the search"
+msgstr "Arama ile eşleşen çökme yok"
+
+#: coredump/gui/qml/main.qml:14
+msgctxt "@title:window"
+msgid "Intensive Care"
+msgstr "Yoğun Bakım"
+
+#: debugpackageinstaller.cpp:51
+#, kde-format
+msgctxt "@info:progress"
+msgid "Requesting installation of missing debug symbols packages..."
+msgstr "Eksik hata ayıklama sembolleri paketleri kurulmak isteniyor..."
+
+#: debugpackageinstaller.cpp:53
+#, kde-format
+msgid "Cancel"
+msgstr "İptal"
+
+#: debugpackageinstaller.cpp:58
+#, kde-format
+msgctxt "@title:window"
+msgid "Missing debug symbols"
+msgstr "Eksik hata ayıklama sembolleri"
+
+#: debugpackageinstaller.cpp:88
+#, kde-format
+msgctxt "@info"
+msgid "Could not find debug symbol packages for this application."
+msgstr "Bu uygulama için hata ayıklama sembolü paketleri bulunamadı."
+
+#: debugpackageinstaller.cpp:98
+#, kde-format
+msgctxt "@info"
+msgid ""
+"An error was encountered during the installation of the debug symbol "
+"packages."
+msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu."
+
+#: drkonqi.cpp:147
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Report saved to <filename>%1</filename>."
+msgstr "Rapor <filename>%1</filename>dosyasına kaydedildi."
+
+#: drkonqi.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid "Could not create a file in which to save the report."
+msgstr "Raporun kaydedileceği bir dosya oluşturulamadı."
+
+#: drkonqi.cpp:156
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Filename"
+msgstr "Dosya Adı Seç"
+
+#: drkonqi.cpp:184
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Cannot open file <filename>%1</filename> for writing."
+msgstr "<filename>%1 </filename> dosyası yazmak için açılamadı."
+
+#: drkonqi_globals.cpp:12
+#, kde-format
+msgctxt "@action:button"
+msgid "&Restart Application"
+msgstr "U&ygulamayı Yeniden Başlat"
+
+#: drkonqi_globals.cpp:14
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Use this button to restart the crashed application."
+msgstr "Çöken uygulamayı yeniden başlatmak için bu düğmeyi kullanın."
+
+#: drkonqidialog.cpp:117
+#, kde-format
+msgctxt "@title:tab general information"
+msgid "&General"
+msgstr "&Genel"
+
+#: drkonqidialog.cpp:121
+#, kde-format
+msgctxt "@title:tab"
+msgid "&Developer Information"
+msgstr "&Geliştirici Bilgisi"
+
+#: drkonqidialog.cpp:156 qml/MainPage.qml:46
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
+msgstr ""
+"<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
+"biçimde kapandı.</para>"
+
+#: drkonqidialog.cpp:164
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>As the Crash Handler itself has failed, the automatic reporting "
+"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
+"<link url='%1'>manually report</link> this error to the KDE bug tracking "
+"system. Do not forget to include the backtrace from the <interface>Developer "
+"Information</interface> tab.</para>"
+msgstr ""
+"<para>Çökme denetiminin kendisi hata verdiğinden, yeniden hata vermesinin "
+"riskini azaltmak için, otomatik raporlama işlemi devre dışı bırakıldı. <nl /"
+"><nl />Lütfen, bu hatayı KDE hata izleme sistemine <link url='%1'>el ile "
+"rapor edin</link>. <interface>Geliştirici Bilgileri</interface> sekmesindeki "
+"geri izi eklemeyi unutmayın.</para>"
+
+#: drkonqidialog.cpp:174
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The reporting assistant is disabled because the crash handler dialog "
+"was started in safe mode.<nl />You can manually report this bug to %1 "
+"(including the backtrace from the <interface>Developer Information</"
+"interface> tab.)</para>"
+msgstr ""
+"<para>Çökme denetim penceresi güvenli kipte başlatıldığı için raporlama "
+"yardımcısı etkin değil.<nl />Bu hatayı kendiniz %1 adresine "
+"(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
+"birlikte) bildirebilirsiniz.</para>"
+
+#: drkonqidialog.cpp:183
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>The reporting assistant is disabled because the crashed application "
+"appears to have been updated or uninstalled since it had been started. This "
+"prevents accurate crash reporting and can also be the cause of this crash.</"
+"para><para>After updating it is always a good idea to log out and back in to "
+"make sure the update is fully applied and will not cause any side effects.</"
+"para>"
+msgstr ""
+"<para>Raporlama yardımcısı devre dışı bırakıldı çünkü kilitlenen uygulama "
+"başlatıldığından beri güncellenmiş veya kaldırılmış gibi görünüyor. Bu, "
+"doğru kilitlenme raporlamasını engeller ve ayrıca bu kilitlenmenin nedeni "
+"olabilir.</para><para>Güncellemeden sonra, güncellemenin tam olarak "
+"uygulandığından ve herhangi bir olumsuzluğa neden olmayacağından emin olmak "
+"için oturumu kapatıp tekrar açmak her zaman iyi bir fikirdir ve bir yan "
+"etkisi yoktur.</para>"
+
+#: drkonqidialog.cpp:192 qml/MainPage.qml:93
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Bu hatayı bildirerek KDE yazılımlarını geliştirmemize yardımcı "
+"olabilirsiniz.<nl /><link url='%1'>Hata raporlaması hakkında daha fazla "
+"bilgi edinin.</link></para>"
+
+#: drkonqidialog.cpp:199 qml/MainPage.qml:57
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para><application>%1</application> uygulaması herhangi bir hata bildirim "
+"adresi sağlamadığından, bu uygulama için hata bildiremezsiniz.</para>"
+
+#: drkonqidialog.cpp:207 qml/MainPage.qml:102
+#, kde-format
+msgctxt "@label"
+msgid "Details:"
+msgstr "Ayrıntılar:"
+
+#: drkonqidialog.cpp:211
+#, kde-kuit-format
+msgctxt "@info Note the time information is divided into date and time parts"
+msgid ""
+"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+"Time: %5 %6</para>"
+msgstr ""
+"<para>Çalıştırılabilir dosya: <application>%1</application> Süreç Kimliği: "
+"%2 Sinyal: %3 (%4) Zaman: %5 %6</para>"
+
+#: drkonqidialog.cpp:241
+#, kde-format
+msgctxt ""
+"@action:button this is the debug menu button label which contains the "
+"debugging applications"
+msgid "&Debug"
+msgstr "H&ata Ayıkla"
+
+#: drkonqidialog.cpp:243
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Starts a program to debug the crashed application."
+msgstr "Çöken uygulamanın hatalarını ayıklamak için bir uygulama başlatır."
+
+#: drkonqidialog.cpp:272
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Close this dialog (you will lose the crash information.)"
+msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
+
+#: drkonqidialog.cpp:281
+#, kde-format
+msgctxt "@action:inmenu 1 is the debugger name"
+msgid "Debug in %1"
+msgstr "%1 içinde hata ayıkla"
+
+#: main.cpp:112
+#, kde-format
+msgid "The KDE Crash Handler"
+msgstr "KDE Çökme İşleyicisi"
+
+#: main.cpp:114
+#, kde-format
+msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgstr ""
+"KDE Çökme İşleyicisi, bir uygulama çöktüğünde kullanıcının geri bildirimini "
+"iletir."
+
+#: main.cpp:117
+#, kde-format
+msgid "(C) 2000-2018, The DrKonqi Authors"
+msgstr "(C) 2000-2018, DrKonqi Yazarları"
+
+#: main.cpp:118
+#, kde-format
+msgctxt "@info:credit"
+msgid "Hans Petter Bieker"
+msgstr "Hans Petter Bieker"
+
+#: main.cpp:119
+#, kde-format
+msgctxt "@info:credit"
+msgid "Dario Andres Rodriguez"
+msgstr "Dario Andres Rodriguez"
+
+#: main.cpp:120
+#, kde-format
+msgctxt "@info:credit"
+msgid "George Kiagiadakis"
+msgstr "George Kiagiadakis"
+
+#: main.cpp:121
+#, kde-format
+msgctxt "@info:credit"
+msgid "A. L. Spehr"
+msgstr "A. L. Spehr"
+
+#: main.cpp:128
+#, kde-format
+msgctxt "@info:shell"
+msgid "The signal <number> that was caught"
+msgstr "Yakalanan <number> numaralı sinyal"
+
+#: main.cpp:129
+#, kde-format
+msgctxt "@info:shell"
+msgid "<Name> of the program"
+msgstr "Uygulamanın <adı>"
+
+#: main.cpp:130
+#, kde-format
+msgctxt "@info:shell"
+msgid "<Path> to the executable"
+msgstr "Çalıştırılabilir dosyanın <yolu>"
+
+#: main.cpp:131
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <version> of the program"
+msgstr "Uygulama <sürümü>"
+
+#: main.cpp:132
+#, kde-format
+msgctxt "@info:shell"
+msgid "The bug <address> to use"
+msgstr "Kullanılacak hata <adresi>"
+
+#: main.cpp:133
+#, kde-format
+msgctxt "@info:shell"
+msgid "Translated <name> of the program"
+msgstr "Uygulamanın çevrilmiş <adı>"
+
+#: main.cpp:134
+#, kde-format
+msgctxt "@info:shell"
+msgid "Bugzilla product name"
+msgstr "Bugzilla ürün adı"
+
+#: main.cpp:135
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "Uygulamanın <süreç numarası>"
+
+#: main.cpp:136
+#, kde-format
+msgctxt "@info:shell"
+msgid "Startup <ID> of the program"
+msgstr "Uygulamanın <kimlik numarası>"
+
+#: main.cpp:137
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program was started by kdeinit"
+msgstr "Uygulamanın kdeinit tarafından başlatılmış"
+
+#: main.cpp:138
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "Rastgele disk erişimini kapat"
+
+#: main.cpp:139
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "Uygulama zaten başlatılmış"
+
+#: main.cpp:142
+#, kde-format
+msgctxt "@info:shell"
+msgid "Keep the program running and generate the backtrace at startup"
+msgstr "Uygulamayı çalışır durumda tut ve geri izi başlangıçta oluştur"
+
+#: main.cpp:144
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <thread id> of the failing thread"
+msgstr "Başarısız iş parçacığının <iş parçaçığı kimliği>"
+
+#: main.cpp:145
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr ""
+"Bir bildirim gösterme; ancak hata ayıklama iletişim penceresini doğrudan "
+"başlat"
+
+#: qml/BacktracePage.qml:12
+msgctxt "@title"
+msgid "Fetching the Backtrace (Automatic Crash Information)"
+msgstr "Geri İz Alınıyor (Otomatik Çökme Bilgisi)"
+
+#: qml/BacktracePage.qml:26
+msgctxt "@action:button"
+msgid "Show backtrace content (advanced)"
+msgstr "Geri iz içeriğini göster (gelişmiş)"
+
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+msgctxt "@action:button"
+msgid "Next"
+msgstr "Sonraki"
+
+#: qml/BugzillaPage.qml:43
+msgctxt "@info"
+msgid "Failed to contact bugs.kde.org: <message>%1</message>"
+msgstr "bugs.kde.org ile iletişime geçilemedi: <message>%1</message>"
+
+#: qml/BugzillaPage.qml:48
+msgctxt "@action"
+msgid "Retry"
+msgstr "Yeniden Dene"
+
+#: qml/BugzillaPage.qml:62
+msgctxt "@info"
+msgid "Trying to contact bugs.kde.org..."
+msgstr "bugs.kde.org ile iletişim kurulmaya çalışılıyor..."
+
+#: qml/ContextPage.qml:14
+msgctxt "@title:window"
+msgid "What do You Know About the Crash?"
+msgstr "Çökme Hakkında Neler Biliyorsunuz?"
+
+#: qml/ContextPage.qml:18
+msgctxt "@info/rich"
+msgid "Do you remember what you were doing prior to the crash?"
+msgstr "Çökme öncesinde ne yaptığınızı anımsıyor musunuz?"
+
+#: qml/ContextPage.qml:28
+msgctxt "@action:button"
+msgid "Yes"
+msgstr "Evet"
+
+#: qml/ContextPage.qml:33
+msgctxt "@action:button"
+msgid "No"
+msgstr "Hayır"
+
+#: qml/ContextPage.qml:39
+msgctxt "@info/rich"
+msgid "Does the application crash again if you repeat the same situation?"
+msgstr "Aynı durumu yinelediğinizde uygulama yine çöküyor mu?"
+
+#: qml/ContextPage.qml:52
+msgctxt "@info/rich"
+msgid "Please select which additional information you can provide:"
+msgstr "Sağlayabileceğiniz ek bilgileri seçin:"
+
+#: qml/ContextPage.qml:59
+msgctxt ""
+"@option:check kind of information the user can provide about the crash, %1 "
+"is the application name"
+msgid ""
+"What I was doing when the application <application>%1</application> crashed"
+msgstr "<application>%1</application> uygulaması çökerken ne yapıyordum"
+
+#: qml/ContextPage.qml:65
+msgctxt "@action:check"
+msgid "Unusual desktop behavior I noticed"
+msgstr "Ayrımladığım olağandışı masaüstü davranışı"
+
+#: qml/ContextPage.qml:70
+msgctxt "@action:check"
+msgid "Custom settings of the application that may be related"
+msgstr "İlgili olabilecek özelleştirilmiş uygulama ayarları"
+
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+msgctxt "@title"
+msgid "Not Sufficiently Useful"
+msgstr "Yeteri Kadar Kullanışlı Değil"
+
+#: qml/ContextPage.qml:80
+msgctxt "@info"
+msgid ""
+"<para>The information you can provide is not considered helpful enough in "
+"this case. If you can't think of any more information you can close the bug "
+"report dialog.</para>"
+msgstr ""
+"<para>Sağladığınız bilgi, bu durum için yeterli değil. Verebileceğiniz başka "
+"bir bilgi yoksa hata raporu penceresini kapatabilirsniz.</para>"
+
+#: qml/DeveloperPage.qml:24
+msgctxt "@title:window"
+msgid "Developer Information"
+msgstr "Geliştirici Bilgisi"
+
+#: qml/DeveloperPage.qml:33
+msgctxt "@action:button"
+msgid "Install Debug Symbols"
+msgstr "Hata Ayıklama Sembollerini Kur"
+
+#: qml/DeveloperPage.qml:44
+msgctxt "@action:button"
+msgid "Reload"
+msgstr "Yeniden Yükle "
+
+#: qml/DeveloperPage.qml:46
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to reload the crash information (backtrace). This is useful "
+"when you have\n"
+"installed the proper debug symbol packages and you want to obtain a better "
+"backtrace."
+msgstr ""
+"Çökme bilgilerini (geri iz) yeniden yüklemek için bu düğmeyi kullanın. Bu\n"
+"işlem hata ayıklama sembollerini içeren paketleri kurduğunuzda ve daha iyi "
+"geri iz almak istediğinizde kullanışlıdır."
+
+#: qml/DeveloperPage.qml:56
+msgctxt "@action:button"
+msgid "Copy"
+msgstr "Kopyala"
+
+#: qml/DeveloperPage.qml:63
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Kaydet"
+
+#: qml/DeveloperPage.qml:99
+msgctxt "@info"
+msgid ""
+"<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
+"describes what was\n"
+"happening inside the application when it crashed, so the developers may "
+"track\n"
+"down where the mess started. They may look meaningless to you, but they "
+"might\n"
+"actually contain a wealth of useful information.<nl />Backtraces are "
+"commonly\n"
+"used during interactive and post-mortem debugging.</para>"
+msgstr ""
+"<subtitle>Bir \"geri iz\" nedir?</subtitle><para>Bir geri iz temel olarak "
+"çöktüğü zaman\n"
+"uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler\n"
+"bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız "
+"görünebilir\n"
+"ama aslında oldukça yararlı bilgiler içeriyor olabilirler.<br />Geri izler\n"
+"etkileşimli ve olay sonrası hata ayıklama sırasında yaygın olarak kullanılır."
+"</para>"
+
+#: qml/DeveloperPage.qml:147
+msgctxt "@info/rich"
+msgid ""
+"You can click the <interface>Install Debug Symbols</interface> button in "
+"order to automatically install the missing debugging information packages. "
+"If this method\n"
+"does not work: please read <link url='%1'>How to create useful crash "
+"reports</link> to learn how to get a useful\n"
+"backtrace; install the needed packages (<link url='%2'> list of files</"
+"link>) and click the <interface>Reload</interface> button."
+msgstr ""
+"Eksik hata ayıklama paketlerini otomatik olarak yüklemek için "
+"<interface>Hata Ayıklama Sembollerini Kur</interface> düğmesine\n"
+"tıklayın. Eğer bu yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek "
+"için lütfen <link url='%1'>Nasıl yararlı hata raporları oluşturulur</link>  "
+"yazısını okuyun; gerekli paketleri kurun\n"
+"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
+"interface> düğmesine basın."
+
+#: qml/DeveloperPage.qml:155
+msgctxt "@info/rich"
+msgid ""
+"Please read <link url='%1'>How to create useful crash reports</link> to "
+"learn how to get a useful backtrace; install the needed packages (<link "
+"url='%2'>\n"
+"list of files</link>) and click the <interface>Reload</interface> button."
+msgstr ""
+"Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
+"hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri kurun\n"
+"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
+"interface> düğmesine basın."
+
+#: qml/DeveloperPage.qml:167
+msgctxt "@info/rich"
+msgid ""
+"<emphasis strong='true'>You need to first install the debugger application "
+"(%1) then click the <interface>Reload</interface> button.</emphasis>"
+msgstr ""
+"<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurmanız (%1) "
+"ve <interface>Yeniden Yükle</interface> düğmesine basmanız gerekiyor.</"
+"emphasis>"
+
+#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
+msgctxt "@title"
+msgid "Look for Possible Duplicate Reports"
+msgstr "Olası Aynı Raporları Ara"
+
+#: qml/DuplicatesLoadingPage.qml:46
+msgctxt "@info"
+msgid "Searching bug database for duplicates…"
+msgstr "Olası benzer kayıtlar için veritabanı aranıyor..."
+
+#: qml/DuplicatesPage.qml:20
+msgctxt "@info/rich"
+msgid ""
+"See if your bug has already been reported. Double click a report in the list "
+"and compare it to yours. You can suggest that your crash is a duplicate of "
+"that report or directly attach your information to it."
+msgstr ""
+"Gözlemlediğiniz hatanın daha önceden raporlanıp raporlanmadığını denetleyin. "
+"Listedeki bir rapora çift tıklayın ve gözlemlediğiniz hatayla karşılaştırın. "
+"Raporladığınız hatanın daha önce bildirilmiş olan bir hata ile aynı olduğuna "
+"karar verebilir ya da doğrudan bilgilerinizi o hataya ekleyebilirsiniz."
+
+#: qml/DuplicatesPage.qml:45
+msgctxt "@title"
+msgid "Duplicate?"
+msgstr "Yinelenmiş?"
+
+#: qml/DuplicatesPage.qml:46
+msgctxt "@label"
+msgid "Are you quite certain your crash is a duplicate of this bug report?"
+msgstr "Çökmenin, bu hata raporunun aynısı olduğundan emin misiniz?"
+
+#: qml/DuplicatesPage.qml:74
+msgctxt "@action:button"
+msgid "Crash is a duplicate"
+msgstr "Çökme kaydı önceden açılmış"
+
+#: qml/DuplicatesPage.qml:76
+msgctxt "@info:tooltip"
+msgid ""
+"Use this action when you are certain that your crash is a duplicate of this "
+"bug report"
+msgstr ""
+"Çökmenin, bu hata kaydının aynısı olduğundan eminseniz bu eylemi kullanın"
+
+#: qml/DuplicatesPage.qml:86
+msgctxt "@action:button"
+msgid "Crash is not a duplicate"
+msgstr "Çökme, aynısı değil"
+
+#: qml/DuplicatesPage.qml:94
+msgctxt "@action:button"
+msgid "Suggest this crash is related"
+msgstr "Bu çökmenin ilgili olduğunu öner"
+
+#: qml/DuplicatesPage.qml:96
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to suggest that\n"
+"                                     the crash you experienced is related to "
+"this bug\n"
+"                                     report"
+msgstr ""
+"Deneyimlediğiniz çökmenin bu hata kaydı\n"
+"                                     ile benzer/ilişkin olduğunu "
+"belirtmekiçin bu düğmeyi\n"
+"                                     kullanın"
+
+#: qml/DuplicatesPage.qml:108
+msgctxt "@action:button"
+msgid "This crash is not related"
+msgstr "Bu çökme ilgili değil"
+
+#: qml/LoginPage.qml:15
+msgctxt "@title"
+msgid "Login into the bug tracking system"
+msgstr "Hata takip sistemine giriş"
+
+#: qml/LoginPage.qml:67
+msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
+msgid "You need to login with your %1 account in order to proceed."
+msgstr "Sürdürmek için %1 hesabınızla giriş yapmanız gerekmektedir."
+
+#: qml/LoginPage.qml:72
+msgctxt "@label:textbox bugzilla account email"
+msgid "E-mail Address:"
+msgstr "E-posta Adresi:"
+
+#: qml/LoginPage.qml:76
+msgctxt "@label:textbox bugzilla account password"
+msgid "Password:"
+msgstr "Parola:"
+
+#: qml/LoginPage.qml:81
+msgctxt "@option:check"
+msgid "Save login information using the KDE Wallet system"
+msgstr "Giriş bilgilerini KDE Cüzdan Yönetici kullanarak kaydet"
+
+#: qml/LoginPage.qml:88
+msgctxt "@info/rich"
+msgid ""
+"<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
+"link> in order to file a bug report, because we may need to contact you "
+"later\n"
+"for requesting further information. If you do not have one, you can freely "
+"<link url='%2'>create one here</link>. Please do not use disposable email "
+"accounts.</note>"
+msgstr ""
+"<note>Bir hata raporu girebilmeniz için, <link url='%1'>KDE hata takip "
+"sistemi</link> üzerinde bir hesaba ihtiyacınız var, çünkü daha sonra sizden "
+"daha fazla bilgi istemek için sizinle iletişime geçmemiz gerekebilir.\n"
+"Eğer hesabınız yoksa, <link url='%2'>buradan</link> bir tane açabilirsiniz. "
+"Lütfen tek kullanımlık e-posta hesapları kullanmayınız.</note>"
+
+#: qml/LoginPage.qml:101
+msgctxt "@action:button"
+msgid "Login"
+msgstr "Giriş"
+
+#: qml/LoginPage.qml:102
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to login to the KDE bug tracking system using the provided e-"
+"mail address and password."
+msgstr ""
+"Sağlanan e-posta adresi ve parola ile KDE hata izleme sistemine giriş yapmak "
+"için bu düğmeyi kullanın."
+
+#: qml/MainPage.qml:20
+msgctxt "@action"
+msgid "Report Bug"
+msgstr "Hata Bildir"
+
+#: qml/MainPage.qml:22
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Hata raporlama yardımcısını başlatır."
+
+#: qml/MainPage.qml:29
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "Uygulamayı Yeniden Başlat"
+
+#: qml/MainPage.qml:35
+msgctxt "@action"
+msgid "Developer Information"
+msgstr "Geliştirici Bilgisi"
+
+#: qml/MainPage.qml:63
+msgctxt "@info"
+msgid ""
+"<para>As the Crash Handler itself has failed, the\n"
+"automatic reporting process is disabled to reduce the\n"
+"risks of failing again.<nl /><nl />\n"
+"Please, <link url='%1'>manually report</link> this error\n"
+"to the KDE bug tracking system. Do not forget to include\n"
+"the backtrace from the <interface>Developer Information</interface>\n"
+"tab.</para>"
+msgstr ""
+"<para>Çökme denetiminin kendisi hata verdiğinden,\n"
+"yeniden hata vermesinin riskini azaltmak için, otomatik\n"
+"raporlama işlemi devre dışı bırakıldı.<nl /><nl />\n"
+"Lütfen, bu hatayı KDE hata izleme sistemine\n"
+"<link url='%1'>el ile raporlayın</link>. <interface>Geliştirici Bilgileri</"
+"interface>\n"
+" sekmesindeki geri izi eklemeyi unutmayın.</para>"
+
+#: qml/MainPage.qml:75
+msgctxt "@info"
+msgid ""
+"<para>The reporting assistant is disabled because the crash handler dialog "
+"was started in safe mode.<nl />\n"
+"You can manually report this bug to <link>%1</link> (including the backtrace "
+"from the <interface>Developer Information</interface> tab.)</para>"
+msgstr ""
+"<para>Çökme denetim diyaloğu güvenli kipte başlatıldığı için raporlama "
+"yardımcısı etkin değil.<nl />\n"
+"Bu hatayı kendiniz %1 adresine (<interface>Geliştirici Bilgileri</interface> "
+"sekmesindeki geri iz ile birlikte) bildirebilirsiniz.</para>"
+
+#: qml/MainPage.qml:82
+msgctxt "@info"
+msgid ""
+"<para>The reporting assistant is disabled because\n"
+"the crashed application appears to have been updated or\n"
+"uninstalled since it had been started. This prevents accurate\n"
+"crash reporting and can also be the cause of this crash.</para>\n"
+"<para>After updating it is always a good idea to log out and back\n"
+"in to make sure the update is fully applied and will not cause\n"
+"any side effects.</para>"
+msgstr ""
+"<para>Raporlama yardımcısı devre dışı bırakıldı; çünkü\n"
+"kilitlenen uygulama başlatıldığından beri güncellenmiş\n"
+"veya kaldırılmış gibi görünüyor. Bu, doğru kilitlenme\n"
+"raporlamasını engeller ve ayrıca bu kilitlenmenin nedeni olabilir.\n"
+"</para><para>Güncellemeden sonra, güncellemenin tam\n"
+"olarak uygulandığından ve herhangi bir olumsuzluğa neden\n"
+"olmayacağından emin olmak için oturumu kapatıp yeniden\n"
+"açmak her zaman iyi bir fikirdir ve bir yan etkisi yoktur.</para>"
+
+#: qml/MainPage.qml:108
+msgctxt "@info Note the time information is divided into date and time parts"
+msgid ""
+"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+"Time: %5</para>"
+msgstr ""
+"<para>Çalıştırılabilir dosya: <application>%1</application> Süreç Kimliği: "
+"%2 Sinyal: %3 (%4) Zaman: %5</para>"
+
+#: qml/PerfectDuplicatePage.qml:14
+msgctxt "@title"
+msgid "Problem is Already Reported"
+msgstr "Sorun Önceden Bildirilmiş"
+
+#: qml/PerfectDuplicatePage.qml:29
+msgctxt "@info"
+msgid ""
+"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
+"url=\"%2\">Bug %2</link>."
+msgstr ""
+"Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
+"\"%2\">Hata %2</link> kaydının bir yinelenmişi olarak <link url=\"%1\">Hata "
+"%1</link> adresinde bildirilmiş."
+
+#: qml/PerfectDuplicatePage.qml:34
+msgctxt "@info"
+msgid ""
+"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
+"has been <emphasis strong='true'>closed</emphasis>."
+msgstr ""
+"Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
+"\"%1\">Hata %1</link> olarak bildirilmiş."
+
+#: qml/PerfectDuplicatePage.qml:39
+msgctxt "@info"
+msgid ""
+"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+"\"%2\">Bug %2</link>"
+msgstr ""
+"Çökme, halihazırda <link url=\"%2\">Hata %2</link> kaydının <emphasis "
+"strong='true'>aynısı</emphasis> olan <link url=\"%1\">Hata %1</link> olarak "
+"bildirilmiş."
+
+#: qml/PerfectDuplicatePage.qml:43
+msgctxt "@info"
+msgid ""
+"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
+"been reported as <link url=\"%1\">Bug %2</link>."
+msgstr ""
+"Çökme, halihazırda <link url=\"%1\">Bug %2</link> kaydının <emphasis "
+"strong='true'>aynısı</emphasis>."
+
+#: qml/PerfectDuplicatePage.qml:52
+msgctxt "@label"
+msgid ""
+"You may choose to add additional information, but you should only do so if "
+"you have new or requested information."
+msgstr ""
+"Ek bilgi eklemeyi seçebilirsiniz; ancak bunu yalnızca yeni veya istenen "
+"bilgi varsa yapın."
+
+#: qml/PerfectDuplicatePage.qml:60
+msgctxt "@action:button"
+msgid "Close"
+msgstr "Kapat"
+
+#: qml/PerfectDuplicatePage.qml:65
+msgctxt "@action:button"
+msgid "Attach Additional Information"
+msgstr "Ek Bilgi İliştir"
+
+#: qml/PreviewPage.qml:14
+msgctxt "@title"
+msgid "Preview the Report"
+msgstr "Raporu Önizle"
+
+#: qml/PreviewPage.qml:20
+msgctxt "@label/rich"
+msgid ""
+"<para>This is a preview of the report's contents which will be sent.</"
+"para><para>If you want to modify it go to the previous pages.</para>"
+msgstr ""
+"<para>Bu, gönderilecek hata raporunun içeriğinin bir önizlemesidir.</"
+"para><para>Eğer raporu değiştirmek istiyorsanız önceki sayfalara geri dönün."
+"</para>"
+
+#: qml/PreviewPage.qml:38
+msgctxt "@action:button"
+msgid "Submit"
+msgstr "Gönder"
+
+#: qml/RatingItem.qml:33
+msgctxt "@info"
+msgid "Waiting for data…"
+msgstr "Veri bekleniyor…"
+
+#: qml/ReportPage.qml:15
+msgctxt "@title"
+msgid "Enter the Details about the Crash"
+msgstr "Çökme Ayrıntıları Girin"
+
+#: qml/ReportPage.qml:26
+msgctxt "@info"
+msgid "Please provide the following information in English."
+msgstr "Lütfen aşağıdaki bilgiyi İngilizce yazın."
+
+#: qml/ReportPage.qml:35
+msgctxt "@info"
+msgid "Title of the bug report:"
+msgstr "Hata raporunun başlığı:"
+
+#: qml/ReportPage.qml:40
+msgctxt "@info:tooltip examples of good bug report titles"
+msgid ""
+"<subtitle>Examples of good titles:</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application 'X'</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
+msgstr ""
+"<subtitle>Güzel başlık örnekleri:</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application 'X'</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
+
+#: qml/ReportPage.qml:60
+msgctxt "@info"
+msgid "Information about the crash:"
+msgstr "Çökme hakkında bilgi:"
+
+#: qml/ReportPage.qml:65
+msgctxt "@info"
+msgid ""
+"<subtitle>Describe in as much detail as possible the crash circumstances:</"
+"subtitle>\n"
+"<list>\n"
+"<item>Detail which actions were you taking inside and outside the "
+"application an instant before the crash.</item>\n"
+"<item>Note if you noticed any unusual behavior in the application or in the "
+"whole environment.</item>\n"
+"<item>Note any non-default configuration in the application</item>\n"
+"</list>"
+msgstr ""
+"<subtitle>Çökme anını olabildiğince ayrıntılı betimleyin:</subtitle>\n"
+"<list>\n"
+"<item>Çökme öncesinde uygulama içinde ve dışında neler yaptığınızı ayrıntılı "
+"olarak yazın.</item>\n"
+"<item>Uygulamada veya dış ortamda alışılmışın dışında bir şey ayrımlayıp "
+"ayrımlamadığınızı ekleyin.</item>\n"
+"<item>Uygulamada öntanımlının dışında bir yapılandırma varsa belirtin.</"
+"item>\n"
+"</list>"
+
+#: qml/ReportPage.qml:79
+msgctxt "the minimum required length of a text was reached"
+msgid "Minimum length reached"
+msgstr "En kısa uzunluğa ulaşıldı"
+
+#: qml/ReportPage.qml:81
+msgctxt "the minimum required length of a text wasn't reached yet"
+msgid "Provide more information"
+msgstr "Daha fazla bilgi verin"
+
+#: qml/ReportPage.qml:103
+msgctxt "@info"
+msgid "Distribution method:"
+msgstr "Dağıtım yöntemi:"
+
+#: qml/ReportPage.qml:126
+msgctxt "@option:check"
+msgid "KDE Platform is compiled from source"
+msgstr "KDE Platformu kaynaktan derlendi"
+
+#: qml/ReportPage.qml:134
+msgctxt "@info"
+msgid ""
+"<note>The crash and system information will be automatically added to the "
+"bug report.</note>"
+msgstr ""
+"<note>Çökme ve sistem bilgisi, hata kaydına otomatik olarak eklenecektir.</"
+"note>"
+
+#: qml/ReportPage.qml:143
+msgctxt "@action:button"
+msgid "Preview Report"
+msgstr "Raporu Önizle"
+
+#: qml/SendingPage.qml:45
+msgctxt "@action:button"
+msgid "Save Report to File"
+msgstr "Raporu Dosyaya Kaydet"
+
+#: qml/SendingPage.qml:46
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information to a file for manual reporting."
+msgstr ""
+"El ile raporlama amaçlı çökme bilgisini bir dosyaya kaydetmek için bu "
+"düğmeyi kullanın."
+
+#: qml/SendingPage.qml:63
+msgctxt "@info"
+msgid "Failed to submit bug report: <message>%1</message>"
+msgstr "Hata raporu gönderilemedi: <message>%1</message>"
+
+#: qml/SendingPage.qml:67
+msgctxt "@action retry submitting bug report"
+msgid "Retry Submission"
+msgstr "Göndermeyi Yeniden Dene"
+
+#: qml/SendingPage.qml:81
+msgctxt "@info"
+msgid "Submitting bug report..."
+msgstr "Hata raporu gönderiliyor..."
+
+#: qml/SentPage.qml:12
+msgctxt "@title"
+msgid "Crash Report Sent"
+msgstr "Çökme Raporu Gönderildi"
+
+#: qml/SentPage.qml:18
+msgctxt "@info"
+msgid "URL: <link url='%1'>%1</link>"
+msgstr "URL: <link url='%1'>%1</link>"
+
+#: qml/SentPage.qml:23
+msgctxt "@info"
+msgid "Thank you for being part of KDE. You can now close this window."
+msgstr ""
+"KDE'nin bir parçası olduğunuz için teşekkürler. Artık bu pencereyi "
+"kapatabilirsiniz."
+
+#: qml/WelcomePage.qml:14
+msgctxt "@title:window"
+msgid "Welcome to the Reporting Assistant"
+msgstr "Raporlama Yardımcısına Hoş Geldiniz"
+
+#: qml/WelcomePage.qml:19
+msgctxt "@info/rich"
+msgid ""
+"This assistant will analyze the crash information and guide you through the "
+"bug reporting process."
+msgstr ""
+"Bu yardımcı uygulama çökme bilgisini çözümleyecek ve hata raporlama "
+"sürecinde size kılavuzluk yapacaktır."
+
+#: qml/WelcomePage.qml:32
+msgctxt "@info/rich note before starting the bug reporting process"
+msgid ""
+"<para><note>Since communication between you and the developers is required "
+"for effective debugging,\n"
+"to continue reporting this bug it is <emphasis strong='true'>required for "
+"you to agree that developers may contact you</emphasis>.\n"
+"</note></para><para>Feel free to close this dialog if you do not accept this."
+"</para>"
+msgstr ""
+"<para><note>Etkili hata ayıklama için sizin ve geliştiricilerin iletişimde "
+"kalması\n"
+"gerekeceğinden, <emphasis strong='true'>geliştiricilerin sizinle iletişime "
+"geçebileceğine onay vermeniz gerekmektedir</emphasis>.\n"
+"</note></para><para>Bunu kabul etmiyorsanız bu pencereyi kapatabilirsiniz.</"
+"para>"
+
+#: qml/WelcomePage.qml:45
+msgctxt "@action:button"
+msgid "I Agree to be Contacted"
+msgstr "Benimle İletişime Geçilebilir"
+
+#: qmlextensions/platformmodel.cpp:36
+#, kde-format
+msgctxt "@info/status error"
+msgid "Failed to get platform list"
+msgstr "Platform listesi alınamadı"
+
+#: qmlextensions/reproducibilitymodel.cpp:38
+#, kde-format
+msgctxt "@item:inlistbox  user didn't tried to repeat the crash situation"
+msgid "I did not try again"
+msgstr "Yeniden denemedim"
+
+#: qmlextensions/reproducibilitymodel.cpp:40
+#, kde-format
+msgctxt "@item:inlistbox the crash cannot be reproduce. reproduciblity->never"
+msgid "Never"
+msgstr "Hiçbir zaman"
+
+#: qmlextensions/reproducibilitymodel.cpp:42
+#, kde-format
+msgctxt "@item:inlistbox the bug can be reproduced sometimes"
+msgid "Sometimes"
+msgstr "Bazen"
+
+#: qmlextensions/reproducibilitymodel.cpp:44
+#, kde-format
+msgctxt "@item:inlistbox the bug can be reproduced every time"
+msgid "Every time"
+msgstr "Her zaman"
+
+#: statusnotifier.cpp:29
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr "%1 Beklenmedik Biçimde Kapandı"
+
+#: statusnotifier.cpp:54
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr "Lütfen bu yazılımı iyileştirmek için bu hatayı bildirin."
+
+#: statusnotifier.cpp:61
+#, kde-format
+msgid "Report &Bug"
+msgstr "&Hata Bildir"
+
+#: statusnotifier.cpp:67
+#, kde-format
+msgid "&Restart Application"
+msgstr "U&ygulamayı Yeniden Başlat"
+
+#: statusnotifier.cpp:78
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr "Gizle"
+
+#: statusnotifier.cpp:98
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr "Bu yazılımı iyileştirmeye yardım etmek için bu hatayı bildirin."
+
+#: statusnotifier.cpp:99
+#, kde-format
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "Uygulama beklenmedik biir biçimde kapandı."
+
+#: statusnotifier.cpp:110
+#, kde-format
+msgctxt "Notification action button, keep short"
+msgid "Report Bug"
+msgstr "Hata Bildir"
+
+#: statusnotifier.cpp:113
+#, kde-format
+msgctxt "Notification action button, keep short"
+msgid "Restart App"
+msgstr "Uygulamayı Yeniden Başlat"
+
+#: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
+#, kde-format
+msgid "backtraceparsertest_manual"
+msgstr "backtraceparsertest_manual"
+
+#: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
+#, kde-format
+msgid "The debugger name passed to the parser factory"
+msgstr "Ayrıştırıcı yapıya geçirilen hata ayıklayıcı adı"
+
+#: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
+#, kde-format
+msgid "A file containing the backtrace."
+msgstr "Geri izi içeren bir dosya."
+
+#: tests/bugzillalibtest/bugzillalibtest.cpp:118
+#, kde-format
+msgid "BugzillaLib Test (DrKonqi2)"
+msgstr "BugzillaLib Sınaması (DrKonqi2)"
+
+#: tests/bugzillalibtest/bugzillalibtest.cpp:120
+#, kde-format
+msgid "Test application for bugtracker manager lib"
+msgstr "Hata izleme yöneticisi kitaplığı için deneme uygulaması"
+
+#: tests/bugzillalibtest/bugzillalibtest.cpp:122
+#, kde-format
+msgid "(c) 2009, DrKonqi2 Developers"
+msgstr "(c) 2009, DrKonqi2 Geliştiricileri"
+
+#: tests/bugzillalibtest/bugzillalibtest.cpp:125
+#, kde-format
+msgctxt "@info:shell"
+msgid "bugstest.kde.org username"
+msgstr "bugstest.kde.org kullanıcı adı"
+
+#: tests/bugzillalibtest/bugzillalibtest.cpp:126
+#, kde-format
+msgctxt "@info:shell"
+msgid "bugstest.kde.org password"
+msgstr "bugstest.kde.org parolası"
