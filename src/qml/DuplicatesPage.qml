@@ -80,6 +80,7 @@ Kirigami.ScrollablePage {
                             promptDialog.bugNumber = ROLE_Number
                             promptDialog.open()
                         }
+                        Accessible.name: text
                     },
                     Kirigami.Action {
                         visible: isDuplicate
@@ -101,6 +102,7 @@ Kirigami.ScrollablePage {
                             listView.possibleDuplicates.unshift(ROLE_Number)
                             listView.possibleDuplicatesChanged()
                         }
+                        Accessible.name: text
                     },
                     Kirigami.Action {
                         id: removeAction
@@ -114,6 +116,7 @@ Kirigami.ScrollablePage {
                                 listView.possibleDuplicatesChanged()
                             }
                         }
+                        Accessible.name: text
                     }
                 ]
             }

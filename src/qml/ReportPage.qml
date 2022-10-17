@@ -51,6 +51,7 @@ Kirigami.Page {
                 // FIXME: use placeholder text instead of heading??
                 Layout.fillWidth: true
                 onEditingFinished: reportInterface.title = text
+                Accessible.name: i18nc("@info", "Title of the bug report:")
             }
         }
 
@@ -96,6 +97,7 @@ Kirigami.Page {
             Layout.fillWidth: true
             Layout.fillHeight: true
             onEditingFinished: reportInterface.detailText = text
+            Accessible.name: i18nc("@info", "Information about the crash:")
         }
 
         Kirigami.Heading {

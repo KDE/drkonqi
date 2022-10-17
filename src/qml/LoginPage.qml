@@ -70,10 +70,12 @@ Kirigami.ScrollablePage {
             QQC2.TextField {
                 id: emailField
                 Kirigami.FormData.label: i18nc("@label:textbox bugzilla account email", "E-mail Address:")
+                Accessible.name: Kirigami.FormData.label
             }
             Kirigami.PasswordField {
                 id: passwordField
                 Kirigami.FormData.label: i18nc("@label:textbox bugzilla account password", "Password:")
+                Accessible.description: Kirigami.FormData.label
             }
             QQC2.CheckBox {
                 id: rememberBox
