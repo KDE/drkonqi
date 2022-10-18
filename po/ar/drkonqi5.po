@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-08-16 20:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -276,7 +276,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "حزم معلومات التنقيح مفقودة"
 
-#: bugzillaintegration/reportinterface.cpp:190
+#: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -685,7 +685,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "أظهر محتويات التتبع الخلفي للانهيار (متقدم)"
 
-#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr "التالي"
@@ -906,17 +906,17 @@ msgid ""
 "bug report"
 msgstr "استخدم هذا الزر لاقتراح أن الانهيار المُجرّب مكرر لتقرير العلّة هذا"
 
-#: qml/DuplicatesPage.qml:86
+#: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "الانهيار غير مكرر"
 
-#: qml/DuplicatesPage.qml:94
+#: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "اقترح أن هذا الانهيار متعلق"
 
-#: qml/DuplicatesPage.qml:96
+#: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -928,7 +928,7 @@ msgstr ""
 " أن الانهيار المُجرّب متعلّق\n"
 " بتقرير العلّة هذا"
 
-#: qml/DuplicatesPage.qml:108
+#: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
 msgstr "هذا الانهيار غير ذي صلة"
@@ -948,17 +948,17 @@ msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
 msgstr "عنوان البريد الإلكتروني :"
 
-#: qml/LoginPage.qml:76
+#: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
 msgstr "كلمة السر:"
 
-#: qml/LoginPage.qml:81
+#: qml/LoginPage.qml:83
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
 msgstr "احفظ معلومات الولوج باستخدم نظام حافظة كدي"
 
-#: qml/LoginPage.qml:88
+#: qml/LoginPage.qml:90
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -973,12 +973,12 @@ msgstr ""
 "من المعلومات ، إذا كنت لا تملك واحد؛ فيمكنك أن <link url='%2'>تنشئ واحد من "
 "هنا </link>من فضلك لا تستخدم حسابات البريد الإلكتروني المؤقتة.</note>"
 
-#: qml/LoginPage.qml:101
+#: qml/LoginPage.qml:103
 msgctxt "@action:button"
 msgid "Login"
 msgstr "لج"
 
-#: qml/LoginPage.qml:102
+#: qml/LoginPage.qml:104
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
@@ -1162,7 +1162,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "يرجى توفير المعلومات التالية بالإنجليزية."
 
-#: qml/ReportPage.qml:35
+#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "عنوان تقرير العلة:"
@@ -1190,12 +1190,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:60
+#: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "معلومات حول الانهيار"
 
-#: qml/ReportPage.qml:65
+#: qml/ReportPage.qml:66
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1217,27 +1217,27 @@ msgstr ""
 "<item> لاحظ أي ضبط غير مبدئي في التطبيق </item> \n"
 "</list>"
 
-#: qml/ReportPage.qml:79
+#: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "تحقق الحد الأدنى للطول"
 
-#: qml/ReportPage.qml:81
+#: qml/ReportPage.qml:82
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "نحتاج مزيدًا من المعلومات"
 
-#: qml/ReportPage.qml:103
+#: qml/ReportPage.qml:105
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "طريقة التوزيع:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:128
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "منصة كدي بَنيت من المصدر"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:136
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1245,7 +1245,7 @@ msgid ""
 msgstr ""
 "<note> الانهيار و معلومات النظام ستضاف بشكل آلي إلى تقرير العلة .</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:145
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "عاين التقرير"

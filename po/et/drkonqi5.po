@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2019-11-10 21:32+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -275,7 +275,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Silumisteabe paketid puuduvad"
 
-#: bugzillaintegration/reportinterface.cpp:190
+#: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -702,7 +702,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Tagasijälituse sisu näitamine (kogenud kasutajatele)"
 
-#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1045,19 +1045,19 @@ msgstr ""
 "Selle nupu abil saab anda teada, et sinu kogetud krahh on seotud selle "
 "veateatega"
 
-#: qml/DuplicatesPage.qml:86
+#: qml/DuplicatesPage.qml:87
 #, fuzzy
 #| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "Duplikaadid puuduvad"
 
-#: qml/DuplicatesPage.qml:94
+#: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "Paku seost oma krahhiga"
 
-#: qml/DuplicatesPage.qml:96
+#: qml/DuplicatesPage.qml:97
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1073,7 +1073,7 @@ msgstr ""
 "Selle nupu abil saab anda teada, et sinu kogetud krahh on seotud selle "
 "veateatega"
 
-#: qml/DuplicatesPage.qml:108
+#: qml/DuplicatesPage.qml:110
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Suggest this crash is related"
@@ -1096,17 +1096,17 @@ msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
 msgstr "E-posti aadress:"
 
-#: qml/LoginPage.qml:76
+#: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
 msgstr "Parool:"
 
-#: qml/LoginPage.qml:81
+#: qml/LoginPage.qml:83
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
 msgstr "Sisselogimisteabe salvestamine KDE turvalaekasüsteemis"
 
-#: qml/LoginPage.qml:88
+#: qml/LoginPage.qml:90
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1130,12 +1130,12 @@ msgstr ""
 "igasuguste piiranguteta <link url='%2'>selle luua</link>. Palun ära kasuta "
 "ühekordseid e-posti kontosid.</note>"
 
-#: qml/LoginPage.qml:101
+#: qml/LoginPage.qml:103
 msgctxt "@action:button"
 msgid "Login"
 msgstr "Logi sisse"
 
-#: qml/LoginPage.qml:102
+#: qml/LoginPage.qml:104
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
@@ -1396,7 +1396,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "<strong>Palun pane järgnev teave kirja inglise keeles:</strong>"
 
-#: qml/ReportPage.qml:35
+#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Title of the bug report"
@@ -1433,14 +1433,14 @@ msgstr ""
 "closed while editing a log file and pressing the Delete key a couple of times"
 "\""
 
-#: qml/ReportPage.qml:60
+#: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 #, fuzzy
 #| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Teave krahhi teksti kohta"
 
-#: qml/ReportPage.qml:65
+#: qml/ReportPage.qml:66
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1454,17 +1454,17 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:79
+#: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Miinimumpikkus on käes"
 
-#: qml/ReportPage.qml:81
+#: qml/ReportPage.qml:82
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Vaja läheb rohkem teavet"
 
-#: qml/ReportPage.qml:103
+#: qml/ReportPage.qml:105
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1472,7 +1472,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Levitamisviis:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:128
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1480,7 +1480,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Lähtekoodist kompileeritud KDE platvorm"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:136
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1494,7 +1494,7 @@ msgstr ""
 "<i>Märkus:</i> teave krahhi ja süsteemi kohta lisatakse automaatselt "
 "veateatele."
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:145
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"

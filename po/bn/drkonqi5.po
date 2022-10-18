@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2012-07-16 15:55+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -275,7 +275,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "নিখোঁজ ত্রুটিমুক্ত করা তথ্য প্যাকেজ"
 
-#: bugzillaintegration/reportinterface.cpp:190
+#: bugzillaintegration/reportinterface.cpp:191
 #, fuzzy, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -715,7 +715,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "ব্যাকট্রেস ভিতরের উপাদান দেখাও (অগ্রসর হয়েছিলেন)"
 
-#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -983,19 +983,19 @@ msgstr ""
 "ইঙ্গিত করতে এই বাটনটি ব্যবহার করো যে ক্র্যাশ আপনাকে এই বাগটি রিপোর্টে অনুভব করা "
 "হয়েছিল সম্বন্ধস্থাপন করা হয়েছিল"
 
-#: qml/DuplicatesPage.qml:86
+#: qml/DuplicatesPage.qml:87
 #, fuzzy
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "কোনও প্রকৃত নকল করো না"
 
-#: qml/DuplicatesPage.qml:94
+#: qml/DuplicatesPage.qml:95
 #, fuzzy
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "এই ক্র্যাশটি ইঙ্গিত করা হয় সম্বন্ধস্থাপন করা হয়"
 
-#: qml/DuplicatesPage.qml:96
+#: qml/DuplicatesPage.qml:97
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
@@ -1007,7 +1007,7 @@ msgstr ""
 "ইঙ্গিত করতে এই বাটনটি ব্যবহার করো যে ক্র্যাশ আপনাকে এই বাগটি রিপোর্টে অনুভব করা "
 "হয়েছিল সম্বন্ধস্থাপন করা হয়েছিল"
 
-#: qml/DuplicatesPage.qml:108
+#: qml/DuplicatesPage.qml:110
 #, fuzzy
 msgctxt "@action:button"
 msgid "This crash is not related"
@@ -1029,19 +1029,19 @@ msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
 msgstr ""
 
-#: qml/LoginPage.qml:76
+#: qml/LoginPage.qml:77
 #, fuzzy
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
 msgstr "পাসওয়ার্ড:"
 
-#: qml/LoginPage.qml:81
+#: qml/LoginPage.qml:83
 #, fuzzy
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
 msgstr "কে.ডি.ই. ওয়ালেট সিস্টেম ব্যবহার করে লগিন তথ্য সংরক্ষণ করো"
 
-#: qml/LoginPage.qml:88
+#: qml/LoginPage.qml:90
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -1058,13 +1058,13 @@ msgstr ""
 "আপনার এক, আপনাকে মুক্তভাবে না<link url='%2'>এক এখানে তৈরি করো</link>। দয়া করে "
 "disposable ই-মেইল অ্যাকাউন্ট ব্যবহার করেন না।</note>"
 
-#: qml/LoginPage.qml:101
+#: qml/LoginPage.qml:103
 #, fuzzy
 msgctxt "@action:button"
 msgid "Login"
 msgstr "লগিন"
 
-#: qml/LoginPage.qml:102
+#: qml/LoginPage.qml:104
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
@@ -1246,7 +1246,7 @@ msgid "Please provide the following information in English."
 msgstr ""
 "<strong>দয়া করে নির্বাচন করো যেটি অতিরিক্ত তথ্য আপনি জোগান দিতে পারেন:</strong>"
 
-#: qml/ReportPage.qml:35
+#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 #, fuzzy
 msgctxt "@info"
 msgid "Title of the bug report:"
@@ -1272,7 +1272,7 @@ msgstr ""
 "পুনরায় শুরু করার পরে suddenly বন্ধ করেছিল<nl />\"কেট একটি কার্যবিবরণী ফাইল "
 "সম্পাদনা করার সময় বন্ধ করেছিল এবং pressing সময়\"এর একটি দম্পতি মুছে ফেলো চাবিও"
 
-#: qml/ReportPage.qml:60
+#: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1280,7 +1280,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "বাগ রিপোর্টিং সম্বন্ধে তথ্য"
 
-#: qml/ReportPage.qml:65
+#: qml/ReportPage.qml:66
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1294,31 +1294,31 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:79
+#: qml/ReportPage.qml:80
 #, fuzzy
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "ন্যুনতম দৈর্ঘ্য পৌঁছেছিল"
 
-#: qml/ReportPage.qml:81
+#: qml/ReportPage.qml:82
 #, fuzzy
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "আরও বেশি তথ্য জোগান দাও"
 
-#: qml/ReportPage.qml:103
+#: qml/ReportPage.qml:105
 #, fuzzy
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "বন্টন পন্থা:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:128
 #, fuzzy
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "কে.ডি.ই. প্ল্যাটফর্ম উৎস থেকে সঙ্কলন করা হয়"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:136
 #, fuzzy
 msgctxt "@info"
 msgid ""
@@ -1326,7 +1326,7 @@ msgid ""
 "bug report.</note>"
 msgstr "<note>ক্র্যাশ এবং সিস্টেম তথ্য বাগ রিপোর্টে সয়ংক্রিয়ভাবে যোগ করা হবে।</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:145
 #, fuzzy
 msgctxt "@action:button"
 msgid "Preview Report"

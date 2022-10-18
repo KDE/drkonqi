@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"POT-Creation-Date: 2022-10-18 00:46+0000\n"
 "PO-Revision-Date: 2022-02-19 12:06+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -267,7 +267,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "遺失除錯資訊軟體包"
 
-#: bugzillaintegration/reportinterface.cpp:190
+#: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -685,7 +685,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "顯示回溯追蹤內容（進階）"
 
-#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1016,19 +1016,19 @@ msgid ""
 "bug report"
 msgstr "使用此按鍵來建議您所經歷的問題與此錯誤報告有關"
 
-#: qml/DuplicatesPage.qml:86
+#: qml/DuplicatesPage.qml:87
 #, fuzzy
 #| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "沒有真的重複項目"
 
-#: qml/DuplicatesPage.qml:94
+#: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "建議此錯誤的關聯"
 
-#: qml/DuplicatesPage.qml:96
+#: qml/DuplicatesPage.qml:97
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1042,7 +1042,7 @@ msgid ""
 "                                     report"
 msgstr "使用此按鍵來建議您所經歷的問題與此錯誤報告有關"
 
-#: qml/DuplicatesPage.qml:108
+#: qml/DuplicatesPage.qml:110
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Suggest this crash is related"
@@ -1065,17 +1065,17 @@ msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
 msgstr "電子信箱位址："
 
-#: qml/LoginPage.qml:76
+#: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
 msgstr "密碼："
 
-#: qml/LoginPage.qml:81
+#: qml/LoginPage.qml:83
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
 msgstr "使用 KDE 錢包系統儲存登入資訊"
 
-#: qml/LoginPage.qml:88
+#: qml/LoginPage.qml:90
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1097,12 +1097,12 @@ msgstr ""
 "因為我們可能稍後會需要請教您更詳盡的資訊。若您沒有帳號，您可以<link url='%2'>"
 "建立新的帳號</link>。請不要使用一次性的電子郵件地址。</note>"
 
-#: qml/LoginPage.qml:101
+#: qml/LoginPage.qml:103
 msgctxt "@action:button"
 msgid "Login"
 msgstr "登入"
 
-#: qml/LoginPage.qml:102
+#: qml/LoginPage.qml:104
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
@@ -1349,7 +1349,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "<strong>請使用英文提供以下資訊。</strong>"
 
-#: qml/ReportPage.qml:35
+#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Contents of the Report"
@@ -1386,14 +1386,14 @@ msgstr ""
 "to a MSN buddy\"<nl />\"Kate closed while editing a log file and pressing "
 "the Delete key a couple of times\""
 
-#: qml/ReportPage.qml:60
+#: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 #, fuzzy
 #| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "關於當機文字的資訊"
 
-#: qml/ReportPage.qml:65
+#: qml/ReportPage.qml:66
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1407,17 +1407,17 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:79
+#: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "達到最小長度"
 
-#: qml/ReportPage.qml:81
+#: qml/ReportPage.qml:82
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "提供更多資訊"
 
-#: qml/ReportPage.qml:103
+#: qml/ReportPage.qml:105
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1425,7 +1425,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "發布方式："
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:128
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1433,7 +1433,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE 平台是從源碼編譯的"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:136
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1445,7 +1445,7 @@ msgid ""
 "bug report.</note>"
 msgstr "<i>注意：</i>此錯誤與系統的資訊將會自動加入錯誤報告中。"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:145
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"
