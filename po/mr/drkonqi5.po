@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2013-03-28 15:44+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "डिबग प्रतिकांची प्रतिष्ठापना करा (&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -68,14 +68,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "क्रॅश माहितीची क्लिपबोर्ड वर प्रत करण्याकरिता हे बटन वापरा."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -188,14 +188,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "डिबगर अचानक बाहेर पडला."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "क्रॅश माहिती तयार करता आली नाही."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -220,14 +220,14 @@ msgid ""
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "डिबग प्रतिकांची प्रतिष्ठापना करताना त्रुटी निर्माण झाली"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -778,7 +778,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -812,7 +812,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "डिबग प्रतिकांची प्रतिष्ठापना करा (&I)"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -820,7 +820,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "पुन्हा दाखल करा (&R)"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -829,19 +829,19 @@ msgid ""
 "backtrace."
 msgstr ""
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "प्रतिकृत करा (&o)"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -855,7 +855,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -867,7 +867,7 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -876,7 +876,7 @@ msgid ""
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

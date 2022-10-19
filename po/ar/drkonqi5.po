@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-08-16 20:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -65,7 +65,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&ثبت رموز التنقيح"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -81,14 +81,14 @@ msgstr ""
 "تثبيت الرمز غير متاح لأنه تمت عملية تحديث للتطبيق أو إلغاء تثبيته بعد بدء "
 "تشغيله."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "استخدم هذا الزر لتنسخ معلومات الانهيار (المتتبع الخلفي) إلى الحافظة."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -220,14 +220,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "خرج المنقح فجأة."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "لا يمكن توليد معلومات الانهيار ."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -255,14 +255,14 @@ msgstr ""
 "<strong>تحتاج إلى تثبيت حزمة المنقح (%1) ثم انقر على زر <interface>أعد تحميل "
 "معلومات الانهيار</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "خطأ أثناء تثبيت رموز التنقيح"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -753,7 +753,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "إعدادات مخصصة للتطبيق قد تكون ذات علاقة"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "غير مفيد بما فيه الكافية"
@@ -779,12 +779,12 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "ثبت رموز التنقيح"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "أعد التحميل"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -795,17 +795,17 @@ msgstr ""
 "استخدم هذا الزر لإعادة تحميل معلومات الانهيار (المتتبع الخلفي). هذا مفيد \n"
 "عندما تثبت حزم التنقيح الصحيحة و تريد أن أن تحصل على تتبع خلفي أفضل."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "انسخ"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr "احفظ"
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -824,7 +824,7 @@ msgstr ""
 "قد يبدو دون معنى، لكنه قد يحتوي على معلومات قيمة.<nl />التتبعات الخلفية \n"
 "تستعمل عادة أثناء التنقيح التفاعلي والتنقيح بعد الانهيار.</para>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -842,7 +842,7 @@ msgstr ""
 " قم بتثبيت الحزم المطلوبة (<link url='%2'> قائمة الملفات </link>) وانقر فوق "
 "الزر <interface> إعادة تحميل </interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -855,7 +855,7 @@ msgstr ""
 " (<link url='%2'>قائمة الملفات </link>) وانقر فوق الزر <interface> إعادة "
 "تحميل </interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

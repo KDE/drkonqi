@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2013-05-31 05:05+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Жөндеу символдарын &орнату"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -67,7 +67,7 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Бұл батырма қирау мәліметін (жаңылыс хаттамасын) алмасу буферіне көшіріп алу "
 "үшін."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -213,14 +213,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Жөндегіш күтпеген кезде ісін доғарды."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Жаңылыс мәліметі жиналмады."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -248,14 +248,14 @@ msgstr ""
 "<strong>Алдымен жөндегіш бағдарламасын (%1) орнатып, <interface>Қайта "
 "жүктеу</interface> батырмасын басу керек.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Жөндеу символдарды орнату кезде қате пайда болды."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -841,7 +841,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Бағдарлманың мүмкін қатысы бар әдетті емес параметрлері"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -875,7 +875,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Жөндеу символдарын &орнату"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -883,7 +883,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Қа&йта жүктеу"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -901,18 +901,18 @@ msgstr ""
 "сапалы жаңылыс хаттамасын түсіріп, қажеті жөндеу символдар орнатылғанда "
 "пайдалы"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 #, fuzzy
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Көшіріп алу"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -940,7 +940,7 @@ msgstr ""
 "болуы ықтимал.<br />Хаттамалар әдетте интерактивті я қираған соң өткізетін "
 "түзеу жұмыстарында қолданылады.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -967,7 +967,7 @@ msgstr ""
 "url='%2'>`файлдар тізімінде</link> көрсетілген) керек бағдарламаларды "
 "орнатып, <interface>Қайта жүктеу</interface> батырмансын басыңыз."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -987,7 +987,7 @@ msgstr ""
 "көрсетілген) керек бағдарламаларды орнатып, <interface>Қайта жүктеу</"
 "interface> батырмансын басыңыз."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

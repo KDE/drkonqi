@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2011-09-28 19:56+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -50,7 +50,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "නොපවතින නිවැරදිකරණ සංඛේත ස්ථාපනය කරන්න (&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -64,14 +64,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "බිඳවැටීම් තොරතුරු (හඹායෑම) ක්ලිප්බෝඩයට පිටපත් කිරීමට මෙම බොත්තම භාවිත කරන්න."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -201,14 +201,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "නිවැරදිකරණ වැඩසටහන අනපේක්‍ෂිත ලෙස ඉවත්විය."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "බිඳවැටීම් තොරතුරු ජනනය කල නොහැක."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -240,14 +240,14 @@ msgstr ""
 "ඔබට (%1) නිවැරදි කාරක පැකේජ ස්ථාපනය කිරීමට සිදුවන අතර <interface>ප්‍රථිපූර්නය</"
 "interface> බොත්තම ක්ලික් කරන්න."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "නිවැරදිකරණ සංඛේත ස්ථාපනයේ වරදක්"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -843,7 +843,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "යෙදුමේ රුචිකරණය කල සැකසුම් හේතුවිය හැක"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -877,7 +877,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "නොපවතින නිවැරදිකරණ සංඛේත ස්ථාපනය කරන්න (&I)"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -885,7 +885,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "ප්‍රතිපූර්ණය (&R)"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -902,17 +902,17 @@ msgstr ""
 "බිඳවැටීම් තොරතුරු (හඹායෑම) ප්‍රථිපූර්ණයට මෙම බොත්තම භාවිත කරන්න. මෙය ඔබ විසින් සුදුසු නිවැරදිකරණ "
 "සංඛේත පැකේජ ස්ථාපනය නොකර ඇතිවිට හා  ඔබට වඩා හොඳ හඹායෑමක් ඇවැසි විට ප්‍රයෝජනවත් වේ."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -938,7 +938,7 @@ msgstr ""
 "තේරුමක් රහිත මෙන් දිස්විය හැක, නමුත් ඒවා සතුව වැදගත් තොරතුරු අඩංගු වී තිබිය හැක.<br /> හඹායෑම "
 "සාමාන්‍යෙන් අන්තර්ක්‍රියාකාරී හා පශ්චාත් පරීක්‍ෂනයන් හීදී යොදාගැනේ.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -963,7 +963,7 @@ msgstr ""
 "නිර්මාණය කරන්නේ කෙසේද</link> කියවන්න; අවශ්‍ය පැකේජ ස්ථාපනය කරන්න(<link url='%2'>ගොනු "
 "ලැයිස්තුව</link>)  තෝරා <interface>ප්‍රතිපූර්ණ</interface> බොත්තම ඔබන්න."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -982,7 +982,7 @@ msgstr ""
 "පැකේජ ස්ථාපනය කරන්න(<link url='%2'>ගොනු ලැයිස්තුව</link>)  තෝරා <interface>ප්‍රතිපූර්ණ</"
 "interface> බොත්තම ඔබන්න."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

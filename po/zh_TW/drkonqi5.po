@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-02-19 12:06+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -62,7 +62,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "安裝除錯符號(&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -76,14 +76,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr "因為應用程式在啟動後更新或解除安裝，因此無法使用符號安裝。"
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "用此按鍵來複製錯誤資訊（回溯追蹤資料）到剪貼簿中。"
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -213,14 +213,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "除錯器非預期結束。"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "無法產生錯誤資訊。"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -247,14 +247,14 @@ msgstr ""
 "<strong>您需要先安裝除錯軟體包（%1），然後點擊「<interface>重新載入</"
 "interface>」。</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "安裝除錯符號軟體包時發生錯誤"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -800,7 +800,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能有關的自定應用程式設定"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -834,7 +834,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "安裝除錯符號(&I)"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -842,7 +842,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "重新載入(&R)"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -859,17 +859,17 @@ msgstr ""
 "用此按鍵來重新載入此錯誤的資訊（回溯追蹤資料）。若您已安裝好除錯軟體包，您可"
 "以用此按鍵來取得更完整的回溯追蹤資料。"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -895,7 +895,7 @@ msgstr ""
 "一堆亂七八糟的東西，但是裡面可能包含了很有用的資訊。<br/>回溯追蹤廣泛用於開發"
 "期間的除錯，以及釋出後的錯誤回報。</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -920,7 +920,7 @@ msgstr ""
 "如何取得有用的回溯追蹤資訊。在您安裝了一些需要的軟體包（<link url='%2'>需要的"
 "檔案清單</link>）之後，點擊「<interface>重新載入</interface>」按鍵。"
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -941,7 +941,7 @@ msgstr ""
 "清單</link>），然後點擊「<interface>重新載入錯誤資訊</interface>」按鍵來重新"
 "載入。"
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

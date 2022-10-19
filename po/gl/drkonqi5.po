@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2020-01-12 11:00+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -63,7 +63,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instalar os símbolos de depuración"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -81,7 +81,7 @@ msgstr ""
 "A instalación de símbolos non está dispoñíbel porque a aplicación se "
 "actualizou ou desinstalou despois de iniciarse."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -90,7 +90,7 @@ msgstr ""
 "Use este botón para copiar a información da quebra (o trazado inverso) no "
 "portapapeis."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -228,14 +228,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "O depurador saíu inesperadamente."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Non se puido xerar información sobre a quebra."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -264,14 +264,14 @@ msgstr ""
 "<strong>Debe instalar a aplicación de depuración (%1) e premer o botón "
 "<interface>Cargar de novo</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Houbo un erro durante a instalación dos símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -837,7 +837,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Opcións personalizadas da aplicación que puideren estaren relacionadas"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -872,7 +872,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instalar os símbolos de depuración"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -880,7 +880,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Ca&rgar de novo"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -898,17 +898,17 @@ msgstr ""
 "inverso). Isto é útil se ten instalados os paquetes de símbolos de "
 "depuración e quere obter un trazado mellorado."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -936,7 +936,7 @@ msgstr ""
 "poden conter un mundo de informacións.<br />Os trazados inversos empréganse "
 "con frecuencia na depuración interactiva e na post-mortem.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -963,7 +963,7 @@ msgstr ""
 "instale os paquetes que precise (<link url='%2'>lista de ficheiros</link>)e "
 "prema o botón <interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -983,7 +983,7 @@ msgstr ""
 "url='%2'>lista de ficheiros</link>) e prema o botón <interface>Cargar de "
 "novo</interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

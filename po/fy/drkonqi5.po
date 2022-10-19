@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2010-07-19 10:20+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -52,7 +52,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Utbrek symboalen &ynstallearje"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -67,7 +67,7 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 "Brûk dizze knop om de ûngelok ynformaasje (trochslach) te kopiearjen nei it "
 "klamboerd."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -209,14 +209,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "De utbrekker is ûnferwachts ophâlden."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "De ynformaasje oer it ûngelok koe net oanmakke wurde."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -250,14 +250,14 @@ msgstr ""
 "Jo moatte de útbrek pakketten (%1) ynstallearje en klikke op de "
 "<interface>Op 'e nij lade</interface> knop."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Flater ûnder it ynstallearjen fan útbrek symboalen"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -868,7 +868,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Oanpaste ynstllings fan de applikaasje dat der ta dwaan kinne"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -903,7 +903,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Utbrek symboalen &ynstallearje"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -911,7 +911,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Op 'e nij &lade"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -929,17 +929,17 @@ msgstr ""
 "Dit kin brûkber wêze as jo de juste útbrek symboal pakketten ynstallearre ha "
 "en jo in better trochslach gripe wolle."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -953,7 +953,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -980,7 +980,7 @@ msgstr ""
 "ynstallearje nedige pakketten (<link url='%2'>list of files</link>) en klik "
 "op de <interface>op 'e nij lade</interface> knop."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1000,7 +1000,7 @@ msgstr ""
 "pakketten  (<link url='%2'>list of files</link>) en klik op de <interface>Op "
 "'e nij lade</interface> knop."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

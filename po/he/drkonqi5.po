@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2017-05-23 10:03-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&התקן סמלי דיבאג"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -80,14 +80,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "השתמש בכפתור זה על מנת להעתיק את מידע הקריסה (backtrace) אל הלוח."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -215,14 +215,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "מנפה השגיאות סיים את פעילותו באופן בלתי צפוי"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "לא ניתן ליצור את מידע הקריסה."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -250,14 +250,14 @@ msgstr ""
 "יש צורך להתקין את חבילת מנפה השגיאות (%1) וללחוץ על כפתור <interface>טען "
 "מחדש מידע קריסה</interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "שגיאה אירעה במהלך התקנת סמלי הדיבאג."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -800,7 +800,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "הגדרות מותאמות אישית של היישום שאולי קשורות"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -834,7 +834,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&התקן סמלי דיבאג"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -842,7 +842,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&טען מחדש"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -860,17 +860,17 @@ msgstr ""
 "שימושית כאשר התקנת את חבילות הסמלים לדיבוג המתאימות, ואתה מעוניין להשיג "
 "backtrace טוב יותר."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -884,7 +884,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -910,7 +910,7 @@ msgstr ""
 "backtrace יעיל; התקן את החבילות הדרושות  (<link url='%2'>רשימת הקבצים</"
 "link>)ולחץ על הכפתור <interface>טען מחדש מידע קריסה</interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -925,7 +925,7 @@ msgstr ""
 "backtrace יעיל; התקן את החבילות הדרושות  (<link url='%2'>רשימת הקבצים</"
 "link>)ולחץ על הכפתור <interface>טען מחדש מידע קריסה</interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""

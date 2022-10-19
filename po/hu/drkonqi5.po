@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2021-11-24 13:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -72,14 +72,14 @@ msgstr ""
 "A szimbólumok telepítése nem lehetséges, mivel az alkalmazást frissítették "
 "vagy eltávolították az indítása után."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Ezzel a gombbal lehet a vágólapra másolni a visszakövetési adatokat."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "A nyomkövető váratlanul kilépett."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nem sikerült létrehozni a hiba jellemzőit."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Először telepítenie kell a hibakereső alkalmazást (%1), majd "
 "kattintson az <interface>Újratöltés</interface> gombra.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Hiba történt a hibakövetési szimbólumok telepítése során"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -821,7 +821,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Az alkalmazás egyéni beállításai, amelyek kapcsolódhatnak"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -857,7 +857,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -865,7 +865,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Új&ratöltés"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -883,7 +883,7 @@ msgstr ""
 "szükség, ha telepítette a szükséges nyomkövetési csomagokat és részletesebb "
 "visszakövetési adatokat szeretne kapni."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -891,12 +891,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Más&olás"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -923,7 +923,7 @@ msgstr ""
 "azonban hasznos információkat tartalmazhat.<br />A backtrace-t általában "
 "interaktív és összeomlás utáni hibakövetés során használják.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -951,7 +951,7 @@ msgstr ""
 "fájlok listája</link>) és kattintson az <interface>Újratöltés</interface> "
 "gombra."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -971,7 +971,7 @@ msgstr ""
 "szükséges csomagokat (<link url='%2'>a fájlok listája</link>) és kattintson "
 "az <interface>Újratöltés</interface> gombra."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

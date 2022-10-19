@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-08-09 13:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "디버그 기호 설치하기(&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,14 +70,14 @@ msgstr ""
 "프로그램이 시작된 후 업데이트되었거나 삭제되었기 때문에 기호 설치를 사용할 "
 "수 없습니다."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "이 단추를 누르면 충돌 정보(역추적)를 클립보드에 복사합니다."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -209,14 +209,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "디버거가 예상치 않게 종료되었습니다."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "충돌 정보를 만들 수 없습니다."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -244,14 +244,14 @@ msgstr ""
 "<strong>디버거 패키지(%1)을(를) 설치한 다음 <interface>새로 고침</interface> "
 "단추를 클릭하십시오.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "디버그 기호 설치 중 오류 발생"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -746,7 +746,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "연관될 수도 있는 사용자 정의 설정"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
@@ -771,12 +771,12 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "디버그 기호 설치"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "새로 고침"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -787,17 +787,17 @@ msgstr ""
 "이 단추를 누르면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호\n"
 "패키지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "복사"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr "저장"
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -818,7 +818,7 @@ msgstr ""
 "들어 있을 수도 있습니다.<nl />역추적은 여러 디버깅 과정에서 사용됩니다.</"
 "para>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -836,7 +836,7 @@ msgstr ""
 "필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록</link>) "
 "<interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -848,7 +848,7 @@ msgstr ""
 "는 방법을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>\n"
 "파일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

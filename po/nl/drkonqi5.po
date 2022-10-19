@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-08-05 22:27+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -51,7 +51,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Debugsymbolen &installeren"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -68,7 +68,7 @@ msgstr ""
 "Installatie van symbolen is niet beschikbaar omdat de toepassing is "
 "bijgewerkt of verwijderd nadat het is gestart."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -77,7 +77,7 @@ msgstr ""
 "Gebruik deze knop om de crashinformatie (backtrace) naar het klembord te "
 "kopiëren."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -216,14 +216,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "De debugger is er onverwacht mee gestopt."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "De crashinformatie kon niet worden gegenereerd."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -252,14 +252,14 @@ msgstr ""
 "<strong>U moet eerst de debugger toepassing (%1) installeren en dan klikken "
 "op de knop <interface>Herladen</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Fout tijdens het installeren van debugsymbolen"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -764,7 +764,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Aangepaste instellingen van het programma die misschien gerelateerd zijn"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niet voldoende nuttig"
@@ -790,12 +790,12 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Debugsymbolen installeren"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Herladen"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -808,17 +808,17 @@ msgstr ""
 "juiste debugsymbool-pakketten hebt geladen en u wilt een betere backtrace "
 "verkrijgen."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Opslaan"
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -841,7 +841,7 @@ msgstr ""
 "gewoonlijk\n"
 "gebruikt bij interactieve en post-mortem debugging.</para>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -861,7 +861,7 @@ msgstr ""
 "url='%2'>lijst met bestanden</link>) en klik op de knop <interface>Herladen</"
 "interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -875,7 +875,7 @@ msgstr ""
 "lijst met bestanden</link>) en klik op de knop <interface>Herladen</"
 "interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

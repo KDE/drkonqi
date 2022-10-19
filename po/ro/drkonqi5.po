@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-02-15 21:51+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -55,7 +55,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instalează simbolurile de depanare"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -73,7 +73,7 @@ msgstr ""
 "Instalarea simbolurilor nu e disponibilă deoarece aplicația a fost "
 "actualizată sau dezinstalată după ce a fost pornită."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 "Folosiți acest buton pentru a copia informațiile despre prăbușire "
 "(backtrace) în clipboard."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -222,14 +222,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Depanatorul a ieșit neașteptat"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Informațiile despre prăbușire nu au putut fi generate."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -258,14 +258,14 @@ msgstr ""
 "<strong>Trebuie mai întâi să instalați aplicația de depanare (%1) și să "
 "faceți click pe butonul <interface>Reîncarcă</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Eroare în timpul instalării simbolurilor de depanare"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -831,7 +831,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Configurări personalizate ale aplicației care pot avea legătură"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -867,7 +867,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instalează simbolurile de depanare"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -875,7 +875,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Reîncarcă"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -893,7 +893,7 @@ msgstr ""
 "(backtrace). Această acțiune este utilă după ce ați instalat pachetele cu "
 "simbolurile de depanare pentru a obține un backtrace mai bun."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -901,12 +901,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Copiază"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -934,7 +934,7 @@ msgstr ""
 "informații utile.<br />Backtrace-urile sunt folosite de obicei în timpul "
 "depanării interactive și post-mortem.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -961,7 +961,7 @@ msgstr ""
 "backtrace folositor; instalați pachetele necesare (<link url='%2'>lista de "
 "fișiere</link>) și faceți clic pe butonul <interface>Reîncarcă</interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -981,7 +981,7 @@ msgstr ""
 "necesare (<link url='%2'>lista de fișiere</link>) și apăsați butonul "
 "<interface>Reîncarcă</interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

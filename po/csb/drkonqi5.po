@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2009-12-10 21:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instalëjë symbòle debùgowaniô"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -69,14 +69,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Brëkùjë ti knąpë do kòpérowaniô do tacnika wëdowiédzë ò załómaniu."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -242,14 +242,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Debùger zakùńczëł niespòdzajno dzejanié."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Ni dało sã wëgenerowac wëdowiédzë ò załómaniu."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -287,14 +287,14 @@ msgstr ""
 "Je ce nót winstalowac paczet debùggera (%1) ë klëknąc na "
 "knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Fela przë instalacëji symbòlë debùgòwaniô"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -872,7 +872,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -901,7 +901,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instalëjë symbòle debùgowaniô"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -909,7 +909,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Zladëjë znowa"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -927,7 +927,7 @@ msgstr ""
 "dobré jak ni môsz winstalowónych pasownych paczetów do debùgòwaniô ë chcesz "
 "dobëc lepszi szlach."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -935,12 +935,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Kòpérëjë"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -954,7 +954,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -980,7 +980,7 @@ msgstr ""
 "ùczbë ùsôdzania brëkòwnych szlachów; winstalëjënóterné paczétë ë klëkni na "
 "knąpã <interface>Zladëjë wëdowiédzã załómaniô  znowa</interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1003,7 +1003,7 @@ msgstr ""
 "ùczbë ùsôdzania brëkòwnych szlachów; winstalëjënóterné paczétë ë klëkni na "
 "knąpã <interface>Zladëjë wëdowiédzã załómaniô  znowa</interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

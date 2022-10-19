@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-18 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2013-11-10 23:14+0000\n"
 "Last-Translator: Emrah Dautbegovic <edautbegov1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -60,7 +60,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instaliraj ispravljačke simbole"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -74,14 +74,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Ovim dugmetom kopirate podatke o padu (kontratrag) u klipbord."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ispravljač se neočekivano okončao."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Podaci o padu nisu mogli biti sakupljeni."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Trebate prvo instalirati aplikaciju za popravljanje grešaka (%1) "
 "onda kliknuti <interface>Ponovo učitaj</interface> dugme.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Greška pri instaliranju ispravljačkih simbola."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -845,7 +845,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Posebne postavke u programu koje mogu biti od značaja"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -880,7 +880,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instaliraj ispravljačke simbole"
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -888,7 +888,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Učitaj ponovo"
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -906,17 +906,17 @@ msgstr ""
 "u međuvremenu instalirali potrebne pakete sa ispravljačkim simbolima i "
 "želite da dobijete bolji kontratrag."
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -943,7 +943,7 @@ msgstr ""
 "sadržati mnoštvo korisnih podataka.</p><p>Kontratragovi se obično koriste "
 "tokom interaktivnog i obdukcionog ispravljanja.</p>"
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -970,7 +970,7 @@ msgstr ""
 "potrebne pakete (<link url='%2'>spisak fajlova</link>), kliknite na dugme "
 "<interface>Učitaj ponovo</interface>."
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -990,7 +990,7 @@ msgstr ""
 "pakete (<link url='%2'>spisak fajlova</link>) i kliknite na dugme "
 "<interface>Učitaj ponovo</interface>."
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
