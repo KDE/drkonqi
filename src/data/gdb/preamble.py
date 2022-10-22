@@ -430,7 +430,7 @@ class SentryEvent:
             # TODO environment entry (could be staging for beta releases?)
             'contexts': { # https://develop.sentry.dev/sdk/event-payloads/contexts/
                 'device': {
-                    'name': get_stdout(['hostname']),
+                    'name': get_stdout(['qdbus', '--system', 'org.freedesktop.hostname1', '/org/freedesktop/hostname1', 'org.freedesktop.hostname1.Hostname']),
                     'family': get_stdout(['qdbus', '--system', 'org.freedesktop.hostname1', '/org/freedesktop/hostname1', 'org.freedesktop.hostname1.Chassis']),
                     'simulator': (get_stdout(['qdbus', '--session', 'org.freedesktop.systemd1', '/org/freedesktop/systemd1', 'org.freedesktop.systemd1.Manager.Virtualization']) != ""),
                     'arch': platform.machine(),
