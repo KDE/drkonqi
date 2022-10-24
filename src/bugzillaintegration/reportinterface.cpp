@@ -58,8 +58,8 @@ ReportInterface::ReportInterface(QObject *parent)
         m_sentryUserFeedbackSent = true;
         maybeDone();
     });
-    if (KUserFeedback::Provider provider; provider.isEnabled() && !DrKonqi::isTestingBugzilla() && qgetenv("DRKONQI_KDE_BUGZILLA_URL").isEmpty()
-        && !DrKonqi::crashedApplication()->hasDeletedFiles()) {
+    if (KUserFeedback::Provider provider; provider.isEnabled() && provider.telemetryMode() == KUserFeedback::Provider::DetailedUsageStatistics
+        && !DrKonqi::isTestingBugzilla() && qgetenv("DRKONQI_KDE_BUGZILLA_URL").isEmpty() && !DrKonqi::crashedApplication()->hasDeletedFiles()) {
         metaObject()->invokeMethod(this, [this] {
             // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
             sendCrashEvent();
