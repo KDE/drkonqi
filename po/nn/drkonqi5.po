@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-19 00:46+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-06-15 21:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -56,7 +56,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Installer feilsøkingssymbol"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:36
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -74,7 +74,7 @@ msgstr ""
 "Installering av symbol er ikkje tilgjengeleg, då programmet vart oppdatert "
 "eller avinstallert etter at det vart starta."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:57
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -83,7 +83,7 @@ msgstr ""
 "Bruk denne knappen for å kopiera informasjonen om krasjen (tilbakeloggen) "
 "til utklippstavla."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:65
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -221,14 +221,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Feilsøkingsprogrammet vart brått avslutta."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:161
-#: qml/DeveloperPage.qml:165
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
+#: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Klarte ikkje laga informasjon om krasjen"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:162
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -257,14 +257,14 @@ msgstr ""
 "<strong>Du må installera feilsøkingspakken (%1) og så trykkja "
 "<interface>Oppdater</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Klarte ikkje installera feilsøkingssymbol"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:189
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -279,7 +279,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Manglar feilsøkingspakkar"
 
-#: bugzillaintegration/reportinterface.cpp:190
+#: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -699,7 +699,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr ""
 
-#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:127
+#: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -767,7 +767,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:182
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -790,12 +790,12 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr ""
 
-#: qml/DeveloperPage.qml:44
+#: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
 msgstr ""
 
-#: qml/DeveloperPage.qml:46
+#: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -804,17 +804,17 @@ msgid ""
 "backtrace."
 msgstr ""
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:99
+#: qml/DeveloperPage.qml:109
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -828,7 +828,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:147
+#: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -840,7 +840,7 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:155
+#: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -849,7 +849,7 @@ msgid ""
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -896,17 +896,17 @@ msgid ""
 "bug report"
 msgstr ""
 
-#: qml/DuplicatesPage.qml:86
+#: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr ""
 
-#: qml/DuplicatesPage.qml:94
+#: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "Foreslå at denne krasjen liknar"
 
-#: qml/DuplicatesPage.qml:96
+#: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -915,7 +915,7 @@ msgid ""
 "                                     report"
 msgstr ""
 
-#: qml/DuplicatesPage.qml:108
+#: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
 msgstr ""
@@ -935,17 +935,17 @@ msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
 msgstr "E-postadresse:"
 
-#: qml/LoginPage.qml:76
+#: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
 msgstr "Passord:"
 
-#: qml/LoginPage.qml:81
+#: qml/LoginPage.qml:83
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
 msgstr "Lagra innloggingsinformasjonen i KWallet"
 
-#: qml/LoginPage.qml:88
+#: qml/LoginPage.qml:90
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -956,12 +956,12 @@ msgid ""
 "accounts.</note>"
 msgstr ""
 
-#: qml/LoginPage.qml:101
+#: qml/LoginPage.qml:103
 msgctxt "@action:button"
 msgid "Login"
 msgstr "Logg inn"
 
-#: qml/LoginPage.qml:102
+#: qml/LoginPage.qml:104
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
@@ -1114,7 +1114,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr ""
 
-#: qml/ReportPage.qml:35
+#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr ""
@@ -1133,12 +1133,12 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:60
+#: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr ""
 
-#: qml/ReportPage.qml:65
+#: qml/ReportPage.qml:66
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1152,34 +1152,34 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:79
+#: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Minimumslengd nådd"
 
-#: qml/ReportPage.qml:81
+#: qml/ReportPage.qml:82
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Oppgje meir informasjon"
 
-#: qml/ReportPage.qml:103
+#: qml/ReportPage.qml:105
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr ""
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:128
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr ""
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:136
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:145
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr ""
