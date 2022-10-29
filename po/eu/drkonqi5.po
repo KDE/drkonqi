@@ -1,39 +1,38 @@
 # Translation for drkonqi5.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, Free Software Foundation, Inc.
-# Copyright (C) 2019-2021, This file is copyright:
+# Copyright (C) 2002-2022 This file is copyright:
 # This file is distributed under the same license as the drkonqi package.
-# KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:47+0000\n"
-"PO-Revision-Date: 2021-08-09 12:29+0200\n"
+"PO-Revision-Date: 2022-10-28 06:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
-"Marcos Goyeneche,Iñigo Salvador Azurmendi,Hizkuntza Politikarako "
+"Iñigo Salvador Azurmendi,Marcos Goyeneche,Hizkuntza Politikarako "
 "Sailburuordetza"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "marcos@euskalgnu.org,xalba@euskalnet.net,hizpol@ej-gv.es"
+msgstr "xalba@ni.eus,marcos@euskalgnu.org,hizpol@ej-gv.es"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -297,77 +296,70 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Azpiprozesua errore honekin itxi da: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Azpiprozesua kraskatu da. Behatu zure instalazioa."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "DrKonqi zainketa intentsiboa"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Iraganeko kraskaduren ikuspegi zehatza eskaintzen du"
 
 #: coredump/gui/main.cpp:37
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2000-2018, DrKonqi-ren egileak"
+msgstr "(C) 2020-2022, DrKonqi-ren egileak"
 
 #: coredump/gui/qml/DetailsPage.qml:19
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Xehetasunak:"
+msgstr "Zehaztasunak"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiatu arbelera"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Exekutatu araztaile elkarreragilea"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Kraskadurak"
 
 #: coredump/gui/qml/ListPage.qml:48
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Kraskadura-jakinarazpena bidaltzea"
+msgstr "Kraskadura-txostenak zamatzen"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Oraindik ez da prozesurik kraskatu"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Ez dago bilaketarekin bat datorren kraskadurarik"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "Zainketa intentsiboa"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -707,180 +699,112 @@ msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Aztarna lortzen (kraskaduraren informazio automatikoa)"
 
 #: qml/BacktracePage.qml:26
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr "Erakutsi aztarnaren edukia (aurreratua)"
+msgstr "Erakutsi atzerako aztarnaren edukia (aurreratua)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Hurrengoa"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr "Huts egin du bugs.kde.org kontaktatzea: <message>%1</message>"
+msgstr "bugs.kde.org kontaktatzea huts egin du: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgid "Retry"
 msgctxt "@action"
 msgid "Retry"
 msgstr "Berriz saiatu"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
 msgstr "bugs.kde.org kontaktatzea saiatzen..."
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
 msgstr "Zer dakizu kraskadurari buruz?"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr ""
-"<strong>Gogoan duzu zer ari zinen egiten aplikazioa kraskatu aurretik?</"
-"strong>"
+msgstr "Gogoan duzu kraskatu aurretik zertan ari zinen?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Bai"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Ez"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>Aplikazioa berriz kraskatzen da egoera bera errepikatzen baduzu?</"
-"strong>"
+msgstr "Aplikazioa berriz kraskatzen da egoera bera errepikatzen baduzu?"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Please select which additional information you can provide:</"
-#| "strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr "<strong>Hautatu zer motatako informazioa eman dezakezun:</strong>"
+msgstr "Mesedez, hautatu zer motatako informazioa eman dezakezun:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Zer ari nintzen egiten \"%1\" aplikazioa kraskatu denean"
+msgstr ""
+"Zer egiten ari nintzen <application>%1</application> aplikazioa kraskatu "
+"denean"
 
 #: qml/ContextPage.qml:65
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Unusual desktop behavior I noticed"
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Mahaigainaren ohiz kanpoko jokabidea"
 
 #: qml/ContextPage.qml:70
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Custom settings of the application that may be related"
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr "Erlazionatuta egon daitezkeen aplikazio-ezarpen pertsonalizatuak"
+msgstr "Erlazionatuta egon daitezkeen aplikazioaren ezarpen pertsonalizatuak"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Ez da nahikoa erabilgarria"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
-msgstr "Zuk emandako informazioa ez da nahikoa lagungarria kasu honetan."
+msgstr ""
+"<para>Eman dezakezun informazioa, kasu honetan, ez da nahikoa lagungarria. "
+"Informazio gehiago bururatzen ez bazaizu, akats-txostenaren elkarrizketa-"
+"koadroa itxi dezakezu.</para>"
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "&Garatzaileen informazioa"
+msgstr "Garatzaileen informazioa"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "&Instalatu arazte-sinboloak"
+msgstr "Instalatu arazteko ikurrak"
 
 #: qml/DeveloperPage.qml:54
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "&Kargatu berriz"
+msgstr "Birzamatu"
 
 #: qml/DeveloperPage.qml:56
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to reload the crash information (backtrace). This is "
-#| "useful when you have installed the proper debug symbol packages and you "
-#| "want to obtain a better backtrace."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -888,29 +812,22 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
-"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) berriz "
-"kargatzeko. Arazte-sinboloen paketeak instalatuta dituzunean eta aztarna "
-"hobea lortu nahi duzunean da baliagarria aukera hau."
+"Erabili botoi hau kraskadurari buruzko informazioa (atzerako aztarna) "
+"birzamatzeko.\n"
+"Arazteko ikurren paketeak instalatuta izanda atzerako aztarna hobea lortu "
+"nahi duzunean da baliagarria aukera hau."
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiatu"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Gorde"
 
 #: qml/DeveloperPage.qml:109
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -923,23 +840,18 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
-"<h2>Zer da \"aztarna\" bat?</h2><p>Aplikazioa kraskatu zenean aplikazioaren "
-"barruan zer gertatzen ari zen deskribatzen dute funtsean aztarnek. Haiei "
+"<subtitle>Zer da \"atzerako aztarna\" bat?</subtitle><para>Aplikazioa "
+"kraskatu denean aplikazioaren\n"
+"barruan zer gertatzen ari zen deskribatzen dute funtsean atzerako aztarnek. "
+"Haiei\n"
 "esker, arazoa non hasi zen jakin dezakete garatzaileek. Hutsalak irudituko "
-"zaizkizu agian, baina informazio baliagarri asko ematen dute.<br />Akatsak "
-"arazteko prozesu interaktiboan zehar eta haiek konpondu ondoren erabili ohi "
-"dira aztarnak.</p>"
+"zaizkizu\n"
+"agian, baina informazio baliagarri asko ematen dute.<nl />Akatsak arazteko "
+"prozesu\n"
+"interaktiboan zehar eta haiek konpondu ondoren erabili ohi dira atzerako "
+"aztarnak.</para>"
 
 #: qml/DeveloperPage.qml:157
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -950,22 +862,15 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"Egin klik <interface>Instalatu arazte-sinboloak</interface> botoian, falta "
-"diren arazteko informazio-paketeak automatikoki instalatzeko. Metodo horrek "
-"funtzionatzen ez badu, irakurri <link url='%1'>Kraskadurei buruzko "
-"jakinarazpen baliagarriak nola sortu</link> atala, aztarna baliagarriak nola "
-"sortzen diren ikasteko. Instalatu beharrezko paketeak (<link "
-"url='%2'>fitxategi-zerrenda</link>) eta egin klik <interface>Kargatu berriz</"
-"interface> botoian."
+"<interface>Instalatu arazteko sinboloak</interface> botoian klik egin "
+"dezakezu, falta diren arazteko informazio-paketeak automatikoki "
+"instalatzeko. Metodo hori ez badabil:\n"
+"mesedez, irakurri <link url='%1'>Kraskadura-txosten baliagarriak nola sortu</"
+"link>, atzerako aztarna baliagarria nola lortu ikasteko;\n"
+"instalatu beharrezkoak diren paketeak (<link url='%2'>fitxategien zerrenda</"
+"link>) eta egin klik <interface>Birzamatu</interface> botoian."
 
 #: qml/DeveloperPage.qml:165
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -973,24 +878,20 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"Irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen baliagarriak nola "
-"sortu</link> atala, aztarna baliagarriak nola sortzen diren ikasteko. "
-"Instalatu beharrezko paketeak (<link url='%2'>fitxategi-zerrenda</link>) eta "
-"egin klik <interface>Kargatu berriz</interface> botoian."
+"Mesedez, irakurri <link url='%1'>Kraskadura-txosten baliagarriak nola sortu</"
+"link>, atzerako aztarna baliagarria nola lortu ikasteko; instalatu "
+"beharrezkoak\n"
+"diren paketeak (<link url='%2'>fitxategien zerrenda</link>) eta egin klik "
+"<interface>Birzamatu</interface> botoian."
 
 #: qml/DeveloperPage.qml:177
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>You need to first install the debugger application (%1) then "
-#| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<strong>Lehenenik araztaile aplikazioa (%1) instalatu behar duzu, ondoren "
-"klikatu <interface>Birzamatu</interface> botoia.</strong>"
+"<emphasis strong='true'>Aurrena arazteko aplikazioa (%1) instalatu behar "
+"duzu, ondoren egin klik <interface>Birzamatu</interface> botoian.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -998,20 +899,11 @@ msgid "Look for Possible Duplicate Reports"
 msgstr "Bilatu bikoiztuta egon litezkeen jakinarazpenak"
 
 #: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates..."
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "Bikoiztuak bilatzen..."
+msgstr "Akatsen datu-basean bikoiztuen bila..."
 
 #: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
 msgctxt "@info/rich"
 msgid ""
 "See if your bug has already been reported. Double click a report in the list "
@@ -1019,50 +911,37 @@ msgid ""
 "that report or directly attach your information to it."
 msgstr ""
 "Begiratu zure akatsa lehendik jakinarazi den. Egin klik bikoitza zerrendako "
-"jakinarazpen batean eta alderatu zurearekin. Zure kraskadura jakinarazpen "
-"haren bikoiztua dela iradoki dezakezu edo zuzenean zure informazioa hari "
-"erantsi."
+"txosten batean eta alderatu zurearekin. Zure kraskadura jakinarazpen haren "
+"bikoizketa dela iradoki dezakezu edo zuzenean zure informazioa hari erantsi."
 
 #: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "[Duplicate report]"
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr "[Jakinarazpen bikoiztua]"
+msgstr "Bikoiztua?"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
+msgstr "Ziur zaude zure kraskadura errore-txosten honen bikoizketa dela?"
 
 #: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr "Ez dago egiazko jakinarazpen bikoizturik"
+msgstr "Kraskadura bikoizketa bat da"
 
 #: qml/DuplicatesPage.qml:76
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
-"Erabili botoi hau zuk izandako kraskadura akats-jakinarazpen honekin "
-"erlazionatuta dagoela iradokitzeko"
+"Erabili ekintza hau zuk izandako kraskadura akats-txosten honen "
+"bikoizketadela ziur zaudenean"
 
 #: qml/DuplicatesPage.qml:87
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr "Ez dago egiazko jakinarazpen bikoizturik"
+msgstr "Kraskadura ez da bikoizketa"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
@@ -1070,11 +949,6 @@ msgid "Suggest this crash is related"
 msgstr "Iradoki kraskadura hau erlazionatuta dagoela"
 
 #: qml/DuplicatesPage.qml:97
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -1082,21 +956,20 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
-"Erabili botoi hau zuk izandako kraskadura akats-jakinarazpen honekin "
-"erlazionatuta dagoela iradokitzeko"
+"Erabili botoi hau zuk izandako\n"
+"                                     kraskadura akats-txosten honekin lotura "
+"duela\n"
+"                                     iradokitzeko"
 
 #: qml/DuplicatesPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "Iradoki kraskadura hau erlazionatuta dagoela"
+msgstr "Kraskadura honek ez du loturarik"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
 msgid "Login into the bug tracking system"
-msgstr "Hasi saioa akatsen segimendurako sisteman"
+msgstr "Saio-hasi akatsen jarraipena egiteko sisteman"
 
 #: qml/LoginPage.qml:67
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -1119,14 +992,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Gorde saioa hasteko informazioa KDEren zorro-sistema erabiliz"
 
 #: qml/LoginPage.qml:90
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1136,11 +1001,13 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
-"<note>Erabiltzaile-kontua izan behar duzu <link url='%1'>KDEren akatsen "
-"jarraipenerako sisteman</link>, akatsen jakinarazpenak bidaltzeko, litekeena "
-"baita zurekin harremanetan jartzea informazio gehiago eskatzeko. Konturik ez "
-"baduzu, <link url='%2'>sor ezazu hemen</link>. Ez baliatu erabili eta "
-"botatzeko posta elektronikoko konturik.</note>"
+"<note><link url='%1'>KDEko akatsen jarraipena egiteko sisteman</link> "
+"erabiltzaile-kontu bat izan behar duzu akats txosten bat aurkezteko, "
+"aurrerago,\n"
+"informazio gehiago eskatzeko, zurekin harremanean jartzeko beharra izan "
+"dezakegulako. Halakorik ez baduzu, askatasun osoz <link url='%2'>hemen bat "
+"sor dezakezu</link>. Mesedez, ez erabili erabili eta botatzeko e-posta "
+"konturik.</note>"
 
 #: qml/LoginPage.qml:103
 msgctxt "@action:button"
@@ -1157,9 +1024,6 @@ msgstr ""
 "eta pasahitzarekin saio-hasteko."
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Jakinarazi akatsa"
@@ -1170,19 +1034,14 @@ msgid "Starts the bug report assistant."
 msgstr "Akatsak jakinarazteko laguntzailea abiarazten da."
 
 #: qml/MainPage.qml:29
-#, fuzzy
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "&Berrabiarazi aplikazioa"
+msgstr "Berrabiarazi aplikazioa"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "&Garatzaileen informazioa"
+msgstr "Garatzaileen informazioa"
 
 #: qml/MainPage.qml:63
 #, fuzzy
@@ -1258,27 +1117,18 @@ msgstr ""
 "dela eta albo eraginik ez duela izango ziurtatzeko.</para>"
 
 #: qml/MainPage.qml:108
-#, fuzzy
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#| "Time: %5 %6</para>"
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
 "<para>Exekutagarria: <application>%1</application> PID: %2 Seinalea: %3 (%4) "
-"Data: %5 %6</para>"
+"Ordua: %5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Already reported"
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "Dagoeneko txostenduta"
+msgstr "Dagoeneko eman da arazoaren berri"
 
 #: qml/PerfectDuplicatePage.qml:29
 #, fuzzy
@@ -1348,17 +1198,14 @@ msgid ""
 msgstr ""
 
 #: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Itxita (%1)"
+msgstr "Itxi"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "Erantsi informazio osagarria"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1366,25 +1213,15 @@ msgid "Preview the Report"
 msgstr "Aurreikusi jakinarazpena"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "This is a preview of the report's contents which will be sent. \n"
-#| "\n"
-#| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
-"Hau da bidaliko den jakinarazpenaren edukiaren aurreikuspegi bat.\n"
-"\n"
-"Aldatu nahi baduzu, joan aurreko orrietara."
+"<para>Hau da bidaliko den txostenaren edukiaren aurreikuspegi bat.</"
+"para><para>Aldatu nahi baduzu, joan aurreko orrietara.</para>"
 
 #: qml/PreviewPage.qml:38
-#, fuzzy
-#| msgctxt "@action button to submit report"
-#| msgid "Submit"
 msgctxt "@action:button"
 msgid "Submit"
 msgstr "Bidali"
@@ -1392,7 +1229,7 @@ msgstr "Bidali"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Datuen zain..."
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1400,21 +1237,14 @@ msgid "Enter the Details about the Crash"
 msgstr "Idatzi kraskadurari buruzko xehetasunak"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "<strong>Mesedez hornitu ondoko informazioa Ingelesez.</strong>"
+msgstr "Mesedez eman ondoko informazioa ingelesez."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Jakinarazpenaren edukiak"
+msgstr "Akats-txostenaren titulua:"
 
 #: qml/ReportPage.qml:40
 #, fuzzy
@@ -1446,11 +1276,9 @@ msgstr ""
 "the Delete key a couple of times\""
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:100
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Kraskaduraren testuari buruzko informazioa"
+msgstr "Kraskadurari buruzko informazioa:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1477,128 +1305,85 @@ msgid "Provide more information"
 msgstr "Eman informazio gehiago"
 
 #: qml/ReportPage.qml:105
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Banaketa-metodoa:"
 
 #: qml/ReportPage.qml:128
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr "KDE plataforma iturburuetatik konpilatuta dago"
+msgstr "KDE plataforma sorburuetatik konpilatuta dago"
 
 #: qml/ReportPage.qml:136
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<i>Note:</i> The crash and system information will be automatically added "
-#| "to the bug report."
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<i>Oharra</i>: Kraskadurari eta sistemari buruzko informazioa automatikoki "
-"gehituko zaizkio akats-txostenari."
+"<note>Kraskadurari eta sistemari buruzko informazioa automatikoki gehituko "
+"zaizkio akats-txostenari.</note>"
 
 #: qml/ReportPage.qml:145
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr "Aurreikusi jakinarazpena"
+msgstr "Aurreikusi txostena"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "Fitxategian &gorde..."
+msgstr "Gorde txostena fitxategian"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"Erabili botoi hau hautatutako jakinarazpenari buruzko informazioa ikusteko."
+"Erabili botoi hau kraskaduraren informazioa fitxategi batean gordetzeko, "
+"eskuz jakinarazteko."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "Huts egin du bugs.kde.org kontaktatzea: <message>%1</message>"
+msgstr "Akats-txostena bidaltzea huts egin du: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Saiatu berriz bidaltzen"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Akats txostena bidaltzen..."
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Kraskadurak jakinarazteko laguntzailea"
+msgstr "Kraskadura-txostena bidali da"
 
 #: qml/SentPage.qml:18
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "<link url='%1'>Report's webpage</link>"
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr "<link url='%1'>Jakinarazpenen webgunea</link>"
+msgstr "URLa: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
-"Bidali da kraskadurari buruzko jakinarazpena.<nl/>URLa: <link>%1</link><nl/"
-">Eskerrik asko KDE hobetzen laguntzeagatik. Orain, leiho hau itxi dezakezu."
+msgstr "Eskerrik asko KDEren zati izateagatik. Orain leiho hau itxi dezakezu."
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr "Ongi etorri kraskadurak jakinarazteko laguntzailera"
+msgstr "Ongi etorri kraskadura-txostenak egiteko laguntzailera"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
 msgstr ""
-"Kraskadurari buruzko informazioa aztertu, eta akatsak jakinarazteko "
-"prozesuan zehar lagunduko dizu laguntzaile honek."
+"Laguntzaile honek kraskaduraren informazioa analizatu eta akats-txostena "
+"aurkezteko prozesuan gidatuko zaitu."
 
 #: qml/WelcomePage.qml:32
 #, fuzzy
@@ -1627,7 +1412,7 @@ msgstr ""
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Onartzen dut nirekin harremanetan jartzea"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1713,45 +1498,44 @@ msgstr "Berrabiarazi aplikazioa"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Aztertzaile sintaktikoari pasatutako araztailearen izena"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Atzerako aztarna duen fitxategi bat."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib Test (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Akatsen jarraipena kudeatzeko liburutegirako probako aplikazioa"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "(C) 2000-2018, DrKonqi-ren egileak"
+msgstr "(C) 2009, DrKonqi2-ren garatzaileak"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org erabiltzaile-izena"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org pasahitza"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
