@@ -6,7 +6,6 @@ import gdb
 from gdb.FrameDecorator import FrameDecorator
 
 from datetime import datetime
-import distro
 import uuid
 import os
 import json
@@ -15,11 +14,11 @@ import signal
 import re
 import binascii
 import platform
-import psutil
 import multiprocessing
 from pathlib import Path
 
 if os.getenv('DRKONQI_WITH_SENTRY'):
+    # Initialize sentry reports for exceptions in this script
     try:
         import sentry_sdk
         sentry_sdk.init(
@@ -30,6 +29,18 @@ if os.getenv('DRKONQI_WITH_SENTRY'):
         )
     except ImportError:
         print("python sentry-sdk not installed :(")
+
+    try:
+        import distro
+    except ImportError:
+        print("python distro module missing, disabling sentry")
+        del os.environ['DRKONQI_WITH_SENTRY']
+
+    try:
+        import psutil
+    except ImportError:
+        print("python psutil module missing, disabling sentry")
+        del os.environ['DRKONQI_WITH_SENTRY']
 
 def mangle_path(path):
     if not path:
