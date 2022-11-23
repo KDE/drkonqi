@@ -330,7 +330,7 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
 
 void ReportInterface::sendCrashEvent()
 {
-#ifdef WITH_SENTRY
+#if WITH_SENTRY
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
         m_sentryBeacon.sendEvent();
         return;
@@ -350,7 +350,7 @@ void ReportInterface::sendCrashEvent()
 
 void ReportInterface::sendCrashComment()
 {
-#ifdef WITH_SENTRY
+#if WITH_SENTRY
     m_sentryBeacon.sendUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
                                     + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
 #endif
