@@ -127,6 +127,19 @@ used during interactive and post-mortem debugging.</para>`)
                 definition: "GDB Backtrace"
             }
 
+            function ensureVisible(r) {
+                if (flickable.contentX >= r.x) {
+                    flickable.contentX = r.x;
+                } else if (flickable.contentX + flickable.width <= r.x + r.width) {
+                    flickable.contentX = r.x + r.width - flickable.width;
+                }
+                if (flickable.contentY >= r.y) {
+                    flickable.contentY = r.y;
+                } else if (flickable.contentY + flickable.height <= r.y + r.height) {
+                    flickable.contentY = r.y + r.height - flickable.height;
+                }
+            }
+
             Connections {
                 id: generatorConnections
                 target: BacktraceGenerator
@@ -145,6 +158,12 @@ used during interactive and post-mortem debugging.</para>`)
                     // ratingItem.usefulness = usefulness
                     if (state == BacktraceGenerator.Loaded) {
                         traceArea.text = BacktraceGenerator.backtrace()
+                        // Kinda hacky. Scroll all the way down, then scroll up until the handler is visible.
+                        // This should bring the most relevant frames into the viewport.
+                        traceArea.cursorPosition = traceArea.length - 1
+                        traceArea.ensureVisible(traceArea.cursorRectangle)
+                        traceArea.cursorPosition = traceArea.text.indexOf("[KCrash Handler]")
+                        traceArea.ensureVisible(traceArea.cursorRectangle)
                         trace = traceArea.text // FIXME ensure this doesn't result in a binding
 
                         if (usefulness != BacktraceParser.ReallyUseful) {
