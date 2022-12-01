@@ -23,6 +23,5 @@ Kirigami.ScrollablePage {
             text: i18nc("@info", "Thank you for being part of KDE. You can now close this window.")
             wrapMode: Text.Wrap
         }
-        // TODO restart app button?
     }
 }
