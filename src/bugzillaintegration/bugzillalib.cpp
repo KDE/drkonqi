@@ -284,11 +284,11 @@ void BugzillaManager::attachTextToReport(const QString &text, const QString &fil
     attachment.content_type = QLatin1String("text/plain");
 
     auto job = Bugzilla::AttachmentClient().createAttachment(bugId, attachment);
-    connect(job, &KJob::finished, this, [this](KJob *job) {
+    connect(job, &KJob::finished, this, [this, bugId](KJob *job) {
         try {
-            QList<int> ids = Bugzilla::AttachmentClient().createAttachment(job);
-            Q_ASSERT(ids.size() == 1);
-            Q_EMIT attachToReportSent(ids.at(0));
+            const QList<int> attachmentIds = Bugzilla::AttachmentClient().createAttachment(job);
+            Q_ASSERT(attachmentIds.size() == 1); // NB: attachmentIds are not bug ids!
+            Q_EMIT attachToReportSent(bugId);
         } catch (Bugzilla::Exception &e) {
             qCWarning(DRKONQI_LOG) << e.whatString();
             Q_EMIT attachToReportError(e.whatString());
