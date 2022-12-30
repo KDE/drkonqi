@@ -10,16 +10,16 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:47+0000\n"
-"PO-Revision-Date: 2022-02-15 21:51+0000\n"
+"PO-Revision-Date: 2022-12-28 20:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -312,59 +312,52 @@ msgstr ""
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Oferă o privire detaliată asupra prăbușirilor anterioare"
 
 #: coredump/gui/main.cpp:37
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2000-2018, Autorii DrKonqi"
+msgstr "(C) 2020-2022, Autorii DrKonqi"
 
 #: coredump/gui/qml/DetailsPage.qml:19
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Detalii:"
+msgstr "Detalii"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copiază în clipboard"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Rulează depanatorul interactiv"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Prăbușiri"
 
 #: coredump/gui/qml/ListPage.qml:48
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Se trimite raportul de prăbușire"
+msgstr "Se încarcă rapoarte de prăbușire"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Încă nu s-a prăbușit niciun proces"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Nicio prăbușire nu se potrivește căutării"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "Terapie intensivă"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -705,8 +698,6 @@ msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Se preia backtrace-ul (informație automată despre prăbușire)"
 
 #: qml/BacktracePage.qml:26
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Arată conținutul backtrace-ului (avansat)"
@@ -714,119 +705,67 @@ msgstr "Arată conținutul backtrace-ului (avansat)"
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Următor"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgstr "bugs.kde.org nu a putut fi contactat: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgid "Retry"
 msgctxt "@action"
 msgid "Retry"
 msgstr "Reîncearcă"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
 msgstr "Se încearcă contactarea bugs.kde.org..."
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
 msgstr "Ce cunoașteți despre prăbușire?"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr ""
-"<strong>Țineți minte ce făceați înainte de prăbușirea programului?</strong>"
+msgstr "Țineți minte ce făceați înainte de prăbușirea programului?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Da"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Nu"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>Dacă repetați aceeași situație, aplicația se prăbușește din nou?</"
-"strong>"
+msgstr "Dacă repetați aceeași situație, aplicația se prăbușește din nou?"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Please select which additional information you can provide:</"
-#| "strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr ""
-"<strong>Alegeți tipul de informații suplimentare pe care le puteți oferi:</"
-"strong>"
+msgstr "Alegeți tipul de informații suplimentare pe care le puteți oferi:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Ce făceam în momentul în care aplicația \"%1\" s-a prăbușit"
+msgstr "Ce făceam când aplicația <application>%1</application> s-a prăbușit"
 
 #: qml/ContextPage.qml:65
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Unusual desktop behavior I noticed"
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Comportament ciudat al biroului observat"
 
 #: qml/ContextPage.qml:70
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Custom settings of the application that may be related"
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Configurări personalizate ale aplicației care pot avea legătură"
@@ -834,54 +773,35 @@ msgstr "Configurări personalizate ale aplicației care pot avea legătură"
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Nu e suficient de util"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
-"Informațiile pe care le puteți oferi nu sunt considerate destul de utile în "
-"acest caz."
+"<para>Informațiile pe care le puteți oferi nu sunt considerate destul de "
+"utile în acest caz. Dacă nu vă vin în minte detalii suplimentare, puteți "
+"închide dialog de raportare a defectului.</para>"
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "Informații pentru &dezvoltatori"
+msgstr "Informații pentru dezvoltatori"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "&Instalează simbolurile de depanare"
+msgstr "Instalează simboluri de depanare"
 
 #: qml/DeveloperPage.qml:54
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "&Reîncarcă"
+msgstr "Reîncarcă"
 
 #: qml/DeveloperPage.qml:56
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to reload the crash information (backtrace). This is "
-#| "useful when you have installed the proper debug symbol packages and you "
-#| "want to obtain a better backtrace."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -890,21 +810,19 @@ msgid ""
 "backtrace."
 msgstr ""
 "Folosiți acest buton pentru a reîncărca informațiile despre prăbușire "
-"(backtrace). Această acțiune este utilă după ce ați instalat pachetele cu "
-"simbolurile de depanare pentru a obține un backtrace mai bun."
+"(backtrace). Este util\n"
+"după ce ați instalat pachetele cu simboluri de depanare pentru a obține un "
+"backtrace mai bun."
 
 #: qml/DeveloperPage.qml:66
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Copy"
 msgctxt "@action:button"
 msgid "Copy"
-msgstr "&Copiază"
+msgstr "Copiază"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: qml/DeveloperPage.qml:109
 #, fuzzy
@@ -935,15 +853,6 @@ msgstr ""
 "depanării interactive și post-mortem.</p>"
 
 #: qml/DeveloperPage.qml:157
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -955,20 +864,15 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 "Puteți apăsa butonul <interface>Instalează simboluri de depanare</interface> "
-"pentru a instala automat pachetele cu informații de debug lipsă. Dacă "
-"această metodă nu funcționează: citiți <link url='%1'>Cum se creează "
-"rapoarte de prăbușire utile</link> ca să învățați cum să obțineți un "
-"backtrace folositor; instalați pachetele necesare (<link url='%2'>lista de "
-"fișiere</link>) și faceți clic pe butonul <interface>Reîncarcă</interface>."
+"pentru a instala automat pachetele cu informații de depanare lipsă. Dacă "
+"această metodă\n"
+"nu funcționează: citiți <link url='%1'>Cum se creează rapoarte de prăbușire "
+"utile</link> ca să învățați cum să\n"
+"obțineți un backtrace folositor. Instalați pachetele necesare (<link "
+"url='%2'>lista de fișiere</link>) și apăsați butonul <interface>Reîncarcă</"
+"interface>."
 
 #: qml/DeveloperPage.qml:165
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -977,44 +881,30 @@ msgid ""
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
 "Citiți <link url='%1'>Cum se creează rapoarte de prăbușire utile</link> ca "
-"să învățați cum să obțineți un backtrace folositor; instalați pachetele "
+"să învățați cum să obțineți un backtrace folositor; instalați pachetele\n"
 "necesare (<link url='%2'>lista de fișiere</link>) și apăsați butonul "
 "<interface>Reîncarcă</interface>."
 
 #: qml/DeveloperPage.qml:177
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>You need to first install the debugger application (%1) then "
-#| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<strong>Trebuie mai întâi să instalați aplicația de depanare (%1) și să "
-"faceți click pe butonul <interface>Reîncarcă</interface>.</strong>"
+"<emphasis strong='true'>Trebuie mai întâi să instalați aplicația de depanare "
+"(%1) și să apăsați butonul <interface>Reîncarcă</interface>.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
 msgid "Look for Possible Duplicate Reports"
-msgstr "Caut după posibile rapoarte duplicate"
+msgstr "Caut posibile rapoarte duplicate"
 
 #: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates..."
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "Se caută duplicate..."
+msgstr "Se caută duplicate în baza de date cu defecte..."
 
 #: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
 msgctxt "@info/rich"
 msgid ""
 "See if your bug has already been reported. Double click a report in the list "
@@ -1024,51 +914,38 @@ msgstr ""
 "Vedeți dacă defectul acesta a fost raportat deja. Faceți dublu-clic pe un "
 "raport din listă și comparați-l cu al dumneavoastră. Puteți sugera că "
 "prăbușirea actuală este un duplicat al acelui raport sau atașa informația "
-"dumneavoastră la el."
+"dumneavoastră la acesta."
 
 #: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "[Duplicate report]"
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr "[Raport duplicat]"
+msgstr "Duplicat?"
 
 #: qml/DuplicatesPage.qml:46
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "My crash may be a duplicate of this report"
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "Prăbușirea mea poate fi duplicat al acestui raport"
+msgstr ""
+"Sunteți în mare parte sigur că prăbușirea dumneavoastră e un duplicat al "
+"acestui raport de defect?"
 
 #: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr "Nu există duplicate reale"
+msgstr "Prăbușirea e un duplicat"
 
 #: qml/DuplicatesPage.qml:76
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
-"Folosiți acest buton pentru a sugera faptul că prăbușirea întâmpinată de "
-"dumneavoastră are legătură cu acest raport de defect"
+"Folosiți această acțiune când sunteți sigur că prăbușirea dumneavoastră e un "
+"duplicat al acestui raport de defect"
 
 #: qml/DuplicatesPage.qml:87
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr "Nu există duplicate reale"
+msgstr "Prăbușirea nu e duplicat"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
@@ -1076,11 +953,6 @@ msgid "Suggest this crash is related"
 msgstr "Sugerează că această prăbușire e similară"
 
 #: qml/DuplicatesPage.qml:97
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -1088,16 +960,15 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
-"Folosiți acest buton pentru a sugera faptul că prăbușirea întâmpinată de "
-"dumneavoastră are legătură cu acest raport de defect"
+"Folosiți acest buton pentru a sugera faptul că\n"
+"                                     prăbușirea întâmpinată de dumneavoastră "
+"are legătură cu\n"
+"                                     acest raport de defect"
 
 #: qml/DuplicatesPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "Sugerează că această prăbușire e similară"
+msgstr "Această prăbușire nu e similară"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -1127,14 +998,6 @@ msgstr ""
 "Salvează informațiile de autentificare folosind sistemul de portofele KDE"
 
 #: qml/LoginPage.qml:90
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1146,10 +1009,10 @@ msgid ""
 msgstr ""
 "<note>Aveți nevoie de un cont în <link url='%1'>Sistemul de urmărire a "
 "defectelor KDE</link> pentru a putea raporta un defect, deoarece este "
-"posibil să fie nevoie să vă contactăm mai târziu pentru a vă cere informații "
-"suplimentare. Dacă nu aveți un astfel de cont, puteți <link url='%2'>crea "
-"unul aici</link> liber. Nu folosiți conturi de email de unică folosință.</"
-"note>"
+"posibil să fie\n"
+"nevoie să vă contactăm mai târziu pentru a vă cere informații suplimentare. "
+"Dacă nu aveți un astfel de cont, puteți <link url='%2'>crea unul aici</link> "
+"liber. Nu folosiți conturi de poștă de unică folosință.</note>"
 
 #: qml/LoginPage.qml:103
 msgctxt "@action:button"
@@ -1166,9 +1029,6 @@ msgstr ""
 "defecțiunilor KDE folosind adresa de e-mail și parola dată."
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Raportează defect"
@@ -1179,29 +1039,16 @@ msgid "Starts the bug report assistant."
 msgstr "Pornește asistentul de raportare a defectelor."
 
 #: qml/MainPage.qml:29
-#, fuzzy
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "&Repornește aplicația"
+msgstr "Repornește aplicația"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "Informații pentru &dezvoltatori"
+msgstr "Informații pentru dezvoltatori"
 
 #: qml/MainPage.qml:63
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the automatic reporting "
-#| "process is disabled to reduce the risks of failing again.<nl /><nl /"
-#| ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
-#| "tracking system. Do not forget to include the backtrace from the "
-#| "<interface>Developer Information</interface> tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1212,20 +1059,15 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
-"<para>Pentru că Manipulatorul de erori însuși a eșuat, procesul de raportare "
-"automată este dezactivat pentru a reduce riscurile unui nou eșec.<nl /><nl /"
-"><link url='%1'>Raportați manual</link> această eroare în sistemul KDE de "
-"urmărire a defectelor. Nu uitați să includeți backtrace-ul din fila "
-"<interface>Informații pentru dezvoltatori</interface>.</para>"
+"<para>Pentru că Manipulatorul de erori însuși a eșuat,\n"
+"procesul de raportare automată este dezactivat pentru a\n"
+"reduce riscurile unui nou eșec.<nl /><nl /><link url='%1'>Raportați manual</"
+"link> această eroare în\n"
+"sistemul KDE de urmărire a defectelor. Nu uitați să includeți\n"
+"backtrace-ul din fila <interface>Informații pentru dezvoltatori</interface>."
+"</para>"
 
 #: qml/MainPage.qml:75
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />You can manually report this bug to "
-#| "%1 (including the backtrace from the <interface>Developer Information</"
-#| "interface> tab.)</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1234,20 +1076,11 @@ msgid ""
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
 "<para>Asistentul pentru raportare este dezactivat deoarece dialogul "
-"manipulatorului de erori a fost pornit în regim de siguranță.<nl />Puteți "
-"raporta manual acest defect la %1 (inclusiv backtrace-ul din fila "
-"<interface>Informații pentru dezvoltatori</interface>).</para>"
+"manipulatorului de erori a fost pornit în regim de siguranță.<nl />\n"
+"Puteți raporta manual acest defect la <link>%1</link> (inclusiv backtrace-ul "
+"din fila <interface>Informații pentru dezvoltatori</interface>).</para>"
 
 #: qml/MainPage.qml:82
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crashed application "
-#| "appears to have been updated or uninstalled since it had been started. "
-#| "This prevents accurate crash reporting and can also be the cause of this "
-#| "crash.</para><para>After updating it is always a good idea to log out and "
-#| "back in to make sure the update is fully applied and will not cause any "
-#| "side effects.</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1258,94 +1091,67 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
-"<para>Asistentul pentru raportare este dezactivat deoarece aplicația "
-"prăbușită pare să fi fost actualizată sau dezinstalată de când a fost "
-"pornită. Aceasta împiedică raportarea cu exactitate a prăbușirii și poate fi "
-"chiar cauza prăbușirii.</para><para>După actualizare, se recomandă "
-"întotdeauna să vă reautentificați pentru a vă asigura că actualizarea a fost "
-"aplicată complet și nu va cauza efecte secundare.</para>"
+"<para>Asistentul pentru raportare este dezactivat deoarece\n"
+"aplicația prăbușită pare să fi fost actualizată sau dezinstalată\n"
+"de când a fost pornită. Aceasta împiedică raportarea cu exactitate\n"
+"a prăbușirii și poate fi chiar cauza prăbușirii.</para>\n"
+"<para>După actualizare, se recomandă întotdeauna să vă reautentificați\n"
+"pentru a vă asigura că actualizarea a fost aplicată complet și nu va\n"
+"cauza efecte secundare.</para>"
 
 #: qml/MainPage.qml:108
-#, fuzzy
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#| "Time: %5 %6</para>"
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
 "<para>Executabil: <application>%1</application> PID: %2 Semnal: %3 (%4) Oră: "
-"%5 %6</para>"
+"%5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "Problema dumneavoastră a fost raportată deja ca defectul %1."
+msgstr "Problema a fost raportată deja"
 
 #: qml/PerfectDuplicatePage.qml:29
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
-"Prăbușirea semnalată a fost deja raportată ca <a href=\"%1\">Defect %1</a>, "
-"care este un duplicat al <a href=\"%1\">Defectului %2</a>, deja "
-"<strong>închis</strong>."
+"Prăbușirea semnalată a fost deja raportată ca <link url=\"%1\">Defect %1</"
+"link>, care este un duplicat al <link url=\"%1\">Defectului %2</link>, deja "
+"<emphasis strong='true'>închis</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:34
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which "
-#| "has been <strong>closed</strong>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
-"Prăbușirea semnalată a fost deja raportată ca <a href=\"%1\">Defect %1</a>, "
-"care care a fost <strong>închis</strong>."
+"Prăbușirea semnalată a fost deja raportată ca <link url=\"%1\">Defect %1</"
+"link>, care care a fost <emphasis strong='true'>închis</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:39
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>"
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
-"Prăbușirea semnalată a fost deja raportată ca <a href=\"%1\">Defect %1</a>, "
-"care este un <strong>duplicat</strong> al <a href=\"%1\">Defect %2</a>."
+"Prăbușirea semnalată a fost deja raportată ca <link url=\"%1\">Defect %1</"
+"link>, care este un <emphasis strong='true'>duplicat</emphasis> al <link url="
+"\"%1\">Defectului %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash is a <strong>duplicate</strong> and has already been reported "
-#| "as <a href=\"%1\">Bug %1</a>."
 msgctxt "@info"
 msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
-"Prăbușirea semnalată este un <strong>duplicat</strong> și a fost deja "
-"raportată ca <a href=\"%1\">Defect %1</a>."
+"Prăbușirea semnalată este un <emphasis strong='true'>duplicat</emphasis> și "
+"a fost deja raportată ca <link url=\"%1\">Defect %1</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
