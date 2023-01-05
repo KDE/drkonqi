@@ -13,6 +13,7 @@ Name[da]=Dr Konqi
 Name[de]=Dr Konqi
 Name[el]=Dr Konqi
 Name[en_GB]=Dr Konqi
+Name[eo]=Dr Konqi
 Name[es]=Dr Konqi
 Name[et]=Dr Konqi
 Name[eu]=Dr Konqi
