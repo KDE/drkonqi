@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-19 00:47+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"PO-Revision-Date: 2023-01-12 10:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -265,7 +265,7 @@ msgstr "<placeholder>请详细告诉我们程序崩溃时您正在做什么。</
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr "子进程因错误退出：%1"
+msgstr "子进程因为错误退出：%1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "显示过去程序崩溃的详细信息"
 #: coredump/gui/main.cpp:37
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2020-2022，DrKonqi 开发团队"
+msgstr "(C) 2020-2022, The DrKonqi Authors"
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -664,7 +664,7 @@ msgstr "显示回溯数据内容 (高级)"
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "下一个"
 
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
@@ -684,12 +684,12 @@ msgstr "正在尝试连接 bugs.kde.org..."
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr ""
+msgstr "您对此次崩溃的情况掌握哪些信息？"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr ""
+msgstr "您还记得在崩溃发生之前在进行什么操作吗？"
 
 #: qml/ContextPage.qml:28
 msgctxt "@action:button"
@@ -704,12 +704,12 @@ msgstr "否"
 #: qml/ContextPage.qml:39
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
+msgstr "如果您在相同的情景下重复同样的操作，程序是否再次崩溃？"
 
 #: qml/ContextPage.qml:52
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr ""
+msgstr "请选择您可以提供的额外信息："
 
 #: qml/ContextPage.qml:59
 msgctxt ""
@@ -717,7 +717,7 @@ msgctxt ""
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr ""
+msgstr "应用程序 <application>%1</application> 崩溃时我正在进行的操作"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
@@ -732,7 +732,7 @@ msgstr "可能相关的的应用程序自定义设置"
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "信息不够详细"
 
 #: qml/ContextPage.qml:80
 msgctxt "@info"
@@ -741,21 +741,23 @@ msgid ""
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
+"<para>在这种情况下，您能够提供的信息无法帮助我们确定问题的成因。 如果您回想不"
+"出更多信息，请关闭错误报告对话框。</para>"
 
 #: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr ""
+msgstr "开发者信息"
 
 #: qml/DeveloperPage.qml:33
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr ""
+msgstr "安装调试符号包"
 
 #: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
-msgstr ""
+msgstr "重新加载"
 
 #: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
@@ -765,6 +767,8 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
+"点击此按钮可重新加载崩溃信息 (回溯跟踪数据)。在安装了目标软件的调试符号包后，"
+"您可以点击此按钮来生成更有价值的回溯跟踪数据。"
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
@@ -789,6 +793,12 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
+"<subtitle>“回溯跟踪数据”是什么？</subtitle>\n"
+"<para>回溯跟踪数据大致描述了在应用程序崩溃时它的内部情况，\n"
+"开发人员可以通过这些数据分析崩溃的原因。\n"
+"虽然您可能读不懂这些数据，\n"
+"但它们或许会包含一些有用的线索。<nl />\n"
+"回溯跟踪数据通常也被用于进行交互式和崩溃后调试。</para>"
 
 #: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
@@ -801,6 +811,11 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"您可以点击<interface>安装调试符号包</interface>按钮来立即安装所需的软件包。\n"
+"如果此方法无效：请阅读<link url='%1'>如何创建有用的崩溃报告</link>，\n"
+"学习如何获得有用的回溯跟踪数据。在您安装了所需的软件包(<link url='%2'>文件列"
+"表</link>) 之后，\n"
+"请点击<interface>重新加载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
@@ -810,6 +825,9 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"请阅读<link url='%1'>如何创建有用的崩溃报告</link>，学习如何获取有用的回溯跟"
+"踪数据。在您安装了所需的软件包(<link url='%2'>文件列表</link>) 之后，请点击"
+"<interface>重新加载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
@@ -817,6 +835,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
+"</interface>按钮。</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -826,7 +846,7 @@ msgstr "查找可能的重复报告"
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr ""
+msgstr "正在搜索程序缺陷数据库中的相似报告…"
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -841,29 +861,29 @@ msgstr ""
 #: qml/DuplicatesPage.qml:45
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr ""
+msgstr "这是重复的报告吗？"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
+msgstr "您确定您的崩溃与这个程序缺陷报告的重复吗？"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr ""
+msgstr "此崩溃与该报告重复"
 
 #: qml/DuplicatesPage.qml:76
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
-msgstr ""
+msgstr "如果您确定您的崩溃与这个程序崩溃报告重复时，请使用此操作。"
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr ""
+msgstr "此崩溃与该报告不重复"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
@@ -878,11 +898,14 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
+"点击此按钮表示\n"
+"                                     您遇到的崩溃\n"
+"                                     与这个程序缺陷报告有关"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr ""
+msgstr "此崩溃与这个报告无关"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -919,6 +942,10 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
+"<note>您需要一个 <link url='%1'>KDE 程序缺陷跟踪系统</link>账户来提交错误报"
+"告，以便我们联系您了解更多具体情况。\n"
+"如果您并未注册该账户，请<link url='%2'>在此免费创建</link>。请勿使用一次性的"
+"电子邮件账户进行注册。</note>"
 
 #: qml/LoginPage.qml:103
 msgctxt "@action:button"
@@ -935,7 +962,7 @@ msgstr "点击此按钮可使用您的邮件地址和密码登录到 KDE 程序�
 #: qml/MainPage.qml:20
 msgctxt "@action"
 msgid "Report Bug"
-msgstr ""
+msgstr "报告程序缺陷"
 
 #: qml/MainPage.qml:22
 msgctxt "@info:tooltip"
@@ -945,12 +972,12 @@ msgstr "启动程序缺陷报告助手。"
 #: qml/MainPage.qml:29
 msgctxt "@action"
 msgid "Restart Application"
-msgstr ""
+msgstr "重启应用程序"
 
 #: qml/MainPage.qml:35
 msgctxt "@action"
 msgid "Developer Information"
-msgstr ""
+msgstr "开发者信息"
 
 #: qml/MainPage.qml:63
 msgctxt "@info"
@@ -963,6 +990,12 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
+"<para>由于程序崩溃处理工具本身出错，\n"
+"为了降低再次出错的风险，\n"
+"自动报告进程已被禁用。<nl/><nl/>\n"
+"请将此问题<link url='%1'>手动报告</link>到 KDE 程序缺陷追踪系统，\n"
+"并记得附上<interface>开发人员信息</interface>一栏中的\n"
+"回溯跟踪数据。</para>"
 
 #: qml/MainPage.qml:75
 msgctxt "@info"
@@ -972,6 +1005,9 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
+"<para>由于程序崩溃处理工具对话框在安全模式下启动，报告助手已被禁用。<nl />\n"
+"您可以手动发送此报告到 <link>%1</link> (请附上<interface>开发人员信息</"
+"interface>标签页中的回溯跟踪数据。)</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
@@ -984,6 +1020,12 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+"<para>由于崩溃的程序似乎在启动之后被更新或卸载，\n"
+"报告辅助程序已被禁用。\n"
+"上述情况会造成崩溃报告的内容失准，\n"
+"而且该情况本身很可能就是程序崩溃的原因。</para>\n"
+"<para>建议您在更新软件之后退出并重新登录系统，\n"
+"这将确保软件更新能得到完整应用并避免发生意外情况。</para>"
 
 #: qml/MainPage.qml:108
 msgctxt "@info Note the time information is divided into date and time parts"
@@ -991,11 +1033,13 @@ msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
+"<para>可执行程序：<application>%1</application> 进程编号：%2 信号：%3 (%4) 时"
+"间：%5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr ""
+msgstr "问题已被报告"
 
 #: qml/PerfectDuplicatePage.qml:29
 msgctxt "@info"
@@ -1004,6 +1048,9 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
+"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，\n"
+"它是<emphasis strong='true'>已关闭</emphasis>的<link url=\"%2\">Bug %2</link>"
+"的重复报告。"
 
 #: qml/PerfectDuplicatePage.qml:34
 msgctxt "@info"
@@ -1011,6 +1058,8 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
+"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它已经被<emphasis "
+"strong='true'>关闭</emphasis>。"
 
 #: qml/PerfectDuplicatePage.qml:39
 msgctxt "@info"
@@ -1019,6 +1068,8 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
+"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它是 <link url="
+"\"%2\">Bug %2</link> 的<emphasis strong='true'>重复报告</emphasis>"
 
 #: qml/PerfectDuplicatePage.qml:43
 msgctxt "@info"
@@ -1026,6 +1077,8 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
+"您遇到的崩溃存在<emphasis strong='true'>重复报告</emphasis>，它已被报告为 "
+"<link url=\"%1\">Bug %2</link>。"
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1033,16 +1086,17 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"您可以选择添加额外信息，但只在您有新信息或者被请求的信息时才应该这样做。"
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "附加额外信息"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1055,6 +1109,8 @@ msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
+"<para>这是您将要发送的报告内容的预览。</para><para>如果您还想修改它，请返回上"
+"一页。</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
@@ -1064,7 +1120,7 @@ msgstr "提交"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "正在等待数据…"
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1074,12 +1130,12 @@ msgstr "输入本次崩溃的详情"
 #: qml/ReportPage.qml:26
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr ""
+msgstr "请用英文提供下列信息。"
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr ""
+msgstr "程序缺陷报告的标题："
 
 #: qml/ReportPage.qml:40
 msgctxt "@info:tooltip examples of good bug report titles"
@@ -1094,11 +1150,20 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>良好标题示例：</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application 'X'</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:100
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr ""
+msgstr "关于崩溃的信息："
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1113,6 +1178,13 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>尽可能详细地描述崩溃发生时的情形：</subtitle>\n"
+"<list>\n"
+"<item>当崩溃发生时，您在应用程序之内、之外进行的操作的详细情况。</item>\n"
+"<item>如果您注意到系统环境或者应用程序本身当时有不正常的行为，请描述清楚</"
+"item>\n"
+"<item>如果应用程序存在非默认的配置，请描述清楚</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1132,60 +1204,60 @@ msgstr "发行方式："
 #: qml/ReportPage.qml:128
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr ""
+msgstr "KDE 软件平台是从源代码编译的"
 
 #: qml/ReportPage.qml:136
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
-msgstr ""
+msgstr "<note>注意：崩溃信息与系统信息将被自动附加到程序缺陷报告中。</note>"
 
 #: qml/ReportPage.qml:145
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr ""
+msgstr "预览报告"
 
 #: qml/SendingPage.qml:45
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr ""
+msgstr "保存报告到文件"
 
 #: qml/SendingPage.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
-msgstr ""
+msgstr "点击此按钮将崩溃信息保存到一个文件用于手动报告。"
 
 #: qml/SendingPage.qml:63
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr ""
+msgstr "发送程序缺陷报告失败：<message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "再次尝试提交"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "正在提交程序缺陷报告..."
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr ""
+msgstr "崩溃报告已发送"
 
 #: qml/SentPage.qml:18
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr ""
+msgstr "URL：<link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
+msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1209,11 +1281,15 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
+"<para><note>注意：为了有效排查程序问题，您和开发人员之间的沟通必不可少。\n"
+"继续进行程序缺陷报告意味着<emphasis strong='true'>您同意开发人员与您联系</"
+"emphasis>。</note></para>\n"
+"<para>如果您不同意此条件，请关闭本对话框。</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "我同意开发人员联系我"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1299,41 +1375,41 @@ msgstr "重新启动程序"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "调试程序名称已经传递给解析器工厂程序"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "包含回溯跟踪信息的文件。"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib 测试 (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Bugtracker Manager 程序库测试应用程序"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr ""
+msgstr "(c) 2009, DrKonqi2 Developers"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org 用户名"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org 密码"
