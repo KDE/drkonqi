@@ -46,7 +46,7 @@ QString Patient::dateTime() const
 {
     QDateTime time;
     time.setMSecsSinceEpoch(m_timestamp / 1000);
-    return time.toString();
+    return QLocale().toString(time, QLocale::LongFormat);
 }
 
 QString Patient::iconName() const
