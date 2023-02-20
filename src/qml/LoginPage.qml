@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-// SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
+// SPDX-FileCopyrightText: 2022-2023 Harald Sitter <sitter@kde.org>
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
@@ -71,11 +71,13 @@ Kirigami.ScrollablePage {
                 id: emailField
                 Kirigami.FormData.label: i18nc("@label:textbox bugzilla account email", "E-mail Address:")
                 Accessible.name: Kirigami.FormData.label
+                onAccepted: loginAction.trigger()
             }
             Kirigami.PasswordField {
                 id: passwordField
                 Kirigami.FormData.label: i18nc("@label:textbox bugzilla account password", "Password:")
                 Accessible.description: Kirigami.FormData.label
+                onAccepted: loginAction.trigger()
             }
             QQC2.CheckBox {
                 id: rememberBox
@@ -98,6 +100,7 @@ for requesting further information. If you do not have one, you can freely <link
     footer: FooterActionBar {
         actions: [
             Kirigami.Action {
+                id: loginAction
                 enabled: emailField.text.length() > 0 && passwordField.text.length() > 0
                 iconName: "network-connect"
                 text: i18nc("@action:button", "Login")
