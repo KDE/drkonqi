@@ -92,12 +92,15 @@ Kirigami.Page {
                 value: informationField.text.length
             }
         }
-        QQC2.TextArea {
-            id: informationField
+        QQC2.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            onEditingFinished: reportInterface.detailText = text
-            Accessible.name: i18nc("@info", "Information about the crash:")
+
+            QQC2.TextArea {
+                id: informationField
+                onEditingFinished: reportInterface.detailText = text
+                Accessible.name: i18nc("@info", "Information about the crash:")
+            }
         }
 
         Kirigami.Heading {
