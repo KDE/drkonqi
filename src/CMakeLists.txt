@@ -84,23 +84,23 @@ add_library(DrKonqiInternal STATIC ${drkonqi_SRCS})
 
 target_link_libraries(
     DrKonqiInternal
-    KF5::I18n
-    KF5::CoreAddons
-    KF5::ConfigGui
-    KF5::JobWidgets
-    KF5::KIOCore
-    KF5::KIOGui
-    KF5::Crash
-    KF5::Completion
-    KF5::WindowSystem
+    KF6::I18n
+    KF6::CoreAddons
+    KF6::ConfigGui
+    KF6::JobWidgets
+    KF6::KIOCore
+    KF6::KIOGui
+    KF6::Crash
+    KF6::Completion
+    KF6::WindowSystem
     Qt::DBus
     Qt::Concurrent
     Qt::Qml
-    KF5::WidgetsAddons
-    KF5::Wallet
-    KF5::Notifications # for status notifier
-    KF5::IdleTime # hide status notifier only if user saw it
-    KF5::SyntaxHighlighting # Backtrace Highlighting
+    KF6::WidgetsAddons
+    KF6::Wallet
+    KF6::Notifications # for status notifier
+    KF6::IdleTime # hide status notifier only if user saw it
+    KF6::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
     KUserFeedbackCore

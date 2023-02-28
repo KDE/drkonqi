@@ -9,7 +9,7 @@ target_compile_definitions(drkonqi-coredump-gui
 target_link_libraries(drkonqi-coredump-gui
     DrKonqiInternal
     Qt::Quick
-    KF5::I18n
+    KF6::I18n
     drkonqi-coredump
 )
 
