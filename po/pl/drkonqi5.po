@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Grzesiek11 <grzesiek.jedenastka@outlook.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2022-08-07 06:55+0200\n"
+"PO-Revision-Date: 2023-03-05 08:58+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -267,7 +267,7 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
-"Brakuje pakietów zawierających informacje diagnostyczne dla następujących "
+"Brakuje pakietów zawierających szczegóły diagnostyczne dla następujących "
 "programów i bibliotek:"
 
 #: backtracewidget.cpp:418
@@ -473,7 +473,7 @@ msgstr ""
 "<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
 "obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl />Możesz "
 "ręcznie zgłosić ten błąd do %1 (dołączając ślad wykonywania z karty "
-"<interface>Informacje dla programisty</interface>.)</para>"
+"<interface>Szczegóły dla programisty</interface>.)</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -970,7 +970,7 @@ msgstr "Logowanie do systemu obsługi błędów"
 #: qml/LoginPage.qml:67
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
 msgid "You need to login with your %1 account in order to proceed."
-msgstr "Aby kontynuować, musisz się zalogować na swoje konto w %1."
+msgstr "Aby przejść dalej musisz wejść na swoje konto w %1."
 
 #: qml/LoginPage.qml:72
 msgctxt "@label:textbox bugzilla account email"
@@ -985,7 +985,7 @@ msgstr "Hasło:"
 #: qml/LoginPage.qml:85
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
-msgstr "Zachowaj dane logowania przy użyciu systemu Portfela KDE"
+msgstr "Zachowaj te dane logowania w Portfelu KDE"
 
 #: qml/LoginPage.qml:92
 msgctxt "@info/rich"
@@ -1000,9 +1000,9 @@ msgstr ""
 "<note>Aby wysłać zgłoszenie o błędzie, musisz mieć konto użytkownika w <link "
 "url='%1'>Systemie obsługi błędów KDE</link>, ponieważ może zajść potrzeba "
 "późniejszego\n"
-"skontaktowania się z tobą w celu uzyskania dalszych informacji. Jeśli "
-"jeszcze nie posiadasz konta, możesz <link url='%2'>założyć je tutaj</link>. "
-"Nie zalecamy używania tymczasowych kont pocztowych.</note>"
+"napisania do ciebie w celu uzyskania dalszych szczegółów. Jeśli jeszcze nie "
+"posiadasz konta, możesz <link url='%2'>założyć je tutaj</link>. Nie zalecamy "
+"używania tymczasowych kont pocztowych.</note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -1015,8 +1015,8 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"Użyj tego przycisku, aby zalogować się do systemu obsługi błędów KDE przy "
-"użyciu wpisanego adresu pocztowego i hasła."
+"Użyj tego przycisku, aby wejść do systemu obsługi błędów KDE przy użyciu "
+"wpisanego adresu pocztowego i hasła."
 
 #: qml/MainPage.qml:20
 msgctxt "@action"
@@ -1194,7 +1194,7 @@ msgstr "Podaj szczegóły o usterce"
 #: qml/ReportPage.qml:26
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "Napisz te dane po angielsku."
+msgstr "Tutaj pisz tylko po angielsku."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
@@ -1319,7 +1319,7 @@ msgstr "Wysyłanie zgłoszenia..."
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Wysłano zgłoszenie usterki"
+msgstr "Zgłoszono usterkę"
 
 #: qml/SentPage.qml:18
 msgctxt "@info"
