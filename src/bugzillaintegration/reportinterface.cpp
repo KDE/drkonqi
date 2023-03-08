@@ -14,7 +14,7 @@
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>
-#include <KUserFeedback/Provider>
+#include <KUserFeedbackQt6/Provider>
 
 #include "backtracegenerator.h"
 #include "bugzillalib.h"

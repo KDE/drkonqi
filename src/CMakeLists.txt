@@ -103,7 +103,7 @@ target_link_libraries(
     KF6::SyntaxHighlighting # Backtrace Highlighting
     drkonqi_backtrace_parser
     qbugzilla
-    KUserFeedbackCore
+    KUserFeedbackCoreQt6
 )
 
 if(Systemd_FOUND)
