@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2022-06-15 21:56+0200\n"
+"PO-Revision-Date: 2023-03-08 21:08+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -46,8 +46,8 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"Bruk denne knappen for å lasta informasjonen om krasjen (tilbakeloggen) om "
-"att. Dette er nyttig når du har installert dei rette feilsøkingspakkane og "
+"Bruk denne knappen for å lasta informasjonen om krasjen (tilbake­loggen) om "
+"att. Dette er nyttig når du har installert dei rette feilsøkings­pakkane og "
 "vil ha ein betre tilbakelogg."
 
 #: backtracewidget.cpp:67
@@ -80,7 +80,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
-"Bruk denne knappen for å kopiera informasjonen om krasjen (tilbakeloggen) "
+"Bruk denne knappen for å kopiera informasjonen om krasjen (tilbake­loggen) "
 "til utklippstavla."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
@@ -90,9 +90,9 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
-"Bruk denne knappen for å lagra informasjonen om krasjen (tilbakeloggen) i ei "
-"fil. Dette er nyttig viss du vil sjå på detaljane i han, eller viss du vil "
-"melda frå om feilen seinare."
+"Bruk denne knappen for å lagra informasjonen om krasjen (ein tilbake­logg) i "
+"ei fil. Dette er nyttig viss du vil sjå på detaljane i han, eller viss du "
+"vil melda inn feilen seinare."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -138,6 +138,7 @@ msgctxt "@info:status"
 msgid "The crash information could not be fetched."
 msgstr "Klarte ikkje henta inn informasjonen om krasjen."
 
+# Desktop-fila seier at offisielt namn er «Dr Konqi», ikkje «DrKonqi».
 #: backtracewidget.cpp:196
 #, kde-kuit-format
 msgctxt "@info/rich"
@@ -147,8 +148,8 @@ msgid ""
 "debugger and click <interface>Reload</interface>."
 msgstr ""
 "Eit anna feilsøkingsprogram er sett opp for feilsøking av programmet som "
-"krasja. Difor klarar ikkje DrKonqi å henta inn ein tilbakelogg. Lukk det "
-"andre feilsøkingsprogrammet og trykk på <interface>Last om att</interface>."
+"krasja. Difor klarar ikkje Dr Konqi å henta inn ein tilbakelogg. Lukk det "
+"andre feilsøkings­programmet og trykk på <interface>Last om att</interface>."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -181,7 +182,7 @@ msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
 msgstr ""
-"Meldinga om nytta av informasjonen er ugyldig. Dette er ein feil i DrKonqi."
+"Meldinga om nytta av informasjonen er ugyldig. Dette er ein feil i Dr Konqi."
 
 #: backtracewidget.cpp:267
 #, kde-kuit-format
@@ -194,10 +195,10 @@ msgid ""
 "the needed packages (<link url='%2'>list of files</link>) and click the "
 "<interface>Reload</interface> button."
 msgstr ""
-"Du kan trykkja <interface>Installer feilsøkingssymbol</interface> for "
-"automatisk å installera dei manglande pakkane med feilsøkingssymbol. Viss "
+"Du kan trykkja <interface>Installer feilsøkings­symbol</interface> for "
+"automatisk å installera dei manglande pakkane med feilsøkings­symbol. Viss "
 "dette ikkje verkar, bør du lesa <link url='%1'>Korleis laga nyttige "
-"feilrapportar</link> for å læra korleis du lagar ein nyttig tilbakelogg. "
+"feilrapportar</link> for å læra korleis du kan få ein nyttig tilbakelogg. "
 "Installer dei nødvendige pakkane (<link url='%2'>filliste</link>), og trykk "
 "så <interface>Last om att</interface>."
 
@@ -211,9 +212,9 @@ msgid ""
 "button."
 msgstr ""
 "Du bør lesa <link url='%1'>Korleis laga nyttige feilrapportar</link> for å "
-"læra korleis du lagar ein nyttig tilbakelogg. Installer dei nødvendige "
-"pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Oppdater</"
-"interface>."
+"læra korleis du kan få ein nyttig tilbakelogg. Installer dei nødvendige "
+"pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Last om "
+"att</interface>."
 
 #: backtracewidget.cpp:301
 #, kde-format
@@ -226,7 +227,7 @@ msgstr "Feilsøkingsprogrammet vart brått avslutta."
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
-msgstr "Klarte ikkje laga informasjon om krasjen"
+msgstr "Klarte ikkje laga informasjon om krasjen."
 
 #: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
@@ -254,14 +255,14 @@ msgid ""
 "<strong>You need to first install the debugger application (%1) then click "
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
-"<strong>Du må installera feilsøkingspakken (%1) og så trykkja "
-"<interface>Oppdater</interface>.</strong>"
+"<strong>Du må installera feilsøkings­pakken (%1) og så trykkja "
+"<interface>Last om att</interface>.</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
-msgstr "Klarte ikkje installera feilsøkingssymbol"
+msgstr "Klarte ikkje installera feilsøkingssymbola"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
@@ -270,7 +271,7 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
-"Manglar pakkane med feilsøkingsinformasjon for dette programmet / desse "
+"Manglar pakkane med feilsøkings­informasjon for dette programmet / desse "
 "biblioteka:"
 
 #: backtracewidget.cpp:418
@@ -286,83 +287,85 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
-"<placeholder>Fortel oss i detaljar kva du gjorde då programmet krasja.</"
+"<placeholder>Forklar i detalj kva du gjorde då programmet krasja.</"
 "placeholder>"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Underprosess vart avslutta med feil: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Underprosess krasja. Sjå til at programmet er rett installert."
 
+# Desktop-fila seier at offisielt namn er «Dr Konqi», ikkje «DrKonqi».
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "Dr Konqis intensivavdeling"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Viser detaljert informasjon om tidlegare krasjar"
 
+# Desktop-fila seier at offisielt namn er «Dr Konqi», ikkje «DrKonqi».
 #: coredump/gui/main.cpp:37
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr ""
+msgstr "© 2000–2022 Dr Konqi-utviklarane"
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
 msgid "Details"
-msgstr ""
+msgstr "Detaljar"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopier til utklippstavla"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Køyr interaktiv feilsøkjar"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Krasjtilfelle"
 
 #: coredump/gui/qml/ListPage.qml:48
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr ""
+msgstr "Hentar inn krasjrapportar"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Ingen prosessar har krasja til no"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Finst ingen krasjtilfelle i samsvar med søket"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "Intensivavdeling"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr "Førebur installasjon av manglande pakkar med feilsøkingssymbol …"
+msgstr "Førebur installering av manglande pakkar med feilsøkingssymbol …"
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -379,7 +382,7 @@ msgstr "Manglar feilsøkingssymbol"
 #, kde-format
 msgctxt "@info"
 msgid "Could not find debug symbol packages for this application."
-msgstr "Klarte ikkje finna pakkar med feilsøkingssymbol for dette programmet."
+msgstr "Klarte ikkje finna pakkar med feilsøkings­symbol for dette programmet."
 
 #: debugpackageinstaller.cpp:98
 #, kde-format
@@ -388,13 +391,13 @@ msgid ""
 "An error was encountered during the installation of the debug symbol "
 "packages."
 msgstr ""
-"Det oppstod ein feil under installasjonen av pakkane med feilsøkingssymbol."
+"Det oppstod ein feil under installering av pakkane med feilsøkingssymbol."
 
 #: drkonqi.cpp:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
-msgstr "Rapporten er lagra i <filename>%1</filename>."
+msgstr "Rapporten vart lagra som <filename>%1</filename>."
 
 #: drkonqi.cpp:149
 #, kde-format
@@ -458,11 +461,11 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
-"<para>Krasjhandsamaren feila, og den automatiske rapporteringsprosessen vart "
-"slått av for å hindra fleire feil.<nl /><nl />Du bør <link url='%1'>melda "
-"manuelt frå om denne feilen</link> i feilsporingssystemet til KDE. Hugs å "
-"leggja ved tilbakelogg frå <interface>Utviklarinformasjon</interface>-fana.</"
-"para>"
+"<para>Krasjhandsamaren feila, og den automatiske rapporterings­prosessen "
+"vart slått av for å hindra fleire feil.<nl /><nl />Du bør <link url='"
+"%1'>melda manuelt inn denne feilen</link> i feilrapport­systemet til KDE. "
+"Hugs å leggja ved tilbakeloggen frå fana <interface>Utviklarinformasjon</"
+"interface>.</para>"
 
 #: drkonqidialog.cpp:174
 #, kde-kuit-format
@@ -473,10 +476,10 @@ msgid ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 msgstr ""
-"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, sidan krasjhandteraren "
-"vart starta i sikkermodus.<nl />Du kan rapportera denne feilen til %1 "
-"manuelt (med tilbakeloggen frå fana <interface>Utviklarinformasjon</"
-"interface>.)</para>"
+"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, sidan krasjhandsamaren "
+"vart starta i sikkermodus.<nl />Du kan melda manuelt inn denne feilen på %1. "
+"Hugs å leggja ved tilbakeloggen frå fana <interface>Utviklarinformasjon</"
+"interface>.</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -489,10 +492,10 @@ msgid ""
 "make sure the update is fully applied and will not cause any side effects.</"
 "para>"
 msgstr ""
-"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, då programmet som krasja "
+"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, då programmet som krasja, "
 "ser ut til å vera oppdatert eller avinstallert etter at det vart starta. "
-"Dette hindrar påliteleg krasjrapportering, og det kan òg vera grunnen til at "
-"programmet krasja.</para><para>Etter oppdatering av program er det lurt å "
+"Dette hindrar påliteleg krasj­rapportering, og det kan òg vera grunnen til "
+"at programmet krasja.</para><para>Etter oppdatering av program er det lurt å "
 "logga ut og inn att, for å sikra at oppdateringa er teken i bruk og ikkje "
 "vil føra til problem.</para>"
 
@@ -529,8 +532,8 @@ msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5 %6</para>"
 msgstr ""
-"<para>Programfil: <application>%1</application> Program-ID: %2 Signal: %3 "
-"(%4) Tid: %5 %6</para>"
+"<para>Programfil: <application>%1</application> Program-ID: %2 Signal: %3 ("
+"%4) Tidspunkt: %5 %6</para>"
 
 #: drkonqidialog.cpp:241
 #, kde-format
@@ -544,7 +547,7 @@ msgstr "&Feilsøk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
-msgstr "Startar eit program som feilsøkjer programmet som krasja."
+msgstr "Startar eit program for å feilsøkja programmet som krasja."
 
 #: drkonqidialog.cpp:272
 #, kde-format
@@ -561,19 +564,19 @@ msgstr "Feilsøk i %1"
 #: main.cpp:112
 #, kde-format
 msgid "The KDE Crash Handler"
-msgstr "Krasjhandterar for KDE"
+msgstr "Krasjhandsamar frå KDE"
 
 #: main.cpp:114
 #, kde-format
 msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"Krasjhandteraren i KDE gjev brukaren tilbakemelding dersom eit program har "
+"Krasjhandsamaren frå KDE gjev brukaren tilbakemelding dersom eit program har "
 "krasja."
 
 #: main.cpp:117
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "© 2000–2018 DrKonqi-utviklarane"
+msgstr "© 2000–2018 Dr Konqi-utviklarane"
 
 #: main.cpp:118
 #, kde-format
@@ -597,7 +600,7 @@ msgstr "George Kiagiadakis"
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
-msgstr "A. L. Spehr"
+msgstr "A.L. Spehr"
 
 #: main.cpp:128
 #, kde-format
@@ -639,7 +642,7 @@ msgstr "Omsett <name> på program"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
-msgstr ""
+msgstr "Produktnamn i Bugzilla"
 
 #: main.cpp:135
 #, kde-format
@@ -675,7 +678,7 @@ msgstr "Programmet er alt starta om att"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
-msgstr "Hald programmet ope og laga tilbakelogg ved oppstart"
+msgstr "Hald programmet ope og lag tilbakelogg ved oppstart"
 
 #: main.cpp:144
 #, kde-format
@@ -687,7 +690,7 @@ msgstr "<thread id>-en som feila"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
-msgstr "Ikkje vis varsling men start heller feilsøkingsvindauget direkte"
+msgstr "Ikkje vis varsling, men start heller feilsøkingsvindauget direkte"
 
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
@@ -697,57 +700,57 @@ msgstr "Hentar tilbakelogg (automatisk krasjinformasjon)"
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr ""
+msgstr "Vis innhaldet i tilbakeloggen (avansert)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr ""
+msgstr "Fekk ikkje kontakt med bugs.kde.org: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
 msgid "Retry"
-msgstr ""
+msgstr "Prøv på nytt"
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr ""
+msgstr "Prøver å kontakta bugs.kde.org …"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr ""
+msgstr "Kva veit du om krasjen?"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr ""
+msgstr "Hugsar du kva du gjorde før krasjen oppstod?"
 
 #: qml/ContextPage.qml:28
 msgctxt "@action:button"
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: qml/ContextPage.qml:33
 msgctxt "@action:button"
 msgid "No"
-msgstr ""
+msgstr "Nei"
 
 #: qml/ContextPage.qml:39
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
+msgstr "Krasjar programmet ein gong til viss du gjer det same?"
 
 #: qml/ContextPage.qml:52
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr ""
+msgstr "Vel kva for tilleggsinformasjon du kan komma med:"
 
 #: qml/ContextPage.qml:59
 msgctxt ""
@@ -755,22 +758,22 @@ msgctxt ""
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr ""
+msgstr "Kva eg gjorde då programmet <application>%1</application> krasja"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
-msgstr ""
+msgstr "Uvanleg skrivebordsåtferd eg la merke til"
 
 #: qml/ContextPage.qml:70
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr ""
+msgstr "Sjølvvalde innstillingar i programmet som kan vera innblanda"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Ikkje nyttig nok"
 
 #: qml/ContextPage.qml:80
 msgctxt "@info"
@@ -779,21 +782,24 @@ msgid ""
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
+"<para>Informasjonen du kom med, er dessverre ikkje nyttig nok i dette "
+"tilfellet. Om du ikkje kjem på noko meir du trur kan vera nyttig, kan du no "
+"lukka feilrapporterings­vindauget.</para>"
 
 #: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr ""
+msgstr "Utviklarinformasjon"
 
 #: qml/DeveloperPage.qml:33
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr ""
+msgstr "Installer feilsøkingssymbol"
 
 #: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
 msgid "Reload"
-msgstr ""
+msgstr "Last om att"
 
 #: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
@@ -803,16 +809,19 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
+"Bruk denne knappen for å lasta informasjonen om krasjen (tilbakeloggen) om "
+"att. Dette er nyttig når du har\n"
+"installert dei rette feilsøkings­pakkane og vil ha ein betre tilbakelogg."
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Lagra"
 
 #: qml/DeveloperPage.qml:109
 msgctxt "@info"
@@ -827,6 +836,12 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
+"<subtitle>Kva er ein tilbakelogg?</subtitle><para>Ein tilbakelogg inneheld "
+"informasjon om kva som skjedde i programmet når det krasja.\n"
+"Utviklarane kan bruka loggen til å finna ut kor problemet oppstod.\n"
+"Tilbake­loggen ser kanskje uforståeleg ut for deg, men kan innehalda "
+"verdifull informasjon.<nl />Tilbakeloggar vert vanlegvis brukte ved "
+"interaktiv feilsøking eller etter at eit program har krasja.</para>"
 
 #: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
@@ -839,6 +854,13 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"Du kan trykkja <interface>Installer feilsøkings­symbol</interface> for "
+"automatisk å installera dei manglande pakkane med feilsøkings­symbol. Viss "
+"dette ikkje verkar,\n"
+"bør du lesa <link url='%1'>Korleis laga nyttige feilrapportar</link> for å "
+"læra korleis du kan få ein nyttig tilbakelogg. Installer dei nødvendige "
+"pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Last om "
+"att</interface>."
 
 #: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
@@ -848,6 +870,10 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"Du bør lesa <link url='%1'>Korleis laga nyttige feilrapportar</link> for å "
+"læra korleis du kan få ein nyttig tilbakelogg. Installer dei nødvendige "
+"pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Last om "
+"att</interface>."
 
 #: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
@@ -855,6 +881,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>Du må først installera feilsøkings­pakken (%1) og så "
+"trykkja <interface>Last om att</interface>.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -864,7 +892,7 @@ msgstr "Sjå etter andre rapportar om feilen"
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr ""
+msgstr "Søkjer i feildatabasen etter duplikat …"
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -873,21 +901,26 @@ msgid ""
 "and compare it to yours. You can suggest that your crash is a duplicate of "
 "that report or directly attach your information to it."
 msgstr ""
+"Sjå om feilen allereie er meld inn. Dobbeltklikk på ein rapport i lista og "
+"samanlikn han med din. Du kan føreslå at krasjen din gjeld det same som "
+"denne rapporten eller leggja informasjonen din direkte i rapporten."
 
 #: qml/DuplicatesPage.qml:45
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr ""
+msgstr "Gjeld krasjen det same?"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr ""
+"Er du sikker på at krasjen din gjeld akkurat det same som denne "
+"feilrapporten?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr ""
+msgstr "Krasjen gjeld det same"
 
 #: qml/DuplicatesPage.qml:76
 msgctxt "@info:tooltip"
@@ -895,16 +928,18 @@ msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
+"Bruk dette når du er sikker på at krasjen din handlar om det same som "
+"feilrapporten."
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr ""
+msgstr "Krasjen gjeld noko anna"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
-msgstr "Foreslå at denne krasjen liknar"
+msgstr "Føreslå at krasjen liknar"
 
 #: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
@@ -914,11 +949,13 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
+"Trykk her å melda frå at krasjen du opplevde,\n"
+"er relevant for denne feilrapporten."
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr ""
+msgstr "Krasjen liknar ikkje"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -943,7 +980,7 @@ msgstr "Passord:"
 #: qml/LoginPage.qml:85
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
-msgstr "Lagra innloggingsinformasjonen i KWallet"
+msgstr "Lagra innloggingsinformasjonen i KDE Wallet"
 
 #: qml/LoginPage.qml:92
 msgctxt "@info/rich"
@@ -955,6 +992,11 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
+"<note>Du treng ein brukarkonto i <link url='%1'>feilrapport­systemet til "
+"KDE</link> for å kunna melda inn feilrapportar. Dette er fordi me kan måtta "
+"kontakta deg seinare for å få meir informasjon. Viss du ikkje alt har ein "
+"konto, kan du <link url='%2'>oppretta ein her</link>. Ikkje bruk ein "
+"éingongskonto for e-post.</note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -967,13 +1009,13 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"Bruk denne knappen for å logga inn på feilrapportsystemet til KDE med e-"
+"Bruk denne knappen for å logga inn på feilrapport­systemet til KDE med e-"
 "postadressa og passordet du har oppgjeve."
 
 #: qml/MainPage.qml:20
 msgctxt "@action"
 msgid "Report Bug"
-msgstr ""
+msgstr "Meld frå om feil"
 
 #: qml/MainPage.qml:22
 msgctxt "@info:tooltip"
@@ -983,12 +1025,12 @@ msgstr "Startar feilrapporteringa"
 #: qml/MainPage.qml:29
 msgctxt "@action"
 msgid "Restart Application"
-msgstr ""
+msgstr "Start programmet på nytt"
 
 #: qml/MainPage.qml:35
 msgctxt "@action"
 msgid "Developer Information"
-msgstr ""
+msgstr "Utviklarinformasjon"
 
 #: qml/MainPage.qml:63
 msgctxt "@info"
@@ -1001,6 +1043,11 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
+"<para>Krasjhandsamaren feila, og den automatiske rapporterings­prosessen\n"
+"vart slått av for å hindra fleire feil.<nl /><nl />Du bør <link url='"
+"%1'>melda manuelt inn denne feilen</link> i feilrapport­systemet til KDE. "
+"Hugs å leggja ved tilbakeloggen frå fana <interface>Utviklarinformasjon</"
+"interface>.</para>"
 
 #: qml/MainPage.qml:75
 msgctxt "@info"
@@ -1010,6 +1057,10 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
+"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, sidan krasjhandsamaren "
+"vart starta i sikkermodus.<nl />\n"
+"Du kan melda manuelt inn denne feilen på <link>%1</link>. Hugs å leggja ved "
+"tilbakeloggen frå fana <interface>Utviklarinformasjon</interface>.</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
@@ -1022,6 +1073,14 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+"<para>Feilrapportvegvisaren er ikkje tilgjengeleg, då programmet som krasja,"
+"\n"
+"ser ut til å vera oppdatert eller avinstallert etter at det vart starta.\n"
+"Dette hindrar påliteleg krasj­rapportering, og det kan òg vera grunnen til "
+"at programmet krasja.</para>\n"
+"<para>Etter oppdatering av program er det lurt å logga ut og inn att,\n"
+"for å sikra at oppdateringa er teken i bruk og ikkje vil føra til problem.</"
+"para>"
 
 #: qml/MainPage.qml:108
 msgctxt "@info Note the time information is divided into date and time parts"
@@ -1029,11 +1088,13 @@ msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
+"<para>Programfil: <application>%1</application> Program-ID: %2 Signal: %3 ("
+"%4) Tidspunkt: %5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr ""
+msgstr "Problemet er alt meldt inn"
 
 #: qml/PerfectDuplicatePage.qml:29
 msgctxt "@info"
@@ -1042,6 +1103,9 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
+"Krasjen har alt blitt meld inn som <link url=\"%1\">feilrapport %1</link>, "
+"som er eit duplikat av den <emphasis strong='true'>lukka</emphasis> <link "
+"url=\"%2\">feilrapporten %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:34
 msgctxt "@info"
@@ -1049,6 +1113,8 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
+"Krasjen har alt blitt meld inn som <link url=\"%1\">feilrapport %1</link>, "
+"som no er <emphasis strong='true'>lukka</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:39
 msgctxt "@info"
@@ -1057,6 +1123,9 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link "
 "url=\"%2\">Bug %2</link>"
 msgstr ""
+"Krasjen har alt blitt meld inn som <link url=\"%1\">feilrapport %1</link>, "
+"som er eit <emphasis strong='true'>duplikat</emphasis> av <link url=\""
+"%2\">feilrapport %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:43
 msgctxt "@info"
@@ -1064,6 +1133,8 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
+"Krasjen er eit <emphasis strong='true'>duplikat</emphasis> og er alt meld "
+"inn som <link url=\"%1\">feilrapport %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1071,16 +1142,18 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"Du kan leggja ved tilleggs­informasjon i feilrapporten, men gjer det berre "
+"om du har ny eller etterspurd informasjon."
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Lukk"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "Legg ved tilleggsinformasjon"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1093,32 +1166,37 @@ msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
+"<para>Dette er ei førehandsvising av innhaldet i feilrapporten som vert send "
+"inn.</para><para>Viss du vil endra noko i han, kan du gå tilbake til dei "
+"tidlegare sidene.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
 msgid "Submit"
-msgstr ""
+msgstr "Send inn"
 
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Ventar på data …"
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
 msgid "Enter the Details about the Crash"
-msgstr "Skriv inn detaljar om krasjet"
+msgstr "Skriv inn detaljar om krasjen"
 
 #: qml/ReportPage.qml:26
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr ""
+msgstr "Du må skriva på engelsk."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr ""
+msgstr "Tittel på feilrapporten:"
 
+# Sidan feilrapporten må vera på engelsk (jf. førre tekst), er eksempla òg på engelsk.
+# skip-rule: klammeform
 #: qml/ReportPage.qml:40
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
@@ -1132,11 +1210,20 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Eksempel på gode titlar:</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application ‘X’</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr ""
+msgstr "Informasjon om krasjen:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1151,6 +1238,14 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Skildra så detaljert du kan omstenda rundt krasjen:</subtitle>\n"
+"<list>\n"
+"<item>Skildra kva du gjorde i eller utanfor programmet rett før det krasja.</"
+"item>\n"
+"<item>Opplys om du la merke til uvanleg åtferd i programmet eller resten av "
+"systemet.</item>\n"
+"<item>Opplys om du har nokre uvanlege innstillingar i programmet.</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1165,12 +1260,12 @@ msgstr "Oppgje meir informasjon"
 #: qml/ReportPage.qml:108
 msgctxt "@info"
 msgid "Distribution method:"
-msgstr ""
+msgstr "Distribusjonsmetode:"
 
 #: qml/ReportPage.qml:131
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr ""
+msgstr "KDE-plattforma er kompilert frå kjeldekoden"
 
 #: qml/ReportPage.qml:139
 msgctxt "@info"
@@ -1178,57 +1273,61 @@ msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
+"<note>Informasjonen om krasjen og systemet vert automatisk lagd til i "
+"feilrapporten.</note>"
 
 #: qml/ReportPage.qml:148
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr ""
+msgstr "Førehandsvis rapporten"
 
 #: qml/SendingPage.qml:45
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr ""
+msgstr "Lagra rapporten til fil"
 
 #: qml/SendingPage.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
+"Bruk denne knappen for å lagra informasjon om krasjen til ei fil. Du kan så "
+"bruka fila til å melda inn feilen seinare."
 
 #: qml/SendingPage.qml:63
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr ""
+msgstr "Feil ved innsending av feilrapport: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Prøv på nytt"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Sender inn feilrapport …"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr ""
+msgstr "Krasjrapporten er no send inn"
 
 #: qml/SentPage.qml:18
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr ""
+msgstr "Adresse: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
+msgstr "Takk for at du bidreg til KDE. No kan du lukka dette vindauget."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr ""
+msgstr "Velkommen til vegvisaren for feilrapportering"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1236,6 +1335,8 @@ msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
 msgstr ""
+"Vegvisaren vil analysera informasjonen frå krasjen og hjelpa deg gjennom "
+"prosessen med feilrapportering."
 
 #: qml/WelcomePage.qml:32
 msgctxt "@info/rich note before starting the bug reporting process"
@@ -1247,11 +1348,18 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
+"<para><note>For effektiv feilsøking er det viktig med kommunikasjon mellom "
+"deg og utviklarane.\n"
+"For å senda inn denne feilrapporten <emphasis strong='true'>må du derfor "
+"samtykkja i at utviklarane kan kontakta deg med eventuelle "
+"oppfølgings­spørsmål</emphasis>.\n"
+"</note></para><para>Lukk dette vindauget dersom du ikkje samtykkjer til "
+"dette.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Eg samtykkjer i å verta kontakta"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1263,7 +1371,7 @@ msgstr "Klarte ikkje henta plattformoversikt"
 #, kde-format
 msgctxt "@item:inlistbox  user didn't tried to repeat the crash situation"
 msgid "I did not try again"
-msgstr "Eg prøvde ikkje igjen"
+msgstr "Eg prøvde ikkje fleire gongar"
 
 #: qmlextensions/reproducibilitymodel.cpp:40
 #, kde-format
@@ -1337,41 +1445,41 @@ msgstr "Start programmet på nytt"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Feilsøkjarnamnet send til fortolkar-generatoren"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Ei fil som inneheld tilbakeloggen."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib Test (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Testprogram for feilrapporthandsamarbiblioteket"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr ""
+msgstr "© 2009 DrKonqi2-utviklarane"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org-brukarnamn"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org-passord"
