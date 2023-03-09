@@ -34,7 +34,7 @@ option(WITH_SENTRY "Submit crashes to KDE's Sentry instance" ${ECM_SOURCE_UNDER_
 
 kde_enable_exceptions()
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent Quick)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent Quick)
 
 find_package(
     KF6
