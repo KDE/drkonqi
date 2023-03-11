@@ -21,7 +21,7 @@ Kirigami.ScrollablePage {
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
-    contextualActions: [
+    actions: [
         Kirigami.Action {
             enabled: state === ""
             iconName: "edit-copy"

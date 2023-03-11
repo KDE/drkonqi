@@ -27,26 +27,26 @@ Kirigami.ScrollablePage {
         console.log(state)
     }
 
-    mainAction: Kirigami.Action {
-        id: installButton
-        visible: false
-        text: i18nc("@action:button", "Install Debug Symbols")
-        onTriggered: {
-            if (debugPackageInstaller.canInstallDebugPackages) { // prefer the installer when available over dynamic resolution
-                debugPackageInstaller.installDebugPackages()
-            } else if (BacktraceGenerator.supportsSymbolResolution) {
-                traceArea.text = ""
-                BacktraceGenerator.symbolResolution = true
-                BacktraceGenerator.start()
-            } else {
-                console.warn("Unexpected install button state :O")
+    actions: [
+        Kirigami.Action {
+            id: installButton
+            visible: false
+            text: i18nc("@action:button", "Install Debug Symbols")
+            onTriggered: {
+                if (debugPackageInstaller.canInstallDebugPackages) { // prefer the installer when available over dynamic resolution
+                    debugPackageInstaller.installDebugPackages()
+                } else if (BacktraceGenerator.supportsSymbolResolution) {
+                    traceArea.text = ""
+                    BacktraceGenerator.symbolResolution = true
+                    BacktraceGenerator.start()
+                } else {
+                    console.warn("Unexpected install button state :O")
+                }
             }
-        }
-        iconName: "install"
-        tooltip: i18nc("@info:tooltip", "Use this button to install the missing debug symbols packages.")
-    }
+            iconName: "install"
+            tooltip: i18nc("@info:tooltip", "Use this button to install the missing debug symbols packages.")
+        },
 
-    contextualActions: [
         Kirigami.Action {
             id: reloadAction
             enabled: BacktraceGenerator.state !== BacktraceGenerator.Loading

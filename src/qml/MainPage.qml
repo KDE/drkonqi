@@ -13,17 +13,16 @@ Kirigami.Page {
 
     title: CrashedApplication.name
 
-    mainAction: Kirigami.Action {
-        enabled: Kirigami.Settings.isMobile ? true : canReport
-        visible: Kirigami.Settings.isMobile ? canReport : true
-        iconName: "tools-report-bug"
-        text: i18nc("@action", "Report Bug")
-        // TODO: could give context on why the button is disabled when canReport is false
-        tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
-        onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
-    }
-
-    contextualActions: [
+    actions: [
+        Kirigami.Action {
+            enabled: Kirigami.Settings.isMobile ? true : canReport
+            visible: Kirigami.Settings.isMobile ? canReport : true
+            iconName: "tools-report-bug"
+            text: i18nc("@action", "Report Bug")
+            // TODO: could give context on why the button is disabled when canReport is false
+            tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
+            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
+        },
         Kirigami.Action {
             iconName: "system-reboot"
             text: i18nc("@action", "Restart Application")

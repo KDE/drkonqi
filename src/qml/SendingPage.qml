@@ -38,7 +38,7 @@ Kirigami.Page {
         }
     }
 
-    contextualActions: [
+    actions: [
         Kirigami.Action {
             visible: page.state === "error"
             iconName: "document-save"
