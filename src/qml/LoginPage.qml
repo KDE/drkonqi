@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-// SPDX-FileCopyrightText: 2022-2023 Harald Sitter <sitter@kde.org>
+// SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
@@ -15,6 +15,7 @@ Kirigami.ScrollablePage {
     title: i18nc("@title", "Login into the bug tracking system")
 
     property bool loggedIn: false
+    readonly property bool isFormValid: emailField.text.length > 0 && passwordField.text.length > 0
 
     onLoggedInChanged: {
         console.log("logged in changed")
@@ -105,6 +106,7 @@ for requesting further information. If you do not have one, you can freely <link
                 icon.name: "network-connect"
                 text: i18nc("@action:button", "Login")
                 tooltip: xi18nc("@info:tooltip", "Use this button to login to the KDE bug tracking system using the provided e-mail address and password.")
+                enabled: page.isFormValid
                 onTriggered: {
                     bugzilla.tryLogin(emailField.text, passwordField.text)
                     page.enabled = false
