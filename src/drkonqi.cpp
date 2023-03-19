@@ -398,8 +398,10 @@ int DrKonqi::thread()
 
 bool DrKonqi::ignoreQuality()
 {
-    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") || qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
-    return ignore;
+    const bool shouldIgnoreQuality =
+        qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") && qEnvironmentVariable("DRKONQI_IGNORE_QUALITY") == QStringLiteral("1");
+    const bool isTestMode = qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
+    return isTestMode && shouldIgnoreQuality;
 }
 
 bool DrKonqi::isTestingBugzilla()
