@@ -336,7 +336,7 @@ int DrKonqi::thread()
 
 bool DrKonqi::ignoreQuality()
 {
-    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_IGNORE_QUALITY") || qEnvironmentVariableIsSet("DRKONQI_TEST_MODE");
+    static bool ignore = qEnvironmentVariableIsSet("DRKONQI_TEST_MODE") && qEnvironmentVariableIntValue("DRKONQI_IGNORE_QUALITY") == 1;
     return ignore;
 }
 
