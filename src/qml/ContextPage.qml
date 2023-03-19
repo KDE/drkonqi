@@ -11,16 +11,17 @@ import org.kde.drkonqi 1.0
 Kirigami.ScrollablePage {
     id: page
 
-    title: i18nc("@title:window", "What do You Know About the Crash?")
+    title: i18nc("@title:window", "Bug Context Information")
 
-    ColumnLayout {
-        Kirigami.Heading {
-            text: xi18nc("@info/rich", "Do you remember what you were doing prior to the crash?")
-            level: 2
-            wrapMode: Text.Wrap
-            Layout.fillWidth: true
+    readonly property bool isFormValid: rememberGroup.checkedButton !== null && reproducibilityGroup.checkedButton !== null
+
+    Kirigami.FormLayout {
+        anchors.fill: parent
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: xi18nc("@info/rich", "Do you remember what you were doing prior to the crash?")
         }
-
         QQC2.ButtonGroup {
             id: rememberGroup
         }
@@ -32,27 +33,31 @@ Kirigami.ScrollablePage {
         QQC2.RadioButton {
             text: i18nc("@action:button", "No")
             QQC2.ButtonGroup.group: rememberGroup
-            checked: true
         }
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: xi18nc("@info/rich", "Does the application crash again if you repeat the same situation?")
+        }
+        QQC2.ButtonGroup {
+            id: reproducibilityGroup
+        }
+        Repeater {
+            model: ReproducibilityModel {}
 
-        Kirigami.Heading {
-            text: xi18nc("@info/rich", "Does the application crash again if you repeat the same situation?")
-            level: 2
-            wrapMode: Text.Wrap
-            Layout.fillWidth: true
-        }
-        QQC2.ComboBox {
-            model: ReproducibilityModel{}
-            textRole: "ROLE_String"
-            valueRole: "ROLE_Integer"
-            onCurrentValueChanged: reportInterface.reproducible = currentValue
-        }
+            QQC2.RadioButton {
+                QQC2.ButtonGroup.group: reproducibilityGroup
 
-        Kirigami.Heading {
-            text: xi18nc("@info/rich", "Please select which additional information you can provide:")
-            level: 2
-            wrapMode: Text.Wrap
-            Layout.fillWidth: true
+                required property string role_String
+                required property int role_Integer
+
+                text: role_String
+
+                onCheckedChanged: reportInterface.reproducible = role_Integer
+            }
+        }
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: xi18nc("@info/rich", "Please select which additional information you can provide:")
         }
         QQC2.CheckBox {
             text: xi18nc("@option:check kind of information the user can provide about the crash, %1 is the application name",
@@ -74,18 +79,19 @@ Kirigami.ScrollablePage {
     }
 
     footer: FooterActionBar {
-        Kirigami.PromptDialog {
-            id: problemDialog
-            title: i18nc("@title", "Not Sufficiently Useful")
-            subtitle: xi18nc("@info", "<para>The information you can provide is not considered helpful enough in this case. If you can't think of any more information you can close the bug report dialog.</para>")
+        leftActions: [
+            Kirigami.Action {
+                iconName: "window-close-symbolic"
+                text: i18nc("@action:button", "Close")
+                onTriggered: appWindow.stopWizard()
+            }
+        ]
 
-            showCloseButton: true
-        }
-
-        actions: [
+        rightActions: [
             Kirigami.Action {
                 icon.name: "go-next"
                 text: i18nc("@action:button", "Next")
+                enabled: page.isFormValid
                 onTriggered: {
                     if (reportInterface.isBugAwarenessPageDataUseful || DrKonqi.ignoreQuality()) {
                         pageStack.push("qrc:/ui/BacktracePage.qml")
@@ -95,5 +101,13 @@ Kirigami.ScrollablePage {
                 }
             }
         ]
+    }
+
+    Kirigami.PromptDialog {
+        id: problemDialog
+        title: i18nc("@title", "Not Sufficiently Useful")
+        subtitle: xi18nc("@info", "<para>The information you can provide is not considered helpful enough in this case. If you can't think of any more information you can close the bug report dialog.</para>")
+
+        showCloseButton: true
     }
 }
