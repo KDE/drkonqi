@@ -32,15 +32,18 @@ to continue reporting this bug it is <emphasis strong='true'>required for you to
     }
 
     footer: FooterActionBar {
-        actions: [
+        leftActions: [
+            Kirigami.Action {
+                icon.name: "window-close-symbolic"
+                text: i18nc("@action:button", "Decline")
+                onTriggered: appWindow.stopWizard()
+            }
+        ]
+        rightActions: [
             Kirigami.Action {
                 icon.name: "document-sign"
-                text: i18nc("@action:button", "I Agree to be Contacted")
-                onTriggered: {
-                    visible = false
-                    pageStack.push("qrc:/ui/ContextPage.qml")
-                }
-                visible: true
+                text: i18nc("@action:button", "Agree")
+                onTriggered: pageStack.push("qrc:/ui/ContextPage.qml")
             }
         ]
     }
