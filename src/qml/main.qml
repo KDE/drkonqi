@@ -14,12 +14,17 @@ Kirigami.ApplicationWindow {
     property alias bugzilla: reportInterface.bugzilla
 
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
-    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton | Kirigami.ApplicationHeaderStyle.ShowForwardButton
+    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.NoNavigationButtons
 
     title: CrashedApplication.name
     minimumWidth: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     height: minimumHeight
+
+    function stopWizard() {
+        pageStack.clear()
+        pageStack.push('qrc:/ui/MainPage.qml')
+    }
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
