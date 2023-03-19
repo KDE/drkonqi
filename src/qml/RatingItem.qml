@@ -29,6 +29,9 @@ RowLayout {
     QQC2.Label {
         Layout.fillWidth: true
         wrapMode: Text.Wrap
+
+        Layout.leftMargin: Kirigami.Units.largeSpacing
+
         text: {
             const loadingMessage = i18nc("@info", "Waiting for data…")
 
