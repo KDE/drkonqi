@@ -62,7 +62,7 @@ QHash<int, QByteArray> ReproducibilityModel::roleNames() const
     for (int i = 0; i < roleEnum.keyCount(); ++i) {
         const int value = roleEnum.value(i);
         Q_ASSERT(value != -1);
-        roles[static_cast<int>(value)] = QByteArray("ROLE_") + roleEnum.valueToKey(value);
+        roles[static_cast<int>(value)] = QByteArray("role_") + roleEnum.valueToKey(value);
     }
     return roles;
 }
