@@ -19,21 +19,14 @@ Kirigami.ScrollablePage {
             text: xi18nc("@info/rich", `This assistant will analyze the crash information and guide you through the bug reporting process.`)
             wrapMode: Text.Wrap
         }
-        RowLayout {
-            Kirigami.Icon {
-                implicitWidth: Kirigami.Units.iconSizes.large
-                implicitHeight: implicitWidth
-                source: "dialog-warning"
-            }
-
-            QQC2.Label {
-                Layout.fillWidth: true
-                text: xi18nc("@info/rich note before starting the bug reporting process",
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            visible: true
+            text: xi18nc("@info/rich note before starting the bug reporting process",
 `<para><note>Since communication between you and the developers is required for effective debugging,
 to continue reporting this bug it is <emphasis strong='true'>required for you to agree that developers may contact you</emphasis>.
 </note></para><para>Feel free to close this dialog if you do not accept this.</para>`)
-                wrapMode: Text.Wrap
-            }
         }
         // FIXME: maybe even disable i18n for the rest of the dialog seeing as one must be proficient enough in english
     }
