@@ -15,8 +15,9 @@ Kirigami.ScrollablePage {
     property string trace: ""
     property bool basic: false
     property alias usefulness: ratingItem.usefulness
-    property alias footerActionsLeft: footerBarLeft.actions
-    property alias footerActionsRight: footerBarRight.actions
+    property alias footerActionsLeft: footerBar.leftActions
+    property alias footerActionsRight: footerBar.rightActions
+    property bool traceAvailable: false
 
     padding: 0
     bottomPadding: 0
@@ -86,96 +87,103 @@ installed the proper debug symbol packages and you want to obtain a better backt
         }
     }
 
-    ColumnLayout {
+    StackLayout {
+        anchors.fill: parent
+
         DebugPackageInstaller { // not in global scope because it messes up scrollbars
             id: debugPackageInstaller
             onPackagesInstalled: reloadAction.trigger()
             onError: appWindow.showPassiveNotification(i18nc("@title:window", "Error during the installation of debug symbols"), "long")
         }
 
-        RowLayout {
-            visible: page.basic
-            Layout.fillHeight: true
-            Kirigami.Icon {
-                source: "help-hint"
-                width: Kirigami.Units.iconSizes.enormous
-                height: width
-            }
-            QQC2.Label {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                wrapMode: Text.Wrap
+        currentIndex: !page.basic
+
+        Item {
+            Kirigami.InlineMessage {
+                anchors.left: parent.left
+                anchors.right: parent.right
+
+                visible: page.traceAvailable
+
                 text: xi18nc("@info",
-`<subtitle>What is a "backtrace" ?</subtitle><para>A backtrace basically describes what was
-happening inside the application when it crashed, so the developers may track
-down where the mess started. They may look meaningless to you, but they might
-actually contain a wealth of useful information.<nl />Backtraces are commonly
-used during interactive and post-mortem debugging.</para>`)
+                    `<subtitle>What is a "backtrace" ?</subtitle><para>A backtrace basically describes what was
+                    happening inside the application when it crashed, so the developers may track
+                    down where the mess started. They may look meaningless to you, but they might
+                    actually contain a wealth of useful information.<nl />Backtraces are commonly
+                    used during interactive and post-mortem debugging.</para>`)
+            }
+            Kirigami.PlaceholderMessage {
+                anchors.fill: parent
+                text: "Retrieving backtrace information…"
+                visible: !page.traceAvailable
             }
         }
-        QQC2.TextArea {
-            id: traceArea
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            visible: text !== "" && !page.basic
 
-            // text: output.text
-            font.family: "monospace"
-            wrapMode: Text.Wrap
-            textFormat: TextEdit.PlainText
-            readOnly: true
-            selectByMouse: Kirigami.Settings.isMobile ? false : true
+        Item {
+            QQC2.TextArea {
+                id: traceArea
+                anchors.fill: parent
+                visible: text !== ""
 
-            SyntaxHighlighter {
-                textEdit:  BacktraceGenerator.debuggerIsGDB() ? traceArea : undefined
-                definition: "GDB Backtrace"
-            }
+                // text: output.text
+                font.family: "monospace"
+                wrapMode: Text.Wrap
+                textFormat: TextEdit.PlainText
+                readOnly: true
+                selectByMouse: Kirigami.Settings.isMobile ? false : true
 
-            Connections {
-                id: generatorConnections
-                target: BacktraceGenerator
-                function onNewLine(line) { traceArea.text += line }
-                function onStateChanged() {
-                    console.log(BacktraceGenerator.state)
-                    console.log(BacktraceGenerator.Loaded)
+                SyntaxHighlighter {
+                    textEdit:  BacktraceGenerator.debuggerIsGDB() ? traceArea : undefined
+                    definition: "GDB Backtrace"
+                }
 
-                    const state = BacktraceGenerator.state
-                    page.state = state
+                Connections {
+                    id: generatorConnections
+                    target: BacktraceGenerator
+                    function onNewLine(line) { traceArea.text += line }
+                    function onStateChanged() {
+                        console.log(BacktraceGenerator.state)
+                        console.log(BacktraceGenerator.Loaded)
 
-                    installButton.visible = false
+                        const state = BacktraceGenerator.state
+                        page.state = state
 
-                    const parser = BacktraceGenerator.parser();
-                    usefulness = parser.backtraceUsefulness()
-                    // ratingItem.usefulness = usefulness
-                    if (state == BacktraceGenerator.Loaded) {
-                        traceArea.text = BacktraceGenerator.backtrace()
-                        trace = traceArea.text // FIXME ensure this doesn't result in a binding
+                        installButton.visible = false
 
-                        if (usefulness != BacktraceParser.ReallyUseful) {
-                            if (debugPackageInstaller.canInstallDebugPackages || BacktraceGenerator.supportsSymbolResolution) {
-                                detailsLabel.text = xi18nc("@info/rich",
-`You can click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
-does not work: please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
-backtrace; install the needed packages (<link url='%2'> list of files</link>) and click the <interface>Reload</interface> button.`,
-                                                            Globals.techbaseHowtoDoc, '#missingDebugPackages')
-                                installButton.visible = true
-                                debugPackageInstaller.setMissingLibraries(parser.librariesWithMissingDebugSymbols())
-                            } else {
-                                detailsLabel.text = xi18nc("@info/rich",
-`Please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace; install the needed packages (<link url='%2'>
-list of files</link>) and click the <interface>Reload</interface> button.`,
-                                                            Globals.techbaseHowtoDoc, '#missingDebugPackages')
+                        const parser = BacktraceGenerator.parser();
+                        usefulness = parser.backtraceUsefulness()
+                        // ratingItem.usefulness = usefulness
+                        if (state == BacktraceGenerator.Loaded) {
+                            traceArea.text = BacktraceGenerator.backtrace()
+                            trace = traceArea.text // FIXME ensure this doesn't result in a binding
+                            traceAvailable = true
+
+                            if (usefulness != BacktraceParser.ReallyUseful) {
+                                if (debugPackageInstaller.canInstallDebugPackages || BacktraceGenerator.supportsSymbolResolution) {
+                                    detailsLabel.text = xi18nc("@info/rich",
+    `You can click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
+    does not work: please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
+    backtrace; install the needed packages (<link url='%2'> list of files</link>) and click the <interface>Reload</interface> button.`,
+                                                                Globals.techbaseHowtoDoc, '#missingDebugPackages')
+                                    installButton.visible = true
+                                    debugPackageInstaller.setMissingLibraries(parser.librariesWithMissingDebugSymbols())
+                                } else {
+                                    detailsLabel.text = xi18nc("@info/rich",
+    `Please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace; install the needed packages (<link url='%2'>
+    list of files</link>) and click the <interface>Reload</interface> button.`,
+                                                                Globals.techbaseHowtoDoc, '#missingDebugPackages')
+                                }
                             }
+                        } else if (state == BacktraceGenerator.Failed) {
+                            traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
+                            detailsLabel.text = xi18nc("@info/rich", `You could try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
+                        } else if (state == BacktraceGenerator.FailedToStart) {
+                            // FIXME dupe from failed
+                            traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
+                            detailsLabel.text = xi18nc("@info/rich",
+    `<emphasis strong='true'>You need to first install the debugger application (%1) then click the <interface>Reload</interface> button.</emphasis>`,
+                                                       BacktraceGenerator.debuggerName())
                         }
-                    } else if (state == BacktraceGenerator.Failed) {
-                        traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
-                        detailsLabel.text = xi18nc("@info/rich", `You could try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
-                    } else if (state == BacktraceGenerator.FailedToStart) {
-                        // FIXME dupe from failed
-                        traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
-                        detailsLabel.text = xi18nc("@info/rich",
-`<emphasis strong='true'>You need to first install the debugger application (%1) then click the <interface>Reload</interface> button.</emphasis>`,
-                                                   BacktraceGenerator.debuggerName())
                     }
                 }
             }
@@ -221,20 +229,9 @@ list of files</link>) and click the <interface>Reload</interface> button.`,
                 textFormat: Text.RichText
             }
         }
-        RowLayout {
-            // Two bars because of https://bugs.kde.org/show_bug.cgi?id=451026
-            // Awkard though, maybe we should just live with everything being right aligned
-            FooterActionBar {
-                padding: 0
-                id: footerBarLeft
-                alignment: Qt.AlignLeft
-                visible: actions.length > 0
-            }
-            FooterActionBar {
-                padding: 0
-                id: footerBarRight
-                visible: actions.length > 0
-            }
+        FooterActionBar {
+            id: footerBar
+            visible: actions.length > 0
         }
     }
 
