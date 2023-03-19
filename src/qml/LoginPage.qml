@@ -54,20 +54,19 @@ Kirigami.ScrollablePage {
             Component.onCompleted: load()
         }
 
-       Kirigami.InlineMessage {
+        Kirigami.InlineMessage {
             id: inlineMessage
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             visible: text !== ""
         }
 
-        QQC2.Label {
-            Layout.fillWidth: true
-            wrapMode: Text.Wrap
-            text: i18nc("@info:status '1' is replaced with the short URL of the bugzilla ",
-                        "You need to login with your %1 account in order to proceed.", Globals.bugzillaShortUrl);
-        }
         Kirigami.FormLayout {
+            QQC2.Label {
+                wrapMode: Text.Wrap
+                text: i18nc("@info:status '1' is replaced with the short URL of the bugzilla ",
+                            "You need to login with your %1 account in order to proceed.", Globals.bugzillaShortUrl);
+            }
             QQC2.TextField {
                 id: emailField
                 Kirigami.FormData.label: i18nc("@label:textbox bugzilla account email", "E-mail Address:")
@@ -86,15 +85,13 @@ Kirigami.ScrollablePage {
                 text: i18nc("@option:check", "Save login information using the KDE Wallet system")
             }
         }
-        QQC2.Label {
+        Kirigami.InlineMessage {
             Layout.fillWidth: true
-            wrapMode: Text.Wrap
             text: xi18nc("@info/rich",
 `<note>You need a user account on the <link url='%1'>KDE bug tracking system</link> in order to file a bug report, because we may need to contact you later
 for requesting further information. If you do not have one, you can freely <link url='%2'>create one here</link>. Please do not use disposable email accounts.</note>`,
                                     CrashedApplication.bugReportAddress,
                                     Globals.bugzillaCreateAccountUrl)
-            onLinkActivated: Qt.openUrlExternally(link)
         }
     }
 
