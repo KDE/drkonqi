@@ -13,13 +13,13 @@ Kirigami.ScrollablePage {
     id: page
     title: i18nc("@title", "Crashes")
 
-    header: QQC2.ToolBar {
-        visible: page.state !== "loading" && page.state !== "noData"
-        Kirigami.Theme.colorSet: Kirigami.Theme.Window
-        contentItem: Kirigami.SearchField {
-            onAccepted: patientFilterModel.filterString = text
+    actions: [
+        Kirigami.Action {
+            displayComponent: Kirigami.SearchField {
+                onAccepted: patientFilterModel.filterString = text
+            }
         }
-    }
+    ]
 
     ListView {
         id: view
