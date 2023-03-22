@@ -11,7 +11,7 @@ import org.kde.drkonqi.coredump.gui 1.0 as DrKonqi
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18nc("@title:window", "Intensive Care")
+    title: i18nc("@title:window", "Overview")
     minimumWidth: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
 

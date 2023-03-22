@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("tools-report-bug"), app.windowIcon()));
 
     KAboutData aboutData(QStringLiteral("drkonqi"),
-                         i18nc("@title CLI title", "DrKonqi Intensive Care"),
+                         i18nc("@title CLI title", "Crashed Processes Viewer"),
                          QString::fromLatin1(PROJECT_VERSION),
                          i18nc("@info program description", "Offers detailed view of past crashes"),
                          KAboutLicense::GPL,

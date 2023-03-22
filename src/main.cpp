@@ -109,9 +109,9 @@ int main(int argc, char *argv[])
     unsetenv("SESSION_MANAGER");
 
     KAboutData aboutData(QStringLiteral("drkonqi"),
-                         i18n("The KDE Crash Handler"),
+                         i18n("Crash Handler"),
                          QString::fromLatin1(version),
-                         i18n("The KDE Crash Handler gives the user feedback "
+                         i18n("Crash Handler gives the user feedback "
                               "if a program has crashed."),
                          KAboutLicense::GPL,
                          i18n("(C) 2000-2018, The DrKonqi Authors"));
