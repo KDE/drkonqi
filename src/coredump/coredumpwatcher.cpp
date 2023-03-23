@@ -18,7 +18,7 @@
 
 static std::optional<Coredump> makeDump(sd_journal *context)
 {
-    auto cursorExpected = contextual_owning_ptr_call<char>(sd_journal_get_cursor, context);
+    auto cursorExpected = contextual_owning_ptr_call<char>(sd_journal_get_cursor, context, std::free);
     if (cursorExpected.ret != 0) {
         qFatal("Failed to get entry cursor");
         return std::nullopt;
