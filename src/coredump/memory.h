@@ -19,17 +19,17 @@ struct default_delete<sd_journal> {
 };
 } // namespace std
 
-template<typename T>
+template<typename T, typename Deleter>
 struct Expected {
     const int ret; // return value of call
     const int error; // errno immediately after the call
-    std::unique_ptr<T> value; // the newly owned object (may be null)
+    std::unique_ptr<T, Deleter> value; // the newly owned object (may be null)
 };
 
 // Wrapper around C double pointer API of which we must take ownership.
 // errno may or may not be
 template<typename T, typename Func, typename... Args>
-Expected<T> owning_ptr_call(Func func, Args &&...args)
+Expected<T, std::default_delete<T>> owning_ptr_call(Func func, Args &&...args)
 {
     T *raw = nullptr;
     const int ret = func(&raw, std::forward<Args>(args)...);
@@ -37,10 +37,10 @@ Expected<T> owning_ptr_call(Func func, Args &&...args)
 }
 
 // Same as owning_ptr_call but for (sd_journal *, foo **, ...) API
-template<typename T, typename Func, typename... Args>
-Expected<T> contextual_owning_ptr_call(Func func, sd_journal *context, Args &&...args)
+template<typename T, typename Deleter, typename Func, typename... Args>
+Expected<T, Deleter> contextual_owning_ptr_call(Func func, sd_journal *context, Deleter deleter = std::default_delete<T>{}, Args &&...args)
 {
     T *raw = nullptr;
     const int ret = func(context, &raw, std::forward<Args>(args)...);
-    return {ret, errno, std::unique_ptr<T>(raw)};
+    return {ret, errno, std::unique_ptr<T, Deleter>(raw, deleter)};
 }
