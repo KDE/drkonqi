@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2007-10-28 14:19+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -260,7 +260,7 @@ msgstr ""
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -313,9 +313,11 @@ msgid "No crashes matching the search"
 msgstr ""
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr ""
+msgid "Overview"
+msgstr "&Перазапісаць"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -501,14 +503,15 @@ msgid "Debug in %1"
 msgstr ""
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Апрацоўшчык збоеў KDE"
 
 #: main.cpp:114
 #, fuzzy, kde-format
 #| msgid "KDE crash handler gives the user feedback if a program crashed"
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Аналізатар збояў KDE дае карыстальніку магчымасць высветліць прычыны збояў у "
 "працы праграм"
@@ -1438,9 +1441,6 @@ msgstr ""
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Перазапісаць файл?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Перазапісаць"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "Немагчыма стварыць ужывальны backtrace."

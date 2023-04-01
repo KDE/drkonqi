@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-08-07 06:55+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -301,8 +301,8 @@ msgstr "Wysypał się podproces. Sprawdź swoją instalację."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "Opieka DrKonqi"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -352,8 +352,8 @@ msgstr "Nie ma żadnych usterek pod szukanym słowem"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Opieka"
+msgid "Overview"
+msgstr ""
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -557,13 +557,16 @@ msgid "Debug in %1"
 msgstr "Diagnozowanie w %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Obsługa usterek KDE"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Obsługa usterek KDE umożliwia przekazanie autorom programu szczegółów o "
 "usterce."
@@ -1487,6 +1490,14 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "Opieka DrKonqi"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Opieka"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"

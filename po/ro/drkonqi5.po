@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-12-28 20:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -305,7 +305,7 @@ msgstr ""
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -355,9 +355,11 @@ msgid "No crashes matching the search"
 msgstr "Nicio prăbușire nu se potrivește căutării"
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Terapie intensivă"
+msgid "Overview"
+msgstr "&Suprascrie"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -562,13 +564,16 @@ msgid "Debug in %1"
 msgstr "Depanează în %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Manipulatorul de erori KDE"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Manipulatorul de erori KDE informează utilizatorul la prăbușirea unui "
 "program."
@@ -1568,6 +1573,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Terapie intensivă"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3319,9 +3328,6 @@ msgstr ""
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Suprascrieți fișierul?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Suprascrie"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "Imposibil de creat un backtrace valid."

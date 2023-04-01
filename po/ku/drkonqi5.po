@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2008-12-24 18:54+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -260,7 +260,7 @@ msgstr ""
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -312,9 +312,11 @@ msgid "No crashes matching the search"
 msgstr ""
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr ""
+msgid "Overview"
+msgstr "&Sernivîsandin"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -499,14 +501,15 @@ msgid "Debug in %1"
 msgstr ""
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Pergala Agahiyên Têkçûnê a KDE'ê"
 
 #: main.cpp:114
 #, fuzzy, kde-format
 #| msgid "KDE crash handler gives the user feedback if a program crashed"
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Pergala agahiyên têkçûnê a KDE'ê, dema ku bernameyek têk çû, agahiyan dide "
 "bikarhêner"
@@ -1454,9 +1457,6 @@ msgstr ""
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Li Ser Pelî Binivîse?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Sernivîsandin"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "Dîtineke paşde nayê afiradin"

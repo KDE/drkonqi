@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-08-05 22:27+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -299,8 +299,8 @@ msgstr "Subproces gecrasht. Controleer uw installatie."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -350,8 +350,8 @@ msgstr "Geen crashes komen overeen met de zoekopdracht"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Intensive Care"
+msgid "Overview"
+msgstr ""
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -553,13 +553,16 @@ msgid "Debug in %1"
 msgstr "Debug in %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "KDE DRKonqi"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "De KDE crash-behandelaar voorziet de gebruiker van informatie als een "
 "programma onverwacht beëindigd wordt."
@@ -1488,6 +1491,14 @@ msgstr "bugstest.kde.org gebruikersnaam"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org wachtwoord"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "DrKonqi Intensive Care"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Intensive Care"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"

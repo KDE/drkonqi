@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2023-02-13 15:21+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -297,7 +297,7 @@ msgstr "Podproces spadl. Zkontrolujte instalaci."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -348,8 +348,8 @@ msgstr "Vašemu hledání neodpovídá žádný pád"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Intenzita Péče"
+msgid "Overview"
+msgstr ""
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -548,13 +548,16 @@ msgid "Debug in %1"
 msgstr "Ladění v %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Obsluha pádu aplikací pro KDE"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "Obsluha pádu KDE aplikací dává uživateli informace při pádu programu."
 
 #: main.cpp:117
@@ -1453,3 +1456,7 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Intenzita Péče"

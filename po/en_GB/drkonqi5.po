@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-08-07 10:51+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -298,8 +298,8 @@ msgstr "Subprocess crashed. Check your installation."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -348,9 +348,11 @@ msgid "No crashes matching the search"
 msgstr "No crashes matching the search"
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Intensive Care"
+msgid "Overview"
+msgstr "&Overwrite"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -552,13 +554,16 @@ msgid "Debug in %1"
 msgstr "Debug in %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "The KDE Crash Handler"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "The KDE Crash Handler gives the user feedback if a program has crashed."
 
@@ -1475,6 +1480,14 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "DrKonqi Intensive Care"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Intensive Care"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3531,9 +3544,6 @@ msgstr "bugstest.kde.org password"
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Overwrite File?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Overwrite"
 
 #~ msgid "Cannot open file <filename>%1</filename> for writing."
 #~ msgstr "Cannot open file <filename>%1</filename> for writing."

@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-09-05 11:07+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -319,8 +319,8 @@ msgstr "Сбой подпроцесса. Проверьте, правильно 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "Интенсивная терапия DrKonqi"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -369,9 +369,11 @@ msgid "No crashes matching the search"
 msgstr "Нет сбоев, соответствующих критериям поиска"
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Интенсивная терапия"
+msgid "Overview"
+msgstr "&Заменить"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -576,13 +578,16 @@ msgid "Debug in %1"
 msgstr "Отладка в %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Обработчик ошибок KDE"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Обработчик ошибок KDE даёт пользователю возможность узнать причины сбоев в "
 "работе программ."
@@ -1513,6 +1518,14 @@ msgstr "Имя пользователя bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Пароль bugstest.kde.org"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "Интенсивная терапия DrKonqi"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Интенсивная терапия"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3242,9 +3255,6 @@ msgstr "Пароль bugstest.kde.org"
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Заменить файл?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Заменить"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "Невозможно создать протокол сбоя."

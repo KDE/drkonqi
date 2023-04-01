@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -259,7 +259,7 @@ msgstr ""
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -311,9 +311,11 @@ msgid "No crashes matching the search"
 msgstr ""
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr ""
+msgid "Overview"
+msgstr "(&O) తిరిగివ్రాయుము"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -498,14 +500,15 @@ msgid "Debug in %1"
 msgstr ""
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "కెడిఈ క్రాష్ సంభాలిక"
 
 #: main.cpp:114
 #, fuzzy, kde-format
 #| msgid "KDE crash handler gives the user feedback if a program crashed"
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "ఒకవేళ కార్యక్రమం క్రాష్ అయితే కెడిఈ క్రాష్ సంభాలిక వినియోగదారి ఫీడ్‌ బ్యాక్ ఇస్తుంది"
 
 #: main.cpp:117
@@ -1428,9 +1431,6 @@ msgstr ""
 
 #~ msgid "Overwrite File?"
 #~ msgstr "ఫైల్ తిరిగివ్రాయాలా?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "(&O) తిరిగివ్రాయుము"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "సరైన బ్యాక్‌ ట్రేస్‌ను సృష్టించలేకపోయింది"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -303,7 +303,7 @@ msgstr ""
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
+msgid "Crashed Processes Viewer"
 msgstr ""
 
 #: coredump/gui/main.cpp:35
@@ -360,9 +360,11 @@ msgid "No crashes matching the search"
 msgstr ""
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr ""
+msgid "Overview"
+msgstr "&Overskriv"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -563,13 +565,16 @@ msgid "Debug in %1"
 msgstr "Fejlsøgning med %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "KDE sammenbrudsbehandler"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "KDE sammenbrudsbehandler giver brugeren feedback, hvis et program bryder "
 "sammen."
@@ -3631,9 +3636,6 @@ msgstr ""
 
 #~ msgid "Overwrite File?"
 #~ msgstr "Overskriv fil?"
-
-#~ msgid "&Overwrite"
-#~ msgstr "&Overskriv"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "Kan ikke lave et gyldigt backtrace."

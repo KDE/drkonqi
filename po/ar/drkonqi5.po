@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-08-16 20:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -300,8 +300,8 @@ msgstr "العملية الفرعية انهارت. تأكد من تثبيتك."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "وحدة عناية DrKonqi"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -350,9 +350,11 @@ msgid "No crashes matching the search"
 msgstr "لا يوجد انهيار متطابق مع البحث"
 
 #: coredump/gui/qml/main.qml:14
+#, fuzzy
+#| msgid "&Overwrite"
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "وحدة العناية المركزة"
+msgid "Overview"
+msgstr "ا&كتب عليه"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -547,13 +549,16 @@ msgid "Debug in %1"
 msgstr "نقح في %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "مداول انهيار كِيدِي"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "يعطي معالج انهيار كِيدِي تعليقات وبيانات المستخدم إذا انهار برنامج"
 
 #: main.cpp:117
@@ -1445,6 +1450,14 @@ msgstr "اسم مستخدم bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "كلمة سر bugstest.kde.org"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "وحدة عناية DrKonqi"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "وحدة العناية المركزة"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3024,9 +3037,6 @@ msgstr "كلمة سر bugstest.kde.org"
 
 #~ msgid "Overwrite File?"
 #~ msgstr "أأكتب على الملف؟"
-
-#~ msgid "&Overwrite"
-#~ msgstr "ا&كتب عليه"
 
 #~ msgid "Unable to create a valid backtrace."
 #~ msgstr "تعذر إنشاء متتبع خلفي صالح."

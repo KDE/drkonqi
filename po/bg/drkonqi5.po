@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1647254 2023-03-18 02:47:55Z scripty $
+# $Id: drkonqi5.po 1648509 2023-04-01 02:24:23Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-08-10 13:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -310,8 +310,8 @@ msgstr "Подпроцесът се срина. Проверете инстал�
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "Интензивно лечение DrKonqi"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -361,8 +361,8 @@ msgstr "Няма сривове отговарящи на търсенето"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Интензивно лечение"
+msgid "Overview"
+msgstr ""
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -569,13 +569,16 @@ msgid "Debug in %1"
 msgstr "Отстраняване на грешки в %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "Програма за следене на грешки"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Програмата за описание на грешки събира данни и описание от потребителя при "
 "срив."
@@ -1510,3 +1513,11 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "Интензивно лечение DrKonqi"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Интензивно лечение"

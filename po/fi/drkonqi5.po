@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 02:34+0000\n"
+"POT-Creation-Date: 2023-04-01 02:10+0000\n"
 "PO-Revision-Date: 2022-10-17 22:11+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -315,8 +315,8 @@ msgstr "Aliprosessi kaatui. Tarkista asennus."
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
-msgid "DrKonqi Intensive Care"
-msgstr "DrKonqin teho-osasto"
+msgid "Crashed Processes Viewer"
+msgstr ""
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -366,8 +366,8 @@ msgstr "Ei hakua vastaavia kaatumisia"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
-msgid "Intensive Care"
-msgstr "Teho-osasto"
+msgid "Overview"
+msgstr ""
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -566,13 +566,16 @@ msgid "Debug in %1"
 msgstr "Paikanna virhe ohjelmalla %1"
 
 #: main.cpp:112
-#, kde-format
-msgid "The KDE Crash Handler"
+#, fuzzy, kde-format
+#| msgid "The KDE Crash Handler"
+msgid "Crash Handler"
 msgstr "KDE:n kaatumistenkäsittelijä"
 
 #: main.cpp:114
-#, kde-format
-msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, fuzzy, kde-format
+#| msgid ""
+#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "KDE:n kaatumistenkäsittelijä opastaa käyttäjää, jos sovellus kaatuu."
 
 #: main.cpp:117
@@ -1485,6 +1488,14 @@ msgstr "bugstest.kde.org-käyttäjätunnus"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-salasana"
+
+#~ msgctxt "@title CLI title"
+#~ msgid "DrKonqi Intensive Care"
+#~ msgstr "DrKonqin teho-osasto"
+
+#~ msgctxt "@title:window"
+#~ msgid "Intensive Care"
+#~ msgstr "Teho-osasto"
 
 # Suomentamisessa sanavalinnalle voi olla monia perusteita. Esimerkkisi Help-sanan suomennos "Ohje" koetaan säännöksen tai määräyksen kaltaiseksi ehkä negatiivisiä mielleyhtymiä herättäväksi sanaksi ja siksi "Opaste" on vakiintumassa suomennokseksi. Toisaalta esimerkiksi ATK-sanakirjan debugger-sanan suositus "perkain" tuntuu liian vieraalta yleiskieleen. Muissa lähteissä debug-sana suomennetaan "jäljittää ohjelmointivirheitä", mutta samassa lähteessä debugger voi olla "vianjäljitysohjelma". Koska open source-koodeissa kerrotaan yleisesti: Ilmoita viasta (englanniksi) osoitteeseen xxx, niin olen tässä suomennoksessa puhunut järjestelmällisesti vianjäljittämisestä. Samanlailla report-sanan suomennos "raportti" saattaa muodostua vikailmoittamisen kynnykseksi, joten raportin sijasta puhun vain ilmoituksesta eli vikailmoituksesta.
 #~ msgctxt "@title title of the dialog"
