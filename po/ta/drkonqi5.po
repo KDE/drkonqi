@@ -5,13 +5,13 @@
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000.
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# Kishore G <kishore96@gmail.com>, 2022.
+# Kishore G <kishore96@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-01 02:10+0000\n"
-"PO-Revision-Date: 2022-08-07 10:59+0530\n"
+"PO-Revision-Date: 2023-04-02 16:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.07.90\n"
+"X-Generator: Lokalize 23.03.90\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,6 +47,8 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
+"முறிவுகுறித்த விவரங்களை (backtrace-ஐ) மீளேற்ற இப்பட்டனை பயன்படுத்தலாம். பிழைநீக்க "
+"தொகுப்புகளை நிறுவியபின் இன்னும் நல்ல backtrace-ஐ உருவாக்க வேண்டுமெனில் இது உதவும்."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -86,6 +88,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
+"முறிவு குறித்த (backtrace) விவரங்களை கோப்பில் சேமிக்க இப்பட்டனைப் பயன்படுத்துங்கள். "
+"இவ்விவரங்களை பின்னர் பார்க்கவோ பிழையறிக்கையை சமர்ப்பிக்கவோ இது உதவும்"
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -191,7 +195,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
-msgstr ""
+msgstr "பிழைநீக்கி எதிர்பாரா விதமாக வெளியேறியுள்ளது."
 
 #: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
 #: qml/DeveloperPage.qml:175
@@ -228,7 +232,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
-msgstr ""
+msgstr "பிழைநீக்க குறியீடுகளை நிறுவுவதில் சிக்கல்"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
@@ -237,12 +241,14 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
+"பின்வரும் செயலிக்கும் நிரலகங்களுக்குமான பிழைநீக்க விவரங்களைக் கொண்ட தொகுப்புகள் "
+"நிறுவப்படவில்லை:"
 
 #: backtracewidget.cpp:418
 #, kde-format
 msgctxt "messagebox title"
 msgid "Missing debug information packages"
-msgstr ""
+msgstr "காணாத பிழைநீக்கவிவர தொகுப்புகள்"
 
 #: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
@@ -251,30 +257,32 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
+"<placeholder>செயலி முறிவடைந்தபோது என்ன செய்துக்கொண்டிருந்தீர்கள் (விவரமாக)?</"
+"placeholder>"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "சிக்கலால் பணி வெளியேறியது: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "பணி முறிவடைந்தது. உங்கள் கணினியை சரிபாருங்கள்."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "முறிவடைந்த பணிகளுக்கான காட்டி"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "இதற்கு முன்பு முறிவடைந்துள்ள பணிகளின் விவரங்களை காட்டும்"
 
 #: coredump/gui/main.cpp:37
 #, kde-format
@@ -317,17 +325,15 @@ msgid "No crashes matching the search"
 msgstr "தேடலுக்கு எந்த முறிவும் பொருந்தவில்லை"
 
 #: coredump/gui/qml/main.qml:14
-#, fuzzy
-#| msgid "&Overwrite"
 msgctxt "@title:window"
 msgid "Overview"
-msgstr "&மேல்எழுது"
+msgstr "மேலோட்டம்"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr ""
+msgstr "தேவையான பிழைநீக்க குறியீட்டு தொகுப்புகள் நிறுவப்படுகின்றன..."
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -344,7 +350,7 @@ msgstr "காணாத பிழைநீக்க குறியீடுக�
 #, kde-format
 msgctxt "@info"
 msgid "Could not find debug symbol packages for this application."
-msgstr ""
+msgstr "இச்செயலிக்கான பிழைநீக்க குறியீட்டு தொகுப்புகளைக் கண்டுபிடிக்க முடியவில்லை."
 
 #: debugpackageinstaller.cpp:98
 #, kde-format
@@ -352,7 +358,7 @@ msgctxt "@info"
 msgid ""
 "An error was encountered during the installation of the debug symbol "
 "packages."
-msgstr ""
+msgstr "பிழைநீக்க குறியீட்டு தொகுப்புகளை நிறுவுவதில் சிக்கல் ஏற்பட்டது."
 
 #: drkonqi.cpp:147
 #, kde-kuit-format
@@ -388,7 +394,7 @@ msgstr "&செயலியை மீள்துவக்கு"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
-msgstr ""
+msgstr "முறிவடைந்த செயலியை மீள்துவக்க இப்பட்டனைப் பயன்படுத்தலாம்"
 
 #: drkonqidialog.cpp:117
 #, kde-format
@@ -451,6 +457,8 @@ msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
+"<para>இச்சிக்கலை தெரிவிப்பதன் மூலம் கே.டீ.யீ. மென்பொருட்களை மேம்படுத்த நீங்கள் உதவலாம்.<nl /"
+"><link url='%1'>பிழையறிக்கைகளைப் பற்றிய மேலும் விவரங்கள்.</link></para>"
 
 #: drkonqidialog.cpp:199 qml/MainPage.qml:56
 #, kde-kuit-format
@@ -459,6 +467,8 @@ msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
 "does not provide a bug reporting address.</para>"
 msgstr ""
+"<para><application>%1</application> பிழையறிக்கைகளுக்கான முகவரிகளை வழங்காத‍தால் "
+"இச்சிக்கலைத் தெரிவிக்க முடியாது.</para>"
 
 #: drkonqidialog.cpp:207 qml/MainPage.qml:101
 #, kde-format
@@ -473,6 +483,8 @@ msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5 %6</para>"
 msgstr ""
+"<para>நிரல்: <application>%1</application> பணியெண்: %2 சமிக்ஞை: %3 (%4) நேரம்: "
+"%5 %6</para>"
 
 #: drkonqidialog.cpp:241
 #, kde-format
@@ -486,7 +498,7 @@ msgstr "&பிழைநீக்கு"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
-msgstr ""
+msgstr "முறிவடைந்துள்ள செயலியை ஆராய உதவும் ஓர் நிரலைத் துவக்கும்."
 
 #: drkonqidialog.cpp:272
 #, kde-format
@@ -501,10 +513,9 @@ msgid "Debug in %1"
 msgstr "%1 என்பதில் பிழைநீக்கு"
 
 #: main.cpp:112
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "கே.டீ.யீ. முறிவுக் கையாளி"
+msgstr "முறிவுக் கையாளி"
 
 #: main.cpp:114
 #, fuzzy, kde-format
@@ -650,7 +661,7 @@ msgstr ""
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr ""
+msgstr "backtrace-ஐ காட்டு (நிபுணர்களுக்கு)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
@@ -660,7 +671,7 @@ msgstr "அடுத்தது"
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr ""
+msgstr "bugs.kde.org தனை தொடர்புகொள்ள முடியவில்லை: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -670,7 +681,7 @@ msgstr "மீண்டும் முயற்சி"
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr ""
+msgstr "bugs.kde.org தனை தொடர்புகொள்ள முயற்சிக்கிறது..."
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -726,12 +737,6 @@ msgid "Not Sufficiently Useful"
 msgstr "இதனால் எந்த பயனும் இல்லை"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not consider helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
@@ -764,6 +769,8 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
+"முறிவுகுறித்த விவரங்களை (backtrace-ஐ) மீளேற்ற இப்பட்டனை பயன்படுத்தலாம். பிழைநீக்க\n"
+"தொகுப்புகளை நிறுவியபின் இன்னும் நல்ல backtrace-ஐ உருவாக்க வேண்டுமெனில் இது உதவும்."
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
@@ -816,6 +823,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>பிழைநீக்க நிரலை (%1) நிறுவி <interface>மீளேற்று</"
+"interface> எனும் பட்டனை அழுத்த வேண்டும்.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -865,7 +874,7 @@ msgstr ""
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
-msgstr ""
+msgstr "இது தொடர்புடையது"
 
 #: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
@@ -879,7 +888,7 @@ msgstr ""
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr ""
+msgstr "இதனுடன் தோடர்பல்ல"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -932,7 +941,7 @@ msgstr ""
 #: qml/MainPage.qml:21
 msgctxt "@action"
 msgid "Report Bug"
-msgstr ""
+msgstr "பிழையை தெரிவி"
 
 #: qml/MainPage.qml:23
 msgctxt "@info:tooltip"
@@ -1063,12 +1072,12 @@ msgstr "சமர்ப்பி"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "தரவுக்கு காத்திருக்கிறது…"
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
 msgid "Enter the Details about the Crash"
-msgstr ""
+msgstr "முறிவுகுறித்த விவரங்களை உள்ளிடவும்"
 
 #: qml/ReportPage.qml:26
 msgctxt "@info"
@@ -1135,7 +1144,7 @@ msgstr "மேலும் விவரங்களை உள்ளிடுங�
 #: qml/ReportPage.qml:108
 msgctxt "@info"
 msgid "Distribution method:"
-msgstr ""
+msgstr "நிறுவிய விதம்:"
 
 #: qml/ReportPage.qml:131
 msgctxt "@option:check"
@@ -1157,7 +1166,7 @@ msgstr "அறிக்கையின் முன்னோட்டங்க�
 #: qml/SendingPage.qml:45
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr ""
+msgstr "அறிக்கையை கோப்புக்கு சேமி"
 
 #: qml/SendingPage.qml:46
 msgctxt "@info:tooltip"
@@ -1198,7 +1207,7 @@ msgstr "கே.டீ.யீ.க்கு பங்களித்தமைக�
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr ""
+msgstr "பிழையறிக்கை உதவிநிரலுக்கு நல்வரவு"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"

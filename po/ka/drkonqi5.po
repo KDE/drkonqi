@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-01 02:10+0000\n"
-"PO-Revision-Date: 2023-03-28 05:59+0200\n"
+"PO-Revision-Date: 2023-04-02 05:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -42,6 +42,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
+"გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის თავიდან ჩასატვირთად. ეს "
+"სასარგებლოა, როცა გამართვის სიმბოლოების პაკეტს დააყენეთ და გნებავთ, უკეთესი "
+"უკუტრეისი მიიღოთ."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -80,6 +83,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
+"გამოიყენეთ ეს ღილაკი, რათა ავარიის ინფორმაცია (უკუტრეისი) ფაილში შეინახოთ. "
+"ეს სასარგებლოა, თუ ამ შეცდომას გნებავთ, მოგვიანებით მიხედოთ."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -110,6 +115,8 @@ msgid ""
 "Another debugger is currently debugging the same application. The crash "
 "information could not be fetched."
 msgstr ""
+"ამ აპლიკაციას ამჟამად სხვა გამმართველი უყურებს. ავარიის ინფორმაციის მიღება "
+"შეუძლებელია."
 
 #: backtracewidget.cpp:193
 #, kde-format
@@ -208,6 +215,7 @@ msgid ""
 "<strong>The debugger application is missing or could not be launched.</"
 "strong>"
 msgstr ""
+"<strong>გამმართველი დაყენებული არაა ან მისი გაშვება შეუძლებელია.</strong>"
 
 #: backtracewidget.cpp:322
 #, kde-kuit-format
@@ -230,6 +238,8 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
+"გამართვს ინფორმაციის შემცველი პაკეტები დაყენებული არაა შემდეგი პროგრამებისა "
+"და ბიბლიოთეკებისთვის:"
 
 #: backtracewidget.cpp:418
 #, kde-format
@@ -244,6 +254,7 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
+"<placeholder>მოგვიყევით დეტალურად, რას აკეთებდით ავარიის დროს.</placeholder>"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -261,7 +272,7 @@ msgstr "ქვეპროცესი ავარიულად დასრ�
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "ავარიით დასრულებული პროცესების ნახვა"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -314,7 +325,7 @@ msgstr "თქვენს ძებნას პასუხები არ �
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "მიმოხილვა"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -452,6 +463,8 @@ msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
 "does not provide a bug reporting address.</para>"
 msgstr ""
+"<para>ამ შეცდომის გადაგზავნა არ შეგიძლიათ, რადგან <application>%1</"
+"application>-ს შეცდომების გადასაგზავნი მისამართი მითითებული არ აქვს.</para>"
 
 #: drkonqidialog.cpp:207 qml/MainPage.qml:101
 #, kde-format
@@ -496,10 +509,9 @@ msgid "Debug in %1"
 msgstr "%1-ში გამართვა"
 
 #: main.cpp:112
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "KDE -ის ავარიების მმართველი"
+msgstr "ავარიის დამმუშავებელი"
 
 #: main.cpp:114
 #, kde-format
