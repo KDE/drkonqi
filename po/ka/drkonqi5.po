@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2023-02-08 08:15+0100\n"
+"PO-Revision-Date: 2023-04-03 05:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -42,6 +42,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
+"გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის თავიდან ჩასატვირთად. ეს "
+"სასარგებლოა, როცა გამართვის სიმბოლოების პაკეტს დააყენეთ და გნებავთ, უკეთესი "
+"უკუტრეისი მიიღოთ."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -80,6 +83,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
+"გამოიყენეთ ეს ღილაკი, რათა ავარიის ინფორმაცია (უკუტრეისი) ფაილში შეინახოთ. "
+"ეს სასარგებლოა, თუ ამ შეცდომას გნებავთ, მოგვიანებით მიხედოთ."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -110,6 +115,8 @@ msgid ""
 "Another debugger is currently debugging the same application. The crash "
 "information could not be fetched."
 msgstr ""
+"ამ აპლიკაციას ამჟამად სხვა გამმართველი უყურებს. ავარიის ინფორმაციის მიღება "
+"შეუძლებელია."
 
 #: backtracewidget.cpp:193
 #, kde-format
@@ -130,25 +137,25 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
-msgstr ""
+msgstr "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია სასარგებლოა"
 
 #: backtracewidget.cpp:244 qml/RatingItem.qml:45
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
-msgstr ""
+msgstr "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია შეიძლება სასარგებლო იყოს"
 
 #: backtracewidget.cpp:247 qml/RatingItem.qml:47
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
-msgstr ""
+msgstr "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია ალბათ სასარგებლო არაა"
 
 #: backtracewidget.cpp:250 qml/RatingItem.qml:49
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
-msgstr ""
+msgstr "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია სასარგებლო არა"
 
 #: backtracewidget.cpp:255
 #, kde-format
@@ -156,7 +163,7 @@ msgctxt "@info"
 msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
-msgstr ""
+msgstr "ავარიის ინფორმაციის შეფასება არასწორია. ეს DrKonqi-ის შეცდომაა."
 
 #: backtracewidget.cpp:267
 #, kde-kuit-format
@@ -208,6 +215,7 @@ msgid ""
 "<strong>The debugger application is missing or could not be launched.</"
 "strong>"
 msgstr ""
+"<strong>გამმართველი დაყენებული არაა ან მისი გაშვება შეუძლებელია.</strong>"
 
 #: backtracewidget.cpp:322
 #, kde-kuit-format
@@ -230,6 +238,8 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
+"გამართვს ინფორმაციის შემცველი პაკეტები დაყენებული არაა შემდეგი პროგრამებისა "
+"და ბიბლიოთეკებისთვის:"
 
 #: backtracewidget.cpp:418
 #, kde-format
@@ -244,6 +254,7 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
+"<placeholder>მოგვიყევით დეტალურად, რას აკეთებდით ავარიის დროს.</placeholder>"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -320,7 +331,7 @@ msgstr "ინტენსიური თერაპია"
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr ""
+msgstr "გამართვის სიმბოლოს პაკეტების დაყენების მოთხოვნა..."
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -382,6 +393,7 @@ msgstr "აპლიკაციის &გადატვირთვა"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr ""
+"ავარიულად დასრულებული აპლიკაციის თავიდან გასაშვებად ეს ღილაკი გამოიყენეთ."
 
 #: drkonqidialog.cpp:117
 #, kde-format
@@ -451,6 +463,8 @@ msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
 "does not provide a bug reporting address.</para>"
 msgstr ""
+"<para>ამ შეცდომის გადაგზავნა არ შეგიძლიათ, რადგან <application>%1</"
+"application>-ს შეცდომების გადასაგზავნი მისამართი მითითებული არ აქვს.</para>"
 
 #: drkonqidialog.cpp:207 qml/MainPage.qml:102
 #, kde-format
@@ -465,6 +479,8 @@ msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5 %6</para>"
 msgstr ""
+"<para>გამშვები ფაილი: <application>%1</application> PID: %2 სიგნალი: %3 (%4) "
+"დრო: %5 %6</para>"
 
 #: drkonqidialog.cpp:241
 #, kde-format
@@ -478,13 +494,13 @@ msgstr "&გამართვა"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
-msgstr ""
+msgstr "ავარიულად დასრულებული პროგრამის გამართვის აპის გაშვება."
 
 #: drkonqidialog.cpp:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
+msgstr "ამ ფანჯრის დახურვა (დაკარგავთ ავარიის ინფორმაციას.)"
 
 #: drkonqidialog.cpp:281
 #, kde-format
@@ -535,7 +551,7 @@ msgstr "A. L. Spehr"
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
-msgstr ""
+msgstr "მიღებულია სიგნალი <number>"
 
 #: main.cpp:129
 #, kde-format
@@ -607,29 +623,29 @@ msgstr "პროგრამა უკვე გადაიტვირთა"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
-msgstr ""
+msgstr "პროგრამის გაშვებულად დატოვება და ბექტრეისის გაშვებისას გენერაცია"
 
 #: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
-msgstr ""
+msgstr "ავარიული ნაკადის ID <thread id>"
 
 #: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
-msgstr ""
+msgstr "არ მაჩვენო გაფრთხილება, მაგრამ გამართვის ფანჯარა გაუშვი"
 
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr ""
+msgstr "ავარიის ინფორმაციის (უკუტრეისი) გამოთხოვა"
 
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr ""
+msgstr "ბექტრეისის შემცველობის ჩვენება (დამატებით)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
@@ -639,7 +655,7 @@ msgstr "შემდეგი"
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr ""
+msgstr "შეცდომა bugs.kde.org-თან დაკავშირებისას: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -697,7 +713,7 @@ msgstr "სამუშაო მაგიდის უცნაური ქც
 #: qml/ContextPage.qml:70
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr ""
+msgstr "აპლიკაციის მორგებული პარამეტრები, რომლებიც კავშირში შეიძლება, იყოს"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
@@ -791,12 +807,12 @@ msgstr ""
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
 msgid "Look for Possible Duplicate Reports"
-msgstr ""
+msgstr "შესაზლო დუბლირებული ანგარიშების მოძებნა"
 
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr ""
+msgstr "შეცდომის ბაზაში დუბლიკატების ძებნა…"
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -815,6 +831,7 @@ msgstr "დავადუბლირო?"
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr ""
+"დარწმუნებული ბრძანდებით, რომ თქვენი ავარია ამ შეცდომის ანგარიშის დუბლიკატია?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
@@ -827,6 +844,8 @@ msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
+"გამოიყენეთ ეს ქმედება, როცა დარწმუნებული იქნებით, რომ თქვენი ავარია ამ "
+"შეცდომის ანგარიშის დუბლიკატია"
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
@@ -846,6 +865,9 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
+"გამოიყენეთ ეს ღილაკი, რომ მიგვანიშნოთ,\n"
+"                                      რომ ავარია, რომელიც თქვენ განიცადეთ,\n"
+"                                      დაკავშირებულია შეცდომის ან ანგარიშთან"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
@@ -860,7 +882,7 @@ msgstr "შეცდომების ტრეკინგის სისტ�
 #: qml/LoginPage.qml:67
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
 msgid "You need to login with your %1 account in order to proceed."
-msgstr ""
+msgstr "გასაგრძელებლად საჭიროა თქვენი %1-ის ანგარიშით შეხვიდეთ."
 
 #: qml/LoginPage.qml:72
 msgctxt "@label:textbox bugzilla account email"
@@ -870,7 +892,7 @@ msgstr "ელფოსტის მისამართი:"
 #: qml/LoginPage.qml:78
 msgctxt "@label:textbox bugzilla account password"
 msgid "Password:"
-msgstr ""
+msgstr "პაროლი:"
 
 #: qml/LoginPage.qml:85
 msgctxt "@option:check"
@@ -974,6 +996,9 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
+"თქვენი ავარია უკვე გადაცემულია, როგორც <link url=\"%1\">შეცდომა %1</link>, "
+"რომელიც <emphasis strong='true'>დახურული</emphasis> <link url="
+"\"%2\">შეცდომის %2</link> დუბლიკატია."
 
 #: qml/PerfectDuplicatePage.qml:34
 msgctxt "@info"
@@ -981,6 +1006,8 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
+"თქვენი ავარია უკვე გადაცემულია, როგორც <link url=\"%1\">შეცდომა %1</link>, "
+"რომელიც <emphasis strong='true'>დახურულია</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:39
 msgctxt "@info"
@@ -989,6 +1016,9 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
+"თქვენი ავარია უკვე გადაცემულია, როგორც <link url=\"%1\">შეცდომა %1</link>, "
+"რომელიც <link url=\"%2\">შეცდომის %2</link> <emphasis strong='true'> "
+"დუბლიკატია </emphasis>"
 
 #: qml/PerfectDuplicatePage.qml:43
 msgctxt "@info"
@@ -996,6 +1026,8 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
+"თქვენი ავარია <emphasis strong='true'>დუბლიკატია</emphasis> და უკვე "
+"გადაცემულია, როგორც <link url=\"%1\">შეცდომა %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1003,6 +1035,8 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"შეგიძლიათ აირჩიოთ დამატებითი ინფორმაციის ჩამატება, მაგრამ ეს მხოლოდ იმ "
+"შემთხვევაში გააკეთეთ, თუ ახალი, ან მოთხოვნილი ინფორმაცია გაგაჩნიათ."
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
@@ -1025,6 +1059,8 @@ msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
+"<para>ეს ანგარიშის, რომელიც გადაიგზავნება, წინასწარ ხედს წარმოადგენს.</"
+"para><para>თუ გნებავთ, შეცვალოთ ის, წინა გვერდებზე გადადით.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
@@ -1044,7 +1080,7 @@ msgstr "შეიყვანეთ ავარიის დეტალებ�
 #: qml/ReportPage.qml:26
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr ""
+msgstr "შემდეგი ინფორმაცია ინგლისურად მოგვაწოდეთ."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
@@ -1130,7 +1166,7 @@ msgstr ""
 #: qml/SendingPage.qml:63
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr ""
+msgstr "შეცდომის ანგარიშის გადაგზავნის შეცდომა: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
@@ -1156,11 +1192,12 @@ msgstr "URL: <link url='%1'>%1</link>"
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
+"მადლობა, რომ KDE-ის ნაწილი ბრძანდებით. ახლა შეგიძლიათ, დახუროთ ეს ფანჯარა."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr ""
+msgstr "მოგესალმებათ ანგარიშის გადაგზავნის დამხმარე"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1225,6 +1262,7 @@ msgstr "%1 მოულოდნელად დაიხურა"
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr ""
+"მოგვწერეთ ამ შეცდომის შესახებ, რათა ამ პროგრამის გაუმჯობესებაში დაგვეხმაროთ."
 
 #: statusnotifier.cpp:61
 #, kde-format
@@ -1247,6 +1285,7 @@ msgstr "დამალვა"
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr ""
+"მოგვწერეთ ამ შეცდომის შესახებ, რათა ამ პროგრამის გაუმჯობესებაში დაგვეხმაროთ."
 
 #: statusnotifier.cpp:99
 #, kde-format
@@ -1274,22 +1313,22 @@ msgstr "backtraceparsertest_manual"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "გამმართველის სახელი გადაცემულია დამმუშავებლების ქარხანაში"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "ბექტრეისის შემცველი ფაილი."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib-ის ტესტი (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "სატესტო აპლიკაცია გამართვის ტრეკერის მმართველის ბიბლიოთეკისთვის"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
