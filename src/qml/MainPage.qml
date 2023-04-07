@@ -13,6 +13,8 @@ Kirigami.Page {
 
     title: CrashedApplication.name
 
+    Component.onCompleted: BacktraceGenerator.start()
+
     actions: [
         Kirigami.Action {
             enabled: Kirigami.Settings.isMobile ? true : canReport
