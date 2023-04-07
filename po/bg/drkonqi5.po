@@ -2,25 +2,25 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1648509 2023-04-01 02:24:23Z scripty $
+# $Id: drkonqi5.po 1648957 2023-04-07 02:16:48Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
 # Dimitar Popov <insane@fmi.uni-sofia.bg>, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-01 02:10+0000\n"
-"PO-Revision-Date: 2022-08-10 13:03+0200\n"
+"PO-Revision-Date: 2023-04-06 18:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -311,7 +311,7 @@ msgstr "Подпроцесът се срина. Проверете инстал�
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Преглед на сринали се процеси"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -362,7 +362,7 @@ msgstr "Няма сривове отговарящи на търсенето"
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Преглед"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -569,19 +569,16 @@ msgid "Debug in %1"
 msgstr "Отстраняване на грешки в %1"
 
 #: main.cpp:112
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
 msgstr "Програма за следене на грешки"
 
 #: main.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"Програмата за описание на грешки събира данни и описание от потребителя при "
-"срив."
+"Програмата за следене на грешки дава на потребителя информация при срив на "
+"даден процес или приложение."
 
 #: main.cpp:117
 #, kde-format
@@ -1513,11 +1510,3 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
-
-#~ msgctxt "@title CLI title"
-#~ msgid "DrKonqi Intensive Care"
-#~ msgstr "Интензивно лечение DrKonqi"
-
-#~ msgctxt "@title:window"
-#~ msgid "Intensive Care"
-#~ msgstr "Интензивно лечение"
