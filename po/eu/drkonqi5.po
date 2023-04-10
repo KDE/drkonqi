@@ -1,26 +1,25 @@
 # Translation for drkonqi5.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, Free Software Foundation, Inc.
-# Copyright (C) 2019-2021, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the drkonqi package.
 # KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-01 02:10+0000\n"
-"PO-Revision-Date: 2022-10-29 08:30+0200\n"
+"PO-Revision-Date: 2023-04-09 21:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -309,7 +308,7 @@ msgstr "Azpiprozesua kraskatu da. Behatu zure instalazioa."
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Kraskatutako prozesuen erakuslea"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -360,7 +359,7 @@ msgstr "Ez dago bilaketarekin bat datorren kraskadurarik"
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Ikuspegi orokorra"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -458,7 +457,7 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
-"<para>Kraskadura Kudeatzaileak berak huts egin duenez, txostena "
+"<para>Kraskadura maneiatzaileak berak huts egin duenez, txostena "
 "jakinarazteko prozesu automatikoa ezgaituta dago, berriz huts egiteko "
 "arriskua murrizteko.<nl /><nl />Mesedez, akats hau <link url='%1'>eskuz "
 "jakinarazi</link> KDEren akatsen jarraipen sistemara. Ez ahaztu "
@@ -475,7 +474,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 "<para>Txostenak jakinarazteko laguntzailea desgaituta dago kraskadura "
-"kudeatzeko elkarrizketa modu seguruan hasi delako.<nl />Akats hau eskuz "
+"maneiatzeko elkarrizketa modu seguruan hasi delako.<nl />Akats hau eskuz "
 "jakinarazi dezakezu %1-(e)ra (<interface>Garatzailearen informazioa</"
 "interface> fitxako aztarna barne).</para>"
 
@@ -562,19 +561,16 @@ msgid "Debug in %1"
 msgstr "Araztu hemen: %1"
 
 #: main.cpp:112
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "KDEren kraskadura-kudeatzailea"
+msgstr "Kraskadura maneiatzailea"
 
 #: main.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"KDEren kraskadura-kudeatzaileak oharrak egiten dizkio erabiltzaileari, "
-"programaren bat kraskatu baldin bada."
+"Kraskadura-maneiatzaileak, programa bat kraskatu bada, erabiltzaileari "
+"itzulerako informazioa ematen dio."
 
 #: main.cpp:117
 #, kde-format
@@ -1058,7 +1054,7 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
-"<para>Kraskadura Kudeatzaileak berak huts egin duenez,\n"
+"<para>Kraskadura Maneiatzaileak berak huts egin duenez,\n"
 "txostenak aurkezteko prozesu automatikoa ezgaituta dago,\n"
 "berriz huts egiteko arriskua murrizteko.<nl /><nl />\n"
 "Mesedez, errore hau KDEren akatsen jarraipena egiteko sisteman\n"
@@ -1073,8 +1069,8 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
-"<para>Txostenak aurkezteko laguntzailea ezgaituta dago kraskadura kudeatzeko "
-"elkarrizketa-koadroa modu seguruan hasi delako.<nl />\n"
+"<para>Txostenak aurkezteko laguntzailea ezgaituta dago kraskadura "
+"maneiatzeko elkarrizketa-koadroa modu seguruan abiatu delako.<nl />\n"
 "Akats honi buruzko txostena, eskuz, <link>%1(e)an</link> eman dezakezu "
 "(<interface>Garatzaileen informazioa</interface> fitxako atzerako-aztarna "
 "barne).</para>"
