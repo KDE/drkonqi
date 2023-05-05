@@ -4,6 +4,7 @@ Type=Application
 Exec=${KDE_INSTALL_FULL_LIBEXECDIR}/drkonqi
 Name=Dr Konqi
 Name[ar]=د.كوينكي
+Name[ast]=Dr Konqi
 Name[az]=Dr Konqi
 Name[bg]=Dr Konqi
 Name[ca]=Dr Konqi
