@@ -36,7 +36,7 @@ Kirigami.ScrollablePage {
         delegate: Kirigami.BasicListItem {
             label: modelObject.appName
             subtitle: modelObject.dateTime
-            icon: modelObject.iconName
+            icon.name: modelObject.iconName
             onClicked: pageStack.push("qrc:/DetailsPage.qml", {patient: modelObject})
         }
 
