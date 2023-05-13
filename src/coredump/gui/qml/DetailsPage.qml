@@ -24,7 +24,7 @@ Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             enabled: state === ""
-            iconName: "edit-copy"
+            icon.name: "edit-copy"
             text: i18nc("@action", "Copy to Clipboard")
             onTriggered: {
                 contentLoader.item.selectAll()
@@ -33,7 +33,7 @@ Kirigami.ScrollablePage {
         },
         Kirigami.Action {
             enabled: patient.canDebug
-            iconName: "debug-run"
+            icon.name: "debug-run"
             text: i18nc("@action", "Run Interactive Debugger")
             onTriggered: patient.debug()
         }

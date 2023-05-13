@@ -34,7 +34,7 @@ Kirigami.ScrollablePage {
     footer: FooterActionBar {
         actions: [
             Kirigami.Action {
-                iconName: "submit"
+                icon.name: "submit"
                 text: i18nc("@action:button", "Submit")
                 onTriggered: pageStack.push("qrc:/ui/SendingPage.qml")
             }

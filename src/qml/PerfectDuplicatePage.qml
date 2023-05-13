@@ -61,7 +61,7 @@ Kirigami.ScrollablePage {
                 onTriggered: Qt.quit()
             },
             Kirigami.Action {
-                iconName: "mail-attachment"
+                icon.name: "mail-attachment"
                 text: i18nc("@action:button", "Attach Additional Information")
                 onTriggered: {
                     reportInterface.attachToBugNumber = reportInterface.duplicateId

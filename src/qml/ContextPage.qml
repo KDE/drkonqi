@@ -84,7 +84,7 @@ Kirigami.ScrollablePage {
 
         actions: [
             Kirigami.Action {
-                iconName: "go-next"
+                icon.name: "go-next"
                 text: i18nc("@action:button", "Next")
                 onTriggered: {
                     if (reportInterface.isBugAwarenessPageDataUseful || DrKonqi.ignoreQuality()) {

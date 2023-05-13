@@ -43,14 +43,14 @@ Kirigami.ScrollablePage {
                     console.warn("Unexpected install button state :O")
                 }
             }
-            iconName: "install"
+            icon.name: "install"
             tooltip: i18nc("@info:tooltip", "Use this button to install the missing debug symbols packages.")
         },
 
         Kirigami.Action {
             id: reloadAction
             enabled: BacktraceGenerator.state !== BacktraceGenerator.Loading
-            iconName: "view-refresh"
+            icon.name: "view-refresh"
             text: i18nc("@action:button", "Reload")
             tooltip: xi18nc("@info:tooltip",
 `Use this button to reload the crash information (backtrace). This is useful when you have
@@ -62,14 +62,14 @@ installed the proper debug symbol packages and you want to obtain a better backt
         },
 
         Kirigami.Action {
-            iconName: "edit-copy"
+            icon.name: "edit-copy"
             text: i18nc("@action:button", "Copy")
             tooltip: i18nc("@info:tooltip", "Use this button to copy the crash information (backtrace) to the clipboard.")
             onTriggered: DrKonqi.copyToClipboard(traceArea.text)
         },
 
         Kirigami.Action {
-            iconName: "document-save"
+            icon.name: "document-save"
             text: i18nc("@action:button", "Save")
             tooltip: xi18nc("@info:tooltip",
 `Use this button to save the crash information (backtrace) to a file. This is useful if you want to take a look at it or to report the bug later.`)

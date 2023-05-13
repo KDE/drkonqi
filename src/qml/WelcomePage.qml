@@ -41,7 +41,7 @@ to continue reporting this bug it is <emphasis strong='true'>required for you to
     footer: FooterActionBar {
         actions: [
             Kirigami.Action {
-                iconName: "document-sign"
+                icon.name: "document-sign"
                 text: i18nc("@action:button", "I Agree to be Contacted")
                 onTriggered: {
                     visible = false

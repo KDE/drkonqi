@@ -22,7 +22,7 @@ DeveloperPage {
         Kirigami.Action {
             id: advancedAction
             checkable: true
-            iconName: "code-context"
+            icon.name: "code-context"
             text: i18nc("@action:button", "Show backtrace content (advanced)")
         }
     ]
@@ -43,7 +43,7 @@ DeveloperPage {
                     return false
                 }
             }
-            iconName: "go-next"
+            icon.name: "go-next"
             text: i18nc("@action:button", "Next")
             onTriggered: pageStack.push("qrc:/ui/BugzillaPage.qml")
         }

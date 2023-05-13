@@ -126,7 +126,7 @@ Kirigami.ScrollablePage {
     footer: FooterActionBar {
         actions: [
             Kirigami.Action {
-                iconName: "go-next"
+                icon.name: "go-next"
                 text: i18nc("@action:button", "Next")
                 onTriggered: {
                     pageStack.push('qrc:/ui/ReportPage.qml')

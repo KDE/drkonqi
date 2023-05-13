@@ -17,20 +17,20 @@ Kirigami.Page {
         Kirigami.Action {
             enabled: Kirigami.Settings.isMobile ? true : canReport
             visible: Kirigami.Settings.isMobile ? canReport : true
-            iconName: "tools-report-bug"
+            icon.name: "tools-report-bug"
             text: i18nc("@action", "Report Bug")
             // TODO: could give context on why the button is disabled when canReport is false
             tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
             onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
         },
         Kirigami.Action {
-            iconName: "system-reboot"
+            icon.name: "system-reboot"
             text: i18nc("@action", "Restart Application")
             visible: !CrashedApplication.hasBeenRestarted
             onTriggered: CrashedApplication.restart()
         },
         Kirigami.Action {
-            iconName: "code-class"
+            icon.name: "code-class"
             text: i18nc("@action", "Developer Information")
             onTriggered: pageStack.push("qrc:/ui/DeveloperPage.qml")
         }

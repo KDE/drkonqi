@@ -41,7 +41,7 @@ Kirigami.Page {
     actions: [
         Kirigami.Action {
             visible: page.state === "error"
-            iconName: "document-save"
+            icon.name: "document-save"
             text: i18nc("@action:button", "Save Report to File")
             tooltip: xi18nc("@info:tooltip", 'Use this button to save the crash information to a file for manual reporting.')
             onTriggered: DrKonqi.saveReport(reportInterface.generateReportFullText(ReportInterface.DrKonqiStamp.Include, ReportInterface.Backtrace.Complete))

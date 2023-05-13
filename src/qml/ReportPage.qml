@@ -144,7 +144,7 @@ Kirigami.Page {
         enabled: isComplete
         actions: [
             Kirigami.Action {
-                iconName: "preview"
+                icon.name: "preview"
                 text: i18nc("@action:button", "Preview Report")
                 onTriggered: pageStack.push("qrc:/ui/PreviewPage.qml")
             }
