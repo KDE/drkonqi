@@ -15,6 +15,7 @@
 #include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KUserFeedbackQt6/Provider>
+#include <QGuiApplication>
 
 #include "backtracegenerator.h"
 #include "bugzillalib.h"
@@ -321,6 +322,12 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
         bug.platform = sysInfo->bugzillaPlatform();
     }
     bug.keywords = QStringList{QStringLiteral("drkonqi")};
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    bug.keywords.push_back(QStringLiteral("qt6"));
+#endif
+    if (QGuiApplication::platformName() == QStringLiteral("wayland")) {
+        bug.keywords.push_back(QStringLiteral("wayland"));
+    }
     bug.priority = QLatin1String("NOR");
     bug.severity = QLatin1String("crash");
     bug.summary = m_reportTitle;
