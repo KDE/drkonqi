@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-01 02:10+0000\n"
-"PO-Revision-Date: 2023-04-07 02:28+0100\n"
+"PO-Revision-Date: 2023-05-28 11:26+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-it@kde.org>\n"
 "Language: eo\n"
@@ -87,7 +87,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
-"Uzu ĉi tiun butonon por kopii la kraŝinformojn (backspuro) al la tondujo."
+"Uzu ĉi tiun butonon por kopii la paneoinformojn (retrospuro) al la tondujo."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
@@ -96,8 +96,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
-"Uzu ĉi tiun butonon por konservi la kraŝinformojn (backtrace) al dosiero. Ĉi "
-"tio estas utila se vi volas rigardi ĝin aŭ raporti la cimon poste."
+"Uzu ĉi tiun butonon por konservi la paneoinformojn (backtrace) al dosiero. "
+"Ĉi tio estas utila se vi volas rigardi ĝin aŭ raporti la cimon poste."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -109,7 +109,7 @@ msgid ""
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
 "<h2>Kio estas \"retrospuro\"?</h2><p>Retrospuro esence priskribas tion, kio "
-"okazis ene de la aplikaĵo kiam ĝi kraŝis, do la programistoj povas elspuri, "
+"okazis ene de la aplikaĵo kiam ĝi paneis, do la programistoj povas elspuri, "
 "kie la malordo komenciĝis. Ili povas aspekti sensignifaj al vi, sed ili eble "
 "enhavas multe da utilaj informoj.<br />Retrospuroj estas kutime uzataj dum "
 "interaga kaj postmorta sencimigo.</p>"
@@ -140,7 +140,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be fetched."
-msgstr "La kraŝinformoj ne povis esti prenitaj."
+msgstr "La paneinformoj ne povis esti prenitaj."
 
 #: backtracewidget.cpp:196
 #, kde-kuit-format
@@ -150,7 +150,7 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
-"Alia sencimiga procezo estas alfiksita al la kraŝinta aplikaĵo. Tial, la "
+"Alia sencimiga procezo estas alfiksita al la paneinta aplikaĵo. Tial, la "
 "DrKonqi-erarseĉilo ne povas preni la malantaŭan spuron. Bonvolu fermi la "
 "alian erarserĉilon kaj klaki <interface>Reŝargi</interface>."
 
@@ -185,7 +185,7 @@ msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
 msgstr ""
-"La takso de ĉi tiu kraŝinformo estas nevalida. Ĉi tio estas cimo en DrKonqi "
+"La takso de ĉi tiu paneinformo estas nevalida. Ĉi tio estas cimo en DrKonqi "
 "mem."
 
 #: backtracewidget.cpp:267
@@ -202,7 +202,7 @@ msgstr ""
 "Vi povas klaki la butonon <interface>Instali Sencimigajn Simbolojn</"
 "interface> por aŭtomate instali la mankantajn sencimigajn informpakaĵojn. Se "
 "ĉi tiu metodo ne funkcias: bonvolu legi <link url='%1'>Kiel krei utilajn "
-"kraŝraportojn</link> por lerni kiel akiri utilan malantaŭan spuron; instalu "
+"paneoraportojn</link> por lerni kiel akiri utilan malantaŭan spuron; instalu "
 "la bezonatajn pakaĵojn (<link url='%2'>listo de dosieroj</link>) kaj alklaku "
 "la butonon <interface>Reŝargi</interface>."
 
@@ -231,7 +231,7 @@ msgstr "La sencimigilo neatendite fermiĝis."
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
-msgstr "La kraŝinformoj ne povis esti generita."
+msgstr "La paneinformoj ne povis esti generita."
 
 #: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
@@ -290,7 +290,7 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr ""
-"<placeholder>Detale, diru al ni kion vi faris kiam la aplikaĵo kraŝis.</"
+"<placeholder>Detale, diru al ni kion vi faris kiam la aplikaĵo paneis.</"
 "placeholder>"
 
 #: coredump/gui/DetailsLoader.cpp:30
@@ -303,19 +303,19 @@ msgstr "Subprocezo eliris kun eraro: %1"
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr "Subprocezo kraŝis. Kontrolu vian instaladon."
+msgstr "Subprocezo paneis. Kontrolu vian instaladon."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Rigardilo por Paneintaj Procezoj"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr "Proponas detalan vidon de pasintaj kraŝoj"
+msgstr "Proponas detalan vidon de pasintaj paneoj"
 
 #: coredump/gui/main.cpp:37
 #, kde-format
@@ -340,27 +340,27 @@ msgstr "Rulu Interaktivan Erarserĉilon"
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr "Kraŝoj"
+msgstr "Paneoj"
 
 #: coredump/gui/qml/ListPage.qml:48
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Ŝargante kraŝraportojn"
+msgstr "Ŝargante paneraportojn"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr "Neniuj procezoj ankoraŭ kraŝis"
+msgstr "Neniuj procezoj ankoraŭ paneis"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr "Neniuj kraŝoj kongruas kun la serĉo"
+msgstr "Neniuj paneoj kongruas kun la serĉo"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Superrigardo"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -459,10 +459,10 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
-"<para>Ĉar la Kraŝtraktilo mem malsukcesis, la aŭtomata raporta procezo estas "
-"malŝaltita por redukti la riskojn de fiasko denove.<nl /><nl />Bonvolu, "
-"<link url='%1'>mane raporti</link> ĉi tiu eraro al la cimspura sistemo de "
-"KDE. Ne forgesu inkluzivi la malantaŭan spuron el la langeto "
+"<para>Ĉar la Paneotraktilo mem malsukcesis, la aŭtomata raporta procezo "
+"estas malŝaltita por redukti la riskojn de fiasko denove.<nl /><nl /"
+">Bonvolu, <link url='%1'>mane raporti</link> ĉi tiu eraro al la cimspura "
+"sistemo de KDE. Ne forgesu inkluzivi la malantaŭan spuron el la langeto "
 "<interface>Informoj pri Programisto</interface>.</para>"
 
 #: drkonqidialog.cpp:174
@@ -474,7 +474,7 @@ msgid ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 msgstr ""
-"<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri kraŝa "
+"<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri panea "
 "pritraktilo estis komencita en sekura reĝimo.<nl />Vi povas permane raporti "
 "ĉi tiun cimon al %1 (inkluzive de la malantaŭa spuro de la langeto "
 "<interface>Informoj pri Programisto</interface>). </para>"
@@ -490,10 +490,10 @@ msgid ""
 "make sure the update is fully applied and will not cause any side effects.</"
 "para>"
 msgstr ""
-"<para>La raporta asistanto estas malŝaltita ĉar la kraŝinta aplikaĵo ŝajnas "
+"<para>La raporta asistanto estas malŝaltita ĉar la paneinta aplikaĵo ŝajnas "
 "esti ĝisdatigita aŭ malinstalita de kiam ĝi estis komencita. Ĉi tio "
-"malhelpas precizajn kraŝraportojn kaj ankaŭ povas esti la kaŭzo de ĉi tiu "
-"kraŝo.</para><para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj reeniri "
+"malhelpas precizajn paneraportojn kaj ankaŭ povas esti la kaŭzo de ĉi tiu "
+"paneo.</para><para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj reeniri "
 "por certigi, ke la ĝisdatigo estas plene aplikata kaj ne kaŭzos ajnan "
 "flankon. efikoj.</para>"
 
@@ -545,7 +545,7 @@ msgstr "&Sencimigi"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
-msgstr "Lanĉas programon por sencimigi la kraŝintan aplikaĵon."
+msgstr "Lanĉas programon por sencimigi la paneintan aplikaĵon."
 
 #: drkonqidialog.cpp:272
 #, kde-format
@@ -691,7 +691,7 @@ msgstr "Ne montri sciigon sed lanĉi la sencimigan dialogon rekte"
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Prenante la Backspuron (Aŭtomataj Kraŝinformoj)"
+msgstr "Prenante la retrospuron (Aŭtomataj Kraŝinformoj)"
 
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
@@ -721,12 +721,12 @@ msgstr "Provante kontakti bugs.kde.org..."
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr "Kion Vi Scias Pri la Kraŝo?"
+msgstr "Kion Vi Scias Pri la Paneo?"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr "Ĉu vi memoras, kion vi faris antaŭ la kraŝo?"
+msgstr "Ĉu vi memoras, kion vi faris antaŭ la paneo?"
 
 #: qml/ContextPage.qml:28
 msgctxt "@action:button"
@@ -741,7 +741,7 @@ msgstr "Ne"
 #: qml/ContextPage.qml:39
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr "Ĉu la aplikaĵo denove kraŝas se vi ripetas la saman situacion?"
+msgstr "Ĉu la aplikaĵo denove paneas se vi ripetas la saman situacion?"
 
 #: qml/ContextPage.qml:52
 msgctxt "@info/rich"
@@ -754,7 +754,7 @@ msgctxt ""
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Kion mi faris kiam la aplikaĵo <application>%1</application> kraŝis"
+msgstr "Kion mi faris kiam la aplikaĵo <application>%1</application> paneis"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
@@ -805,7 +805,7 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
-"Uzu ĉi tiun butonon por reŝargi la kraŝinformojn (retrospuro). Ĉi tio estas "
+"Uzu ĉi tiun butonon por reŝargi la paneinformojn (retrospuro). Ĉi tio estas "
 "utila kiam vi\n"
 "instalis la taŭgajn sencimsimbolpakaĵojn kaj vi volas akiri pli bonan "
 "retrospuron."
@@ -835,7 +835,7 @@ msgid ""
 msgstr ""
 "<subtitle>Kio estas \"retrospuro\"?</subtitle><para>Retrospuro esence "
 "priskribas kio estis\n"
-"okazanta en la aplikaĵo kiam ĝi kraŝis, do la programistoj povas spuri\n"
+"okazanta en la aplikaĵo kiam ĝi paneis, do la programistoj povas spuri\n"
 "malsupren kie la ĥaoso komenciĝis. Ili povas aspekti sensignifaj al vi, sed "
 "ili eble\n"
 "fakte enhavas multe da utilaj informoj.<nl />Retrospuroj estas ofte\n"
@@ -855,9 +855,9 @@ msgstr ""
 "Vi povas klaki la butonon <interface>Instali Sencimigajn Simbolojn</"
 "interface> por aŭtomate instali la mankantajn sencimigajn informpakaĵojn. Se "
 "ĉi tiu metodo\n"
-"e funkcias: bonvolu legi <link url='%1'>Kiel krei utilajn kraŝraportojn</"
+"e funkcias: bonvolu legi <link url='%1'>Kiel krei utilajn paneraportojn</"
 "link> por lerni kiel akiri utilan\n"
-"backspuron; instalu la bezonatajn pakaĵojn (<link url='%2'> listo de "
+"retrospuron; instalu la bezonatajn pakaĵojn (<link url='%2'> listo de "
 "dosieroj</link>) kaj alklaku la butonon <interface>Reŝargi</interface>."
 
 #: qml/DeveloperPage.qml:165
@@ -868,7 +868,7 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"Bonvolu legi <link url='%1'>Kiel krei utilajn kraŝraportojn</link> por lerni "
+"Bonvolu legi <link url='%1'>Kiel krei utilajn paneraportojn</link> por lerni "
 "kiel akiri utilan malantaŭan spuron; instalu la bezonatajn pakaĵojn (<link "
 "url='%2'>\n"
 "listo de dosieroj</link>) kaj alklaku la butonon <interface>Reŝargi</"
@@ -901,7 +901,7 @@ msgid ""
 "that report or directly attach your information to it."
 msgstr ""
 "Vidu ĉu via cimo jam estis raportita. Duoble alklaku raporton en la listo "
-"kaj komparu ĝin kun via. Vi povas sugesti, ke via kraŝo estas duplikato de "
+"kaj komparu ĝin kun via. Vi povas sugesti, ke via paneo estas duplikato de "
 "tiu raporto aŭ rekte ligi viajn informojn al ĝi."
 
 #: qml/DuplicatesPage.qml:45
@@ -913,7 +913,7 @@ msgstr "Duobligi?"
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr ""
-"Ĉu vi estas tute certa, ke via kraŝo estas duplikato de ĉi tiu cimraporto?"
+"Ĉu vi estas tute certa, ke via paneo estas duplikato de ĉi tiu cimraporto?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
@@ -926,7 +926,7 @@ msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
-"Uzu ĉi tiun agon kiam vi certas, ke via kraŝo estas duplikato de ĉi tiu "
+"Uzu ĉi tiun agon kiam vi certas, ke via paneo estas duplikato de ĉi tiu "
 "cimraporto"
 
 #: qml/DuplicatesPage.qml:87
@@ -948,14 +948,14 @@ msgid ""
 "                                     report"
 msgstr ""
 "Uzu ĉi tiun butonon por sugesti, ke\n"
-"                                     la kraŝo, kiun vi spertis, rilatas al "
+"                                     la paneo, kiun vi spertis, rilatas al "
 "ĉi tiu\n"
 "                                     cimraporto"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "Ĉi tiu kraŝo ne rilatas"
+msgstr "Ĉi tiu paneo ne rilatas"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -1060,7 +1060,7 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
-"<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri kraŝa "
+"<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri panea "
 "pritraktilo estis komencita en sekura reĝimo.<nl />\n"
 "Vi povas permane raporti ĉi tiun cimon al <link>%1</link> (inkluzive de la "
 "malantaŭa spuro de la <interface>Programisto). Informo</interface> "
@@ -1078,9 +1078,9 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 "<para>La raporta asistanto estas malŝaltita ĉar\n"
-"la kraŝinta aplikaĵo ŝajnas esti ĝisdatigita aŭ\n"
+"la paneinta aplikaĵo ŝajnas esti ĝisdatigita aŭ\n"
 "einstalita de kiam ĝi estis komencita. Ĉi tio malhelpas precizan\n"
-"kraŝan raportadon kaj ankaŭ povas esti la kaŭzo de ĉi tiu kraŝo.</para>\n"
+"panean raportadon kaj ankaŭ povas esti la kaŭzo de ĉi tiu paneo.</para>\n"
 "<para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj reen\n"
 "in por certigi, ke la ĝisdatigo estas plene aplikata kaj estos ne kaŭzas\n"
 "ajn kromefikojn.</para>"
@@ -1106,7 +1106,7 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
-"Via kraŝo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
+"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
 "estas duplikato de la <emphasis strong='true'>fermita</emphasis> <link url="
 "\"%2\">Cimo %2</link>."
 
@@ -1116,7 +1116,7 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
-"Via kraŝo jam estis raportita kiel <link url=\"%1\">Cimo %1</link> kiu estis "
+"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link> kiu estis "
 "<emphasis strong='true'>fermita</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:39
@@ -1126,7 +1126,7 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
-"Via kraŝo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
+"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
 "estas <emphasis strong='true'>duplikato</emphasis> de <link url=\"%2\">Cimo "
 "%2</link>"
 
@@ -1136,7 +1136,7 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
-"Via kraŝo estas <emphasis strong='true'>duplikato</emphasis> kaj jam estis "
+"Via paneo estas <emphasis strong='true'>duplikato</emphasis> kaj jam estis "
 "raportita kiel <link url=\"%1\">Cimo %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
@@ -1212,9 +1212,9 @@ msgid ""
 msgstr ""
 "<subtitle>Ekzemploj de bonaj titoloj:</subtitle>\n"
 "<list>\n"
-"<item>Plasmo kraŝis post aldonado de la fenestraĵo de Notoj kaj skribado sur "
+"<item>Plasmo paneis post aldonado de la fenestraĵo de Notoj kaj skribado sur "
 "ĝi</item>\n"
-"<item>Konqueror kraŝis dum aliro al la Fejsbuka aplikaĵo ' X'</item>\n"
+"<item>Konqueror paneis dum aliro al la Fejsbuka aplikaĵo ' X'</item>\n"
 "<item>Kopete fermiĝis post rekomenco de la komputilo kaj paroli kun MSN-"
 "amiko</item>\n"
 "<item>Kate fermiĝis dum redaktado de protokoldosiero kaj premante la Forigi "
@@ -1224,7 +1224,7 @@ msgstr ""
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Informoj pri la kraŝo:"
+msgstr "Informoj pri la paneo:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1242,7 +1242,7 @@ msgstr ""
 "<subtitle>Priskribu kiel eble plej detale la kraŝcirkonstancojn:</subtitle>\n"
 "<list>\n"
 "<item>Detaligi kiujn agojn vi faris ene kaj ekster la aplikaĵo momento antaŭ "
-"la kraŝo.</item>\n"
+"la paneo.</item>\n"
 "<item>Rimarku, se vi rimarkis iun nekutiman konduton en la aplikaĵo aŭ en la "
 "tuta medio.</item>\n"
 "<item>Rimarku ajnan nedefaŭltan agordon en la aplikaĵo</item>\n"
@@ -1274,7 +1274,7 @@ msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<note>La kraŝo kaj sistema informo estos aŭtomate aldonitaj al la cimraporto."
+"<note>La paneo kaj sistema informo estos aŭtomate aldonitaj al la cimraporto."
 "</note>"
 
 #: qml/ReportPage.qml:148
@@ -1292,7 +1292,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"Uzu ĉi tiun butonon por konservi la kraŝinformojn al dosiero por manlibro "
+"Uzu ĉi tiun butonon por konservi la paneinformojn al dosiero por manlibro "
 "raportado."
 
 #: qml/SendingPage.qml:63
@@ -1336,7 +1336,7 @@ msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
 msgstr ""
-"Ĉi tiu asistanto analizos la kraŝinformojn kaj gvidos vin tra la cimraporta "
+"Ĉi tiu asistanto analizos la paneinformojn kaj gvidos vin tra la cimraporta "
 "procezo."
 
 #: qml/WelcomePage.qml:32
@@ -1485,11 +1485,3 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
-
-#~ msgctxt "@title CLI title"
-#~ msgid "DrKonqi Intensive Care"
-#~ msgstr "DrKonqi Intensiva Prizorgo"
-
-#~ msgctxt "@title:window"
-#~ msgid "Intensive Care"
-#~ msgstr "Intensa Prizorgo"
