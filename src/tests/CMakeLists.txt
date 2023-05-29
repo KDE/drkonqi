@@ -5,7 +5,7 @@ endif()
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-find_package(Qt${QT_MAJOR_VERSION}Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
+find_package(Qt6Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
 
 # Test helper for systeminformationtest
 if(HAVE_UNAME)
