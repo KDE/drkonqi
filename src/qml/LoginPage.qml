@@ -101,7 +101,7 @@ for requesting further information. If you do not have one, you can freely <link
         actions: [
             Kirigami.Action {
                 id: loginAction
-                enabled: emailField.text.length() > 0 && passwordField.text.length() > 0
+                enabled: emailField.text.length > 0 && passwordField.text.length > 0
                 icon.name: "network-connect"
                 text: i18nc("@action:button", "Login")
                 tooltip: xi18nc("@info:tooltip", "Use this button to login to the KDE bug tracking system using the provided e-mail address and password.")
