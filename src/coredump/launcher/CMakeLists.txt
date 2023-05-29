@@ -17,6 +17,6 @@ install(
     DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
 
-add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp)
+add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp NotifierTruck.h)
 target_link_libraries(KDECoredumpNotifierTruck Qt::Core KF6::Notifications KF6::KIOGui)
 install(TARGETS KDECoredumpNotifierTruck DESTINATION ${KDE_INSTALL_PLUGINDIR}/drkonqi/)

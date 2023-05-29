@@ -5,6 +5,12 @@ set(BACKTRACEPARSER_SRCS
     backtraceparsernull.cpp
     backtraceparserlldb.cpp
     backtraceparsercdb.cpp
+    backtraceparser.h
+    backtraceparsergdb.h
+    backtraceparserkdbgwin.h
+    backtraceparsernull.h
+    backtraceparserlldb.h
+    backtraceparsercdb.h
 )
 
 ecm_qt_declare_logging_category(

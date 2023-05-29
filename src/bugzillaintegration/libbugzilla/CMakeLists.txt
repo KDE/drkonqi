@@ -21,6 +21,29 @@ set(lib_SRCS
     models/comment.cpp
     models/logindetails.cpp
     models/product.cpp
+
+    apijob.h
+    bugzilla.h
+    connection.h
+    exceptions.h
+    query.h
+    clients/attachmentclient.h
+    clients/bugclient.h
+    clients/bugfieldclient.h
+    clients/commentclient.h
+    clients/clientbase.h
+    clients/productclient.h
+    clients/commands/bugsearch.h
+    clients/commands/bugupdate.h
+    clients/commands/jsoncommand.h
+    clients/commands/newattachment.h
+    clients/commands/newbug.h
+    clients/commands/querycommand.h
+    models/bug.h
+    models/bugfield.h
+    models/comment.h
+    models/logindetails.h
+    models/product.h
 )
 
 ecm_qt_declare_logging_category(

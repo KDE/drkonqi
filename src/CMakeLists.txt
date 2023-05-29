@@ -48,6 +48,32 @@ set(drkonqi_SRCS
     qmlextensions/commentmodel.cpp
     qmlextensions/qobjectlistmodel.cpp
     qmlextensions/doctore.cpp
+    drkonqidialog.h
+    statuswidget.h
+    backtraceratingwidget.h
+    backtracewidget.h
+    backtracegenerator.h
+    drkonqi.h
+    drkonqibackends.h
+    detachedprocessmonitor.h
+    debugpackageinstaller.h
+    systeminformation.h
+    crashedapplication.h
+    debugger.h
+    debuggerlaunchers.h
+    ptracer.h
+    debuggermanager.h
+    statusnotifier.h
+    statusnotifier_activationclosetimer.h
+    linuxprocmapsparser.h
+    drkonqi_globals.h
+    qmlextensions/duplicatemodel.h
+    qmlextensions/platformmodel.h
+    qmlextensions/reproducibilitymodel.h
+    qmlextensions/credentialstore.h
+    qmlextensions/commentmodel.h
+    qmlextensions/qobjectlistmodel.h
+    qmlextensions/doctore.h
 )
 
 ki18n_wrap_ui(drkonqi_SRCS
@@ -68,6 +94,12 @@ set(drkonqi_SRCS
     bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
     bugzillaintegration/sentrybeacon.cpp
+    bugzillaintegration/bugzillalib.h
+    bugzillaintegration/reportinterface.h
+    bugzillaintegration/productmapping.h
+    bugzillaintegration/parsebugbacktraces.h
+    bugzillaintegration/duplicatefinderjob.h
+    bugzillaintegration/sentrybeacon.h
 )
 
 ecm_qt_declare_logging_category(
@@ -109,7 +141,7 @@ target_link_libraries(
 if(Systemd_FOUND)
     add_subdirectory(coredump)
 
-    target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp)
+    target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp coredumpbackend.h)
     target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
     if(Systemd_VERSION GREATER 247)
         add_compile_definitions(COREDUMPD_SUPPORTS_DEBUGGER_ARGUMENTS)
