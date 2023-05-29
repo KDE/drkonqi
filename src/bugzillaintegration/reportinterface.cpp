@@ -391,7 +391,7 @@ void ReportInterface::sendBugReport()
         Q_ASSERT(!report.description.isEmpty());
 
         connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
-        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, [=](int bugId) {
+        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, [this, attach](int bugId) {
             if (attach) {
                 m_attachToBugNumber = bugId;
                 attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
