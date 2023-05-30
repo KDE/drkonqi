@@ -16,13 +16,13 @@
 # Vincent Pinon <vpinon@kde.org>, 2015, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 # ~
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-01 02:10+0000\n"
+"POT-Creation-Date: 2023-05-30 02:42+0000\n"
 "PO-Revision-Date: 2023-04-01 14:20+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -325,19 +325,19 @@ msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Le sous-processus s'est planté. Veuillez vérifier votre installation."
 
-#: coredump/gui/main.cpp:33
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Afficheur des plantages de processus"
 
-#: coredump/gui/main.cpp:35
+#: coredump/gui/main.cpp:32
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Fournit un affichage détaillé des anciens plantages"
 
-#: coredump/gui/main.cpp:37
+#: coredump/gui/main.cpp:34
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2022, les auteurs de DrKonqi"
@@ -588,132 +588,132 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Déboguer dans %1"
 
-#: main.cpp:112
+#: main.cpp:109
 #, kde-format
 msgid "Crash Handler"
 msgstr "Gestionnaire de plantages"
 
-#: main.cpp:114
+#: main.cpp:111
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Le gestionnaire de plantage de KDE fournit des informations à l'utilisateur "
 "lorsqu'un programme s'est planté."
 
-#: main.cpp:117
+#: main.cpp:114
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, les auteurs de DrKonqi"
 
-#: main.cpp:118
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:119
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:120
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:121
+#: main.cpp:118
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:128
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Le signal <numéro> qui a été intercepté"
 
-#: main.cpp:129
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Nom> du programme"
 
-#: main.cpp:130
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Emplacement> de l'exécutable"
 
-#: main.cpp:131
+#: main.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "La <version> du programme"
 
-#: main.cpp:132
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "L'<adresse> de bogue à utiliser"
 
-#: main.cpp:133
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Nom <traduit> du programme"
 
-#: main.cpp:134
+#: main.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nom du produit sous Bugzilla"
 
-#: main.cpp:135
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Le numéro de processus <PID> du programme"
 
-#: main.cpp:136
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "<ID> de démarrage du programme"
 
-#: main.cpp:137
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Le programme a été démarré par « kdeinit »"
 
-#: main.cpp:138
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Désactiver les accès aléatoires au disque"
 
-#: main.cpp:139
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Le programme a déjà été redémarré"
 
-#: main.cpp:142
+#: main.cpp:139
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Laisser le programme lancé et générer une pile d'appels au démarrage"
 
-#: main.cpp:144
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "L'<identifiant> du processus défaillant"
 
-#: main.cpp:145
+#: main.cpp:142
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
