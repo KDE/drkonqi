@@ -62,7 +62,7 @@ set_package_properties(KUserFeedbackQt6 PROPERTIES TYPE REQUIRED PURPOSE "Checki
 
 ecm_find_qmlmodule(org.kde.kirigami 2.19)
 ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
-ecm_find_qmlmodule(org.kde.kcm 1.6)
+ecm_find_qmlmodule(org.kde.kcmutils 1.0)
 ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2

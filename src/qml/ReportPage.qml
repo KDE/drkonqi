@@ -7,7 +7,7 @@ import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 
 import org.kde.drkonqi 1.0
-import org.kde.kcm 1.6 as KCM // why ContextualHelpButton is in kcm is anyone's guess
+import org.kde.kcmutils as KCM // why ContextualHelpButton is in kcm is anyone's guess
 
 Kirigami.Page {
     id: page
