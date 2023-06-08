@@ -65,7 +65,7 @@ ecm_find_qmlmodule(org.kde.kcmutils 1.0)
 ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
-    KF 5.92
+    KF 5.240
 )
 
 find_package(Systemd)
