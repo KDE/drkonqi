@@ -84,8 +84,10 @@ void StatusWidget::addCustomStatusWidget(QWidget *widget)
 
 void StatusWidget::setBusyCursor()
 {
-    QApplication::setOverrideCursor(Qt::WaitCursor);
-    m_cursorStackCount++;
+    if (isVisible()) {
+        QApplication::setOverrideCursor(Qt::WaitCursor);
+        m_cursorStackCount++;
+    }
 }
 
 void StatusWidget::setIdleCursor()
