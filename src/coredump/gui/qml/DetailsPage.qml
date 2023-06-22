@@ -94,8 +94,8 @@ Kirigami.ScrollablePage {
 
         DrKonqi.DetailsLoader {
             id: detailsLoader
-            onDetails: text = details
-            onError: {
+            onDetails: details => text = details
+            onError: error => {
                 console.log("error" + error)
                 errorText = error
             }
