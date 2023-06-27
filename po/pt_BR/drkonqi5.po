@@ -8,7 +8,7 @@
 # Marcus Gama <marcus.gama@gmail.com>, 2004.
 # Lisiane Sztoltz Teixeira <lisiane.teixeira@gmail.com>, 2005.
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010, 2012.
 # Rubens de Souza Matos Júnior <rubens.matos@gmail.com>, 2010.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2019.
@@ -18,25 +18,29 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-22 02:07+0000\n"
-"PO-Revision-Date: 2022-08-19 14:46-0300\n"
+"PO-Revision-Date: 2023-06-26 16:44-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Elvis Pfützenreuter, Lisiane Sztoltz Teixeira, André Marcelo Alvarenga"
+msgstr ""
+"Elvis Pfützenreuter, Lisiane Sztoltz Teixeira, André Marcelo Alvarenga, "
+"Geraldo Simião"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "epx@conectiva.com.br, lisiane@kdemail.net, alvarenga@kde.org"
+msgstr ""
+"epx@conectiva.com.br, lisiane@kdemail.net, alvarenga@kde.org, "
+"geraldosimiao@fedoraproject.org"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -301,25 +305,25 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Subprocesso encerrado com erro: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "O subprocesso travou. Verifique sua instalação."
 
 #: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Visualizador de processos com falhas"
 
 #: coredump/gui/main.cpp:32
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Oferece visualização detalhada de falhas e travamentos anteriores"
 
 #: coredump/gui/main.cpp:34
 #, kde-format
@@ -334,40 +338,37 @@ msgstr "Detalhes"
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Copiar para a área de transferência"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Executar depurador interativo"
 
 #: coredump/gui/qml/ListPage.qml:13
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Falhas"
 
 #: coredump/gui/qml/ListPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Enviar o relatório de falha"
+msgstr "Carregando o relatório de falha"
 
 #: coredump/gui/qml/ListPage.qml:55
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Nenhum processo travou ainda"
 
 #: coredump/gui/qml/ListPage.qml:63
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Nenhum processo corresponde ao termo pesquisado"
 
 #: coredump/gui/qml/main.qml:12
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Visão geral"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -578,19 +579,16 @@ msgid "Debug in %1"
 msgstr "Depurar no %1"
 
 #: main.cpp:109
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "Gerenciador de falhas da KDE"
+msgstr "Gerenciador de falhas"
 
 #: main.cpp:111
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"O gerenciador de falhas da KDE oferece um retorno ao usuário, no caso de "
-"falha no aplicativo."
+"O gerenciador de falhas oferece um retorno ao usuário, no caso de falha no "
+"aplicativo."
 
 #: main.cpp:114
 #, kde-format
@@ -717,8 +715,6 @@ msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Obtendo o \"backtrace\" (informação automática da falha)"
 
 #: qml/BacktracePage.qml:25
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Exibir o conteúdo do \"backtrace\" (avançado)"
@@ -798,14 +794,9 @@ msgstr ""
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Não suficientemente útil"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
@@ -813,7 +804,8 @@ msgid ""
 "report dialog.</para>"
 msgstr ""
 "A informação que você pode fornecer não é considerada suficientemente útil "
-"neste caso."
+"neste caso. Se você não conseguir pensar em mais nenhuma informação, pode "
+"fechar a caixa de diálogo do relatório de erros.</para>"
 
 #: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
@@ -854,14 +846,6 @@ msgid "Save"
 msgstr "Salvar"
 
 #: qml/DeveloperPage.qml:109
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -874,24 +858,16 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
-"<h2>O que é um \"backtrace\"?</h2><p>Um \"backtrace\" (informação de falha) "
-"basicamente descreve o que estava acontecendo dentro do aplicativo quando "
-"ele falhou, para que os desenvolvedores possam rastrear onde começou o "
+"<subtitle>O que é um \"backtrace\"?</subtitle><para>Um \"backtrace"
+"\" (informação de falha)\n"
+"basicamente descreve o que estava acontecendo dentro do aplicativo quando\n"
+"ele falhou, para que os desenvolvedores possam rastrear onde começou o\n"
 "problema. O \"backtrace\" pode parecer sem sentido para você, mas ele pode "
-"conter muitas informações úteis.<br />Os \"backtraces\" são normalmente "
-"usados durante as depurações interativas e 'post-mortem'.</p>"
+"conter muitas informações úteis.<nl />Os \"backtraces\" são normalmente\n"
+"usados durante as depurações interativas e 'post-mortem'.</para>"
 
 # A tradução foi reduzida para ficar totalmente visível na janela, sem precisar redimensionar. (Alvarenga)
 #: qml/DeveloperPage.qml:157
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -903,20 +879,13 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 "Clique no botão <interface>Instalar símbolos de depuração</interface> para "
-"instalar os pacotes de informação de depuração que faltam. Se esse método "
+"instalar os pacotes de informação de depuração que faltam. Se esse método\n"
 "não funcionar: Leia <link url='%1'>Como criar relatórios de erros úteis</"
-"link> para aprender a gerar um \"backtrace\" útil; instale os pacotes "
+"link> para aprender a gerar um \"backtrace\" útil; instale os pacotes\n"
 "necessários (<link url='%2'>lista de arquivos</link>) e clique no botão "
 "<interface>Recarregar</interface>."
 
 #: qml/DeveloperPage.qml:165
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -924,24 +893,21 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"Leia o tutorial <link url='%1'>Como criar relatórios de erros úteis</link> "
+"Leia o tutorial <link url='%1'>Como criar relatórios de falha úteis</link> "
 "para aprender a obter um \"backtrace\" útil; instale os pacotes necessários "
-"(<link url='%2'>lista de arquivos</link>) e clique no botão "
-"<interface>Recarregar</interface>."
+"(<link url='%2'>\n"
+" lista de arquivos</link>) e clique no botão <interface>Recarregar</"
+"interface>."
 
 #: qml/DeveloperPage.qml:177
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>You need to first install the debugger application (%1) then "
-#| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<strong>Você precisa instalar o aplicativo de depuração (%1) e clicar no "
-"botão <interface>Recarregar</interface>.</strong>"
+"<emphasis strong='true'>Você precisa primeiro instalar o aplicativo de "
+"depuração (%1) e depois clicar no botão <interface>Atualizar</interface>.</"
+"emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -949,12 +915,9 @@ msgid "Look for Possible Duplicate Reports"
 msgstr "Procurar por possíveis relatórios duplicados"
 
 #: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates..."
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "Pesquisando por duplicados..."
+msgstr "Pesquisando base de dados por bugs duplicados..."
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -976,6 +939,8 @@ msgstr "Duplicado?"
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr ""
+"Você tem certeza de que a falha que aconteceu com você é uma duplicata deste "
+"relatório de erros?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
@@ -983,25 +948,18 @@ msgid "Crash is a duplicate"
 msgstr "A falha é um duplicado"
 
 #: qml/DuplicatesPage.qml:76
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
-"Use este botão para sugerir que a falha obtida está relacionada com este "
-"relatório de erro"
+"Use esta ação quando tiver certeza de que sua falha é uma duplicata deste "
+"relatório de erros"
 
 #: qml/DuplicatesPage.qml:87
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr "Não existem duplicados reais"
+msgstr "A falha não é uma duplicata"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
@@ -1009,11 +967,6 @@ msgid "Suggest this crash is related"
 msgstr "Sugerir que esta falha está relacionada"
 
 #: qml/DuplicatesPage.qml:97
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -1021,16 +974,15 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
-"Use este botão para sugerir que a falha obtida está relacionada com este "
-"relatório de erro"
+"Use este botão para sugerir que \n"
+"                                     a falha obtida está relacionada com "
+"este\n"
+"                                     relatório de erro"
 
 #: qml/DuplicatesPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "Sugerir que esta falha está relacionada"
+msgstr "Esta falha não está relacionada"
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1058,14 +1010,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Salvar a informação de autenticação no sistema de carteiras do KDE"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1077,7 +1021,7 @@ msgid ""
 msgstr ""
 "<note>Você precisa ter uma conta de usuário no <link url='%1'>Sistema de "
 "registro de erros do KDE</link> para poder enviar um relatório de erros. "
-"Isto é necessário porque pode ser preciso contatá-lo mais tarde, para "
+"Isto é necessário porque pode ser preciso contatá-lo mais tarde, para\n"
 "solicitar mais informações. Se não tiver uma, você pode <link url='%2'>criar "
 "uma aqui</link>. Por favor, não use contas de e-mail descartáveis.</note>"
 
@@ -1096,9 +1040,6 @@ msgstr ""
 "fornecendo o endereço de e-mail e senha."
 
 #: qml/MainPage.qml:23
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Relatar erro"
@@ -1109,29 +1050,16 @@ msgid "Starts the bug report assistant."
 msgstr "Inicia o assistente de relatório de erros."
 
 #: qml/MainPage.qml:30
-#, fuzzy
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "&Reiniciar aplicativo"
+msgstr "Reiniciar aplicativo"
 
 #: qml/MainPage.qml:36
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "Informações do &desenvolvedor"
+msgstr "Informações do desenvolvedor"
 
 #: qml/MainPage.qml:64
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the automatic reporting "
-#| "process is disabled to reduce the risks of failing again.<nl /><nl /"
-#| ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
-#| "tracking system. Do not forget to include the backtrace from the "
-#| "<interface>Developer Information</interface> tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1142,20 +1070,15 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
-"<para>Como o próprio manipulador de erros falhou, o processo de comunicação "
-"automático está desabilitado, para reduzir os riscos de repetição da falha."
-"<nl /><nl />Por favor, <link url='%1'>comunique manualmente</link> este erro "
-"no sistema de registro de erros do KDE. Não esqueça de incluir o \"backtrace"
-"\" da aba <interface>Informações dos desenvolvedores</interface>.</para>"
+"<para>Como o próprio manipulador de erros falhou,\n"
+"o processo de comunicação automático está desabilitado,\n"
+" para reduzir os riscos de repetição da falha.\n"
+"<nl /><nl /><link url='%1'>comunique manualmente\n"
+"</link> este erro no sistema de registro de erros do KDE.\n"
+"Não esqueça de incluir o \"backtrace\" da aba <interface>\n"
+" Informações dos desenvolvedores</interface>.</para>"
 
 #: qml/MainPage.qml:76
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />You can manually report this bug to "
-#| "%1 (including the backtrace from the <interface>Developer Information</"
-#| "interface> tab.)</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1164,20 +1087,12 @@ msgid ""
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
 "<para>O assistente de relatórios está desabilitado porque o diálogo da "
-"rotina de gestão de erros foi iniciada no modo de segurança.<nl />Você pode "
-"relatar manualmente este erro a %1 (incluindo o \"backtrace\" da aba "
-"<interface>Informações dos desenvolvedores</interface>.)</para>"
+"rotina de gestão de erros foi iniciada no modo de segurança.<nl />\n"
+"Você pode relatar manualmente este erro a <link> %1<link> (incluindo o "
+"\"backtrace\" da aba <interface>Informações dos desenvolvedores</"
+"interface>.)</para>"
 
 #: qml/MainPage.qml:83
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crashed application "
-#| "appears to have been updated or uninstalled since it had been started. "
-#| "This prevents accurate crash reporting and can also be the cause of this "
-#| "crash.</para><para>After updating it is always a good idea to log out and "
-#| "back in to make sure the update is fully applied and will not cause any "
-#| "side effects.</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1188,94 +1103,68 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
-"<para>O assistente de relatórios está desabilitado porque o aplicativo que "
-"finalizou de forma inesperada parece ter sido atualizado ou desinstalado "
-"depois de ter sido iniciado. Isso impede um relatório mais preciso do "
-"problema e pode também ser a causa dessa falha.</para><para>Depois de "
-"atualizar é sempre uma boa ideia encerrar e reiniciar a sessão para garantir "
-"que a atualização foi completamente aplicada e não irá provocar nenhum "
-"efeito colateral.</para>"
+"<para>O assistente de relatórios está desabilitado porque\n"
+" o aplicativo que finalizou de forma inesperada\n"
+" parece ter sido atualizado ou desinstalado depois de ter sido iniciado.\n"
+" Isso impede um relatório mais preciso do problema\n"
+" e pode também ser a causa dessa falha.</para>\n"
+" Depois deatualizar é sempre uma boa ideia\n"
+" encerrar e reiniciar a sessão para garantir que a atualização foi "
+"completamente aplicada e não irá provocar nenhum efeito colateral.</para>"
 
 #: qml/MainPage.qml:109
-#, fuzzy
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#| "Time: %5 %6</para>"
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
 "<para>Executável: <application>%1</application> PID: %2 Sinal: %3 (%4) Data/"
-"Hora: %5 %6</para>"
+"hora: %5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "Seu problema já foi indicado no relatório de erro %1."
+msgstr "Este problema já foi relatado"
 
 #: qml/PerfectDuplicatePage.qml:29
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
-"A sua falha já foi relatada como <a href=\"%1\">Erro %1</a>, a qual é uma "
-"duplicata do <a href=\"%2\">Erro %2</a> que foi <strong>fechado</strong>."
+"Sua falha já foi relatada como <link url=\"%1\">Erro %1</link>, que é uma "
+"duplicata do <emphasis strong='true'>fechado</emphasis> <link url=\"%2 "
+"\">Erro %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:34
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which "
-#| "has been <strong>closed</strong>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
-"A sua falha já foi relatada como <a href=\"%1\">Erro %1</a>, a qual foi "
-"<strong>fechada</strong>."
+"Sua falha já foi relatada como <link url=\"%1\">Erro %1</link> o qual já foi "
+"<emphasis strong='true'>fechado</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:39
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>"
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
-"A sua falha já foi relatada como <a href=\"%1\">Erro %1</a>, a qual é uma "
-"<strong>duplicata</strong> do <a href=\"%2\">Erro %2</a>"
+"Sua falha já foi relatada como <link url=\"%1\">Erro %1</link>, a qual é uma "
+"<emphasis strong='true'>duplicata</emphasis> do <link url=\"%2\"> Erro %2</"
+"link>"
 
 #: qml/PerfectDuplicatePage.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash is a <strong>duplicate</strong> and has already been reported "
-#| "as <a href=\"%1\">Bug %1</a>."
 msgctxt "@info"
 msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
-"A sua falha é uma <strong>duplicata</strong> e já foi relatada como <a href="
-"\"%1\">Erro %1</a>."
+"A sua falha é uma <emphasis strong='true'>duplicata</emphasis> e já foi "
+"relatada como<link url=\"%1\">Erro %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1283,16 +1172,18 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"Você pode optar por acrescentar informações adicionais, mas só deve fazê-lo "
+"se tiver informações novas ou solicitadas."
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "Anexar informações adicionais"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1300,20 +1191,13 @@ msgid "Preview the Report"
 msgstr "Visualizar o relatório"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "This is a preview of the report's contents which will be sent. \n"
-#| "\n"
-#| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
-"Esta é uma prévia do conteúdo do relatório que será enviado. \n"
-"\n"
-"Se quiser modificá-lo, volte para as páginas anteriores."
+"<para>Esta é uma prévia do conteúdo do relatório que será enviado.</para> "
+"<para>Se quiser modificá-lo, volte para as páginas anteriores.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
@@ -1323,7 +1207,7 @@ msgstr "Enviar"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Aguardando dados..."
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1331,33 +1215,16 @@ msgid "Enter the Details about the Crash"
 msgstr "Digitar os detalhes sobre a falha"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr ""
-"<strong>Por favor, forneça as seguintes informações em inglês.</strong>"
+msgstr "Forneça as seguintes informações em inglês."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Conteúdo do relatório"
+msgstr "Título do relatório de erros:"
 
 #: qml/ReportPage.qml:40
-#, fuzzy
-#| msgctxt "@info:tooltip examples of good bug report titles"
-#| msgid ""
-#| "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after "
-#| "adding the Notes widget and writing on it\"<nl />\"Konqueror crashed when "
-#| "accessing the Facebook application 'X'\"<nl />\"Kopete suddenly closed "
-#| "after resuming the computer and talking to a MSN buddy\"<nl />\"Kate "
-#| "closed while editing a log file and pressing the Delete key a couple of "
-#| "times\""
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1370,19 +1237,21 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
-"<strong>Exemplos de bons títulos:</strong><nl />\"O Plasma falhou ao "
-"adicionar o widget Notas e ao escrever nele\"<nl />\"O Konqueror falhou ao "
-"acessar o aplicativo do Facebook 'X'\"<nl />\"O Kopete fechou "
-"inesperadamente ao retornar o computador do modo de suspensão e ao falar com "
-"um contato pelo MSN\"<nl />\"O Kate foi fechado ao editar um arquivo de log "
-"e ao pressionar a tecla Delete algumas vezes\""
+"<subtitle>Exemplos de bons títulos:</subtitle>\n"
+"<list>\n"
+" <item>O Plasma travou após adicionar o widget do Notes e escrever nele</"
+"item>\n"
+" <item>O Konqueror travou ao acessar o aplicativo 'x' do Facebook</item>\n"
+" <item>Kopete fechou após o computador retornar da suspensão enquanto "
+"conversava com um amigo do MSN</item>\n"
+" <item>Kate fechou enquanto editava um arquivo de log e pressionava a tecla "
+"Delete algumas vezes</item>\n"
+" </list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Informações sobre o texto da falha"
+msgstr "Informações sobre a falha:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1397,6 +1266,15 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Descreva com o máximo de detalhes possível as circunstâncias da "
+"falha ocorrida:</subtitle>\n"
+"<list>\n"
+"<item>Detalhe quais ações você estavarealizando dentro e fora do aplicativo "
+"um pouco antes do travamento.</item>\n"
+"<item>Observe se você notou algum comportamento incomum no aplicativo ouem "
+"todo o ambiente.</item>\n"
+"<item>Relate qualquer configuração fora dopadrão no aplicativo</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1409,86 +1287,61 @@ msgid "Provide more information"
 msgstr "Fornecer mais informações"
 
 #: qml/ReportPage.qml:108
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Método de distribuição:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "A plataforma do KDE foi compilada a partir do código-fonte"
 
 #: qml/ReportPage.qml:139
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<i>Note:</i> The crash and system information will be automatically added "
-#| "to the bug report."
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<i>Nota:</i> A falha e as informações do sistema serão automaticamente "
-"adicionadas ao relatório de erro."
+"<note>A falha e as informações do sistema serão automaticamente adicionadas "
+"ao relatório de erro.</note>"
 
 #: qml/ReportPage.qml:148
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr "Visualizar o relatório"
+msgstr "Visualizar relatório"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "&Salvar para arquivo..."
+msgstr "Salvar para arquivo"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"Use este botão para exibir informações sobre o relatório de erro selecionado."
+"Use este botão para salvar as informações a respeito da falha em um arquivo "
+"para usar depois em um relatório de erro gerado manualmente."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "Não foi possível contactar o bugs.kde.org: <message>%1</message>"
+msgstr "Envio do relatório de erros falhou: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Tentar enviar novamente"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Enviando relatório de erros..."
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Assistente de Comunicação de Erros"
+msgstr "Relatório de falha enviado"
 
 #: qml/SentPage.qml:18
 msgctxt "@info"
@@ -1496,31 +1349,16 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
-"Relatório de erros enviado.<nl/>URL: <link>%1</link><nl/>Obrigado por fazer "
-"parte do KDE. Você pode fechar esta janela agora."
+msgstr "Obrigado por fazer parte do KDE. Você pode fechar esta janela agora."
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
 msgstr "Bem-vindo ao assistente de relatório"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
@@ -1530,14 +1368,6 @@ msgstr ""
 "procedimento de comunicação de erros."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info note before starting the bug reporting process"
-#| msgid ""
-#| "<p><i>Note:</i> Since communication between you and the developers is "
-#| "required for effective debugging, to continue reporting this bug "
-#| "<strong>it is required for you to agree that developers may contact you.</"
-#| "strong></p><p>Feel free to close this dialog if you do not accept this.</"
-#| "p>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1547,16 +1377,17 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
-"<p><i>Nota:</i> Uma vez que a comunicação entre você e os desenvolvedores é "
+"<para><note>Uma vez que a comunicação entre você e os desenvolvedores é "
 "necessária para uma depuração efetiva, para continuar a relatar este erro "
-"<strong>é necessário que você concorde que os programadores possam contatá-"
-"lo.</strong></p><p>Sinta-se à vontade para fechar esta janela se não aceitar "
-"esta opção.</p>"
+"<emphasis strong='true'>é necessário que você concorde que os programadores "
+"possam contatá-lo</emphasis> .\n"
+" </note></para><para>Sinta-se à vontade para fechar esta caixa de diálogo se "
+"não aceitar.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Eu aceito ser contactado"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1642,27 +1473,29 @@ msgstr "Reiniciar aplicativo"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
 msgstr ""
+"O nome do depurador passou para o gerador de análise sintática \"parser "
+"factory\""
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Um arquivo contendo o \"backtrace\"."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "Teste do BugzillaLib (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Aplicativo de teste para a biblioteca do gerenciador de problemas"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
@@ -1673,13 +1506,13 @@ msgstr "(C) 2009, Desenvolvedores do DrKonqi2"
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "Nome de usuário no bugstest.kde.org"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "Senha no bugstest.kde.org"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
