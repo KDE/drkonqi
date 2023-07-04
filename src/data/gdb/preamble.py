@@ -414,7 +414,6 @@ class SentryEvent:
         if not distro_build_id:
             distro_build_id = distro.os_release_attr('variant_id')
 
-        print(get_stdout(['qdbus', '--system', 'org.freedesktop.systemd1', '/org/freedesktop/systemd1', 'org.freedesktop.systemd1.Manager.Virtualization']))
         sentry_event = { # https://develop.sentry.dev/sdk/event-payloads/
             "debug_meta": { # https://develop.sentry.dev/sdk/event-payloads/debugmeta/
                 "images": SentryImages().to_list()

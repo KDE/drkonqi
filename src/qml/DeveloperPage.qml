@@ -22,10 +22,6 @@ Kirigami.ScrollablePage {
     bottomPadding: 0
 
     title: i18nc("@title:window", "Developer Information")
-    onStateChanged: {
-        console.log("state")
-        console.log(state)
-    }
 
     actions: [
         Kirigami.Action {

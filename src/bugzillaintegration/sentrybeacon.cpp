@@ -52,7 +52,6 @@ void SentryBeacon::onDSNsReceived()
     const auto document = QJsonDocument::fromJson(reply->readAll());
     const auto object = document.object();
 
-    qDebug() << document << document.isObject() << object;
     if (maybePostStore(object.value(application))) {
         return;
     }
@@ -114,7 +113,6 @@ void SentryBeacon::onStoreSent()
 
 void SentryBeacon::postUserFeedback()
 {
-    qDebug() << m_context.key << m_context.index;
     const QJsonObject feedbackObject = {
         {QStringLiteral("event_id"), QJsonValue::fromVariant(m_eventID)},
         {QStringLiteral("name"), QStringLiteral("Anonymous")},
