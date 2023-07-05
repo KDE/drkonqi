@@ -13,7 +13,11 @@ Kirigami.Page {
 
     title: CrashedApplication.name
 
-    Component.onCompleted: BacktraceGenerator.start()
+    Component.onCompleted: {
+        if (BacktraceGenerator.state === BacktraceGenerator.NotLoaded) {
+            BacktraceGenerator.start()
+        }
+    }
 
     actions: [
         Kirigami.Action {
