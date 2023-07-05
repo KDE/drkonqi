@@ -21,6 +21,7 @@ public:
 
     void sendEvent();
     void sendUserFeedback(const QString &feedback);
+    bool hasEventSent() const;
 
 Q_SIGNALS:
     void eventSent();
@@ -45,4 +46,5 @@ private:
     QByteArray m_eventPayload;
     QVariant m_eventID;
     bool m_started = false;
+    bool m_eventSent = false;
 };

@@ -103,6 +103,7 @@ void SentryBeacon::onStoreSent()
     const auto replyBlob = QJsonDocument::fromJson(reply->readAll());
     m_eventID = replyBlob.object().value(QStringLiteral("id"));
 
+    m_eventSent = true;
     Q_EMIT eventSent();
     if (!m_userFeedback.isEmpty()) { // a feedback was set in the meantime, apply it; otherwise we wait for sendFeedback()
         postUserFeedback();
@@ -137,4 +138,9 @@ void SentryBeacon::onUserFeedbackSent()
     reply->deleteLater();
     qDebug() << reply->readAll();
     Q_EMIT userFeedbackSent();
+}
+
+bool SentryBeacon::hasEventSent() const
+{
+    return m_eventSent;
 }
