@@ -61,10 +61,10 @@ void DrKonqiDialog::show()
     qmlRegisterType<DuplicateModel>("org.kde.drkonqi", 1, 0, "DuplicateModel");
     qmlRegisterType<PlatformModel>("org.kde.drkonqi", 1, 0, "PlatformModel");
     qmlRegisterType<ReproducibilityModel>("org.kde.drkonqi", 1, 0, "ReproducibilityModel");
-    qmlRegisterType<ReportInterface>("org.kde.drkonqi", 1, 0, "ReportInterface");
     qmlRegisterType<CredentialStore>("org.kde.drkonqi", 1, 0, "CredentialStore");
     qmlRegisterType<DebugPackageInstaller>("org.kde.drkonqi", 1, 0, "DebugPackageInstaller");
 
+    qmlRegisterSingletonInstance("org.kde.drkonqi", 1, 0, "ReportInterface", ReportInterface::self());
     qmlRegisterSingletonInstance("org.kde.drkonqi", 1, 0, "CrashedApplication", DrKonqi::crashedApplication());
     qmlRegisterSingletonInstance("org.kde.drkonqi", 1, 0, "BacktraceGenerator", DrKonqi::debuggerManager()->backtraceGenerator());
 

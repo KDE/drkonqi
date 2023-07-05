@@ -66,7 +66,8 @@ public:
     };
     Q_ENUM(DrKonqiStamp)
 
-    explicit ReportInterface(QObject *parent = nullptr);
+    static ReportInterface *self();
+
     Q_SIGNAL void awarenessChanged();
 
     Q_INVOKABLE void setBugAwarenessPageData(bool, ReportInterface::Reproducible, bool, bool, bool);
@@ -144,6 +145,7 @@ Q_SIGNALS:
     void provideUnusualBehaviorChanged();
 
 private:
+    explicit ReportInterface(QObject *parent = nullptr);
     // Attach backtrace to bug. Only used internally when the comment isn't
     // meant to be the full report.
     void attachBacktrace(const QString &comment);

@@ -10,7 +10,8 @@ import org.kde.drkonqi 1.0
 Kirigami.ApplicationWindow {
     id: appWindow
 
-    property alias bugzilla: reportInterface.bugzilla
+    property var reportInterface: ReportInterface
+    property var bugzilla: reportInterface.bugzilla
 
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton | Kirigami.ApplicationHeaderStyle.ShowForwardButton
@@ -22,10 +23,6 @@ Kirigami.ApplicationWindow {
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
-    }
-
-    ReportInterface {
-        id: reportInterface
     }
 
     DuplicateModel {

@@ -538,3 +538,9 @@ void ReportInterface::maybeDone()
         Q_EMIT done();
     }
 };
+
+ReportInterface *ReportInterface::self()
+{
+    static ReportInterface interface;
+    return &interface;
+}
