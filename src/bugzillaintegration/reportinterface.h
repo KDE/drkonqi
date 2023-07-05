@@ -13,6 +13,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QTimer>
 
 #include "sentrybeacon.h"
 
@@ -128,6 +129,9 @@ public:
         return m_provideApplicationConfigurationDetails;
     }
 
+    bool isCrashEventSendingEnabled() const;
+    bool hasCrashEventSent() const;
+
 public Q_SLOTS:
     void sendCrashEvent();
     void sendCrashComment();
@@ -143,6 +147,7 @@ Q_SIGNALS:
     void done();
     void sendReportError(const QString &);
     void provideUnusualBehaviorChanged();
+    void crashEventSent();
 
 private:
     explicit ReportInterface(QObject *parent = nullptr);
@@ -176,6 +181,8 @@ private:
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;
 
+    QTimer m_sentryStartTimer;
+    bool m_tryingSentry = false;
     SentryBeacon m_sentryBeacon;
     bool m_sentryEventSent = false;
     bool m_sentryUserFeedbackSent = false;

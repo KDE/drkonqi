@@ -199,9 +199,6 @@ void BacktraceGenerator::setBackendPrepared()
     if (!m_tempDirectory->isValid()) {
         qCWarning(DRKONQI_LOG) << "Failed to create temporary directory for generator!";
     } else {
-#if WITH_SENTRY
-        m_proc->setEnv(QStringLiteral("DRKONQI_WITH_SENTRY"), QStringLiteral("1"));
-#endif
         m_proc->setEnv(QStringLiteral("DRKONQI_TMP_DIR"), m_tempDirectory->path());
         m_proc->setEnv(QStringLiteral("DRKONQI_VERSION"), QStringLiteral(PROJECT_VERSION));
         m_proc->setEnv(QStringLiteral("DRKONQI_APP_VERSION"), DrKonqi::appVersion());

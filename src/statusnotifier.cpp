@@ -46,6 +46,9 @@ void StatusNotifier::show()
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
     connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
+    // The expiring the notifier doesn't necessarily quit immediately, make sure to hide the SNI by deleting it (there
+    // is no way to hide an SNI).
+    connect(this, &StatusNotifier::expired, m_sni, &QObject::deleteLater);
 
     m_sni->setTitle(m_title);
     m_sni->setIconByName(QStringLiteral("tools-report-bug"));

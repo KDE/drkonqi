@@ -7,10 +7,12 @@
  * SPDX-License-Identifier: BSD-2-Clause
  *****************************************************************/
 
+#include <chrono>
 #include <cstdlib>
 #include <unistd.h>
 
 #include <QIcon>
+#include <QTimer>
 
 #include <KAboutData>
 #include <KConfigGroup>
@@ -32,10 +34,13 @@
 #endif
 
 #include "backtracegenerator.h"
+#include "bugzillaintegration/reportinterface.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 #include "statusnotifier.h"
+
+using namespace std::chrono_literals;
 
 static const char version[] = PROJECT_VERSION;
 
@@ -49,11 +54,26 @@ void cleanupAfterUserQuit()
     qApp->quit();
 }
 
+void aboutToQuit()
+{
+    if (ReportInterface::self()->hasCrashEventSent()) {
+        cleanupAfterUserQuit();
+    } else {
+        // Add a fallback timer. This timer makes sure that drkonqi will definitely quit, even if it should
+        // have some sort of runtime defect that prevents reporting from finishing (and consequently not quitting).
+        static QTimer timer;
+        timer.setInterval(5min); // arbitrary time limit for trace+submission
+        QObject::connect(&timer, &QTimer::timeout, qApp, &cleanupAfterUserQuit);
+        QObject::connect(ReportInterface::self(), &ReportInterface::crashEventSent, qApp, &cleanupAfterUserQuit);
+        timer.start();
+    }
+}
+
 void openDrKonqiDialog()
 {
     auto *w = new DrKonqiDialog();
     QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
-    QObject::connect(w, &DrKonqiDialog::rejected, qApp, &cleanupAfterUserQuit);
+    QObject::connect(qApp, &QGuiApplication::lastWindowClosed, qApp, &aboutToQuit);
     w->show();
 #ifdef Q_OS_MACOS
     KWindowSystem::forceActiveWindow(w->winId());
@@ -70,8 +90,8 @@ void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
     if (!restarted) {
         statusNotifier->notify();
     }
-    QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &cleanupAfterUserQuit);
-    QObject::connect(statusNotifier, &StatusNotifier::activated, &openDrKonqiDialog);
+    QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &aboutToQuit);
+    QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, &openDrKonqiDialog);
 }
 
 bool isShuttingDown()
@@ -199,6 +219,8 @@ int main(int argc, char *argv[])
     }
 
     app.setQuitOnLastWindowClosed(false);
+    // https://bugs.kde.org/show_bug.cgi?id=471941
+    app.setQuitLockEnabled(false);
 
     const bool restarted = parser.isSet(restartedOption);
 
@@ -206,20 +228,19 @@ int main(int argc, char *argv[])
     const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), "General").readEntry("InteractionAllowed", true);
     const bool shuttingDown = isShuttingDown();
 
-    // For automatically restarted services or during shutdown, do nothing in case no interaction is allowed
-    if (!forceDialog && !interactionAllowed && (restarted || shuttingDown)) {
-        return 0;
-    }
-
-    // if no notification service is running (eg. shell crashed, or other desktop environment)
-    // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
-    // and emitting a desktop notification.
-    if (shuttingDown) {
-        DrKonqi::shutdownSaveReport();
-    } else if (forceDialog || (!restarted && !StatusNotifier::notificationServiceRegistered())) {
+    if (forceDialog) {
         openDrKonqiDialog();
+    } else if (shuttingDown) {
+        DrKonqi::shutdownSaveReport();
     } else {
-        requestDrKonqiDialog(restarted, interactionAllowed);
+        // if no notification service is running (eg. shell crashed, or other desktop environment)
+        // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
+        // and emitting a desktop notification.
+        if (!StatusNotifier::notificationServiceRegistered() && !restarted) {
+            openDrKonqiDialog();
+        } else { // StatusNotifierItem (interaction) or notification (no interaction)
+            requestDrKonqiDialog(restarted, interactionAllowed);
+        }
     }
 
     return app.exec();

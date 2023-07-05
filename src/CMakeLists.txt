@@ -113,6 +113,7 @@ ecm_qt_declare_logging_category(
 
 # transient static lib we can use to link autotests against
 add_library(DrKonqiInternal STATIC ${drkonqi_SRCS})
+kconfig_add_kcfg_files(DrKonqiInternal GENERATE_MOC settings.kcfgc)
 
 target_link_libraries(
     DrKonqiInternal

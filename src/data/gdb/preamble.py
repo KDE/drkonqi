@@ -17,30 +17,30 @@ import platform
 import multiprocessing
 from pathlib import Path
 
-if os.getenv('DRKONQI_WITH_SENTRY'):
-    # Initialize sentry reports for exceptions in this script
-    try:
-        import sentry_sdk
-        sentry_sdk.init(
-            dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
-            traces_sample_rate=1.0,
-            release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
-            ignore_errors=[KeyboardInterrupt],
-        )
-    except ImportError:
-        print("python sentry-sdk not installed :(")
+# Initialize sentry reports for exceptions in this script
+try:
+    import sentry_sdk
+    sentry_sdk.init(
+        dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
+        traces_sample_rate=1.0,
+        release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
+        ignore_errors=[KeyboardInterrupt],
+    )
+except ImportError:
+    print("python sentry-sdk not installed :(")
 
-    try:
-        import distro
-    except ImportError:
-        print("python distro module missing, disabling sentry")
-        del os.environ['DRKONQI_WITH_SENTRY']
+WithSentry = True
+try:
+    import distro
+except ImportError:
+    print("python distro module missing, disabling sentry")
+    WithSentry = False
 
-    try:
-        import psutil
-    except ImportError:
-        print("python psutil module missing, disabling sentry")
-        del os.environ['DRKONQI_WITH_SENTRY']
+try:
+    import psutil
+except ImportError:
+    print("python psutil module missing, disabling sentry")
+    WithSentry = False
 
 def mangle_path(path):
     if not path:
@@ -619,5 +619,5 @@ def print_preamble():
     # changes current frame and thread!
     print_qml_trace()
     # prints sentry report
-    if os.getenv('DRKONQI_WITH_SENTRY'):
+    if WithSentry:
         print_sentry_payload(thread)

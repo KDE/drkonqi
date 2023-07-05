@@ -39,6 +39,7 @@
 #include "qmlextensions/duplicatemodel.h"
 #include "qmlextensions/platformmodel.h"
 #include "qmlextensions/reproducibilitymodel.h"
+#include "settings.h"
 #include "systeminformation.h"
 
 static const QString ABOUT_BUG_REPORTING_URL = QStringLiteral("https://community.kde.org/Get_Involved/Issue_Reporting");
@@ -71,6 +72,9 @@ void DrKonqiDialog::show()
     static Doctore doctore;
     qmlRegisterSingletonInstance("org.kde.drkonqi", 1, 0, "DrKonqi", &doctore);
 
+    auto settings = Settings::self();
+    qmlRegisterSingletonInstance("org.kde.drkonqi", 1, 0, "Settings", settings);
+
     // TODO do we need this second BG?
     qmlRegisterUncreatableType<BacktraceGenerator>("org.kde.drkonqi", 1, 0, "BacktraceGenerator1", QStringLiteral("Cannot create WarningLevel in QML"));
     qmlRegisterUncreatableType<BacktraceParser>("org.kde.drkonqi", 1, 0, "BacktraceParser", QStringLiteral("Cannot create WarningLevel in QML"));
@@ -93,8 +97,8 @@ void DrKonqiDialog::show()
 DrKonqiDialog::DrKonqiDialog(QWidget *parent)
     : QDialog(parent)
 {
+    // NOTE: quitting the application is managed by main.cpp, do not ever call quit directly!
     setAttribute(Qt::WA_DeleteOnClose, true);
-    QGuiApplication::setQuitOnLastWindowClosed(true);
 
     // Setting dialog title and icon
     setWindowTitle(DrKonqi::crashedApplication()->name());

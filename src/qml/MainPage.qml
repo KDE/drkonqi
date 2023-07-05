@@ -18,6 +18,7 @@ Kirigami.Page {
             BacktraceGenerator.start()
         }
     }
+    Component.onDestruction: Settings.save()
 
     actions: [
         Kirigami.Action {
@@ -99,6 +100,16 @@ any side effects.</para>`);
                                Globals.aboutBugReportingUrl);
             }
         }
+
+        QQC2.CheckBox {
+            checked: Settings.sentry
+            text: i18nc("@label", "Automatically submit crash data")
+            onToggled: {
+                Settings.sentry = checked
+                Settings.save()
+            }
+        }
+
         Item {
             Layout.fillHeight: true
         }

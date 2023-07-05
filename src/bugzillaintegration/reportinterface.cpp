@@ -25,7 +25,10 @@
 #include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
+#include "settings.h"
 #include "systeminformation.h"
+
+using namespace std::chrono_literals;
 
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
 // cannot be queried through the API, so handle this client-side in a hardcoded
@@ -58,13 +61,23 @@ ReportInterface::ReportInterface(QObject *parent)
         m_sentryUserFeedbackSent = true;
         maybeDone();
     });
-    if (KUserFeedback::Provider provider; provider.isEnabled() && provider.telemetryMode() == KUserFeedback::Provider::DetailedUsageStatistics
-        && !DrKonqi::isTestingBugzilla() && qgetenv("DRKONQI_KDE_BUGZILLA_URL").isEmpty() && !DrKonqi::crashedApplication()->hasDeletedFiles()) {
-        metaObject()->invokeMethod(this, [this] {
-            // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
-            sendCrashEvent();
-        });
-    }
+
+    auto trySentry = [this] {
+        qCDebug(DRKONQI_LOG) << "trying sentry?" << isCrashEventSendingEnabled() << !m_tryingSentry;
+        if (isCrashEventSendingEnabled() && !m_tryingSentry) {
+            m_tryingSentry = true;
+            metaObject()->invokeMethod(this, [this] {
+                connect(&m_sentryBeacon, &SentryBeacon::eventSent, this, &ReportInterface::crashEventSent);
+                // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
+                sendCrashEvent();
+            });
+        }
+    };
+    m_sentryStartTimer.setInterval(5s);
+    m_sentryStartTimer.setSingleShot(true);
+    connect(&m_sentryStartTimer, &QTimer::timeout, this, trySentry);
+    connect(Settings::self(), &Settings::SentryChanged, &m_sentryStartTimer, QOverload<>::of(&QTimer::start));
+    trySentry();
 }
 
 void ReportInterface::setBugAwarenessPageData(bool rememberSituation, Reproducible reproducible, bool actions, bool unusual, bool configuration)
@@ -330,7 +343,6 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
 
 void ReportInterface::sendCrashEvent()
 {
-#if WITH_SENTRY
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
         m_sentryBeacon.sendEvent();
         return;
@@ -345,15 +357,12 @@ void ReportInterface::sendCrashEvent()
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() != BacktraceGenerator::Loading) {
         DrKonqi::debuggerManager()->backtraceGenerator()->start();
     }
-#endif
 }
 
 void ReportInterface::sendCrashComment()
 {
-#if WITH_SENTRY
     m_sentryBeacon.sendUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
                                     + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
-#endif
 }
 
 void ReportInterface::sendBugReport()
@@ -543,4 +552,15 @@ ReportInterface *ReportInterface::self()
 {
     static ReportInterface interface;
     return &interface;
+}
+
+bool ReportInterface::hasCrashEventSent() const
+{
+    return !isCrashEventSendingEnabled() || m_sentryBeacon.hasEventSent();
+}
+
+bool ReportInterface::isCrashEventSendingEnabled() const
+{
+    static const bool testingMode = DrKonqi::isTestingBugzilla() || qEnvironmentVariableIsEmpty("DRKONQI_KDE_BUGZILLA_URL");
+    return Settings::self()->sentry() && !testingMode && !DrKonqi::crashedApplication()->hasDeletedFiles();
 }

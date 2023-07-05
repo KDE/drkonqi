@@ -30,7 +30,6 @@ include(ECMSourceVersionControl)
 include(CMakeDependentOption)
 
 option(WITH_GDB12 "The gdb version available is at least GDB 12 (this enables dynamic debug symbol resolution even when no DEBUG_PACKAGE_INSTALLER_NAME is available)" FALSE)
-option(WITH_SENTRY "Submit crashes to KDE's Sentry instance" ${ECM_SOURCE_UNDER_VERSION_CONTROL})
 
 kde_enable_exceptions()
 
