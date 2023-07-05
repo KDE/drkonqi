@@ -98,20 +98,26 @@ any side effects.</para>`);
         Item {
             Layout.fillHeight: true
         }
-        QQC2.Label {
-            font.bold: true
-            text: i18nc("@label", "Details:")
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            wrapMode: Text.Wrap
-            text: xi18nc("@info Note the time information is divided into date and time parts",
-                         '<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) Time: %5</para>',
-                            CrashedApplication.fakeExecutableBaseName,
-                            CrashedApplication.pid,
-                            CrashedApplication.signalName,
-                            CrashedApplication.signalNumber,
-                            Qt.formatDateTime(CrashedApplication.datetime))
+
+        ColumnLayout {
+            spacing: 0
+
+            QQC2.Label {
+                font.bold: true
+                text: i18nc("@label", "Details:")
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                wrapMode: Text.Wrap
+                text: xi18nc("@info Note the time information is divided into date and time parts",
+                            '<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) Time: %5</para>',
+                                CrashedApplication.fakeExecutableBaseName,
+                                CrashedApplication.pid,
+                                CrashedApplication.signalName,
+                                CrashedApplication.signalNumber,
+                                Qt.formatDateTime(CrashedApplication.datetime))
+            }
         }
     }
 }
