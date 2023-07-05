@@ -32,7 +32,6 @@
 #endif
 
 #include "backtracegenerator.h"
-#include "config-drkonqi.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqidialog.h"
