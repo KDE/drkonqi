@@ -160,6 +160,7 @@ install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop)
 install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
+add_subdirectory(sentry)
 add_subdirectory(tests)
 
 add_subdirectory(bugzillaintegration/libbugzilla/autotests)

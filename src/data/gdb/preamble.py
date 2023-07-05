@@ -414,6 +414,7 @@ class SentryEvent:
         if not distro_build_id:
             distro_build_id = distro.os_release_attr('variant_id')
 
+        base_data = json.loads(get_stdout(['drkonqi-sentry-data']))
         sentry_event = { # https://develop.sentry.dev/sdk/event-payloads/
             "debug_meta": { # https://develop.sentry.dev/sdk/event-payloads/debugmeta/
                 "images": SentryImages().to_list()
@@ -440,14 +441,14 @@ class SentryEvent:
             # TODO environment entry (could be staging for beta releases?)
             'contexts': { # https://develop.sentry.dev/sdk/event-payloads/contexts/
                 'device': {
-                    'name': get_stdout(['qdbus', '--system', 'org.freedesktop.hostname1', '/org/freedesktop/hostname1', 'org.freedesktop.hostname1.Hostname']),
-                    'family': get_stdout(['qdbus', '--system', 'org.freedesktop.hostname1', '/org/freedesktop/hostname1', 'org.freedesktop.hostname1.Chassis']),
-                    'simulator': (get_stdout(['qdbus', '--session', 'org.freedesktop.systemd1', '/org/freedesktop/systemd1', 'org.freedesktop.systemd1.Manager.Virtualization']) != ""),
+                    'name': base_data['Hostname'],
+                    'family': base_data['Chassis'],
+                    'simulator': base_data['Virtualization'],
                     'arch': platform.machine(),
                     'memory_size': vm.total,
                     'free_memory': vm.available,
                     'boot_time': boot_time,
-                    'timezone': get_stdout(['qdbus', '--system', 'org.freedesktop.timedate1', '/org/freedesktop/timedate1', 'org.freedesktop.timedate1.Timezone']),
+                    'timezone': base_data['Timezone'],
                     'processor_count': multiprocessing.cpu_count()
                 },
                 'os': {
