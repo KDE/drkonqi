@@ -92,6 +92,7 @@ private:
     std::unique_ptr<QTemporaryDir> m_tempDirectory;
     const bool m_supportsSymbolResolution = false;
     bool m_symbolResolution = false;
+    QByteArray m_sentryPayload;
 
 #ifdef BACKTRACE_PARSER_DEBUG
     BacktraceParser *m_debugParser = nullptr;

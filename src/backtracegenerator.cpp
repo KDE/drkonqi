@@ -133,6 +133,15 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     Debugger::expandString(tmp);
 
     m_parsedBacktrace = tmp + m_parser->informationLines() + m_parser->parsedBacktrace();
+    m_sentryPayload = [this]() -> QByteArray {
+        const QString sentryPayloadFile = m_tempDirectory->path() + QLatin1String("/sentry_payload.json");
+        QFile file(sentryPayloadFile);
+        if (!file.open(QFile::ReadOnly)) {
+            qCWarning(DRKONQI_LOG) << "Could not open sentry payload file" << sentryPayloadFile;
+            return {};
+        }
+        return file.readAll();
+    }();
     m_state = Loaded;
     Q_EMIT stateChanged();
 
@@ -244,11 +253,5 @@ QString BacktraceGenerator::debuggerName() const
 
 QByteArray BacktraceGenerator::sentryPayload() const
 {
-    const QString sentryPayloadFile = m_tempDirectory->path() + QLatin1String("/sentry_payload.json");
-    QFile file(sentryPayloadFile);
-    if (!file.open(QFile::ReadOnly)) {
-        qCWarning(DRKONQI_LOG) << "Could not open sentry payload file" << sentryPayloadFile;
-        return {};
-    }
-    return file.readAll();
+    return m_sentryPayload;
 };
