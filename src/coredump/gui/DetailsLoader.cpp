@@ -34,7 +34,7 @@ void DetailsLoader::load()
             Q_EMIT error(i18nc("@info", "Subprocess crashed. Check your installation."));
             break;
         }
-        m_LoaderProcess = nullptr;
+        m_LoaderProcess.release()->deleteLater();
     });
     m_LoaderProcess->start();
 }
