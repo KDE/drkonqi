@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2019-11-10 21:32+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Paigalda silumissümbolid"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,7 +70,7 @@ msgstr ""
 "Sümboli paigaldamine ei ole võimalik, sest rakendust on pärast selle "
 "käivitamist uuendatud või on see eemaldatud."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "Selle nupu abil saab teabe krahhi kohta (tagasijälituse) kopeerida "
 "lõikepuhvrisse."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -218,14 +218,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Silur lõpetas ootamatult töö."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Teavet krahhi kohta ei õnnestunud genereerida."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Sul tuleb paigaldada siluripakett (%1) ja klõpsata nupule "
 "<interface>Laadi uuesti</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Viga silumissümbolite paigaldamisel"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -440,7 +440,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Info arendajatele"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "uuesti sisse, et uuendus ikka kindlasti kasutusele võetaks ega põhjustaks "
 "mingeid soovimatuid kõrvalmõjusid.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +507,7 @@ msgstr ""
 "<para>Sa võid aidata KDE tarkvara paremaks muuta, andes veast teada.<nl /"
 "><link url='%1'>Kuidas veast teada anda.</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -517,7 +517,7 @@ msgstr ""
 "<para>Sellest veast ei saa teada anda, sest rakendus <application>%1</"
 "application> ei paku vigadest teatamise aadressi.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -559,13 +559,13 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Silumine - %1"
 
-#: main.cpp:109
+#: main.cpp:108
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE krahhide käsitleja"
 
-#: main.cpp:111
+#: main.cpp:110
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -574,120 +574,120 @@ msgstr ""
 "KDE krahhide käsitleja annab kasutajale tagasisidet, kui programmi on "
 "tabanud krahh."
 
-#: main.cpp:114
+#: main.cpp:113
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018: DrKonqi autorid"
 
-#: main.cpp:115
+#: main.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:118
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:125
+#: main.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Kinnipüütud signaali <number>"
 
-#: main.cpp:126
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Programmi <nimi>"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Täitmisfaili <asukoht>"
 
-#: main.cpp:128
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Programmi <versioon>"
 
-#: main.cpp:129
+#: main.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Kasutatav vea <aadress>"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Programmi tõlgitud <nimi>"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:132
+#: main.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Programmi <PID>"
 
-#: main.cpp:133
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Programmi käivitamise <ID>"
 
-#: main.cpp:134
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Programmi käivitas kdeinit"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Suvalise kettapöörduse keelamine"
 
-#: main.cpp:136
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Programm on juba taaskäivitatud"
 
-#: main.cpp:139
+#: main.cpp:138
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Programmi tööshoidmine ja käivitusel tagasijälituse tekitamine"
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Krahhi teinud <lõime ID>"
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -698,14 +698,14 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Tagasijälituse (automaatse krahhiteabe) hankimine"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Tagasijälituse sisu näitamine (kogenud kasutajatele)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -821,7 +821,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Rakenduse kohandatud seadistused, mis võivad olla asjakohased"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -847,7 +847,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&Info arendajatele"
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -855,7 +855,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Paigalda silumissümbolid"
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -863,7 +863,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Laadi uuesti"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -881,17 +881,17 @@ msgstr ""
 "on mõttekas näiteks siis, kui oled paigaldanud vajalikud silumispaketid ning "
 "soovid nüüd saada parema tagasijälituse."
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -919,7 +919,7 @@ msgstr ""
 "kasulikku teavet.<br />Tagasijälitust kasutatakse väga sageli interaktiivsel "
 "ja krahhijärgsel silumisel.</p>"
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -946,7 +946,7 @@ msgstr ""
 "paigalda vajalikud paketid  (<link url='%2'>failide loend</link>) ja klõpsa "
 "nupule <interface>Laadi uuesti</interface>."
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -966,7 +966,7 @@ msgstr ""
 "(<link url='%2'>failide loend</link>) ja klõpsa nupule <interface>Laadi "
 "uuesti</interface>."
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1147,7 +1147,7 @@ msgstr ""
 "Selle nupu abil saab määratud e-posti aadressi ja parooliga sisse logida KDE "
 "vigade jälgimise süsteemi."
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 #, fuzzy
 #| msgctxt "Notification action button, keep short"
 #| msgid "Report Bug"
@@ -1155,19 +1155,19 @@ msgctxt "@action"
 msgid "Report Bug"
 msgstr "Saada veateade"
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Käivitab veast teatamise nõuandja."
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 #, fuzzy
 #| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "Käivita &rakendus uuesti"
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1175,7 +1175,7 @@ msgctxt "@action"
 msgid "Developer Information"
 msgstr "&Info arendajatele"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1200,7 +1200,7 @@ msgstr ""
 "süsteemi. Ära unusta lisamast tagasijälitust <interface>arendajate teabe</"
 "interface> kaardilt.</para>"
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1220,7 +1220,7 @@ msgstr ""
 "aadressil %1 (lisades tagasijälituse <interface>arendajate teabe</interface> "
 "kaardilt).</para>"
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1247,7 +1247,7 @@ msgstr ""
 "uuesti sisse, et uuendus ikka kindlasti kasutusele võetaks ega põhjustaks "
 "mingeid soovimatuid kõrvalmõjusid.</para>"
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 #, fuzzy
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"

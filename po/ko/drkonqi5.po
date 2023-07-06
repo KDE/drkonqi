@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2023-04-21 23:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "디버그 기호 설치하기(&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,14 +70,14 @@ msgstr ""
 "프로그램이 시작된 후 업데이트되었거나 삭제되었기 때문에 기호 설치를 사용할 "
 "수 없습니다."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "이 단추를 누르면 충돌 정보(역추적)를 클립보드에 복사합니다."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -209,14 +209,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "디버거가 예상치 않게 종료되었습니다."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "충돌 정보를 만들 수 없습니다."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -244,14 +244,14 @@ msgstr ""
 "<strong>디버거 패키지(%1)을(를) 설치한 다음 <interface>새로 고침</interface> "
 "단추를 클릭하십시오.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "디버그 기호 설치 중 오류 발생"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -423,7 +423,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "개발자 정보(&D)"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -477,7 +477,7 @@ msgstr ""
 "업데이트가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이 발생하지 않습"
 "니다.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -487,7 +487,7 @@ msgstr ""
 "<para>이 오류를 보고하여 KDE 소프트웨어를 개선하는 데 도움을 줄 수 있습니다."
 "<nl /><link url='%1'>버그 보고에 대하여 더 알아보십시오.</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "<para>프로그램 <application>%1</application>의 버그를 보고하는 방법을 지정하"
 "지 않았기 때문에 버그를 보고할 수 없습니다.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -539,130 +539,130 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "%1(으)로 디버그"
 
-#: main.cpp:109
+#: main.cpp:108
 #, kde-format
 msgid "Crash Handler"
 msgstr "충돌 관리자"
 
-#: main.cpp:111
+#: main.cpp:110
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "충돌 관리자는 프로그램이 충돌했을 때 사용자에게 알려 줍니다."
 
-#: main.cpp:114
+#: main.cpp:113
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:115
+#: main.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:118
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:125
+#: main.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "검출된 시그널 <number>"
 
-#: main.cpp:126
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "프로그램 <Name>"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "실행 파일 <Path>"
 
-#: main.cpp:128
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "프로그램 <version>"
 
-#: main.cpp:129
+#: main.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "사용할 버그 <address>"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "번역된 프로그램 <name>"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla 제품 이름"
 
-#: main.cpp:132
+#: main.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "프로그램 <PID>"
 
-#: main.cpp:133
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "프로그램 시작 <ID>"
 
-#: main.cpp:134
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit가 프로그램을 시작했습니다"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "임의 디스크 접근 방지"
 
-#: main.cpp:136
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "프로그램을 다시 시작했습니다"
 
-#: main.cpp:139
+#: main.cpp:138
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "프로그램을 실행된 상태로 두고 시작할 때 역추적 생성"
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "문제가 발생한 <thread id>"
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -673,12 +673,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "역추적(자동 충돌 정보) 가져오는 중"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "역추적 내용 표시(고급)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr "다음"
@@ -746,7 +746,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "연관될 수도 있는 사용자 정의 설정"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
@@ -766,17 +766,17 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "개발자 정보"
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "디버그 기호 설치"
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "새로 고침"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -787,17 +787,17 @@ msgstr ""
 "이 단추를 누르면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호\n"
 "패키지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "복사"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr "저장"
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -818,7 +818,7 @@ msgstr ""
 "들어 있을 수도 있습니다.<nl />역추적은 여러 디버깅 과정에서 사용됩니다.</"
 "para>"
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -836,7 +836,7 @@ msgstr ""
 "필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록</link>) "
 "<interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -848,7 +848,7 @@ msgstr ""
 "는 방법을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>\n"
 "파일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -981,27 +981,27 @@ msgid ""
 msgstr ""
 "입력한 이메일 주소와 암호로 KDE 버그 추적 시스템에 로그인하려면 누르십시오."
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "버그 보고"
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "버그 보고 도우미를 시작합니다."
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "프로그램 다시 시작"
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 msgctxt "@action"
 msgid "Developer Information"
 msgstr "개발자 정보"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1019,7 +1019,7 @@ msgstr ""
 "보고해 주십시오. <interface>개발자 정보</interface> 탭의\n"
 "역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1032,7 +1032,7 @@ msgstr ""
 "%1(으)로 이 버그를 수동으로 보고할 수 있습니다. <interface>개발자 정보</"
 "interface> 탭의 역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1051,7 +1051,7 @@ msgstr ""
 "업데이트가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이\n"
 "발생하지 않습니다.</para>"
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "

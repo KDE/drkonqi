@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -49,7 +49,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr ""
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -63,14 +63,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -183,14 +183,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr ""
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr ""
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -214,14 +214,14 @@ msgid ""
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr ""
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -393,7 +393,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr ""
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -433,7 +433,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -441,7 +441,7 @@ msgid ""
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -449,7 +449,7 @@ msgid ""
 "does not provide a bug reporting address.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, fuzzy, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -489,133 +489,133 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:108
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "കെഡിഇ തകരാറുകള്‍ കൈകാര്യം ചെയ്യുന്ന പ്രയോഗം"
 
-#: main.cpp:111
+#: main.cpp:110
 #, fuzzy, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "ഒരു പ്രോഗ്രാമിന്റെ പ്രവര്‍ത്തനം അപ്രതീക്ഷിതമായി നില്‍ക്കുന്നതിനുള്ള കാരണം കെഡിഇ തകരാറുകള്‍ "
 "കൈകാര്യം ചെയ്യുന്ന പ്രയോഗം ലഭ്യമാക്കുന്നു"
 
-#: main.cpp:114
+#: main.cpp:113
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr ""
 
-#: main.cpp:115
+#: main.cpp:114
 #, fuzzy, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "ഹാന്‍സ് പെറ്റര്‍ ബെയിക്കര്‍"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr ""
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr ""
 
-#: main.cpp:118
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr ""
 
-#: main.cpp:125
+#: main.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "ലഭ്യമായ സിഗ്നലിന്റെ <number>"
 
-#: main.cpp:126
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "പ്രോഗ്രാമിന്റെ പേര്"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "എക്സിക്യൂട്ടബിളിലേക്കുള്ള <പാത>"
 
-#: main.cpp:128
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "പ്രോഗ്രാമിന്റെ <പതിപ്പ്>"
 
-#: main.cpp:129
+#: main.cpp:128
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "ഉപയോഗിക്കേണ്ട ബഗിന്റെ വിലാസം"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "പ്രോഗ്രാമിന്റെ തര്‍ജ്ജമ ചെയ്ത പേര്"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:132
+#: main.cpp:131
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "പ്രോഗ്രാമിന്റെ PID"
 
-#: main.cpp:133
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "പ്രോഗ്രാമിനുള്ള സ്റ്റാര്‍ട്ടപ്പ് ID"
 
-#: main.cpp:134
+#: main.cpp:133
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "പ്രോഗ്രാം ആരംഭിച്ചതു് kdeinit ആണു്"
 
-#: main.cpp:135
+#: main.cpp:134
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "ഡിസ്കിലേക്കുള്ള അനിയന്ത്രിതമായ പ്രവേശനം നിര്‍ജ്ജീവമാക്കുക"
 
-#: main.cpp:136
+#: main.cpp:135
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "പ്രോഗ്രാം ആരംഭിച്ചതു് kdeinit ആണു്"
 
-#: main.cpp:139
+#: main.cpp:138
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -626,12 +626,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr ""
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -703,7 +703,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -721,17 +721,17 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr ""
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr ""
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 msgctxt "@action:button"
 msgid "Reload"
 msgstr ""
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -740,18 +740,18 @@ msgid ""
 "backtrace."
 msgstr ""
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "പ&കര്‍ത്തുക"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -765,7 +765,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -777,7 +777,7 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -786,7 +786,7 @@ msgid ""
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -905,27 +905,27 @@ msgid ""
 "mail address and password."
 msgstr ""
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 msgctxt "@action"
 msgid "Report Bug"
 msgstr ""
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr ""
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 msgctxt "@action"
 msgid "Restart Application"
 msgstr ""
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 msgctxt "@action"
 msgid "Developer Information"
 msgstr ""
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -937,7 +937,7 @@ msgid ""
 "tab.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -946,7 +946,7 @@ msgid ""
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -958,7 +958,7 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2021-11-24 13:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -72,14 +72,14 @@ msgstr ""
 "A szimbólumok telepítése nem lehetséges, mivel az alkalmazást frissítették "
 "vagy eltávolították az indítása után."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Ezzel a gombbal lehet a vágólapra másolni a visszakövetési adatokat."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "A nyomkövető váratlanul kilépett."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nem sikerült létrehozni a hiba jellemzőit."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Először telepítenie kell a hibakereső alkalmazást (%1), majd "
 "kattintson az <interface>Újratöltés</interface> gombra.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Hiba történt a hibakövetési szimbólumok telepítése során"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -441,7 +441,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Fejlesztői információk"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "mindig érdemes ki- és bejelentkezni, hogy megbizonyosodjon róla, a frissítés "
 "befejeződött és nem okozott mellékhatásokat.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,7 +508,7 @@ msgstr ""
 "jelentésével.<nl /><link url='%1'>Tudjon meg többet a hibajelentésről.</"
 "link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -518,7 +518,7 @@ msgstr ""
 "<para>Nem jelentheti ezt a hibát, mivel <application>%1</application> nem "
 "adott meg hibabejelentési címet.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -560,13 +560,13 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Hibakeresés ezzel: %1"
 
-#: main.cpp:109
+#: main.cpp:108
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE programhiba-kezelő"
 
-#: main.cpp:111
+#: main.cpp:110
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -575,120 +575,120 @@ msgstr ""
 "A KDE program hibakezelője értesíti a felhasználót, ha egy program "
 "összeomlott."
 
-#: main.cpp:114
+#: main.cpp:113
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© A DrKonqi szerzői, 2000-2018."
 
-#: main.cpp:115
+#: main.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:118
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:125
+#: main.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "A fogadott szignál <száma>"
 
-#: main.cpp:126
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "A program <neve>"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "A program <elérési útja>"
 
-#: main.cpp:128
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "A program <verziószáma>"
 
-#: main.cpp:129
+#: main.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Hibabejelentési <cím>"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "<Programnév> (lefordítva)"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla terméknéb"
 
-#: main.cpp:132
+#: main.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "A program folyamatazonosítója (<PID>)"
 
-#: main.cpp:133
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "A program indítási <azonosítója>"
 
-#: main.cpp:134
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "A programot a kdeinit indította el."
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "A lemezhozzáférés korlátozása"
 
-#: main.cpp:136
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "A programot már elindították"
 
-#: main.cpp:139
+#: main.cpp:138
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Tartsa futva a programot és hozzon létre nyomkövetést indításkor"
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "A meghiúsult szál <szálazonosítója>"
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -700,14 +700,14 @@ msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 "Visszakövetési információk lekérése (Automatikus összeomlási információk)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Visszakövetés tartalmának megjelenítése (haladó)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -824,7 +824,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Az alkalmazás egyéni beállításai, amelyek kapcsolódhatnak"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -852,7 +852,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&Fejlesztői információk"
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -860,7 +860,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -868,7 +868,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Új&ratöltés"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -886,7 +886,7 @@ msgstr ""
 "szükség, ha telepítette a szükséges nyomkövetési csomagokat és részletesebb "
 "visszakövetési adatokat szeretne kapni."
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -894,12 +894,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Más&olás"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -926,7 +926,7 @@ msgstr ""
 "azonban hasznos információkat tartalmazhat.<br />A backtrace-t általában "
 "interaktív és összeomlás utáni hibakövetés során használják.</p>"
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -954,7 +954,7 @@ msgstr ""
 "fájlok listája</link>) és kattintson az <interface>Újratöltés</interface> "
 "gombra."
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -974,7 +974,7 @@ msgstr ""
 "szükséges csomagokat (<link url='%2'>a fájlok listája</link>) és kattintson "
 "az <interface>Újratöltés</interface> gombra."
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1152,7 +1152,7 @@ msgstr ""
 "Ezzel a gombbal jelentkezhet be a KDE hibakövető rendszerébe a beírt e-mail "
 "címmel és jelszóval."
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 #, fuzzy
 #| msgctxt "Notification action button, keep short"
 #| msgid "Report Bug"
@@ -1160,19 +1160,19 @@ msgctxt "@action"
 msgid "Report Bug"
 msgstr "Hiba bejelentése"
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Elindítja a hibabejelentő segédet."
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 #, fuzzy
 #| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "&Alkalmazás újraindítása"
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1180,7 +1180,7 @@ msgctxt "@action"
 msgid "Developer Information"
 msgstr "&Fejlesztői információk"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1205,7 +1205,7 @@ msgstr ""
 "rendszerébe. Ne felejtse el hozzáadni a visszakövetést a "
 "<interface>Fejlesztői információk</interface> lapról.</para>"
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1225,7 +1225,7 @@ msgstr ""
 "hibát ehhez: %1 (tartalmazva a visszakövetési információt a "
 "<interface>Fejlesztői információk</interface> lapról.)</para>"
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1251,7 +1251,7 @@ msgstr ""
 "mindig érdemes ki- és bejelentkezni, hogy megbizonyosodjon róla, a frissítés "
 "befejeződött és nem okozott mellékhatásokat.</para>"
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 #, fuzzy
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"

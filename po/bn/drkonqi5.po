@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2012-07-16 15:55+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -61,7 +61,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "ডিবাগ চিহ্ন &ইনস্টল করো"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -75,14 +75,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "ক্র্যাশ তথ্য কপি করতে এই বাটনটি ব্যবহার করো (ব্যাকট্রেস) ক্লীপবোর্ডে।"
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -218,14 +218,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "ডিবাগার অপ্রত্যাশিতভাবে বন্ধ হয়ে গেছে।"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "ক্র্যাশ তথ্য উৎ‍পাদন করা যায়নি।"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, fuzzy, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -253,14 +253,14 @@ msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "ত্রুটিমুক্ত করা চিহ্নের ইনস্টলেশনের সময় ত্রুটি"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, fuzzy, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -441,7 +441,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "ডেভেলপার তথ্য (&D)"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -490,7 +490,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,7 +502,7 @@ msgstr ""
 "আরও বেশি শেখো।</link></para><para><note>এইটি এই ডায়ালগটি বন্ধ করতে নিরাপদ যদি "
 "আপনি এই বাগটি রিপোর্ট করতে চাও না।</note></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -512,7 +512,7 @@ msgstr ""
 "<para>আপনি এই ত্রুটিটি রিপোর্ট করতে পারেন না, কারণ অ্যাপলিকেশন একটি প্রোগ্রাম ত্রুটি "
 "রিপোর্টিং ঠিকানা জোগান দিেন না।</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -558,13 +558,13 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:108
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "কে.ডি.ই. ক্র্যাশ হ্যান্ডলার"
 
-#: main.cpp:111
+#: main.cpp:110
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -573,36 +573,36 @@ msgstr ""
 "একটি প্রোগ্রাম ক্র্যাশ করলে কে.ডি.ই. ক্র্যাশ হ্যান্ডলার ব্যবহারকারীকে তার সম্বন্ধে "
 "ফীডব্যাক দেয়।"
 
-#: main.cpp:114
+#: main.cpp:113
 #, fuzzy, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(সি) ২০০০-২০০৯, DrKonqi লেখক"
 
-#: main.cpp:115
+#: main.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:116
+#: main.cpp:115
 #, fuzzy, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:117
+#: main.cpp:116
 #, fuzzy, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "জর্জ Kiagiadakis"
 
-#: main.cpp:118
+#: main.cpp:117
 #, fuzzy, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "একটি। L। Spehr"
 
-#: main.cpp:125
+#: main.cpp:124
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -610,7 +610,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "যে সিগনাল-টি ধরা হয়েছে তার নম্বর"
 
-#: main.cpp:126
+#: main.cpp:125
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -618,7 +618,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "প্রোগ্রাম-টির নাম"
 
-#: main.cpp:127
+#: main.cpp:126
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -626,7 +626,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "এক্সিকিউটেবল-এর পাথ"
 
-#: main.cpp:128
+#: main.cpp:127
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -634,7 +634,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "প্রোগ্রামটির সংস্করণ"
 
-#: main.cpp:129
+#: main.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -642,7 +642,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "বাগ রিপোর্ট-এর জন্য যে ঠিকানা ব্যবহার করা হবে"
 
-#: main.cpp:130
+#: main.cpp:129
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -650,13 +650,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "প্রোগ্রামটির অনুদিত নাম"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:132
+#: main.cpp:131
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -664,7 +664,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "প্রোগ্রামটির পি-আই-ডি"
 
-#: main.cpp:133
+#: main.cpp:132
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -672,37 +672,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "প্রোগ্রামটির স্টার্ট-আপ আই-ডি"
 
-#: main.cpp:134
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "প্রোগ্রাম-টি kdeinit দ্বারা চালু করা হয়েছিল"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "যথেচ্ছ ডিস্ক অ্যাক্‌সেস নিষ্ক্রিয় করো"
 
-#: main.cpp:136
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "প্রোগ্রামটি ইতিমধ্যে আবার শুরু করা হয়েছে"
 
-#: main.cpp:139
+#: main.cpp:138
 #, fuzzy, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "অনুষ্ঠান চলন্ত রাখো এবং সূচনাতে ব্যাকট্রেস উৎ‍পাদন করো"
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -714,13 +714,13 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "ব্যাকট্রেস এনে দিচ্ছে (স্বয়ংক্রিয় ক্র্যাশ তথ্য)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "ব্যাকট্রেস ভিতরের উপাদান দেখাও (অগ্রসর হয়েছিলেন)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -814,7 +814,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "অ্যাপলিকেশনের স্বনির্বাচিত মানসমূহ যে সম্বন্ধস্থাপন করা হয়ত যাবে"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -834,7 +834,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "ডেভেলপার তথ্য (&D)"
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -842,7 +842,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "ডিবাগ চিহ্ন &ইনস্টল করো"
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -850,7 +850,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&নতুন করে পড়ো"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
@@ -863,18 +863,18 @@ msgstr ""
 "উপযুক্ত ত্রুটিমুক্ত করা চিহ্ন প্যাকেজ ইনস্টল করেছে এবং আপনি একটি ভাল ব্যাকট্রেস অর্জন "
 "করতে চাও।"
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&কপি করো"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 #, fuzzy
 msgctxt "@info"
 msgid ""
@@ -894,7 +894,7 @@ msgstr ""
 "তারা কার্যকর তথ্যের একটি সম্পদ প্রকৃতপক্ষে ধারণ করতে পারে।<br />Backtraces ক্রিয়া-"
 "প্রতিক্রিয়াশীল এবং post-mortem ত্রুটিমুক্তকরণের সময় সাধারণভাবে ব্যবহার করা হয়।</p>"
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -913,7 +913,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -927,7 +927,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -1079,31 +1079,31 @@ msgstr ""
 "provided ব্যবহারকারীর নাম এবং শব্দচাবি ব্যবহার করে কেডিই বাগ tracking সিস্টেমে "
 "লগিনতে এই বাটনটি ব্যবহার করো।"
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 #, fuzzy
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "রিপোর্ট বাগ"
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "বাগ রিপোর্ট সহকারী শুরু করো।"
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 #, fuzzy
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "অ্যাপলিকেশন পুনরায় শুরু করো"
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 #, fuzzy
 msgctxt "@action"
 msgid "Developer Information"
 msgstr "ডেভেলপার তথ্য (&D)"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 #, fuzzy
 msgctxt "@info"
 msgid ""
@@ -1120,7 +1120,7 @@ msgstr ""
 "\"দ্রব্যে এই ত্রুটিটি নিজহাতে রিপোর্ট করো। ডেভেলপারগণ তথ্য ট্যাব থেকে ব্যাকট্রেস কি "
 "অন্তর্ভুক্ত করতে ভুলে যাও না।</para>"
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 #, fuzzy
 msgctxt "@info"
 msgid ""
@@ -1133,7 +1133,7 @@ msgstr ""
 "করা হয়েছিল।<nl />আপনি %1তে এই বাগটি নিজহাতে রিপোর্ট করতে পারেন (ডেভেলপার তথ্য "
 "tab. থেকে ব্যাকট্রেস সহ)</para>"
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1145,7 +1145,7 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 #, fuzzy
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""

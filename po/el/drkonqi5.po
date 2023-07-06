@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:07+0000\n"
+"POT-Creation-Date: 2023-07-06 02:51+0000\n"
 "PO-Revision-Date: 2021-09-02 09:33+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -67,7 +67,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Εγκατάσταση συμβόλων αποσφαλμάτωσης"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:47
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -85,7 +85,7 @@ msgstr ""
 "Η εγκατάσταση του συμβόλου δεν είναι διαθέσιμη επειδή η εφαρμογή ενημερώθηκε "
 "ή αφαιρέθηκε αφού είχε ξεκινήσει να εκτελείται."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -94,7 +94,7 @@ msgstr ""
 "Χρησιμοποιήστε αυτό το κουμπί για να αντιγράψετε τις πληροφορίες κατάρρευσης "
 "στο πρόχειρο."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -239,14 +239,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ο αποσφαλματωτής τερματίστηκε απροσδόκητα."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
-#: qml/DeveloperPage.qml:175
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
+#: qml/DeveloperPage.qml:171
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Οι πληροφορίες κατάρρευσης δεν μπόρεσαν να δημιουργηθούν."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -277,14 +277,14 @@ msgstr ""
 "και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</interface>.</"
 "strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Σφάλμα κατά την εγκατάσταση των συμβόλων αποσφαλμάτωσης"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -472,7 +472,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Πληροφορίες προγραμματιστή"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:47
+#: drkonqidialog.cpp:156 qml/MainPage.qml:51
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -532,7 +532,7 @@ msgstr ""
 "να βεβαιωθείτε ότι η ενημέρωση έχει εφαρμοστεί πλήρως και δεν θα προκαλέσει "
 "άλλα προβλήματα.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:94
+#: drkonqidialog.cpp:192 qml/MainPage.qml:98
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -543,7 +543,7 @@ msgstr ""
 "αναφέροντας αυτό το σφάλμα.<nl /><link url='%1'>Μάθετε περισσότερα για την "
 "αναφορά σφαλμάτων.</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:58
+#: drkonqidialog.cpp:199 qml/MainPage.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -553,7 +553,7 @@ msgstr ""
 "<para>Δεν μπορείτε να αναφέρετε αυτό το σφάλμα, γιατί η <application>%1</"
 "application> δεν παρέχει μία διεύθυνση αναφοράς σφάλματος.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:103
+#: drkonqidialog.cpp:207 qml/MainPage.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -596,13 +596,13 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Αποσφαλμάτωση με το %1"
 
-#: main.cpp:109
+#: main.cpp:108
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "Ο διαχειριστής καταρρεύσεων του KDE"
 
-#: main.cpp:111
+#: main.cpp:110
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -611,108 +611,108 @@ msgstr ""
 "Ο διαχειριστής κατάρρευσης του KDE δίνει στο χρήστη πληροφορίες αν ένα "
 "πρόγραμμα έχει καταρρεύσει."
 
-#: main.cpp:114
+#: main.cpp:113
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:115
+#: main.cpp:114
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:116
+#: main.cpp:115
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:117
+#: main.cpp:116
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "Γιώργος Καγιαδάκης"
 
-#: main.cpp:118
+#: main.cpp:117
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:125
+#: main.cpp:124
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Ο <αριθμός> του σήματος που πιάστηκε"
 
-#: main.cpp:126
+#: main.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Το <όνομα> του προγράμματος"
 
-#: main.cpp:127
+#: main.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Η <διαδρομή> για το εκτελέσιμο"
 
-#: main.cpp:128
+#: main.cpp:127
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Η <έκδοση> του προγράμματος"
 
-#: main.cpp:129
+#: main.cpp:128
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Η <διεύθυνση> σφαλμάτων για να χρησιμοποιήσετε"
 
-#: main.cpp:130
+#: main.cpp:129
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Μεταφρασμένο <όνομα> του προγράμματος"
 
-#: main.cpp:131
+#: main.cpp:130
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Όνομα προϊόντος του Bugzilla"
 
-#: main.cpp:132
+#: main.cpp:131
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Το <PID> του προγράμματος"
 
-#: main.cpp:133
+#: main.cpp:132
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Το <ID> εκκίνησης του προγράμματος"
 
-#: main.cpp:134
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Το πρόγραμμα εκκινήθηκε από το kdeinit"
 
-#: main.cpp:135
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Απενεργοποίησε την αυθαίρετη προσπέλαση του δίσκου"
 
-#: main.cpp:136
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Το πρόγραμμα έχει ήδη επανεκκινηθεί"
 
-#: main.cpp:139
+#: main.cpp:138
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
@@ -720,13 +720,13 @@ msgstr ""
 "Διατήρηση της εκτέλεσης του προγράμματος και δημιουργία των πληροφοριών "
 "κατάρρευσης κατά την εκκίνηση"
 
-#: main.cpp:141
+#: main.cpp:140
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Το <αναγνωριστικό νήματος> που απέτυχε"
 
-#: main.cpp:142
+#: main.cpp:141
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -741,7 +741,7 @@ msgstr ""
 "Εξαγωγή των πληροφοριών κατάρρευσης (Αυτοματοποιημένες πληροφορίες "
 "κατάρρευσης)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
@@ -749,7 +749,7 @@ msgid "Show backtrace content (advanced)"
 msgstr ""
 "Εμφάνιση του περιεχομένου των πληροφοριών κατάρρευσης (για προχωρημένους)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -868,7 +868,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Προσαρμοσμένες ρυθμίσεις της εφαρμογής που πιθανόν να σχετίζονται"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -896,7 +896,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&Πληροφορίες προγραμματιστή"
 
-#: qml/DeveloperPage.qml:34
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -904,7 +904,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Εγκατάσταση συμβόλων αποσφαλμάτωσης"
 
-#: qml/DeveloperPage.qml:54
+#: qml/DeveloperPage.qml:50
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -912,7 +912,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Επαναφόρτωση"
 
-#: qml/DeveloperPage.qml:56
+#: qml/DeveloperPage.qml:52
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -931,19 +931,19 @@ msgstr ""
 "συμβολικής αποσφαλμάτωσης και θέλετε να αποκτήσετε καλύτερες πληροφορίες "
 "κατάρρευσης."
 
-#: qml/DeveloperPage.qml:66
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Αντι&γραφή"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:69
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:109
+#: qml/DeveloperPage.qml:105
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -972,7 +972,7 @@ msgstr ""
 "πολύ συχνά κατά τη διάρκεια της διαδραστικής και της «μετά-θάνατον» "
 "αποσφαλμάτωσης.</p>"
 
-#: qml/DeveloperPage.qml:157
+#: qml/DeveloperPage.qml:153
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1000,7 +1000,7 @@ msgstr ""
 "απαραίτητα πακέτα (<link url='%2'>λίστα αρχείων</link>) και πατήστε το "
 "κουμπί <interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:165
+#: qml/DeveloperPage.qml:161
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1020,7 +1020,7 @@ msgstr ""
 "κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link url='%2'>λίστα "
 "αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:177
+#: qml/DeveloperPage.qml:173
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1201,7 +1201,7 @@ msgstr ""
 "σφαλμάτων KDE χρησιμοποιώντας τη δοσμένη διεύθυνση ηλ. αλληλογραφίας και τον "
 "κωδικό."
 
-#: qml/MainPage.qml:23
+#: qml/MainPage.qml:27
 #, fuzzy
 #| msgctxt "Notification action button, keep short"
 #| msgid "Report Bug"
@@ -1209,19 +1209,19 @@ msgctxt "@action"
 msgid "Report Bug"
 msgstr "Αναφορά σφάλματος"
 
-#: qml/MainPage.qml:25
+#: qml/MainPage.qml:29
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Κατάσταση βοηθού αναφοράς σφάλματος."
 
-#: qml/MainPage.qml:30
+#: qml/MainPage.qml:34
 #, fuzzy
 #| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "&Επανέναρξη εφαρμογής"
 
-#: qml/MainPage.qml:36
+#: qml/MainPage.qml:40
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1229,7 +1229,7 @@ msgctxt "@action"
 msgid "Developer Information"
 msgstr "&Πληροφορίες προγραμματιστή"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:68
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1255,7 +1255,7 @@ msgstr ""
 "συμπεριλάβετε και τις πληροφορίες κατάρρευσης από την καρτέλα "
 "<interface>Πληροφορίες προγραμματιστή</interface>.</para>"
 
-#: qml/MainPage.qml:76
+#: qml/MainPage.qml:80
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1276,7 +1276,7 @@ msgstr ""
 "πληροφορίες κατάρρευσης από την καρτέλα <interface>Πληροφορίες "
 "προγραμματιστή</interface>.)</para>"
 
-#: qml/MainPage.qml:83
+#: qml/MainPage.qml:87
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1304,7 +1304,7 @@ msgstr ""
 "να βεβαιωθείτε ότι η ενημέρωση έχει εφαρμοστεί πλήρως και δεν θα προκαλέσει "
 "άλλα προβλήματα.</para>"
 
-#: qml/MainPage.qml:109
+#: qml/MainPage.qml:118
 #, fuzzy
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
