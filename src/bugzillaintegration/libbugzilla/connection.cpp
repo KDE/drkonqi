@@ -19,12 +19,7 @@ namespace Bugzilla
 class GlobalConnection
 {
 public:
-    ~GlobalConnection()
-    {
-        delete m_connection;
-    }
-
-    Connection *m_connection = new HTTPConnection;
+    std::unique_ptr<Connection> m_connection = std::make_unique<HTTPConnection>();
 };
 
 Q_GLOBAL_STATIC(GlobalConnection, s_connection)
@@ -36,8 +31,7 @@ Connection &connection()
 
 void setConnection(Connection *newConnection)
 {
-    delete s_connection->m_connection;
-    s_connection->m_connection = newConnection;
+    s_connection->m_connection.reset(newConnection);
 }
 
 HTTPConnection::HTTPConnection(const QUrl &root, QObject *parent)
