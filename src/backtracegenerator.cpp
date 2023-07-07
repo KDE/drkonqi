@@ -189,7 +189,7 @@ void BacktraceGenerator::setBackendPrepared()
     Q_EMIT starting();
 
     m_proc = new KProcess;
-    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C")); // force C locale
+    m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C.UTF-8")); // force C locale
 
     // Temporary directory for the preeamble.py to write data into, we can then conveniently pick it up from there.
     // Only useful for data that is not meant to appear in the trace (e.g. sentry payloads).

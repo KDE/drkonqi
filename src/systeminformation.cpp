@@ -119,7 +119,7 @@ void SystemInformation::tryToSetBugzillaPlatformFromExternalInfo()
         qCDebug(DRKONQI_LOG) << "found lsb_release";
         auto *process = new KProcess();
         process->setOutputChannelMode(KProcess::OnlyStdoutChannel);
-        process->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C"));
+        process->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C.UTF-8"));
         *process << lsb_release << QStringLiteral("-sd");
         connect(process, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &SystemInformation::lsbReleaseFinished);
         process->start();
