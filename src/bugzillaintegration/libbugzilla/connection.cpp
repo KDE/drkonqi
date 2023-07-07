@@ -6,7 +6,7 @@
 
 #include "connection.h"
 
-#include <KIO/TransferJob>
+#include <QNetworkAccessManager>
 #include <QUrlQuery>
 
 #include "bugzilla_debug.h"
@@ -50,22 +50,27 @@ void HTTPConnection::setToken(const QString &authToken)
 APIJob *HTTPConnection::get(const QString &path, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
-    auto job = new TransferAPIJob(KIO::get(url(path, query), KIO::Reload, KIO::HideProgressInfo));
+    auto job = new NetworkAPIJob(url(path, query), [](QNetworkAccessManager &manager, QNetworkRequest &request) -> QNetworkReply * {
+        return manager.get(request);
+    });
     return job;
 }
 
 APIJob *HTTPConnection::post(const QString &path, const QByteArray &data, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
-    auto job = new TransferAPIJob(KIO::http_post(url(path, query), data, KIO::HideProgressInfo));
+    auto job = new NetworkAPIJob(url(path, query), [data](QNetworkAccessManager &manager, QNetworkRequest &request) -> QNetworkReply * {
+        return manager.post(request, data);
+    });
     return job;
 }
 
 APIJob *HTTPConnection::put(const QString &path, const QByteArray &data, const Query &query) const
 {
     qCDebug(BUGZILLA_LOG) << path << query.toString();
-    auto job = new TransferAPIJob(KIO::put(url(path, query), KIO::HideProgressInfo));
-    job->setPutData(data);
+    auto job = new NetworkAPIJob(url(path, query), [data](QNetworkAccessManager &manager, QNetworkRequest &request) -> QNetworkReply * {
+        return manager.put(request, data);
+    });
     return job;
 }
 

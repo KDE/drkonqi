@@ -10,8 +10,12 @@
 #include <QJsonArray> // Not used here but included so clients don't have to
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
 
 #include <KJob>
+
+class QNetworkRequest;
+class QNetworkReply;
 
 namespace KIO
 {
@@ -55,7 +59,7 @@ private:
     bool m_autostart = true;
 };
 
-class TransferAPIJob : public APIJob
+class NetworkAPIJob : public APIJob
 {
     Q_OBJECT
     friend class HTTPConnection; // constructs us, ctor is private though
@@ -66,15 +70,15 @@ public:
     }
 
 private:
-    explicit TransferAPIJob(KIO::TransferJob *transferJob, QObject *parent = nullptr);
+    explicit NetworkAPIJob(const QUrl &url,
+                           const std::function<QNetworkReply *(QNetworkAccessManager &, QNetworkRequest &)> &starter,
+                           QObject *parent = nullptr);
 
-    void setPutData(const QByteArray &data);
-    void addMetaData(const QString &key, const QString &value);
-
-    KIO::TransferJob *m_transferJob = nullptr;
     QByteArray m_data;
     QByteArray m_putData;
     QList<QByteArray> m_dataSegments;
+
+    QNetworkAccessManager m_manager;
 };
 
 } // namespace Bugzilla

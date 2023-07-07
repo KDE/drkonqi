@@ -57,4 +57,4 @@ ecm_qt_declare_logging_category(
 )
 
 add_library(qbugzilla STATIC ${lib_SRCS})
-target_link_libraries(qbugzilla PUBLIC Qt::Core Qt::Network KF6::CoreAddons KF6::KIOCore)
+target_link_libraries(qbugzilla PUBLIC Qt::Core Qt::Network KF6::CoreAddons)
