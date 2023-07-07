@@ -15,7 +15,7 @@
 #include <QStringList>
 #include <QTimer>
 
-#include "sentrybeacon.h"
+#include "sentrypostbox.h"
 
 namespace Bugzilla
 {
@@ -131,10 +131,11 @@ public:
 
     bool isCrashEventSendingEnabled() const;
     bool hasCrashEventSent() const;
+    void setSendWhenReady(bool send);
 
 public Q_SLOTS:
-    void sendCrashEvent();
-    void sendCrashComment();
+    void prepareCrashEvent();
+    void prepareCrashComment();
     void sendBugReport();
 
 private Q_SLOTS:
@@ -156,6 +157,7 @@ private:
     void attachBacktrace(const QString &comment);
     void sendToSentry();
     void maybeDone();
+    void maybePickUpPostbox();
 
     QString generateAttachmentComment() const;
 
@@ -183,10 +185,9 @@ private:
 
     QTimer m_sentryStartTimer;
     bool m_tryingSentry = false;
-    SentryBeacon m_sentryBeacon;
-    bool m_sentryEventSent = false;
-    bool m_sentryUserFeedbackSent = false;
+    SentryPostbox m_sentryPostbox;
     uint m_sentReport = 0;
+    bool m_sendWhenReady = false;
 };
 
 #endif

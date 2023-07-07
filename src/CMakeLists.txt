@@ -93,13 +93,11 @@ set(drkonqi_SRCS
     bugzillaintegration/productmapping.cpp
     bugzillaintegration/parsebugbacktraces.cpp
     bugzillaintegration/duplicatefinderjob.cpp
-    bugzillaintegration/sentrybeacon.cpp
     bugzillaintegration/bugzillalib.h
     bugzillaintegration/reportinterface.h
     bugzillaintegration/productmapping.h
     bugzillaintegration/parsebugbacktraces.h
     bugzillaintegration/duplicatefinderjob.h
-    bugzillaintegration/sentrybeacon.h
 )
 
 ecm_qt_declare_logging_category(
@@ -117,6 +115,7 @@ kconfig_add_kcfg_files(DrKonqiInternal GENERATE_MOC settings.kcfgc)
 
 target_link_libraries(
     DrKonqiInternal
+    DrKonqiSentryInternal
     KF6::I18n
     KF6::CoreAddons
     KF6::ConfigGui

@@ -25,6 +25,7 @@
 #include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
+#include "sentryconnection.h"
 #include "settings.h"
 #include "systeminformation.h"
 
@@ -38,6 +39,7 @@ static const int s_maxReportSize = 65535;
 ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent)
     , m_duplicate(0)
+    , m_sentryPostbox(DrKonqi::crashedApplication()->fakeExecutableBaseName(), std::make_shared<SentryNetworkConnection>())
 {
     m_bugzillaManager = new BugzillaManager(KDE_BUGZILLA_URL, this);
 
@@ -53,12 +55,7 @@ ReportInterface::ReportInterface(QObject *parent)
     // Do not attach the bug report to any other existent report (create a new one)
     m_attachToBugNumber = 0;
 
-    connect(&m_sentryBeacon, &SentryBeacon::eventSent, this, [this] {
-        m_sentryEventSent = true;
-        maybeDone();
-    });
-    connect(&m_sentryBeacon, &SentryBeacon::userFeedbackSent, this, [this] {
-        m_sentryUserFeedbackSent = true;
+    connect(&m_sentryPostbox, &SentryPostbox::hasDeliveredChanged, this, [this] {
         maybeDone();
     });
 
@@ -67,9 +64,9 @@ ReportInterface::ReportInterface(QObject *parent)
         if (isCrashEventSendingEnabled() && !m_tryingSentry) {
             m_tryingSentry = true;
             metaObject()->invokeMethod(this, [this] {
-                connect(&m_sentryBeacon, &SentryBeacon::eventSent, this, &ReportInterface::crashEventSent);
+                connect(&m_sentryPostbox, &SentryPostbox::hasDeliveredChanged, this, &ReportInterface::crashEventSent);
                 // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
-                sendCrashEvent();
+                prepareCrashEvent();
             });
         }
     };
@@ -341,17 +338,19 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     return bug;
 }
 
-void ReportInterface::sendCrashEvent()
+void ReportInterface::prepareCrashEvent()
 {
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
-        m_sentryBeacon.sendEvent();
+        m_sentryPostbox.addEventPayload(SentryEvent(DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload()));
+        maybePickUpPostbox();
         return;
     }
     static bool connected = false;
     if (!connected) {
         connected = true;
         connect(DrKonqi::debuggerManager()->backtraceGenerator(), &BacktraceGenerator::done, this, [this] {
-            m_sentryBeacon.sendEvent();
+            m_sentryPostbox.addEventPayload(SentryEvent(DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload()));
+            maybePickUpPostbox();
         });
     }
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() != BacktraceGenerator::Loading) {
@@ -359,15 +358,15 @@ void ReportInterface::sendCrashEvent()
     }
 }
 
-void ReportInterface::sendCrashComment()
+void ReportInterface::prepareCrashComment()
 {
-    m_sentryBeacon.sendUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
+    m_sentryPostbox.addUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
                                     + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
 }
 
 void ReportInterface::sendBugReport()
 {
-    sendCrashEvent();
+    prepareCrashEvent();
 
     if (m_attachToBugNumber > 0) {
         // We are going to attach the report to an existent one
@@ -406,7 +405,8 @@ void ReportInterface::sendBugReport()
                 attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
             } else {
                 m_sentReport = bugId;
-                sendCrashComment();
+                prepareCrashComment();
+                m_sentryPostbox.deliver();
                 maybeDone();
             }
         });
@@ -452,7 +452,8 @@ void ReportInterface::attachSent(int attachId)
 
     // The bug was attached, consider it "sent"
     m_sentReport = attachId;
-    sendCrashComment();
+    prepareCrashComment();
+    m_sentryPostbox.deliver();
     maybeDone();
 }
 
@@ -543,7 +544,7 @@ ProductMapping *ReportInterface::productMapping() const
 
 void ReportInterface::maybeDone()
 {
-    if (m_sentReport != 0 && m_sentryEventSent && m_sentryUserFeedbackSent) {
+    if (m_sentReport != 0 && m_sentryPostbox.hasDelivered()) {
         Q_EMIT done();
     }
 };
@@ -556,11 +557,25 @@ ReportInterface *ReportInterface::self()
 
 bool ReportInterface::hasCrashEventSent() const
 {
-    return !isCrashEventSendingEnabled() || m_sentryBeacon.hasEventSent();
+    return !isCrashEventSendingEnabled() || m_sentryPostbox.hasDelivered();
 }
 
 bool ReportInterface::isCrashEventSendingEnabled() const
 {
     static const bool testingMode = DrKonqi::isTestingBugzilla() || qEnvironmentVariableIsEmpty("DRKONQI_KDE_BUGZILLA_URL");
     return Settings::self()->sentry() && !testingMode && !DrKonqi::crashedApplication()->hasDeletedFiles();
+}
+
+void ReportInterface::setSendWhenReady(bool send)
+{
+    m_sendWhenReady = send;
+    maybePickUpPostbox();
+}
+
+void ReportInterface::maybePickUpPostbox()
+{
+    qWarning() << Q_FUNC_INFO;
+    if (m_sendWhenReady && !m_sentryPostbox.hasDelivered() && m_sentryPostbox.isReadyToDeliver()) {
+        m_sentryPostbox.deliver();
+    }
 }

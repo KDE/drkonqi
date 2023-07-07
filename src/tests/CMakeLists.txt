@@ -17,6 +17,7 @@ endif()
 add_subdirectory(crashtest)
 add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
+add_subdirectory(sentrytest)
 
 ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_backtrace_parser)
 ecm_add_tests(

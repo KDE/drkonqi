@@ -65,6 +65,7 @@ void aboutToQuit()
         timer.setInterval(5min); // arbitrary time limit for trace+submission
         QObject::connect(&timer, &QTimer::timeout, qApp, &cleanupAfterUserQuit);
         QObject::connect(ReportInterface::self(), &ReportInterface::crashEventSent, qApp, &cleanupAfterUserQuit);
+        ReportInterface::self()->setSendWhenReady(true);
         timer.start();
     }
 }
