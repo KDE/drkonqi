@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-06 02:51+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2019-07-30 11:33+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -256,7 +256,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr ""
 
-#: bugzillaintegration/reportinterface.cpp:191
+#: bugzillaintegration/reportinterface.cpp:204
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -409,19 +409,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "このボタンでクラッシュしたアプリケーションを再起動します。"
 
-#: drkonqidialog.cpp:117
+#: drkonqidialog.cpp:121
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "一般(&G)"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:125
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "開発者情報(&D)"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:51
+#: drkonqidialog.cpp:160 qml/MainPage.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -429,7 +429,7 @@ msgid ""
 msgstr ""
 "<para>すみません、<application>%1</application> が異常終了しました</para>"
 
-#: drkonqidialog.cpp:164
+#: drkonqidialog.cpp:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -440,7 +440,7 @@ msgid ""
 "Information</interface> tab.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:178
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -450,7 +450,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:183
+#: drkonqidialog.cpp:187
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -462,7 +462,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:98
+#: drkonqidialog.cpp:196 qml/MainPage.qml:99
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -472,7 +472,7 @@ msgstr ""
 "<para>このエラーを報告することで KDE のソフトウェアを改善することに協力できま"
 "す<nl /><link url='%1'>バグレポートについて詳しく知る</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:62
+#: drkonqidialog.cpp:203 qml/MainPage.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -482,13 +482,13 @@ msgstr ""
 "<para><application>%1</application> がバグレポートのアドレスを提供していない"
 "ため、このエラーは報告できません。</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:111
+#: drkonqidialog.cpp:211 qml/MainPage.qml:122
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "詳細:"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 "<para>実行ファイル: <application>%1</application> PID: <numid>%2</numid> シグ"
 "ナル: %3 (%4) 日時: %5 %6</para>"
 
-#: drkonqidialog.cpp:241
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -506,31 +506,31 @@ msgctxt ""
 msgid "&Debug"
 msgstr "デバッグ(&D)"
 
-#: drkonqidialog.cpp:243
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "クラッシュしたアプリケーションのデバッグを開始します。"
 
-#: drkonqidialog.cpp:272
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "このダイアログを閉じる (クラッシュ情報を破棄します)"
 
-#: drkonqidialog.cpp:281
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "%1 でデバッグ"
 
-#: main.cpp:108
+#: main.cpp:128
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE クラッシュハンドラ"
 
-#: main.cpp:110
+#: main.cpp:130
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -539,43 +539,43 @@ msgstr ""
 "KDE クラッシュハンドラはプログラムがクラッシュした場合にユーザに情報を提供し"
 "ます。"
 
-#: main.cpp:113
+#: main.cpp:133
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi Authors"
 
-#: main.cpp:114
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:115
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:116
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:117
+#: main.cpp:137
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:124
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "捕まえたシグナル番号 <number>"
 
-#: main.cpp:125
+#: main.cpp:145
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -583,80 +583,80 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "プログラム名"
 
-#: main.cpp:126
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "実行ファイルへのパス"
 
-#: main.cpp:127
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "プログラムのバージョン"
 
-#: main.cpp:128
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "使用するバグのアドレス"
 
-#: main.cpp:129
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "プログラムの翻訳名"
 
-#: main.cpp:130
+#: main.cpp:150
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:131
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "プログラムの PID"
 
-#: main.cpp:132
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "プログラムの起動 ID"
 
-#: main.cpp:133
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit が起動"
 
-#: main.cpp:134
+#: main.cpp:154
 #, fuzzy, kde-format
 #| msgid "Disable arbitrary disk access"
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "任意のディスクアクセスを不可能にします"
 
-#: main.cpp:135
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "プログラムは再起動されました"
 
-#: main.cpp:138
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:140
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:141
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1045,7 +1045,7 @@ msgstr ""
 "このボタンを使って、与えられたユーザ名とパスワードを使って KDE バグトラッキン"
 "グシステムにログインしてください。"
 
-#: qml/MainPage.qml:27
+#: qml/MainPage.qml:28
 #, fuzzy
 #| msgctxt "Notification action button, keep short"
 #| msgid "Report Bug"
@@ -1053,19 +1053,19 @@ msgctxt "@action"
 msgid "Report Bug"
 msgstr "バグを報告"
 
-#: qml/MainPage.qml:29
+#: qml/MainPage.qml:30
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "バグレポートウィザードを起動。"
 
-#: qml/MainPage.qml:34
+#: qml/MainPage.qml:35
 #, fuzzy
 #| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "アプリケーションを再起動(&R)"
 
-#: qml/MainPage.qml:40
+#: qml/MainPage.qml:41
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1073,7 +1073,7 @@ msgctxt "@action"
 msgid "Developer Information"
 msgstr "開発者情報(&D)"
 
-#: qml/MainPage.qml:68
+#: qml/MainPage.qml:69
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1085,7 +1085,7 @@ msgid ""
 "tab.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:80
+#: qml/MainPage.qml:81
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1094,7 +1094,7 @@ msgid ""
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
 
-#: qml/MainPage.qml:87
+#: qml/MainPage.qml:88
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1106,7 +1106,12 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:118
+#: qml/MainPage.qml:106
+msgctxt "@label"
+msgid "Automatically submit crash data"
+msgstr ""
+
+#: qml/MainPage.qml:129
 #, fuzzy
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
@@ -1430,35 +1435,35 @@ msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1が異常終了しました"
 
-#: statusnotifier.cpp:54
+#: statusnotifier.cpp:57
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "このソフトウェアの改善のためにエラーを報告してください"
 
-#: statusnotifier.cpp:61
+#: statusnotifier.cpp:64
 #, kde-format
 msgid "Report &Bug"
 msgstr "バグを報告(&B)"
 
-#: statusnotifier.cpp:67
+#: statusnotifier.cpp:70
 #, kde-format
 msgid "&Restart Application"
 msgstr "アプリケーションを再起動(&R)"
 
-#: statusnotifier.cpp:78
+#: statusnotifier.cpp:81
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:98
+#: statusnotifier.cpp:101
 #, fuzzy, kde-format
 #| msgid "Please report this error to help improve this software."
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr "このソフトウェアの改善のためにエラーを報告してください"
 
-#: statusnotifier.cpp:99
+#: statusnotifier.cpp:102
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is an application name; it crashed"
 #| msgid "%1 Closed Unexpectedly"
@@ -1466,13 +1471,13 @@ msgctxt "Notification text"
 msgid "The application closed unexpectedly."
 msgstr "%1が異常終了しました"
 
-#: statusnotifier.cpp:110
+#: statusnotifier.cpp:113
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "バグを報告"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:116
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"

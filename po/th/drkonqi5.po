@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-06 02:51+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -276,7 +276,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "ไม่มีแพกเกจข้อมูลรายละเอียดสำหรับการดีบั๊ก"
 
-#: bugzillaintegration/reportinterface.cpp:191
+#: bugzillaintegration/reportinterface.cpp:204
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -434,19 +434,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ใช้ปุ่มนี้เพื่อเริ่มการทำงานของโปรแกรมที่ทำงานล้มเหลวใหม่อีกครั้ง"
 
-#: drkonqidialog.cpp:117
+#: drkonqidialog.cpp:121
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&ข้อมูลทั่วไป"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:125
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:51
+#: drkonqidialog.cpp:160 qml/MainPage.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -455,7 +455,7 @@ msgstr ""
 "<para>ต้องขออภัยด้วย เนื่องจากโปรแกรม <application>%1</application> "
 "ปิดตัวเองอย่างไม่คาดคิด</para>"
 
-#: drkonqidialog.cpp:164
+#: drkonqidialog.cpp:168
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -477,7 +477,7 @@ msgstr ""
 "><nl /> โปรดทำการรายงานข้อผิดพลาดนี้ว่า \"drkonqi\" ทำงานผิดพลาดด้วยตัวคุณเอง ไปยัง %1 "
 "และอย่างลืมรวบรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:178
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -496,7 +496,7 @@ msgstr ""
 ">คุณสามารถรายงานข้อผิดพลาดนี้ด้วยตัวคุณเอง ไปยัง %1 "
 "(โดยรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย)</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqidialog.cpp:187
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,7 +508,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:98
+#: drkonqidialog.cpp:196 qml/MainPage.qml:99
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -527,7 +527,7 @@ msgstr ""
 "para><para><note>คุณสามารถปิดกล่องแจ้งรายงานนี้ได้อย่างปลอดภัย "
 "หากคุณไม่ต้องการจะแจ้งรายงานข้อผิดพลาดนี้</note></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:62
+#: drkonqidialog.cpp:203 qml/MainPage.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -541,13 +541,13 @@ msgstr ""
 "<para>คุณไม่สามารถจะรายงานข้อผิดพลาดนี้ได้ เนื่องจากตัวโปรแกรม "
 "ไม่ได้ให้ที่อยู่ในการแจ้งข้อผิดพลาดมาด้วย</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:111
+#: drkonqidialog.cpp:211 qml/MainPage.qml:122
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "รายละเอียด:"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:215
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -561,7 +561,7 @@ msgstr ""
 "<para>แฟ้มประมวลผล: <application>%1</application> <br/>เลขโพรเซส (PID): "
 "<numid>%2</numid> <br/>สัญญาณ: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:241
+#: drkonqidialog.cpp:245
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button this is the debug menu button label which contains the "
@@ -573,68 +573,68 @@ msgctxt ""
 msgid "&Debug"
 msgstr "ดีบั๊ก"
 
-#: drkonqidialog.cpp:243
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "เริ่มการทำงานของโปรแกรมดีบั๊ก เพื่อดีบั๊กโปรแกรมที่ทำงานล้มเหลว"
 
-#: drkonqidialog.cpp:272
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "ปิดกล่องแจ้งรายงานนี้ (คุณจะสูญเสียข้อมูลรายละเอียดของการทำงานล้มเหลว)"
 
-#: drkonqidialog.cpp:281
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:108
+#: main.cpp:128
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "ตัวดักจับข้อขัดข้องของ KDE"
 
-#: main.cpp:110
+#: main.cpp:130
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "ตัวดักจับข้อขัดข้องของ KDE เพื่อให้ผู้ใช้ได้แจ้งข้อผิดพลาดกลับ หากโปรแกรมทำงานขัดข้อง"
 
-#: main.cpp:113
+#: main.cpp:133
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "สงวนลิขสิทธิ์ (C) 2000-2009, กลุ่มผู้เขียน DrKonqi"
 
-#: main.cpp:114
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:115
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:116
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:117
+#: main.cpp:137
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:124
+#: main.cpp:144
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -642,7 +642,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "หมายเลขสัญญาณที่ได้รับ"
 
-#: main.cpp:125
+#: main.cpp:145
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -650,7 +650,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "ชื่อของโปรแกรม"
 
-#: main.cpp:126
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -658,7 +658,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "พาธของแฟ้มประมวลผล"
 
-#: main.cpp:127
+#: main.cpp:147
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -666,7 +666,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "รุ่นของโปรแกรม"
 
-#: main.cpp:128
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -674,7 +674,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "ที่อยู่ของข้อผิดพลาดที่ใช้"
 
-#: main.cpp:129
+#: main.cpp:149
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -682,13 +682,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "ชื่อของโปรแกรมที่ผ่านการแปลแล้ว"
 
-#: main.cpp:130
+#: main.cpp:150
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:131
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -696,7 +696,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "เลขโพรเซส (PID) ของโปรแกรม"
 
-#: main.cpp:132
+#: main.cpp:152
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -704,31 +704,31 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "เลขเริ่มทำงานของโปรแกรม"
 
-#: main.cpp:133
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "โปรแกรมถูกเรียกให้ทำงานโดย kdeinit"
 
-#: main.cpp:134
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "ปิดการให้เข้าถึงดิสก์"
 
-#: main.cpp:135
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "โปรแกรมถูกเริ่มการทำงานใหม่ไปแล้ว"
 
-#: main.cpp:138
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "ให้โปรแกรมนี้ทำงานต่อไป และสร้างการติดตามย้อนกลับของการเริ่มทำงาน"
 
-#: main.cpp:140
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -736,7 +736,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "หมายเลขเธรดของเธรดที่ล้มเหลว"
 
-#: main.cpp:141
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1195,7 +1195,7 @@ msgid ""
 "mail address and password."
 msgstr "ใช้ปุ่มนี้เพื่อทำการล็อกอินไปยังระบบติดตามข้อผิดพลาดของ KDE โดยต้องป้อนชื่อผู้ใช้และรหัสผ่าน"
 
-#: qml/MainPage.qml:27
+#: qml/MainPage.qml:28
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1203,12 +1203,12 @@ msgctxt "@action"
 msgid "Report Bug"
 msgstr "รายงานข้อผิดพลาด"
 
-#: qml/MainPage.qml:29
+#: qml/MainPage.qml:30
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "เริ่มตัวช่วยรายงานข้อผิดพลาด"
 
-#: qml/MainPage.qml:34
+#: qml/MainPage.qml:35
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1216,7 +1216,7 @@ msgctxt "@action"
 msgid "Restart Application"
 msgstr "เริ่มโปรแกรมอีกครั้ง"
 
-#: qml/MainPage.qml:40
+#: qml/MainPage.qml:41
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1224,7 +1224,7 @@ msgctxt "@action"
 msgid "Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: qml/MainPage.qml:68
+#: qml/MainPage.qml:69
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1248,7 +1248,7 @@ msgstr ""
 "><nl /> โปรดทำการรายงานข้อผิดพลาดนี้ว่า \"drkonqi\" ทำงานผิดพลาดด้วยตัวคุณเอง ไปยัง %1 "
 "และอย่างลืมรวบรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย</para>"
 
-#: qml/MainPage.qml:80
+#: qml/MainPage.qml:81
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1267,7 +1267,7 @@ msgstr ""
 ">คุณสามารถรายงานข้อผิดพลาดนี้ด้วยตัวคุณเอง ไปยัง %1 "
 "(โดยรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย)</para>"
 
-#: qml/MainPage.qml:87
+#: qml/MainPage.qml:88
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1279,7 +1279,12 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:118
+#: qml/MainPage.qml:106
+msgctxt "@label"
+msgid "Automatically submit crash data"
+msgstr ""
+
+#: qml/MainPage.qml:129
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1648,38 +1653,38 @@ msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr ""
 
-#: statusnotifier.cpp:54
+#: statusnotifier.cpp:57
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr ""
 
-#: statusnotifier.cpp:61
+#: statusnotifier.cpp:64
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
 msgid "Report &Bug"
 msgstr "รายงานข้อผิดพลาด"
 
-#: statusnotifier.cpp:67
+#: statusnotifier.cpp:70
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
 msgid "&Restart Application"
 msgstr "เริ่มโปรแกรมอีกครั้ง"
 
-#: statusnotifier.cpp:78
+#: statusnotifier.cpp:81
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:98
+#: statusnotifier.cpp:101
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr ""
 
-#: statusnotifier.cpp:99
+#: statusnotifier.cpp:102
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1691,7 +1696,7 @@ msgstr ""
 "<para>ต้องขออภัยด้วย เนื่องจากโปรแกรม <application>%1</application> "
 "ปิดตัวเองอย่างไม่คาดคิด</para>"
 
-#: statusnotifier.cpp:110
+#: statusnotifier.cpp:113
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1699,7 +1704,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "รายงานข้อผิดพลาด"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:116
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-06 02:51+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-04-09 21:02+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -282,7 +282,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Falta diren arazte-informazioko paketeak"
 
-#: bugzillaintegration/reportinterface.cpp:191
+#: bugzillaintegration/reportinterface.cpp:204
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -428,26 +428,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Erabili botoi hau kraskatu den aplikazioa berrabiarazteko."
 
-#: drkonqidialog.cpp:117
+#: drkonqidialog.cpp:121
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Orokorra"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:125
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Garatzaileen informazioa"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:51
+#: drkonqidialog.cpp:160 qml/MainPage.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para><application>%1</application> ustekabean itxi da.</para>"
 
-#: drkonqidialog.cpp:164
+#: drkonqidialog.cpp:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -464,7 +464,7 @@ msgstr ""
 "<interface>Garatzaileen informazioa</interface> fitxako aztarna eranstea.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:178
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -478,7 +478,7 @@ msgstr ""
 "jakinarazi dezakezu %1-(e)ra (<interface>Garatzailearen informazioa</"
 "interface> fitxako aztarna barne).</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqidialog.cpp:187
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -496,7 +496,7 @@ msgstr ""
 "gomendagarria da saio-itxi eta atzera saio-hastea, eguneraketa erabat ezarri "
 "dela eta albo eraginik ez duela izango ziurtatzeko.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:98
+#: drkonqidialog.cpp:196 qml/MainPage.qml:99
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 "<para>KDE Softwarea hobetzen lagundu diezagukezu errore hau jakinaraziz.<nl /"
 "><link url='%1'>Jakizu gehiago akatsak jakinarazteari buruz.</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:62
+#: drkonqidialog.cpp:203 qml/MainPage.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -516,13 +516,13 @@ msgstr ""
 "<para>Ezin duzu akats hau jakinarazi, <application>%1</application>ek ez "
 "duelako akatsaren txostena jakinarazteko helbiderik hornitzen.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:111
+#: drkonqidialog.cpp:211 qml/MainPage.qml:122
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Xehetasunak:"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -532,7 +532,7 @@ msgstr ""
 "<para>Exekutagarria: <application>%1</application> PID: %2 Seinalea: %3 (%4) "
 "Data: %5 %6</para>"
 
-#: drkonqidialog.cpp:241
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -540,13 +540,13 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Araztu"
 
-#: drkonqidialog.cpp:243
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Kraskatu den aplikazioa arazteko programa abiarazten da."
 
-#: drkonqidialog.cpp:272
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
@@ -554,138 +554,138 @@ msgstr ""
 "Itxi elkarrizketa-leihoa (kraskadurari buruzko informazioa galdu egingo "
 "duzu)."
 
-#: drkonqidialog.cpp:281
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Araztu hemen: %1"
 
-#: main.cpp:108
+#: main.cpp:128
 #, kde-format
 msgid "Crash Handler"
 msgstr "Kraskadura maneiatzailea"
 
-#: main.cpp:110
+#: main.cpp:130
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Kraskadura-maneiatzaileak, programa bat kraskatu bada, erabiltzaileari "
 "itzulerako informazioa ematen dio."
 
-#: main.cpp:113
+#: main.cpp:133
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, DrKonqi-ren egileak"
 
-#: main.cpp:114
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:115
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:116
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:117
+#: main.cpp:137
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:124
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Harrapatu den seinale <zenbakia>"
 
-#: main.cpp:125
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Programaren <izena>"
 
-#: main.cpp:126
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Exekutagarrirako <bide-izena>"
 
-#: main.cpp:127
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Programaren <bertsioa>"
 
-#: main.cpp:128
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Erabili beharreko akats-<helbidea>"
 
-#: main.cpp:129
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Itzulitako programa-<izena>"
 
-#: main.cpp:130
+#: main.cpp:150
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzillako produktu izena"
 
-#: main.cpp:131
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Programaren <PID>"
 
-#: main.cpp:132
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Programa abiarazteko <ID>"
 
-#: main.cpp:133
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit-ek abiarazi du programa"
 
-#: main.cpp:134
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Desgaitu ausazko disko-atzipena"
 
-#: main.cpp:135
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Dagoeneko berrabiarazi da programa"
 
-#: main.cpp:138
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Segi programa exekutatzen eta sortu aztarna abioan"
 
-#: main.cpp:140
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Huts egiten duen <hariaren ID>"
 
-#: main.cpp:141
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1023,27 +1023,27 @@ msgstr ""
 "Erabili botoi hau KDEren akatsen jarraipenerako sisteman dagokizun e-posta "
 "eta pasahitzarekin saio-hasteko."
 
-#: qml/MainPage.qml:27
+#: qml/MainPage.qml:28
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Jakinarazi akatsa"
 
-#: qml/MainPage.qml:29
+#: qml/MainPage.qml:30
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Akatsak jakinarazteko laguntzailea abiarazten da."
 
-#: qml/MainPage.qml:34
+#: qml/MainPage.qml:35
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "Berrabiarazi aplikazioa"
 
-#: qml/MainPage.qml:40
+#: qml/MainPage.qml:41
 msgctxt "@action"
 msgid "Developer Information"
 msgstr "Garatzaileen informazioa"
 
-#: qml/MainPage.qml:68
+#: qml/MainPage.qml:69
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1061,7 +1061,7 @@ msgstr ""
 "<link url='%1'>eskuz aurkeztu</link>. Ez ahaztu <interface>Garatzaileen\n"
 "informazioa</interface> fitxako atzerako-aztarna eranstea.</para>"
 
-#: qml/MainPage.qml:80
+#: qml/MainPage.qml:81
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1075,7 +1075,7 @@ msgstr ""
 "(<interface>Garatzaileen informazioa</interface> fitxako atzerako-aztarna "
 "barne).</para>"
 
-#: qml/MainPage.qml:87
+#: qml/MainPage.qml:88
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1094,7 +1094,12 @@ msgstr ""
 "da saio-itxi eta atzera saio-hastea, eguneraketa erabat ezarri dela eta\n"
 "albo eraginik izango ez duela ziurtatzeko.</para>"
 
-#: qml/MainPage.qml:118
+#: qml/MainPage.qml:106
+msgctxt "@label"
+msgid "Automatically submit crash data"
+msgstr ""
+
+#: qml/MainPage.qml:129
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
@@ -1409,46 +1414,46 @@ msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 ustekabean itxi da"
 
-#: statusnotifier.cpp:54
+#: statusnotifier.cpp:57
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "Mesedez, jakinarazi errore hau software hau hobetzen laguntzeko."
 
-#: statusnotifier.cpp:61
+#: statusnotifier.cpp:64
 #, kde-format
 msgid "Report &Bug"
 msgstr "Jakinarazi &akatsa"
 
-#: statusnotifier.cpp:67
+#: statusnotifier.cpp:70
 #, kde-format
 msgid "&Restart Application"
 msgstr "&Berrabiarazi aplikazioa"
 
-#: statusnotifier.cpp:78
+#: statusnotifier.cpp:81
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Ezkutatu"
 
-#: statusnotifier.cpp:98
+#: statusnotifier.cpp:101
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr "Mesedez, jakinarazi errore hau software hau hobetzen laguntzeko."
 
-#: statusnotifier.cpp:99
+#: statusnotifier.cpp:102
 #, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
 msgstr "Aplikazioa ustekabean itxi da."
 
-#: statusnotifier.cpp:110
+#: statusnotifier.cpp:113
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Jakinarazi akatsa"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:116
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"

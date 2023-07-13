@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-06 02:51+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-05-28 16:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -267,7 +267,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "遺失除錯資訊軟體包"
 
-#: bugzillaintegration/reportinterface.cpp:191
+#: bugzillaintegration/reportinterface.cpp:204
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -413,26 +413,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "用此按鍵來重新啟動已崩潰的應用程式。"
 
-#: drkonqidialog.cpp:117
+#: drkonqidialog.cpp:121
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "一般(&G)"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:125
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "開發者資訊(&D)"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:51
+#: drkonqidialog.cpp:160 qml/MainPage.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para>抱歉，<application>%1</application>無預警關閉。</para>"
 
-#: drkonqidialog.cpp:164
+#: drkonqidialog.cpp:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -447,7 +447,7 @@ msgstr ""
 "忘了到<interface>「開發者資訊」</interface>分頁中取得回溯追蹤並放入您的報告"
 "中。</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:178
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -460,7 +460,7 @@ msgstr ""
 "以手動報告此錯誤給 %1（請包含在<interface>「開發者資訊」</interface>分頁中的"
 "錯誤回溯追蹤資料。）</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqidialog.cpp:187
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -475,7 +475,7 @@ msgstr ""
 "使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
 "入，以確保更新完全套用，且不會有任何副作用。</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:98
+#: drkonqidialog.cpp:196 qml/MainPage.qml:99
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -485,7 +485,7 @@ msgstr ""
 "<para>您回報此錯誤可以協助我們改進 KDE 軟體。<nl /><link url='%1'>更多關於錯"
 "誤回報的詳情。</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:62
+#: drkonqidialog.cpp:203 qml/MainPage.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -495,13 +495,13 @@ msgstr ""
 "<para>您不能回報此錯誤，因為 <application>%1</application> 並未提供錯誤回報位"
 "址。</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:111
+#: drkonqidialog.cpp:211 qml/MainPage.qml:122
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "詳細資料："
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -511,7 +511,7 @@ msgstr ""
 "<para>執行檔：<application>%1</application> 行程代碼：%2，信號：%3（%4）時"
 "間：%5 %6</para>"
 
-#: drkonqidialog.cpp:241
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -519,148 +519,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "除錯(&D)"
 
-#: drkonqidialog.cpp:243
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "啟動為已崩潰的應用程式除錯的程式。"
 
-#: drkonqidialog.cpp:272
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "關閉此對話框（您將會遺失關於此崩潰的資訊。）"
 
-#: drkonqidialog.cpp:281
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "在 %1 中除錯"
 
-#: main.cpp:108
+#: main.cpp:128
 #, kde-format
 msgid "Crash Handler"
 msgstr "崩潰處理程式"
 
-#: main.cpp:110
+#: main.cpp:130
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "崩潰處理程式可以讓使用者知道程式發生錯誤而崩潰了。"
 
-#: main.cpp:113
+#: main.cpp:133
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, DrKonqi 作者群"
 
-#: main.cpp:114
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:115
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:116
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:117
+#: main.cpp:137
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:124
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "捕捉到的信號號碼 <number>"
 
-#: main.cpp:125
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "程式的名稱 <Name>"
 
-#: main.cpp:126
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "可執行檔的路徑 <Path>"
 
-#: main.cpp:127
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "程式的版本 <version>"
 
-#: main.cpp:128
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "要使用的臭蟲位址 <address>"
 
-#: main.cpp:129
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "程式的翻譯名稱 <name>"
 
-#: main.cpp:130
+#: main.cpp:150
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla 產品名稱"
 
-#: main.cpp:131
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "程式的行程代碼 <PID>"
 
-#: main.cpp:132
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "程式的啟動代碼 <ID>"
 
-#: main.cpp:133
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "這個程式由 kdeinit 啟動"
 
-#: main.cpp:134
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "停用對磁碟的任意存取"
 
-#: main.cpp:135
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "這個程式已被啟動"
 
-#: main.cpp:138
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "保持程式執行，並在啟動時產生回溯追蹤"
 
-#: main.cpp:140
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "出錯的執行緒的代碼 <thread id>"
 
-#: main.cpp:141
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -972,27 +972,27 @@ msgid ""
 "mail address and password."
 msgstr "按下此按鈕，以使用提供的電子信箱位址及密碼登入 KDE 臭蟲追蹤系統。"
 
-#: qml/MainPage.qml:27
+#: qml/MainPage.qml:28
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "回報問題"
 
-#: qml/MainPage.qml:29
+#: qml/MainPage.qml:30
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "啟動錯誤回報小助手。"
 
-#: qml/MainPage.qml:34
+#: qml/MainPage.qml:35
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "重新啟動應用程式"
 
-#: qml/MainPage.qml:40
+#: qml/MainPage.qml:41
 msgctxt "@action"
 msgid "Developer Information"
 msgstr "開發者資訊"
 
-#: qml/MainPage.qml:68
+#: qml/MainPage.qml:69
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1008,7 +1008,7 @@ msgstr ""
 "忘了到<interface>「開發者資訊」</interface>分頁中取得回溯追蹤並放入您的報告"
 "中。</para>"
 
-#: qml/MainPage.qml:80
+#: qml/MainPage.qml:81
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1020,7 +1020,7 @@ msgstr ""
 "以手動報告此錯誤到 <link>%1</link>（請包含在<interface>「開發者資訊」</"
 "interface>分頁中的錯誤回溯追蹤資料。）</para>"
 
-#: qml/MainPage.qml:87
+#: qml/MainPage.qml:88
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1035,7 +1035,12 @@ msgstr ""
 "使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
 "入，以確保更新完全套用，且不會有任何副作用。</para>"
 
-#: qml/MainPage.qml:118
+#: qml/MainPage.qml:106
+msgctxt "@label"
+msgid "Automatically submit crash data"
+msgstr ""
+
+#: qml/MainPage.qml:129
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
@@ -1335,46 +1340,46 @@ msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 無預警關閉"
 
-#: statusnotifier.cpp:54
+#: statusnotifier.cpp:57
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "請回報錯誤，協助我們改善此軟體。"
 
-#: statusnotifier.cpp:61
+#: statusnotifier.cpp:64
 #, kde-format
 msgid "Report &Bug"
 msgstr "報告問題(&B)"
 
-#: statusnotifier.cpp:67
+#: statusnotifier.cpp:70
 #, kde-format
 msgid "&Restart Application"
 msgstr "重新啟動應用程式(&R)"
 
-#: statusnotifier.cpp:78
+#: statusnotifier.cpp:81
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "隱藏"
 
-#: statusnotifier.cpp:98
+#: statusnotifier.cpp:101
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr "請回報錯誤，協助我們改善此軟體。"
 
-#: statusnotifier.cpp:99
+#: statusnotifier.cpp:102
 #, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
 msgstr "應用程式無預警關閉。"
 
-#: statusnotifier.cpp:110
+#: statusnotifier.cpp:113
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "回報問題"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:116
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-06 02:51+0000\n"
+"POT-Creation-Date: 2023-07-13 02:10+0000\n"
 "PO-Revision-Date: 2023-04-01 19:35+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -292,7 +292,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Símbolos de depuración no disponibles"
 
-#: bugzillaintegration/reportinterface.cpp:191
+#: bugzillaintegration/reportinterface.cpp:204
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -444,19 +444,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use este botón para reiniciar la aplicación que falló y se cerró."
 
-#: drkonqidialog.cpp:117
+#: drkonqidialog.cpp:121
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&General"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:125
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Información para &desarrolladores"
 
-#: drkonqidialog.cpp:156 qml/MainPage.qml:51
+#: drkonqidialog.cpp:160 qml/MainPage.qml:52
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -465,7 +465,7 @@ msgstr ""
 "<para>Lo lamentamos, <application>%1</application> se cerró inesperadamente."
 "</para>"
 
-#: drkonqidialog.cpp:164
+#: drkonqidialog.cpp:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -482,7 +482,7 @@ msgstr ""
 "KDE. No olvide incluir la traza inversa de la pestaña <interface>Información "
 "para desarrolladores</interface>.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:178
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -496,7 +496,7 @@ msgstr ""
 "manualmente de este error a %1 (incluyendo la traza inversa de la pestaña "
 "<interface>Información para desarrolladores</interface>).</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqidialog.cpp:187
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -515,7 +515,7 @@ msgstr ""
 "para asegurarse de que la actualización se ha aplicado correctamente y no "
 "provocará efectos colaterales.</para>"
 
-#: drkonqidialog.cpp:192 qml/MainPage.qml:98
+#: drkonqidialog.cpp:196 qml/MainPage.qml:99
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -525,7 +525,7 @@ msgstr ""
 "<para>Puede ayudarnos a mejorar el software de KDE informando de este error."
 "<nl /><link url='%1'>Aprenda más sobre e informe de errores.</link></para>"
 
-#: drkonqidialog.cpp:199 qml/MainPage.qml:62
+#: drkonqidialog.cpp:203 qml/MainPage.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -535,13 +535,13 @@ msgstr ""
 "<para>No puede informar de este error porque <application>%1</application> "
 "no proporciona una dirección de informe de errores.</para>"
 
-#: drkonqidialog.cpp:207 qml/MainPage.qml:111
+#: drkonqidialog.cpp:211 qml/MainPage.qml:122
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalles:"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -551,7 +551,7 @@ msgstr ""
 "<para>Ejecutable: <application>%1</application> PID: %2 Señal: %3 (%4) Hora: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:241
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -559,148 +559,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Depurar"
 
-#: drkonqidialog.cpp:243
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Inicia el programa para depurar la aplicación que ha fallado."
 
-#: drkonqidialog.cpp:272
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Cerrar este diálogo (se perderá la información de este fallo.)"
 
-#: drkonqidialog.cpp:281
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Depurar en %1"
 
-#: main.cpp:108
+#: main.cpp:128
 #, kde-format
 msgid "Crash Handler"
 msgstr "El manejador de fallos"
 
-#: main.cpp:110
+#: main.cpp:130
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "El manejador de fallos informa al usuario cuando un programa falla."
 
-#: main.cpp:113
+#: main.cpp:133
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000-2018, los autores de DrKonqi"
 
-#: main.cpp:114
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:115
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Darío Andrés Rodríguez"
 
-#: main.cpp:116
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:117
+#: main.cpp:137
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:124
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "El <número> de señal capturado"
 
-#: main.cpp:125
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Nombre> del programa"
 
-#: main.cpp:126
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Ruta> del ejecutable"
 
-#: main.cpp:127
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "La <versión> del programa"
 
-#: main.cpp:128
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "La <dirección> de fallos a usar"
 
-#: main.cpp:129
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "<Nombre> traducido del programa"
 
-#: main.cpp:130
+#: main.cpp:150
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nombre del producto en Bugzilla"
 
-#: main.cpp:131
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "El <PID> del programa"
 
-#: main.cpp:132
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "<ID> de inicio del programa"
 
-#: main.cpp:133
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "El programa fue iniciado por kdeinit"
 
-#: main.cpp:134
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Inhabilitar el acceso arbitrario a disco"
 
-#: main.cpp:135
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "El programa ya ha sido reiniciado"
 
-#: main.cpp:138
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Mantener el programa en ejecución y generar la traza inversa al inicio"
 
-#: main.cpp:140
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "El <ID del hilo> que ha fallado"
 
-#: main.cpp:141
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1030,27 +1030,27 @@ msgstr ""
 "Use este botón para iniciar sesión en el sistema de seguimiento de errores "
 "de KDE usando la dirección de correo electrónico y la contraseña facilitados."
 
-#: qml/MainPage.qml:27
+#: qml/MainPage.qml:28
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Informar del fallo"
 
-#: qml/MainPage.qml:29
+#: qml/MainPage.qml:30
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Inicia el asistente de informe de errores."
 
-#: qml/MainPage.qml:34
+#: qml/MainPage.qml:35
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "Reiniciar la aplicación"
 
-#: qml/MainPage.qml:40
+#: qml/MainPage.qml:41
 msgctxt "@action"
 msgid "Developer Information"
 msgstr "Información para desarrolladores"
 
-#: qml/MainPage.qml:68
+#: qml/MainPage.qml:69
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1069,7 +1069,7 @@ msgstr ""
 "traza inversa de la pestaña <interface>Información para\n"
 "desarrolladores</interface>.</para>"
 
-#: qml/MainPage.qml:80
+#: qml/MainPage.qml:81
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1083,7 +1083,7 @@ msgstr ""
 "traza inversa de la pestaña <interface>Información para desarrolladores</"
 "interface>).</para>"
 
-#: qml/MainPage.qml:87
+#: qml/MainPage.qml:88
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1103,7 +1103,12 @@ msgstr ""
 "para asegurarse de que la actualización se ha aplicado correctamente y no\n"
 "provocará efectos colaterales.</para>"
 
-#: qml/MainPage.qml:118
+#: qml/MainPage.qml:106
+msgctxt "@label"
+msgid "Automatically submit crash data"
+msgstr ""
+
+#: qml/MainPage.qml:129
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
@@ -1418,46 +1423,46 @@ msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 se ha cerrado de forma no esperada"
 
-#: statusnotifier.cpp:54
+#: statusnotifier.cpp:57
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "Por favor, notifique este error para ayudar a mejorar este software."
 
-#: statusnotifier.cpp:61
+#: statusnotifier.cpp:64
 #, kde-format
 msgid "Report &Bug"
 msgstr "Informar de &fallo"
 
-#: statusnotifier.cpp:67
+#: statusnotifier.cpp:70
 #, kde-format
 msgid "&Restart Application"
 msgstr "&Reiniciar la aplicación"
 
-#: statusnotifier.cpp:78
+#: statusnotifier.cpp:81
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Ocultar"
 
-#: statusnotifier.cpp:98
+#: statusnotifier.cpp:101
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr "Por favor, notifique este error para ayudar a mejorar este software."
 
-#: statusnotifier.cpp:99
+#: statusnotifier.cpp:102
 #, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
 msgstr "La aplicación se ha cerrado de forma no esperada."
 
-#: statusnotifier.cpp:110
+#: statusnotifier.cpp:113
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Informar del fallo"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:116
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
