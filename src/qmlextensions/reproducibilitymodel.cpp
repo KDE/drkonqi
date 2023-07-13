@@ -66,3 +66,5 @@ QHash<int, QByteArray> ReproducibilityModel::roleNames() const
     }
     return roles;
 }
+
+#include "moc_reproducibilitymodel.cpp"

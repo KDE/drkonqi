@@ -70,3 +70,5 @@ QString Patient::iconName() const
     }
     return *it;
 }
+
+#include "moc_Patient.cpp"

@@ -111,3 +111,5 @@ void StatusWidget::showEvent(QShowEvent *)
         setBusyCursor();
     }
 }
+
+#include "moc_statuswidget.cpp"

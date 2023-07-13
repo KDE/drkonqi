@@ -206,3 +206,5 @@ void AbstractBTGenerator::LoadSymbols()
     Q_EMIT DebugLine(QString());
     Q_EMIT DebugLine(QString());
 }
+
+#include "moc_abstract_generator.cpp"

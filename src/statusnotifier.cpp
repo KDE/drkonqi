@@ -145,3 +145,5 @@ bool StatusNotifier::canBeRestarted(CrashedApplication *app)
 {
     return !app->hasBeenRestarted() && app->fakeExecutableBaseName() != QLatin1String("drkonqi");
 }
+
+#include "moc_statusnotifier.cpp"

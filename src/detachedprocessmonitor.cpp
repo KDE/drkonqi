@@ -36,3 +36,5 @@ void DetachedProcessMonitor::timerEvent(QTimerEvent *event)
         Q_EMIT processFinished();
     }
 }
+
+#include "moc_detachedprocessmonitor.cpp"

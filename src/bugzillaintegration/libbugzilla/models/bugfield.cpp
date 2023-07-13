@@ -55,3 +55,5 @@ QString BugFieldValue::name() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_bugfield.cpp"

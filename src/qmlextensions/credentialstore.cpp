@@ -111,3 +111,5 @@ void CredentialStore::drop()
         m_wallet->removeEntry(m_walletEntryName);
     }
 }
+
+#include "moc_credentialstore.cpp"

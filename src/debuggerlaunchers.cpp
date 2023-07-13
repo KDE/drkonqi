@@ -120,3 +120,5 @@ void DBusInterfaceAdaptor::debuggerClosed(const QString &name)
         m_launchers.erase(it);
     }
 }
+
+#include "moc_debuggerlaunchers.cpp"

@@ -114,3 +114,5 @@ void DebuggerManager::onDebuggerInvalidated()
     d->externalDebuggers.removeAt(index);
     Q_EMIT externalDebuggerRemoved(launcher);
 }
+
+#include "moc_debuggermanager.cpp"

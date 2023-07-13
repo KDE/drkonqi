@@ -29,3 +29,5 @@ Query BugSearch::toQuery() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_bugsearch.cpp"

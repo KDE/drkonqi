@@ -30,3 +30,4 @@ BacktraceLineCdb::BacktraceLineCdb(const QString &line)
     // We should do the faith jump to believe that cdb will provides useful information
     d->m_rating = Good;
 }
+#include "moc_backtraceparsercdb.cpp"

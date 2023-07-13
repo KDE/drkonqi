@@ -20,3 +20,5 @@ void Outputter::OnDebugLine(const QString &line)
 {
     stream << line << '\n';
 }
+
+#include "moc_outputters.cpp"

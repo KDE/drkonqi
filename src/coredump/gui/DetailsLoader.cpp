@@ -38,3 +38,5 @@ void DetailsLoader::load()
     });
     m_LoaderProcess->start();
 }
+
+#include "moc_DetailsLoader.cpp"

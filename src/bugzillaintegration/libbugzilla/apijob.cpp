@@ -88,3 +88,5 @@ NetworkAPIJob::NetworkAPIJob(const QUrl &url, const std::function<QNetworkReply 
 }
 
 } // namespace Bugzilla
+
+#include "moc_apijob.cpp"

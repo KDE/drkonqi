@@ -579,3 +579,5 @@ void ReportInterface::maybePickUpPostbox()
         m_sentryPostbox.deliver();
     }
 }
+
+#include "moc_reportinterface.cpp"

@@ -139,3 +139,5 @@ void ActivationCloseTimer::setCloseTimeout(std::chrono::milliseconds timeout)
 {
     m_closeTimeout = timeout;
 }
+
+#include "moc_statusnotifier_activationclosetimer.cpp"

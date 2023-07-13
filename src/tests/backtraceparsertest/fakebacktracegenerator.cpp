@@ -19,3 +19,5 @@ void FakeBacktraceGenerator::sendData(const QString &filename)
     }
     Q_EMIT newLine(QString());
 }
+
+#include "moc_fakebacktracegenerator.cpp"

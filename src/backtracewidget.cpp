@@ -418,3 +418,5 @@ void BacktraceWidget::extraDetailsLinkActivated(QString link)
         KMessageBox::information(this, message, i18nc("messagebox title", "Missing debug information packages"));
     }
 }
+
+#include "moc_backtracewidget.cpp"

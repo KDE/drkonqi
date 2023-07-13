@@ -35,3 +35,5 @@ QHash<int, QByteArray> QObjectListModel::roleNames() const
     }
     return roles;
 }
+
+#include "moc_qobjectlistmodel.cpp"

@@ -117,3 +117,5 @@ void MsvcGenerator::LoadSymbol(const QString &module, DWORD64 dwBaseAddr)
 
     Q_EMIT DebugLine(strOutput);
 }
+
+#include "moc_msvc_generator.cpp"

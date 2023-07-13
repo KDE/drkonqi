@@ -154,3 +154,5 @@ ParseBugBacktraces::DuplicateRating ParseBugBacktraces::findDuplicate(const QLis
 
     return bestRating;
 }
+
+#include "moc_parsebugbacktraces.cpp"

@@ -252,3 +252,5 @@ QByteArray BacktraceGenerator::sentryPayload() const
 {
     return m_sentryPayload;
 };
+
+#include "moc_backtracegenerator.cpp"

@@ -156,3 +156,5 @@ void PatientModel::setReady(bool ready)
     m_ready = ready;
     Q_EMIT readyChanged();
 }
+
+#include "moc_PatientModel.cpp"

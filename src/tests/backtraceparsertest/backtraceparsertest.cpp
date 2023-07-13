@@ -127,3 +127,5 @@ void BacktraceParserTest::btParserCompositorCrashTest()
 }
 
 QTEST_GUILESS_MAIN(BacktraceParserTest)
+
+#include "moc_backtraceparsertest.cpp"

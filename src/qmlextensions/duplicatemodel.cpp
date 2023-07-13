@@ -116,3 +116,5 @@ void DuplicateModel::analyzedDuplicates(KJob *j)
     m_searching = false;
     Q_EMIT searchingChanged();
 }
+
+#include "moc_duplicatemodel.cpp"

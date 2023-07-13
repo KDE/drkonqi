@@ -113,3 +113,5 @@ QHash<int, QByteArray> PlatformModel::roleNames() const
     }
     return roles;
 }
+
+#include "moc_platformmodel.cpp"

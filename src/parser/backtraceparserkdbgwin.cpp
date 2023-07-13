@@ -114,3 +114,5 @@ void BacktraceParserKdbgwin::newLine(const QString &lineStr)
 }
 
 // END BacktraceParserKdbgwin
+
+#include "moc_backtraceparserkdbgwin.cpp"

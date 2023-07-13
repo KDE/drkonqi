@@ -343,3 +343,5 @@ void DrKonqiDialog::applicationRestarted(bool success)
 }
 
 #include "drkonqidialog.moc"
+
+#include "moc_drkonqidialog.cpp"

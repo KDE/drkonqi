@@ -70,3 +70,5 @@ bool NotifyTruck::handle(const Coredump &dump)
     qApp->exec();
     return true;
 }
+
+#include "moc_NotifierTruck.cpp"

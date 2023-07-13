@@ -227,3 +227,5 @@ QString ProductMapping::bugzillaProductOriginal() const
 {
     return m_bugzillaProductOriginal;
 }
+
+#include "moc_productmapping.cpp"

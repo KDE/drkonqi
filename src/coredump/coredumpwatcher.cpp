@@ -167,3 +167,5 @@ void CoredumpWatcher::start()
     // Make sure to read whatever we have pending on next loop.
     QMetaObject::invokeMethod(this, &CoredumpWatcher::processLog);
 }
+
+#include "moc_coredumpwatcher.cpp"

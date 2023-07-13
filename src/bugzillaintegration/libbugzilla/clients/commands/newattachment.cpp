@@ -25,3 +25,5 @@ QVariantHash NewAttachment::toVariantHash() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_newattachment.cpp"

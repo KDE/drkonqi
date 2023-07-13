@@ -109,3 +109,5 @@ void DebugPackageInstaller::processFinished(int exitCode, QProcess::ExitStatus)
     delete m_installerProcess;
     m_installerProcess = nullptr;
 }
+
+#include "moc_debugpackageinstaller.cpp"

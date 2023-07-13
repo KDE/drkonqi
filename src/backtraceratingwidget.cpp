@@ -63,3 +63,5 @@ void BacktraceRatingWidget::paintEvent(QPaintEvent *event)
 
     p.end();
 }
+
+#include "moc_backtraceratingwidget.cpp"

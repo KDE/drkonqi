@@ -345,3 +345,5 @@ void BugzillaManager::stopCurrentSearch()
         m_searchJob = nullptr;
     }
 }
+
+#include "moc_bugzillalib.cpp"

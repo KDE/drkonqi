@@ -45,3 +45,5 @@ void BacktraceParserLldb::newLine(const QString &lineStr)
 }
 
 // END BacktraceParserLldb
+
+#include "moc_backtraceparserlldb.cpp"

@@ -159,3 +159,5 @@ void DuplicateFinderJob::slotError(const QString &message, QObject *owner)
     qCDebug(DRKONQI_LOG) << "Error fetching bug:" << message;
     analyzeNextBug();
 }
+
+#include "moc_duplicatefinderjob.cpp"

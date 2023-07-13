@@ -43,3 +43,5 @@ Q_INVOKABLE bool Doctore::ignoreQuality()
 {
     return DrKonqi::ignoreQuality();
 }
+
+#include "moc_doctore.cpp"

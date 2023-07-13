@@ -29,3 +29,5 @@ QString Comment::text() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_comment.cpp"

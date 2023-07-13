@@ -149,3 +149,5 @@ void MingwGenerator::LoadSymbol(const QString &module, DWORD64 dwBaseAddr)
     QString strOutput = QString::fromLatin1("Loaded %1 (%2)").arg(module).arg(symbolType);
     Q_EMIT DebugLine(strOutput);
 }
+
+#include "moc_mingw_generator.cpp"

@@ -102,3 +102,5 @@ QUrl HTTPConnection::url(const QString &appendix, Query query) const
 }
 
 } // namespace Bugzilla
+
+#include "moc_connection.cpp"

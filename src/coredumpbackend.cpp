@@ -148,3 +148,5 @@ void CoredumpBackend::prepareForDebugger()
         Qt::QueuedConnection /* queue so we don't delete the object out from under it */);
     m_preparationProc->start();
 }
+
+#include "moc_coredumpbackend.cpp"

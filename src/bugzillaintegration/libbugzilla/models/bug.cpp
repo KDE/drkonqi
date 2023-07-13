@@ -102,3 +102,5 @@ Bug::Status Bug::status() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_bug.cpp"

@@ -26,3 +26,5 @@ NewBug::NewBug(const NewBug &other)
 }
 
 } // namespace Bugzilla
+
+#include "moc_newbug.cpp"

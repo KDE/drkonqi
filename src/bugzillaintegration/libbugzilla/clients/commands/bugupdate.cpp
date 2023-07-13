@@ -9,3 +9,5 @@
 namespace Bugzilla
 {
 } // namespace Bugzilla
+
+#include "moc_bugupdate.cpp"

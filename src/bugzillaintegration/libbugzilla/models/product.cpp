@@ -127,3 +127,5 @@ ProductComponent::ProductComponent(const QVariantHash &object, QObject *parent)
 }
 
 } // namespace Bugzilla
+
+#include "moc_product.cpp"

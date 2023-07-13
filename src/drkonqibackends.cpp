@@ -257,3 +257,5 @@ void KCrashBackend::emergencySaveFunction(int signal)
     Q_UNUSED(signal);
     ::kill(s_pid, SIGKILL);
 }
+
+#include "moc_drkonqibackends.cpp"

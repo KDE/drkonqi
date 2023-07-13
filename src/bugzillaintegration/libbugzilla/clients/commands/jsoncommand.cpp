@@ -52,3 +52,5 @@ QVariantHash JsonCommand::toVariantHash() const
 }
 
 } // namespace Bugzilla
+
+#include "moc_jsoncommand.cpp"

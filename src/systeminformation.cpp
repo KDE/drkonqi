@@ -291,3 +291,5 @@ QString SystemInformation::windowSystem() const
     }
     return QStringLiteral("Unknown");
 }
+
+#include "moc_systeminformation.cpp"

@@ -390,3 +390,5 @@ QString BacktraceParser::informationLines() const
         ret += QLatin1Char('\n');
     return ret;
 }
+
+#include "moc_backtraceparser.cpp"
