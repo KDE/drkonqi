@@ -391,6 +391,7 @@ class SentryImages:
 
     def to_list(self):
         ret = []
+        if not self.mappings: return ret
         for file, mapping in self.mappings.items():
             image = SentryImage(file=file, start=mapping['start'], end=mapping['end'])
             if not image.valid: # images are invalid if the file wasn't actually found in the gdb.objfiles
