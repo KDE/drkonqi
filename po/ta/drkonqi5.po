@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:11+0000\n"
-"PO-Revision-Date: 2023-04-02 16:46+0530\n"
+"PO-Revision-Date: 2023-07-16 12:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.90\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -168,6 +168,8 @@ msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
 msgstr ""
+"இந்த முறிவு விவரங்களுக்கு இட்ட மதிப்பீடு செல்லுபடியாகாத‍து. இது DrKonqi-யிலுள்ள "
+"பிழையாகும்."
 
 #: backtracewidget.cpp:267
 #, kde-kuit-format
@@ -287,7 +289,7 @@ msgstr "இதற்கு முன்பு முறிவடைந்து�
 #: coredump/gui/main.cpp:34
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr ""
+msgstr "(C) 2020-2022, DrKonqi நிரலாளர்கள்"
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -518,15 +520,15 @@ msgid "Crash Handler"
 msgstr "முறிவுக் கையாளி"
 
 #: main.cpp:131
-#, fuzzy, kde-format
-#| msgid "KDE crash handler gives the user feedback if a program crashed"
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
-msgstr "நிரலொன்று முறிகையில், கேடியி முறிவுக் கையாளர் பயனருக்கு அதுபற்றி அறிவிக்கும்."
+msgstr ""
+"நிரலொன்று முறிவடைகையில், முறிவுக் கையாளி பயனருக்கு அதுபற்றிய விவரங்களைக் காட்டும்."
 
 #: main.cpp:134
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr ""
+msgstr "(C) 2000-2018, DrKonqi நிரலாளர்கள்"
 
 #: main.cpp:135
 #, kde-format
@@ -656,7 +658,7 @@ msgstr "அறிவிப்பை காட்டாமல் நேரடி�
 #: qml/BacktracePage.qml:11
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr ""
+msgstr "முறிவுகுறித்த விவரங்கள் பெறப்படுகின்றன (தானியங்கி backtrace உருவாக்கம்)"
 
 #: qml/BacktracePage.qml:24
 msgctxt "@action:button"
@@ -834,7 +836,7 @@ msgstr "மற்றவர்களின் இதைப்போன்ற அ�
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr ""
+msgstr "இதுபோன்ற பிழையறிக்கைகளைத் தேடுகிறது…"
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -843,38 +845,42 @@ msgid ""
 "and compare it to yours. You can suggest that your crash is a duplicate of "
 "that report or directly attach your information to it."
 msgstr ""
+"இந்த பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளதா என்பதைப் பார்க்கவும். பட்டியலிலுள்ள ஓர் அறிக்கையின் "
+"மீது இரட்டை கிளிக் செய்து உங்கள் பிழையறிக்கையுடன் ஒப்பிடலாம். இரண்டும் ஒன்றாக இருந்தால் "
+"உங்கள் பிழையறிக்கை அதன் நகலென்று குறிப்பிடலாம், அல்லது உங்கள் முறிவுகுறித்த விவரங்களை "
+"நேரடியாக அவ்வறிக்கையுடனேயே இணைக்கலாம்."
 
 #: qml/DuplicatesPage.qml:45
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr ""
+msgstr "நகலா?"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
+msgstr "உங்கள் முறிவு இவ்வறிக்கையின் நகலென்று உறுதியாக நம்புகிறீர்களா?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr ""
+msgstr "முறிவு நகலானது"
 
 #: qml/DuplicatesPage.qml:76
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
-msgstr ""
+msgstr "உங்கள் முறிவு இதன் நகல் என்று உறுதியாக நம்பினால் இப்பட்டமை அழுத்தவும்"
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr ""
+msgstr "முறிவு நகலில்லை"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
-msgstr "இது தொடர்புடையது"
+msgstr "இது தொடர்புடையதாக இருக்கலாம்"
 
 #: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
@@ -884,6 +890,9 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
+"நீங்கள் எதிர்கொண்ட முறிவு இந்த அறிக்கையுடன்\n"
+"தொடர்புடையதாக இருக்கலாம் என்பதை குறிக்க\n"
+"இப்பட்டனைப் பயன்படுத்தலாம்"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
@@ -893,12 +902,12 @@ msgstr "இதனுடன் தோடர்பல்ல"
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
-msgstr ""
+msgstr "பிழையறிக்கை கையாள் சேவையில் உள்நுழைக"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
 msgid "You need to login with your %1 account in order to proceed."
-msgstr ""
+msgstr "தொடர உங்கள் %1 கணக்கில் நுழைய வேண்டும்."
 
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
