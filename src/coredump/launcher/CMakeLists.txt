@@ -16,6 +16,10 @@ install(
     FILES drkonqi-coredump-launcher.socket ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-launcher@.service
     DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
+install(CODE "
+    include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
+    systemctl_enable(drkonqi-coredump-launcher.socket sockets.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
+")
 
 add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp NotifierTruck.h)
 target_link_libraries(KDECoredumpNotifierTruck Qt::Core KF6::Notifications KF6::KIOGui)

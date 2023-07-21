@@ -13,9 +13,7 @@ install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-processor@.service
     DESTINATION ${KDE_INSTALL_SYSTEMDUNITDIR}/system
 )
-
-# https://github.com/systemd/systemd/issues/19437
-add_feature_info(
-    "drkonqi-coredump-processor@.service"
-    FALSE
-    "The service does not enable correctly with systemd (up to at least version 248). It needs manual symlinking to enable.")
+install(CODE "
+    include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
+    systemctl_enable(drkonqi-coredump-processor@.service systemd-coredump@.service ${KDE_INSTALL_FULL_SYSTEMDUNITDIR}/system)
+")
