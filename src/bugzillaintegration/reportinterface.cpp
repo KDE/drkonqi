@@ -562,8 +562,10 @@ bool ReportInterface::hasCrashEventSent() const
 
 bool ReportInterface::isCrashEventSendingEnabled() const
 {
-    static const bool testingMode = DrKonqi::isTestingBugzilla() || qEnvironmentVariableIsEmpty("DRKONQI_KDE_BUGZILLA_URL");
-    return Settings::self()->sentry() && !testingMode && !DrKonqi::crashedApplication()->hasDeletedFiles();
+    qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
+                         << "testingMode:" << DrKonqi::isTestingBugzilla() //
+                         << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles();
+    return Settings::self()->sentry() && !DrKonqi::isTestingBugzilla() && !DrKonqi::crashedApplication()->hasDeletedFiles();
 }
 
 void ReportInterface::setSendWhenReady(bool send)
