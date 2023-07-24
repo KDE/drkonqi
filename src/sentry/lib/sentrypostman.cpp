@@ -101,3 +101,5 @@ void SentryPostman::post(const QString &path, const QString &filename, const QDa
         QFile::rename(transfer.path, transfer.sentPath);
     });
 }
+
+#include "moc_sentrypostman.cpp"

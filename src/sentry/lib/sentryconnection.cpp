@@ -45,3 +45,5 @@ SentryReply *SentryNetworkConnection::post(const QNetworkRequest &request, const
 {
     return new SentryNetworkReply(m_manager.post(request, data), this);
 }
+
+#include "moc_sentryconnection.cpp"

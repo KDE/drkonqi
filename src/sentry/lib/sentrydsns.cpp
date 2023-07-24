@@ -104,3 +104,5 @@ void SentryDSNs::loadData(const QByteArray &data)
     m_loaded = true;
     Q_EMIT loaded();
 }
+
+#include "moc_sentrydsns.cpp"

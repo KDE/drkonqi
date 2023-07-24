@@ -64,3 +64,5 @@ bool SentryPostbox::isReadyToDeliver() const
 {
     return m_dsnSet && !m_envelope.isEmpty();
 }
+
+#include "moc_sentrypostbox.cpp"
