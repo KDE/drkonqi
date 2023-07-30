@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2023-06-24 11:36+0200\n"
+"PO-Revision-Date: 2023-07-29 10:02+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -112,22 +112,22 @@ msgid ""
 msgstr ""
 "<h2>Que é este «trazado inverso»</h2><p>Basicamente, un trazado inverso "
 "describe o que estaba a acontecer no interior da aplicación cando este "
-"quebrou para que os desenvolvedores poidan localizar o punto no que se "
-"iniciou o problema. Pode que para vostede carezan de sentido, pero realmente "
-"poden conter un mundo de informacións.<br />Os trazados inversos úsanse con "
-"frecuencia na depuración interactiva e na post-mortem.</p>"
+"quebrou para que o equipo de desenvolvemento poida localizar o punto no que "
+"se iniciou o problema. Pode que para vostede carezan de sentido, pero "
+"realmente poden conter un mundo de informacións.<br />Os trazados inversos "
+"úsanse con frecuencia na depuración interactiva e na post-mortem.</p>"
 
 #: backtracewidget.cpp:135
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading..."
-msgstr "Estase a cargar…"
+msgstr "Cargando…"
 
 #: backtracewidget.cpp:138
 #, kde-format
 msgctxt "@info:status"
 msgid "Generating backtrace... (this may take some time)"
-msgstr "Estase a xerar o trazado inverso… (pode levar un tempo)."
+msgstr "Xerando o trazado inverso… (pode levar un tempo)."
 
 #: backtracewidget.cpp:189
 #, kde-format
@@ -371,8 +371,7 @@ msgstr "Coidados intensivos"
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
 msgstr ""
-"Estase a pedir a instalación dos paquetes cos símbolos de depuración que "
-"faltan…"
+"Pedindo a instalación dos paquetes cos símbolos de depuración que faltan…"
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -449,7 +448,7 @@ msgstr "&Xeral"
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
-msgstr "Información do &desenvolvedor"
+msgstr "Información para o equipo de &desenvolvemento"
 
 #: drkonqidialog.cpp:156 qml/MainPage.qml:46
 #, kde-kuit-format
@@ -472,9 +471,9 @@ msgid ""
 msgstr ""
 "<para>Dado que o propio xestor de quebras fallou, desactivouse o proceso de "
 "informe automático para reducir o risco de que falle de novo.<nl /><nl /"
-"><link url='%1'>Informe manualmente deste erro do produto «drkonqui»</link> "
-"no sistema de seguimento de incidencias de KDE. Non esqueza incluír o "
-"trazado inverso do separador de Información do desenvolvedor.</para>"
+"><link url='%1'>Informe manualmente</link> deste erro no sistema de "
+"seguimento de incidencias de KDE. Non esqueza incluír o trazado inverso do "
+"separador de Información para o equipo de desenvolvemento.</para>"
 
 #: drkonqidialog.cpp:174
 #, kde-kuit-format
@@ -488,7 +487,7 @@ msgstr ""
 "<para>O asistente de informes está desactivado porque se arrincou o diálogo "
 "do xestor de quebras no modo seguro.<nl />Pode informar manualmente deste "
 "fallo a %1 (incluíndo o trazado inverso do separador de "
-"<interface>Información para o desenvolvedor</interface>)</para>"
+"<interface>Información para o equipo de desenvolvemento</interface>)</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -579,13 +578,13 @@ msgstr "O xestor de quebras de KDE"
 #, kde-format
 msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"O xestor de quebras de KDE dálle información ao usuario cando un programa "
-"quebra."
+"O xestor de quebras de KDE dálle información á persoa usuaria cando un "
+"programa quebra."
 
 #: main.cpp:117
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "© 2000-2018 Autores de DrKonqi"
+msgstr "© 2000-2018 Persoas autoras de DrKonqi"
 
 #: main.cpp:118
 #, kde-format
@@ -852,10 +851,11 @@ msgid ""
 msgstr ""
 "<subtitle>Que é este «trazado inverso»</subtitle><para>Basicamente, un "
 "trazado inverso describe o que estaba a acontecer no interior da aplicación "
-"cando este quebrou para que os desenvolvedores poidan localizar o punto no "
-"que se iniciou o problema. Pode que para vostede carezan de sentido, pero "
-"realmente poden conter un mundo de informacións.<nl />Os trazados inversos "
-"úsanse con frecuencia na depuración interactiva e na post-mortem.</para>"
+"cando este quebrou para que o equipo de desenvolvemento poida localizar o "
+"punto no que se iniciou o problema. Pode que para vostede carezan de "
+"sentido, pero realmente poden conter un mundo de informacións.<nl />Os "
+"trazados inversos úsanse con frecuencia na depuración interactiva e na post-"
+"mortem.</para>"
 
 #: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
@@ -961,7 +961,7 @@ msgid ""
 "                                     report"
 msgstr ""
 "Use este botón para suxerir que a quebra que experimentou está relacionada "
-"con este informe do fallo"
+"con este informe do fallo."
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
@@ -1056,9 +1056,9 @@ msgid ""
 msgstr ""
 "<para>Dado que o propio xestor de quebras fallou, desactivouse o proceso de "
 "informe automático para reducir o risco de que falle de novo.<nl /><nl /"
-"><link url='%1'>Informe manualmente deste erro do produto «drkonqui»</link> "
-"no sistema de seguimento de incidencias de KDE. Non esqueza incluír o "
-"trazado inverso do separador de Información do desenvolvedor.</para>"
+"><link url='%1'>Informe manualmente</link> deste erro no sistema de "
+"seguimento de incidencias de KDE. Non esqueza incluír o trazado inverso do "
+"separador de Información para o equipo de desenvolvemento.</para>"
 
 #: qml/MainPage.qml:75
 msgctxt "@info"
@@ -1071,7 +1071,7 @@ msgstr ""
 "<para>O asistente de informes está desactivado porque se arrincou o diálogo "
 "do xestor de quebras no modo seguro.<nl />Pode informar manualmente deste "
 "fallo a <link>%1</link> (incluíndo o trazado inverso do separador de "
-"<interface>Información para o desenvolvedor</interface>)</para>"
+"<interface>Información para o equipo de desenvolvemento</interface>)</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
