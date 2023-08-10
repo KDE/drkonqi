@@ -83,13 +83,21 @@ void openDrKonqiDialog()
 
 void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
 {
+    auto activation = interactionAllowed ? StatusNotifier::Activation::Allowed : StatusNotifier::Activation::NotAllowed;
+    if (ReportInterface::self()->isCrashEventSendingEnabled()) {
+        activation = StatusNotifier::Activation::AlreadySubmitting;
+        ReportInterface::self()->setSendWhenReady(true);
+        if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::NotLoaded) {
+            DrKonqi::debuggerManager()->backtraceGenerator()->start();
+        }
+    }
+
     auto *statusNotifier = new StatusNotifier();
-    statusNotifier->setActivationAllowed(interactionAllowed);
     if (interactionAllowed) {
         statusNotifier->show();
     }
     if (!restarted) {
-        statusNotifier->notify();
+        statusNotifier->notify(activation);
     }
     QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &aboutToQuit);
     QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, &openDrKonqiDialog);

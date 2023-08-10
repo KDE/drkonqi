@@ -12,6 +12,56 @@ Kirigami.ApplicationWindow {
 
     property var reportInterface: ReportInterface
     property var bugzilla: reportInterface.bugzilla
+    property bool canReport: false // can file a bug report
+    property bool canAutoReport: false // can file a sentry report
+
+    property string canReportText: {
+        canReport = false
+        canAutoReport = false
+
+        if (CrashedApplication.bugReportAddress.length <= 0) {
+            return xi18nc("@info",
+                '<para>You cannot report this error, because <application>%1</application> does not provide a bug reporting address.</para>',
+                CrashedApplication.name);
+        }
+
+        if (CrashedApplication.fakeExecutableBaseName === "drkonqi") {
+            canAutoReport = true
+            return xi18nc("@info",
+`<para>As the Crash Handler itself has failed, the
+automatic reporting process is disabled to reduce the
+risks of failing again.<nl /><nl />
+Please, <link url='%1'>manually report</link> this error
+to the KDE bug tracking system. Do not forget to include
+the backtrace from the <interface>Developer Information</interface>
+page.</para>`,
+                        Globals.ownBugzillaUrl);
+        }
+
+        if (DrKonqi.isSafer()) {
+            return xi18nc("@info",
+`<para>The reporting assistant is disabled because the crash handler dialog was started in safe mode.<nl />
+You can manually report this bug to <link>%1</link> (including the backtrace from the <interface>Developer Information</interface> page.)</para>`,
+                        CrashedApplication.bugReportAddress);
+        }
+
+        if (CrashedApplication.hasDeletedFiles) {
+            return xi18nc("@info",
+`<para>The reporting assistant is disabled because
+the crashed application appears to have been updated or
+uninstalled since it had been started. This prevents accurate
+crash reporting and can also be the cause of this crash.</para>
+<para>After updating it is always a good idea to log out and back
+in to make sure the update is fully applied and will not cause
+any side effects.</para>`);
+        }
+
+        canReport = true
+        canAutoReport = true
+        return xi18nc("@info",
+                        "<para>You can help us improve KDE Software by reporting this error.<nl /><link url='%1'>Learn more about bug reporting.</link></para>",
+                        Globals.aboutBugReportingUrl);
+    }
 
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton | Kirigami.ApplicationHeaderStyle.ShowForwardButton

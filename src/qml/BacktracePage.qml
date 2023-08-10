@@ -9,6 +9,7 @@ import org.kde.drkonqi 1.0
 
 DeveloperPage {
     title: i18nc("@title", "Fetching the Backtrace (Automatic Crash Information)")
+    reportActionVisible: false
     basic: !advancedAction.checked
 
     onTraceChanged: {

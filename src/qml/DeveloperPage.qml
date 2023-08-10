@@ -12,6 +12,7 @@ import org.kde.drkonqi 1.0
 Kirigami.ScrollablePage {
     id: page
 
+    property alias reportActionVisible: reportAction.visible
     property string trace: ""
     property bool basic: false
     property alias usefulness: ratingItem.usefulness
@@ -24,6 +25,17 @@ Kirigami.ScrollablePage {
     title: i18nc("@title:window", "Developer Information")
 
     actions: [
+        Kirigami.Action {
+            id: reportAction
+            enabled: Kirigami.Settings.isMobile ? true : canReport
+            visible: Kirigami.Settings.isMobile ? canReport : true
+            icon.name: "story-editor-symbolic"
+            text: i18nc("@action", "Report on bugs.kde.org")
+            // TODO: could give context on why the button is disabled when canReport is false
+            tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
+            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
+        },
+
         Kirigami.Action {
             id: installButton
             visible: false

@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -19,6 +20,23 @@
 #include "drkonqi.h"
 #include "statusnotifier_activationclosetimer.h"
 
+namespace
+{
+QString activationMessage(StatusNotifier::Activation activation)
+{
+    switch (activation) {
+    case StatusNotifier::Activation::NotAllowed:
+        return i18nc("Notification text", "The application closed unexpectedly.");
+    case StatusNotifier::Activation::Allowed:
+        return i18nc("Notification text", "Please report this error to help improve this software.");
+    case StatusNotifier::Activation::AlreadySubmitting:
+        return i18nc("Notification text", "The application closed unexpectedly. A report is being automatically submitted.");
+    }
+    Q_ASSERT(false);
+    return {};
+}
+} // namespace
+
 StatusNotifier::StatusNotifier(QObject *parent)
     : QObject(parent)
     , m_sni(new KStatusNotifierItem(this))
@@ -30,16 +48,6 @@ StatusNotifier::StatusNotifier(QObject *parent)
 }
 
 StatusNotifier::~StatusNotifier() = default;
-
-bool StatusNotifier::activationAllowed() const
-{
-    return m_activationAllowed;
-}
-
-void StatusNotifier::setActivationAllowed(bool allowed)
-{
-    m_activationAllowed = allowed;
-}
 
 void StatusNotifier::show()
 {
@@ -93,13 +101,13 @@ void StatusNotifier::show()
     timer->start(dbusWatcher, idleWatcher);
 }
 
-void StatusNotifier::notify()
+void StatusNotifier::notify(Activation activation)
 {
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
-    const QString title = m_activationAllowed ? m_title : crashedApp->name();
-    const QString message = m_activationAllowed ? i18nc("Notification text", "Please report this error to help improve this software.")
-                                                : i18nc("Notification text", "The application closed unexpectedly.");
+    const auto activationAllowed = activation == Activation::Allowed;
+    const QString title = activationAllowed ? m_title : crashedApp->name();
+    const QString message = activationMessage(activation);
 
     KNotification *notification = KNotification::event(QStringLiteral("applicationcrash"),
                                                        title,
@@ -109,7 +117,7 @@ void StatusNotifier::notify()
                                                        KNotification::DefaultEvent | KNotification::SkipGrouping);
 
     QStringList actions;
-    if (m_activationAllowed) {
+    if (activationAllowed) {
         actions << i18nc("Notification action button, keep short", "Report Bug");
     }
     if (canBeRestarted(crashedApp)) {
@@ -118,16 +126,19 @@ void StatusNotifier::notify()
 
     notification->setActions(actions);
 
-    connect(notification, static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated), this, [this, crashedApp](int actionIndex) {
-        if (actionIndex == 1 && m_activationAllowed) {
-            Q_EMIT activated();
-        } else if (canBeRestarted(crashedApp)) {
-            crashedApp->restart();
-        }
-    });
+    connect(notification,
+            static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated),
+            this,
+            [this, crashedApp, activationAllowed](int actionIndex) {
+                if (actionIndex == 1 && activationAllowed) {
+                    Q_EMIT activated();
+                } else if (canBeRestarted(crashedApp)) {
+                    crashedApp->restart();
+                }
+            });
 
     // when the SNI disappears you won't be able to interact with the notification anymore anyway, so close it
-    if (m_activationAllowed) {
+    if (activationAllowed) {
         connect(this, &StatusNotifier::activated, notification, &KNotification::close);
         connect(this, &StatusNotifier::expired, notification, &KNotification::close);
     } else {

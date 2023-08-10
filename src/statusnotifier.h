@@ -20,14 +20,13 @@ class StatusNotifier : public QObject
     Q_OBJECT
 
 public:
+    enum class Activation { NotAllowed, Allowed, AlreadySubmitting };
+
     explicit StatusNotifier(QObject *parent = nullptr);
     ~StatusNotifier() override;
 
-    bool activationAllowed() const;
-    void setActivationAllowed(bool allowed);
-
     void show();
-    void notify();
+    void notify(Activation activation);
 
     static bool notificationServiceRegistered();
 
@@ -39,9 +38,6 @@ private:
     static bool canBeRestarted(CrashedApplication *app);
 
     KStatusNotifierItem *m_sni = nullptr;
-
-    bool m_activationAllowed = true;
-
     QString m_title;
 };
 

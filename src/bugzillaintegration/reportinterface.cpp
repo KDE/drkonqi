@@ -59,20 +59,9 @@ ReportInterface::ReportInterface(QObject *parent)
         maybeDone();
     });
 
-    auto trySentry = [this] {
-        qCDebug(DRKONQI_LOG) << "trying sentry?" << isCrashEventSendingEnabled() << !m_tryingSentry;
-        if (isCrashEventSendingEnabled() && !m_tryingSentry) {
-            m_tryingSentry = true;
-            metaObject()->invokeMethod(this, [this] {
-                connect(&m_sentryPostbox, &SentryPostbox::hasDeliveredChanged, this, &ReportInterface::crashEventSent);
-                // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
-                prepareCrashEvent();
-            });
-        }
-    };
     m_sentryStartTimer.setInterval(5s);
     m_sentryStartTimer.setSingleShot(true);
-    connect(&m_sentryStartTimer, &QTimer::timeout, this, trySentry);
+    connect(&m_sentryStartTimer, &QTimer::timeout, this, &ReportInterface::trySentry);
     connect(Settings::self(), &Settings::SentryChanged, &m_sentryStartTimer, QOverload<>::of(&QTimer::start));
     trySentry();
 }
@@ -563,9 +552,10 @@ bool ReportInterface::hasCrashEventSent() const
 bool ReportInterface::isCrashEventSendingEnabled() const
 {
     qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
-                         << "testingMode:" << DrKonqi::isTestingBugzilla() //
+                         << "forceSentry:" << m_forceSentry //
                          << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles();
-    return Settings::self()->sentry() && !DrKonqi::isTestingBugzilla() && !DrKonqi::crashedApplication()->hasDeletedFiles();
+    const auto enabled = Settings::self()->sentry() || m_forceSentry;
+    return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles();
 }
 
 void ReportInterface::setSendWhenReady(bool send)
@@ -579,6 +569,25 @@ void ReportInterface::maybePickUpPostbox()
     qWarning() << Q_FUNC_INFO;
     if (m_sendWhenReady && !m_sentryPostbox.hasDelivered() && m_sentryPostbox.isReadyToDeliver()) {
         m_sentryPostbox.deliver();
+    }
+}
+void ReportInterface::sendSentryReport()
+{
+    m_forceSentry = true;
+    trySentry();
+    // sendWhenReady is set by the quit handling in main.cpp
+}
+
+void ReportInterface::trySentry()
+{
+    qCDebug(DRKONQI_LOG) << "trying sentry?" << isCrashEventSendingEnabled() << !m_tryingSentry;
+    if (isCrashEventSendingEnabled() && !m_tryingSentry) {
+        m_tryingSentry = true;
+        metaObject()->invokeMethod(this, [this] {
+            connect(&m_sentryPostbox, &SentryPostbox::hasDeliveredChanged, this, &ReportInterface::crashEventSent);
+            // Send crash event ASAP, if applicable. Trace quality doesn't matter for it.
+            prepareCrashEvent();
+        });
     }
 }
 

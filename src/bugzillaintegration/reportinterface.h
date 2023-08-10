@@ -45,6 +45,7 @@ class ReportInterface : public QObject
     Q_PROPERTY(uint duplicateId READ duplicateId WRITE setDuplicateId NOTIFY duplicateIdChanged)
 
     Q_PROPERTY(uint sentReport MEMBER m_sentReport NOTIFY done)
+    Q_PROPERTY(uint crashEventSent READ hasCrashEventSent NOTIFY crashEventSent)
 public:
     enum Reproducible {
         ReproducibleUnsure,
@@ -131,12 +132,13 @@ public:
 
     bool isCrashEventSendingEnabled() const;
     bool hasCrashEventSent() const;
-    void setSendWhenReady(bool send);
 
 public Q_SLOTS:
     void prepareCrashEvent();
     void prepareCrashComment();
     void sendBugReport();
+    void sendSentryReport();
+    void setSendWhenReady(bool send);
 
 private Q_SLOTS:
     void sendUsingDefaultProduct() const;
@@ -158,6 +160,7 @@ private:
     void sendToSentry();
     void maybeDone();
     void maybePickUpPostbox();
+    void trySentry();
 
     QString generateAttachmentComment() const;
 
@@ -183,6 +186,7 @@ private:
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;
 
+    bool m_forceSentry = false;
     QTimer m_sentryStartTimer;
     bool m_tryingSentry = false;
     SentryPostbox m_sentryPostbox;

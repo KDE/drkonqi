@@ -22,6 +22,8 @@
 
 #include <KIO/CommandLauncherJob>
 
+#include "drkonqi_debug.h"
+
 CrashedApplication::CrashedApplication(int pid,
                                        int thread,
                                        int signalNumber,
@@ -203,6 +205,9 @@ void CrashedApplication::restart()
     }
     connect(job, &KIO::CommandLauncherJob::result, this, [job, this] {
         m_restarted = (job->error() == KJob::NoError);
+        if (!m_restarted) {
+            qCWarning(DRKONQI_LOG) << "Failed to restart:" << job->error() << job->errorString();
+        }
         Q_EMIT restarted(m_restarted);
     });
     job->start();

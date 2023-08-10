@@ -13,6 +13,15 @@ Kirigami.ScrollablePage {
 
     property int bugNumber: 0
 
+    actions: [
+        Kirigami.Action {
+            icon.name: "system-reboot-symbolic"
+            text: i18nc("@action %1 is an application name e.g. kwrite", "Restart %1", CrashedApplication.name)
+            visible: !CrashedApplication.hasBeenRestarted
+            onTriggered: CrashedApplication.restart()
+        }
+    ]
+
     ColumnLayout {
         QQC2.Label {
             text: xi18nc("@info", "URL: <link url='%1'>%1</link>", Globals.bugUrl(bugNumber))
