@@ -33,7 +33,7 @@ int main(int argc, char **argv)
             const auto now = decltype(lastModified)::clock().now();
             const auto age = now - lastModified;
             // Plenty of time so we won't take away the file from underneath drkonqi.
-            if (age > 3h) {
+            if (age >= std::chrono::weeks(1)) {
                 std::filesystem::remove(path);
             }
         } catch (const std::filesystem::filesystem_error &error) {

@@ -240,7 +240,9 @@ int main(int argc, char *argv[])
     if (forceDialog) {
         openDrKonqiDialog();
     } else if (shuttingDown) {
-        DrKonqi::shutdownSaveReport();
+        // this bypasses cleanupAfterUserQuit and consequently leaves the kcrash-metadata in place for later
+        // consumption via drkonqi-coredump-pickup
+        return 0;
     } else {
         // if no notification service is running (eg. shell crashed, or other desktop environment)
         // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI

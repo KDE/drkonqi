@@ -21,6 +21,7 @@ install(CODE "
     systemctl_enable(drkonqi-coredump-launcher.socket sockets.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
 ")
 
+# The reason this is a plugin is so the main exe doesn't need to link against kio and knotifications needlessly.
 add_library(KDECoredumpNotifierTruck MODULE NotifierTruck.cpp NotifierTruck.h)
-target_link_libraries(KDECoredumpNotifierTruck Qt::Core KF6::Notifications KF6::KIOGui)
+target_link_libraries(KDECoredumpNotifierTruck Qt::Core KF6::Notifications KF6::KIOGui drkonqi-coredump)
 install(TARGETS KDECoredumpNotifierTruck DESTINATION ${KDE_INSTALL_PLUGINDIR}/drkonqi/)

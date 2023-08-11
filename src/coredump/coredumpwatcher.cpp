@@ -16,6 +16,8 @@
 #include "coredump.h"
 #include "socket.h"
 
+using namespace Qt::StringLiterals;
+
 static std::optional<Coredump> makeDump(sd_journal *context)
 {
     auto cursorExpected = contextual_owning_ptr_call<char>(sd_journal_get_cursor, context, std::free);
@@ -35,7 +37,7 @@ static std::optional<Coredump> makeDump(sd_journal *context)
         Q_ASSERT(static_cast<quint64>(dataSize) == length);
 
         QByteArray entry(static_cast<const char *>(data), dataSize);
-        const int offset = entry.indexOf('=');
+        const auto offset = entry.indexOf('=');
         if (offset < 0) {
             qWarning() << "this entry looks funny it has no separating = character" << entry;
             continue;
@@ -146,6 +148,13 @@ void CoredumpWatcher::start()
         }
     }
 
+    for (const auto &match : matches) {
+        if (sd_journal_add_match(context.get(), qUtf8Printable(match), 0) != 0) {
+            Q_EMIT error(u"Failed to install custom match: %1"_s.arg(match));
+            return;
+        }
+    }
+
     const int fd = sd_journal_get_fd(context.get());
     if (fd < 0) {
         errnoError(QStringLiteral("Failed to get listening socket"), -fd);
@@ -166,6 +175,11 @@ void CoredumpWatcher::start()
     }
     // Make sure to read whatever we have pending on next loop.
     QMetaObject::invokeMethod(this, &CoredumpWatcher::processLog);
+}
+
+void CoredumpWatcher::addMatch(const QString &str)
+{
+    matches.push_back(str);
 }
 
 #include "moc_coredumpwatcher.cpp"

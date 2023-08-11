@@ -34,7 +34,7 @@ private Q_SLOTS:
         {
             std::ofstream output(oldFile);
             const auto time = fs::last_write_time(oldFile);
-            fs::last_write_time(oldFile, time - 6h);
+            fs::last_write_time(oldFile, time - std::chrono::weeks(2));
         }
 
         const int exitCode = QProcess::execute(binary, {tempDir.path()});

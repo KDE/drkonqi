@@ -198,69 +198,6 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
     }
 }
 
-// Helper functions for the shutdownSaveReport
-class ShutdownHelper : public QObject
-{
-    Q_OBJECT
-public:
-    QString shutdownSaveString;
-
-    void removeOldFilesIn(QDir &dir)
-    {
-        auto fileList = dir.entryInfoList(QDir::Files | QDir::NoDotAndDotDot, QDir::SortFlag::Time | QDir::Reversed);
-        for (int i = fileList.size(); i >= 10; i--) {
-            auto currentFile = fileList.takeFirst();
-            dir.remove(currentFile.fileName());
-        }
-    }
-
-    void saveReportAndQuit()
-    {
-        const QString dirname = QStandardPaths::writableLocation(QStandardPaths::CacheLocation);
-        // Try to create the directory to save the logs, if we can't open the directory,
-        // just bail out. no need to hold the shutdown process.
-        QDir dir(dirname);
-        if (!dir.mkpath(dirname)) {
-            qApp->quit();
-        }
-
-        removeOldFilesIn(dir);
-        const QString defname = dirname + QLatin1Char('/') + QStringLiteral("pid-") + QString::number(DrKonqi::pid()) + QLatin1Char('-')
-            + getSuggestedKCrashFilename(DrKonqi::crashedApplication());
-
-        QFile shutdownSaveFile(defname);
-        if (shutdownSaveFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            QTextStream ts(&shutdownSaveFile);
-            ts << shutdownSaveString;
-            ts.flush();
-            shutdownSaveFile.close();
-        }
-        deleteLater();
-        qApp->quit();
-    }
-
-    void appendNewLine(const QString &newLine)
-    {
-        shutdownSaveString += newLine;
-    }
-};
-
-void DrKonqi::shutdownSaveReport()
-{
-    if (!DrKonqi::isEphemeralCrash()) { // No need to make a backtrace if the crash isn't ephemeral (e.g. from coredumpd)
-        qApp->quit();
-        return;
-    }
-
-    auto btGenerator = instance()->debuggerManager()->backtraceGenerator();
-    auto shutdownHelper = new ShutdownHelper();
-    QObject::connect(btGenerator, &BacktraceGenerator::done, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::someError, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::failedToStart, shutdownHelper, &ShutdownHelper::saveReportAndQuit);
-    QObject::connect(btGenerator, &BacktraceGenerator::newLine, shutdownHelper, &ShutdownHelper::appendNewLine);
-    btGenerator->start();
-}
-
 void DrKonqi::setSignal(int signal)
 {
     instance()->m_signal = signal;

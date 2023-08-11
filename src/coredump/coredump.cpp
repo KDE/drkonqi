@@ -5,6 +5,8 @@
 
 #include "coredump.h"
 
+using namespace Qt::StringLiterals;
+
 Coredump::Coredump(QByteArray cursor, EntriesHash data)
     : m_cursor(std::move(cursor))
     , m_rawData(std::move(data))
@@ -34,4 +36,9 @@ Coredump::EntriesHash Coredump::documentToHash(const QJsonDocument &document)
         hash.insert(it.key().toUtf8(), it->value<QByteArray>());
     }
     return hash;
+}
+
+QByteArray Coredump::keyPickup()
+{
+    return "_DRKONQI_PICKUP"_ba;
 }

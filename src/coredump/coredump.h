@@ -24,6 +24,7 @@ public:
 
     // In a function cause it is used in more than one location.
     static QByteArray keyFilename();
+    static QByteArray keyPickup();
 
     // Other bits and bobs
     const QByteArray m_cursor;
@@ -33,7 +34,7 @@ public:
     const uid_t uid = 0;
     const pid_t pid = -1;
     const QString exe;
-    const QString filename; // core dump file if available (may be /dev/null if the core is stored in journal directly)
+    const QString filename; // core dump file if available (may be /dev/null if the core is stored in journal directly - only in older systemds)
     const QString systemd_unit;
 
 private:

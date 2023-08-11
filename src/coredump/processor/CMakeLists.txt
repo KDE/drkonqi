@@ -13,7 +13,18 @@ install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-processor@.service
     DESTINATION ${KDE_INSTALL_SYSTEMDUNITDIR}/system
 )
+
+configure_file(
+    drkonqi-coredump-pickup.service.cmake
+    ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-pickup.service
+)
+install(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-pickup.service
+    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
+)
+
 install(CODE "
     include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
     systemctl_enable(drkonqi-coredump-processor@.service systemd-coredump@.service ${KDE_INSTALL_FULL_SYSTEMDUNITDIR}/system)
+    systemctl_enable(drkonqi-coredump-pickup.service plasma-core.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
 ")

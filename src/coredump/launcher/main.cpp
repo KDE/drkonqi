@@ -30,6 +30,7 @@
 #include "DumpTruckInterface.h"
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 static QString drkonqiExe()
 {
@@ -125,6 +126,14 @@ static bool tryDrkonqi(const Coredump &dump)
         return false;
     }
 
+    QSettings metadata(Metadata::metadataPath(dump.pid), QSettings::IniFormat);
+    metadata.beginGroup("DrKonqi"_L1);
+    if (metadata.value("PickedUp"_L1).toBool()) {
+        // already being worked on!
+        return true;
+    }
+    metadata.endGroup();
+
     QStringList arguments;
     bool foundPID = false;
 
@@ -150,11 +159,13 @@ static bool tryDrkonqi(const Coredump &dump)
     }
 
     // Append Coredump data. This allow us to not have to talk to journald again on the drkonqi side.
-    QSettings metadata(Metadata::metadataPath(dump.pid), QSettings::IniFormat);
     metadata.beginGroup(QStringLiteral("Journal"));
     for (auto it = dump.m_rawData.cbegin(); it != dump.m_rawData.cend(); ++it) {
         metadata.setValue(QString::fromUtf8(it.key()), it.value());
     }
+    metadata.endGroup();
+    metadata.beginGroup("DrKonqi"_L1);
+    metadata.setValue("PickedUp"_L1, true);
     metadata.endGroup();
     metadata.sync();
 

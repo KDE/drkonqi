@@ -20,6 +20,8 @@
 #include <coredumpwatcher.h>
 #include <socket.h>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
@@ -30,20 +32,35 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addPositionalArgument(QStringLiteral("boot-id"), QStringLiteral("Boot ID"));
-    parser.addPositionalArgument(QStringLiteral("instance"), QStringLiteral("Template instance (forwareded from systemd-coredump@)"));
+    QCommandLineOption pickupOption("pickup"_L1, "Picking up old crashes, don't handle them if you can't tell if they were handled."_L1);
+    parser.addOption(pickupOption);
+    QCommandLineOption uidOption("uid"_L1, "UID to filter"_L1, "uid"_L1);
+    parser.addOption(uidOption);
+    QCommandLineOption bootIdOption("boot-id"_L1, "systemd boot id to filter"_L1, "bootId"_L1);
+    parser.addOption(bootIdOption);
+    QCommandLineOption instanceOption("instance"_L1, "systemd-coredump@.service instance to filter"_L1, "instance"_L1);
+    parser.addOption(instanceOption);
     parser.process(app);
-    const QStringList args = parser.positionalArguments();
-    Q_ASSERT(args.size() == 2);
-    const QString &bootId = args.at(0);
-    const QString &instance = args.at(1);
+    const bool pickup = parser.isSet(pickupOption);
+    const QString uid = parser.value(uidOption);
+    const QString bootId = parser.value(bootIdOption);
+    const QString instance = parser.value(instanceOption);
 
     auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
     Q_ASSERT(expectedJournal.ret == 0);
     Q_ASSERT(expectedJournal.value);
 
     CoredumpWatcher watcher(std::move(expectedJournal.value), bootId, instance, nullptr);
-    QObject::connect(&watcher, &CoredumpWatcher::newDump, &app, [&watcher](const Coredump &dump) {
+    if (!uid.isEmpty()) {
+        watcher.addMatch(u"COREDUMP_UID=%1"_s.arg(uid));
+    }
+    QObject::connect(&watcher, &CoredumpWatcher::newDump, &app, [&watcher, pickup](const Coredump &dump) {
+        if (pickup && !QFile::exists(dump.filename)) {
+            // We only ignore missing cores when picking up old crashes. When dealing with new ones we may still wish
+            // to notify that something has crashed, even when we can't debug it.
+            return;
+        }
+
         // We only try to find the socket file here because we need to know the UID and on older systemd's we'll not
         // be able to figure this out from just the instance information.
         // When systemd 245 (Ubuntu 20.04) no longer is out in the wild we can move this into the main and get the
@@ -86,6 +103,9 @@ int main(int argc, char **argv)
         // the client side doesn't need to talk to journald again. A tad more efficient,
         // and it makes nary a difference in code.
         QVariantMap variantMap;
+        if (pickup) { // forward this into the launcher so it can choose to not have dump trucks handle dumps without metadata
+            variantMap.insert(QString::fromUtf8(Coredump::keyPickup()), "TRUE"_ba);
+        }
         for (auto it = dump.m_rawData.cbegin(); it != dump.m_rawData.cend(); ++it) {
             variantMap.insert(QString::fromUtf8(it.key()), it.value());
         }

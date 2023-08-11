@@ -19,6 +19,8 @@ class CoredumpWatcher : public QObject
 public:
     explicit CoredumpWatcher(std::unique_ptr<sd_journal> context_, QString bootId_, const QString &instance_, QObject *parent = nullptr);
 
+    // must be called before start!
+    void addMatch(const QString &str);
     void start();
 
 Q_SIGNALS:
@@ -37,4 +39,5 @@ private:
     const QString bootId;
     const QString instance;
     const QString instanceFilter; // systemd-coredump@%1 instance name
+    QStringList matches;
 };

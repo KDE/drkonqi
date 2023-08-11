@@ -21,6 +21,14 @@ using namespace std::chrono_literals;
 
 bool NotifyTruck::handle(const Coredump &dump)
 {
+    if (!dump.m_rawData.value(dump.keyPickup()).isEmpty()) {
+        // Pickups are currently not supported for notify handling. The problem is that we don't know if we already
+        // notified on a crash or not because we have no persistent storage. To fix this we'd probably need to
+        // rejigger things substantially and insert a pickup key into the journal that the processor can then look for.
+        // Except then the processor needs to hold on to dumps until the entire journal is processed. All a bit awkward.
+        return false;
+    }
+
     auto notification = new KNotification(QStringLiteral("applicationcrash"));
 
     // immediate exit signal. This gets disconnected should `activated` arrive first (in that case we
