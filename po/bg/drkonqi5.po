@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1656783 2023-07-27 13:15:18Z mkkdr $
+# $Id: drkonqi5.po 1657952 2023-08-11 02:10:32Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:11+0000\n"
+"POT-Creation-Date: 2023-08-11 01:57+0000\n"
 "PO-Revision-Date: 2023-07-27 14:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -225,14 +225,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Програмата за откриване на грешки се затвори неочаквано."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:167
-#: qml/DeveloperPage.qml:171
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
+#: qml/DeveloperPage.qml:190
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Информацията за срива не можа да бъде генерирана."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:168
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -270,7 +270,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Грешка по време на инсталирането на символи за отстраняване на грешки"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:195
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -783,7 +783,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Персонализирани настройки на приложението, които могат да бъдат свързани"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:188
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Недостатъчно полезен"
@@ -859,7 +859,7 @@ msgstr ""
 "богата и полезна информация.<nl />Обратни проследявания често се използват \n"
 "при отстраняване на грешки интерактивно по време на и след сриването.</para>"
 
-#: qml/DeveloperPage.qml:153
+#: qml/DeveloperPage.qml:172
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -878,7 +878,7 @@ msgstr ""
 "необходимите пакети (<link url='%2'> списък с файлове </link>) и щракнете "
 "върху бутон <interface> Презареждане </interface>."
 
-#: qml/DeveloperPage.qml:161
+#: qml/DeveloperPage.qml:180
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -892,7 +892,7 @@ msgstr ""
 "файлове </link>) и щракнете върху бутон <interface> Презареждане </"
 "interface>."
 
-#: qml/DeveloperPage.qml:173
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
