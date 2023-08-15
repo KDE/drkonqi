@@ -113,7 +113,6 @@ void StatusNotifier::notify(Activation activation)
                                                        title,
                                                        message,
                                                        QStringLiteral("tools-report-bug"),
-                                                       nullptr,
                                                        KNotification::DefaultEvent | KNotification::SkipGrouping);
 
     QStringList actions;
