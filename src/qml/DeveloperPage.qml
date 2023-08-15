@@ -225,7 +225,7 @@ list of files</link>) and click the <interface>Reload</interface> button.`,
             contentItem: QQC2.Label {
                 id: detailsLabel
                 wrapMode: Text.Wrap
-                onLinkActivated: {
+                onLinkActivated: link => {
                     if (link[0] == "#") { // in-page reference
                         filesDialog.reload()
                         filesDialog.open()

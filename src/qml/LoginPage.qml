@@ -92,7 +92,7 @@ Kirigami.ScrollablePage {
 for requesting further information. If you do not have one, you can freely <link url='%2'>create one here</link>. Please do not use disposable email accounts.</note>`,
                                     CrashedApplication.bugReportAddress,
                                     Globals.bugzillaCreateAccountUrl)
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: link => Qt.openUrlExternally(link)
         }
     }
 

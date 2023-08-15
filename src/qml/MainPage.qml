@@ -54,7 +54,7 @@ Kirigami.Page {
         QQC2.Label {
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: link => Qt.openUrlExternally(link)
             text: {
                 canReport = false
 

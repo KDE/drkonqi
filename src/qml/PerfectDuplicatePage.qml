@@ -43,7 +43,7 @@ Kirigami.ScrollablePage {
                 return xi18nc("@info", "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already been reported as <link url=\"%1\">Bug %2</link>.",
                 bugUrl, bugNumber)
             }
-            onLinkActivated: Qt.openUrlExternally(link)
+            onLinkActivated: link => Qt.openUrlExternally(link)
         }
         QQC2.Label {
             visible: alreadyClosed !== null
