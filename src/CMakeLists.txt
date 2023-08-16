@@ -133,6 +133,7 @@ target_link_libraries(
     KF6::Notifications # for status notifier
     KF6::IdleTime # hide status notifier only if user saw it
     KF6::SyntaxHighlighting # Backtrace Highlighting
+    KF6::StatusNotifierItem
     drkonqi_backtrace_parser
     qbugzilla
     KUserFeedbackCoreQt6

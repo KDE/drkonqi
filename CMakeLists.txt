@@ -54,6 +54,7 @@ find_package(
         IdleTime
         WindowSystem
         SyntaxHighlighting
+        StatusNotifierItem
 )
 
 find_package(KUserFeedbackQt6)
