@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-07-13 22:01+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Installa Symbolos de Cribrar"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -68,7 +68,7 @@ msgstr ""
 "Installation de symbolo non es disponibile proque le application esseva "
 "actualisate o deinstallate post que il esseva startate."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -77,7 +77,7 @@ msgstr ""
 "Usa iste button pro copiar le information de fracasso (retraciamento) al le "
 "area de transferentia."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -218,14 +218,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Le cribrator ha abandonate de modo non expectate."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
-#: qml/DeveloperPage.qml:190
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:202
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Le information de fracasso non potera esser generate."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -255,14 +255,14 @@ msgstr ""
 "<strong>Prime tu necessita installar le application de cribrar (%1) e pois "
 "pulsa le button de <interface>Recarga</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Error durante le installation de symbolos de cribrar"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -277,7 +277,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Pacchettos de information de cribrar mancante"
 
-#: bugzillaintegration/reportinterface.cpp:201
+#: bugzillaintegration/reportinterface.cpp:190
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -439,7 +439,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Information del &Developpator"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:52
+#: drkonqidialog.cpp:160 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "session e reaperir session per assecurar que le actualisation es "
 "completemente applicate e non causara ulle effectos lateral.</para>"
 
-#: drkonqidialog.cpp:196 qml/MainPage.qml:99
+#: drkonqidialog.cpp:196 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,7 +508,7 @@ msgstr ""
 "error. <nl /><link url='%1'>. Apprende plus super reportar bugs.</link></"
 "para>"
 
-#: drkonqidialog.cpp:203 qml/MainPage.qml:63
+#: drkonqidialog.cpp:203 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -518,7 +518,7 @@ msgstr ""
 "<para>Tu non pote reportar iste error, proque <application>%1</application> "
 "non forni un adresse pro reportar bug.</para>"
 
-#: drkonqidialog.cpp:211 qml/MainPage.qml:122
+#: drkonqidialog.cpp:211
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -560,131 +560,131 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Cribra in %1"
 
-#: main.cpp:129
+#: main.cpp:137
 #, kde-format
 msgid "Crash Handler"
 msgstr "Gestor de Fracasso"
 
-#: main.cpp:131
+#: main.cpp:139
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Gestor de fracasso da le retorno del usator si un programma ha fracassate."
 
-#: main.cpp:134
+#: main.cpp:142
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, Le autores de DrKonqi"
 
-#: main.cpp:135
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:136
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:137
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:138
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A.L. Spehr"
 
-#: main.cpp:145
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Le numero de signal <number> que esseva capturate"
 
-#: main.cpp:146
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Name> Nomine  del programma"
 
-#: main.cpp:147
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Path>  al executabile"
 
-#: main.cpp:148
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Le <version> del programma"
 
-#: main.cpp:149
+#: main.cpp:157
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Le <adress> adresse de bug de usar"
 
-#: main.cpp:150
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Le nomine <name> traducite del programma"
 
-#: main.cpp:151
+#: main.cpp:159
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nomine de producto de Bugzilla"
 
-#: main.cpp:152
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Le <PID> del programma"
 
-#: main.cpp:153
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Le <ID> de initio del programma"
 
-#: main.cpp:154
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Le programma esseva initiate per kdeinit"
 
-#: main.cpp:155
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Dishabilitar accesso de disco arbitrari"
 
-#: main.cpp:156
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Le programma ja ha essite re-initiate"
 
-#: main.cpp:159
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Mantene le programma executante e genera le tracia de retro  a initio"
 
-#: main.cpp:161
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Le <thread id>> del thread fallente"
 
-#: main.cpp:162
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -696,12 +696,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Invia le tracia de retro (Information Automatic de Fracasso)"
 
-#: qml/BacktracePage.qml:24
+#: qml/BacktracePage.qml:25
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Monstra contento de retraciamento (avantiate)"
 
-#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Proxime"
@@ -771,7 +771,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Preferentias personalisate del application que pote esser referite"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Non assatis utile"
@@ -787,22 +787,35 @@ msgstr ""
 "iste caso. Si tu non pote pensar a altere information tu pote clauder le "
 "dialogo de reporto de bug (falta).</para>"
 
-#: qml/DeveloperPage.qml:24
+#: qml/DeveloperPage.qml:25
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Information del Developpator"
 
-#: qml/DeveloperPage.qml:30
+#: qml/DeveloperPage.qml:33
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Trying to contact bugs.kde.org..."
+msgctxt "@action"
+msgid "Report on bugs.kde.org"
+msgstr "Tentante a contiger bugs.kde.org..."
+
+#: qml/DeveloperPage.qml:35
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "On initia le assistente de reporto de bug."
+
+#: qml/DeveloperPage.qml:42
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Installa Symbolos de Cribrar"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:62
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Recarga"
 
-#: qml/DeveloperPage.qml:52
+#: qml/DeveloperPage.qml:64
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -815,17 +828,17 @@ msgstr ""
 " tu ha installate le proprie pacchettos de symbolo de cribrar e que tu vole  "
 "obtener un melior retraciamento."
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:74
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copia"
 
-#: qml/DeveloperPage.qml:69
+#: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salveguarda"
 
-#: qml/DeveloperPage.qml:105
+#: qml/DeveloperPage.qml:117
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -848,7 +861,7 @@ msgstr ""
 "communmente usate durante operationes de cribrar interactive e post-mortem.</"
 "para>"
 
-#: qml/DeveloperPage.qml:172
+#: qml/DeveloperPage.qml:184
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -867,7 +880,7 @@ msgstr ""
 "url='%2'>lista de files</link>) e pulsar le button <interface>Recarga</"
 "interface>."
 
-#: qml/DeveloperPage.qml:180
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -880,7 +893,7 @@ msgstr ""
 "pacchettos necessari (<link url='%2'>lista de files</link>) e pulsa le "
 "button <interface>Recarga </interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:204
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1022,27 +1035,17 @@ msgstr ""
 "Usa iste button pro acceder al systema de tracia de bug de KDE, con le uso "
 "de adresse de e-posta e contrasigno fornite."
 
-#: qml/MainPage.qml:28
-msgctxt "@action"
-msgid "Report Bug"
-msgstr "Reporta Bug"
-
-#: qml/MainPage.qml:30
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "On initia le assistente de reporto de bug."
-
-#: qml/MainPage.qml:35
-msgctxt "@action"
-msgid "Restart Application"
-msgstr "Re-Initia Application"
-
-#: qml/MainPage.qml:41
-msgctxt "@action"
-msgid "Developer Information"
-msgstr "Information del Developpator"
-
-#: qml/MainPage.qml:69
+#: qml/main.qml:31
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>As the Crash Handler itself has failed, the\n"
+#| "automatic reporting process is disabled to reduce the\n"
+#| "risks of failing again.<nl /><nl />\n"
+#| "Please, <link url='%1'>manually report</link> this error\n"
+#| "to the KDE bug tracking system. Do not forget to include\n"
+#| "the backtrace from the <interface>Developer Information</interface>\n"
+#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1051,7 +1054,7 @@ msgid ""
 "Please, <link url='%1'>manually report</link> this error\n"
 "to the KDE bug tracking system. Do not forget to include\n"
 "the backtrace from the <interface>Developer Information</interface>\n"
-"tab.</para>"
+"page.</para>"
 msgstr ""
 "<para>Proque le Gestor de Fracasso mesme falleva, le processo de reporto\n"
 " automatic es dishabilitate pro reducer le riscos\n"
@@ -1061,13 +1064,21 @@ msgstr ""
 " te de includer un retraciamento ex le scheda de <interface>Information de "
 "disveloppatores</interface>.</para>"
 
-#: qml/MainPage.qml:81
+#: qml/main.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>The reporting assistant is disabled because the crash handler "
+#| "dialog was started in safe mode.<nl />\n"
+#| "You can manually report this bug to <link>%1</link> (including the "
+#| "backtrace from the <interface>Developer Information</interface> tab.)</"
+#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
 "was started in safe mode.<nl />\n"
 "You can manually report this bug to <link>%1</link> (including the backtrace "
-"from the <interface>Developer Information</interface> tab.)</para>"
+"from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para> Le assistente de reporto es dishabilitate proque le dialogo del "
 "gerente de fracasso esseva initiate de modo secur.<nl />\n"
@@ -1075,7 +1086,7 @@ msgstr ""
 "retraciamento  ab  le scheda de <interface>Information de Disveloppatores</"
 "interface>.)</para>"
 
-#: qml/MainPage.qml:88
+#: qml/main.qml:50
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1094,19 +1105,18 @@ msgstr ""
 " session e reaperir session per assecurar que le actualisation es\n"
 " completemente applicate e non causara ulle effectos lateral.</para>"
 
-#: qml/MainPage.qml:106
-msgctxt "@label"
-msgid "Automatically submit crash data"
-msgstr "Submitte automaticamente datos de fracasso"
-
-#: qml/MainPage.qml:129
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5</para>"
+#: qml/MainPage.qml:50
+msgctxt "@action"
+msgid "Send Automatic Report"
 msgstr ""
-"<para>Executabile:<application>%1</application> PID: %2Signal: %3 (%4) "
-"Tempore: %5 </para>"
+
+#: qml/MainPage.qml:62
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Developer Information"
+msgctxt "@action"
+msgid "See Developer Information"
+msgstr "Information del Developpator"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1330,15 +1340,44 @@ msgctxt "@title"
 msgid "Crash Report Sent"
 msgstr "Reporto de Fracasso inviate"
 
-#: qml/SentPage.qml:18
+#: qml/SentPage.qml:19 qml/SentryPage.qml:17
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Restart App"
+msgctxt "@action %1 is an application name e.g. kwrite"
+msgid "Restart %1"
+msgstr "Re-Initia Application"
+
+#: qml/SentPage.qml:27
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
-#: qml/SentPage.qml:23
+#: qml/SentPage.qml:32
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Gratias pro esser parte de KDE. Nunc tu pote clauder iste fenestra."
+
+#: qml/SentryPage.qml:47
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Crash Report Sent"
+msgctxt "@label"
+msgid "Crash Report Sent"
+msgstr "Reporto de Fracasso inviate"
+
+#: qml/SentryPage.qml:54
+msgctxt "@label"
+msgid "Always report crashes automatically in the future"
+msgstr ""
+
+#: qml/SentryPage.qml:63
+msgctxt "@info:tooltip"
+msgid ""
+"Always automatically submit a crash report to KDE's crash tracking system. "
+"No manual input required.\n"
+"You will not receive any more crash notifications."
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1408,50 +1447,60 @@ msgstr "Omne vice"
 
 #: statusnotifier.cpp:29
 #, kde-format
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "Application  claudeva inopinatemente."
+
+#: statusnotifier.cpp:31
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr "Pro favor reporta iste error pro adjutar meliorar iste software."
+
+#: statusnotifier.cpp:33
+#, fuzzy, kde-format
+#| msgctxt "Notification text"
+#| msgid "The application closed unexpectedly."
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr "Application  claudeva inopinatemente."
+
+#: statusnotifier.cpp:47
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 Claudeva inopinatemente"
 
-#: statusnotifier.cpp:57
+#: statusnotifier.cpp:65
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "Pro favor reporta iste error pro adjutar meliorar iste software."
 
-#: statusnotifier.cpp:64
+#: statusnotifier.cpp:72
 #, kde-format
 msgid "Report &Bug"
 msgstr "Reporta &Bug"
 
-#: statusnotifier.cpp:70
+#: statusnotifier.cpp:78
 #, kde-format
 msgid "&Restart Application"
 msgstr "&Re-Initia Application"
 
-#: statusnotifier.cpp:81
+#: statusnotifier.cpp:89
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Cela"
 
-#: statusnotifier.cpp:101
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr "Pro favor reporta iste error pro adjutar meliorar iste software."
-
-#: statusnotifier.cpp:102
-#, kde-format
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr "Application  claudeva inopinatemente."
-
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:120
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Reporta Bug"
 
-#: statusnotifier.cpp:116
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1499,6 +1548,27 @@ msgstr "bugstest.kde.org username (nomine de usator)"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password (contrasigno)"
+
+#~ msgctxt "@action"
+#~ msgid "Report Bug"
+#~ msgstr "Reporta Bug"
+
+#~ msgctxt "@action"
+#~ msgid "Restart Application"
+#~ msgstr "Re-Initia Application"
+
+#~ msgctxt "@label"
+#~ msgid "Automatically submit crash data"
+#~ msgstr "Submitte automaticamente datos de fracasso"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5</para>"
+#~ msgstr ""
+#~ "<para>Executabile:<application>%1</application> PID: %2Signal: %3 (%4) "
+#~ "Tempore: %5 </para>"
 
 #~ msgctxt "@title CLI title"
 #~ msgid "DrKonqi Intensive Care"

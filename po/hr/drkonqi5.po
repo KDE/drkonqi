@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2011-04-04 08:50+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -62,7 +62,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instaliraj Debug Simbole"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -77,14 +77,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Koristite ovu tipku za kopiranje informacija o padu u međuspremnik."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -240,14 +240,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Debugger je neočekivano završio."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
-#: qml/DeveloperPage.qml:190
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:202
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Informacije o padu ne mogu biti prikupljene."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -281,14 +281,14 @@ msgstr ""
 "Morate instalirati paket za debugiranje (%1) i kliknuti na gumb "
 "<interface>Ponovno učitaj</interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Pogreška prilikom instalacije simbola za ispitivanje kvarova."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -303,7 +303,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Nedostaju debug simboli"
 
-#: bugzillaintegration/reportinterface.cpp:201
+#: bugzillaintegration/reportinterface.cpp:190
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -480,7 +480,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informacije za razvijatelje"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:52
+#: drkonqidialog.cpp:160 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -540,7 +540,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:196 qml/MainPage.qml:99
+#: drkonqidialog.cpp:196 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -558,7 +558,7 @@ msgstr ""
 "para><para><note>Možete sigurno zatvoriti ovaj dijalog ako ne želite "
 "prijaviti ovaj kvar.</note></para>"
 
-#: drkonqidialog.cpp:203 qml/MainPage.qml:63
+#: drkonqidialog.cpp:203 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -572,7 +572,7 @@ msgstr ""
 "<para>Ne možete prijaviti ovaj kvar jer aplikacija nije dala adresu za "
 "prijavu kvara.</para>"
 
-#: drkonqidialog.cpp:211 qml/MainPage.qml:122
+#: drkonqidialog.cpp:211
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -626,13 +626,13 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Ispravljanje kvarova"
 
-#: main.cpp:129
+#: main.cpp:137
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE-ov rukovoditelj rušenja"
 
-#: main.cpp:131
+#: main.cpp:139
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -641,37 +641,37 @@ msgstr ""
 "KDE-ov rukovoditelj rušenja daje korisniku povratnu informaciju o tome da li "
 "se program srušio."
 
-#: main.cpp:134
+#: main.cpp:142
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000–2009 autori DrKonqia"
 
-#: main.cpp:135
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:136
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:137
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:138
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:145
+#: main.cpp:153
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -679,7 +679,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Broj uhvaćenog signala"
 
-#: main.cpp:146
+#: main.cpp:154
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -687,7 +687,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Naziv programa"
 
-#: main.cpp:147
+#: main.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -695,7 +695,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Putanja do izvršne datoteke"
 
-#: main.cpp:148
+#: main.cpp:156
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -703,7 +703,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Verzija programa"
 
-#: main.cpp:149
+#: main.cpp:157
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -711,7 +711,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Adresa za prijavljivanje kvarova"
 
-#: main.cpp:150
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -719,13 +719,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Prevedeni naziv programa"
 
-#: main.cpp:151
+#: main.cpp:159
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:152
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -733,7 +733,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "PID programa"
 
-#: main.cpp:153
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -741,37 +741,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "ID oznaka programa"
 
-#: main.cpp:154
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit je pokrenuo program"
 
-#: main.cpp:155
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Onemogući arbitraran pristup disku"
 
-#: main.cpp:156
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program već je ponovno pokrenut"
 
-#: main.cpp:159
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:161
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:162
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -782,7 +782,7 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 
-#: qml/BacktracePage.qml:24
+#: qml/BacktracePage.qml:25
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Backtrace of the crash I am sending:"
@@ -790,7 +790,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Informacije o rušenju koje se šalju:"
 
-#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -900,7 +900,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Prilagođene postavke aplikacije možda su povezane s ovime"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -920,7 +920,7 @@ msgstr ""
 "Informacije koje možete pružiti ne smatraju se dovoljno korisnima u ovom "
 "slučaju."
 
-#: qml/DeveloperPage.qml:24
+#: qml/DeveloperPage.qml:25
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -928,7 +928,17 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&Informacije za razvijatelje"
 
-#: qml/DeveloperPage.qml:30
+#: qml/DeveloperPage.qml:33
+msgctxt "@action"
+msgid "Report on bugs.kde.org"
+msgstr ""
+
+#: qml/DeveloperPage.qml:35
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Pokrene pomoćnika prijave greške."
+
+#: qml/DeveloperPage.qml:42
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -936,7 +946,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instaliraj Debug Simbole"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -944,7 +954,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Ponovno učitaj"
 
-#: qml/DeveloperPage.qml:52
+#: qml/DeveloperPage.qml:64
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -962,19 +972,19 @@ msgstr ""
 "korisno ako imate instalirane odgovarajuće pakete sa simbolima za "
 "ispravljanje kvarova i želite pokupiti bolje informacije o rušenju."
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:74
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Kopiraj"
 
-#: qml/DeveloperPage.qml:69
+#: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:105
+#: qml/DeveloperPage.qml:117
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -988,7 +998,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:172
+#: qml/DeveloperPage.qml:184
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1015,7 +1025,7 @@ msgstr ""
 "padu programa; instalirajte potrebne pakete i kliknite na gumb "
 "<interface>Ponovno učitaj informacije o padu</interface>."
 
-#: qml/DeveloperPage.qml:180
+#: qml/DeveloperPage.qml:192
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1035,7 +1045,7 @@ msgstr ""
 "rušenju. Instalirajte potrebne pakete (<link url='%2'>lista datoteka</link>) "
 "i kliknite na gumb <interface>Ponovno učitaj</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:204
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1211,36 +1221,7 @@ msgstr ""
 "Koristite ovaj gumb da biste se prijavili u KDE-ovv sustav za praćenje "
 "grešaka koristeći Vaše korisničko ime i zaporku."
 
-#: qml/MainPage.qml:28
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgctxt "@action"
-msgid "Report Bug"
-msgstr "Prijavi grešku"
-
-#: qml/MainPage.qml:30
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "Pokrene pomoćnika prijave greške."
-
-#: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgctxt "@action"
-msgid "Restart Application"
-msgstr "Ponovno pokreni aplikaciju"
-
-#: qml/MainPage.qml:41
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
-msgctxt "@action"
-msgid "Developer Information"
-msgstr "&Informacije za razvijatelje"
-
-#: qml/MainPage.qml:69
+#: qml/main.qml:31
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1255,14 +1236,14 @@ msgid ""
 "Please, <link url='%1'>manually report</link> this error\n"
 "to the KDE bug tracking system. Do not forget to include\n"
 "the backtrace from the <interface>Developer Information</interface>\n"
-"tab.</para>"
+"page.</para>"
 msgstr ""
 "<para>Pomoćnik pri prijavljivanju je onemogućen jer se dijalog držača "
 "rušenja pokrenuo u sigurnom načinu.<nl />Možete ručno prijaviti ovaj kvar na "
 "%1 (uključujući pozadinski trag iz kartice o razvijateljskim "
 "informacijama.)</para>"
 
-#: qml/MainPage.qml:81
+#: qml/main.qml:43
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1274,14 +1255,14 @@ msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
 "was started in safe mode.<nl />\n"
 "You can manually report this bug to <link>%1</link> (including the backtrace "
-"from the <interface>Developer Information</interface> tab.)</para>"
+"from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para>Pomoćnik pri prijavljivanju je onemogućen jer se dijalog držača "
 "rušenja pokrenuo u sigurnom načinu.<nl />Možete ručno prijaviti ovaj kvar na "
 "%1 (uključujući pozadinski trag iz kartice o razvijateljskim "
 "informacijama.)</para>"
 
-#: qml/MainPage.qml:88
+#: qml/main.qml:50
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1293,24 +1274,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:106
-msgctxt "@label"
-msgid "Automatically submit crash data"
-msgstr ""
-
-#: qml/MainPage.qml:129
+#: qml/MainPage.qml:50
 #, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4)</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5</para>"
-msgstr ""
-"<para>Izvršna datoteka: <application>%1</application> PID: <numid>%2</numid> "
-"Signal: %3 (%4)</para>"
+#| msgctxt "@title"
+#| msgid "Send Crash Report"
+msgctxt "@action"
+msgid "Send Automatic Report"
+msgstr "Pošalji izvještaj o rušenju"
+
+#: qml/MainPage.qml:62
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Developer Information"
+msgctxt "@action"
+msgid "See Developer Information"
+msgstr "&Informacije za razvijatelje"
 
 #: qml/PerfectDuplicatePage.qml:14
 #, fuzzy
@@ -1571,7 +1549,15 @@ msgctxt "@title"
 msgid "Crash Report Sent"
 msgstr "Pomoćnik za prijavu pada"
 
-#: qml/SentPage.qml:18
+#: qml/SentPage.qml:19 qml/SentryPage.qml:17
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgctxt "@action %1 is an application name e.g. kwrite"
+msgid "Restart %1"
+msgstr "Ponovno pokreni aplikaciju"
+
+#: qml/SentPage.qml:27
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "<link url='%1'>Bug report page at the KDE bug tracking system</link>"
@@ -1581,7 +1567,7 @@ msgstr ""
 "<link url='%1'>Stranica za prijavu kvara u KDE-ovom sustavu za praćenje "
 "kvarova</link>"
 
-#: qml/SentPage.qml:23
+#: qml/SentPage.qml:32
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1592,6 +1578,27 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
 "Izvještaj o rušenju je poslan.<nl/>URL: <link>%1</link><nl/>Hvala vam što "
 "ste bili dio KDE-a. Sada možete zatvoriti ovaj prozor."
+
+#: qml/SentryPage.qml:47
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Crash Reporting Assistant"
+msgctxt "@label"
+msgid "Crash Report Sent"
+msgstr "Pomoćnik za prijavu pada"
+
+#: qml/SentryPage.qml:54
+msgctxt "@label"
+msgid "Always report crashes automatically in the future"
+msgstr ""
+
+#: qml/SentryPage.qml:63
+msgctxt "@info:tooltip"
+msgid ""
+"Always automatically submit a crash report to KDE's crash tracking system. "
+"No manual input required.\n"
+"You will not receive any more crash notifications."
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 #, fuzzy
@@ -1677,43 +1684,6 @@ msgid "Every time"
 msgstr "Svaki put"
 
 #: statusnotifier.cpp:29
-#, kde-format
-msgctxt "Placeholder is an application name; it crashed"
-msgid "%1 Closed Unexpectedly"
-msgstr ""
-
-#: statusnotifier.cpp:57
-#, kde-format
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgid "Report &Bug"
-msgstr "Prijavi grešku"
-
-#: statusnotifier.cpp:70
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgid "&Restart Application"
-msgstr "Ponovno pokreni aplikaciju"
-
-#: statusnotifier.cpp:81
-#, kde-format
-msgctxt "Allows the user to hide this notifier item"
-msgid "Hide"
-msgstr ""
-
-#: statusnotifier.cpp:101
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:102
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1725,7 +1695,58 @@ msgstr ""
 "<para>Žao nam je, ali <application>%1</application> je neočekivano završio.</"
 "para>"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:31
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: statusnotifier.cpp:33
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr ""
+"<para>Žao nam je, ali <application>%1</application> je neočekivano završio.</"
+"para>"
+
+#: statusnotifier.cpp:47
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr ""
+
+#: statusnotifier.cpp:65
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: statusnotifier.cpp:72
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report Bug"
+msgid "Report &Bug"
+msgstr "Prijavi grešku"
+
+#: statusnotifier.cpp:78
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgid "&Restart Application"
+msgstr "Ponovno pokreni aplikaciju"
+
+#: statusnotifier.cpp:89
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr ""
+
+#: statusnotifier.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1733,7 +1754,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Prijavi grešku"
 
-#: statusnotifier.cpp:116
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1782,6 +1803,34 @@ msgstr "bugstest.kde.org korisničko ime"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org lozinka"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Report Bug"
+#~ msgctxt "@action"
+#~ msgid "Report Bug"
+#~ msgstr "Prijavi grešku"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Restart Application"
+#~ msgctxt "@action"
+#~ msgid "Restart Application"
+#~ msgstr "Ponovno pokreni aplikaciju"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4)</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5</para>"
+#~ msgstr ""
+#~ "<para>Izvršna datoteka: <application>%1</application> PID: <numid>%2</"
+#~ "numid> Signal: %3 (%4)</para>"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3324,10 +3373,6 @@ msgstr "bugstest.kde.org lozinka"
 #~ msgctxt "@title"
 #~ msgid "Bug Report Possible Duplicates List"
 #~ msgstr "Popis mogućih duplikata prijave"
-
-#~ msgctxt "@title"
-#~ msgid "Send Crash Report"
-#~ msgstr "Pošalji izvještaj o rušenju"
 
 #, fuzzy
 #~| msgctxt "@info"

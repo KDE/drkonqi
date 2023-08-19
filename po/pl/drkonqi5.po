@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-04-10 11:25+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Wgraj symbole d&iagnostyczne"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,7 +70,7 @@ msgstr ""
 "Wgranie symboli jest niedostępne ponieważ aplikacja została uaktualniona lub "
 "usunięta po jej uruchomieniu."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
 "schowka."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
-#: qml/DeveloperPage.qml:190
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:202
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nie udało się zebrać szczegółów o usterce."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a następnie "
 "nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Błąd podczas wgrywania symboli diagnostycznych"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -276,7 +276,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Brak pakietów diagnostycznych"
 
-#: bugzillaintegration/reportinterface.cpp:201
+#: bugzillaintegration/reportinterface.cpp:190
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -436,7 +436,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Szczegóły"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:52
+#: drkonqidialog.cpp:160 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -493,7 +493,7 @@ msgstr ""
 "zostało ono dobrze przeprowadzone i nie spowoduje żadnych skutków ubocznych."
 "</para>"
 
-#: drkonqidialog.cpp:196 qml/MainPage.qml:99
+#: drkonqidialog.cpp:196 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -503,7 +503,7 @@ msgstr ""
 "<para>Zgłoszenie tego błędu może nam pomóc w usprawnieniu KDE.<nl /><link "
 "url='%1'>Dowiedz się więcej o zgłaszaniu błędów.</link></para>"
 
-#: drkonqidialog.cpp:203 qml/MainPage.qml:63
+#: drkonqidialog.cpp:203 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -513,7 +513,7 @@ msgstr ""
 "<para>Nie możesz zgłosić tego błędu, ponieważ <application>%1</application> "
 "nie dostarcza adresu zgłaszania błędu.</para>"
 
-#: drkonqidialog.cpp:211 qml/MainPage.qml:122
+#: drkonqidialog.cpp:211
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -556,119 +556,119 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Diagnozowanie w %1"
 
-#: main.cpp:129
+#: main.cpp:137
 #, kde-format
 msgid "Crash Handler"
 msgstr "Obsługa usterek"
 
-#: main.cpp:131
+#: main.cpp:139
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Obsługa usterek umożliwia przekazanie autorom programu szczegółów o usterce."
 
-#: main.cpp:134
+#: main.cpp:142
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, Autorzy DrKonqi"
 
-#: main.cpp:135
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:136
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:137
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:138
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:145
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Sygnał o <numerze> został złapany"
 
-#: main.cpp:146
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Nazwa> programu"
 
-#: main.cpp:147
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Ścieżka> do pliku wykonywalnego"
 
-#: main.cpp:148
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "<Wersja> programu"
 
-#: main.cpp:149
+#: main.cpp:157
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "<Adres> zgłoszenia do użycia"
 
-#: main.cpp:150
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Przetłumaczona <nazwa> programu"
 
-#: main.cpp:151
+#: main.cpp:159
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nazwa produktu na Bugzilli"
 
-#: main.cpp:152
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "<PID> programu"
 
-#: main.cpp:153
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Początkowy <ID> programu"
 
-#: main.cpp:154
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Program był uruchomiony przez kdeinit"
 
-#: main.cpp:155
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Wyłącz bezpośredni dostęp do dysku"
 
-#: main.cpp:156
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program już został ponownie uruchomiony"
 
-#: main.cpp:159
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
@@ -676,13 +676,13 @@ msgstr ""
 "Nie przerywaj działania programu, utwórz ślad wykonywania przy ponownym "
 "uruchomieniu"
 
-#: main.cpp:161
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<ID wątku> wadliwego wątku"
 
-#: main.cpp:162
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -693,12 +693,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Pobieranie śladu wykonywania (pozostałość po usterce)"
 
-#: qml/BacktracePage.qml:24
+#: qml/BacktracePage.qml:25
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Pokaż treść śladu wykonywania (zaawansowane)"
 
-#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Następna"
@@ -767,7 +767,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Niezwykłe ustawienia programu, które mogą mieć znaczenie"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niewystarczająco użyteczne"
@@ -783,22 +783,35 @@ msgstr ""
 "przypadku. Jeśli nie przypominasz sobie więcej szczegółów, to możesz zamknąć "
 "to okno zgłaszania błędów.</para>"
 
-#: qml/DeveloperPage.qml:24
+#: qml/DeveloperPage.qml:25
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Szczegóły dla programisty"
 
-#: qml/DeveloperPage.qml:30
+#: qml/DeveloperPage.qml:33
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Trying to contact bugs.kde.org..."
+msgctxt "@action"
+msgid "Report on bugs.kde.org"
+msgstr "Próba nawiązania połączenia z bugs.kde.org..."
+
+#: qml/DeveloperPage.qml:35
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Wywołuje pomocnika zgłaszania błędów."
+
+#: qml/DeveloperPage.qml:42
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Wgraj symbole diagnostyczne"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:62
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: qml/DeveloperPage.qml:52
+#: qml/DeveloperPage.qml:64
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -811,17 +824,17 @@ msgstr ""
 "gdy nie masz wgranych odpowiednich pakietów do diagnostyki i chcesz uzyskać "
 "lepszy ślad."
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:74
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Skopiuj"
 
-#: qml/DeveloperPage.qml:69
+#: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: qml/DeveloperPage.qml:105
+#: qml/DeveloperPage.qml:117
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -844,7 +857,7 @@ msgstr ""
 "używane podczas diagnostyki interaktywnej lub po zakończeniu pracy programu."
 "</para>"
 
-#: qml/DeveloperPage.qml:172
+#: qml/DeveloperPage.qml:184
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -863,7 +876,7 @@ msgstr ""
 "ślad wykonywania; wgraj potrzebne pakiety (<link url='%2'>lista plików</"
 "link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:180
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -877,7 +890,7 @@ msgstr ""
 "spis pakietów</link>) i naciśnij na przycisk <interface>Wczytaj ponownie</"
 "interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:204
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1017,27 +1030,17 @@ msgstr ""
 "Użyj tego przycisku, aby zalogować się do systemu obsługi błędów KDE przy "
 "użyciu wpisanego adresu pocztowego i hasła."
 
-#: qml/MainPage.qml:28
-msgctxt "@action"
-msgid "Report Bug"
-msgstr "Zgłoś błąd"
-
-#: qml/MainPage.qml:30
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "Wywołuje pomocnika zgłaszania błędów."
-
-#: qml/MainPage.qml:35
-msgctxt "@action"
-msgid "Restart Application"
-msgstr "Uruchom ponownie"
-
-#: qml/MainPage.qml:41
-msgctxt "@action"
-msgid "Developer Information"
-msgstr "Szczegóły dla programisty"
-
-#: qml/MainPage.qml:69
+#: qml/main.qml:31
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>As the Crash Handler itself has failed, the\n"
+#| "automatic reporting process is disabled to reduce the\n"
+#| "risks of failing again.<nl /><nl />\n"
+#| "Please, <link url='%1'>manually report</link> this error\n"
+#| "to the KDE bug tracking system. Do not forget to include\n"
+#| "the backtrace from the <interface>Developer Information</interface>\n"
+#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1046,7 +1049,7 @@ msgid ""
 "Please, <link url='%1'>manually report</link> this error\n"
 "to the KDE bug tracking system. Do not forget to include\n"
 "the backtrace from the <interface>Developer Information</interface>\n"
-"tab.</para>"
+"page.</para>"
 msgstr ""
 "<para>W programie do obsługi usterek, nastąpiła usterka,\n"
 "więc wyłączono system do zautomatyzowanego zgłaszania\n"
@@ -1056,20 +1059,28 @@ msgstr ""
 "śladu z karty <interface>Informacji dla programisty</interface>.\n"
 "</para>"
 
-#: qml/MainPage.qml:81
+#: qml/main.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>The reporting assistant is disabled because the crash handler "
+#| "dialog was started in safe mode.<nl />\n"
+#| "You can manually report this bug to <link>%1</link> (including the "
+#| "backtrace from the <interface>Developer Information</interface> tab.)</"
+#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
 "was started in safe mode.<nl />\n"
 "You can manually report this bug to <link>%1</link> (including the backtrace "
-"from the <interface>Developer Information</interface> tab.)</para>"
+"from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
 "obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl />Możesz "
 "ręcznie zgłosić ten błąd do <link>%1</link> (dołączając ślad wykonywania z "
 "karty <interface>Szczegóły dla programisty</interface>.)</para>"
 
-#: qml/MainPage.qml:88
+#: qml/main.qml:50
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1088,19 +1099,18 @@ msgstr ""
 "aby upewnić się, że zostało ono dobrze przeprowadzone i nie spowoduje\n"
 "żadnych skutków ubocznych.</para>"
 
-#: qml/MainPage.qml:106
-msgctxt "@label"
-msgid "Automatically submit crash data"
+#: qml/MainPage.qml:50
+msgctxt "@action"
+msgid "Send Automatic Report"
 msgstr ""
 
-#: qml/MainPage.qml:129
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5</para>"
-msgstr ""
-"<para>Plik wykonywalny: <application>%1</application> PID: %2 Sygnał: %3 "
-"(%4) Czas: %5 </para>"
+#: qml/MainPage.qml:62
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Developer Information"
+msgctxt "@action"
+msgid "See Developer Information"
+msgstr "Szczegóły dla programisty"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1325,15 +1335,44 @@ msgctxt "@title"
 msgid "Crash Report Sent"
 msgstr "Wysłano zgłoszenie usterki"
 
-#: qml/SentPage.qml:18
+#: qml/SentPage.qml:19 qml/SentryPage.qml:17
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Restart App"
+msgctxt "@action %1 is an application name e.g. kwrite"
+msgid "Restart %1"
+msgstr "Uruchom program ponownie"
+
+#: qml/SentPage.qml:27
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
 msgstr "Adres URL: <link url='%1'>%1</link>"
 
-#: qml/SentPage.qml:23
+#: qml/SentPage.qml:32
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dziękujemy za bycie częścią KDE. Możesz teraz zamknąć to okno."
+
+#: qml/SentryPage.qml:47
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Crash Report Sent"
+msgctxt "@label"
+msgid "Crash Report Sent"
+msgstr "Wysłano zgłoszenie usterki"
+
+#: qml/SentryPage.qml:54
+msgctxt "@label"
+msgid "Always report crashes automatically in the future"
+msgstr ""
+
+#: qml/SentryPage.qml:63
+msgctxt "@info:tooltip"
+msgid ""
+"Always automatically submit a crash report to KDE's crash tracking system. "
+"No manual input required.\n"
+"You will not receive any more crash notifications."
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1401,50 +1440,60 @@ msgstr "Za każdym razem"
 
 #: statusnotifier.cpp:29
 #, kde-format
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "Aplikacja nieoczekiwanie zamknęła się."
+
+#: statusnotifier.cpp:31
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr "Zgłoszenie tego zdarzenia może pomóc nam usprawnić ten program."
+
+#: statusnotifier.cpp:33
+#, fuzzy, kde-format
+#| msgctxt "Notification text"
+#| msgid "The application closed unexpectedly."
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr "Aplikacja nieoczekiwanie zamknęła się."
+
+#: statusnotifier.cpp:47
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 nieoczekiwanie zakończył"
 
-#: statusnotifier.cpp:57
+#: statusnotifier.cpp:65
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "Zgłoszenie tego zdarzenia może pomóc nam usprawnić ten program."
 
-#: statusnotifier.cpp:64
+#: statusnotifier.cpp:72
 #, kde-format
 msgid "Report &Bug"
 msgstr "Zgłoś &błąd"
 
-#: statusnotifier.cpp:70
+#: statusnotifier.cpp:78
 #, kde-format
 msgid "&Restart Application"
 msgstr "U&ruchom ponownie"
 
-#: statusnotifier.cpp:81
+#: statusnotifier.cpp:89
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Ukryj"
 
-#: statusnotifier.cpp:101
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr "Zgłoszenie tego zdarzenia może pomóc nam usprawnić ten program."
-
-#: statusnotifier.cpp:102
-#, kde-format
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr "Aplikacja nieoczekiwanie zamknęła się."
-
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:120
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Zgłoś błąd"
 
-#: statusnotifier.cpp:116
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1491,6 +1540,23 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt "@action"
+#~ msgid "Report Bug"
+#~ msgstr "Zgłoś błąd"
+
+#~ msgctxt "@action"
+#~ msgid "Restart Application"
+#~ msgstr "Uruchom ponownie"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5</para>"
+#~ msgstr ""
+#~ "<para>Plik wykonywalny: <application>%1</application> PID: %2 Sygnał: %3 "
+#~ "(%4) Czas: %5 </para>"
 
 #~ msgctxt "@title CLI title"
 #~ msgid "DrKonqi Intensive Care"

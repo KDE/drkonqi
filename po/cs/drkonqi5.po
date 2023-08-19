@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2023-04-04 14:10+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Na&instalovat ladicí symboly"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,7 +70,7 @@ msgstr ""
 "Instalace symbolů není dostupné protože aplikace byla po spuštění "
 "aktualizována nebo odinstalována."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "Použijte toto tlačítko pro zkopírování informace o pádu (backtrace) do "
 "schránky."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -216,14 +216,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ladicí nástroj byl nečekaně ukončen."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
-#: qml/DeveloperPage.qml:190
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:202
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nepovedlo se vygenerovat informace o pádu."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -251,14 +251,14 @@ msgstr ""
 "<strong>Je potřeba nainstalovat ladicí aplikaci (%1) a kliknout na tlačítko "
 "<interface>Obnovit</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Chyba během instalace ladicích symbolů"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -272,7 +272,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Chybí balíčky s informacemi pro ladění"
 
-#: bugzillaintegration/reportinterface.cpp:201
+#: bugzillaintegration/reportinterface.cpp:190
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -430,7 +430,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informa&ce pro vývojáře"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:52
+#: drkonqidialog.cpp:160 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -485,7 +485,7 @@ msgstr ""
 "dobrý nápad odhlásit se a znovu přihlásit abyste se ujistili, že aktualizace "
 "byla plně nainstalována a nebude způsobovat vedlejší efekty.</para>"
 
-#: drkonqidialog.cpp:196 qml/MainPage.qml:99
+#: drkonqidialog.cpp:196 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -495,7 +495,7 @@ msgstr ""
 "<para>Můžete nám pomoci vylepšit software KDE nahlášením této chyby.<nl /"
 "><link url='%1'>Naučte se hlásit chyby.</link></para>"
 
-#: drkonqidialog.cpp:203 qml/MainPage.qml:63
+#: drkonqidialog.cpp:203 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -505,7 +505,7 @@ msgstr ""
 "<para>Tuto chybu nelze nahlásit, protože aplikace <application>%1</"
 "application> neposkytuje adresu pro hlášení chyb.</para>"
 
-#: drkonqidialog.cpp:211 qml/MainPage.qml:122
+#: drkonqidialog.cpp:211
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -547,130 +547,130 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Ladění v %1"
 
-#: main.cpp:129
+#: main.cpp:137
 #, kde-format
 msgid "Crash Handler"
 msgstr "Obsluha pádů"
 
-#: main.cpp:131
+#: main.cpp:139
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "Obsluha pádů dává uživateli informace při pádu programu."
 
-#: main.cpp:134
+#: main.cpp:142
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, Autoři DrKonqi"
 
-#: main.cpp:135
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:136
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:137
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:138
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:145
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "<Číslo> zachyceného signálu"
 
-#: main.cpp:146
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Název> programu"
 
-#: main.cpp:147
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Cesta> k programu"
 
-#: main.cpp:148
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "<Verze> programu"
 
-#: main.cpp:149
+#: main.cpp:157
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "<Adresa> pro nahlášení chyby"
 
-#: main.cpp:150
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Přeložený <název> programu"
 
-#: main.cpp:151
+#: main.cpp:159
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Název produktu v Bugzille"
 
-#: main.cpp:152
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "<PID> programu"
 
-#: main.cpp:153
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "<ID> spuštění programu"
 
-#: main.cpp:154
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Program byl spuštěn pomocí kdeinit"
 
-#: main.cpp:155
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Zakázat náhodný přístup k disku"
 
-#: main.cpp:156
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program již byl restartován"
 
-#: main.cpp:159
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Nechat program běžet a vygenerovat backtrace při startu"
 
-#: main.cpp:161
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<ID vlákna> ve kterém došlo k pádu"
 
-#: main.cpp:162
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -681,12 +681,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Stahování backtrace (Automatická informace o pádu)"
 
-#: qml/BacktracePage.qml:24
+#: qml/BacktracePage.qml:25
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Zobrazit obsah backtrace (pokročilé)"
 
-#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Další"
@@ -756,7 +756,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Vlastní nastavení aplikace, které může mít na problém vliv"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Nedostatečně použitelné"
@@ -772,22 +772,36 @@ msgstr ""
 "dostatečně užitečné. Pokud vás nenapadají žádné další informace, můžete okno "
 "s hlášením zavřít.</para>"
 
-#: qml/DeveloperPage.qml:24
+#: qml/DeveloperPage.qml:25
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informace pro vývojáře"
 
-#: qml/DeveloperPage.qml:30
+# %s is FTP or HTTP
+#: qml/DeveloperPage.qml:33
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Trying to contact bugs.kde.org..."
+msgctxt "@action"
+msgid "Report on bugs.kde.org"
+msgstr "Pokouším se připojit na bugs.kde.org..."
+
+#: qml/DeveloperPage.qml:35
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Spustí asistenta chybového hlášení."
+
+#: qml/DeveloperPage.qml:42
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Nainstalovat ladicí symboly"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:62
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Obnovit"
 
-#: qml/DeveloperPage.qml:52
+#: qml/DeveloperPage.qml:64
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -799,17 +813,17 @@ msgstr ""
 "se hodí pokud jste například doinstalovali\n"
 "příslušné balíčky s ladicími symboly a přejete si získat lepší backtrace."
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:74
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopírovat"
 
-#: qml/DeveloperPage.qml:69
+#: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Uložit"
 
-#: qml/DeveloperPage.qml:105
+#: qml/DeveloperPage.qml:117
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -829,7 +843,7 @@ msgstr ""
 "obsahovat spoustu užitečných informací.<nl />Backtrace je obvykle\n"
 "využíváno interaktivního ladění po pádu aplikace.</para>"
 
-#: qml/DeveloperPage.qml:172
+#: qml/DeveloperPage.qml:184
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -848,7 +862,7 @@ msgstr ""
 "nainstalujte potřebné balíčky (<link url='%2'>seznam souborů</link>) a "
 "klikněte na tlačítko <interface>Obnovit</interface>."
 
-#: qml/DeveloperPage.qml:180
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -861,7 +875,7 @@ msgstr ""
 "potřebných balíčků (<link url='%2'>\n"
 "seznam souborů</link>), klikněte na tlačítko <interface>Obnovit</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:204
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -997,27 +1011,17 @@ msgstr ""
 "Použijte tlačítko pro přihlášení do systému pro sledování chyb KDE pomocí e-"
 "mailu a hesla."
 
-#: qml/MainPage.qml:28
-msgctxt "@action"
-msgid "Report Bug"
-msgstr "Nahlásit chybu"
-
-#: qml/MainPage.qml:30
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "Spustí asistenta chybového hlášení."
-
-#: qml/MainPage.qml:35
-msgctxt "@action"
-msgid "Restart Application"
-msgstr "Restartovat aplikaci"
-
-#: qml/MainPage.qml:41
-msgctxt "@action"
-msgid "Developer Information"
-msgstr "Informace pro vývojáře"
-
-#: qml/MainPage.qml:69
+#: qml/main.qml:31
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>As the Crash Handler itself has failed, the\n"
+#| "automatic reporting process is disabled to reduce the\n"
+#| "risks of failing again.<nl /><nl />\n"
+#| "Please, <link url='%1'>manually report</link> this error\n"
+#| "to the KDE bug tracking system. Do not forget to include\n"
+#| "the backtrace from the <interface>Developer Information</interface>\n"
+#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1026,7 +1030,7 @@ msgid ""
 "Please, <link url='%1'>manually report</link> this error\n"
 "to the KDE bug tracking system. Do not forget to include\n"
 "the backtrace from the <interface>Developer Information</interface>\n"
-"tab.</para>"
+"page.</para>"
 msgstr ""
 "<para>Protože program na obsluhu pádů sám selhal,\n"
 "automatický proces hlášení byl zakázán, aby se snížilo riziko\n"
@@ -1035,20 +1039,28 @@ msgstr ""
 "do systému pro sledování chyb KDE. Nezapomeňte zahrnout\n"
 "backtrace z karty <interface>Informace pro vývojáře</interface>.</para>"
 
-#: qml/MainPage.qml:81
+#: qml/main.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>The reporting assistant is disabled because the crash handler "
+#| "dialog was started in safe mode.<nl />\n"
+#| "You can manually report this bug to <link>%1</link> (including the "
+#| "backtrace from the <interface>Developer Information</interface> tab.)</"
+#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
 "was started in safe mode.<nl />\n"
 "You can manually report this bug to <link>%1</link> (including the backtrace "
-"from the <interface>Developer Information</interface> tab.)</para>"
+"from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para>Asistent hlášení chyb byl zakázán, dialog pro obsluhu pádu byl spuštěn "
 "v nouzovém režimu.<nl />Tuto chybu můžete ručně nahlásit na <link>%1</link> "
 "(včetně backtrace z karty <interface>Informace pro vývojáře</interface>.)</"
 "para>"
 
-#: qml/MainPage.qml:88
+#: qml/main.qml:50
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1067,19 +1079,18 @@ msgstr ""
 "přihlásit abyste se ujistili, že aktualizace byla plně nainstalována \n"
 "a nebude způsobovat vedlejší efekty.</para>"
 
-#: qml/MainPage.qml:106
-msgctxt "@label"
-msgid "Automatically submit crash data"
+#: qml/MainPage.qml:50
+msgctxt "@action"
+msgid "Send Automatic Report"
 msgstr ""
 
-#: qml/MainPage.qml:129
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5</para>"
-msgstr ""
-"<para>Spustitelný soubor: <application>%1</application> PID: %2 Signál: %3 "
-"(%4) Čas: %5 </para>"
+#: qml/MainPage.qml:62
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Developer Information"
+msgctxt "@action"
+msgid "See Developer Information"
+msgstr "Informace pro vývojáře"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1290,15 +1301,44 @@ msgctxt "@title"
 msgid "Crash Report Sent"
 msgstr "Hlášení o pádu bylo odesláno"
 
-#: qml/SentPage.qml:18
+#: qml/SentPage.qml:19 qml/SentryPage.qml:17
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Restart App"
+msgctxt "@action %1 is an application name e.g. kwrite"
+msgid "Restart %1"
+msgstr "Restartovat aplikaci"
+
+#: qml/SentPage.qml:27
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
-#: qml/SentPage.qml:23
+#: qml/SentPage.qml:32
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Děkujeme za to, že jste součástí KDE. Nyní můžete toto okno zavřít."
+
+#: qml/SentryPage.qml:47
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Crash Report Sent"
+msgctxt "@label"
+msgid "Crash Report Sent"
+msgstr "Hlášení o pádu bylo odesláno"
+
+#: qml/SentryPage.qml:54
+msgctxt "@label"
+msgid "Always report crashes automatically in the future"
+msgstr ""
+
+#: qml/SentryPage.qml:63
+msgctxt "@info:tooltip"
+msgid ""
+"Always automatically submit a crash report to KDE's crash tracking system. "
+"No manual input required.\n"
+"You will not receive any more crash notifications."
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1368,50 +1408,60 @@ msgstr "Vždy"
 
 #: statusnotifier.cpp:29
 #, kde-format
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "Aplikace byla neočekávaně ukončena"
+
+#: statusnotifier.cpp:31
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr "Prosím nahlaste tuto chybu pro zlepšení tohoto softwaru."
+
+#: statusnotifier.cpp:33
+#, fuzzy, kde-format
+#| msgctxt "Notification text"
+#| msgid "The application closed unexpectedly."
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr "Aplikace byla neočekávaně ukončena"
+
+#: statusnotifier.cpp:47
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
 msgstr "%1 byla nečekaně uzavřena"
 
-#: statusnotifier.cpp:57
+#: statusnotifier.cpp:65
 #, kde-format
 msgid "Please report this error to help improve this software."
 msgstr "Prosím nahlaste tuto chybu pro zlepšení tohoto softwaru."
 
-#: statusnotifier.cpp:64
+#: statusnotifier.cpp:72
 #, kde-format
 msgid "Report &Bug"
 msgstr "Nahlásit chy&bu"
 
-#: statusnotifier.cpp:70
+#: statusnotifier.cpp:78
 #, kde-format
 msgid "&Restart Application"
 msgstr "&Restartovat aplikaci"
 
-#: statusnotifier.cpp:81
+#: statusnotifier.cpp:89
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Skrýt"
 
-#: statusnotifier.cpp:101
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr "Prosím nahlaste tuto chybu pro zlepšení tohoto softwaru."
-
-#: statusnotifier.cpp:102
-#, kde-format
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr "Aplikace byla neočekávaně ukončena"
-
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:120
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Nahlásit chybu"
 
-#: statusnotifier.cpp:116
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1458,3 +1508,20 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
+
+#~ msgctxt "@action"
+#~ msgid "Report Bug"
+#~ msgstr "Nahlásit chybu"
+
+#~ msgctxt "@action"
+#~ msgid "Restart Application"
+#~ msgstr "Restartovat aplikaci"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5</para>"
+#~ msgstr ""
+#~ "<para>Spustitelný soubor: <application>%1</application> PID: %2 Signál: "
+#~ "%3 (%4) Čas: %5 </para>"

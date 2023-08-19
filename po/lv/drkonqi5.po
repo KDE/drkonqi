@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-11 01:57+0000\n"
+"POT-Creation-Date: 2023-08-19 01:57+0000\n"
 "PO-Revision-Date: 2012-01-07 21:51+0200\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -55,7 +55,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instalēt atkļūdošanas simbolus"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:43
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,7 +70,7 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:63
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "Izmantojiet šo pogu, lai informāciju par avāriju (atpakaļceļu) kopētu uz "
 "starpliktuvi."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:71
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -215,14 +215,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Atkļūdotājs negaidīti beidza darbu."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:186
-#: qml/DeveloperPage.qml:190
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:202
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Neizdevās ģenerēt avārijas informāciju."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:187
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -256,14 +256,14 @@ msgstr ""
 "Nepieciešams instalēt atkļūdotāju (%1) un nospiest pogu<interface>Pārlādēt</"
 "interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:89
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Kļūda instalējot atkļūdošanas simbolus"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -277,7 +277,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Trūkst atkļūdošanas informācijas pakotņu"
 
-#: bugzillaintegration/reportinterface.cpp:201
+#: bugzillaintegration/reportinterface.cpp:190
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -446,7 +446,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informācija izstrādātājiem"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:52
+#: drkonqidialog.cpp:160 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +507,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:196 qml/MainPage.qml:99
+#: drkonqidialog.cpp:196 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -525,7 +525,7 @@ msgstr ""
 "para><para><note>Varat droši aizvērt šo logu, ja nevēlaties ziņot par šo "
 "problēmu.</note></para>"
 
-#: drkonqidialog.cpp:203 qml/MainPage.qml:63
+#: drkonqidialog.cpp:203 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -539,7 +539,7 @@ msgstr ""
 "<para>Jūs nevarat ziņot par kļūdu, jo programma nav norādījusi kļūdu "
 "ziņošanas adresi.</para>"
 
-#: drkonqidialog.cpp:211 qml/MainPage.qml:122
+#: drkonqidialog.cpp:211
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
@@ -589,50 +589,50 @@ msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:129
+#: main.cpp:137
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE avāriju apstrādātājs"
 
-#: main.cpp:131
+#: main.cpp:139
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "KDE avāriju apstrādātājs informē lietotāju, ja programma ir avarējusi."
 
-#: main.cpp:134
+#: main.cpp:142
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi autori"
 
-#: main.cpp:135
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:136
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:137
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:138
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:145
+#: main.cpp:153
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -640,7 +640,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Pārtvertā signāla numurs."
 
-#: main.cpp:146
+#: main.cpp:154
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -648,7 +648,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Programmas nosaukums"
 
-#: main.cpp:147
+#: main.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -656,7 +656,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Ceļš uz izpildfailu"
 
-#: main.cpp:148
+#: main.cpp:156
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -664,7 +664,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Programmas versija"
 
-#: main.cpp:149
+#: main.cpp:157
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -672,7 +672,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Izmantojamā kļūdas adrese"
 
-#: main.cpp:150
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -680,13 +680,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Tulkots programmas nosaukums"
 
-#: main.cpp:151
+#: main.cpp:159
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:152
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -694,7 +694,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Programmas PID"
 
-#: main.cpp:153
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -702,31 +702,31 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Programmas palaišanas ID"
 
-#: main.cpp:154
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Programmu palaida kdeinit"
 
-#: main.cpp:155
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Aizliegt patvaļīgu piekļuvi diskam"
 
-#: main.cpp:156
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Programma jau ir pārstartēta"
 
-#: main.cpp:159
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Ļaut programmai darboties un ģenerēt atpakaļceļu, to palaižot"
 
-#: main.cpp:161
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -734,7 +734,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Kļūdainā pavediena id"
 
-#: main.cpp:162
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -745,14 +745,14 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Ielādē atpakaļceļu (automātiskā avārijas informācija)"
 
-#: qml/BacktracePage.qml:24
+#: qml/BacktracePage.qml:25
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Parādīt atpakaļceļa saturu (paplašināti)"
 
-#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -869,7 +869,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Pielāgoti programmas iestatījumi, kam varētu būt nozīme"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:207
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -888,7 +888,7 @@ msgid ""
 msgstr ""
 "Informācija, kuru varat nodrošināt, šajā gadījumā nav pietiekami noderīga."
 
-#: qml/DeveloperPage.qml:24
+#: qml/DeveloperPage.qml:25
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -896,7 +896,17 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&Informācija izstrādātājiem"
 
-#: qml/DeveloperPage.qml:30
+#: qml/DeveloperPage.qml:33
+msgctxt "@action"
+msgid "Report on bugs.kde.org"
+msgstr ""
+
+#: qml/DeveloperPage.qml:35
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Palaiž kļūdu ziņošanas palīgu."
+
+#: qml/DeveloperPage.qml:42
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -904,7 +914,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Instalēt atkļūdošanas simbolus"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -912,7 +922,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Pārlādēt"
 
-#: qml/DeveloperPage.qml:52
+#: qml/DeveloperPage.qml:64
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -930,7 +940,7 @@ msgstr ""
 "ir noderīgi, kad esat instalējis pareizas atkļūdošanas simbolu pakotnes un "
 "vēlaties saņemt labāku atpakaļceļu."
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:74
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -938,12 +948,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "K&opēt"
 
-#: qml/DeveloperPage.qml:69
+#: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:105
+#: qml/DeveloperPage.qml:117
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -970,7 +980,7 @@ msgstr ""
 "saturēt daudz noderīgas informācijas.<br />Atpakaļceļi bieži tiek izmantoti "
 "interaktīvās un post-mortema atkļūdošanas laikā.</p>"
 
-#: qml/DeveloperPage.qml:172
+#: qml/DeveloperPage.qml:184
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -997,7 +1007,7 @@ msgstr ""
 "(<link url='%2'>failu saraksts</link>) un nospiediet pogu "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:180
+#: qml/DeveloperPage.qml:192
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1017,7 +1027,7 @@ msgstr ""
 "(<link url='%2'>failu saraksts</link>) un nospiediet pogu "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:204
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1202,36 +1212,7 @@ msgstr ""
 "Lietojiet šo pogu, lai pieteiktos KDE kļūdu uzskaites sistēmā, izmantojot "
 "piedāvāto lietotājvārdu un paroli."
 
-#: qml/MainPage.qml:28
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgctxt "@action"
-msgid "Report Bug"
-msgstr "Ziņot par kļūdu"
-
-#: qml/MainPage.qml:30
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "Palaiž kļūdu ziņošanas palīgu."
-
-#: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgctxt "@action"
-msgid "Restart Application"
-msgstr "Pārstartēt programmu"
-
-#: qml/MainPage.qml:41
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
-msgctxt "@action"
-msgid "Developer Information"
-msgstr "&Informācija izstrādātājiem"
-
-#: qml/MainPage.qml:69
+#: qml/main.qml:31
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1248,14 +1229,14 @@ msgid ""
 "Please, <link url='%1'>manually report</link> this error\n"
 "to the KDE bug tracking system. Do not forget to include\n"
 "the backtrace from the <interface>Developer Information</interface>\n"
-"tab.</para>"
+"page.</para>"
 msgstr ""
 "<para>Tā kā radās kļūda pašā avāriju apstrādātājā, automātiskais ziņošanas "
 "process ir atslēgts, lai samazinātu turpmāko kļūdu risku.<nl /><nl />Lūdzu, "
 "ziņojiet par šo kļūdu pašrocīgi %1 produktam \"drkonqi\". Neaizmirstiet "
 "iekļaut atpakaļceļu no cilnes 'Informācija izstrādātājiem'.</para>"
 
-#: qml/MainPage.qml:81
+#: qml/main.qml:43
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1267,13 +1248,13 @@ msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
 "was started in safe mode.<nl />\n"
 "You can manually report this bug to <link>%1</link> (including the backtrace "
-"from the <interface>Developer Information</interface> tab.)</para>"
+"from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para>Ziņošanas palīgs ir atslēgts, jo avāriju apstrādes dialogs tika "
 "palaists drošajā režīmā.<nl />Varat pašrocīgi ziņot par šo kļūdu uz %1 "
 "(ieskaitot atpakaļceļu no cilnes 'Informācija izstrādātājiem').</para>"
 
-#: qml/MainPage.qml:88
+#: qml/main.qml:50
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1285,24 +1266,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:106
-msgctxt "@label"
-msgid "Automatically submit crash data"
-msgstr ""
-
-#: qml/MainPage.qml:129
+#: qml/MainPage.qml:50
 #, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4)</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5</para>"
-msgstr ""
-"<para>Izpildfails: <application>%1</application> PID: <numid>%2</numid> "
-"Signāls: %3 (%4)</para>"
+#| msgctxt "@title"
+#| msgid "Send Crash Report"
+msgctxt "@action"
+msgid "Send Automatic Report"
+msgstr "Sūtīt avārijas ziņojumu"
+
+#: qml/MainPage.qml:62
+#, fuzzy
+#| msgctxt "@title:tab"
+#| msgid "&Developer Information"
+msgctxt "@action"
+msgid "See Developer Information"
+msgstr "&Informācija izstrādātājiem"
 
 #: qml/PerfectDuplicatePage.qml:14
 #, fuzzy
@@ -1588,7 +1566,15 @@ msgctxt "@title"
 msgid "Crash Report Sent"
 msgstr "Avāriju ziņošanas palīgs"
 
-#: qml/SentPage.qml:18
+#: qml/SentPage.qml:19 qml/SentryPage.qml:17
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgctxt "@action %1 is an application name e.g. kwrite"
+msgid "Restart %1"
+msgstr "Pārstartēt programmu"
+
+#: qml/SentPage.qml:27
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "<link url='%1'>Report's webpage</link>"
@@ -1596,7 +1582,7 @@ msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
 msgstr "<link url='%1'>Ziņojuma tīmekļa lapa</link>"
 
-#: qml/SentPage.qml:23
+#: qml/SentPage.qml:32
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1607,6 +1593,27 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
 "Avārijas ziņojums nosūtīts.<nl/>URL: <link>%1</link><nl/>Paldies, ka esat "
 "daļa no KDE. Tagad varat aizvērt šo logu."
+
+#: qml/SentryPage.qml:47
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Crash Reporting Assistant"
+msgctxt "@label"
+msgid "Crash Report Sent"
+msgstr "Avāriju ziņošanas palīgs"
+
+#: qml/SentryPage.qml:54
+msgctxt "@label"
+msgid "Always report crashes automatically in the future"
+msgstr ""
+
+#: qml/SentryPage.qml:63
+msgctxt "@info:tooltip"
+msgid ""
+"Always automatically submit a crash report to KDE's crash tracking system. "
+"No manual input required.\n"
+"You will not receive any more crash notifications."
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 #, fuzzy
@@ -1689,43 +1696,6 @@ msgid "Every time"
 msgstr "Vienmēr"
 
 #: statusnotifier.cpp:29
-#, kde-format
-msgctxt "Placeholder is an application name; it crashed"
-msgid "%1 Closed Unexpectedly"
-msgstr ""
-
-#: statusnotifier.cpp:57
-#, kde-format
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgid "Report &Bug"
-msgstr "Ziņot par kļūdu"
-
-#: statusnotifier.cpp:70
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgid "&Restart Application"
-msgstr "Pārstartēt programmu"
-
-#: statusnotifier.cpp:81
-#, kde-format
-msgctxt "Allows the user to hide this notifier item"
-msgid "Hide"
-msgstr ""
-
-#: statusnotifier.cpp:101
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:102
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -1737,7 +1707,58 @@ msgstr ""
 "<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
 "para>"
 
-#: statusnotifier.cpp:113
+#: statusnotifier.cpp:31
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: statusnotifier.cpp:33
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr ""
+"<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
+"para>"
+
+#: statusnotifier.cpp:47
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr ""
+
+#: statusnotifier.cpp:65
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: statusnotifier.cpp:72
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report Bug"
+msgid "Report &Bug"
+msgstr "Ziņot par kļūdu"
+
+#: statusnotifier.cpp:78
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgid "&Restart Application"
+msgstr "Pārstartēt programmu"
+
+#: statusnotifier.cpp:89
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr ""
+
+#: statusnotifier.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1745,7 +1766,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Ziņot par kļūdu"
 
-#: statusnotifier.cpp:116
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1795,6 +1816,34 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Report Bug"
+#~ msgctxt "@action"
+#~ msgid "Report Bug"
+#~ msgstr "Ziņot par kļūdu"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Restart Application"
+#~ msgctxt "@action"
+#~ msgid "Restart Application"
+#~ msgstr "Pārstartēt programmu"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4)</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5</para>"
+#~ msgstr ""
+#~ "<para>Izpildfails: <application>%1</application> PID: <numid>%2</numid> "
+#~ "Signāls: %3 (%4)</para>"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
@@ -3387,10 +3436,6 @@ msgstr ""
 #~ msgctxt "@title"
 #~ msgid "Bug Report Possible Duplicates List"
 #~ msgstr "Avārijas ziņojuma iespējamo dublikātu saraksts"
-
-#~ msgctxt "@title"
-#~ msgid "Send Crash Report"
-#~ msgstr "Sūtīt avārijas ziņojumu"
 
 #~ msgctxt "@item:intable custom bug report number"
 #~ msgid "Custom"
