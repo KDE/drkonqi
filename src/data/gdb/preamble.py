@@ -15,6 +15,8 @@ import binascii
 import platform
 import multiprocessing
 from pathlib import Path
+from pygdbmi import gdbmiparser
+import psutil
 
 # Initialize sentry reports for exceptions in this script
 try:
@@ -27,13 +29,6 @@ try:
     )
 except ImportError:
     print("python sentry-sdk not installed :(")
-
-WithSentry = True
-try:
-    import psutil
-except ImportError:
-    print("python psutil module missing, disabling sentry")
-    WithSentry = False
 
 def mangle_path(path):
     if not path:
@@ -90,7 +85,6 @@ class SentryQMLThread:
 
         payload = self.payload
 
-        from pygdbmi import gdbmiparser
         result = gdbmiparser.parse_response("*stopped," + payload)
         frames = result['payload']['frame']
         print(frames)
@@ -535,18 +529,13 @@ def print_qml_frame(frame):
     print("level={level} func={func} at={file}:{line}".format(**frame) )
 
 def print_qml_frames(payload):
-    try: # try pretty printing via pygdbmi. If it is not available print verbatim.
-        from pygdbmi import gdbmiparser
-        response = gdbmiparser.parse_response("*stopped," + payload)
-        frames = response['payload']['frame']
-        if type(frames) is dict: # single frames traces aren't arrays to make it more fun -.-
-            print_qml_frame(frames)
-        else: # presumably an iterable
-            for frame in frames:
-                print_qml_frame(frame)
-    except Exception as e:
-        print("Failed to do pygdbmi parsing: {}".format(str(e)))
-        print(payload)
+    response = gdbmiparser.parse_response("*stopped," + payload)
+    frames = response['payload']['frame']
+    if type(frames) is dict: # single frames traces aren't arrays to make it more fun -.-
+        print_qml_frame(frames)
+    else: # presumably an iterable
+        for frame in frames:
+            print_qml_frame(frame)
 
 
 def print_qml_trace():
@@ -607,5 +596,4 @@ def print_preamble():
     # changes current frame and thread!
     print_qml_trace()
     # prints sentry report
-    if WithSentry:
-        print_sentry_payload(thread)
+    print_sentry_payload(thread)
