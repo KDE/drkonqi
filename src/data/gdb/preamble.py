@@ -541,7 +541,7 @@ def print_qml_frames(payload):
 def print_qml_trace():
     # should we iterate the inferiors? Probably makes no diff for 99% of apps.
     for thread in gdb.selected_inferior().threads():
-        if not thread.is_valid() :
+        if not thread.is_valid():
             continue
         thread.switch()
         if gdb.selected_thread() != thread:
