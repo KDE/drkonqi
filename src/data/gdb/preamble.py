@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
-from typing import Mapping
 import gdb
 from gdb.FrameDecorator import FrameDecorator
 
@@ -30,12 +29,6 @@ except ImportError:
     print("python sentry-sdk not installed :(")
 
 WithSentry = True
-try:
-    import distro
-except ImportError:
-    print("python distro module missing, disabling sentry")
-    WithSentry = False
-
 try:
     import psutil
 except ImportError:
@@ -409,12 +402,6 @@ class SentryEvent:
         progfile = gdb.current_progspace().filename
         build_id = gdb.lookup_objfile(progfile).build_id
 
-        # distro's keys excitingly aren't the actual os-release capitalization. #fun.
-        # distro's #build_number doesn't use this internally, so we manually need to obtain it. ugh.
-        distro_build_id = distro.os_release_attr('build_id')
-        if not distro_build_id:
-            distro_build_id = distro.os_release_attr('variant_id')
-
         base_data = json.loads(get_stdout(['drkonqi-sentry-data']))
         sentry_event = { # https://develop.sentry.dev/sdk/event-payloads/
             "debug_meta": { # https://develop.sentry.dev/sdk/event-payloads/debugmeta/
@@ -453,9 +440,9 @@ class SentryEvent:
                     'processor_count': multiprocessing.cpu_count()
                 },
                 'os': {
-                    'name': distro.name(), # unfortunately I don't think we can supply icons :( we could use linux as name but that sucks too
-                    'version': distro.version(),
-                    'build': distro_build_id,
+                    'name': base_data['OS_NAME'],
+                    'version': base_data['OS_VERSION_ID'],
+                    'build': base_data['OS_BUILD_ID'] if base_data['OS_BUILD_ID'] else base_data['OS_VARIANT_ID'],
                     'kernel_version': os.uname().release,
                     'raw_description': get_stdout(['uname', '-a'])
                 }
