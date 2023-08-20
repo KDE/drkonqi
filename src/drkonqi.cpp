@@ -157,6 +157,7 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
         dlg->setAcceptMode(QFileDialog::AcceptSave);
         dlg->setFileMode(QFileDialog::AnyFile);
         dlg->setOption(QFileDialog::DontResolveSymlinks, false);
+        dlg->setDirectory(QStandardPaths::standardLocations(QStandardPaths::HomeLocation).last());
         if (dlg->exec() != QDialog::Accepted) {
             return;
         }
