@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2023-07-15 08:19+0200\n"
+"PO-Revision-Date: 2023-08-19 09:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -795,12 +795,9 @@ msgid "Developer Information"
 msgstr "Garatzaileen informazioa"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "bugs.kde.org kontaktatzea saiatzen..."
+msgstr "Txostena «bugs.kde.org»era"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1037,16 +1034,6 @@ msgstr ""
 "eta pasahitzarekin saio-hasteko."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1062,17 +1049,9 @@ msgstr ""
 "berriz huts egiteko arriskua murrizteko.<nl /><nl />\n"
 "Mesedez, errore hau KDEren akatsen jarraipena egiteko sisteman\n"
 "<link url='%1'>eskuz aurkeztu</link>. Ez ahaztu <interface>Garatzaileen\n"
-"informazioa</interface> fitxako atzerako-aztarna eranstea.</para>"
+"informazioa</interface> orriko atzerako-aztarna eranstea.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1083,7 +1062,7 @@ msgstr ""
 "<para>Txostenak aurkezteko laguntzailea ezgaituta dago kraskadura "
 "maneiatzeko elkarrizketa-koadroa modu seguruan abiatu delako.<nl />\n"
 "Akats honi buruzko txostena, eskuz, <link>%1(e)an</link> eman dezakezu "
-"(<interface>Garatzaileen informazioa</interface> fitxako atzerako-aztarna "
+"(<interface>Garatzaileen informazioa</interface> orriko atzerako-aztarna "
 "barne).</para>"
 
 #: qml/main.qml:50
@@ -1106,20 +1085,14 @@ msgstr ""
 "albo eraginik izango ez duela ziurtatzeko.</para>"
 
 #: qml/MainPage.qml:50
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Send Crash Report"
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr "Bidali kraskadura txostena"
+msgstr "Bidali txosten automatikoa"
 
 #: qml/MainPage.qml:62
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Garatzaileen informazioa"
+msgstr "Ikusi Garatzaileen informazioa"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1345,12 +1318,9 @@ msgid "Crash Report Sent"
 msgstr "Kraskadura-txostena bidali da"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Berrabiarazi aplikazioa"
+msgstr "Berrabiarazi %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1363,9 +1333,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Eskerrik asko KDEren zati izateagatik. Orain leiho hau itxi dezakezu."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Kraskadura-txostena bidali da"
@@ -1373,7 +1340,7 @@ msgstr "Kraskadura-txostena bidali da"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Etorkizunean beti bidali kraskadura txostenak automatikoki"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1382,6 +1349,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Bidali beti kraskadura txosten bat KDEren kraskaduren jarraipen sistemara "
+"automatikoki. Eskuz ezer sartu beharrik izan gabe.\n"
+"Ez duzu kraskadura jakinarazpen gehiago jasoko."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1463,14 +1433,12 @@ msgid "Please report this error to help improve this software."
 msgstr "Mesedez, jakinarazi errore hau software hau hobetzen laguntzeko."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Aplikazioa ustekabean itxi da."
+msgstr "Aplikazioa ustekabean itxi da. Txosten bat automatikoki bidali da."
 
 #: statusnotifier.cpp:47
 #, kde-format

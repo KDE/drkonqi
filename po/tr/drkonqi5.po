@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2023-07-13 13:02+0300\n"
+"PO-Revision-Date: 2023-08-19 13:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 23.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -463,7 +463,7 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
-"<para>Çökme İşleyici'nin kendisi hata verdiğinden, yeniden hata vermesinin "
+"<para>Çökme İşleyicisi'nin kendisi hata verdiğinden, yeniden hata vermesinin "
 "riskini azaltmak için otomatik raporlama işlemi devre dışı bırakıldı. <nl /"
 "><nl />Lütfen bu hatayı KDE hata izleme sistemine <link url='%1'>el ile "
 "rapor edin</link>. <interface>Geliştirici Bilgileri</interface> sekmesindeki "
@@ -478,7 +478,7 @@ msgid ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 msgstr ""
-"<para>Çökme İşleyici iletişim kutusu güvenli kipte başlatıldığı için "
+"<para>Çökme İşleyicisi iletişim kutusu güvenli kipte başlatıldığı için "
 "raporlama yardımcısı etkin değil.<nl />Bu hatayı kendiniz %1 adresine "
 "(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
 "birlikte) bildirebilirsiniz.</para>"
@@ -568,13 +568,14 @@ msgstr "%1 içinde hata ayıkla"
 #: main.cpp:137
 #, kde-format
 msgid "Crash Handler"
-msgstr "Çökme İşleyici"
+msgstr "Çökme İşleyicisi"
 
 #: main.cpp:139
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"Çökme İşleyici, bir uygulama çöktüğünde kullanıcının geri bildirimini iletir."
+"Çökme İşleyicisi, bir uygulama çöktüğünde kullanıcının geri bildirimini "
+"iletir."
 
 #: main.cpp:142
 #, kde-format
@@ -796,12 +797,9 @@ msgid "Developer Information"
 msgstr "Geliştirici Bilgisi"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "bugs.kde.org ile iletişim kurulmaya çalışılıyor..."
+msgstr "bugs.kde.org Adresinde Bildir"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1034,16 +1032,6 @@ msgstr ""
 "için bu düğmeyi kullanın."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1054,23 +1042,15 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "page.</para>"
 msgstr ""
-"<para>Çökme İşleyici'nin kendisi hata verdiğinden,\n"
-"yeniden hata vermesinin riskini azaltmak için otomatik\n"
-"raporlama işlemi devre dışı bırakıldı.<nl /><nl />\n"
+"<para>Çökme İşleyicisi'nin kendisi hata verdiğinden,\n"
+"yeniden hata vermesi riskini azaltmak için otomatik raporlama\n"
+"işlemi devre dışı bırakıldı.<nl /><nl />\n"
 "Lütfen bu hatayı KDE hata izleme sistemine\n"
-"<link url='%1'>el ile raporlayın</link>. <interface>Geliştirici Bilgileri</"
+"<link url='%1'>elle raporlayın</link>. <interface>Geliştirici Bilgisi</"
 "interface>\n"
-" sekmesindeki geri izi eklemeyi unutmayın.</para>"
+"sekmesindeki geri izi eklemeyi unutmayın.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1078,9 +1058,9 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
-"<para>Çökme İşleyici iletişim kutusu güvenli kipte başlatıldığı için "
+"<para>Çökme İşleyicisi iletişim kutusu güvenli kipte başlatıldığı için "
 "raporlama yardımcısı etkin değil.<nl />\n"
-"Bu hatayı kendiniz %1 adresine (<interface>Geliştirici Bilgileri</interface> "
+"Bu hatayı kendiniz %1 adresine (<interface>Geliştirici Bilgisi</interface> "
 "sekmesindeki geri iz ile birlikte) bildirebilirsiniz.</para>"
 
 #: qml/main.qml:50
@@ -1106,15 +1086,12 @@ msgstr ""
 #: qml/MainPage.qml:50
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Otomatik Rapor Gönder"
 
 #: qml/MainPage.qml:62
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Geliştirici Bilgisi"
+msgstr "Geliştirici Bilgisini Gör"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1339,12 +1316,9 @@ msgid "Crash Report Sent"
 msgstr "Çökme Raporu Gönderildi"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Uygulamayı Yeniden Başlat"
+msgstr "Yeniden Başlat: %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1359,9 +1333,6 @@ msgstr ""
 "kapatabilirsiniz."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Çökme Raporu Gönderildi"
@@ -1369,7 +1340,7 @@ msgstr "Çökme Raporu Gönderildi"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Gelecekte çökmeleri her zaman kendiliğinden bildir"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1378,6 +1349,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Çökme raporlarını KDE'nin çökme izleme sistemine her zaman kendiliğinden "
+"gönderin. Elle girdi gerekmez.\n"
+"Herhangi bir çökme bildirimi almazsınız."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1458,14 +1432,14 @@ msgid "Please report this error to help improve this software."
 msgstr "Bu yazılımı iyileştirmeye yardım etmek için bu hatayı bildirin."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Uygulama beklenmedik biir biçimde kapandı."
+msgstr ""
+"Uygulama beklenmedik biir biçimde kapandı. Bir çökme raporu kendiliğinden "
+"gönderilecek."
 
 #: statusnotifier.cpp:47
 #, kde-format
