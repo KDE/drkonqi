@@ -39,10 +39,15 @@ Kirigami.Page {
             Layout.fillHeight: true
         }
 
-        RowLayout {
+        GridLayout {
             Layout.alignment: Qt.AlignHCenter
 
+            columns: Kirigami.Settings.isMobile ? 1 : 2
+            rows: Kirigami.Settings.isMobile ? 2 : 1
+
             MainPageButton {
+                Layout.alignment: Qt.AlignHCenter
+
                 action: Kirigami.Action {
                     enabled: Kirigami.Settings.isMobile ? true : canAutoReport
                     visible: Kirigami.Settings.isMobile ? canAutoReport : true
@@ -57,6 +62,8 @@ Kirigami.Page {
             }
 
             MainPageButton {
+                Layout.alignment: Qt.AlignHCenter
+
                 action: Kirigami.Action {
                     icon.name: "code-class-symbolic"
                     text: i18nc("@action", "See Developer Information")
