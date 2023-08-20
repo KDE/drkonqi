@@ -25,6 +25,7 @@ public:
     static Q_INVOKABLE void copyToClipboard(const QString &text);
     static Q_INVOKABLE QString appName();
     static Q_INVOKABLE QString kdeBugzillaURL();
+    static Q_INVOKABLE QString kdeBugzillaDomain();
     static Q_INVOKABLE bool isSafer();
     static Q_INVOKABLE bool ignoreQuality();
 

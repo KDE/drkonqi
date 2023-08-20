@@ -5,6 +5,7 @@
 
 #include <QClipboard>
 #include <QGuiApplication>
+#include <QUrl>
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
@@ -27,6 +28,12 @@ QString Doctore::appName()
 QString Doctore::kdeBugzillaURL()
 {
     return DrKonqi::kdeBugzillaURL();
+}
+
+QString Doctore::kdeBugzillaDomain()
+{
+    QUrl bugzillaUrl(DrKonqi::kdeBugzillaURL());
+    return bugzillaUrl.host();
 }
 
 bool Doctore::isSafer()

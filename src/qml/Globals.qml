@@ -10,7 +10,7 @@ QtObject {
     readonly property string bugzillaUrl: DrKonqi.kdeBugzillaURL()
     readonly property string bugzillaCreateAccountUrl: bugzillaUrl + "createaccount.cgi"
     readonly property string ownBugzillaUrl: bugzillaUrl + "enter_bug.cgi?product=drkonqi&format=guided"
-    readonly property string bugzillaShortUrl: "bugs.kde.org"
+    readonly property string bugzillaShortUrl: DrKonqi.kdeBugzillaDomain()
     readonly property string techbaseHowtoDoc: "https://community.kde.org/Guidelines_and_HOWTOs/Debugging/How_to_create_useful_crash_reports#Preparing_your_KDE_packages"
     readonly property string aboutBugReportingUrl: "https://community.kde.org/Get_Involved/Issue_Reporting"
 

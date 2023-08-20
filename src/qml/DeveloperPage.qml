@@ -30,7 +30,7 @@ Kirigami.ScrollablePage {
             enabled: Kirigami.Settings.isMobile ? true : canReport
             visible: Kirigami.Settings.isMobile ? canReport : true
             icon.name: "story-editor-symbolic"
-            text: i18nc("@action", "Report on bugs.kde.org")
+            text: i18nc("@action Report the bug on this domain", "Report on %1", Globals.bugzillaShortUrl)
             // TODO: could give context on why the button is disabled when canReport is false
             tooltip: i18nc("@info:tooltip", "Starts the bug report assistant.")
             onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
