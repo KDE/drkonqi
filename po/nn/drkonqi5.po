@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2023-07-29 12:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -405,12 +405,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Klarte ikkje laga ei fil for lagring av rapporten."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Report to File"
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Vel filnamn"
+msgid "Save Report"
+msgstr "Lagra rapporten til fil"
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1535,23 +1537,6 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-passord"
 
-#~ msgctxt "@action"
-#~ msgid "Report Bug"
-#~ msgstr "Meld frå om feil"
-
-#~ msgctxt "@action"
-#~ msgid "Restart Application"
-#~ msgstr "Start programmet på nytt"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "Send automatisk inn krasjdata"
-
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5</para>"
-#~ msgstr ""
-#~ "<para>Programfil: <application>%1</application> Program-ID: %2 Signal: %3 "
-#~ "(%4) Tidspunkt: %5</para>"
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Vel filnamn"

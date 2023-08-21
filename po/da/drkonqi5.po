@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -411,12 +411,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Kunne ikke oprette en fil til at gemme rapporten i."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Save to File..."
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Vælg filnavn"
+msgid "Save Report"
+msgstr "&Gem til fil..."
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1776,6 +1778,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Vælg filnavn"
 
 #, fuzzy
 #~| msgctxt "Notification action button, keep short"

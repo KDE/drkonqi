@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2009-12-10 21:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -443,12 +443,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Ni mòże ùsôdzëc lopka do zôpisu rapòrtu."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Save to File..."
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Wëbierzë miono lopka"
+msgid "Save Report"
+msgstr "&Zapiszë do lopka..."
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1743,6 +1745,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Wëbierzë miono lopka"
 
 #, fuzzy
 #~| msgctxt "@action:button"

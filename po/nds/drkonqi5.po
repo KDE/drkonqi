@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2014-09-18 15:23+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -408,12 +408,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Datei, binnen de de Bericht sekert warrt, lett sik nich opstellen."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Save to File..."
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Dateinaam utsöken"
+msgid "Save Report"
+msgstr "As Datei &sekern..."
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1780,6 +1782,10 @@ msgstr "bugstest.kde.org brukernaam"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org Passwoort"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Dateinaam utsöken"
 
 #, fuzzy
 #~| msgctxt "@action:button"

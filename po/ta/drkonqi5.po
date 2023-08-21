@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
-"PO-Revision-Date: 2023-07-16 12:56+0530\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
+"PO-Revision-Date: 2023-08-20 16:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -136,6 +136,9 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
+"முறிவடைந்த செயலியுடன் இன்னொரு பிழைநீக்கி இணைந்துள்ளதால் DrKonqiயால் முறிவுவிவரங்களைப் "
+"பெற முடியாது. அந்த பிழைநீக்கியை மூடியபின் <interface>புதுப்பி</interface> பட்டனை "
+"அழுத்தவும்."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -213,6 +216,8 @@ msgid ""
 "You could try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
+"<interface>புதுப்பி</interface> பட்டனை அழுத்தி முறிவு விவரங்களை மறுபடியும் "
+"சேகரிக்க முயற்சிக்கலாம்."
 
 #: backtracewidget.cpp:316
 #, kde-format
@@ -220,7 +225,7 @@ msgctxt "@info:status"
 msgid ""
 "<strong>The debugger application is missing or could not be launched.</"
 "strong>"
-msgstr ""
+msgstr "<strong>பிழைநீக்க நிரல் கிடைக்கவில்லை அல்லது அதைத் துவக்க முடியவில்லை.</strong>"
 
 #: backtracewidget.cpp:322
 #, kde-kuit-format
@@ -229,6 +234,8 @@ msgid ""
 "<strong>You need to first install the debugger application (%1) then click "
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
+"<strong>பிழைநீக்கியை (%1) நிறுவியபின் <interface>புதுப்பி</interface> பட்டனை "
+"அழுத்தவும்.</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
 #, kde-format
@@ -375,12 +382,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "அறிக்கையை சேமிப்பதற்கான கோப்பை உருவாக்க முடியவில்லை."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Report to File"
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "கோப்புப்பெயரைத் தெரிவுசெய்வது"
+msgid "Save Report"
+msgstr "அறிக்கையை கோப்புக்கு சேமி"
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -555,46 +564,40 @@ msgid "A. L. Spehr"
 msgstr ""
 
 #: main.cpp:153
-#, fuzzy, kde-format
-#| msgid "The signal number that was caught"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
-msgstr "நாங்கள் பெற்ற சைகையின் எண். "
+msgstr "நாங்கள் பெற்ற சைகையின் எண் (<number>)"
 
 #: main.cpp:154
-#, fuzzy, kde-format
-#| msgid "Name of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
-msgstr "நிரலின் பெயர். "
+msgstr "நிரலின் பெயர் (<Name>)"
 
 #: main.cpp:155
-#, fuzzy, kde-format
-#| msgid "Path to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
-msgstr "செயலின் பாதை "
+msgstr "செயலிக்கான பாதை (<Path>)"
 
 #: main.cpp:156
-#, fuzzy, kde-format
-#| msgid "The version of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
-msgstr "நிரலின் வெளியீடு"
+msgstr "நிரலின் பதிப்பு (<version>)"
 
 #: main.cpp:157
-#, fuzzy, kde-format
-#| msgid "The bug address to use"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
-msgstr "புழங்க வேண்டிய பிழை முகவரி. "
+msgstr "பிழைதெரிவிப்பு முகவரி (<address>)"
 
 #: main.cpp:158
-#, fuzzy, kde-format
-#| msgid "Translated name of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
-msgstr "மொழிபெயர்க்கபட்ட நிரலின் பெயர். "
+msgstr "மொழிபெயர்க்கபட்டுள்ள நிரலின் பெயர் (<name>)"
 
 #: main.cpp:159
 #, kde-format
@@ -603,25 +606,22 @@ msgid "Bugzilla product name"
 msgstr ""
 
 #: main.cpp:160
-#, fuzzy, kde-format
-#| msgid "The PID of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
-msgstr "நிரலின் செயலெண் (PID)"
+msgstr "நிரலின் செயலெண் (<PID>)"
 
 #: main.cpp:161
-#, fuzzy, kde-format
-#| msgid "Startup ID of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
-msgstr "நிரலின் துவக்க எண்"
+msgstr "நிரலின் துவக்க எண் (<ID>)"
 
 #: main.cpp:162
-#, fuzzy, kde-format
-#| msgid "The program was started by kdeinit"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
-msgstr "இந்நிரல் kdeinit ஆல் ஆரம்பிக்கப்பட்டது"
+msgstr "இந்நிரல் kdeinit ஆல் துவக்கப்பட்டது"
 
 #: main.cpp:163
 #, fuzzy, kde-format
@@ -631,11 +631,10 @@ msgid "Disable arbitrary disk access"
 msgstr "துவக்க வட்டு இயக்கத்தை செயல் நீக்கு"
 
 #: main.cpp:164
-#, fuzzy, kde-format
-#| msgid "The program was started by kdeinit"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
-msgstr "இந்நிரல் kdeinit ஆல் ஆரம்பிக்கப்பட்டது"
+msgstr "இந்நிரல் ஏற்கனவே மீள்துவக்கப்பட்டுள்ளது"
 
 #: main.cpp:167
 #, kde-format
@@ -754,17 +753,14 @@ msgid "Developer Information"
 msgstr "நிரலாளர்களுக்கான விவரங்கள்"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "bugs.kde.org தனை தொடர்புகொள்ள முயற்சிக்கிறது..."
+msgstr "bugs.kde.org இணையதளத்தில் தெரிவி"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
-msgstr ""
+msgstr "பிழையறிக்கை உதவிநிரலைத் துவக்கும்."
 
 #: qml/DeveloperPage.qml:42
 msgctxt "@action:button"
@@ -959,6 +955,8 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
+"கொடுக்கப்பட்டுள்ள மின்னஞ்சல் முகவரி மற்றும் கடவுச்சொல்லைக் கொண்டு கே.டீ.யீ. பிழையறிக்கை "
+"சேவையில் நுழைய இப்பட்டனை அழுத்தவும்."
 
 #: qml/main.qml:31
 msgctxt "@info"
@@ -996,15 +994,12 @@ msgstr ""
 #: qml/MainPage.qml:50
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "தானியக்க பிழையறிக்கையை அனுப்பு"
 
 #: qml/MainPage.qml:62
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "நிரலாளர்களுக்கான விவரங்கள்"
+msgstr "நிரலாளர்களுக்கான விவரங்களைக் காட்டு"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1401,6 +1396,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "கோப்புப்பெயரைத் தெரிவுசெய்வது"
 
 #~ msgctxt "@action"
 #~ msgid "Report Bug"

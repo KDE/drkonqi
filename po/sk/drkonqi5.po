@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2023-07-04 21:05+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -407,12 +407,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Nepodarilo sa vytvoriť súbor, do ktorého sa má uložiť hlásenie."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Report to File"
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Vyberte názov súboru"
+msgid "Save Report"
+msgstr "Uložiť hlásenie do súboru"
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1535,6 +1537,10 @@ msgstr "používateľské meno pre bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "heslo pre bugstest.kde.org"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Vyberte názov súboru"
 
 #~ msgctxt "@action"
 #~ msgid "Report Bug"

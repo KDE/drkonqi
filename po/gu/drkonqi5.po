@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2010-06-24 17:17+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -382,12 +382,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "બેકસ્ટ્રેસ સંગ્રહ કરવા માટે ફાઇલ બનાવી શકાતી નથી"
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Save to File..."
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "ફાઇલનામ પસંદ કરો"
+msgid "Save Report"
+msgstr "ફાઇલમાં સંગ્રહ કરો (&S)..."
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, fuzzy, kde-kuit-format
 #| msgid "Cannot open file <filename>%1</filename> for writing."
 msgctxt "@info"
@@ -1478,6 +1480,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "ફાઇલનામ પસંદ કરો"
 
 #, fuzzy
 #~| msgctxt "@action:button"

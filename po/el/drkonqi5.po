@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2021-09-02 09:33+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -435,12 +435,14 @@ msgstr ""
 "Δεν είναι δυνατή η δημιουργία ενός αρχείου για την αποθήκευση της αναφοράς."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Save to File..."
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Επιλογή ονόματος αρχείου"
+msgid "Save Report"
+msgstr "Αποθήκευ&ση σε αρχείο..."
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1829,6 +1831,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Επιλογή ονόματος αρχείου"
 
 #, fuzzy
 #~| msgctxt "Notification action button, keep short"

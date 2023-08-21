@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2023-04-01 17:47+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -398,12 +398,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Could not create a file in which to save the report."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Report to File"
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Select Filename"
+msgid "Save Report"
+msgstr "Save Report to File"
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1531,6 +1533,10 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Select Filename"
 
 #~ msgctxt "@action"
 #~ msgid "Report Bug"

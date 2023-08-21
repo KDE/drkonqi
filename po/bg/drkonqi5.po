@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1658532 2023-08-19 02:10:30Z scripty $
+# $Id: drkonqi5.po 1658661 2023-08-21 02:12:25Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:57+0000\n"
+"POT-Creation-Date: 2023-08-21 01:59+0000\n"
 "PO-Revision-Date: 2023-07-27 14:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -412,12 +412,14 @@ msgid "Could not create a file in which to save the report."
 msgstr "Грешка при създаване на файл с доклада."
 
 #: drkonqi.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Save Report to File"
 msgctxt "@title:window"
-msgid "Select Filename"
-msgstr "Избор на име на файл"
+msgid "Save Report"
+msgstr "Запис на доклада във файл"
 
-#: drkonqi.cpp:184
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -1564,6 +1566,10 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Filename"
+#~ msgstr "Избор на име на файл"
 
 #~ msgctxt "@action"
 #~ msgid "Report Bug"
