@@ -7,7 +7,6 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(Qt6Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)
 
-include(FindPythonModule)
 find_pythonmodule(chai)
 set_package_properties("chai-PythonModule" PROPERTIES
     DESCRIPTION "Python module chai is required for testing."

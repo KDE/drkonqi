@@ -28,6 +28,7 @@ include(ECMDeprecationSettings)
 include(ECMFindQmlModule)
 include(ECMSourceVersionControl)
 include(CMakeDependentOption)
+include(FindPythonModule)
 
 option(WITH_GDB12 "The gdb version available is at least GDB 12 (this enables dynamic debug symbol resolution even when no DEBUG_PACKAGE_INSTALLER_NAME is available)" FALSE)
 
@@ -64,6 +65,10 @@ ecm_find_qmlmodule(org.kde.kirigami 2.19)
 ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
 ecm_find_qmlmodule(org.kde.kcmutils 1.0)
 ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
+
+find_pythonmodule(psutil)
+find_pythonmodule(pygdbmi)
+find_pythonmodule(sentry_sdk)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
