@@ -115,26 +115,20 @@ void StatusNotifier::notify(Activation activation)
                                                        QStringLiteral("tools-report-bug"),
                                                        KNotification::DefaultEvent | KNotification::SkipGrouping);
 
-    QStringList actions;
     if (activationAllowed) {
-        actions << i18nc("Notification action button, keep short", "Report Bug");
+        auto action = notification->addAction(i18nc("Notification action button, keep short", "Report Bug"));
+        connect(action, &KNotificationAction::activated, this, [this]() {
+            Q_EMIT activated();
+        });
     }
     if (canBeRestarted(crashedApp)) {
-        actions << i18nc("Notification action button, keep short", "Restart App");
+        auto action = notification->addAction(i18nc("Notification action button, keep short", "Restart App"));
+        connect(action, &KNotificationAction::activated, this, [crashedApp]() {
+            if (canBeRestarted(crashedApp)) {
+                crashedApp->restart();
+            }
+        });
     }
-
-    notification->setActions(actions);
-
-    connect(notification,
-            static_cast<void (KNotification::*)(unsigned int)>(&KNotification::activated),
-            this,
-            [this, crashedApp, activationAllowed](int actionIndex) {
-                if (actionIndex == 1 && activationAllowed) {
-                    Q_EMIT activated();
-                } else if (canBeRestarted(crashedApp)) {
-                    crashedApp->restart();
-                }
-            });
 
     // when the SNI disappears you won't be able to interact with the notification anymore anyway, so close it
     if (activationAllowed) {

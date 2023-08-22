@@ -44,11 +44,11 @@ bool NotifyTruck::handle(const Coredump &dump)
     } else {
         notification->setTitle(QStringLiteral("He's dead, Jim"));
         notification->setText(QStringLiteral("%1 [%2]").arg(dump.exe, QString::number(dump.pid)));
-        notification->setActions({QStringLiteral("gdb")});
+        auto gdbAction = notification->addAction(QStringLiteral("gdb"));
 
         const auto pid = dump.pid;
 
-        QObject::connect(notification, &KNotification::activated, notification, [pid, this, notification]() {
+        connect(gdbAction, &KNotificationAction::activated, notification, [pid, this, notification]() {
             notification->disconnect(this);
             auto job = new KTerminalLauncherJob(QStringLiteral("coredumpctl gdb %1").arg(QString::number(pid)), this);
             job->setProcessEnvironment(QProcessEnvironment::systemEnvironment());
