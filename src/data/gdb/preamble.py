@@ -1,6 +1,19 @@
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
+# Initialize sentry reports for exceptions in this script
+# NOTE: this happens before other imports so we get reports when we have systems with missing deps
+try:
+    import sentry_sdk
+    sentry_sdk.init(
+        dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
+        traces_sample_rate=1.0,
+        release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
+        ignore_errors=[KeyboardInterrupt],
+    )
+except ImportError:
+    print("python sentry-sdk not installed :(")
+
 import gdb
 from gdb.FrameDecorator import FrameDecorator
 
@@ -17,18 +30,6 @@ import multiprocessing
 from pathlib import Path
 from pygdbmi import gdbmiparser
 import psutil
-
-# Initialize sentry reports for exceptions in this script
-try:
-    import sentry_sdk
-    sentry_sdk.init(
-        dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
-        traces_sample_rate=1.0,
-        release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
-        ignore_errors=[KeyboardInterrupt],
-    )
-except ImportError:
-    print("python sentry-sdk not installed :(")
 
 def mangle_path(path):
     if not path:
