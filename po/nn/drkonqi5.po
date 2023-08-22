@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-21 01:59+0000\n"
-"PO-Revision-Date: 2023-07-29 12:28+0200\n"
+"POT-Creation-Date: 2023-08-22 01:59+0000\n"
+"PO-Revision-Date: 2023-08-21 19:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -791,12 +791,9 @@ msgid "Developer Information"
 msgstr "Utviklarinformasjon"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Prøver å kontakta bugs.kde.org …"
+msgstr "Meld inn på bugs.kde.org"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1025,16 +1022,6 @@ msgstr ""
 "postadressa og passordet du har oppgjeve."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1048,18 +1035,10 @@ msgstr ""
 "<para>Krasjhandsamaren feila, og den automatiske rapporterings­prosessen\n"
 "vart slått av for å hindra fleire feil.<nl /><nl />Du bør <link "
 "url='%1'>melda manuelt inn denne feilen</link> i feilrapport­systemet til "
-"KDE. Hugs å leggja ved tilbakeloggen frå fana "
-"<interface>Utviklarinformasjon</interface>.</para>"
+"KDE. Hugs å leggja ved tilbakeloggen frå <interface>Utviklarinformasjon</"
+"interface>-sida.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1070,7 +1049,7 @@ msgstr ""
 "<para>Feilrapportvegvisaren er ikkje tilgjengeleg, sidan krasjhandsamaren "
 "vart starta i sikkermodus.<nl />\n"
 "Du kan melda manuelt inn denne feilen på <link>%1</link>. Hugs å leggja ved "
-"tilbakeloggen frå fana <interface>Utviklarinformasjon</interface>.</para>"
+"tilbakeloggen frå <interface>Utviklarinformasjon</interface>-sida.</para>"
 
 #: qml/main.qml:50
 msgctxt "@info"
@@ -1092,18 +1071,15 @@ msgstr ""
 "for å sikra at oppdateringa er teken i bruk og ikkje vil føra til problem.</"
 "para>"
 
-#: qml/MainPage.qml:50
+#: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Send automatisk feilrapport"
 
-#: qml/MainPage.qml:62
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
+#: qml/MainPage.qml:69
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Utviklarinformasjon"
+msgstr "Sjå utviklarinformasjon"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1329,12 +1305,9 @@ msgid "Crash Report Sent"
 msgstr "Krasjrapporten er no send inn"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Start programmet på nytt"
+msgstr "Start %1 på nytt"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1347,9 +1320,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Takk for at du bidreg til KDE. No kan du lukka dette vindauget."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Krasjrapporten er no send inn"
@@ -1357,7 +1327,7 @@ msgstr "Krasjrapporten er no send inn"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Send i framtida alltid automatiske feilrapportar"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1366,6 +1336,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Meld alltid automatisk inn feilrapportar til feilrapport­systemet til KDE. "
+"Dette krev inga manuell inntasting av informasjon.\n"
+"Du vert ikkje lenger varsla om krasjar."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1447,14 +1420,13 @@ msgid "Please report this error to help improve this software."
 msgstr "Hjelp oss å forbetra programvara ved å melda inn ein feilrapport."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Programmet vart uventa lukka."
+msgstr ""
+"Programmet vart uventa lukka. Ein feilrapport vert automatisk send inn."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1536,7 +1508,3 @@ msgstr "bugstest.kde.org-brukarnamn"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-passord"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Filename"
-#~ msgstr "Vel filnamn"
