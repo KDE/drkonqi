@@ -78,17 +78,17 @@ Backends=KCrash|coredumpd|coredumpd-248+
 [KCrash]
 Exec=gdb -nw -n -batch -x %preamblefile -x %tempfile -p %pid %execpath
 ExecWithSymbolResolution=gdb -nw -n -batch --init-eval-command='set debuginfod enabled on' -x %preamblefile -x %tempfile -p %pid %execpath
-PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
+PreambleCommands=set width 200\nsource %drkonqi_datadir/python/gdb_preamble/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
 
 [coredumpd]
 Exec=gdb --nw --nx --batch --command=%preamblefile --command=%tempfile --core=%corefile %execpath
 ExecWithSymbolResolution=gdb --nw --nx --batch --init-eval-command='set debuginfod enabled on' --command=%preamblefile --command=%tempfile --core=%corefile %execpath
-PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
+PreambleCommands=set width 200\nsource %drkonqi_datadir/python/gdb_preamble/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
 
 [coredumpd-248+]
 Exec=coredumpctl debug --debugger=gdb --debugger-arguments="--nw --nx --batch --command=%preamblefile --command=%tempfile %execpath" %pid
 ExecWithSymbolResolution=coredumpctl debug --debugger=gdb --debugger-arguments="--nw --nx --batch --init-eval-command='set debuginfod enabled on' --command=%preamblefile --command=%tempfile %execpath" %pid
-PreambleCommands=set width 200\nsource %drkonqi_datadir/preamble.py\npy print_preamble()
+PreambleCommands=set width 200\nsource %drkonqi_datadir/python/gdb_preamble/preamble.py\npy print_preamble()
 BatchCommands=thread\nthread apply all bt
