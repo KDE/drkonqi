@@ -31,6 +31,7 @@ include(CMakeDependentOption)
 include(FindPythonModule)
 
 option(WITH_GDB12 "The gdb version available is at least GDB 12 (this enables dynamic debug symbol resolution even when no DEBUG_PACKAGE_INSTALLER_NAME is available)" FALSE)
+option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 
 kde_enable_exceptions()
 

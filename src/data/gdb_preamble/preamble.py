@@ -2,6 +2,9 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
 import os
+import sys
+
+sys.path.append(f'{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}/')
 
 # Initialize sentry reports for exceptions in this script
 # NOTE: this happens before other imports so we get reports when we have systems with missing deps
@@ -21,7 +24,6 @@ from gdb.FrameDecorator import FrameDecorator
 
 from datetime import datetime
 import uuid
-import os
 import json
 import subprocess
 import signal
