@@ -119,6 +119,10 @@ int main(int argc, char **argv)
             if (written > 0) {
                 data = data.mid(written);
                 s.waitForBytesWritten();
+            } else if (s.state() != QLocalSocket::ConnectedState) {
+                qWarning() << "socket state unexpectedly" << s.state() << "aborting crash processing";
+                qApp->quit();
+                return;
             }
         }
         s.flush();
