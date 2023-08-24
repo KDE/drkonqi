@@ -13,20 +13,21 @@
 # Rubens de Souza Matos Júnior <rubens.matos@gmail.com>, 2010.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2019.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
+# Geraldo Simiao <geraldosimiao@fedoraproject.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 01:59+0000\n"
-"PO-Revision-Date: 2023-07-25 10:05-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2023-08-23 11:11-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -420,12 +421,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Não foi possível criar um arquivo onde salvar o relatório."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Salvar para arquivo"
+msgstr "Salvar relatório"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -815,12 +814,9 @@ msgid "Developer Information"
 msgstr "Informações do desenvolvedor"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Tentando contato com bugs.kde.org..."
+msgstr "Reportar erros no bugs.kde.org"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1055,16 +1051,6 @@ msgstr ""
 "fornecendo o endereço de e-mail e senha."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1080,18 +1066,10 @@ msgstr ""
 " para reduzir os riscos de repetição da falha.\n"
 "<nl /><nl /><link url='%1'>comunique manualmente\n"
 "</link> este erro no sistema de registro de erros do KDE.\n"
-"Não esqueça de incluir o \"backtrace\" da aba <interface>\n"
+"Não esqueça de incluir o \"backtrace\" da página <interface>\n"
 " Informações dos desenvolvedores</interface>.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1102,7 +1080,7 @@ msgstr ""
 "<para>O assistente de relatórios está desabilitado porque o diálogo da "
 "rotina de gestão de erros foi iniciada no modo de segurança.<nl />\n"
 "Você pode relatar manualmente este erro a <link> %1<link> (incluindo o "
-"\"backtrace\" da aba <interface>Informações dos desenvolvedores</"
+"\"backtrace\" da página <interface>Informações dos desenvolvedores</"
 "interface>.)</para>"
 
 #: qml/main.qml:50
@@ -1128,15 +1106,12 @@ msgstr ""
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Enviar relatório automático"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Informações do desenvolvedor"
+msgstr "Ver informações do desenvolvedor"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1361,12 +1336,9 @@ msgid "Crash Report Sent"
 msgstr "Relatório de falha enviado"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Reiniciar aplicativo"
+msgstr "Reiniciar %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1379,9 +1351,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Obrigado por fazer parte do KDE. Você pode fechar esta janela agora."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Relatório de falha enviado"
@@ -1389,7 +1358,7 @@ msgstr "Relatório de falha enviado"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Sempre reportar falhas automaticamente no futuro"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1398,6 +1367,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Sempre envie automaticamente um relatório de falhas para o sistema de "
+"rastreamento de falhas do KDE. Nenhuma entrada manual necessária.\n"
+"Você não receberá mais notificações de falhas."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1478,14 +1450,14 @@ msgid "Please report this error to help improve this software."
 msgstr "Comunique este erro para ajudar a melhorar este aplicativo."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "O aplicativo fechou de forma inesperada."
+msgstr ""
+"O aplicativo fechou de forma inesperada. Um relatório de erros está sendo "
+"enviado automaticamente."
 
 #: statusnotifier.cpp:47
 #, kde-format
