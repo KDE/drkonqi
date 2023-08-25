@@ -174,7 +174,7 @@ class SentryFrame:
         return {
             'filename': mangle_path(self.filename()),
             'function': self.function(),
-            'package': self.package(),
+            'package': mangle_path(self.package()),
             'instruction_addr': self.address(),
             'lineno': self.lineNumber(),
             'vars': SentryVariables(self.frame).to_dict()

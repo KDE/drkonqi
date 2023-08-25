@@ -77,7 +77,7 @@ class PreambleTest(Chai):
                            'function': 'main',
                            'instruction_addr': '0x1',
                            'lineno': 1, # NOTE: sentry starts at 1, gdb at 0
-                           'package': '/home/me/foo.so',
+                           'package': '$HOME/foo.so',
                            'vars': {'i': '123'}}, sentry_frame.to_dict())
 
     def test_sentry_registers(self):
@@ -108,7 +108,7 @@ class PreambleTest(Chai):
                                                         'function': 'main',
                                                         'instruction_addr': '0x1',
                                                         'lineno': 1, # NOTE: sentry starts at 1, gdb at 0
-                                                        'package': '/home/me/foo.so',
+                                                        'package': '$HOME/foo.so',
                                                         'vars': {'i': '123'}}],
                                             'registers': {'rax': '0x2'}}}, thread.to_dict())
 
