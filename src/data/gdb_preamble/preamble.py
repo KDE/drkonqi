@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
+import os
+
 # Initialize sentry reports for exceptions in this script
 # NOTE: this happens before other imports so we get reports when we have systems with missing deps
 try:
@@ -146,8 +148,6 @@ class SentryFrame:
         return self.sal.symtab.fullname() if (self.sal and self.sal.symtab) else None
 
     def lineNumber(self):
-        if not self.sal.line:
-            return None
         if self.sal.line < 0:
             return None
         # NOTE "The line number of the call, starting at 1." - I'm almost sure gdb starts at 0, so add 1
@@ -516,7 +516,7 @@ def qml_trace_frame(frame):
         ]
         for method in methods:
             try: # throws when the function is invalid
-                result = str(gdb.parse_and_eval(method.format(addr)))
+                result = str(gdb.parse_and_eval(method.format(addr))).strip()
             except:
                 continue
             if result:

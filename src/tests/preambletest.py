@@ -72,7 +72,7 @@ class PreambleTest(Chai):
         self.assert_equal({'filename': '$HOME/foo.so',
                            'function': 'main',
                            'instruction_addr': '0x1',
-                           'lineno': 1,
+                           'lineno': 1, # NOTE: sentry starts at 1, gdb at 0
                            'package': '/home/me/foo.so',
                            'vars': {'i': '123'}}, sentry_frame.to_dict())
 
@@ -103,7 +103,7 @@ class PreambleTest(Chai):
                             'stacktrace': {'frames': [{'filename': '$HOME/foo.so',
                                                         'function': 'main',
                                                         'instruction_addr': '0x1',
-                                                        'lineno': 1,
+                                                        'lineno': 1, # NOTE: sentry starts at 1, gdb at 0
                                                         'package': '/home/me/foo.so',
                                                         'vars': {'i': '123'}}],
                                             'registers': {'rax': '0x2'}}}, thread.to_dict())
