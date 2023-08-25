@@ -22,6 +22,10 @@ class PreambleTest(Chai):
     def setUpClass(self):
         pass
 
+    def setUp(self):
+        preamble.SentryImage._objfiles = {}
+        super(PreambleTest, self).setUp()
+
     def frame(self):
         self.mock(gdb, 'solib_name')
         self.expect(gdb.solib_name).args(0x1).returns(
@@ -241,6 +245,36 @@ Mapped address spaces:
             'in_app': True,
             'lineno': 10,
             'platform': 'other'}]}}, thread.to_dict())
+
+    def test_sentry_image(self):
+        objfile = self.mock()
+        objfile.filename = '/usr/bin/true'
+        objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
+
+        self.mock(gdb, 'objfiles')
+        self.expect(gdb.objfiles).returns([objfile])
+
+        image = preamble.SentryImage('/usr/bin/true', 1000, 2000)
+        self.assert_equal({'arch': 'x86_64',
+            'code_file': '/usr/bin/true',
+            'code_id': '272ee025ad435f0e873aafd55dc65d8a4cb1d93f',
+            'debug_id': '25e02e27-43ad-0e5f-873a-afd55dc65d8a',
+            'image_addr': '0x3e8',
+            'image_size': 1000,
+            'type': 'elf'}, image.to_dict())
+
+    def test_sentry_image_mapping_fail(self):
+        objfile = self.mock()
+        objfile.filename = '/usr/bin/true'
+        objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
+
+        self.mock(gdb, 'objfiles')
+        self.expect(gdb.objfiles).returns([objfile])
+
+        self.mock(gdb, 'lookup_objfile')
+        self.expect(gdb.lookup_objfile).args('/usr/bin/true.so').raises(ValueError)
+
+        self.assert_raises(preamble.UnexpectedMappingException, preamble.SentryImage, '/usr/bin/true.so', 1000, 2000)
 
 if __name__ == '__main__':
     unittest.main()

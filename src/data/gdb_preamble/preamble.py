@@ -33,6 +33,9 @@ from pathlib import Path
 from pygdbmi import gdbmiparser
 import psutil
 
+class UnexpectedMappingException(Exception):
+    pass
+
 def mangle_path(path):
     if not path:
         return path
@@ -275,7 +278,7 @@ class SentryImage:
                     lookup = None
                 objfiles = gdb.objfiles()
                 self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
-                raise Exception("unexpected mapping fail {} {} {} {}".format(self.file, lookup, objfiles, self_objfiles))
+                raise UnexpectedMappingException("unexpected mapping fail {} {} {} {}".format(self.file, lookup, objfiles, self_objfiles))
             return
         self.valid = True
 
