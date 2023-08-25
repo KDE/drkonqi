@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 01:59+0000\n"
-"PO-Revision-Date: 2023-07-15 23:26+0200\n"
+"PO-Revision-Date: 2023-08-19 20:19+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -799,12 +799,9 @@ msgid "Developer Information"
 msgstr "Informazioni per gli sviluppatori"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Tentativo di contattare bugs.kde.org..."
+msgstr "Segnala su bugs.kde.org"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1037,16 +1034,6 @@ msgstr ""
 "KDE con l'indirizzo di posta elettronica e la password forniti."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1057,26 +1044,15 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "page.</para>"
 msgstr ""
-"<para>Siccome è il gestore degli arresti anomali stesso ad avere un "
-"problema, la\n"
-"il processo di segnalazione automatico degli errori è stata disattivato per "
-"ridurre il\n"
+"<para>Siccome è il gestore degli arresti anomali stesso\n"
+"ad avere un problema, il processo di segnalazione automatico\n"
+"degli errori è stato disabilitato per ridurre il\n"
 "rischio di produrre un altro problema.<nl /><nl />\n"
 "<link url='%1'>Segnala manualmente</link> questo errore nel sistema di\n"
-"tracciamento degli errori di KDE. Non dimenticare di includere il backtrace\n"
-"dalla scheda delle <interface>Informazioni per gli sviluppatori</"
-"interface>.\n"
-"</para>"
+"tracciamento dei bug di KDE. Non dimenticare di includere il backtrace\n"
+"dalla pagina <interface>Informazioni per gli sviluppatori</interface>.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1087,8 +1063,8 @@ msgstr ""
 "<para>L'assistente di segnalazione è disabilitato perché la finestra del "
 "gestore degli arresti anomali è stata avviata in modalità sicura.<nl />\n"
 "Puoi segnalare il bug manualmente a <link>%1</link> (includendo il backtrace "
-"dalla scheda delle <interface>Informazioni per gli sviluppatori</interface>)."
-"</para>"
+"dalla pagina <interface>Informazioni per gli sviluppatori</interface>).</"
+"para>"
 
 #: qml/main.qml:50
 msgctxt "@info"
@@ -1111,20 +1087,14 @@ msgstr ""
 "</para>"
 
 #: qml/MainPage.qml:55
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Send Crash Report"
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr "Invia segnalazione"
+msgstr "Invia resoconto automatico"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Informazioni per gli sviluppatori"
+msgstr "Consulta le informazioni per gli sviluppatori"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1353,12 +1323,9 @@ msgid "Crash Report Sent"
 msgstr "Segnalazione di chiusura inattesa inviata"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Riavvia app."
+msgstr "Riavvia %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1371,17 +1338,14 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Grazie di aver contribuito a KDE. Puoi ora chiudere questa finestra."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
-msgstr "Segnalazione di chiusura inattesa inviata"
+msgstr "Rapporto di arresto anomalo inviato"
 
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Segnala sempre automaticamente gli arresti anomali in futuro"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1390,6 +1354,10 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Invia sempre automaticamente un rapporto sugli arresti anomali al sistema di "
+"tracciamento degli arresti anomali di KDE. Nessun inserimento manuale "
+"richiesto.\n"
+"Non riceverai più notifiche di arresto anomalo."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1469,14 +1437,14 @@ msgid "Please report this error to help improve this software."
 msgstr "Segnala questo errore per aiutarci a migliorare questo programma."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "L'applicazione si è chiusa inaspettatamente."
+msgstr ""
+"L'applicazione si è chiusa in modo imprevisto. Sarà inviato automaticamente "
+"un resoconto."
 
 #: statusnotifier.cpp:47
 #, kde-format
