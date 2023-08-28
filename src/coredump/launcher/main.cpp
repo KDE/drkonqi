@@ -176,7 +176,7 @@ static bool tryDrkonqi(const Coredump &dump)
 
     // We must start drkonqi in a new slice. This launcher will want to terminate quickly and we enforce that
     // through maximum run time in the unit configuration. If drkonqi wasn't in a new slice it'd get killed with us.
-    QProcess::startDetached(drkonqiExe(), arguments);
+    QProcess::execute(drkonqiExe(), arguments);
 
     return true; // always considered handled, even if drkonqi crashes or something
 }
