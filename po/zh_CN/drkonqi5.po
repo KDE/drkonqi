@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 01:59+0000\n"
-"PO-Revision-Date: 2023-08-02 12:38\n"
+"PO-Revision-Date: 2023-08-27 03:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -374,12 +374,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "无法创建用于保存报告的文件"
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "保存报告到文件"
+msgstr "保存报告"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -752,12 +750,9 @@ msgid "Developer Information"
 msgstr "开发者信息"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "正在尝试连接 bugs.kde.org..."
+msgstr "报告到 bugs.kde.org 网站"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -975,16 +970,6 @@ msgid ""
 msgstr "点击此按钮可使用您的邮件地址和密码登录到 KDE 程序缺陷跟踪系统。"
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -996,21 +981,12 @@ msgid ""
 "page.</para>"
 msgstr ""
 "<para>由于程序崩溃处理工具本身出错，\n"
-"为了降低再次出错的风险，\n"
-"自动报告进程已被禁用。<nl/><nl/>\n"
+"为了降低再次出错的风险，自动报告进程已被禁用。<nl/><nl/>\n"
 "请将此问题<link url='%1'>手动报告</link>到 KDE 程序缺陷追踪系统，\n"
-"并记得附上<interface>开发人员信息</interface>一栏中的\n"
+"并记得附上<interface>开发人员信息</interface>页面中的\n"
 "回溯跟踪数据。</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1020,7 +996,7 @@ msgid ""
 msgstr ""
 "<para>由于程序崩溃处理工具对话框在安全模式下启动，报告助手已被禁用。<nl />\n"
 "您可以手动发送此报告到 <link>%1</link> (请附上<interface>开发人员信息</"
-"interface>标签页中的回溯跟踪数据。)</para>"
+"interface>页面中的回溯跟踪数据。)</para>"
 
 #: qml/main.qml:50
 msgctxt "@info"
@@ -1043,15 +1019,12 @@ msgstr ""
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "发送自动报告"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "开发者信息"
+msgstr "查看开发者信息"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1267,12 +1240,9 @@ msgid "Crash Report Sent"
 msgstr "崩溃报告已发送"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "重新启动程序"
+msgstr "重新启动 %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1285,9 +1255,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "崩溃报告已发送"
@@ -1295,7 +1262,7 @@ msgstr "崩溃报告已发送"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "以后总是自动报告崩溃"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1304,6 +1271,8 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"总是自动提交崩溃报告到 KDE 崩溃跟踪系统。这不需要任何人工干预。您将不再收到关"
+"于崩溃的通知。"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1380,14 +1349,12 @@ msgid "Please report this error to help improve this software."
 msgstr "请报告此错误，帮助改进这款软件。"
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "应用程序意外关闭。"
+msgstr "应用程序意外关闭。正在自动提交报告。"
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1469,28 +1436,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Filename"
-#~ msgstr "选择文件名"
-
-#~ msgctxt "@action"
-#~ msgid "Report Bug"
-#~ msgstr "报告程序缺陷"
-
-#~ msgctxt "@action"
-#~ msgid "Restart Application"
-#~ msgstr "重启应用程序"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "自动提交崩溃数据"
-
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5</para>"
-#~ msgstr ""
-#~ "<para>可执行程序：<application>%1</application> 进程编号：%2 信号：%3 "
-#~ "(%4) 时间：%5</para>"
