@@ -603,6 +603,9 @@ def print_sentry_payload(thread):
 
 def print_preamble():
     thread = gdb.selected_thread()
+    if thread == None:
+        # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
+        return
     # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
     print_kcrash_error_message()
     # changes current frame and thread!
