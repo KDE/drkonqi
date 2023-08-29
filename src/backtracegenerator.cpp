@@ -235,6 +235,7 @@ void BacktraceGenerator::setBackendPrepared()
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
     connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
 
+    qCDebug(DRKONQI_LOG) << "Starting debugger" << m_proc->program() << m_proc->arguments();
     m_proc->start();
 }
 
