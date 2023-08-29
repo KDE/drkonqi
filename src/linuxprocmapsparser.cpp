@@ -40,13 +40,13 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
 
         QByteArray mutableLine = line;
         // address
-        strtok(mutableLine.data(), " ");
+        std::ignore = strtok(mutableLine.data(), " ");
         // perms
-        strtok(nullptr, " ");
+        std::ignore = strtok(nullptr, " ");
         // offset
-        strtok(nullptr, " ");
+        std::ignore = strtok(nullptr, " ");
         // dev
-        strtok(nullptr, " ");
+        std::ignore = strtok(nullptr, " ");
         // inode
         const QByteArray inode(strtok(nullptr, " "));
         // remainder is the pathname
