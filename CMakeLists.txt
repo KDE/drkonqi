@@ -77,8 +77,10 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
 )
 
-find_package(Systemd)
-set_package_properties(Systemd PROPERTIES TYPE RECOMMENDED PURPOSE "Coredumpd integration.")
+if(CMAKE_SYSTEM_NAME MATCHES Linux)
+    find_package(Systemd 249)
+    set_package_properties(Systemd PROPERTIES TYPE REQUIRED PURPOSE "Coredumpd integration.")
+endif()
 
 if(Systemd_FOUND)
     find_package(coredumpctl)
