@@ -13,7 +13,7 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES FreeBSD)
         DESCRIPTION "Python module chai is required for testing."
         TYPE REQUIRED)
     add_test(NAME preambletest
-        COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/preambletest.py)
+        COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/preambletest.py)
 endif()
 
 # Test helper for systeminformationtest
