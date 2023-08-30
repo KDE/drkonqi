@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1658725 2023-08-22 02:12:49Z scripty $
+# $Id: drkonqi5.po 1659241 2023-08-30 02:10:31Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 01:59+0000\n"
-"PO-Revision-Date: 2023-07-27 14:45+0200\n"
+"PO-Revision-Date: 2023-08-29 14:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
 "Language: bg\n"
@@ -412,12 +412,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Грешка при създаване на файл с доклада."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Запис на доклада във файл"
+msgstr "Запазване на доклада"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -807,12 +805,9 @@ msgid "Developer Information"
 msgstr "Информация за разработчици"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Опит за свърване с bugs.kde.org..."
+msgstr "Докладване на bugs.kde.org"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1047,16 +1042,6 @@ msgstr ""
 "в KDE, като използвате предоставения e-пощенски адрес и парола."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1076,14 +1061,6 @@ msgstr ""
 "<interface>Информация за разработчици </interface>.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1091,8 +1068,9 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
-"<para> Помощникът за отчитане е деактивиран, тъй като диалоговият прозорец "
-"на манипулатора за срив бе стартиран в безопасен режим.<nl />\n"
+"<para> Помощникът за докладване на грешки е деактивиран, тъй като "
+"диалоговият прозорец на манипулатора за срив бе стартиран в безопасен режим."
+"<nl />\n"
 "Можете ръчно да съобщите за тази грешка на <link>%1</link>(включително "
 "данните от раздел<interface> Информация за разработчици </interface>.) </"
 "para>"
@@ -1120,15 +1098,12 @@ msgstr ""
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Автоматично изпращане доклад за грешка"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Информация за разработчици"
+msgstr "Вижте Информация за разработчици"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1354,12 +1329,9 @@ msgid "Crash Report Sent"
 msgstr "Докладът за грешка е изпратен"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Рестарт"
+msgstr "Рестартиране на %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1373,9 +1345,6 @@ msgstr ""
 "Благодарим ви, че сте част от KDE. Вече можете да затворите този прозорец."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Докладът за грешка е изпратен"
@@ -1383,7 +1352,7 @@ msgstr "Докладът за грешка е изпратен"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Занапред винаги да се изпраща автоматично доклад за срив"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1392,6 +1361,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Автоматично изпращане на доклад за срив към системата за проследяване на "
+"срив на KDE.Не е необходимо ръчно въвеждане.\n"
+"Няма да получавате повече известия за сривове."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1475,14 +1447,13 @@ msgstr ""
 "софтуер."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Приложението се затвори неочаквано."
+msgstr ""
+"Приложението се затвори неочаквано. Автоматично се изпрати съобщение за срив."
 
 #: statusnotifier.cpp:47
 #, kde-format
