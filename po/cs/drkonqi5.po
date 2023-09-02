@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -395,12 +395,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Nelze vytvořit soubor pro uložení hlášení."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Uložit záznam do souboru"
+msgstr ""
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -779,14 +777,10 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informace pro vývojáře"
 
-# %s is FTP or HTTP
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Pokouším se připojit na bugs.kde.org..."
+msgstr ""
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1014,16 +1008,6 @@ msgstr ""
 "mailu a hesla."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1034,22 +1018,8 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "page.</para>"
 msgstr ""
-"<para>Protože program na obsluhu pádů sám selhal,\n"
-"automatický proces hlášení byl zakázán, aby se snížilo riziko\n"
-"opakovaného selhání.<nl /><nl />\n"
-"Prosím, <link url='%1'>nahlaste ručně</link> tuto chybu\n"
-"do systému pro sledování chyb KDE. Nezapomeňte zahrnout\n"
-"backtrace z karty <interface>Informace pro vývojáře</interface>.</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1057,10 +1027,6 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
-"<para>Asistent hlášení chyb byl zakázán, dialog pro obsluhu pádu byl spuštěn "
-"v nouzovém režimu.<nl />Tuto chybu můžete ručně nahlásit na <link>%1</link> "
-"(včetně backtrace z karty <interface>Informace pro vývojáře</interface>.)</"
-"para>"
 
 #: qml/main.qml:50
 msgctxt "@info"
@@ -1087,12 +1053,9 @@ msgid "Send Automatic Report"
 msgstr ""
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Informace pro vývojáře"
+msgstr ""
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1304,12 +1267,9 @@ msgid "Crash Report Sent"
 msgstr "Hlášení o pádu bylo odesláno"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Restartovat aplikaci"
+msgstr ""
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1322,12 +1282,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Děkujeme za to, že jste součástí KDE. Nyní můžete toto okno zavřít."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
-msgstr "Hlášení o pádu bylo odesláno"
+msgstr ""
 
 #: qml/SentryPage.qml:54
 msgctxt "@label"
@@ -1421,14 +1378,12 @@ msgid "Please report this error to help improve this software."
 msgstr "Prosím nahlaste tuto chybu pro zlepšení tohoto softwaru."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Aplikace byla neočekávaně ukončena"
+msgstr ""
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1510,24 +1465,3 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Filename"
-#~ msgstr "Vybrat název souboru"
-
-#~ msgctxt "@action"
-#~ msgid "Report Bug"
-#~ msgstr "Nahlásit chybu"
-
-#~ msgctxt "@action"
-#~ msgid "Restart Application"
-#~ msgstr "Restartovat aplikaci"
-
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5</para>"
-#~ msgstr ""
-#~ "<para>Spustitelný soubor: <application>%1</application> PID: %2 Signál: "
-#~ "%3 (%4) Čas: %5 </para>"
