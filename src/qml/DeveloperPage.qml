@@ -95,6 +95,8 @@ installed the proper debug symbol packages and you want to obtain a better backt
     }
 
     ColumnLayout {
+        spacing: 0
+
         DebugPackageInstaller { // not in global scope because it messes up scrollbars
             id: debugPackageInstaller
             onPackagesInstalled: reloadAction.trigger()
@@ -103,6 +105,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
 
         RowLayout {
             visible: page.basic
+            spacing: Kirigami.Units.smallSpacing
             Layout.fillHeight: true
             Kirigami.Icon {
                 source: "help-hint"
@@ -249,6 +252,7 @@ backtrace; install the needed packages (<link url='%2'>list of files</link>) and
             }
         }
         RowLayout {
+            spacing: Kirigami.Units.smallSpacing
             // Two bars because of https://bugs.kde.org/show_bug.cgi?id=451026
             // Awkard though, maybe we should just live with everything being right aligned
             FooterActionBar {
