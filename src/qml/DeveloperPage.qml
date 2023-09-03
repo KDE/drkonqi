@@ -183,14 +183,14 @@ used during interactive and post-mortem debugging.</para>`)
                                 detailsLabel.text = xi18nc("@info/rich",
 `You can click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
 does not work: please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
-backtrace; install the needed packages (<link url='%2'> list of files</link>) and click the <interface>Reload</interface> button.`,
+backtrace; install the needed packages (<link url='%2'>list of files</link>) and click the <interface>Reload</interface> button.`,
                                                             Globals.techbaseHowtoDoc, '#missingDebugPackages')
                                 installButton.visible = true
                                 debugPackageInstaller.setMissingLibraries(parser.librariesWithMissingDebugSymbols())
                             } else {
                                 detailsLabel.text = xi18nc("@info/rich",
-`Please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace; install the needed packages (<link url='%2'>
-list of files</link>) and click the <interface>Reload</interface> button.`,
+`Please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace; install the needed packages
+(<link url='%2'>list of files</link>) and click the <interface>Reload</interface> button.`,
                                                             Globals.techbaseHowtoDoc, '#missingDebugPackages')
                             }
                         }
