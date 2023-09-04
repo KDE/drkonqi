@@ -63,7 +63,7 @@ static ArgumentsPidTuple metadataArguments(const Coredump &dump, const QString &
 
         if (key == QLatin1String("exe")) {
             if (value.endsWith(QStringLiteral("/drkonqi"))) {
-                qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashd :O";
+                qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashed :O";
                 return {};
             }
             if (value != dump.exe) {
