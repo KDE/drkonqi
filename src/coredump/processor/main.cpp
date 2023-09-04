@@ -61,10 +61,11 @@ int main(int argc, char **argv)
             return;
         }
 
-        // We only try to find the socket file here because we need to know the UID and on older systemd's we'll not
+        // We only try to find the socket file at this point in time because we need to know the UID and on older systemd's we'll not
         // be able to figure this out from just the instance information.
         // When systemd 245 (Ubuntu 20.04) no longer is out in the wild we can move this into the main and get the
         // uid from the instance.
+        // TODO: move this to main scope as per the comment above
         const QByteArray socketPath = QByteArrayLiteral("/run/user/") + QByteArray::number(dump.uid) + QByteArrayLiteral("/drkonqi-coredump-launcher");
         if (!QFile::exists(QString::fromUtf8(socketPath))) {
             // This is intentionally not an error or fatal, not all users necessarily have
