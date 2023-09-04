@@ -77,14 +77,15 @@ class SentryQMLThread:
                     pass
 
     def to_sentry_frame(self, frame):
-        print("level={level} func={func} at={file}:{line}".format(**frame) )
-        return {
+        print(frame)
+        blob = {
             'platform': 'other', # always different from the cpp/native frames. alas, technically this frame isn't a javascript frame
-            'filename': mangle_path(frame['file']),
-            'function': frame['func'],
-            'lineno': int(frame['line']),
             'in_app': True # qml is always in the app I should think
         }
+        if 'file' in frame: blob['filename'] = mangle_path(frame['file'])
+        if 'func' in frame: blob['function'] = frame['func']
+        if 'line' in frame: blob['lineno'] = int(frame['line'])
+        return blob
 
     def to_sentry_frames(self, frames):
         lst = []
@@ -546,7 +547,14 @@ def qml_trace_frame(frame):
     return None
 
 def print_qml_frame(frame):
-    print("level={level} func={func} at={file}:{line}".format(**frame) )
+    data = {
+        'level': '?',
+        'func': '?',
+        'file': '?',
+        'line': '?'
+    }
+    data.update(frame)
+    print("level={level} func={func} at={file}:{line}".format(**data) )
 
 def print_qml_frames(payload):
     response = gdbmiparser.parse_response("*stopped," + payload)
