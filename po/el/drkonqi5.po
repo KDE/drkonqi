@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 01:59+0000\n"
+"POT-Creation-Date: 2023-09-06 01:55+0000\n"
 "PO-Revision-Date: 2023-08-15 00:49+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -240,14 +240,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ο αποσφαλματωτής τερματίστηκε απροσδόκητα."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
-#: qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:205
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Οι πληροφορίες κατάρρευσης δεν μπόρεσαν να δημιουργηθούν."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -278,14 +278,14 @@ msgstr ""
 "και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</interface>.</"
 "strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Σφάλμα κατά την εγκατάσταση των συμβόλων αποσφαλμάτωσης"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -805,7 +805,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Προσαρμοσμένες ρυθμίσεις της εφαρμογής που πιθανόν να σχετίζονται"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Δεν είναι επαρκώς χρήσιμη"
@@ -873,7 +873,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/DeveloperPage.qml:117
+#: qml/DeveloperPage.qml:120
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -897,7 +897,17 @@ msgstr ""
 "κατά τη διάρκεια της διαδραστικής και της «μετά-θάνατον» αποσφαλμάτωσης.</"
 "para>"
 
-#: qml/DeveloperPage.qml:184
+#: qml/DeveloperPage.qml:187
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You can click the <interface>Install Debug Symbols</interface> button in "
+#| "order to automatically install the missing debugging information "
+#| "packages. If this method\n"
+#| "does not work: please read <link url='%1'>How to create useful crash "
+#| "reports</link> to learn how to get a useful\n"
+#| "backtrace; install the needed packages (<link url='%2'> list of files</"
+#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -905,8 +915,8 @@ msgid ""
 "If this method\n"
 "does not work: please read <link url='%1'>How to create useful crash "
 "reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'> list of files</"
-"link>) and click the <interface>Reload</interface> button."
+"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
+"and click the <interface>Reload</interface> button."
 msgstr ""
 "Κάντε κλίκ στο κουμπί <interface>Εγκατάσταση συμβόλων αποσφαλμάτωσης</"
 "interface> με σκοπό να εγκαταστήσετε αυτόματα τα πακέτα, που λείπουν, "
@@ -917,21 +927,27 @@ msgstr ""
 "url='%2'>λίστα αρχείων</link>) και πατήστε το κουμπί "
 "<interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:195
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "Please read <link url='%1'>How to create useful crash reports</link> to "
+#| "learn how to get a useful backtrace; install the needed packages (<link "
+#| "url='%2'>list of files</link>) and click the <interface>Reload</"
+#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>\n"
-"list of files</link>) and click the <interface>Reload</interface> button."
+"learn how to get a useful backtrace; install the needed packages\n"
+"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"interface> button."
 msgstr ""
 "Παρακαλώ διαβάστε <link url='%1'>Πώς να δημιουργήσετε χρήσιμες αναφορές "
 "σφαλμάτων</link> για να μάθετε πώς μπορείτε να λάβετε χρήσιμες πληροφορίες "
-"κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link url='%2'>\n"
-"λίστα αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</"
-"interface>."
+"κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link url='%2'>λίστα "
+"αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:204
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1595,6 +1611,20 @@ msgstr "bugstest.kde.org Όνομα χρήστη"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org κωδικός"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>\n"
+#~ "list of files</link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Παρακαλώ διαβάστε <link url='%1'>Πώς να δημιουργήσετε χρήσιμες αναφορές "
+#~ "σφαλμάτων</link> για να μάθετε πώς μπορείτε να λάβετε χρήσιμες "
+#~ "πληροφορίες κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link "
+#~ "url='%2'>\n"
+#~ "λίστα αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</"
+#~ "interface>."
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"

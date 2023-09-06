@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 01:59+0000\n"
+"POT-Creation-Date: 2023-09-06 01:55+0000\n"
 "PO-Revision-Date: 2023-08-20 09:51+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -244,14 +244,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Le débogueur s'est arrêté de façon inattendue."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
-#: qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:205
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Il est impossible de générer les informations de plantage."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -281,14 +281,14 @@ msgstr ""
 "<strong>Vous devez d'abord installer l'application de débogage (« %1 ») et "
 "ensuite, cliquez sur le bouton <interface>Recharger</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Erreur pendant l'installation des symboles de débogage"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -806,7 +806,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Paramètres personnalisés de l'application pouvant être liés"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Pas suffisamment utile"
@@ -870,7 +870,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Enregistrer"
 
-#: qml/DeveloperPage.qml:117
+#: qml/DeveloperPage.qml:120
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -893,7 +893,17 @@ msgstr ""
 "sont régulièrement utilisées\n"
 "lors du débogage interactif et post-mortem.</para>"
 
-#: qml/DeveloperPage.qml:184
+#: qml/DeveloperPage.qml:187
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You can click the <interface>Install Debug Symbols</interface> button in "
+#| "order to automatically install the missing debugging information "
+#| "packages. If this method\n"
+#| "does not work: please read <link url='%1'>How to create useful crash "
+#| "reports</link> to learn how to get a useful\n"
+#| "backtrace; install the needed packages (<link url='%2'> list of files</"
+#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -901,8 +911,8 @@ msgid ""
 "If this method\n"
 "does not work: please read <link url='%1'>How to create useful crash "
 "reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'> list of files</"
-"link>) and click the <interface>Reload</interface> button."
+"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
+"and click the <interface>Reload</interface> button."
 msgstr ""
 "Vous pouvez cliquer sur le bouton <interface>Installer des symboles de "
 "débogage</interface> afin d'installer automatiquement les paquets manquants "
@@ -913,21 +923,27 @@ msgstr ""
 "(<link url='%2'>liste des fichiers</link>) et cliquez sur le bouton "
 "<interface>Recharger</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:195
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "Please read <link url='%1'>How to create useful crash reports</link> to "
+#| "learn how to get a useful backtrace; install the needed packages (<link "
+#| "url='%2'>list of files</link>) and click the <interface>Reload</"
+#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>\n"
-"list of files</link>) and click the <interface>Reload</interface> button."
+"learn how to get a useful backtrace; install the needed packages\n"
+"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"interface> button."
 msgstr ""
 "Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
-"plantage utiles</link> pour apprendre comment obtenir une pile d'appels "
-"utile et installer les paquets nécessaires (<link url='%2'>\n"
-"liste des fichiers</link>) puis cliquez sur le bouton <interface>Recharger</"
-"interface>."
+"plantages utiles</link> pour apprendre comment obtenir une pile d'appels "
+"utile, installer les paquets nécessaires (<link url='%2'>liste des fichiers</"
+"link>) puis cliquez sur le bouton <interface>Recharger</interface>."
 
-#: qml/DeveloperPage.qml:204
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1571,6 +1587,19 @@ msgstr "Nom d'utilisateur pour « bugstest.kde.org »"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Mot de passe pour « bugstest.kde.org »"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>\n"
+#~ "list of files</link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
+#~ "plantage utiles</link> pour apprendre comment obtenir une pile d'appels "
+#~ "utile et installer les paquets nécessaires (<link url='%2'>\n"
+#~ "liste des fichiers</link>) puis cliquez sur le bouton "
+#~ "<interface>Recharger</interface>."
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"

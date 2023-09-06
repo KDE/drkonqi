@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 01:59+0000\n"
+"POT-Creation-Date: 2023-09-06 01:55+0000\n"
 "PO-Revision-Date: 2023-04-10 11:25+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
-#: qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:205
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nie udało się zebrać szczegółów o usterce."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a następnie "
 "nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Błąd podczas wgrywania symboli diagnostycznych"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -769,7 +769,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Niezwykłe ustawienia programu, które mogą mieć znaczenie"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niewystarczająco użyteczne"
@@ -836,7 +836,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: qml/DeveloperPage.qml:117
+#: qml/DeveloperPage.qml:120
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -859,7 +859,17 @@ msgstr ""
 "używane podczas diagnostyki interaktywnej lub po zakończeniu pracy programu."
 "</para>"
 
-#: qml/DeveloperPage.qml:184
+#: qml/DeveloperPage.qml:187
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You can click the <interface>Install Debug Symbols</interface> button in "
+#| "order to automatically install the missing debugging information "
+#| "packages. If this method\n"
+#| "does not work: please read <link url='%1'>How to create useful crash "
+#| "reports</link> to learn how to get a useful\n"
+#| "backtrace; install the needed packages (<link url='%2'> list of files</"
+#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -867,8 +877,8 @@ msgid ""
 "If this method\n"
 "does not work: please read <link url='%1'>How to create useful crash "
 "reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'> list of files</"
-"link>) and click the <interface>Reload</interface> button."
+"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
+"and click the <interface>Reload</interface> button."
 msgstr ""
 "Aby samoczynnie wgrać brakujące pakiety diagnostyczne, naciśnij na przycisk "
 "<interface>Wgraj symbole diagnostyczne</interface>. Jeśli sposób ten\n"
@@ -878,21 +888,27 @@ msgstr ""
 "ślad wykonywania; wgraj potrzebne pakiety (<link url='%2'>lista plików</"
 "link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:195
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "Please read <link url='%1'>How to create useful crash reports</link> to "
+#| "learn how to get a useful backtrace; install the needed packages (<link "
+#| "url='%2'>list of files</link>) and click the <interface>Reload</"
+#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>\n"
-"list of files</link>) and click the <interface>Reload</interface> button."
+"learn how to get a useful backtrace; install the needed packages\n"
+"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"interface> button."
 msgstr ""
 "Przeczytaj <link url='%1'>przewodnik skutecznego zgłaszania błędów</link>, "
 "aby dowiedzieć się jak uzyskać użyteczny ślad wykonywania. Następnie wgraj "
-"potrzebne pakiety (<link url='%2'>\n"
-"spis pakietów</link>) i naciśnij na przycisk <interface>Wczytaj ponownie</"
-"interface>."
+"potrzebne pakiety (<link url='%2'>spis pakietów</link>) i naciśnij na "
+"przycisk <interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:204
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1542,6 +1558,19 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>\n"
+#~ "list of files</link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Przeczytaj <link url='%1'>przewodnik skutecznego zgłaszania błędów</"
+#~ "link>, aby dowiedzieć się jak uzyskać użyteczny ślad wykonywania. "
+#~ "Następnie wgraj potrzebne pakiety (<link url='%2'>\n"
+#~ "spis pakietów</link>) i naciśnij na przycisk <interface>Wczytaj ponownie</"
+#~ "interface>."
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"

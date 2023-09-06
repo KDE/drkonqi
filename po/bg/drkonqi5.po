@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi5.po 1659241 2023-08-30 02:10:31Z scripty $
+# $Id: drkonqi5.po 1659646 2023-09-06 02:08:24Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-22 01:59+0000\n"
+"POT-Creation-Date: 2023-09-06 01:55+0000\n"
 "PO-Revision-Date: 2023-08-29 14:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -225,14 +225,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Програмата за откриване на грешки се затвори неочаквано."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:198
-#: qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:205
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Информацията за срива не можа да бъде генерирана."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:199
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -263,14 +263,14 @@ msgstr ""
 "(%1), след което щракнете бутона <interface> Презареждане </interface>. </"
 "strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:101
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Грешка по време на инсталирането на символи за отстраняване на грешки"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:226
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -783,7 +783,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Персонализирани настройки на приложението, които могат да бъдат свързани"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:219
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Недостатъчно полезен"
@@ -847,7 +847,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Запазване"
 
-#: qml/DeveloperPage.qml:117
+#: qml/DeveloperPage.qml:120
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -869,7 +869,17 @@ msgstr ""
 "богата и полезна информация.<nl />Обратни проследявания често се използват \n"
 "при отстраняване на грешки интерактивно по време на и след сриването.</para>"
 
-#: qml/DeveloperPage.qml:184
+#: qml/DeveloperPage.qml:187
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You can click the <interface>Install Debug Symbols</interface> button in "
+#| "order to automatically install the missing debugging information "
+#| "packages. If this method\n"
+#| "does not work: please read <link url='%1'>How to create useful crash "
+#| "reports</link> to learn how to get a useful\n"
+#| "backtrace; install the needed packages (<link url='%2'> list of files</"
+#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -877,8 +887,8 @@ msgid ""
 "If this method\n"
 "does not work: please read <link url='%1'>How to create useful crash "
 "reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'> list of files</"
-"link>) and click the <interface>Reload</interface> button."
+"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
+"and click the <interface>Reload</interface> button."
 msgstr ""
 "Можете да щракнете върху бутона <interface> Инсталиране на символи за "
 "отстраняване на грешки </interface> за автоматично инсталиране на липсващите "
@@ -888,13 +898,20 @@ msgstr ""
 "необходимите пакети (<link url='%2'> списък с файлове </link>) и щракнете "
 "върху бутон <interface> Презареждане </interface>."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:195
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "Please read <link url='%1'>How to create useful crash reports</link> to "
+#| "learn how to get a useful backtrace; install the needed packages (<link "
+#| "url='%2'>list of files</link>) and click the <interface>Reload</"
+#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>\n"
-"list of files</link>) and click the <interface>Reload</interface> button."
+"learn how to get a useful backtrace; install the needed packages\n"
+"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"interface> button."
 msgstr ""
 "Моля, прочетете  <link url='%1'> Как да създавате полезни доклади за сривове "
 "</link> , за да научите, как да получите полезни данни за обратно "
@@ -902,7 +919,7 @@ msgstr ""
 "файлове </link>) и щракнете върху бутон <interface> Презареждане </"
 "interface>."
 
-#: qml/DeveloperPage.qml:204
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1537,6 +1554,19 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>\n"
+#~ "list of files</link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Моля, прочетете  <link url='%1'> Как да създавате полезни доклади за "
+#~ "сривове </link> , за да научите, как да получите полезни данни за обратно "
+#~ "проследяване; инсталирайте необходимите пакети (<link url='%2'>списък с "
+#~ "файлове </link>) и щракнете върху бутон <interface> Презареждане </"
+#~ "interface>."
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"
