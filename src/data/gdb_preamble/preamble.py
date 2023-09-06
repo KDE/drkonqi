@@ -47,6 +47,8 @@ class SentryQMLThread:
     def __init__(self):
         self.payload = None
 
+        # TODO this is largely a code dupe of print_qml_trace
+
         if gdb.selected_inferior().connection.type == 'core':
             # Only live processes can be traced unfortunately since we need to
             # call a function on the process. That does not work on cores.
