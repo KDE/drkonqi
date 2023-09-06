@@ -51,6 +51,7 @@ bool NotifyTruck::handle(const Coredump &dump)
         QObject::connect(notification, &KNotification::activated, notification, [pid, this, notification]() {
             notification->disconnect(this);
             auto job = new KTerminalLauncherJob(QStringLiteral("coredumpctl gdb %1").arg(QString::number(pid)), this);
+            job->setProcessEnvironment(QProcessEnvironment::systemEnvironment());
             connect(job, &KJob::result, this, [job] {
                 if (job->error() != KJob::NoError) {
                     qWarning() << job->errorText();
