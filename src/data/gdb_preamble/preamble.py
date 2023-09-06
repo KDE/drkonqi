@@ -522,7 +522,7 @@ def qml_trace_frame(frame):
         for method in methods:
             try: # throws when the function is invalid
                 result = str(gdb.parse_and_eval(method.format(addr))).strip()
-            except:
+            except gdb.error:
                 continue
             if result:
                 # We need to massage the result a bit. It's of the form
