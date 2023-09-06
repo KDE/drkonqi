@@ -46,6 +46,12 @@ def mangle_path(path):
 class SentryQMLThread:
     def __init__(self):
         self.payload = None
+
+        if gdb.selected_inferior().connection.type == 'core':
+            # Only live processes can be traced unfortunately since we need to
+            # call a function on the process. That does not work on cores.
+            return
+
         # should we iterate the inferiors? Probably makes no diff for 99% of apps.
         for thread in gdb.selected_inferior().threads():
             if not thread.is_valid() :
@@ -551,6 +557,12 @@ def print_qml_frames(payload):
 
 
 def print_qml_trace():
+    if gdb.selected_inferior().connection.type == 'core':
+        # Only live processes can be traced unfortunately since we need to
+        # call a function on the process. That does not work on cores.
+        print('Cannot QML trace cores :(')
+        return
+
     # should we iterate the inferiors? Probably makes no diff for 99% of apps.
     for thread in gdb.selected_inferior().threads():
         if not thread.is_valid():
