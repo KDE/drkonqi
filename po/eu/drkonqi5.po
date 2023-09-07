@@ -1,8 +1,7 @@
 # Translation for drkonqi5.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2018, Free Software Foundation, Inc.
-# Copyright (C) 2019-2021, This file is copyright:
+# Copyright (C) 2002-2023 This file is copyright:
 # This file is distributed under the same license as the drkonqi package.
-# KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2010.
@@ -13,14 +12,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2023-04-09 21:02+0200\n"
+"PO-Revision-Date: 2023-09-06 07:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -39,7 +38,7 @@ msgstr "xalba@ni.eus,marcos@euskalgnu.org,hizpol@ej-gv.es"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Reload"
-msgstr "&Kargatu berriz"
+msgstr "Bi&rzamatu"
 
 #: backtracewidget.cpp:60
 #, kde-format
@@ -49,21 +48,22 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) berriz "
-"kargatzeko. Arazte-sinboloen paketeak instalatuta dituzunean eta aztarna "
+"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) birzamatzeko. "
+"Arazte-sinboloen pakete egokiak instalatuta dituzunean eta atzerako aztarna "
 "hobea lortu nahi duzunean da baliagarria aukera hau."
 
 #: backtracewidget.cpp:67
 #, kde-format
 msgctxt "@action:button"
 msgid "&Install Debug Symbols"
-msgstr "&Instalatu arazte-sinboloak"
+msgstr "&Instalatu arazteko sinboloak"
 
 #: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
-msgstr "Erabili botoi hau falta diren arazte-sinboloen paketeak instalatzeko."
+msgstr ""
+"Erabili botoi hau falta diren arazteko sinboloen paketeak instalatzeko."
 
 #: backtracewidget.cpp:77
 #, kde-format
@@ -72,8 +72,8 @@ msgid ""
 "Symbol installation is unavailable because the application was updated or "
 "uninstalled after it had been started."
 msgstr ""
-"Ikurren instalazioa ezin da erabili aplikazioa abiatu ondoren eguneratu edo "
-"desinstalatu delako."
+"Sinboloen instalazioa ezin da erabili aplikazioa abiatu ondoren eguneratu "
+"edo desinstalatu delako."
 
 #: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
@@ -149,7 +149,7 @@ msgid ""
 msgstr ""
 "Kraskatu den aplikazioari beste arazte-prozesu bat dagokio. Hori dela eta, "
 "DrKonqi araztaileak ezin du aztarna lortu. Itxi beste araztaileak eta egin "
-"klik <interface>Kargatu berriz</interface> botoian."
+"klik <interface>Birzamatu</interface> botoian."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -197,13 +197,13 @@ msgid ""
 "the needed packages (<link url='%2'>list of files</link>) and click the "
 "<interface>Reload</interface> button."
 msgstr ""
-"Egin klik <interface>Instalatu arazte-sinboloak</interface> botoian, falta "
+"Egin klik <interface>Instalatu arazteko sinboloak</interface> botoian, falta "
 "diren arazteko informazio-paketeak automatikoki instalatzeko. Metodo horrek "
 "funtzionatzen ez badu, irakurri <link url='%1'>Kraskadurei buruzko "
-"jakinarazpen baliagarriak nola sortu</link> atala, aztarna baliagarriak nola "
-"sortzen diren ikasteko. Instalatu beharrezko paketeak (<link "
-"url='%2'>fitxategi-zerrenda</link>) eta egin klik <interface>Kargatu berriz</"
-"interface> botoian."
+"jakinarazpen baliagarriak nola sortu</link> atala, atzerako aztarna "
+"baliagarriak nola sortzen diren ikasteko. Instalatu beharrezko paketeak "
+"(<link url='%2'>fitxategi-zerrenda</link>) eta egin klik "
+"<interface>Birzamatu</interface> botoian."
 
 #: backtracewidget.cpp:285
 #, kde-kuit-format
@@ -217,7 +217,7 @@ msgstr ""
 "Irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen baliagarriak nola "
 "sortu</link> atala, aztarna baliagarriak nola sortzen diren ikasteko. "
 "Instalatu beharrezko paketeak (<link url='%2'>fitxategi-zerrenda</link>) eta "
-"egin klik <interface>Kargatu berriz</interface> botoian."
+"egin klik <interface>Birzamatu</interface> botoian."
 
 #: backtracewidget.cpp:301
 #, kde-format
@@ -240,7 +240,7 @@ msgid ""
 "interface> button."
 msgstr ""
 "Aztarna berriz sortzen saia zaitezke; horretarako, egin klik "
-"<interface>Kargatu berriz</interface> botoian."
+"<interface>Birzamatu</interface> botoian."
 
 #: backtracewidget.cpp:316
 #, kde-format
@@ -265,7 +265,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
-msgstr "Errorea gertatu da arazte-sinboloak instalatzean"
+msgstr "Errorea gertatu da arazteko sinboloak instalatzean"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
@@ -366,7 +366,7 @@ msgstr "Zainketa intentsiboa"
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr "Falta diren arazte-sinboloen paketeak instalatzeko eskatzen..."
+msgstr "Falta diren arazteko sinboloen paketeak instalatzeko eskatzen..."
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -377,13 +377,14 @@ msgstr "Utzi"
 #, kde-format
 msgctxt "@title:window"
 msgid "Missing debug symbols"
-msgstr "Falta diren arazte-sinboloak"
+msgstr "Falta diren arazteko sinboloak"
 
 #: debugpackageinstaller.cpp:88
 #, kde-format
 msgctxt "@info"
 msgid "Could not find debug symbol packages for this application."
-msgstr "Ezin izan dira aurkitu aplikazio honetarako arazte-sinboloen paketeak."
+msgstr ""
+"Ezin izan dira aurkitu aplikazio honetarako arazteko sinboloen paketeak."
 
 #: debugpackageinstaller.cpp:98
 #, kde-format
@@ -391,7 +392,7 @@ msgctxt "@info"
 msgid ""
 "An error was encountered during the installation of the debug symbol "
 "packages."
-msgstr "Errorea aurkitu da arazte-sinboloen paketeak instalatzean."
+msgstr "Errore bat aurkitu da arazteko sinboloen paketeak instalatzean."
 
 #: drkonqi.cpp:147
 #, kde-kuit-format
@@ -798,7 +799,7 @@ msgstr "Garatzaileen informazioa"
 #: qml/DeveloperPage.qml:33
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "Instalatu arazteko ikurrak"
+msgstr "Instalatu arazteko sinboloak"
 
 #: qml/DeveloperPage.qml:54
 msgctxt "@action:button"
@@ -815,8 +816,8 @@ msgid ""
 msgstr ""
 "Erabili botoi hau kraskadurari buruzko informazioa (atzerako aztarna) "
 "birzamatzeko.\n"
-"Arazteko ikurren paketeak instalatuta izanda atzerako aztarna hobea lortu "
-"nahi duzunean da baliagarria aukera hau."
+"Arazteko sinboloen pakete egokiak instalatuta izanda atzerako aztarna hobea "
+"lortu nahi duzunean da baliagarria aukera hau."
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
