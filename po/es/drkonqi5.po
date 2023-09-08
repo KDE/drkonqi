@@ -9,7 +9,7 @@
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Dario Andres Rodriguez <andresbajotierra@gmail.com>, 2009.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinal@gmail.com>, 2011, 2012.
 # Raul Gonzalez <raulgf83@gmail.com>, 2012.
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-08-21 13:54+0200\n"
+"PO-Revision-Date: 2023-09-07 12:11+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -59,8 +59,8 @@ msgid ""
 "obtain a better backtrace."
 msgstr ""
 "Use este botón para volver a cargar la información del fallo (traza "
-"inversa). Esto es útil cuando usted instala los paquetes con símbolos de "
-"depuración necesarios y desea obtener una traza más completa."
+"inversa). Esto resulta útil si ha instalado los paquetes de símbolos de "
+"depuración necesarios y desea obtener una traza inversa más completa."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -102,8 +102,9 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
-"Use este botón para guardar la información del fallo (traza inversa) a un "
-"archivo. Este es útil si usted desea examinar o informar del error más tarde."
+"Use este botón para guardar la información del fallo (traza inversa) en un "
+"archivo. Esto resulta útil cuando desea examinar o informar del error más "
+"tarde."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -115,11 +116,11 @@ msgid ""
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
 "<h2>¿Qué es una «traza inversa»?</h2><p>Básicamente, una traza inversa "
-"describe qué estaba pasando dentro de una aplicación cuando falló, de forma "
-"que los desarrolladores puedan rastrear dónde empezó el desastre. Aunque "
-"usted no entienda nada de ellas, contienen una considerable cantidad de "
-"información útil.<br />Las trazas inversas se suelen utilizar durante las "
-"sesiones de depuración interactivas y post-mortem.</p>"
+"describe lo que estaba ocurriendo dentro de una aplicación cuando se produjo "
+"el fallo, de forma que los desarrolladores puedan rastrear dónde empezó el "
+"desastre. Aunque usted no entienda nada de ellas, contienen una cantidad "
+"considerable de información útil.<br />Las trazas inversas se suelen usar "
+"durante las sesiones de depuración interactivas y <i>post mortem</i>.</p>"
 
 #: backtracewidget.cpp:135
 #, kde-format
@@ -157,10 +158,9 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
-"Hay otro proceso de depuración conectado a la aplicación que falló. Por lo "
-"tanto, el depurador de DrKonqi no puede obtener una traza inversa. Por "
-"favor, cierre el otro depurador y haga clic en <interface>Recargar</"
-"interface>."
+"Hay otro proceso de depuración conectado a la aplicación que ha fallado. Por "
+"ello, el depurador de DrKonqi no puede obtener una traza inversa. Cierre el "
+"otro depurador y pulse <interface>Volver a cargar</interface>."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -209,10 +209,10 @@ msgid ""
 msgstr ""
 "Puede pulsar el botón <interface>Instalar símbolos de depuración</interface> "
 "para instalar automáticamente los paquetes de información de depuración no "
-"disponibles. Si este método no funciona, por favor, lea <link url='%1'>cómo "
-"crear informes de fallo útiles</link> para saber cómo obtener una traza "
-"inversa útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
-"archivos</link>), pulse el botón <interface>Recargar</interface>."
+"disponibles. Si este método no funciona, consulte <link url='%1'>cómo crear "
+"informes de fallo útiles</link> para saber cómo obtener una traza inversa "
+"útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
+"archivos</link>), pulse el botón <interface>Volver a cargar</interface>."
 
 #: backtracewidget.cpp:285
 #, kde-kuit-format
@@ -223,10 +223,10 @@ msgid ""
 "url='%2'>list of files</link>) and click the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Por favor, lea <link url='%1'>cómo crear informes de fallo útiles</link> "
-"para saber cómo obtener una traza inversa útil. Instale los paquetes "
-"necesarios (<link url='%2'>lista de archivos</link>) y haga clic en el botón "
-"<interface>Recargar</interface>."
+"Consulte <link url='%1'>cómo crear informes de fallo útiles</link> para "
+"saber cómo obtener una traza inversa útil. Instale los paquetes necesarios "
+"(<link url='%2'>lista de archivos</link>) y pulse el botón <interface>Volver "
+"a cargar</interface>."
 
 #: backtracewidget.cpp:301
 #, kde-format
@@ -442,7 +442,7 @@ msgstr "&Reiniciar la aplicación"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
-msgstr "Use este botón para reiniciar la aplicación que falló y se cerró."
+msgstr "Use este botón para reiniciar la aplicación que ha fallado."
 
 #: drkonqidialog.cpp:121
 #, kde-format
@@ -462,8 +462,8 @@ msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr ""
-"<para>Lo lamentamos, <application>%1</application> se cerró inesperadamente."
-"</para>"
+"<para>Lo lamentamos, <application>%1</application> se ha cerrado "
+"inesperadamente.</para>"
 
 #: drkonqidialog.cpp:168
 #, kde-kuit-format
@@ -477,10 +477,9 @@ msgid ""
 msgstr ""
 "<para>El manejador de errores ha fallado, por lo que el proceso de informes "
 "automáticos se ha desactivado para reducir el riesgo de que vuelva a fallar."
-"<nl /><nl />Por favor, <link url='%1'>informe manualmente</link> de este "
-"error en el producto «drkonqi» en el sistema de seguimiento de errores de "
-"KDE. No olvide incluir la traza inversa de la pestaña <interface>Información "
-"para desarrolladores</interface>.</para>"
+"<nl /><nl /><link url='%1'>Informe manualmente</link> de este error en el "
+"sistema de seguimiento de errores de KDE. No olvide incluir la traza inversa "
+"de la pestaña <interface>Información para desarrolladores</interface>.</para>"
 
 #: drkonqidialog.cpp:178
 #, kde-kuit-format
@@ -866,23 +865,13 @@ msgid ""
 msgstr ""
 "<subtitle>¿Qué es una «traza inversa»?</subtitle><para>Básicamente, una "
 "traza inversa describe lo que estaba ocurriendo dentro de una\n"
-"aplicación cuando falló, de forma que los desarrolladores puedan\n"
-"rastrear dónde empezó el desastre. Aunque usted no entienda nada\n"
-"sobre ellas, contienen una considerable cantidad de información útil.<nl />\n"
-"Las trazas inversas se suelen utilizar durante las sesiones de depuración "
-"interactivas y post mortem.</para>"
+"aplicación cuando se produjo el fallo, de forma que los desarrolladores\n"
+"puedan rastrear dónde empezó el desastre. Aunque usted no entienda nada\n"
+"sobre ellas, contienen una cantidad considerable de información útil.<nl />\n"
+"Las trazas inversas se suelen usar durante las sesiones de depuración "
+"interactivas y <i>post mortem</i>.</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -895,19 +884,12 @@ msgid ""
 msgstr ""
 "Puede pulsar el botón <interface>Instalar símbolos de depuración</interface> "
 "para instalar automáticamente los paquetes de información de depuración no\n"
-"disponibles. Si este método no funciona, por favor, lea <link url='%1'>cómo "
-"crear informes de fallo útiles</link> para saber cómo obtener una traza\n"
+"disponibles. Si este método no funciona, consulte <link url='%1'>cómo crear "
+"informes de fallo útiles</link> para saber cómo obtener una traza\n"
 "inversa útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
 "archivos</link>), pulse el botón <interface>Volver a cargar</interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -915,10 +897,10 @@ msgid ""
 "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Por favor, lea <link url='%1'>cómo crear informes de fallo útiles</link> "
-"para saber cómo obtener una traza inversa útil. Instale los paquetes "
-"necesarios (<link url='%2'>lista de archivos</link>) y haga clic en el botón "
-"<interface>Recargar</interface>."
+"Consulte <link url='%1'>cómo crear informes de fallo útiles</link> para "
+"saber cómo obtener una traza inversa útil. Instale los paquetes\n"
+"necesarios (<link url='%2'>lista de archivos</link>) y pulse el botón "
+"<interface>Volver a cargar</interface>."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
@@ -1038,10 +1020,11 @@ msgid ""
 "accounts.</note>"
 msgstr ""
 "<note>Necesita una cuenta de usuario en el <link url='%1'>sistema de "
-"seguimiento de errores de KDE</link> para poder notificar un fallo, porque "
-"puede que nos pongamos en contacto con usted para pedirle más información.\n"
-"Si no dispone de una, puede <link url='%2'>crearla aquí</link>. Por favor, "
-"no use cuentas de correo desechables.</note>"
+"seguimiento de errores de KDE</link> para poder informar de un fallo, ya que "
+"es posible que nos pongamos en contacto con usted para pedirle más "
+"información.\n"
+"Si no dispone de una, puede <link url='%2'>crearla aquí</link>. No use "
+"cuentas de correo desechables.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1071,7 +1054,7 @@ msgstr ""
 "<para>El manejador de errores ha fallado, por lo que el proceso de\n"
 "informes automáticos se ha desactivado para reducir el riesgo de que\n"
 "vuelva a fallar.<nl /><nl />\n"
-"Por favor, <link url='%1'>informe manualmente</link> de este error\n"
+"<link url='%1'>Informe manualmente</link> de este error\n"
 "en el sistema de seguimiento de errores de KDE. No olvide incluir la\n"
 "traza inversa de la página <interface>Información para desarrolladores</"
 "interface>.\n"
@@ -1217,7 +1200,7 @@ msgstr "Introduzca los detalles sobre el fallo"
 #: qml/ReportPage.qml:26
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "Por favor, proporcione la siguiente información en inglés."
+msgstr "Proporcione la siguiente información en inglés."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
 msgctxt "@info"
@@ -1408,7 +1391,7 @@ msgstr ""
 "<para><note>Como la comunicación entre usted y los desarrolladores es "
 "necesaria para realizar una depuración efectiva,\n"
 "para seguir informando de este fallo <emphasis strong='true'>debe aceptar "
-"que los desarrolladores contacten con usted.</emphasis>.\n"
+"que los desarrolladores se pongan en contacto con usted.</emphasis>.\n"
 "</note></para><para>Siéntase libre de cerrar este diálogo si no está de "
 "acuerdo.</para>"
 
@@ -1457,7 +1440,7 @@ msgstr "La aplicación se ha cerrado de forma no esperada."
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
-msgstr "Por favor, notifique este error para ayudar a mejorar este software."
+msgstr "Informe de este error para ayudar a mejorar este software."
 
 #: statusnotifier.cpp:33
 #, kde-format
@@ -1478,7 +1461,7 @@ msgstr "%1 se ha cerrado de forma no esperada"
 #: statusnotifier.cpp:65
 #, kde-format
 msgid "Please report this error to help improve this software."
-msgstr "Por favor, notifique este error para ayudar a mejorar este software."
+msgstr "Informe de este error para ayudar a mejorar este software."
 
 #: statusnotifier.cpp:72
 #, kde-format
