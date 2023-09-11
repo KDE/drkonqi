@@ -5,13 +5,13 @@
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000.
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# Kishore G <kishore96@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-08-20 16:15+0530\n"
+"PO-Revision-Date: 2023-09-10 18:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -382,12 +382,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "அறிக்கையை சேமிப்பதற்கான கோப்பை உருவாக்க முடியவில்லை."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "அறிக்கையை கோப்புக்கு சேமி"
+msgstr "அறிக்கையை சேமிப்பது"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -624,11 +622,10 @@ msgid "The program was started by kdeinit"
 msgstr "இந்நிரல் kdeinit ஆல் துவக்கப்பட்டது"
 
 #: main.cpp:163
-#, fuzzy, kde-format
-#| msgid "Disable arbitrary disk access"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
-msgstr "துவக்க வட்டு இயக்கத்தை செயல் நீக்கு"
+msgstr ""
 
 #: main.cpp:164
 #, kde-format
@@ -1176,6 +1173,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
+"கைமுறையாக பிழையறிக்கையை சமர்ப்பிக்க உதவும் வகையில் முறிவுகுறித்த விவரங்களை கோப்புக்கு "
+"சேமிக்கும்."
 
 #: qml/SendingPage.qml:63
 msgctxt "@info"
@@ -1198,12 +1197,9 @@ msgid "Crash Report Sent"
 msgstr "பிழையறிக்கை அனுப்ப‍ப்பட்டுள்ளது"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "மீள்துவக்கு"
+msgstr "%1 தனை மீள்துவக்கு"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1216,9 +1212,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "கே.டீ.யீ.க்கு பங்களித்தமைக்கு நன்றி. இச்சாளரத்தை இப்போது நீங்கள் மூடலாம்."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "பிழையறிக்கை அனுப்ப‍ப்பட்டுள்ளது"
@@ -1226,7 +1219,7 @@ msgstr "பிழையறிக்கை அனுப்ப‍ப்பட்�
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "வருங்காலத்தில் முறிவுகளை தானாக தெரிவி"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1307,14 +1300,13 @@ msgid "Please report this error to help improve this software."
 msgstr "இச்செயலியை மேம்படுத்தும் வகையில், இம்முறிவை தெரிவியுங்கள்."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "செயலி எதிர்பாராத விதத்தில் முறிவடைந்தது."
+msgstr ""
+"செயலி எதிர்பாராத விதத்தில் முறிவடைந்தது. பிழையறிக்கை தானாக சமர்ப்பிக்கப்படுகிறது."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1389,13 +1381,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org பயனர் பெயர்"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org கடவுச்சொல்"
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"

@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-08-20 09:51+0200\n"
+"PO-Revision-Date: 2023-09-09 16:18+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.07.90\n"
+"X-Generator: Lokalize 23.08.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -430,12 +430,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Impossible de créer un fichier dans lequel enregistrer le rapport."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Enregistrer le rapport dans un fichier"
+msgstr "Enregistrer le rapport"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -894,16 +892,6 @@ msgstr ""
 "lors du débogage interactif et post-mortem.</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -924,13 +912,6 @@ msgstr ""
 "<interface>Recharger</interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -940,8 +921,9 @@ msgid ""
 msgstr ""
 "Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
 "plantages utiles</link> pour apprendre comment obtenir une pile d'appels "
-"utile, installer les paquets nécessaires (<link url='%2'>liste des fichiers</"
-"link>) puis cliquez sur le bouton <interface>Recharger</interface>."
+"utile, installer les paquets nécessaires\n"
+"(<link url='%2'>liste des fichiers</link>) puis cliquez sur le bouton "
+"<interface>Recharger</interface>."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
