@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-06 01:55+0000\n"
-"PO-Revision-Date: 2023-04-10 11:25+0200\n"
+"PO-Revision-Date: 2023-09-17 13:11+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -399,12 +399,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Nie można utworzyć pliku do zapisania zgłoszenia."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Zapisz zgłoszenie do pliku"
+msgstr "Zapisz sprawozdanie"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -475,7 +473,7 @@ msgstr ""
 "<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
 "obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl />Możesz "
 "ręcznie zgłosić ten błąd do %1 (dołączając ślad wykonywania z karty "
-"<interface>Informacje dla programisty</interface>.)</para>"
+"<interface>Szczegóły dla programisty</interface>.)</para>"
 
 #: drkonqidialog.cpp:187
 #, kde-kuit-format
@@ -791,12 +789,9 @@ msgid "Developer Information"
 msgstr "Szczegóły dla programisty"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@action"
 msgid "Report on bugs.kde.org"
-msgstr "Próba nawiązania połączenia z bugs.kde.org..."
+msgstr "Zgłoś na bugs.kde.org"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -860,16 +855,6 @@ msgstr ""
 "</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -889,13 +874,6 @@ msgstr ""
 "link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -905,8 +883,9 @@ msgid ""
 msgstr ""
 "Przeczytaj <link url='%1'>przewodnik skutecznego zgłaszania błędów</link>, "
 "aby dowiedzieć się jak uzyskać użyteczny ślad wykonywania. Następnie wgraj "
-"potrzebne pakiety (<link url='%2'>spis pakietów</link>) i naciśnij na "
-"przycisk <interface>Wczytaj ponownie</interface>."
+"potrzebne pakiety\n"
+"(<link url='%2'>spis pakietów</link>) i naciśnij na przycisk "
+"<interface>Wczytaj ponownie</interface>."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
@@ -1049,16 +1028,6 @@ msgstr ""
 "użyciu wpisanego adresu pocztowego i hasła."
 
 #: qml/main.qml:31
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1071,21 +1040,13 @@ msgid ""
 msgstr ""
 "<para>W programie do obsługi usterek, nastąpiła usterka,\n"
 "więc wyłączono system do zautomatyzowanego zgłaszania\n"
-"błędów po to,  aby zmniejszyć ryzyko ponownego wystąpienia usterki.\n"
+"błędów po to, aby zmniejszyć ryzyko ponownego wystąpienia usterki.\n"
 "<nl /><nl /> Proszę, <link url='%1'>ręcznie zgłosić</link> ten błąd\n"
 " do systemu obsługi błędów KDE. Nie zapomnij dołączyć\n"
-"śladu z karty <interface>Informacji dla programisty</interface>.\n"
+"śladu z karty <interface>Szczegóły dla programisty</interface>.\n"
 "</para>"
 
 #: qml/main.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1095,8 +1056,8 @@ msgid ""
 msgstr ""
 "<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
 "obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl />Możesz "
-"ręcznie zgłosić ten błąd do <link>%1</link> (dołączając ślad wykonywania z "
-"karty <interface>Szczegóły dla programisty</interface>.)</para>"
+"ręcznie zgłosić ten błąd do <link>%1</link> (dołączając ślad wykonywania ze "
+"strony <interface>Szczegóły dla programisty</interface>.)</para>"
 
 #: qml/main.qml:50
 msgctxt "@info"
@@ -1120,15 +1081,12 @@ msgstr ""
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Sam wyślij zgłoszenie"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Szczegóły dla programisty"
+msgstr "Zobacz szczegóły dla programisty"
 
 #: qml/PerfectDuplicatePage.qml:14
 msgctxt "@title"
@@ -1354,12 +1312,9 @@ msgid "Crash Report Sent"
 msgstr "Wysłano zgłoszenie usterki"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Uruchom program ponownie"
+msgstr "Uruchom ponownie %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1372,9 +1327,6 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dziękujemy za bycie częścią KDE. Możesz teraz zamknąć to okno."
 
 #: qml/SentryPage.qml:47
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Wysłano zgłoszenie usterki"
@@ -1382,7 +1334,7 @@ msgstr "Wysłano zgłoszenie usterki"
 #: qml/SentryPage.qml:54
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Zawsze zgłaszaj usterki samem w przyszłości"
 
 #: qml/SentryPage.qml:63
 msgctxt "@info:tooltip"
@@ -1391,6 +1343,9 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Sam wysyłaj zgłoszenie o usterkach do systemu obsługi błędów KDE. Nie jest "
+"wymagana żadna ręczna obsługa.\n"
+"Nie będziesz też więcej otrzymywać powiadomień o usterkach."
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1469,14 +1424,12 @@ msgid "Please report this error to help improve this software."
 msgstr "Zgłoszenie tego zdarzenia może pomóc nam usprawnić ten program."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Aplikacja nieoczekiwanie zamknęła się."
+msgstr "Aplikacja nieoczekiwanie zamknęła się. Sam wysłałem zgłoszenie."
 
 #: statusnotifier.cpp:47
 #, kde-format
