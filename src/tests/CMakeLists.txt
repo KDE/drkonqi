@@ -1,8 +1,3 @@
-if(NOT BUILD_TESTING)
-    # Skip everything. Particularly trying to look for integration test deps.
-    return()
-endif()
-
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
 find_package(Qt6Test ${REQUIRED_QT_VERSION} CONFIG REQUIRED)

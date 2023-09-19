@@ -161,6 +161,8 @@ configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drk
 install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 add_subdirectory(sentry)
-add_subdirectory(tests)
 
-add_subdirectory(bugzillaintegration/libbugzilla/autotests)
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+    add_subdirectory(bugzillaintegration/libbugzilla/autotests)
+endif()
