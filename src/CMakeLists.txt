@@ -123,7 +123,6 @@ target_link_libraries(
     KF6::KIOCore
     KF6::KIOGui
     KF6::Crash
-    KF6::Completion
     KF6::WindowSystem
     Qt::DBus
     Qt::Concurrent

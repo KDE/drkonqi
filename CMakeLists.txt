@@ -49,7 +49,6 @@ find_package(
         JobWidgets
         KIO
         Crash
-        Completion
         WidgetsAddons
         Wallet
         Notifications
