@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2023-07-23 23:03+0200\n"
+"PO-Revision-Date: 2023-10-08 22:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -45,20 +45,20 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"이 단추를 누르면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호 패키"
-"지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
+"이 단추를 클릭하면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호 패"
+"키지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
 
 #: backtracewidget.cpp:67
 #, kde-format
 msgctxt "@action:button"
 msgid "&Install Debug Symbols"
-msgstr "디버그 기호 설치하기(&I)"
+msgstr "디버그 기호 설치(&I)"
 
 #: backtracewidget.cpp:70 qml/DeveloperPage.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
-msgstr "이 단추를 누르면 없는 디버그 기호를 설치합니다."
+msgstr "이 단추를 클릭하면 없는 디버그 기호를 설치합니다."
 
 #: backtracewidget.cpp:77
 #, kde-format
@@ -75,7 +75,7 @@ msgstr ""
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "이 단추를 누르면 충돌 정보(역추적)를 클립보드에 복사합니다."
+msgstr "이 단추를 클릭하면 충돌 정보(역추적)를 클립보드에 복사합니다."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
@@ -84,8 +84,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
-"이 단추를 누르면 충돌 정보(역추적)를 파일로 저장합니다. 버그를 확인하고 싶거"
-"나 나중에 보고하고 싶을 때 사용하십시오."
+"이 단추를 클릭하면 충돌 정보(역추적)를 파일로 저장합니다. 버그를 확인하고 싶"
+"거나 나중에 보고하고 싶을 때 사용하십시오."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -183,8 +183,8 @@ msgid ""
 "the needed packages (<link url='%2'>list of files</link>) and click the "
 "<interface>Reload</interface> button."
 msgstr ""
-"<interface>디버그 기호 설치하기</interface> 단추를 클릭하면 시스템에 없는 디"
-"버그 정보 패키지를 자동으로 설치합니다. 이 방법이 작동하지 않는다면 <link "
+"<interface>디버그 기호 설치</interface> 단추를 클릭하면 시스템에 없는 디버그 "
+"정보 패키지를 자동으로 설치합니다. 이 방법이 작동하지 않는다면 <link "
 "url='%1'>유용한 충돌 보고서 만들기</link> 문서에서 유용한 역추적을 얻는 방법"
 "을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록"
 "</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
@@ -240,8 +240,8 @@ msgid ""
 "<strong>You need to first install the debugger application (%1) then click "
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
-"<strong>디버거 패키지(%1)을(를) 설치한 다음 <interface>새로 고침</interface> "
-"단추를 클릭하십시오.</strong>"
+"<strong>디버거 패키지(%1)를 설치한 다음 <interface>새로 고침</interface> 단추"
+"를 클릭하십시오.</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
@@ -406,7 +406,7 @@ msgstr "앱 다시 시작(&R)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
-msgstr "이 단추를 누르면 충돌한 앱을 다시 시작합니다."
+msgstr "이 단추를 클릭하면 충돌한 앱을 다시 시작합니다."
 
 #: drkonqidialog.cpp:117
 #, kde-format
@@ -781,7 +781,7 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
-"이 단추를 누르면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호\n"
+"이 단추를 클릭하면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호\n"
 "패키지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
 
 #: qml/DeveloperPage.qml:66
@@ -825,8 +825,8 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"<interface>디버그 기호 설치하기</interface> 단추를 클릭하면 시스템에 없는 디"
-"버그 정보 패키지를 자동으로 설치합니다. 이 방법이 작동하지 않는다면\n"
+"<interface>디버그 기호 설치</interface> 단추를 클릭하면 시스템에 없는 디버그 "
+"정보 패키지를 자동으로 설치합니다. 이 방법이 작동하지 않는다면\n"
 "<link url='%1'>유용한 충돌 보고서 만들기</link> 문서에서 유용한 역추적을 얻"
 "는 방법을 읽어 보십시오.\n"
 "필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록</link>) "
@@ -850,8 +850,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>디버거 앱(%1)을(를) 설치한 다음 <interface>새로 고침"
-"</interface> 단추를 클릭하십시오.</emphasis>"
+"<emphasis strong='true'>디버거 앱(%1)을 설치한 다음 <interface>새로 고침</"
+"interface> 단추를 클릭하십시오.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -975,7 +975,7 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"입력한 이메일 주소와 암호로 KDE 버그 추적 시스템에 로그인하려면 누르십시오."
+"입력한 이메일 주소와 암호로 KDE 버그 추적 시스템에 로그인하려면 클릭하십시오."
 
 #: qml/MainPage.qml:20
 msgctxt "@action"
