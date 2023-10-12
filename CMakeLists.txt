@@ -58,9 +58,6 @@ find_package(
         StatusNotifierItem
 )
 
-find_package(KUserFeedbackQt6)
-set_package_properties(KUserFeedbackQt6 PROPERTIES TYPE REQUIRED PURPOSE "Checking whether feedback is enabled or not")
-
 ecm_find_qmlmodule(org.kde.kirigami 2.19)
 ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
 ecm_find_qmlmodule(org.kde.kcmutils 1.0)

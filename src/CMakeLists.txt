@@ -135,7 +135,6 @@ target_link_libraries(
     KF6::StatusNotifierItem
     drkonqi_backtrace_parser
     qbugzilla
-    KUserFeedbackCoreQt6
 )
 
 if(Systemd_FOUND)
