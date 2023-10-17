@@ -34,7 +34,7 @@ void BugField::registerVariantConverters()
     QMetaType::registerConverter<QVariantList, QList<BugFieldValue *>>([](QVariantList v) -> QList<BugFieldValue *> {
         QList<BugFieldValue *> list;
         list.reserve(v.size());
-        for (const QVariant &variant : qAsConst(v)) {
+        for (const QVariant &variant : std::as_const(v)) {
             list.append(new BugFieldValue(variant.toHash()));
         }
         return list;

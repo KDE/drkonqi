@@ -21,7 +21,7 @@ QList<BugField::Ptr> BugFieldClient::getFields(KJob *kjob) const
 
     QList<BugField::Ptr> list;
     list.reserve(ary.size());
-    for (const auto &bug : qAsConst(ary)) {
+    for (const auto &bug : std::as_const(ary)) {
         list.append(BugField::Ptr(new BugField(bug.toObject().toVariantHash())));
     }
     return list;

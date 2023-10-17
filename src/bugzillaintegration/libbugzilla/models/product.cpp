@@ -94,7 +94,7 @@ void Product::registerVariantConverters()
     QMetaType::registerConverter<QVariantList, QList<ProductComponent *>>([](QVariantList v) -> QList<ProductComponent *> {
         QList<ProductComponent *> list;
         list.reserve(v.size());
-        for (const QVariant &variant : qAsConst(v)) {
+        for (const QVariant &variant : std::as_const(v)) {
             list.append(new ProductComponent(variant.toHash()));
         }
         return list;
@@ -103,7 +103,7 @@ void Product::registerVariantConverters()
     QMetaType::registerConverter<QVariantList, QList<ProductVersion *>>([](QVariantList v) -> QList<ProductVersion *> {
         QList<ProductVersion *> list;
         list.reserve(v.size());
-        for (const QVariant &variant : qAsConst(v)) {
+        for (const QVariant &variant : std::as_const(v)) {
             list.append(new ProductVersion(variant.toHash()));
         }
         return list;
