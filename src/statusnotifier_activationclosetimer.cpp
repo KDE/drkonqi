@@ -102,7 +102,7 @@ void IdleWatcher::start()
     }
 }
 
-QVector<QString> DBusServiceWatcher::serviceNames() const
+QList<QString> DBusServiceWatcher::serviceNames() const
 {
     return m_serviceNames;
 }

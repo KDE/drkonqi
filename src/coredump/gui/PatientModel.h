@@ -40,7 +40,7 @@ private:
     void addDynamicRoleNames(int maxEnumValue, QObject *object);
     [[nodiscard]] QMetaMethod propertyChangedMetaMethod() const;
 
-    QVector<QObject *> m_objects;
+    QList<QObject *> m_objects;
     QHash<int, QByteArray> m_roles;
     QHash<int, QByteArray> m_objectProperties;
     QHash<int, int> m_signalIndexToProperties;

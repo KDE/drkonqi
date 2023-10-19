@@ -262,7 +262,7 @@ static bool isFunctionUsefulForSearch(const BacktraceLine &line)
 {
     // Ignore Qt containers (and iterators Q*Iterator)
     if (line.functionName().startsWith(QLatin1String("QList")) || line.functionName().startsWith(QLatin1String("QLinkedList"))
-        || line.functionName().startsWith(QLatin1String("QVector")) || line.functionName().startsWith(QLatin1String("QStack"))
+        || line.functionName().startsWith(QLatin1String("QList")) || line.functionName().startsWith(QLatin1String("QStack"))
         || line.functionName().startsWith(QLatin1String("QQueue")) || line.functionName().startsWith(QLatin1String("QSet"))
         || line.functionName().startsWith(QLatin1String("QMap")) || line.functionName().startsWith(QLatin1String("QMultiMap"))
         || line.functionName().startsWith(QLatin1String("QMapData")) || line.functionName().startsWith(QLatin1String("QHash"))

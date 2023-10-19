@@ -20,7 +20,7 @@ public:
     using QObject::QObject;
 
     virtual void start();
-    QVector<QString> serviceNames() const;
+    QList<QString> serviceNames() const;
 
 Q_SIGNALS:
     void serviceUnregistered();
@@ -29,7 +29,7 @@ Q_SIGNALS:
 private:
     // org.kde.StatusNotifierWatcher (kded5): SNI won't be registered
     // org.freedesktop.Notifications (plasmashell): SNI won't be visualized
-    const QVector<QString> m_serviceNames{QStringLiteral("org.kde.StatusNotifierWatcher"), QStringLiteral("org.freedesktop.Notifications")};
+    const QList<QString> m_serviceNames{QStringLiteral("org.kde.StatusNotifierWatcher"), QStringLiteral("org.freedesktop.Notifications")};
     QDBusServiceWatcher *m_watcher = nullptr;
 };
 
