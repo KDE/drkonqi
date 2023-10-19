@@ -13,6 +13,11 @@ Kirigami.Page {
 
     title: CrashedApplication.name
 
+    Component.onCompleted: {
+        if (BacktraceGenerator.state === BacktraceGenerator.NotLoaded) {
+            BacktraceGenerator.start()
+        }
+    }
     Component.onDestruction: Settings.save()
 
     ColumnLayout {
