@@ -395,4 +395,9 @@ void DrKonqi::cleanupBeforeQuit()
     instance()->m_backend->cleanup();
 }
 
+bool DrKonqi::minimalMode()
+{
+    return qEnvironmentVariableIntValue("DRKONQI_MINIMAL_MODE") > 0;
+}
+
 #include "drkonqi.moc"

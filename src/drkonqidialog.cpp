@@ -47,7 +47,7 @@ static const QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral(
 
 void DrKonqiDialog::show()
 {
-    if (DrKonqi::isSafer()) {
+    if (DrKonqi::isSafer() || DrKonqi::minimalMode()) {
         QDialog::show();
         return;
     }

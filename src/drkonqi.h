@@ -71,6 +71,9 @@ public:
     // that the user has seen the crash but chosen to ignore it (e.g. closed the dialog window)
     static void cleanupBeforeQuit();
 
+    // Whether to use the minimalistic UI or not. Defaults to false.
+    static bool minimalMode();
+
 private:
     DrKonqi();
     ~DrKonqi();
