@@ -27,8 +27,8 @@ Kirigami.ScrollablePage {
         KItemModels.KSortFilterProxyModel { // set as model during state change
             id: patientFilterModel
             sourceModel: DrKonqi.PatientModel
-            filterRole: "ROLE_appName"
-            sortRole: "modelIndex"
+            filterRoleName: "ROLE_appName"
+            sortRoleName: "modelIndex"
             sortOrder: Qt.DescendingOrder
         }
 
