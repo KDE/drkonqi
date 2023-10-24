@@ -34,6 +34,7 @@ import multiprocessing
 from pathlib import Path
 from pygdbmi import gdbmiparser
 import psutil
+import trace
 
 class UnexpectedMappingException(Exception):
     pass
@@ -623,7 +624,7 @@ def print_sentry_payload(thread):
             tmpfile.write(json.dumps(payload))
             tmpfile.flush()
 
-def print_preamble():
+def print_internal():
     thread = gdb.selected_thread()
     if thread == None:
         # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
@@ -634,3 +635,11 @@ def print_preamble():
     print_qml_trace()
     # prints sentry report
     print_sentry_payload(thread)
+
+
+def print_preamble():
+    print("hello")
+    import trace
+    tracer = trace.Trace(trace=1, count=0, countfuncs=0, outfile=sys.stdout, ignoredirs=['/usr/share/gdb'],
+     ignoremods=['os', 'sys', 'posixpath', 'subprocess', 'sentry', 'uuid', 'platform', 'pathlib', 're', 'sre_parse'])
+    tracer.run('print_internal()')
