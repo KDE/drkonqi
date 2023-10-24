@@ -71,6 +71,7 @@ public:
 
 private Q_SLOTS:
     void resetState();
+    void newLineInternal(const QString &lineStr);
 
 protected Q_SLOTS:
     /*! Called every time there is a new line from the generator. Subclasses should parse

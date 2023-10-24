@@ -45,6 +45,7 @@ void BacktraceParser::connectToGenerator(QObject *generator)
 {
     connect(generator, SIGNAL(starting()), this, SLOT(resetState()));
     connect(generator, SIGNAL(newLine(QString)), this, SLOT(newLine(QString)));
+    connect(generator, SIGNAL(newLine(QString)), this, SLOT(newLineInternal(QString)));
 }
 
 QString BacktraceParser::parsedBacktrace() const
@@ -389,6 +390,12 @@ QString BacktraceParser::informationLines() const
     if (!ret.endsWith(QLatin1Char('\n')))
         ret += QLatin1Char('\n');
     return ret;
+}
+
+void BacktraceParser::newLineInternal(const QString &)
+{
+    Q_D(BacktraceParser);
+    d->m_usefulness = InvalidUsefulness;
 }
 
 #include "moc_backtraceparser.cpp"
