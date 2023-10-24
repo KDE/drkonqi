@@ -110,6 +110,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget *parent)
     m_buttonBox = new QDialogButtonBox(this);
     connect(m_buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accepted);
     connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::rejected);
+    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::close);
     l->addWidget(m_buttonBox);
 
     connect(m_tabWidget, &QTabWidget::currentChanged, this, &DrKonqiDialog::tabIndexChanged);
