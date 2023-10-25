@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:38+0000\n"
+"POT-Creation-Date: 2023-10-25 01:50+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -436,19 +436,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ใช้ปุ่มนี้เพื่อเริ่มการทำงานของโปรแกรมที่ทำงานล้มเหลวใหม่อีกครั้ง"
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:122
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&ข้อมูลทั่วไป"
 
-#: drkonqidialog.cpp:125
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:24
+#: drkonqidialog.cpp:161 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -457,7 +457,7 @@ msgstr ""
 "<para>ต้องขออภัยด้วย เนื่องจากโปรแกรม <application>%1</application> "
 "ปิดตัวเองอย่างไม่คาดคิด</para>"
 
-#: drkonqidialog.cpp:168
+#: drkonqidialog.cpp:169
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -479,7 +479,7 @@ msgstr ""
 "><nl /> โปรดทำการรายงานข้อผิดพลาดนี้ว่า \"drkonqi\" ทำงานผิดพลาดด้วยตัวคุณเอง ไปยัง %1 "
 "และอย่างลืมรวบรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย</para>"
 
-#: drkonqidialog.cpp:178
+#: drkonqidialog.cpp:179
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 ">คุณสามารถรายงานข้อผิดพลาดนี้ด้วยตัวคุณเอง ไปยัง %1 "
 "(โดยรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย)</para>"
 
-#: drkonqidialog.cpp:187
+#: drkonqidialog.cpp:188
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -510,7 +510,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:196 qml/main.qml:62
+#: drkonqidialog.cpp:197 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -529,7 +529,7 @@ msgstr ""
 "para><para><note>คุณสามารถปิดกล่องแจ้งรายงานนี้ได้อย่างปลอดภัย "
 "หากคุณไม่ต้องการจะแจ้งรายงานข้อผิดพลาดนี้</note></para>"
 
-#: drkonqidialog.cpp:203 qml/main.qml:24
+#: drkonqidialog.cpp:204 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -543,13 +543,13 @@ msgstr ""
 "<para>คุณไม่สามารถจะรายงานข้อผิดพลาดนี้ได้ เนื่องจากตัวโปรแกรม "
 "ไม่ได้ให้ที่อยู่ในการแจ้งข้อผิดพลาดมาด้วย</para>"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:212
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "รายละเอียด:"
 
-#: drkonqidialog.cpp:215
+#: drkonqidialog.cpp:216
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -563,7 +563,7 @@ msgstr ""
 "<para>แฟ้มประมวลผล: <application>%1</application> <br/>เลขโพรเซส (PID): "
 "<numid>%2</numid> <br/>สัญญาณ: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:245
+#: drkonqidialog.cpp:246
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button this is the debug menu button label which contains the "
@@ -575,19 +575,19 @@ msgctxt ""
 msgid "&Debug"
 msgstr "ดีบั๊ก"
 
-#: drkonqidialog.cpp:247
+#: drkonqidialog.cpp:248
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "เริ่มการทำงานของโปรแกรมดีบั๊ก เพื่อดีบั๊กโปรแกรมที่ทำงานล้มเหลว"
 
-#: drkonqidialog.cpp:276
+#: drkonqidialog.cpp:277
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "ปิดกล่องแจ้งรายงานนี้ (คุณจะสูญเสียข้อมูลรายละเอียดของการทำงานล้มเหลว)"
 
-#: drkonqidialog.cpp:285
+#: drkonqidialog.cpp:286
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
@@ -1262,12 +1262,12 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/MainPage.qml:50
+#: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr ""
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:69
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:38+0000\n"
+"POT-Creation-Date: 2023-10-25 01:50+0000\n"
 "PO-Revision-Date: 2023-09-19 19:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -439,19 +439,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Utilitzeu este botó per a tornar a iniciar l'aplicació que ha fallat."
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:122
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&General"
 
-#: drkonqidialog.cpp:125
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informació del &desenvolupador"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:24
+#: drkonqidialog.cpp:161 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -460,7 +460,7 @@ msgstr ""
 "<para>Ho sentim, <application>%1</application> s'ha tancat inesperadament.</"
 "para>"
 
-#: drkonqidialog.cpp:168
+#: drkonqidialog.cpp:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -477,7 +477,7 @@ msgstr ""
 "inversa des de la pestanya <interface>Informació del desenvolupador</"
 "interface>.</para>"
 
-#: drkonqidialog.cpp:178
+#: drkonqidialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -491,7 +491,7 @@ msgstr ""
 "manualment a %1 (incloent-hi la traça inversa des de la pestanya "
 "<interface>Informació del desenvolupador</interface>).</para>"
 
-#: drkonqidialog.cpp:187
+#: drkonqidialog.cpp:188
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -509,7 +509,7 @@ msgstr ""
 "de la sessió i tornar a entrar-hi per tal d'assegurar que l'actualització "
 "s'ha aplicat completament i no provoca cap efecte col·lateral.</para>"
 
-#: drkonqidialog.cpp:196 qml/main.qml:62
+#: drkonqidialog.cpp:197 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -519,7 +519,7 @@ msgstr ""
 "<para>Podeu ajudar a millorar el programari de KDE informant d'este error."
 "<nl /><link url='%1'>Apreneu més quant a informar d'errors.</link></para>"
 
-#: drkonqidialog.cpp:203 qml/main.qml:24
+#: drkonqidialog.cpp:204 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -529,13 +529,13 @@ msgstr ""
 "<para>No podeu informar d'este error, perquè <application>%1</application> "
 "no ha proporcionat cap adreça d'informe d'error.</para>"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:212
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalls:"
 
-#: drkonqidialog.cpp:215
+#: drkonqidialog.cpp:216
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -545,7 +545,7 @@ msgstr ""
 "<para>Executable: <application>%1</application> PID: %2 Senyal: %3 (%4) "
 "Hora: %5 %6</para>"
 
-#: drkonqidialog.cpp:245
+#: drkonqidialog.cpp:246
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -553,20 +553,20 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Depura"
 
-#: drkonqidialog.cpp:247
+#: drkonqidialog.cpp:248
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Inicia un programa per a depurar l'aplicació que ha fallat."
 
 # skip-rule: punctuation-period-no
-#: drkonqidialog.cpp:276
+#: drkonqidialog.cpp:277
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Tanqueu este diàleg (perdreu la informació de la fallada)."
 
-#: drkonqidialog.cpp:285
+#: drkonqidialog.cpp:286
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
@@ -1094,12 +1094,12 @@ msgstr ""
 "de la sessió i tornar a entrar-hi per tal d'assegurar que l'actualització\n"
 "s'ha aplicat completament i no provoca cap efecte col·lateral.</para>"
 
-#: qml/MainPage.qml:50
+#: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr "Envia un informe automàtic"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:69
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Vegeu la informació del desenvolupador"
@@ -1180,7 +1180,7 @@ msgid ""
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
 "<para>Esta és una vista prèvia del contingut de l'informe que s'enviarà.</"
-"para><para>Si voleu modificar-lo, aneu a les pàgines anteriors.</para>"
+"para><para>Si voleu modificar-lo, aneu fins a les pàgines anteriors.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"

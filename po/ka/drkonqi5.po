@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-20 01:38+0000\n"
+"POT-Creation-Date: 2023-10-25 01:50+0000\n"
 "PO-Revision-Date: 2023-09-07 03:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -418,19 +418,19 @@ msgid "Use this button to restart the crashed application."
 msgstr ""
 "ავარიულად დასრულებული აპლიკაციის თავიდან გასაშვებად ეს ღილაკი გამოიყენეთ."
 
-#: drkonqidialog.cpp:121
+#: drkonqidialog.cpp:122
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&ზოგადი"
 
-#: drkonqidialog.cpp:125
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&ინფორმაცია პროგრამისტისთვის"
 
-#: drkonqidialog.cpp:160 qml/MainPage.qml:24
+#: drkonqidialog.cpp:161 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -438,7 +438,7 @@ msgid ""
 msgstr ""
 "<para>უკაცრავად, <application>%1</application> მოულოდნელად დაიხურა.</para>"
 
-#: drkonqidialog.cpp:168
+#: drkonqidialog.cpp:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -454,7 +454,7 @@ msgstr ""
 "დაგავიწყდეთ ასევე მიამაგროთ უკუტრეისი <interface>პროგრამისტების ინფორმაციის</"
 "interface> ჩანართიდან.</para>"
 
-#: drkonqidialog.cpp:178
+#: drkonqidialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -468,7 +468,7 @@ msgstr ""
 "(<interface>პროგრამისტის ინფორმაციის</interface> ჩანართში არსებული "
 "უკუტრეისის ჩათვლით.)</para>"
 
-#: drkonqidialog.cpp:187
+#: drkonqidialog.cpp:188
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -486,7 +486,7 @@ msgstr ""
 "და თავიდან შეხვიდეთ სისტემაში, რათა დარწმუნდეთ, რომ ყველა განახლებული "
 "პროგრამა თავიდან გაეშვა და პრობლემებს არ იწვევს.</para>"
 
-#: drkonqidialog.cpp:196 qml/main.qml:62
+#: drkonqidialog.cpp:197 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "შესახებ.<nl /><link url='%1'>შეიტყვეთ მეტი შეცდომების შესახებ ანგარიშის "
 "გამოგზავნის შესახებ.</link></para>"
 
-#: drkonqidialog.cpp:203 qml/main.qml:24
+#: drkonqidialog.cpp:204 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,13 +507,13 @@ msgstr ""
 "<para>ამ შეცდომის გადაგზავნა არ შეგიძლიათ, რადგან <application>%1</"
 "application>-ს შეცდომების გადასაგზავნი მისამართი მითითებული არ აქვს.</para>"
 
-#: drkonqidialog.cpp:211
+#: drkonqidialog.cpp:212
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "დეტალები:"
 
-#: drkonqidialog.cpp:215
+#: drkonqidialog.cpp:216
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -523,7 +523,7 @@ msgstr ""
 "<para>გამშვები ფაილი: <application>%1</application> PID: %2 სიგნალი: %3 (%4) "
 "დრო: %5 %6</para>"
 
-#: drkonqidialog.cpp:245
+#: drkonqidialog.cpp:246
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -531,19 +531,19 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&გამართვა"
 
-#: drkonqidialog.cpp:247
+#: drkonqidialog.cpp:248
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "ავარიულად დასრულებული პროგრამის გამართვის აპის გაშვება."
 
-#: drkonqidialog.cpp:276
+#: drkonqidialog.cpp:277
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "ამ ფანჯრის დახურვა (დაკარგავთ ავარიის ინფორმაციას.)"
 
-#: drkonqidialog.cpp:285
+#: drkonqidialog.cpp:286
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
@@ -1068,12 +1068,12 @@ msgstr ""
 "რათა დარწმუნდეთ, რომ ყველა განახლებული პროგრამა\n"
 "თავიდან გაეშვა და პრობლემებს არ იწვევს.</para>"
 
-#: qml/MainPage.qml:50
+#: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr "ავტომატური ანგარიშის გაგზავნა"
 
-#: qml/MainPage.qml:64
+#: qml/MainPage.qml:69
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "იხ. ინფორმაცია დეველოპერზე"
