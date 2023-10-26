@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain("drkonqi5");
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("drkonqi5"));
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);
