@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi5.po 1663194 2023-10-25 02:13:37Z scripty $
+# $Id: drkonqi5.po 1663933 2023-11-03 02:03:16Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-09-06 07:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -799,9 +799,12 @@ msgid "Developer Information"
 msgstr "Informacije za razvijalce"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Poročaj na bugs.kde.org"
+#, fuzzy
+#| msgctxt "@info report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Poročaj na %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1519,6 +1522,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org geslo"
 
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Poročaj na bugs.kde.org"
+
 #~ msgctxt "@info/rich"
 #~ msgid ""
 #~ "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -2123,10 +2130,6 @@ msgstr "bugstest.kde.org geslo"
 #~ msgstr ""
 #~ "Poročilo lahko vzdrževalcu programa ročno oddate na <link>%1</link>. Da "
 #~ "zaprete pomočnika, kliknite <interface>Zaključi</interface>."
-
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "Poročaj na %1"
 
 #~ msgctxt "@title:window"
 #~ msgid "Related Bug Report"

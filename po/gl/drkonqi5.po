@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-10-11 12:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -805,9 +805,12 @@ msgid "Developer Information"
 msgstr "Información de desenvolvemento"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Informe en bugs.kde.org"
+#, fuzzy
+#| msgctxt "@info report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Informe para %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1521,6 +1524,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasinal en bugstest.kde.org"
 
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Informe en bugs.kde.org"
+
 #~ msgctxt "@info/rich"
 #~ msgid ""
 #~ "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -2065,10 +2072,6 @@ msgstr "Contrasinal en bugstest.kde.org"
 #~ msgstr ""
 #~ "Pode informar manualmente deste fallo ao seu mantedor en <link> %1</"
 #~ "link>. Prema <interface>Rematar</interface> para pechar o asistente."
-
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "Informe para %1"
 
 #~ msgctxt "@title:window"
 #~ msgid "Related Bug Report"

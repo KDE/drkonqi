@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2019-07-30 11:33+0900\n"
 "Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -803,9 +803,12 @@ msgid "Developer Information"
 msgstr "開発者情報(&D)"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr ""
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Report Bug"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "バグを報告"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"

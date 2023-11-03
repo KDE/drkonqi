@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-09-02 18:10+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -790,9 +790,12 @@ msgid "Developer Information"
 msgstr "Utviklarinformasjon"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Meld inn på bugs.kde.org"
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Report Bug"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Meld inn feil"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1524,3 +1527,7 @@ msgstr "bugstest.kde.org-brukarnamn"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-passord"
+
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Meld inn på bugs.kde.org"

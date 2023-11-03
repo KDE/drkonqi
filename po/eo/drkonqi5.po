@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-09-09 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -788,9 +788,12 @@ msgid "Developer Information"
 msgstr "Informoj pri Programisto"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Raporti ĉe bugs.kde.org"
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Report Bug"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Raporti cimon"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1509,6 +1512,10 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
+
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Raporti ĉe bugs.kde.org"
 
 #~ msgctxt "@info/rich"
 #~ msgid ""

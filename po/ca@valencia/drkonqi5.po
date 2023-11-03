@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-09-19 19:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -806,9 +806,12 @@ msgid "Developer Information"
 msgstr "Informació del desenvolupador"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Informe a bugs.kde.org"
+#, fuzzy
+#| msgctxt "Notification action button, keep short"
+#| msgid "Report Bug"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Informeu d'un error"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1530,3 +1533,7 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
+
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Informe a bugs.kde.org"

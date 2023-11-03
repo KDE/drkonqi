@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-10-26 15:15-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -814,9 +814,12 @@ msgid "Developer Information"
 msgstr "Informações do desenvolvedor"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "Reportar erros no bugs.kde.org"
+#, fuzzy
+#| msgctxt "@info report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Relatar para %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1541,6 +1544,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Senha no bugstest.kde.org"
 
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "Reportar erros no bugs.kde.org"
+
 #~ msgctxt "@info/rich"
 #~ msgid ""
 #~ "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -2151,10 +2158,6 @@ msgstr "Senha no bugstest.kde.org"
 #~ msgstr ""
 #~ "Você pode relatar este erro manualmente ao seu mantenedor em <link>%1</"
 #~ "link>. Clique em <interface>Concluir</interface> para fechar o assistente."
-
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "Relatar para %1"
 
 #~ msgctxt "@title:window"
 #~ msgid "Related Bug Report"

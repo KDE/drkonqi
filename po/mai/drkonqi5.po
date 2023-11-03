@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2010-09-24 21:31+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -782,9 +782,12 @@ msgid "Developer Information"
 msgstr "विकासकएनिहार सूचना (&D)"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr ""
+#, fuzzy
+#| msgctxt "@info/plain report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "%1 मे रिपोट करू"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1509,13 +1512,6 @@ msgstr ""
 #~ msgctxt "@info"
 #~ msgid "This report is considered helpful."
 #~ msgstr "ई रिपोर्ट मद्दतिकएनिहार प्रतीत होइछ."
-
-#, fuzzy
-#~| msgctxt "@info/plain report to url/mail address"
-#~| msgid "Report to %1"
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "%1 मे रिपोट करू"
 
 #~ msgctxt "@title:window"
 #~ msgid "Bug Description"

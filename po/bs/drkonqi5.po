@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2013-11-10 23:14+0000\n"
 "Last-Translator: Emrah Dautbegovic <edautbegov1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -878,9 +878,12 @@ msgid "Developer Information"
 msgstr "&Podaci za programere"
 
 #: qml/DeveloperPage.qml:33
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr ""
+#, fuzzy
+#| msgctxt "@info/plain report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Prijavi na %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -2369,13 +2372,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Grešku možete ručno prijaviti održavaocu na <link>%1</link>. Kliknite na "
 #~ "<interface>Završi</interface> da zatvorite pomoćnik."
-
-#, fuzzy
-#~| msgctxt "@info/plain report to url/mail address"
-#~| msgid "Report to %1"
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "Prijavi na %1"
 
 #~ msgctxt "@title:window"
 #~ msgid "Related Bug Report"

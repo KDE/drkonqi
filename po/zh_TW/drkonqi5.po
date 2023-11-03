@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-25 01:50+0000\n"
+"POT-Creation-Date: 2023-11-03 01:40+0000\n"
 "PO-Revision-Date: 2023-10-21 18:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -768,11 +768,11 @@ msgstr "開發者資訊"
 
 #: qml/DeveloperPage.qml:33
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
-msgctxt "@action"
-msgid "Report on bugs.kde.org"
-msgstr "正在嘗試連線至 bugs.kde.org…"
+#| msgctxt "@info report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "回報給 %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -1495,6 +1495,13 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密碼"
 
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Trying to contact bugs.kde.org..."
+#~ msgctxt "@action"
+#~ msgid "Report on bugs.kde.org"
+#~ msgstr "正在嘗試連線至 bugs.kde.org…"
+
 #~ msgctxt "@info/rich"
 #~ msgid ""
 #~ "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -2039,10 +2046,6 @@ msgstr "bugstest.kde.org 密碼"
 #~ msgstr ""
 #~ "您可以手動在 <link>%1</link> 回報此問題。點擊「<interface>完成</"
 #~ "interface>」來關閉此小助手。"
-
-#~ msgctxt "@info report to url/mail address"
-#~ msgid "Report to %1"
-#~ msgstr "回報給 %1"
 
 #~ msgctxt "@title:window"
 #~ msgid "Related Bug Report"
