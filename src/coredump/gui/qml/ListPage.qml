@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2020-2022 Harald Sitter <sitter@kde.org>
 
 import QtQuick 2.15
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
@@ -32,11 +33,20 @@ Kirigami.ScrollablePage {
             sortOrder: Qt.DescendingOrder
         }
 
-        delegate: Kirigami.BasicListItem {
-            label: modelObject.appName
-            subtitle: modelObject.dateTime
+        delegate: QQC2.ItemDelegate {
+            id: delegate
+
+            text: modelObject.appName
             icon.name: modelObject.iconName
+
+            width: ListView.view.width
             onClicked: pageStack.push("qrc:/DetailsPage.qml", {patient: modelObject})
+
+            contentItem: Kirigami.IconTitleSubtitle {
+                title: delegate.text
+                subtitle: modelObject.dateTime
+                icon: icon.fromControlsIcon(delegate.icon)
+            }
         }
 
         Kirigami.PlaceholderMessage {

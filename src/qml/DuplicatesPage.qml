@@ -58,14 +58,12 @@ Kirigami.ScrollablePage {
                 property bool isDuplicate: reportInterface.attachToBugNumber === ROLE_Number
 
                 highlighted: isDuplicate
+                onClicked: Qt.openUrlExternally(Globals.bugzillaUrl + "show_bug.cgi?id=" + ROLE_Number)
 
-                Kirigami.BasicListItem {
-                    icon: reportInterface.attachToBugNumber === ROLE_Number ? "document-duplicate" : undefined
-                    separatorVisible: false // to parent
-                    supportsMouseEvents: false // to parent
-                    text: ROLE_Title
+                contentItem: Kirigami.IconTitleSubtitle {
+                    icon.name: reportInterface.attachToBugNumber === ROLE_Number ? "document-duplicate" : ""
+                    title: ROLE_Title
                     subtitle: ROLE_Number
-                    onClicked: Qt.openUrlExternally(Globals.bugzillaUrl + "show_bug.cgi?id=" + ROLE_Number)
                 }
 
                 actions: [
