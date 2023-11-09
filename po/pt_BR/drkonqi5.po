@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:52+0000\n"
-"PO-Revision-Date: 2023-10-26 15:15-0300\n"
+"POT-Creation-Date: 2023-11-09 01:38+0000\n"
+"PO-Revision-Date: 2023-11-08 15:50-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -346,22 +346,22 @@ msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Executar depurador interativo"
 
-#: coredump/gui/qml/ListPage.qml:13
+#: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
 msgstr "Falhas"
 
-#: coredump/gui/qml/ListPage.qml:47
+#: coredump/gui/qml/ListPage.qml:57
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Carregando o relatório de falha"
 
-#: coredump/gui/qml/ListPage.qml:55
+#: coredump/gui/qml/ListPage.qml:65
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Nenhum processo travou ainda"
 
-#: coredump/gui/qml/ListPage.qml:63
+#: coredump/gui/qml/ListPage.qml:73
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Nenhum processo corresponde ao termo pesquisado"
@@ -720,7 +720,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Exibir o conteúdo do \"backtrace\" (avançado)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Próximo"
@@ -814,12 +814,9 @@ msgid "Developer Information"
 msgstr "Informações do desenvolvedor"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
-msgstr "Relatar para %1"
+msgstr "Relatar em %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -955,12 +952,12 @@ msgstr ""
 "Você tem certeza de que a falha que aconteceu com você é uma duplicata deste "
 "relatório de erros?"
 
-#: qml/DuplicatesPage.qml:74
+#: qml/DuplicatesPage.qml:72
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
 msgstr "A falha é um duplicado"
 
-#: qml/DuplicatesPage.qml:76
+#: qml/DuplicatesPage.qml:74
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
@@ -969,17 +966,17 @@ msgstr ""
 "Use esta ação quando tiver certeza de que sua falha é uma duplicata deste "
 "relatório de erros"
 
-#: qml/DuplicatesPage.qml:87
+#: qml/DuplicatesPage.qml:85
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "A falha não é uma duplicata"
 
-#: qml/DuplicatesPage.qml:95
+#: qml/DuplicatesPage.qml:93
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "Sugerir que esta falha está relacionada"
 
-#: qml/DuplicatesPage.qml:97
+#: qml/DuplicatesPage.qml:95
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -992,7 +989,7 @@ msgstr ""
 "este\n"
 "                                     relatório de erro"
 
-#: qml/DuplicatesPage.qml:110
+#: qml/DuplicatesPage.qml:108
 msgctxt "@action:button"
 msgid "This crash is not related"
 msgstr "Esta falha não está relacionada"

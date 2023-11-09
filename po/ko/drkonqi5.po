@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:52+0000\n"
+"POT-Creation-Date: 2023-11-09 01:38+0000\n"
 "PO-Revision-Date: 2023-10-08 22:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -316,22 +316,22 @@ msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "인터랙티브 디버거 실행"
 
-#: coredump/gui/qml/ListPage.qml:13
+#: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
 msgstr "충돌"
 
-#: coredump/gui/qml/ListPage.qml:47
+#: coredump/gui/qml/ListPage.qml:57
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "충돌 보고 불러오는 중"
 
-#: coredump/gui/qml/ListPage.qml:55
+#: coredump/gui/qml/ListPage.qml:65
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "충돌한 프로세스 없음"
 
-#: coredump/gui/qml/ListPage.qml:63
+#: coredump/gui/qml/ListPage.qml:73
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "검색과 일치하는 충돌 없음"
@@ -675,7 +675,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "역추적 내용 표시(고급)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
 msgctxt "@action:button"
 msgid "Next"
 msgstr "다음"
@@ -897,12 +897,12 @@ msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr "현재 충돌이 다음 버그 보고의 충돌과 같은지 확신합니까?"
 
-#: qml/DuplicatesPage.qml:74
+#: qml/DuplicatesPage.qml:72
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
 msgstr "충돌이 중복됨"
 
-#: qml/DuplicatesPage.qml:76
+#: qml/DuplicatesPage.qml:74
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
@@ -910,17 +910,17 @@ msgid ""
 msgstr ""
 "현재 충돌이 이 버그 보고와 중복됨을 확신할 수 있다면 이 동작을 사용하십시오"
 
-#: qml/DuplicatesPage.qml:87
+#: qml/DuplicatesPage.qml:85
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
 msgstr "충돌이 중복이 아님"
 
-#: qml/DuplicatesPage.qml:95
+#: qml/DuplicatesPage.qml:93
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
 msgstr "이 충돌이 관련된 것으로 제안"
 
-#: qml/DuplicatesPage.qml:97
+#: qml/DuplicatesPage.qml:95
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -932,7 +932,7 @@ msgstr ""
 "                                     이 버그 보고와 관련이있는 것으로\n"
 "                                     제안합니다"
 
-#: qml/DuplicatesPage.qml:110
+#: qml/DuplicatesPage.qml:108
 msgctxt "@action:button"
 msgid "This crash is not related"
 msgstr "이 충돌은 관련 없음"
