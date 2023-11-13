@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:38+0000\n"
-"PO-Revision-Date: 2023-11-03 23:51+0100\n"
+"PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -54,7 +54,7 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"Uzu ĉi tiun butonon por reŝargi la kraŝinformojn (retrospuro). Ĉi tio estas "
+"Uzu ĉi tiun butonon por reŝargi la paneoinformojn (retrospuro). Ĉi tio estas "
 "utila kiam vi instalis la taŭgajn sencimigajn simbolpakaĵojn kaj vi volas "
 "akiri pli bonan retrospuron."
 
@@ -133,7 +133,7 @@ msgid ""
 "Another debugger is currently debugging the same application. The crash "
 "information could not be fetched."
 msgstr ""
-"Alia erarserĉilo nuntempe elpurigas la saman aplikaĵon. La kraŝinformoj ne "
+"Alia erarserĉilo nuntempe elpurigas la saman aplikaĵon. La paneoinformoj ne "
 "povis esti prenitaj."
 
 #: backtracewidget.cpp:193
@@ -215,9 +215,9 @@ msgid ""
 "url='%2'>list of files</link>) and click the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Bonvolu legi <link url='%1'>Kiel krei utilajn kraŝraportojn</link> por lerni "
-"kiel akiri utilan malantaŭan spuron; instalu la bezonatajn pakaĵojn (<link "
-"url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
+"Bonvolu legi <link url='%1'>Kiel krei utilajn paneoraportojn</link> por "
+"lerni kiel akiri utilan malantaŭan spuron; instalu la bezonatajn pakaĵojn "
+"(<link url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
 "<interface>Reŝargi</interface>."
 
 #: backtracewidget.cpp:301
@@ -691,7 +691,7 @@ msgstr "Ne montri sciigon sed lanĉi la sencimigan dialogon rekte"
 #: qml/BacktracePage.qml:11
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Prenante la retrospuron (Aŭtomataj Kraŝinformoj)"
+msgstr "Prenante la retrospuron (Aŭtomataj Paneoinformoj)"
 
 #: qml/BacktracePage.qml:25
 msgctxt "@action:button"
@@ -927,7 +927,7 @@ msgstr ""
 #: qml/DuplicatesPage.qml:72
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr "Kraŝo estas duplikato"
+msgstr "Paneo estas duplikato"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@info:tooltip"
@@ -941,7 +941,7 @@ msgstr ""
 #: qml/DuplicatesPage.qml:85
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr "Kraŝo ne estas duplikato"
+msgstr "Paneo ne estas duplikato"
 
 #: qml/DuplicatesPage.qml:93
 msgctxt "@action:button"
@@ -1229,7 +1229,8 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
-"<subtitle>Priskribu kiel eble plej detale la kraŝcirkonstancojn:</subtitle>\n"
+"<subtitle>Priskribu kiel eble plej detale la paneocirkonstancojn:</"
+"subtitle>\n"
 "<list>\n"
 "<item>Detaligi kiujn agojn vi faris ene kaj ekster la aplikaĵo momento antaŭ "
 "la paneo.</item>\n"
@@ -1303,7 +1304,7 @@ msgstr "Sendante cimraporton..."
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Kraŝa Raporto Sendita"
+msgstr "Panea Raporto Sendita"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
 msgctxt "@action %1 is an application name e.g. kwrite"
