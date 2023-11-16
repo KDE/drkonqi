@@ -63,7 +63,7 @@ ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
 ecm_find_qmlmodule(org.kde.kcmutils 1.0)
 ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 
-find_package(Python3 COMPONENTS Interpreter)
+find_package(Python3 3.8 COMPONENTS Interpreter)
 
 find_pythonmodule(psutil)
 find_pythonmodule(pygdbmi)
