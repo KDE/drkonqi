@@ -289,7 +289,9 @@ class SentryImage:
                     lookup = None
                 objfiles = gdb.objfiles()
                 self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
-                raise UnexpectedMappingException("unexpected mapping fail {} {} {} {}".format(self.file, lookup, objfiles, self_objfiles))
+                if sentry_sdk:
+                    sentry_sdk.capture_exception(UnexpectedMappingException("unexpected mapping fail {} {} {} {}"
+                                                                            .format(self.file, lookup, objfiles, self_objfiles)))
             return
         self.valid = True
 

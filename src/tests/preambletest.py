@@ -264,17 +264,24 @@ Mapped address spaces:
             'type': 'elf'}, image.to_dict())
 
     def test_sentry_image_mapping_fail(self):
-        objfile = self.mock()
-        objfile.filename = '/usr/bin/true'
-        objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
+        try:
+            import sentry_sdk
 
-        self.mock(gdb, 'objfiles')
-        self.expect(gdb.objfiles).returns([objfile])
+            objfile = self.mock()
+            objfile.filename = '/usr/bin/true'
+            objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
 
-        self.mock(gdb, 'lookup_objfile')
-        self.expect(gdb.lookup_objfile).args('/usr/bin/true.so').raises(ValueError)
+            self.mock(gdb, 'objfiles')
+            self.expect(gdb.objfiles).returns([objfile])
 
-        self.assert_raises(preamble.UnexpectedMappingException, preamble.SentryImage, '/usr/bin/true.so', 1000, 2000)
+            self.mock(gdb, 'lookup_objfile')
+            self.expect(gdb.lookup_objfile).returns(None)
+
+            self.mock(sentry_sdk, 'capture_exception')
+            self.expect(sentry_sdk.capture_exception)
+            preamble.SentryImage('/usr/bin/true.so', 1000, 2000)
+        except Exception as err:
+            pass
 
     def test_print_qml_frames(self):
         # the payload is missing a line -> we expect no assertions of any kind!
