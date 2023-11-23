@@ -429,6 +429,7 @@ class SentryEvent:
             ] # + SentryQMLThread().to_list(), TODO make qml more efficient it iterates everything again after the sentry threads were collected. a right waste of time!
             ,
             'event_id': uuid.uuid4().hex,
+            # TODO: there is potentially a lot of time between the crash and the preamble; we should get the time from journal instead
             'timestamp': datetime.utcnow().isoformat(),
             'message': 'Signal {} in {}'.format(crash_signal, program),
             'platform': 'native',
