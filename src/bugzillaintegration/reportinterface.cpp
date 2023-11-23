@@ -29,6 +29,7 @@
 #include "systeminformation.h"
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 // Max size a report may have. This is enforced in bugzilla, hardcoded, and
 // cannot be queried through the API, so handle this client-side in a hardcoded
@@ -326,19 +327,75 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     return bug;
 }
 
+QByteArray journalPriorityToSentryLevel(const QByteArray &priorityBytes)
+{
+    bool ok = false;
+    auto priority = priorityBytes.toInt(&ok);
+    Q_ASSERT(ok);
+    if (!ok) {
+        return "info"_ba;
+    }
+    switch (priority) {
+    case 0:
+    case 1:
+    case 2:
+        return "fatal"_ba;
+    case 3:
+        return "error"_ba;
+    case 4:
+        return "warning"_ba;
+    case 5:
+    case 6:
+        return "info"_ba;
+    case 7:
+        return "debug"_ba;
+    };
+    return "info"_ba;
+}
+
+void ReportInterface::prepareEventPayload()
+{
+    auto eventPayload = DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload();
+    auto document = QJsonDocument::fromJson(eventPayload);
+    auto hash = document.object().toVariantMap();
+
+    QList<QVariant> breadcrumbs;
+    const auto logs = DrKonqi::crashedApplication()->m_logs;
+    for (const auto &logEntry : logs) {
+        QVariantHash breadcrumb;
+
+        breadcrumb.insert(u"type"_s, u"debug"_s);
+        breadcrumb.insert(u"category"_s, logEntry.value("QT_CATEGORY"_ba, "default"_ba));
+        breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
+        breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba)));
+        auto ok = false;
+        auto realtime = logEntry.value("_SOURCE_REALTIME_TIMESTAMP"_ba).toULongLong(&ok);
+        if (ok && realtime > 0) {
+            std::chrono::microseconds timestamp(realtime);
+            std::chrono::duration<double> timestampDouble(timestamp);
+            breadcrumb.insert(u"timestamp"_s, QJsonValue(timestampDouble.count()));
+        }
+
+        breadcrumbs.push_back(breadcrumb);
+    }
+
+    std::reverse(breadcrumbs.begin(), breadcrumbs.end());
+    hash.insert(u"breadcrumbs"_s, breadcrumbs);
+
+    m_sentryPostbox.addEventPayload(SentryEvent(QJsonDocument::fromVariant(hash).toJson()));
+    maybePickUpPostbox();
+}
+
 void ReportInterface::prepareCrashEvent()
 {
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
-        m_sentryPostbox.addEventPayload(SentryEvent(DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload()));
-        maybePickUpPostbox();
-        return;
+        return prepareEventPayload();
     }
     static bool connected = false;
     if (!connected) {
         connected = true;
         connect(DrKonqi::debuggerManager()->backtraceGenerator(), &BacktraceGenerator::done, this, [this] {
-            m_sentryPostbox.addEventPayload(SentryEvent(DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload()));
-            maybePickUpPostbox();
+            prepareEventPayload();
         });
     }
     if (DrKonqi::debuggerManager()->backtraceGenerator()->state() != BacktraceGenerator::Loading) {
@@ -350,6 +407,7 @@ void ReportInterface::prepareCrashComment()
 {
     m_sentryPostbox.addUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
                                     + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
+    maybePickUpPostbox();
 }
 
 void ReportInterface::sendBugReport()

@@ -14,12 +14,22 @@
 
 #include <unistd.h>
 
+// TODO: refactor the entire stack such that logs extraction happens in the processor and gets passed along the chain
+#include <systemd/sd-journal.h>
+
+#include <chrono>
+
+#include <coredump.h>
+
 #include "crashedapplication.h"
 #include "debugger.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 #include "linuxprocmapsparser.h"
+
+using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 // Only use signal safe API here.
 //   man 7 signal-safety
@@ -30,6 +40,98 @@ static void emergencySaveFunction(int signal)
     Q_UNUSED(signal);
     unlink(qPrintable(CoredumpBackend::metadataPath()));
 }
+
+namespace
+{
+[[nodiscard]] QString errnoError(const QString &msg, int err)
+{
+    return msg + u": (%1) "_s.arg(QString::number(err)) + QString::fromLocal8Bit(strerror(err));
+}
+
+QList<EntriesHash> collectLogs(const QByteArray &cursor, sd_journal *context, const QStringList &matches)
+{
+    Q_ASSERT(context);
+
+    // - Reset all matches
+    // - seek to the cursor of the crash
+    // - install all matches to filter only log output from the crashed app
+    // - grab last N messages
+
+    sd_journal_flush_matches(context);
+    if (auto err = sd_journal_seek_cursor(context, cursor.constData()); err != 0) {
+        qCWarning(DRKONQI_LOG) << errnoError(u"Failed to seek to cursor"_s, -err);
+        return {};
+    }
+
+    // make the cursor the current entry so we can read its time
+    if (auto err = sd_journal_next(context); err < 0) {
+        qCWarning(DRKONQI_LOG) << errnoError(u"Failed to read cursor"_s, -err);
+        return {};
+    }
+
+    uint64_t core_time = 0;
+    sd_id128_t boot_id;
+    if (auto err = sd_journal_get_monotonic_usec(context, &core_time, &boot_id); err != 0) {
+        qCWarning(DRKONQI_LOG) << errnoError(u"Failed to get core time"_s, -err);
+        return {};
+    }
+
+    for (const auto &match : matches) {
+        if (sd_journal_add_match(context, qUtf8Printable(match), 0) != 0) {
+            qCWarning(DRKONQI_LOG) << "Failed to install custom match:" << match;
+            return {};
+        }
+    }
+
+    QList<EntriesHash> blobs;
+    constexpr auto maxBacklog = 30;
+    for (int i = 0; i < maxBacklog; i++) {
+        if (auto err = sd_journal_previous(context); err <= 0) { // end of data
+            if (err < 0) { // error
+                qCWarning(DRKONQI_LOG) << errnoError(u"Failed to seek previous entry"_s, -err);
+            }
+            break;
+        }
+
+        uint64_t time = 0;
+        if (auto err = sd_journal_get_monotonic_usec(context, &time, &boot_id); err != 0) {
+            qCWarning(DRKONQI_LOG) << errnoError(u"Failed to get entry time"_s, -err);
+            break; // don't know when this entry is from, assume it's old
+        }
+
+        std::chrono::microseconds timeDelta(core_time - time);
+        if (timeDelta > 8s) {
+            break;
+        }
+
+        EntriesHash blob;
+        const void *data = nullptr;
+        size_t length = 0;
+        SD_JOURNAL_FOREACH_DATA(context, data, length)
+        {
+            // size_t is uint, QBA uses int, make sure we don't overflow the int!
+            int dataSize = static_cast<int>(length);
+            Q_ASSERT(dataSize >= 0);
+            Q_ASSERT(static_cast<quint64>(dataSize) == length);
+
+            QByteArray entry(static_cast<const char *>(data), dataSize);
+            const auto offset = entry.indexOf('=');
+            if (offset < 0) {
+                qCWarning(DRKONQI_LOG) << "this entry looks funny it has no separating = character" << entry;
+                continue;
+            }
+
+            const QByteArray key = entry.left(offset);
+            const QByteArray value = entry.mid(offset + 1);
+
+            blob.emplace(key, value);
+        }
+        blobs.push_back(blob);
+    }
+
+    return blobs;
+}
+} // namespace
 
 bool CoredumpBackend::init()
 {
@@ -77,6 +179,10 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                static_cast<const char *>(Q_FUNC_INFO),
                qPrintable(QStringLiteral("journal: %1, drkonqi: %2").arg(QString::fromUtf8(m_journalEntry["COREDUMP_PID"]), QString::number(DrKonqi::pid()))));
 
+    auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
+    Q_ASSERT(expectedJournal.ret == 0);
+    Q_ASSERT(expectedJournal.value);
+
     m_crashedApplication = std::make_unique<CrashedApplication>(DrKonqi::pid(),
                                                                 DrKonqi::thread(),
                                                                 signal,
@@ -88,6 +194,14 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                                                                 datetime,
                                                                 DrKonqi::isRestarted(),
                                                                 hasDeletedFiles);
+
+    m_crashedApplication->m_logs = collectLogs(m_journalEntry[Coredump::keyCursor()],
+                                               expectedJournal.value.get(),
+                                               {
+                                                   u"_PID=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_PID"])),
+                                                   u"_UID=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_UID"])),
+                                                   u"_BOOT_ID=%1"_s.arg(QString::fromUtf8(m_journalEntry["_BOOT_ID"])),
+                                               });
 
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
     qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();

@@ -161,6 +161,7 @@ private:
     void maybeDone();
     void maybePickUpPostbox();
     void trySentry();
+    void prepareEventPayload();
 
     QString generateAttachmentComment() const;
 

@@ -141,6 +141,7 @@ if(Systemd_FOUND)
     add_subdirectory(coredump)
 
     target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp coredumpbackend.h)
+    target_link_libraries(DrKonqiInternal drkonqi-coredump) # needed for logs extraction
     target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
     if(Systemd_VERSION GREATER 247)
         add_compile_definitions(COREDUMPD_SUPPORTS_DEBUGGER_ARGUMENTS)

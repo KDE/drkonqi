@@ -15,6 +15,8 @@
 
 class KCrashBackend;
 
+using EntriesHash = QHash<QByteArray, QByteArray>;
+
 class CrashedApplication : public QObject
 {
     Q_OBJECT
@@ -118,6 +120,8 @@ protected:
 public:
     // Only set for the 'coredumpd' backend. Path to on-disk core dump.
     QString m_coreFile;
+    // Also only set for coredumpd backend. A bunch of log entries from journal.
+    QList<EntriesHash> m_logs;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app);

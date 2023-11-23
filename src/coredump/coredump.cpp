@@ -16,6 +16,9 @@ Coredump::Coredump(QByteArray cursor, EntriesHash data)
     , filename(QString::fromLocal8Bit(m_rawData[keyFilename()]))
     , systemd_unit(QString::fromLocal8Bit(m_rawData[QByteArrayLiteral("_SYSTEMD_UNIT")]))
 {
+    if (!m_rawData.contains(keyCursor())) {
+        m_rawData[keyCursor()] = m_cursor; // so we can easily access it in launcher & drkonqi
+    }
 }
 
 Coredump::Coredump(const QJsonDocument &document)
@@ -41,4 +44,9 @@ Coredump::EntriesHash Coredump::documentToHash(const QJsonDocument &document)
 QByteArray Coredump::keyPickup()
 {
     return "_DRKONQI_PICKUP"_ba;
+}
+
+QByteArray Coredump::keyCursor()
+{
+    return "_DRKONQI_SD_CURSOR"_ba;
 }
