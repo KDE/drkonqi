@@ -290,6 +290,22 @@ class SentryImage:
                 objfiles = gdb.objfiles()
                 self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
                 if sentry_sdk:
+                    sentry_sdk.add_breadcrumb(
+                        category='debug',
+                        level='debug',
+                        message=f'Inferiors {gdb.inferiors()}',
+                    )
+                    sentry_sdk.add_breadcrumb(
+                        category='debug',
+                        level='debug',
+                        message=f'Selected inferior {gdb.selected_inferior()}',
+                    )
+                    progspace = gdb.selected_inferior().progspace
+                    sentry_sdk.add_breadcrumb(
+                        category='debug',
+                        level='debug',
+                        message=f'Progspace {progspace} :: {progspace.filename} :: {progspace.is_valid()}',
+                    )
                     sentry_sdk.capture_exception(UnexpectedMappingException("unexpected mapping fail {} {} {} {}"
                                                                             .format(self.file, lookup, objfiles, self_objfiles)))
             return
@@ -631,6 +647,12 @@ def print_preamble():
     if thread == None:
         # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
         return
+    if sentry_sdk:
+        sentry_sdk.add_breadcrumb(
+            category='debug',
+            level='debug',
+            message=f'Selected thread {thread}',
+        )
     # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
     print_kcrash_error_message()
     # changes current frame and thread!
