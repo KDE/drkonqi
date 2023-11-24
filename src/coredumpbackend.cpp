@@ -200,6 +200,8 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                                                {
                                                    u"_PID=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_PID"])),
                                                    u"_UID=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_UID"])),
+                                                   u"_COMM=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_COMM"])),
+                                                   u"_EXE=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_EXE"])),
                                                    u"_BOOT_ID=%1"_s.arg(QString::fromUtf8(m_journalEntry["_BOOT_ID"])),
                                                });
 
