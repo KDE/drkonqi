@@ -290,21 +290,12 @@ class SentryImage:
                 objfiles = gdb.objfiles()
                 self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
                 if sentry_sdk:
-                    sentry_sdk.add_breadcrumb(
-                        category='debug',
-                        level='debug',
-                        message=f'Inferiors {gdb.inferiors()}',
-                    )
-                    sentry_sdk.add_breadcrumb(
-                        category='debug',
-                        level='debug',
-                        message=f'Selected inferior {gdb.selected_inferior()}',
-                    )
                     progspace = gdb.selected_inferior().progspace
+                    pid_running = psutil.pid_exists(gdb.selected_inferior().pid)
                     sentry_sdk.add_breadcrumb(
                         category='debug',
                         level='debug',
-                        message=f'Progspace {progspace} :: {progspace.filename} :: {progspace.is_valid()}',
+                        message=f'Progspace {progspace} :: {progspace.filename} :: {progspace.is_valid()} :: pid running ({pid_running})',
                     )
                     sentry_sdk.capture_exception(UnexpectedMappingException("unexpected mapping fail {} {} {} {}"
                                                                             .format(self.file, lookup, objfiles, self_objfiles)))
