@@ -11,6 +11,8 @@
 #include "sentryconnection.h"
 #include "sentrypaths.h"
 
+using namespace Qt::StringLiterals;
+
 SentryPostbox::SentryPostbox(const QString &applicationName, std::shared_ptr<SentryConnection> connection, QObject *parent)
     : QObject(parent)
     , m_dsns(std::move(connection))
@@ -36,6 +38,7 @@ void SentryPostbox::addEventPayload(const SentryEvent &event)
 void SentryPostbox::addUserFeedback(const QString &feedbackString)
 {
     const QJsonObject feedbackObject = {
+        {u"event_id"_s, m_envelope.eventId()},
         {QStringLiteral("name"), QStringLiteral("Anonymous")},
         {QStringLiteral("email"), QStringLiteral("anonymous@kde.org")},
         {QStringLiteral("comments"), feedbackString},
