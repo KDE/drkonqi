@@ -20,6 +20,8 @@
 #endif
 #endif
 
+#include <QDir>
+
 #include <KIO/CommandLauncherJob>
 
 #include "drkonqi_debug.h"
@@ -55,7 +57,16 @@ CrashedApplication::CrashedApplication(int pid,
 {
 }
 
-CrashedApplication::~CrashedApplication() = default;
+CrashedApplication::~CrashedApplication()
+{
+    if (!m_coreFile.isEmpty()) {
+        const auto path = QFileInfo(m_coreFile).path();
+        if (!path.isEmpty() && QFile::exists(path)) {
+            qCDebug(DRKONQI_LOG) << "Cleaning up" << path;
+            QDir(path).removeRecursively();
+        }
+    }
+};
 
 QString CrashedApplication::name() const
 {

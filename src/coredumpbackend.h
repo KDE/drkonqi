@@ -34,10 +34,4 @@ private:
     QHash<QByteArray, QByteArray> m_journalEntry;
     const QByteArray m_cursor;
     std::unique_ptr<QProcess> m_preparationProc;
-
-#ifdef COREDUMPD_SUPPORTS_DEBUGGER_ARGUMENTS
-    const QString m_backendType = QStringLiteral("coredumpd-248+");
-#else
-    const QString m_backendType = QStringLiteral("coredumpd");
-#endif
 };

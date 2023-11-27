@@ -402,8 +402,17 @@ void ReportInterface::prepareEventPayload()
 
 void ReportInterface::prepareCrashEvent()
 {
-    if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::Loaded) {
+    switch (DrKonqi::debuggerManager()->backtraceGenerator()->state()) {
+    case BacktraceGenerator::Failed:
+    case BacktraceGenerator::FailedToStart:
+        m_skipSentry = true;
+        Q_EMIT crashEventSent();
+        return;
+    case BacktraceGenerator::Loaded:
         return prepareEventPayload();
+    case BacktraceGenerator::Loading:
+    case BacktraceGenerator::NotLoaded:
+        break;
     }
     static bool connected = false;
     if (!connected) {
@@ -623,14 +632,15 @@ ReportInterface *ReportInterface::self()
 
 bool ReportInterface::hasCrashEventSent() const
 {
-    return !isCrashEventSendingEnabled() || m_sentryPostbox.hasDelivered();
+    return !isCrashEventSendingEnabled() || m_sentryPostbox.hasDelivered() || m_skipSentry;
 }
 
 bool ReportInterface::isCrashEventSendingEnabled() const
 {
     qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
                          << "forceSentry:" << m_forceSentry //
-                         << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles();
+                         << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles() //
+                         << "skipSentry:" << m_skipSentry;
     const auto enabled = Settings::self()->sentry() || m_forceSentry;
     return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles();
 }

@@ -36,6 +36,7 @@ public:
 
 Q_SIGNALS:
     void preparedForDebugger();
+    void failedToPrepare();
 
 protected:
     virtual CrashedApplication *constructCrashedApplication() = 0;

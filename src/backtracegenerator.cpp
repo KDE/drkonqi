@@ -254,4 +254,17 @@ QByteArray BacktraceGenerator::sentryPayload() const
     return m_sentryPayload;
 };
 
+void BacktraceGenerator::setBackendFailed()
+{
+    // Shouldn't have been set yet
+    Q_ASSERT(!m_proc);
+    Q_ASSERT(!m_temp);
+    m_proc = nullptr;
+    m_temp = nullptr;
+
+    m_state = FailedToStart;
+    Q_EMIT stateChanged();
+    Q_EMIT failedToStart();
+}
+
 #include "moc_backtracegenerator.cpp"

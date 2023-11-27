@@ -188,6 +188,7 @@ private:
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;
 
+    bool m_skipSentry = false;
     bool m_forceSentry = false;
     QTimer m_sentryStartTimer;
     bool m_tryingSentry = false;

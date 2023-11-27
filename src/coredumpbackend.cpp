@@ -6,7 +6,15 @@
 
 #include "coredumpbackend.h"
 
+#include <chrono>
+
 #include <KCrash>
+
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusMessage>
+#include <QDBusPendingCallWatcher>
+#include <QDBusReply>
 #include <QDebug>
 #include <QProcess>
 #include <QScopeGuard>
@@ -27,6 +35,10 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 #include "linuxprocmapsparser.h"
+#include <coredumpexcavator.h>
+
+using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -43,6 +55,10 @@ static void emergencySaveFunction(int signal)
 
 namespace
 {
+// Special backend type for core-based debugging. A polkit helper excavates the core file for us and we then
+// invoke gdb on it. Side stepping coredumpctl.
+constexpr auto CORE_BACKEND_TYPE = "coredump-core"_L1;
+
 [[nodiscard]] QString errnoError(const QString &msg, int err)
 {
     return msg + u": (%1) "_s.arg(QString::number(err)) + QString::fromLocal8Bit(strerror(err));
@@ -213,8 +229,8 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
 
 DebuggerManager *CoredumpBackend::constructDebuggerManager()
 {
-    const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(m_backendType);
-    const QList<Debugger> externalDebuggers = Debugger::availableExternalDebuggers(m_backendType);
+    const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(CORE_BACKEND_TYPE);
+    const QList<Debugger> externalDebuggers = Debugger::availableExternalDebuggers(CORE_BACKEND_TYPE);
 
     const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, QStringLiteral("gdb")));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
@@ -225,44 +241,50 @@ DebuggerManager *CoredumpBackend::constructDebuggerManager()
 
 void CoredumpBackend::prepareForDebugger()
 {
-    if (m_preparationProc) {
-        return; // Preparation in progress.
-    }
-
-    // Legacy coredumpd doesn't support debugger arguments. We'll have to actually extract the core and manually trace on it,
-    // somewhat meh. When Ubuntu 20.04 either goes EOL or is deemed irrelevant enough we can remove the entire preparation
-    // rigging (even in AbstractDrKonqiBackend).
-    const bool needPreparation = (m_backendType == QLatin1String("coredumpd"));
-    const bool alreadyPrepared = (m_coreDir != nullptr);
-
-    if (!needPreparation || alreadyPrepared) {
-        // Synthesize a signal.
-        QMetaObject::invokeMethod(this, &CoredumpBackend::preparedForDebugger, Qt::QueuedConnection);
-        return;
-    }
-
-    m_coreDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + QStringLiteral("/kcrash-core"));
-    Q_ASSERT(m_coreDir->isValid());
-
-    const QString coreFile = m_coreDir->filePath(QStringLiteral("core"));
-    m_preparationProc = std::make_unique<QProcess>();
-    m_preparationProc->setProcessChannelMode(QProcess::ForwardedChannels);
-    m_preparationProc->setProgram(QStringLiteral("coredumpctl"));
-    m_preparationProc->setArguments({QStringLiteral("--output"), coreFile, QStringLiteral("dump"), QString::number(m_crashedApplication->pid())});
-    QObject::connect(
-        m_preparationProc.get(),
-        &QProcess::finished,
-        this,
-        [this, coreFile](int exitCode, QProcess::ExitStatus exitStatus) {
-            qDebug() << "Coredumpd core dumping completed" << exitCode << exitStatus << coreFile;
-            // We dont really care if the dumping failed. The debugger will fail if the core file isn't there and on the UI
-            // side there's not much point differentiating as the user won't be able to file a bug in any case.
-            m_preparationProc = nullptr;
-            m_crashedApplication->m_coreFile = coreFile;
+    if (!m_coreDir) {
+        m_coreDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + QStringLiteral("/kcrash-core"));
+        Q_ASSERT(m_coreDir->isValid());
+        if (!m_coreDir->isValid()) {
             Q_EMIT preparedForDebugger();
-        },
-        Qt::QueuedConnection /* queue so we don't delete the object out from under it */);
-    m_preparationProc->start();
+            return;
+        }
+    }
+
+    const auto coreFileTarget = m_coreDir->filePath(QStringLiteral("core"));
+    const auto coredumpFilePath = QString::fromUtf8(m_journalEntry["COREDUMP_FILENAME"]);
+
+    if (QFileInfo(coredumpFilePath).isReadable()) {
+        auto excavator = new CoredumpExcavator(this);
+        connect(excavator, &CoredumpExcavator::excavated, this, [this, coreFileTarget](int exitCode) {
+            if (exitCode != 0) {
+                qCWarning(DRKONQI_LOG) << "Failed to excavate core from file:" << exitCode;
+                Q_EMIT failedToPrepare();
+                return;
+            }
+            m_crashedApplication->m_coreFile = coreFileTarget;
+            Q_EMIT preparedForDebugger();
+        });
+        excavator->excavateFromTo(coredumpFilePath, coreFileTarget);
+    } else {
+        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFrom"_L1);
+        msg << QFileInfo(coredumpFilePath).fileName(); // temp dir is constructed and managed by helper, no need to pass our presumed path in
+        static const auto connection = QDBusConnection::connectToBus(QDBusConnection::SystemBus, "drkonqi-polkit-system-connection"_L1);
+        connection.interface()->setTimeout(std::chrono::milliseconds(5min).count());
+        auto watcher = new QDBusPendingCallWatcher(connection.asyncCall(msg));
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, coreFileTarget] {
+            watcher->deleteLater();
+            QDBusReply<QString> reply = *watcher;
+            qCWarning(DRKONQI_LOG) << reply.isValid() << reply.error() << reply.value();
+            if (!reply.isValid() || reply.value().isEmpty()) {
+                qCWarning(DRKONQI_LOG) << "Failed to excavate core as admin:" << reply.error();
+                Q_EMIT failedToPrepare();
+                return;
+            }
+
+            m_crashedApplication->m_coreFile = reply.value();
+            Q_EMIT preparedForDebugger();
+        });
+    }
 }
 
 #include "moc_coredumpbackend.cpp"

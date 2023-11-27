@@ -71,6 +71,8 @@ any side effects.</para>`);
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     height: minimumHeight
 
+    header: BacktraceGenerator.state === BacktraceGenerator.FailedToStart ? warningComponent.createObject(appWindow) : null
+
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
@@ -79,6 +81,21 @@ any side effects.</para>`);
         id: duplicateModel
         manager: bugzilla
         iface: reportInterface
+    }
+
+    Component {
+        id: warningComponent
+        Kirigami.InlineMessage {
+            text: i18nc("@label", "Gathering crash information failed for unknown reasons. You can retry, or close the window.")
+            type: Kirigami.MessageType.Warning
+            visible: true
+            actions: [
+                Kirigami.Action {
+                    text: i18nc("@action retry gathering crash data", "Retry")
+                    onTriggered: BacktraceGenerator.start()
+                }
+            ]
+        }
     }
 
     pageStack.initialPage: MainPage {}

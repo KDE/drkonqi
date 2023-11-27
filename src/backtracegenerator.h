@@ -58,6 +58,8 @@ public:
 
     // Called by manager when it is ready for us.
     void setBackendPrepared();
+    // ... or not
+    void setBackendFailed();
 
     Q_INVOKABLE bool debuggerIsGDB() const;
     Q_INVOKABLE QString debuggerName() const;

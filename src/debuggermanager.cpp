@@ -30,6 +30,7 @@ DebuggerManager::DebuggerManager(const Debugger &internalDebugger, const QList<D
     connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::preparing, backendParent, &AbstractDrKonqiBackend::prepareForDebugger);
+    connect(backendParent, &AbstractDrKonqiBackend::failedToPrepare, d->btGenerator, &BacktraceGenerator::setBackendFailed);
     connect(backendParent, &AbstractDrKonqiBackend::preparedForDebugger, d->btGenerator, &BacktraceGenerator::setBackendPrepared);
 
     for (const Debugger &debugger : std::as_const(externalDebuggers)) {

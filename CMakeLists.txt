@@ -79,6 +79,9 @@ if(CMAKE_SYSTEM_NAME MATCHES Linux)
 endif()
 
 if(Systemd_FOUND)
+    find_package(PolkitQt6-1) # This is only used when extracting crashes from coredumpd
+    set_package_properties(PolkitQt6-1 PROPERTIES TYPE REQUIRED PURPOSE "Reading kwin_wayland crashes")
+
     find_package(coredumpctl)
     set_package_properties(
         coredumpctl
