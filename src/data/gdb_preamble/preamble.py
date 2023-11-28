@@ -728,7 +728,7 @@ def print_preamble():
     # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
     print_kcrash_error_message()
     # changes current frame and thread!
-    # print_qml_trace()
+    print_qml_trace()
     # prints sentry report
     try:
         print_sentry_payload(thread)
