@@ -335,6 +335,7 @@ QByteArray journalPriorityToSentryLevel(const QByteArray &priorityBytes)
     if (!ok) {
         return "info"_ba;
     }
+    // https://www.freedesktop.org/software/systemd/man/latest/systemd.journal-fields.html#PRIORITY=
     switch (priority) {
     case 0:
     case 1:
