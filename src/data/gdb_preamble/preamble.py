@@ -19,6 +19,8 @@ try:
 except ImportError:
     print("python sentry-sdk not installed :(")
 
+os.environ['LC_ALL'] = 'C.UTF-8'
+
 import gdb
 from gdb.FrameDecorator import FrameDecorator
 
