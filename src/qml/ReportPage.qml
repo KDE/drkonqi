@@ -98,6 +98,7 @@ Kirigami.Page {
 
             QQC2.TextArea {
                 id: informationField
+                wrapMode: TextEdit.Wrap
                 onEditingFinished: reportInterface.detailText = text
                 Accessible.name: i18nc("@info", "Information about the crash:")
             }

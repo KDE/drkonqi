@@ -27,6 +27,7 @@ Kirigami.ScrollablePage {
             implicitHeight: contentHeight
             readOnly: true
             text: reportInterface.generateReportFullText(ReportInterface.DrKonqiStamp.Include, ReportInterface.Backtrace.Complete)
+            wrapMode: TextEdit.Wrap
 
         }
     }

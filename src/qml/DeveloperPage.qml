@@ -132,7 +132,7 @@ used during interactive and post-mortem debugging.</para>`)
 
             // text: output.text
             font.family: "monospace"
-            wrapMode: Text.Wrap
+            wrapMode: TextEdit.Wrap
             textFormat: TextEdit.PlainText
             readOnly: true
             selectByMouse: Kirigami.Settings.isMobile ? false : true
