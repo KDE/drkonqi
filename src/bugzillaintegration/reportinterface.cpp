@@ -360,6 +360,9 @@ void ReportInterface::prepareEventPayload()
     auto document = QJsonDocument::fromJson(eventPayload);
     auto hash = document.object().toVariantMap();
 
+    // replace the timestamp with the real timestamp (possibly originating in journald)
+    hash.insert(u"timestamp"_s, DrKonqi::crashedApplication()->datetime().toUTC().toString(Qt::ISODateWithMs));
+
     QList<QVariant> breadcrumbs;
     const auto logs = DrKonqi::crashedApplication()->m_logs;
     for (const auto &logEntry : logs) {
@@ -379,7 +382,6 @@ void ReportInterface::prepareEventPayload()
 
         breadcrumbs.push_back(breadcrumb);
     }
-
     std::reverse(breadcrumbs.begin(), breadcrumbs.end());
     hash.insert(u"breadcrumbs"_s, breadcrumbs);
 
