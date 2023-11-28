@@ -215,27 +215,71 @@ class SentryRegisters:
             return None
         return js
 
+class LockReason:
+    def __init__(self, frame: SentryFrame, type, class_name):
+        self.type = type
+        self.class_name = class_name
+        self.thread_id = gdb.selected_thread().ptid[1]
+
+    def to_dict(self):
+        return {
+            'type': self.type,
+            'class_name': self.class_name,
+            'thread_id': self.thread_id,
+            'package_name': 'java.lang',
+        }
+
+    def make(frame):
+        # export enum LockType {
+        #   LOCKED = 1,
+        #   WAITING = 2,
+        #   SLEEPING = 4,
+        #   BLOCKED = 8,
+        # }
+        func = frame.function()
+        match func:
+            case 'QtLinuxFutex::_q_futex':
+                return LockReason(frame, 8, 'QtLinuxFutex')
+            case '___pthread_cond_wait':
+                return LockReason(frame, 2, 'pthread_cond_wait')
+            case 'QWaitCondition::wait':
+                return LockReason(frame, 2, 'QWaitCondition')
+        return None
+
 class SentryTrace:
     def __init__(self, thread, is_crashed):
         thread.switch()
         self.frame = gdb.newest_frame()
         self.is_crashed = is_crashed
+        self.lock_reasons = {}
+        self.was_main_thread = False
 
     def to_dict(self):
         frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(self.frame) ]
+        self.lock_reasons = {}
+        self.was_main_thread = False
 
-        # throw away kcrash or sigtrap frame, and above. they are useless noise
-        if self.is_crashed:
-            kcrash_index = -1
-            trap_index = -1
-            for index, frame in enumerate(frames):
-                if frame.function() and frame.function().startswith('KCrash::defaultCrashHandler'):
+        kcrash_index = -1
+        trap_index = -1
+        for index, frame in enumerate(frames):
+            if frame.function():
+                lock_reason = LockReason.make(frame)
+                if lock_reason:
+                    r = lock_reason.to_dict()
+                    address = f'0x{str(len(self.lock_reasons.keys()))}'
+                    r['address'] = address
+                    self.lock_reasons[address] = r
+                if frame.function().startswith('KCrash::defaultCrashHandler'):
                     kcrash_index = index
-                if frame.type() == gdb.SIGTRAMP_FRAME:
-                    trap_index = index
-            clip_index = max(kcrash_index, trap_index)
-            if clip_index > -1:
-                frames = frames[(clip_index + 1):]
+                if frame.function().startswith('QCoreApplication::exec'):
+                    self.was_main_thread = True
+            if frame.type() == gdb.SIGTRAMP_FRAME:
+                trap_index = index
+        clip_index = max(kcrash_index, trap_index)
+
+        # Throw away kcrash or sigtrap frame, and above. They are useless noise - but only when on the crashing thread.
+        if self.is_crashed and clip_index > -1:
+            frames = frames[(clip_index + 1):]
 
         # Sentry format wants oldest frame first.
         frames.reverse()
@@ -250,12 +294,40 @@ class SentryThread:
         # https://develop.sentry.dev/sdk/event-payloads/threads/
         # As per Sentry policy, the thread that crashed with an exception should not have a stack trace,
         #  but instead, the thread_id attribute should be set on the exception and Sentry will connect the two.
-        return {
+        trace = SentryTrace(self.thread, self.is_crashed)
+        # NB: trace.to_dict creates members as side effect, run it asap
+        payload = {
+            'stacktrace': trace.to_dict(),
             'id': self.thread.ptid[1],
             'name': self.thread.name,
             'crashed': self.is_crashed,
-            'stacktrace': SentryTrace(self.thread, self.is_crashed).to_dict()
+            'main': trace.was_main_thread, # side effect
+            'held_locks': trace.lock_reasons, # side effect
         }
+        # States appear not documented. They are
+        #   RUNNABLE = 'Runnable',
+        #   TIMED_WAITING = 'Timed waiting',
+        #   BLOCKED = 'Blocked',
+        #   WAITING = 'Waiting',
+        #   NEW = 'New',
+        #   TERMINATED = 'Terminated',
+        state = None
+        if self.thread.is_exited():
+            state = 'Terminated'
+        if not state:
+            for addr, reason in trace.lock_reasons.items():
+                match reason['type']:
+                    case 1:
+                        state = None # locked doesn't exist as thread state
+                    case 2:
+                        state = 'Waiting'
+                    case 4:
+                        state = 'Runnable'
+                    case 8:
+                        state = 'Blocked'
+                break
+        payload['state'] = (state or 'Runnable')
+        return payload
 
 class SentryImage:
     # NOTE: realpath hacks because neon's gdb is confused over UsrMerge symlinking of /lib to /usr/lib messing up
@@ -656,7 +728,7 @@ def print_preamble():
     # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
     print_kcrash_error_message()
     # changes current frame and thread!
-    print_qml_trace()
+    # print_qml_trace()
     # prints sentry report
     try:
         print_sentry_payload(thread)

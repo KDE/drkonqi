@@ -91,6 +91,7 @@ class PreambleTest(Chai):
         self.expect(thread.switch)
         thread.ptid = [123, 456, 789]
         thread.name = "TheThread"
+        self.expect(thread.is_exited).returns(False)
 
         self.mock(gdb, 'newest_frame')
         self.expect(gdb.newest_frame).returns(the_frame)
@@ -102,7 +103,10 @@ class PreambleTest(Chai):
 
         thread = preamble.SentryThread(thread, is_crashed=False)
         self.assert_equal({'crashed': False,
+                           'held_locks': {},
+                           'state': 'Runnable',
                             'id': 456,
+                            'main': False,
                             'name': 'TheThread',
                             'stacktrace': {'frames': [{'filename': '$HOME/foo.so',
                                                         'function': 'main',
