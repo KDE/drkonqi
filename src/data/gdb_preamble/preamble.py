@@ -211,26 +211,28 @@ class SentryRegisters:
         return js
 
 class SentryTrace:
-    def __init__(self, thread):
+    def __init__(self, thread, is_crashed):
         thread.switch()
         self.frame = gdb.newest_frame()
+        self.is_crashed = is_crashed
 
     def to_dict(self):
         frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(self.frame) ]
 
         # throw away kcrash or sigtrap frame, and above. they are useless noise
-        kcrash_index = -1
-        trap_index = -1
-        for index, frame in enumerate(frames):
-            if frame.function() and frame.function().startswith('KCrash::defaultCrashHandler'):
-                kcrash_index = index
-            if frame.type() == gdb.SIGTRAMP_FRAME:
-                trap_index = index
-        clip_index = max(kcrash_index, trap_index)
-        if clip_index > -1:
-            frames = frames[(clip_index + 1):]
+        if self.is_crashed:
+            kcrash_index = -1
+            trap_index = -1
+            for index, frame in enumerate(frames):
+                if frame.function() and frame.function().startswith('KCrash::defaultCrashHandler'):
+                    kcrash_index = index
+                if frame.type() == gdb.SIGTRAMP_FRAME:
+                    trap_index = index
+            clip_index = max(kcrash_index, trap_index)
+            if clip_index > -1:
+                frames = frames[(clip_index + 1):]
 
-        # Sentry format oddly wants oldest frame first. TODO
+        # Sentry format wants oldest frame first.
         frames.reverse()
         return { 'frames': [ frame.to_dict() for frame in frames ], 'registers': SentryRegisters(self.frame).to_dict() }
 
@@ -247,7 +249,7 @@ class SentryThread:
             'id': self.thread.ptid[1],
             'name': self.thread.name,
             'crashed': self.is_crashed,
-            'stacktrace': SentryTrace(self.thread).to_dict()
+            'stacktrace': SentryTrace(self.thread, self.is_crashed).to_dict()
         }
 
 class SentryImage:
