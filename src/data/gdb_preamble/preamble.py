@@ -296,7 +296,7 @@ class SentryImage:
                     lookup = None
                 objfiles = gdb.objfiles()
                 self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
-                if sentry_sdk:
+                if 'sentry_sdk' in globals():
                     progspace = gdb.selected_inferior().progspace
                     pid_running = psutil.pid_exists(gdb.selected_inferior().pid)
                     sentry_sdk.add_breadcrumb(
@@ -647,7 +647,7 @@ def print_preamble():
     if thread == None:
         # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
         return
-    if sentry_sdk:
+    if 'sentry_sdk' in globals():
         sentry_sdk.add_breadcrumb(
             category='debug',
             level='debug',
