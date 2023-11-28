@@ -40,6 +40,9 @@ import psutil
 class UnexpectedMappingException(Exception):
     pass
 
+class NoBuildIdException(Exception):
+    pass
+
 def mangle_path(path):
     if not path:
         return path
@@ -311,6 +314,8 @@ class SentryImage:
         # It is the value of the build_id custom section and must be formatted
         # as UUID truncated to the leading 16 bytes.
         build_id = self.build_id()
+        if not build_id:
+            raise NoBuildIdException(f'Unexpectedly stumbled over an objfile ({self.file}) without build_id. Not creating payload.')
         truncate_bytes = 16
         build_id = build_id + ("00" * truncate_bytes)
         return str(uuid.UUID(bytes_le=binascii.unhexlify(build_id)[:truncate_bytes]))
@@ -653,4 +658,8 @@ def print_preamble():
     # changes current frame and thread!
     print_qml_trace()
     # prints sentry report
-    print_sentry_payload(thread)
+    try:
+        print_sentry_payload(thread)
+    except NoBuildIdException as e:
+        print(e)
+        pass
