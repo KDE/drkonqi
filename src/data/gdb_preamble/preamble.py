@@ -497,7 +497,7 @@ class SentryEvent:
                                 },
                             },
                         },
-                        'stacktrace': SentryTrace(crash_thread).to_dict(),
+                        'stacktrace': SentryTrace(crash_thread, True).to_dict(),
                     }
                 ]
             }
