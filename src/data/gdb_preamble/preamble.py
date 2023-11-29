@@ -326,7 +326,7 @@ class SentryThread:
                     case 8:
                         state = 'Blocked'
                 break
-        payload['state'] = (state or 'Runnable')
+        payload['state'] = state
         return payload
 
 class SentryImage:
