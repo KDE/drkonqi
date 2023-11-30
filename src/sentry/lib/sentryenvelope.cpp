@@ -9,34 +9,36 @@
 using namespace Qt::StringLiterals;
 
 static constexpr auto EVENT_ID = "event_id"_L1;
-static constexpr auto SDK = "sdk"_L1;
+
+SentryEnvelope::SentryEnvelope()
+    : m_headers({{EVENT_ID, QUuid::createUuid().toString(QUuid::Id128)}})
+{
+}
 
 SentryEvent::SentryEvent(const QByteArray &payload)
 {
     m_headers.insert("type"_L1, "event"_L1);
-    m_headers.insert("length"_L1, payload.size());
-
     m_payload = payload;
 }
 
 SentryUserFeedback::SentryUserFeedback(const QByteArray &payload)
 {
     m_headers.insert("type"_L1, "user_report"_L1);
-    m_headers.insert("length"_L1, payload.size());
-
     m_payload = payload;
 }
 
 QByteArray SentryItem::toEnvelopePayload() const
 {
-    QJsonDocument doc(QJsonObject::fromVariantHash(m_headers));
+    auto headers = m_headers;
+    headers[u"length"_s] = m_payload.length();
+    QJsonDocument doc(QJsonObject::fromVariantMap(headers));
     const auto header = doc.toJson(QJsonDocument::Compact);
     return "%1\n%2"_L1.arg(QString::fromUtf8(header), QString::fromUtf8(m_payload)).toUtf8();
 }
 
 QByteArray SentryEnvelope::toEnvelope() const
 {
-    QJsonDocument doc(QJsonObject::fromVariantHash(m_headers));
+    QJsonDocument doc(QJsonObject::fromVariantMap(m_headers));
     const auto header = doc.toJson(QJsonDocument::Compact);
     QList<QByteArray> payloads;
     payloads.reserve(m_items.size());
@@ -46,19 +48,14 @@ QByteArray SentryEnvelope::toEnvelope() const
     return "%1\n%2"_L1.arg(QString::fromUtf8(header), QString::fromUtf8(payloads.join("\n"_qba))).toUtf8();
 }
 
+void SentryEnvelope::addItem(const SentryEvent &event)
+{
+    m_hasEvent = true;
+    addItem(static_cast<const SentryItem &>(event));
+}
+
 void SentryEnvelope::addItem(const SentryItem &item)
 {
-    const auto document = QJsonDocument::fromJson(item.m_payload);
-
-    for (const auto &globalHeader : {EVENT_ID, SDK}) {
-        const auto weHaveHeader = !m_headers.value(globalHeader).toString().isEmpty();
-        const auto incomingHeader = document[globalHeader].toString();
-        const auto incomingHasHeader = !incomingHeader.isEmpty();
-        if (!weHaveHeader && incomingHasHeader) {
-            m_headers.insert(globalHeader, incomingHeader);
-        }
-    }
-
     m_items.push_back(item);
 }
 
@@ -74,5 +71,7 @@ void SentryEnvelope::setDSN(const QUrl &dsn)
 
 bool SentryEnvelope::isEmpty() const
 {
-    return m_items.isEmpty() || m_headers.value(EVENT_ID).toString().isEmpty();
+    // NOTE: At the time of writing we can only have an Event or UserFeedback as items and the latter cannot
+    //   currently be submitted on its own (a v2 where the feedback is itself an event is in the works upstream).
+    return m_items.isEmpty() || !m_hasEvent;
 }

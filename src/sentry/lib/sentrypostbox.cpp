@@ -30,9 +30,13 @@ void SentryPostbox::onDSNsLoaded()
     m_dsnSet = true;
 }
 
-void SentryPostbox::addEventPayload(const SentryEvent &event)
+void SentryPostbox::addEventPayload(const QJsonDocument &document)
 {
-    m_envelope.addItem(event);
+    document.object().insert(u"event_id"_s, QJsonValue(m_envelope.eventId()));
+    m_envelope.addItem(SentryEvent(document.toJson(QJsonDocument::Compact)));
+
+    m_hasDelivered = false;
+    Q_EMIT hasDeliveredChanged();
 }
 
 void SentryPostbox::addUserFeedback(const QString &feedbackString)
@@ -45,6 +49,9 @@ void SentryPostbox::addUserFeedback(const QString &feedbackString)
     };
 
     m_envelope.addItem(SentryUserFeedback(QJsonDocument(feedbackObject).toJson(QJsonDocument::Compact)));
+
+    m_hasDelivered = false;
+    Q_EMIT hasDeliveredChanged();
 }
 
 void SentryPostbox::deliver()
@@ -60,6 +67,8 @@ void SentryPostbox::deliver()
 
 bool SentryPostbox::hasDelivered() const
 {
+    // NOTE: when items are added AFTER delivery we toggle back to not delivered, as the postbox has pending stuff again
+    //   this enables us to send the event and then follow it up with sending the feedback if necessary.
     return m_hasDelivered;
 }
 

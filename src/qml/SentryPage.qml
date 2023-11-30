@@ -27,6 +27,12 @@ Kirigami.Page {
             Layout.fillHeight: true
         }
 
+        QQC2.Label {
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nc("@label", "Collecting crash data…")
+            visible: !reportInterface.crashEventSent
+        }
+
         QQC2.ProgressBar {
             id: progressBar
             Layout.alignment: Qt.AlignHCenter
@@ -64,7 +70,35 @@ Kirigami.Page {
 You will not receive any more crash notifications.`)
         }
 
+        QQC2.ScrollView {
+            id: detailView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            QQC2.TextArea {
+                id: detailArea
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                placeholderText: i18nc("@label placeholder text in TextArea", "Tell us more about the crash…")
+            }
+        }
+
+        QQC2.Button {
+            Layout.alignment: Qt.AlignRight
+            visible: detailView.visible
+            action: Kirigami.Action {
+                enabled: detailArea.text.length > 3
+                icon.name: "document-send-symbolic"
+                text: i18nc("@action:button", "Send Message")
+                onTriggered: {
+                    reportInterface.createCrashMessage(detailArea.text)
+                    detailView.visible = false
+                }
+            }
+        }
+
         Item {
+            visible: !detailView.visible
             Layout.fillHeight: true
         }
     }

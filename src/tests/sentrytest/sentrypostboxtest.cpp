@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 // SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
+#include <QJsonDocument>
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
@@ -54,7 +55,7 @@ private Q_SLOTS:
         QVERIFY(eventPayloadFile.open(QFile::ReadOnly));
 
         SentryPostbox box("kwrite"_L1, std::make_shared<FileConnection>());
-        box.addEventPayload(SentryEvent(eventPayloadFile.readAll()));
+        box.addEventPayload(QJsonDocument::fromJson(eventPayloadFile.readAll()));
         QSignalSpy spy(&box, &SentryPostbox::hasDeliveredChanged);
         box.deliver();
         spy.wait();
@@ -68,7 +69,7 @@ private Q_SLOTS:
         QVERIFY(eventPayloadFile.open(QFile::ReadOnly));
 
         SentryPostbox box("foobar_does_not_exist_in_dsns"_L1, std::make_shared<FileConnection>());
-        box.addEventPayload(SentryEvent(eventPayloadFile.readAll()));
+        box.addEventPayload(QJsonDocument::fromJson(eventPayloadFile.readAll()));
         QSignalSpy spy(&box, &SentryPostbox::hasDeliveredChanged);
         box.deliver();
         spy.wait();

@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include <QHash>
+#include <QMap>
 #include <QUrl>
 
 // A generic item in the envelope
@@ -12,7 +12,7 @@ class SentryItem
 public:
     QByteArray toEnvelopePayload() const;
 
-    QVariantHash m_headers;
+    QVariantMap m_headers;
     QByteArray m_payload;
 };
 
@@ -34,6 +34,8 @@ public:
 class SentryEnvelope
 {
 public:
+    SentryEnvelope();
+    void addItem(const SentryEvent &event);
     void addItem(const SentryItem &item);
     QByteArray toEnvelope() const;
 
@@ -42,6 +44,9 @@ public:
     bool isEmpty() const;
 
 private:
-    QVariantHash m_headers;
+    friend class SentryEnvelopeTest;
+    // Using map to have an easier time testing this because order will be always the same.
+    QVariantMap m_headers;
     QList<SentryItem> m_items;
+    bool m_hasEvent = false;
 };

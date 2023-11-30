@@ -18,7 +18,7 @@ class SentryPostbox : public QObject
 public:
     explicit SentryPostbox(const QString &applicationName, std::shared_ptr<SentryConnection> connection, QObject *parent = nullptr);
 
-    void addEventPayload(const SentryEvent &event);
+    void addEventPayload(const QJsonDocument &document);
     void addUserFeedback(const QString &feedbackString);
 
     void deliver();

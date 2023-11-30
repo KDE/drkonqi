@@ -136,6 +136,7 @@ public:
 public Q_SLOTS:
     void prepareCrashEvent();
     void prepareCrashComment();
+    void createCrashMessage(const QString &message);
     void sendBugReport();
     void sendSentryReport();
     void setSendWhenReady(bool send);

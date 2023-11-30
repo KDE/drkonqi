@@ -396,7 +396,7 @@ void ReportInterface::prepareEventPayload()
                    });
     hash.insert(CONTEXTS_KEY, context);
 
-    m_sentryPostbox.addEventPayload(SentryEvent(QJsonDocument::fromVariant(hash).toJson()));
+    m_sentryPostbox.addEventPayload(QJsonDocument::fromVariant(hash));
     maybePickUpPostbox();
 }
 
@@ -421,6 +421,12 @@ void ReportInterface::prepareCrashComment()
 {
     m_sentryPostbox.addUserFeedback(m_reportTitle + QLatin1Char('\n') + m_reportDetailText + QLatin1Char('\n') + DrKonqi::kdeBugzillaURL()
                                     + QLatin1String("show_bug.cgi?id=%1").arg(QString::number(m_sentReport)));
+    maybePickUpPostbox();
+}
+
+void ReportInterface::createCrashMessage(const QString &message)
+{
+    m_sentryPostbox.addUserFeedback(message);
     maybePickUpPostbox();
 }
 

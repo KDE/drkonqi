@@ -15,6 +15,8 @@ private Q_SLOTS:
     {
         const auto payload = "{\"event_id\":\"9ec79c33ec9942ab8353589fcb2e04dc\",\"message\":\"hello world\",\"level\":\"error\"}\n"_qba;
         SentryEnvelope envelope;
+        // Fixate for test
+        envelope.m_headers["event_id"] = "9ec79c33ec9942ab8353589fcb2e04dc";
         envelope.setDSN(QUrl("https://foo.bar"_L1));
         envelope.addItem(SentryEvent(payload));
         envelope.addItem(SentryUserFeedback("{\"email\":\"john@me.com\",\"name\":\"John Me\",\"comments\":\"It broke.\"}\n"_qba));

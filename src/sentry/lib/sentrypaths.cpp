@@ -49,7 +49,10 @@ QString payloadPath(const QString &eventId)
     if (dir.isEmpty()) {
         return {};
     }
-    return dir + '/'_L1 + eventId;
+    // Note includes timestamp to facilitate multiple writes of the same event. We need this to support both
+    // pre-submission feedback as well as post-submission feedback while also avoiding race conditions between
+    // the postbox writing envelopes, and the postman picking them up.
+    return dir + '/'_L1 + eventId + '.'_L1 + QString::number(std::chrono::system_clock::now().time_since_epoch().count());
 }
 
 QString sentPayloadPath(const QString &eventId)
