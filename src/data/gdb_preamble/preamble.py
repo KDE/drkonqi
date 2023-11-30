@@ -240,7 +240,7 @@ class LockReason:
         match func:
             case 'QtLinuxFutex::_q_futex':
                 return LockReason(frame, 8, 'QtLinuxFutex')
-            case '___pthread_cond_wait':
+            case ('___pthread_cond_wait', 'pthread_cond_wait'):
                 return LockReason(frame, 2, 'pthread_cond_wait')
             case 'QWaitCondition::wait':
                 return LockReason(frame, 2, 'QWaitCondition')
