@@ -498,6 +498,14 @@ class SentryImages:
         return ret
 
 class SentryEvent:
+    def cpu_model(self):
+        with open("/proc/cpuinfo") as f:
+            for line in f.readlines():
+                key, value = line.split(':', 2)
+                if key.strip() == 'model name':
+                    return value.strip()
+        return None
+
     def make(self, program, crash_thread):
         crash_signal = int(os.getenv('DRKONQI_SIGNAL'))
         vm = psutil.virtual_memory()
@@ -536,6 +544,7 @@ class SentryEvent:
             'contexts': { # https://develop.sentry.dev/sdk/event-payloads/contexts/
                 'device': {
                     'name': base_data['Hostname'],
+                    'model': self.cpu_model(),
                     'family': base_data['Chassis'],
                     'simulator': base_data['Virtualization'],
                     'arch': platform.machine(),
