@@ -41,6 +41,7 @@
 #include "statusnotifier.h"
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 static const char version[] = PROJECT_VERSION;
 
@@ -177,6 +178,7 @@ int main(int argc, char *argv[])
                                                      "the backtrace at startup"));
     const QCommandLineOption threadOption(QStringLiteral("thread"), i18nc("@info:shell", "The <thread id> of the failing thread"), QStringLiteral("threadid"));
     const QCommandLineOption dialogOption(QStringLiteral("dialog"), i18nc("@info:shell", "Do not show a notification but launch the debug dialog directly"));
+    const QCommandLineOption glRendererOption(u"glrenderer"_s, u"The GL_RENDERER used by the process"_s, u"glrenderer"_s);
 
     parser.addOptions({signalOption,
                        appNameOption,
@@ -192,7 +194,8 @@ int main(int argc, char *argv[])
                        restartedOption,
                        keepRunningOption,
                        threadOption,
-                       dialogOption});
+                       dialogOption,
+                       glRendererOption});
 
     // Add all unknown options but make sure to print a warning.
     // This enables older DrKonqi's to run by newer KCrash instances with
@@ -230,6 +233,7 @@ int main(int argc, char *argv[])
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
     DrKonqi::setStartupId(parser.value(startupIdOption));
+    DrKonqi::m_glRenderer = parser.value(glRendererOption);
     auto forceDialog = parser.isSet(dialogOption);
 
     if (!DrKonqi::init()) {
