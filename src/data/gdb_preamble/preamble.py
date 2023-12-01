@@ -34,7 +34,6 @@ import binascii
 import platform
 import multiprocessing
 from pathlib import Path
-from pygdbmi import gdbmiparser
 import psutil
 
 class UnexpectedMappingException(Exception):
@@ -107,6 +106,7 @@ class SentryQMLThread:
 
         payload = self.payload
 
+        from pygdbmi import gdbmiparser
         result = gdbmiparser.parse_response("*stopped," + payload)
         frames = result['payload']['frame']
         print(frames)
@@ -657,6 +657,7 @@ def print_qml_frame(frame):
     print("level={level} func={func} at={file}:{line}".format(**data) )
 
 def print_qml_frames(payload):
+    from pygdbmi import gdbmiparser
     response = gdbmiparser.parse_response("*stopped," + payload)
     frames = response['payload']['frame']
     if type(frames) is dict: # single frames traces aren't arrays to make it more fun -.-
@@ -671,6 +672,12 @@ def print_qml_trace():
         # Only live processes can be traced unfortunately since we need to
         # call a function on the process. That does not work on cores.
         print('Cannot QML trace cores :(')
+        return
+
+    try:
+        from pygdbmi import gdbmiparser
+    except ImportError:
+        print('Cannot QML trace cores because pygdbmi is missing :(')
         return
 
     # should we iterate the inferiors? Probably makes no diff for 99% of apps.
