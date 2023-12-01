@@ -11,27 +11,25 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#include <QCommandLineParser>
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <QDBusReply>
+#include <QDebug>
+#include <QFile>
 #include <QIcon>
+#include <QTemporaryFile>
 #include <QTimer>
 
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <QCommandLineParser>
-#include <QDebug>
-#include <QFile>
-#include <QTemporaryFile>
-
-#include <QDBusConnection>
-#include <QDBusInterface>
-#include <QDBusReply>
-
-#include <config-drkonqi.h>
-
 #ifdef Q_OS_MACOS
 #include <KWindowSystem>
 #endif
+
+#include <config-drkonqi.h>
 
 #include "backtracegenerator.h"
 #include "bugzillaintegration/reportinterface.h"
