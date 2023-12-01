@@ -8,6 +8,7 @@
  *****************************************************************/
 
 #include <chrono>
+#include <csignal>
 #include <cstdlib>
 #include <unistd.h>
 
@@ -25,6 +26,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KSignalHandler>
 #ifdef Q_OS_MACOS
 #include <KWindowSystem>
 #endif
@@ -125,6 +127,15 @@ int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("drkonqi5"));
+
+    // We have somewhat special close behavior because of the internal debugger instance as well as auto-submission.
+    // Make sure to honor SIGINT in a timely manner.
+    KSignalHandler::self()->watchSignal(SIGINT);
+    QObject::connect(KSignalHandler::self(), &KSignalHandler::signalReceived, &app, [&app](int signal) {
+        if (signal == SIGINT) {
+            app.quit();
+        }
+    });
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);
