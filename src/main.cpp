@@ -233,7 +233,7 @@ int main(int argc, char *argv[])
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
     DrKonqi::setStartupId(parser.value(startupIdOption));
-    DrKonqi::m_glRenderer = parser.value(glRendererOption);
+    DrKonqi::instance()->m_glRenderer = parser.value(glRendererOption);
     auto forceDialog = parser.isSet(dialogOption);
 
     if (!DrKonqi::init()) {

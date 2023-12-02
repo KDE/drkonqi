@@ -391,7 +391,7 @@ void ReportInterface::prepareEventPayload()
     auto context = hash.take(CONTEXTS_KEY).toHash();
     context.insert(u"gpu"_s,
                    QVariantHash{
-                       {u"name"_s, DrKonqi::m_glRenderer}, //
+                       {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
                        {u"version"_s, QGuiApplication::platformName()},
                    });
     hash.insert(CONTEXTS_KEY, context);

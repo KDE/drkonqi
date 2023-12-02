@@ -74,12 +74,12 @@ public:
     // Whether to use the minimalistic UI or not. Defaults to false.
     static bool minimalMode();
 
-    inline static QString m_glRenderer;
+    static DrKonqi *instance();
+    QString m_glRenderer;
 
 private:
     DrKonqi();
     ~DrKonqi();
-    static DrKonqi *instance();
 
     SystemInformation *m_systemInformation = nullptr;
     AbstractDrKonqiBackend *m_backend = nullptr;
