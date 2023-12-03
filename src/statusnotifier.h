@@ -33,6 +33,7 @@ public:
 Q_SIGNALS:
     void expired();
     void activated();
+    void sentryActivated();
 
 private:
     static bool canBeRestarted(CrashedApplication *app);

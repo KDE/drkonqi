@@ -45,7 +45,7 @@
 static const QString ABOUT_BUG_REPORTING_URL = QStringLiteral("https://community.kde.org/Get_Involved/Issue_Reporting");
 static const QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral("enter_bug.cgi?product=drkonqi&format=guided");
 
-void DrKonqiDialog::show()
+void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
 {
     if (DrKonqi::isSafer() || DrKonqi::minimalMode()) {
         QDialog::show();
@@ -84,10 +84,19 @@ void DrKonqiDialog::show()
         engine,
         &QQmlApplicationEngine::objectCreated,
         this,
-        [mainUrl, this](QObject *obj, const QUrl &objUrl) {
+        [mainUrl, this, to](QObject *obj, const QUrl &objUrl) {
             if (!obj && mainUrl == objUrl) {
                 qWarning() << "Failed to load QML dialog, falling back to QWidget.";
                 QDialog::show();
+                return;
+            }
+
+            switch (to) {
+            case GoTo::Main:
+                break;
+            case GoTo::Sentry:
+                QMetaObject::invokeMethod(obj, "goToSentry", Qt::QueuedConnection);
+                break;
             }
         },
         Qt::QueuedConnection);

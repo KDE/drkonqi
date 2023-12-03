@@ -83,4 +83,8 @@ any side effects.</para>`);
 
     pageStack.initialPage: MainPage {}
     pageStack.defaultColumnWidth: appWindow.width // show single page
+
+    function goToSentry() {
+        pageStack.replace("qrc:/ui/SentryPage.qml")
+    }
 }

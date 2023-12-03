@@ -31,7 +31,8 @@ public:
     explicit DrKonqiDialog(QWidget *parent = nullptr);
     ~DrKonqiDialog() override;
 
-    void show();
+    enum class GoTo { Main, Sentry };
+    void show(GoTo to);
 
 private Q_SLOTS:
     void linkActivated(const QString &);

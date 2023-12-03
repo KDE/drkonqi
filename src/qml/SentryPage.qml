@@ -77,8 +77,6 @@ You will not receive any more crash notifications.`)
 
             QQC2.TextArea {
                 id: detailArea
-                Layout.fillWidth: true
-                Layout.fillHeight: true
                 placeholderText: i18nc("@label placeholder text in TextArea", "Tell us more about the crash…")
             }
         }

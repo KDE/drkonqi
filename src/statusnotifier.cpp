@@ -105,7 +105,7 @@ void StatusNotifier::notify(Activation activation)
 {
     CrashedApplication *crashedApp = DrKonqi::crashedApplication();
 
-    const auto activationAllowed = activation == Activation::Allowed;
+    const auto activationAllowed = activation != Activation::NotAllowed;
     const QString title = activationAllowed ? m_title : crashedApp->name();
     const QString message = activationMessage(activation);
 
@@ -116,10 +116,13 @@ void StatusNotifier::notify(Activation activation)
                                                        KNotification::DefaultEvent | KNotification::SkipGrouping);
 
     if (activationAllowed) {
-        auto action = notification->addAction(i18nc("Notification action button, keep short", "Report Bug"));
-        connect(action, &KNotificationAction::activated, this, [this]() {
-            Q_EMIT activated();
-        });
+        if (activation == StatusNotifier::Activation::AlreadySubmitting) {
+            auto details = notification->addAction(i18nc("@action:button, keep short", "Add Details"));
+            connect(details, &KNotificationAction::activated, this, &StatusNotifier::sentryActivated);
+        } else {
+            auto action = notification->addAction(i18nc("Notification action button, keep short", "Report Bug"));
+            connect(action, &KNotificationAction::activated, this, &StatusNotifier::activated);
+        }
     }
     if (canBeRestarted(crashedApp)) {
         auto action = notification->addAction(i18nc("Notification action button, keep short", "Restart App"));

@@ -71,12 +71,12 @@ void aboutToQuit()
     }
 }
 
-void openDrKonqiDialog()
+void openDrKonqiDialog(DrKonqiDialog::GoTo to = DrKonqiDialog::GoTo::Main)
 {
     auto *w = new DrKonqiDialog();
     QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
     QObject::connect(qApp, &QGuiApplication::lastWindowClosed, qApp, &aboutToQuit);
-    w->show();
+    w->show(to);
 #ifdef Q_OS_MACOS
     KWindowSystem::forceActiveWindow(w->winId());
 #endif
@@ -101,7 +101,13 @@ void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
         statusNotifier->notify(activation);
     }
     QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &aboutToQuit);
-    QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, &openDrKonqiDialog);
+    QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, [] {
+        openDrKonqiDialog(DrKonqiDialog::GoTo::Main);
+    });
+    QObject::connect(statusNotifier, &StatusNotifier::sentryActivated, qApp, [] {
+        qDebug() << "Sending report to sentry automatically";
+        openDrKonqiDialog(DrKonqiDialog::GoTo::Sentry);
+    });
 }
 
 bool isShuttingDown()
