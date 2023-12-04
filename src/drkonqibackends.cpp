@@ -50,31 +50,14 @@ void AbstractDrKonqiBackend::prepareForDebugger()
     Q_EMIT preparedForDebugger();
 }
 
-void AbstractDrKonqiBackend::cleanup()
-{
-    // Cleanup of a potential metadata.
-    // NOTE: This MUST be run regardless of the backend. If drkonqi has not crashed or quit because of a session logout
-    // we must clean the metadata. Otherwise the coredump helper may produce a second drkonqi instance.
-    // Lack of a metadata file indicates that drkonqi had been run on the crash already.
-    qCDebug(DRKONQI_LOG) << "Cleaning up" << metadataPath();
-    if (!metadataPath().isEmpty()) {
-        QFile::remove(metadataPath());
-    }
-}
-
-static QString resolveMetadataPath()
-{
-    const QString envPath = qEnvironmentVariable("DRKONQI_METADATA_FILE");
-    if (!envPath.isEmpty()) {
-        qunsetenv("DRKONQI_METADATA_FILE");
-        return envPath;
-    }
-    return Metadata::resolveMetadataPath(DrKonqi::pid()); // resolve manually
-}
-
 QString AbstractDrKonqiBackend::metadataPath()
 {
-    static QString path = resolveMetadataPath();
+    static QString path = [] {
+        const QString envPath = qEnvironmentVariable("DRKONQI_METADATA_FILE");
+        qunsetenv("DRKONQI_METADATA_FILE");
+        Q_ASSERT(!envPath.isEmpty());
+        return envPath;
+    }();
     return path;
 }
 

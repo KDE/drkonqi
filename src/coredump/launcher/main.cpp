@@ -3,26 +3,25 @@
     SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 */
 
+#include <poll.h>
+#include <systemd/sd-daemon.h>
+#include <unistd.h>
+
+#include <chrono>
+
 #include <QCoreApplication>
 #include <QDebug>
+#include <QDir>
 #include <QFile>
 #include <QJsonDocument>
 #include <QLibraryInfo>
 #include <QPluginLoader>
 #include <QProcess>
 #include <QScopeGuard>
-#include <QSettings>
 #include <QStandardPaths>
 
-#include <cerrno>
-#include <chrono>
-#include <memory>
-#include <tuple>
-#include <utility>
-
-#include <poll.h>
-#include <systemd/sd-daemon.h>
-#include <unistd.h>
+#include <KConfig>
+#include <KConfigGroup>
 
 #include "../coredump.h"
 #include "../metadata.h"
@@ -45,37 +44,100 @@ static QString drkonqiExe()
     return exec;
 }
 
-using ArgumentsPidTuple = std::tuple<QStringList, bool>;
+constexpr auto KCRASH_KEY = "kcrash"_L1;
 
-static ArgumentsPidTuple metadataArguments(const Coredump &dump, const QString &metadataPath)
+[[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath, const QString &drkonqiMetadataPath)
+{
+    auto contextObject = QJsonObject{{u"version"_s, 2}};
+    {
+        QJsonObject kcrashObject;
+        KConfig kcrashMetadata(kcrashMetadataPath, KConfig::SimpleConfig);
+        auto group = kcrashMetadata.group(u"KCrash"_s);
+        const QStringList keys = group.keyList();
+        for (const auto &key : keys) {
+            const auto value = group.readEntry(key);
+            kcrashObject.insert(key, value);
+        }
+        contextObject.insert(KCRASH_KEY, kcrashObject);
+    }
+    {
+        QJsonObject journalObject;
+        for (auto it = dump.m_rawData.cbegin(); it != dump.m_rawData.cend(); ++it) {
+            journalObject.insert(QString::fromUtf8(it.key()), QString::fromUtf8(it.value()));
+        }
+        contextObject.insert(u"journal"_s, journalObject);
+    }
+    {
+        contextObject.insert(u"drkonqi"_s, QJsonObject{{u"PickedUp"_s, true}});
+    }
+
+    QDir().mkpath(QFileInfo(drkonqiMetadataPath).path());
+
+    QFile file(drkonqiMetadataPath);
+    if (file.open(QFile::WriteOnly | QFile::Truncate)) {
+        file.write(QJsonDocument(contextObject).toJson());
+    } else {
+        qWarning() << "Failed to open for writing:" << drkonqiMetadataPath;
+    }
+
+    return contextObject;
+}
+
+[[nodiscard]] QJsonObject &synthesizeKCrashInto(const Coredump &dump, QJsonObject &metadata)
+{
+    if (!metadata[KCRASH_KEY].toObject().isEmpty()) {
+        return metadata; // already has data
+    }
+    if (!dump.exe.endsWith("/kwin_wayland"_L1)) {
+        return metadata; // isn't kwin
+    }
+
+    auto object = metadata[KCRASH_KEY].toObject();
+    object.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
+    object.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
+    object.insert(u"restarted"_s, true); // Cannot restart kwin_wayland. Autostarts if anything.
+    object.insert(u"bugaddress"_s, u"submit@bugs.kde.org"_s);
+    object.insert(u"appname"_s, dump.exe);
+    metadata[KCRASH_KEY] = object;
+
+    return metadata;
+}
+
+[[nodiscard]] QJsonObject &synthesizeGenericInto(const Coredump &dump, QJsonObject &metadata)
+{
+    auto object = metadata[KCRASH_KEY].toObject();
+
+    if (!object.isEmpty()) {
+        return metadata;
+    }
+
+    static const QString configFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("drkonqirc"));
+    if (!KConfig(configFile, KConfig::SimpleConfig).group(u"General"_s).readEntry(QStringLiteral("IncludeAll"), false)) {
+        return metadata;
+    }
+
+    object.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
+    object.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
+    object.insert(u"restarted"_s, true); // Cannot restart foreign apps!
+    metadata[KCRASH_KEY] = object;
+
+    return metadata;
+}
+
+[[nodiscard]] QStringList metadataArguments(const QVariantHash &kcrash)
 {
     QStringList arguments;
-    bool foundPID = false;
 
-    // Parse the metadata file. Ideally we'd should even stop passing a gazillion options
-    // and instead rely on this file, then drkonqi
-    // would also be in charge of removing it instead of us here.
-    QSettings metadata(metadataPath, QSettings::IniFormat);
-    metadata.beginGroup(QStringLiteral("KCrash"));
-    const QStringList keys = metadata.allKeys();
-    for (const QString &key : keys) {
-        const QString value = metadata.value(key).toString();
+    for (auto [key, valueVariant] : kcrash.asKeyValueRange()) {
+        const auto value = valueVariant.toString();
 
         if (key == QLatin1String("exe")) {
             if (value.endsWith(QStringLiteral("/drkonqi"))) {
                 qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashed :O";
                 return {};
             }
-            if (value != dump.exe) {
-                qWarning() << "the exe in the metadata file doesn't match the exe in the journal entry! aborting" << value << dump.exe;
-                return {};
-            }
             // exe purely exists for our benefit, don't forward it to drkonqi.
             continue;
-        }
-
-        if (key == QLatin1String("pid")) {
-            foundPID = true;
         }
 
         arguments << QStringLiteral("--%1").arg(key);
@@ -83,38 +145,27 @@ static ArgumentsPidTuple metadataArguments(const Coredump &dump, const QString &
             arguments << value;
         }
     }
-    metadata.endGroup();
 
-    return {arguments, foundPID};
-}
-
-static ArgumentsPidTuple includeAllArguments(const Coredump &dump)
-{
-    // Synthesize drkonqi arguments from the dump alone, this has limited functionality and is meant for use with
-    // non-KDE apps.
-    QStringList arguments;
-    arguments << QStringLiteral("--signal") << QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL")));
-    arguments << QStringLiteral("--pid") << QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID")));
-    arguments << QStringLiteral("--restarted"); // Cannot restart foreign apps!
-    return {arguments, true};
-}
-
-static ArgumentsPidTuple includeKWinWaylandArguments(const Coredump &dump)
-{
-    auto [arguments, foundPID] = includeAllArguments(dump);
-    arguments << QStringLiteral("--bugaddress") << QStringLiteral("submit@bugs.kde.org") << QStringLiteral("--appname") << dump.exe;
-    return {arguments, foundPID};
+    return arguments;
 }
 
 static bool tryDrkonqi(const Coredump &dump)
 {
-    const QString metadataPath = Metadata::resolveMetadataPath(dump.pid);
-    const QString configFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("drkonqirc"));
-
-    // Arm removal. If we return early this will ensure clean up, otherwise we dismiss it later
-    auto deleteFile = qScopeGuard([metadataPath] {
-        QFile::remove(metadataPath);
+    const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
+    // Arm removal. In all cases we'll want to remove the kcrash metadata (we possibly created expanded drkonqi metadata instead)
+    auto deleteFile = qScopeGuard([kcrashMetadataPath] {
+        QFile::remove(kcrashMetadataPath);
     });
+
+    const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
+
+    auto metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath, drkonqiMetadataPath);
+    metadata = synthesizeKCrashInto(dump, metadata);
+    metadata = synthesizeGenericInto(dump, metadata);
+
+    if (!QFile::exists(dump.filename)) {
+        return false; // no trace, nothing to handle
+    }
 
     if (qEnvironmentVariableIsSet("KDE_DEBUG")) {
         qWarning() << "KDE_DEBUG set. Not invoking DrKonqi.";
@@ -126,57 +177,12 @@ static bool tryDrkonqi(const Coredump &dump)
         return false;
     }
 
-    QSettings metadata(Metadata::metadataPath(dump.pid), QSettings::IniFormat);
-    metadata.beginGroup("DrKonqi"_L1);
-    if (metadata.value("PickedUp"_L1).toBool()) {
-        // already being worked on!
-        return true;
-    }
-    metadata.endGroup();
-
-    QStringList arguments;
-    bool foundPID = false;
-
-    if (!metadataPath.isEmpty()) {
-        // A KDE app crash has metadata, build arguments from that
-        std::tie(arguments, foundPID) = metadataArguments(dump, metadataPath);
-    } else if (dump.exe.endsWith(QLatin1String("/kwin_wayland"))) {
-        // When the compositor goes down it may not have time to store metadata, in that case we'll fake them.
-        std::tie(arguments, foundPID) = includeKWinWaylandArguments(dump);
-    } else if (QSettings(configFile, QSettings::IniFormat).value(QStringLiteral("IncludeAll")).toBool()) {
-        // Handle non-KDE apps when in IncludeAll mode.
-        std::tie(arguments, foundPID) = includeAllArguments(dump);
-    } else {
-        return false;
-    }
-
-    if (arguments.isEmpty() || !foundPID) {
-        // There is a chance that somehow the metadata file writing failed or is incomplete. Do some trivial
-        // checks to catch and ignore such cases. Otherwise we risk drkonqi crashing due to internally failed
-        // assertions.
-        qWarning() << "Failed to read metadata from crash" << arguments << foundPID;
-        return false;
-    }
-
-    // Append Coredump data. This allow us to not have to talk to journald again on the drkonqi side.
-    metadata.beginGroup(QStringLiteral("Journal"));
-    for (auto it = dump.m_rawData.cbegin(); it != dump.m_rawData.cend(); ++it) {
-        metadata.setValue(QString::fromUtf8(it.key()), it.value());
-    }
-    metadata.endGroup();
-    metadata.beginGroup("DrKonqi"_L1);
-    metadata.setValue("PickedUp"_L1, true);
-    metadata.endGroup();
-    metadata.sync();
-
     setenv("DRKONQI_BACKEND", "COREDUMPD", 1);
-    setenv("DRKONQI_METADATA_FILE", qPrintable(metadataPath), 1);
-
-    deleteFile.dismiss(); // let drkonqi handle cleanup if we get here
+    setenv("DRKONQI_METADATA_FILE", qPrintable(drkonqiMetadataPath), 1);
 
     // We must start drkonqi in a new slice. This launcher will want to terminate quickly and we enforce that
     // through maximum run time in the unit configuration. If drkonqi wasn't in a new slice it'd get killed with us.
-    QProcess::execute(drkonqiExe(), arguments);
+    QProcess::execute(drkonqiExe(), metadataArguments(metadata[KCRASH_KEY].toObject().toVariantHash()));
 
     return true; // always considered handled, even if drkonqi crashes or something
 }
@@ -189,11 +195,6 @@ public:
 
     bool handle(const Coredump &dump) override
     {
-        if (!QFile::exists(dump.filename)) {
-            QFile::remove(Metadata::resolveMetadataPath(dump.pid)); // without trace we'll never run drkonqi as it can't file a bug anyway
-            return false;
-        }
-
         return tryDrkonqi(dump);
     }
 

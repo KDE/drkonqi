@@ -37,6 +37,8 @@ public:
     QString exe;
     QString filename; // core dump file if available (may be /dev/null if the core is stored in journal directly - only in older systemds)
     QString systemd_unit;
+    QString bootId;
+    QString timestamp;
 
 private:
     static EntriesHash documentToHash(const QJsonDocument &document);

@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
 add_executable(drkonqi-coredump-launcher main.cpp)
-target_link_libraries(drkonqi-coredump-launcher Qt::Core drkonqi-coredump)
+target_link_libraries(drkonqi-coredump-launcher Qt::Core KF6::ConfigCore drkonqi-coredump)
 target_compile_options(
     drkonqi-coredump-launcher
     PRIVATE

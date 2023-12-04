@@ -132,6 +132,7 @@ public:
 
     bool isCrashEventSendingEnabled() const;
     bool hasCrashEventSent() const;
+    [[nodiscard]] QString sentryEventId() const;
 
 public Q_SLOTS:
     void prepareCrashEvent();

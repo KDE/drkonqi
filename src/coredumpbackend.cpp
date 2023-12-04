@@ -16,9 +16,10 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusReply>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QProcess>
 #include <QScopeGuard>
-#include <QSettings>
 
 #include <unistd.h>
 
@@ -27,6 +28,7 @@
 
 #include <coredump.h>
 
+#include "bugzillaintegration/reportinterface.h"
 #include "crashedapplication.h"
 #include "debugger.h"
 #include "debuggermanager.h"
@@ -40,16 +42,6 @@ using namespace Qt::StringLiterals;
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
-
-// Only use signal safe API here.
-//   man 7 signal-safety
-static void emergencySaveFunction(int signal)
-{
-    // Should we crash while dealing with this crash, then make sure to remove the metadata file.
-    // Otherwise the helper daemon will call us again, and again cause a crash, until the user manually removes the file.
-    Q_UNUSED(signal);
-    unlink(qPrintable(CoredumpBackend::metadataPath()));
-}
 
 namespace
 {
@@ -149,17 +141,18 @@ QList<EntriesHash> collectLogs(const QByteArray &cursor, sd_journal *context, co
 
 bool CoredumpBackend::init()
 {
-    KCrash::setEmergencySaveFunction(emergencySaveFunction);
-
     Q_ASSERT(!metadataPath().isEmpty());
     Q_ASSERT_X(QFile::exists(metadataPath()), static_cast<const char *>(Q_FUNC_INFO), qUtf8Printable(metadataPath()));
     qCDebug(DRKONQI_LOG) << "loading metadata" << metadataPath();
 
-    QSettings metadata(metadataPath(), QSettings::IniFormat);
-    metadata.beginGroup(QStringLiteral("Journal"));
-    const QStringList keys = metadata.allKeys();
-    for (const auto &key : keys) {
-        m_journalEntry.insert(key.toUtf8(), metadata.value(key).toByteArray());
+    QFile file(metadataPath());
+    if (!file.open(QFile::ReadOnly)) {
+        return false;
+    }
+    auto document = QJsonDocument::fromJson(file.readAll());
+    const auto journal = document[u"journal"_s].toObject().toVariantHash();
+    for (auto [key, value] : journal.asKeyValueRange()) {
+        m_journalEntry.insert(key.toUtf8(), value.toByteArray());
     }
     // conceivably the file contains no Journal group for unknown reasons
     Q_ASSERT_X(!m_journalEntry.isEmpty(), static_cast<const char *>(Q_FUNC_INFO), qUtf8Printable(metadataPath()));
@@ -170,6 +163,21 @@ bool CoredumpBackend::init()
         qCWarning(DRKONQI_LOG) << "Invalid pid specified or it wasn't found in journald.";
         return false;
     }
+
+    connect(ReportInterface::self(), &ReportInterface::crashEventSent, this, [] {
+        QFile file(metadataPath());
+        if (!file.open(QFile::ReadWrite)) {
+            qCWarning(DRKONQI_LOG) << "Failed to open for writing" << metadataPath();
+            return;
+        }
+        auto object = QJsonDocument::fromJson(file.readAll()).object();
+        constexpr auto DRKONQI_KEY = "drkonqi"_L1;
+        auto drkonqiObject = object[DRKONQI_KEY].toObject();
+        drkonqiObject[u"sentryEventId"_s] = ReportInterface::self()->sentryEventId();
+        object[DRKONQI_KEY] = drkonqiObject;
+        file.reset();
+        file.write(QJsonDocument(object).toJson());
+    });
 
     return true;
 }

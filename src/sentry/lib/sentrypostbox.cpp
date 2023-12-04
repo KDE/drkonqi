@@ -77,4 +77,9 @@ bool SentryPostbox::isReadyToDeliver() const
     return m_dsnSet && !m_envelope.isEmpty();
 }
 
+QString SentryPostbox::eventId() const
+{
+    return m_envelope.eventId();
+}
+
 #include "moc_sentrypostbox.cpp"

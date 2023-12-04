@@ -678,4 +678,9 @@ void ReportInterface::trySentry()
     }
 }
 
+QString ReportInterface::sentryEventId() const
+{
+    return m_sentryPostbox.eventId();
+}
+
 #include "moc_reportinterface.cpp"

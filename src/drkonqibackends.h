@@ -20,7 +20,6 @@ public:
     virtual ~AbstractDrKonqiBackend();
     virtual bool init();
     virtual void prepareForDebugger();
-    void cleanup(); // cleanup on-disk caches
 
     inline CrashedApplication *crashedApplication() const
     {

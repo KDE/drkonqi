@@ -24,6 +24,7 @@ public:
     void deliver();
     bool hasDelivered() const;
     bool isReadyToDeliver() const;
+    [[nodiscard]] QString eventId() const;
 
 Q_SIGNALS:
     void hasDeliveredChanged();

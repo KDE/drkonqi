@@ -47,25 +47,18 @@ static const char version[] = PROJECT_VERSION;
 
 namespace
 {
-// Clean on-disk data before quitting. This ought to only happen if we are
-// certain that the user doesn't want the crash to appear again.
-void cleanupAfterUserQuit()
-{
-    DrKonqi::cleanupBeforeQuit();
-    qApp->quit();
-}
 
 void aboutToQuit()
 {
     if (ReportInterface::self()->hasCrashEventSent()) {
-        cleanupAfterUserQuit();
+        qApp->quit();
     } else {
         // Add a fallback timer. This timer makes sure that drkonqi will definitely quit, even if it should
         // have some sort of runtime defect that prevents reporting from finishing (and consequently not quitting).
         static QTimer timer;
         timer.setInterval(5min); // arbitrary time limit for trace+submission
-        QObject::connect(&timer, &QTimer::timeout, qApp, &cleanupAfterUserQuit);
-        QObject::connect(ReportInterface::self(), &ReportInterface::crashEventSent, qApp, &cleanupAfterUserQuit);
+        QObject::connect(&timer, &QTimer::timeout, qApp, &QCoreApplication::quit);
+        QObject::connect(ReportInterface::self(), &ReportInterface::crashEventSent, qApp, &QCoreApplication::quit);
         ReportInterface::self()->setSendWhenReady(true);
         timer.start();
     }
@@ -259,8 +252,6 @@ int main(int argc, char *argv[])
     if (forceDialog) {
         openDrKonqiDialog();
     } else if (shuttingDown) {
-        // this bypasses cleanupAfterUserQuit and consequently leaves the kcrash-metadata in place for later
-        // consumption via drkonqi-coredump-pickup
         return 0;
     } else {
         // if no notification service is running (eg. shell crashed, or other desktop environment)
