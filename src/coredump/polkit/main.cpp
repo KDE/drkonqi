@@ -30,7 +30,7 @@ public Q_SLOTS:
     QString excavateFrom(const QString &coreName)
     {
         auto loopLock = std::make_shared<QEventLoopLocker>();
-        QTemporaryDir tmpDir(QDir::tempPath() + "/drkonqi-coredump-execavator"_L1);
+        QTemporaryDir tmpDir(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
         if (!tmpDir.isValid()) {
             qWarning() << "tmpdir not valid";
             sendErrorReply(QDBusError::InternalError, "Failed to create temporary directory"_L1);

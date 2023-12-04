@@ -11,6 +11,7 @@ target_link_libraries(drkonqi-coredump-gui
     Qt::Quick
     KF6::I18n
     drkonqi-coredump
+    drkonqi-coredumpexcavator
 )
 
 install(TARGETS drkonqi-coredump-gui ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

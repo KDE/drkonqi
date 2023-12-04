@@ -13,6 +13,8 @@
 
 #include <memory>
 
+#include <automaticcoredumpexcavator.h>
+
 class QProcess;
 
 class CoredumpBackend : public AbstractDrKonqiBackend
@@ -28,10 +30,10 @@ protected:
     DebuggerManager *constructDebuggerManager() override;
 
 private:
-    std::unique_ptr<QTemporaryDir> m_coreDir;
     std::unique_ptr<CrashedApplication> m_crashedApplication;
     DebuggerManager *m_debuggerManager; // parented
     QHash<QByteArray, QByteArray> m_journalEntry;
     const QByteArray m_cursor;
     std::unique_ptr<QProcess> m_preparationProc;
+    std::unique_ptr<AutomaticCoredumpExcavator> m_excavator;
 };

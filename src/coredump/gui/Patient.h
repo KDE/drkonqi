@@ -3,12 +3,18 @@
 
 #pragma once
 
+#include <QFileInfo>
 #include <QObject>
+
+#include <automaticcoredumpexcavator.h>
 
 class Coredump;
 class Patient : public QObject
 {
     Q_OBJECT
+
+    QString m_origCoreFilename;
+    QFileInfo m_coreFileInfo;
 
 #define MEMBER_PROPERTY(type, name)                                                                                                                            \
     Q_PROPERTY(type name MEMBER m_##name NOTIFY changed)                                                                                                       \
@@ -19,9 +25,9 @@ class Patient : public QObject
     MEMBER_PROPERTY(int, signal) = -1;
     MEMBER_PROPERTY(QString, appName);
     MEMBER_PROPERTY(pid_t, pid) = 0;
-    MEMBER_PROPERTY(bool, canDebug) = false;
     MEMBER_PROPERTY(time_t, timestamp) = 0;
 #undef MEMBER_PROPERTY
+    Q_PROPERTY(bool canDebug READ canDebug NOTIFY changed)
     Q_PROPERTY(QString dateTime READ dateTime NOTIFY changed)
     Q_PROPERTY(QString iconName READ iconName CONSTANT)
 public:
@@ -29,17 +35,22 @@ public:
 
     QStringList coredumpctlArguments(const QString &command) const;
 
-    Q_INVOKABLE void debug() const;
+    bool canDebug();
+    Q_INVOKABLE void debug();
     QString dateTime() const;
     QString iconName() const;
 
 Q_SIGNALS:
     void changed();
 
+private Q_SLOTS:
+    void launchDebugger();
+
 private:
     const QByteArray m_coredumpExe;
     const QByteArray m_coredumpCom;
     QString m_iconName;
+    std::unique_ptr<AutomaticCoredumpExcavator> m_excavator;
 };
 
 Q_DECLARE_METATYPE(time_t)

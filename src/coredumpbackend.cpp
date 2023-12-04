@@ -25,8 +25,6 @@
 // TODO: refactor the entire stack such that logs extraction happens in the processor and gets passed along the chain
 #include <systemd/sd-journal.h>
 
-#include <chrono>
-
 #include <coredump.h>
 
 #include "crashedapplication.h"
@@ -241,50 +239,20 @@ DebuggerManager *CoredumpBackend::constructDebuggerManager()
 
 void CoredumpBackend::prepareForDebugger()
 {
-    if (!m_coreDir) {
-        m_coreDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + QStringLiteral("/kcrash-core"));
-        Q_ASSERT(m_coreDir->isValid());
-        if (!m_coreDir->isValid()) {
-            Q_EMIT preparedForDebugger();
-            return;
-        }
+    if (m_excavator) {
+        m_excavator->excavateFrom(QString::fromUtf8(m_journalEntry["COREDUMP_FILENAME"]));
+        return;
     }
 
-    const auto coreFileTarget = m_coreDir->filePath(QStringLiteral("core"));
-    const auto coredumpFilePath = QString::fromUtf8(m_journalEntry["COREDUMP_FILENAME"]);
-
-    if (QFileInfo(coredumpFilePath).isReadable()) {
-        auto excavator = new CoredumpExcavator(this);
-        connect(excavator, &CoredumpExcavator::excavated, this, [this, coreFileTarget](int exitCode) {
-            if (exitCode != 0) {
-                qCWarning(DRKONQI_LOG) << "Failed to excavate core from file:" << exitCode;
-                Q_EMIT failedToPrepare();
-                return;
-            }
-            m_crashedApplication->m_coreFile = coreFileTarget;
-            Q_EMIT preparedForDebugger();
-        });
-        excavator->excavateFromTo(coredumpFilePath, coreFileTarget);
-    } else {
-        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFrom"_L1);
-        msg << QFileInfo(coredumpFilePath).fileName(); // temp dir is constructed and managed by helper, no need to pass our presumed path in
-        static const auto connection = QDBusConnection::connectToBus(QDBusConnection::SystemBus, "drkonqi-polkit-system-connection"_L1);
-        connection.interface()->setTimeout(std::chrono::milliseconds(5min).count());
-        auto watcher = new QDBusPendingCallWatcher(connection.asyncCall(msg));
-        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, coreFileTarget] {
-            watcher->deleteLater();
-            QDBusReply<QString> reply = *watcher;
-            qCWarning(DRKONQI_LOG) << reply.isValid() << reply.error() << reply.value();
-            if (!reply.isValid() || reply.value().isEmpty()) {
-                qCWarning(DRKONQI_LOG) << "Failed to excavate core as admin:" << reply.error();
-                Q_EMIT failedToPrepare();
-                return;
-            }
-
-            m_crashedApplication->m_coreFile = reply.value();
-            Q_EMIT preparedForDebugger();
-        });
-    }
+    m_excavator = std::make_unique<AutomaticCoredumpExcavator>();
+    connect(m_excavator.get(), &AutomaticCoredumpExcavator::failed, this, [this] {
+        Q_EMIT failedToPrepare();
+    });
+    connect(m_excavator.get(), &AutomaticCoredumpExcavator::excavated, this, [this](const QString &corePath) {
+        m_crashedApplication->m_coreFile = corePath;
+        Q_EMIT preparedForDebugger();
+    });
+    m_excavator->excavateFrom(QString::fromUtf8(m_journalEntry["COREDUMP_FILENAME"]));
 }
 
 #include "moc_coredumpbackend.cpp"
