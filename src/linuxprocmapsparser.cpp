@@ -5,16 +5,17 @@
 
 #include "linuxprocmapsparser.h"
 
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+#include <cerrno>
+#include <cstring>
+
 #include <QByteArrayList>
 #include <QDebug>
 #include <QFile>
 #include <QRegularExpression>
-
-#include <errno.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
 
 #include "drkonqi_debug.h"
 
