@@ -14,12 +14,6 @@ configure_file(config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi
 add_subdirectory(bugzillaintegration/libbugzilla)
 add_subdirectory(data)
 add_subdirectory(parser)
-if(WIN32)
-    find_package(KDEWin REQUIRED)
-    # for finding drkonqi_debug.h
-    include_directories(${CMAKE_CURRENT_BINARY_DIR})
-    add_subdirectory(kdbgwin)
-endif()
 
 set(drkonqi_SRCS
     drkonqidialog.cpp
@@ -144,10 +138,6 @@ if(Systemd_FOUND)
     target_link_libraries(DrKonqiInternal drkonqi-coredump) # needed for logs extraction
     target_link_libraries(DrKonqiInternal drkonqi-coredumpexcavator)
     target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
-endif()
-
-if(WIN32)
-    target_link_libraries(DrKonqiInternal kdewin)
 endif()
 
 add_executable(drkonqi main.cpp qml/qml.qrc)

@@ -5,9 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "backtraceparser_p.h"
-#include "backtraceparsercdb.h"
 #include "backtraceparsergdb.h"
-#include "backtraceparserkdbgwin.h"
 #include "backtraceparserlldb.h"
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
@@ -20,15 +18,11 @@ BacktraceParser *BacktraceParser::newParser(const QString &debuggerName, QObject
 {
     if (debuggerName == QLatin1String("gdb")) {
         return new BacktraceParserGdb(parent);
-    } else if (debuggerName == QLatin1String("kdbgwin")) {
-        return new BacktraceParserKdbgwin(parent);
-    } else if (debuggerName == QLatin1String("lldb")) {
-        return new BacktraceParserLldb(parent);
-    } else if (debuggerName == QLatin1String("cdb")) {
-        return new BacktraceParserCdb(parent);
-    } else {
-        return new BacktraceParserNull(parent);
     }
+    if (debuggerName == QLatin1String("lldb")) {
+        return new BacktraceParserLldb(parent);
+    }
+    return new BacktraceParserNull(parent);
 }
 
 BacktraceParser::BacktraceParser(QObject *parent)

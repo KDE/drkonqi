@@ -15,8 +15,6 @@
 #else
 #if defined(Q_OS_UNIX)
 #include <signal.h>
-#else
-#include <windows.h>
 #endif
 #endif
 

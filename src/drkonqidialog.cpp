@@ -229,16 +229,9 @@ void DrKonqiDialog::buildIntroWidget()
                                     // prevent number localization by ki18n
                                     QString::number(crashedApp->pid()),
                                     crashedApp->signalName(),
-#if defined(Q_OS_UNIX)
                                     // prevent number localization by ki18n
                                     QString::number(crashedApp->signalNumber()),
-#else
-                                    // windows uses weird big numbers for exception codes,
-                                    // so it doesn't make sense to display them in decimal
-                                    QString().asprintf("0x%8x", crashedApp->signalNumber()),
-#endif
                                     locale.toString(crashedApp->datetime().date(), QLocale::ShortFormat),
-
                                     locale.toString(crashedApp->datetime().time())));
 }
 
