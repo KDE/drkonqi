@@ -27,20 +27,18 @@
 #include "backtracegenerator.h"
 #include "backtraceparser.h"
 #include "backtracewidget.h"
+#include "bugzillaintegration/bugzillalib.h"
 #include "config-drkonqi.h"
 #include "crashedapplication.h"
 #include "debuggerlaunchers.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqi_globals.h"
-#include "qmlextensions/commentmodel.h"
 #include "qmlextensions/credentialstore.h"
 #include "qmlextensions/doctore.h"
-#include "qmlextensions/duplicatemodel.h"
 #include "qmlextensions/platformmodel.h"
 #include "qmlextensions/reproducibilitymodel.h"
 #include "settings.h"
-#include "systeminformation.h"
 
 static const QString ABOUT_BUG_REPORTING_URL = QStringLiteral("https://community.kde.org/Get_Involved/Issue_Reporting");
 static const QString DRKONQI_REPORT_BUG_URL = KDE_BUGZILLA_URL + QStringLiteral("enter_bug.cgi?product=drkonqi&format=guided");
@@ -59,7 +57,6 @@ void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
     engine->rootContext()->setContextObject(l10nContext);
 
     qmlRegisterType<BugzillaManager>("org.kde.drkonqi", 1, 0, "Bugzilla");
-    qmlRegisterType<DuplicateModel>("org.kde.drkonqi", 1, 0, "DuplicateModel");
     qmlRegisterType<PlatformModel>("org.kde.drkonqi", 1, 0, "PlatformModel");
     qmlRegisterType<ReproducibilityModel>("org.kde.drkonqi", 1, 0, "ReproducibilityModel");
     qmlRegisterType<CredentialStore>("org.kde.drkonqi", 1, 0, "CredentialStore");

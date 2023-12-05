@@ -35,7 +35,6 @@ The following environment variables may be used to test drkonqi with actual repo
   to set this to bugstest.kde.org - must end with slash)
 - DRKONQI_HTTP_DELAY_MS: introduce a delay on every single API request
   (simulates slow connection)
-- DRKONQI_SKIP_DUPES: skip duplicate checking (is faster and allows filing dupes)
 
 # Backends
 

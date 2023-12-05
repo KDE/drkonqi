@@ -54,11 +54,6 @@ public:
     /*! Returns a value that indicates how much useful is the backtrace that we got */
     Q_INVOKABLE virtual BacktraceParser::Usefulness backtraceUsefulness() const;
 
-    /*! Returns a short list of the first good functions that appear in the backtrace
-     * (in the crashing thread). This is used for quering for duplicate reports.
-     */
-    Q_INVOKABLE virtual QStringList firstValidFunctions() const;
-
     /*! Returns a list of libraries/executables that are missing debug symbols. */
     Q_INVOKABLE virtual QStringList librariesWithMissingDebugSymbols() const;
 
@@ -87,7 +82,7 @@ protected:
     /*! Subclasses should override to provide their own BacktraceParserPrivate instance */
     virtual BacktraceParserPrivate *constructPrivate() const;
 
-    /*! This method should fill the m_usefulness, m_simplifiedBacktrace, m_firstValidFunctions
+    /*! This method should fill the m_usefulness, m_simplifiedBacktrace
      * and m_librariesWithMissingDebugSymbols members of the BacktraceParserPrivate instance.
      * The default implementation uses the lines inserted in m_linesToRate and applies a
      * generic algorithm that should work for many debuggers.

@@ -10,6 +10,7 @@
 
 #include "bugzillaintegration/bugzillalib.h"
 #include "bugzillaintegration/libbugzilla/clients/bugfieldclient.h"
+#include "drkonqi.h"
 #include "drkonqi_debug.h"
 #include "systeminformation.h"
 

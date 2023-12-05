@@ -14,8 +14,11 @@
 #include <QRegularExpression>
 
 #include "drkonqi_debug.h"
+#include "drkonqi_globals.h"
 #include "libbugzilla/bugzilla.h"
-#include "libbugzilla/clients/commentclient.h"
+#include "libbugzilla/clients/attachmentclient.h"
+#include "libbugzilla/clients/bugclient.h"
+#include "libbugzilla/clients/productclient.h"
 #include "libbugzilla/connection.h"
 
 static const char showBugUrl[] = "show_bug.cgi?id=%1";
@@ -186,78 +189,6 @@ QString BugzillaManager::getUsername() const
     return m_username;
 }
 
-void BugzillaManager::fetchBugReport(int bugnumber, QObject *jobOwner)
-{
-    Bugzilla::BugSearch search;
-    search.id = bugnumber;
-
-    Bugzilla::BugClient client;
-    auto job = m_searchJob = client.search(search);
-    connect(job, &KJob::finished, this, [this, client, jobOwner](KJob *job) {
-        try {
-            auto list = client.search(job);
-            if (list.size() != 1) {
-                throw Bugzilla::RuntimeException(QStringLiteral("Unexpected bug amount returned: %1").arg(list.size()));
-            }
-            auto bug = list.at(0);
-            m_searchJob = nullptr;
-            Q_EMIT bugReportFetched(bug, jobOwner);
-        } catch (Bugzilla::Exception &e) {
-            qCWarning(DRKONQI_LOG) << e.whatString();
-            Q_EMIT bugReportError(e.whatString(), jobOwner);
-        }
-    });
-}
-
-void BugzillaManager::fetchComments(const Bugzilla::Bug::Ptr &bug, QObject *jobOwner)
-{
-    Bugzilla::CommentClient client;
-    auto job = client.getFromBug(bug->id());
-    connect(job, &KJob::finished, this, [this, client, jobOwner](KJob *job) {
-        try {
-            auto comments = client.getFromBug(job);
-            Q_EMIT commentsFetched(comments, jobOwner);
-        } catch (Bugzilla::Exception &e) {
-            qCWarning(DRKONQI_LOG) << e.whatString();
-            Q_EMIT commentsError(e.whatString(), jobOwner);
-        }
-    });
-}
-
-// TODO: This would kinda benefit from an actual pagination class,
-// currently this implicitly relies on the caller to handle offsets correctly.
-// Fortunately we only have one caller so it makes no difference.
-void BugzillaManager::searchBugs(const QStringList &products, const QString &severity, const QString &comment, int offset)
-{
-    Bugzilla::BugSearch search;
-    search.products = products;
-    search.severity = severity;
-    search.longdesc = comment;
-    // Order descendingly by bug_id. This allows us to offset through the results
-    // from newest to oldest.
-    // The UI will later order our data anyway, so the order at which we receive
-    // the data is not important for the UI (outside the fact that we want
-    // to step through pages of data)
-    search.order << QStringLiteral("bug_id DESC");
-    search.limit = 25;
-    search.offset = offset;
-
-    stopCurrentSearch();
-
-    Bugzilla::BugClient client;
-    auto job = m_searchJob = Bugzilla::BugClient().search(search);
-    connect(job, &KJob::finished, this, [this, client](KJob *job) {
-        try {
-            auto list = client.search(job);
-            m_searchJob = nullptr;
-            Q_EMIT searchFinished(list);
-        } catch (Bugzilla::Exception &e) {
-            qCWarning(DRKONQI_LOG) << e.whatString();
-            Q_EMIT searchError(e.whatString());
-        }
-    });
-}
-
 void BugzillaManager::sendReport(const Bugzilla::NewBug &bug)
 {
     auto job = Bugzilla::BugClient().create(bug);
@@ -296,25 +227,6 @@ void BugzillaManager::attachTextToReport(const QString &text, const QString &fil
     });
 }
 
-void BugzillaManager::addMeToCC(int bugId)
-{
-    Bugzilla::BugUpdate update;
-    Q_ASSERT(!m_username.isEmpty());
-    update.cc->add << m_username;
-
-    auto job = Bugzilla::BugClient().update(bugId, update);
-    connect(job, &KJob::finished, this, [this](KJob *job) {
-        try {
-            const auto bugId = Bugzilla::BugClient().update(job);
-            Q_ASSERT(bugId != 0);
-            Q_EMIT addMeToCCFinished(bugId);
-        } catch (Bugzilla::Exception &e) {
-            qCWarning(DRKONQI_LOG) << e.whatString();
-            Q_EMIT addMeToCCError(e.whatString());
-        }
-    });
-}
-
 void BugzillaManager::fetchProductInfo(const QString &product)
 {
     auto job = Bugzilla::ProductClient().get(product);
@@ -335,15 +247,6 @@ void BugzillaManager::fetchProductInfo(const QString &product)
 QString BugzillaManager::urlForBug(int bug_number) const
 {
     return QString(m_bugTrackerUrl) + QString::fromLatin1(showBugUrl).arg(bug_number);
-}
-
-void BugzillaManager::stopCurrentSearch()
-{
-    if (m_searchJob) { // Stop previous searchJob
-        m_searchJob->disconnect();
-        m_searchJob->kill();
-        m_searchJob = nullptr;
-    }
 }
 
 #include "moc_bugzillalib.cpp"

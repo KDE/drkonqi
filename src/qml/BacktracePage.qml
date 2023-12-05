@@ -14,7 +14,6 @@ DeveloperPage {
 
     onTraceChanged: {
         reportInterface.backtrace = trace
-        reportInterface.setFirstBacktraceFunctions(BacktraceGenerator.parser().firstValidFunctions())
     }
 
     footerActionsLeft: [

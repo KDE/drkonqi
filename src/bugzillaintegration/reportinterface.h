@@ -42,7 +42,6 @@ class ReportInterface : public QObject
     Q_PROPERTY(bool isBugAwarenessPageDataUseful READ isBugAwarenessPageDataUseful NOTIFY awarenessChanged)
 
     Q_PROPERTY(uint attachToBugNumber READ attachToBugNumber WRITE setAttachToBugNumber NOTIFY attachToBugNumberChanged)
-    Q_PROPERTY(uint duplicateId READ duplicateId WRITE setDuplicateId NOTIFY duplicateIdChanged)
 
     Q_PROPERTY(uint sentReport MEMBER m_sentReport NOTIFY done)
     Q_PROPERTY(uint crashEventSent READ hasCrashEventSent NOTIFY crashEventSent)
@@ -77,9 +76,6 @@ public:
 
     Q_INVOKABLE int selectedOptionsRating() const;
 
-    Q_INVOKABLE QStringList firstBacktraceFunctions() const;
-    Q_INVOKABLE void setFirstBacktraceFunctions(const QStringList &functions);
-
     QString backtrace() const;
     void setBacktrace(const QString &backtrace);
     Q_SIGNAL void backtraceChanged();
@@ -91,7 +87,6 @@ public:
     void setDetailText(const QString &text);
     Q_SIGNAL void detailTextChanged();
 
-    Q_INVOKABLE void setPossibleDuplicates(const QStringList &duplicatesList);
     Q_INVOKABLE QString generateReportFullText(ReportInterface::DrKonqiStamp stamp, ReportInterface::Backtrace inlineBacktrace) const;
 
     Bugzilla::NewBug newBugReportTemplate() const;
@@ -104,13 +99,6 @@ public:
     void setAttachToBugNumber(uint);
     uint attachToBugNumber() const;
     Q_SIGNAL void attachToBugNumberChanged();
-
-    // Zero means there is no duplicate
-    void setDuplicateId(uint);
-    uint duplicateId() const;
-    Q_SIGNAL void duplicateIdChanged();
-
-    void setPossibleDuplicatesByQuery(const QStringList &);
 
     BugzillaManager *bugzillaManager() const;
     ProductMapping *productMapping() const;
@@ -175,16 +163,11 @@ private:
     bool m_provideApplicationConfigurationDetails;
 
     QString m_backtrace;
-    QStringList m_firstBacktraceFunctions;
 
     QString m_reportTitle;
     QString m_reportDetailText;
-    QStringList m_possibleDuplicates;
-
-    QStringList m_allPossibleDuplicatesByQuery;
 
     uint m_attachToBugNumber;
-    uint m_duplicate;
 
     ProductMapping *m_productMapping = nullptr;
     BugzillaManager *m_bugzillaManager = nullptr;

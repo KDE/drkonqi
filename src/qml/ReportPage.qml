@@ -14,9 +14,6 @@ Kirigami.Page {
 
     title: i18nc("@title", "Enter the Details about the Crash")
 
-    property bool hasPerfectDuplicate: reportInterface.duplicateId > 0
-    property bool hasDuplicate: reportInterface.attachToBugNumber > 0
-    property bool attachMode: hasPerfectDuplicate || hasDuplicate
     property bool isComplete: contentCapacityBar.value >= contentCapacityBar.to
 
     ColumnLayout {
@@ -27,8 +24,6 @@ Kirigami.Page {
         }
 
         ColumnLayout {
-            visible: !attachMode
-
             RowLayout {
                 Kirigami.Heading {
                     level: 2

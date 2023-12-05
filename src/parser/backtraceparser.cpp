@@ -88,19 +88,6 @@ BacktraceParser::Usefulness BacktraceParser::backtraceUsefulness() const
     return d ? d->m_usefulness : Useless;
 }
 
-QStringList BacktraceParser::firstValidFunctions() const
-{
-    Q_D(const BacktraceParser);
-
-    // if there is no cached usefulness, the data calculation function has not run yet.
-    if (d && d->m_usefulness == InvalidUsefulness) {
-        const_cast<BacktraceParser *>(this)->calculateRatingData();
-    }
-
-    // if there is no d, the debugger has not run yet, so we have no functions to return.
-    return d ? d->m_firstUsefulFunctions : QStringList();
-}
-
 QStringList BacktraceParser::librariesWithMissingDebugSymbols() const
 {
     Q_D(const BacktraceParser);
@@ -253,21 +240,6 @@ static bool isFunctionUseful(const BacktraceLine &line)
     return true;
 }
 
-static bool isFunctionUsefulForSearch(const BacktraceLine &line)
-{
-    // Ignore Qt containers (and iterators Q*Iterator)
-    if (line.functionName().startsWith(QLatin1String("QList")) || line.functionName().startsWith(QLatin1String("QLinkedList"))
-        || line.functionName().startsWith(QLatin1String("QVector")) || line.functionName().startsWith(QLatin1String("QStack"))
-        || line.functionName().startsWith(QLatin1String("QQueue")) || line.functionName().startsWith(QLatin1String("QSet"))
-        || line.functionName().startsWith(QLatin1String("QMap")) || line.functionName().startsWith(QLatin1String("QMultiMap"))
-        || line.functionName().startsWith(QLatin1String("QMapData")) || line.functionName().startsWith(QLatin1String("QHash"))
-        || line.functionName().startsWith(QLatin1String("QMultiHash")) || line.functionName().startsWith(QLatin1String("QHashData"))) {
-        return false;
-    }
-
-    return true;
-}
-
 void BacktraceParser::calculateRatingData()
 {
     Q_D(BacktraceParser);
@@ -323,7 +295,6 @@ void BacktraceParser::calculateRatingData()
 
     i.toFront(); // Reuse the list iterator
     int functionIndex = 0;
-    int usefulFunctionsCount = 0;
     bool firstUsefulFound = false;
     while (i.hasNext() && functionIndex < 5) {
         const BacktraceLine &line = i.next();
@@ -333,12 +304,6 @@ void BacktraceParser::calculateRatingData()
             }
             // Save simplified backtrace line
             d->m_simplifiedBacktrace += line.toString();
-
-            // Fetch three useful functions (only functionName) for search queries
-            if (usefulFunctionsCount < 3 && isFunctionUsefulForSearch(line) && !d->m_firstUsefulFunctions.contains(line.functionName())) {
-                d->m_firstUsefulFunctions.append(line.functionName());
-                usefulFunctionsCount++;
-            }
 
             functionIndex++;
         } else if (firstUsefulFound) {

@@ -40,7 +40,6 @@ static const int s_maxReportSize = 65535;
 
 ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent)
-    , m_duplicate(0)
     , m_sentryPostbox(DrKonqi::crashedApplication()->fakeExecutableBaseName(), std::make_shared<SentryNetworkConnection>())
 {
     m_bugzillaManager = new BugzillaManager(KDE_BUGZILLA_URL, this);
@@ -116,16 +115,6 @@ void ReportInterface::setBacktrace(const QString &backtrace)
     Q_EMIT backtraceChanged();
 }
 
-QStringList ReportInterface::firstBacktraceFunctions() const
-{
-    return m_firstBacktraceFunctions;
-}
-
-void ReportInterface::setFirstBacktraceFunctions(const QStringList &functions)
-{
-    m_firstBacktraceFunctions = functions;
-}
-
 QString ReportInterface::title() const
 {
     return m_reportTitle;
@@ -141,11 +130,6 @@ void ReportInterface::setDetailText(const QString &text)
 {
     m_reportDetailText = text;
     Q_EMIT detailTextChanged();
-}
-
-void ReportInterface::setPossibleDuplicates(const QStringList &list)
-{
-    m_possibleDuplicates = list;
 }
 
 QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace inlineBacktrace) const
@@ -237,29 +221,6 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         }
     } else {
         report.append(QStringLiteral("A useful backtrace could not be generated\n"));
-    }
-
-    // Possible duplicates (selected by the user)
-    if (!m_possibleDuplicates.isEmpty()) {
-        report.append(QLatin1Char('\n'));
-        QString duplicatesString;
-        for (const QString &dupe : std::as_const(m_possibleDuplicates)) {
-            duplicatesString += QLatin1String("bug ") + dupe + QLatin1String(", ");
-        }
-        duplicatesString = duplicatesString.left(duplicatesString.length() - 2) + QLatin1Char('.');
-        report.append(QStringLiteral("The reporter indicates this bug may be a duplicate of or related to %1\n").arg(duplicatesString));
-    }
-
-    // Several possible duplicates (by bugzilla query)
-    if (!m_allPossibleDuplicatesByQuery.isEmpty()) {
-        report.append(QLatin1Char('\n'));
-        QString duplicatesString;
-        int count = m_allPossibleDuplicatesByQuery.count();
-        for (int i = 0; i < count && i < 5; i++) {
-            duplicatesString += QLatin1String("bug ") + m_allPossibleDuplicatesByQuery.at(i) + QLatin1String(", ");
-        }
-        duplicatesString = duplicatesString.left(duplicatesString.length() - 2) + QLatin1Char('.');
-        report.append(QStringLiteral("Possible duplicates by query: %1\n").arg(duplicatesString));
     }
 
     switch (stamp) {
@@ -443,51 +404,42 @@ void ReportInterface::sendBugReport()
 {
     prepareCrashEvent();
 
-    if (m_attachToBugNumber > 0) {
-        // We are going to attach the report to an existent one
-        connect(m_bugzillaManager, &BugzillaManager::addMeToCCFinished, this, &ReportInterface::attachBacktraceWithReport);
-        connect(m_bugzillaManager, &BugzillaManager::addMeToCCError, this, &ReportInterface::sendReportError);
-        // First add the user to the CC list, then attach
-        m_bugzillaManager->addMeToCC(m_attachToBugNumber);
-    } else {
-        // Creating a new bug report
-        bool attach = false;
-        Bugzilla::NewBug report = newBugReportTemplate();
-        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Complete);
+    bool attach = false;
+    Bugzilla::NewBug report = newBugReportTemplate();
+    report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Complete);
 
-        // If the report is too long try to reduce it, try to not include the
-        // backtrace and eventually give up.
-        // Bugzilla has a hard-limit on the server side, if we cannot strip the
-        // report down enough the submission will simply not work.
-        // Exhausting the cap with just user input is nigh impossible, so we'll
-        // forego handling of the report being too long even without without
-        // backtrace.
-        // https://bugs.kde.org/show_bug.cgi?id=248807
-        if (report.description.size() >= s_maxReportSize) {
-            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Reduced);
-            attach = true;
-        }
-        if (report.description.size() >= s_maxReportSize) {
-            report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Exclude);
-            attach = true;
-        }
-        Q_ASSERT(!report.description.isEmpty());
-
-        connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
-        connect(m_bugzillaManager, &BugzillaManager::reportSent, this, [this, attach](int bugId) {
-            if (attach) {
-                m_attachToBugNumber = bugId;
-                attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
-            } else {
-                m_sentReport = bugId;
-                prepareCrashComment();
-                m_sentryPostbox.deliver();
-                maybeDone();
-            }
-        });
-        connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
-        m_bugzillaManager->sendReport(report);
+    // If the report is too long try to reduce it, try to not include the
+    // backtrace and eventually give up.
+    // Bugzilla has a hard-limit on the server side, if we cannot strip the
+    // report down enough the submission will simply not work.
+    // Exhausting the cap with just user input is nigh impossible, so we'll
+    // forego handling of the report being too long even without without
+    // backtrace.
+    // https://bugs.kde.org/show_bug.cgi?id=248807
+    if (report.description.size() >= s_maxReportSize) {
+        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Reduced);
+        attach = true;
     }
+    if (report.description.size() >= s_maxReportSize) {
+        report.description = generateReportFullText(ReportInterface::DrKonqiStamp::Include, ReportInterface::Backtrace::Exclude);
+        attach = true;
+    }
+    Q_ASSERT(!report.description.isEmpty());
+
+    connect(m_bugzillaManager, &BugzillaManager::sendReportErrorInvalidValues, this, &ReportInterface::sendUsingDefaultProduct);
+    connect(m_bugzillaManager, &BugzillaManager::reportSent, this, [this, attach](int bugId) {
+        if (attach) {
+            m_attachToBugNumber = bugId;
+            attachBacktrace(QStringLiteral("DrKonqi auto-attaching complete backtrace."));
+        } else {
+            m_sentReport = bugId;
+            prepareCrashComment();
+            m_sentryPostbox.deliver();
+            maybeDone();
+        }
+    });
+    connect(m_bugzillaManager, &BugzillaManager::sendReportError, this, &ReportInterface::sendReportError);
+    m_bugzillaManager->sendReport(report);
 }
 
 void ReportInterface::sendUsingDefaultProduct() const
@@ -589,22 +541,6 @@ void ReportInterface::setAttachToBugNumber(uint bugNumber)
 uint ReportInterface::attachToBugNumber() const
 {
     return m_attachToBugNumber;
-}
-
-void ReportInterface::setDuplicateId(uint duplicate)
-{
-    m_duplicate = duplicate;
-    Q_EMIT duplicateIdChanged();
-}
-
-uint ReportInterface::duplicateId() const
-{
-    return m_duplicate;
-}
-
-void ReportInterface::setPossibleDuplicatesByQuery(const QStringList &list)
-{
-    m_allPossibleDuplicatesByQuery = list;
 }
 
 BugzillaManager *ReportInterface::bugzillaManager() const

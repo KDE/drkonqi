@@ -35,7 +35,6 @@ set(drkonqi_SRCS
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
-    qmlextensions/duplicatemodel.cpp
     qmlextensions/platformmodel.cpp
     qmlextensions/reproducibilitymodel.cpp
     qmlextensions/credentialstore.cpp
@@ -61,7 +60,6 @@ set(drkonqi_SRCS
     statusnotifier_activationclosetimer.h
     linuxprocmapsparser.h
     drkonqi_globals.h
-    qmlextensions/duplicatemodel.h
     qmlextensions/platformmodel.h
     qmlextensions/reproducibilitymodel.h
     qmlextensions/credentialstore.h
@@ -85,13 +83,9 @@ set(drkonqi_SRCS
     bugzillaintegration/bugzillalib.cpp
     bugzillaintegration/reportinterface.cpp
     bugzillaintegration/productmapping.cpp
-    bugzillaintegration/parsebugbacktraces.cpp
-    bugzillaintegration/duplicatefinderjob.cpp
     bugzillaintegration/bugzillalib.h
     bugzillaintegration/reportinterface.h
     bugzillaintegration/productmapping.h
-    bugzillaintegration/parsebugbacktraces.h
-    bugzillaintegration/duplicatefinderjob.h
 )
 
 ecm_qt_declare_logging_category(

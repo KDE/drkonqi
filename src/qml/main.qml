@@ -77,12 +77,6 @@ any side effects.</para>`);
         id: contextDrawer
     }
 
-    DuplicateModel {
-        id: duplicateModel
-        manager: bugzilla
-        iface: reportInterface
-    }
-
     Component {
         id: warningComponent
         Kirigami.InlineMessage {
