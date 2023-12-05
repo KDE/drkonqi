@@ -173,7 +173,7 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
     const QFileInfo executable(QString::fromUtf8(m_journalEntry["COREDUMP_EXE"]));
     const int signal = m_journalEntry["COREDUMP_SIGNAL"].toInt(&ok);
     Q_ASSERT(ok);
-    const bool hasDeletedFiles = LinuxProc::hasMapsDeletedFiles(executable.path(), m_journalEntry["COREDUMP_PROC_MAPS"], LinuxProc::Check::Stat);
+    const bool hasDeletedFiles = LinuxProc::hasMapsDeletedFiles(executable.filePath(), m_journalEntry["COREDUMP_PROC_MAPS"], LinuxProc::Check::Stat);
 
     Q_ASSERT_X(m_journalEntry["COREDUMP_PID"].toInt() == DrKonqi::pid(),
                static_cast<const char *>(Q_FUNC_INFO),
