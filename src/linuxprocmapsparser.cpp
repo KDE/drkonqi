@@ -57,6 +57,8 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
             continue;
         }
 
+        qCDebug(DRKONQI_LOG) << "Checking for file status" << pathname;
+
         if (pathname.startsWith(QByteArrayLiteral("/memfd"))) {
             // Qml.so's JIT shows up under memfd. This is a false positive as it isn't a real path in the
             // file system. Skip over it.
@@ -69,6 +71,7 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
         //   a degree
         // As a result we need to explicitly look for the main executable.
         if (pathname == exePath + deletedMarker) {
+            qCWarning(DRKONQI_LOG) << "Found deleted exe marker" << pathname;
             return true;
         }
 
@@ -78,6 +81,7 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
 
         // Deleted marker always declares something missing. Even when we perform additional stat checks on it.
         if (pathname.endsWith(deletedMarker)) {
+            qCWarning(DRKONQI_LOG) << "Found deleted library marker" << pathname;
             return true;
         }
 
