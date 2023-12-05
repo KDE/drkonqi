@@ -48,7 +48,12 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
         // dev
         std::ignore = strtok(nullptr, " ");
         // inode
-        const QByteArray inode(strtok(nullptr, " "));
+        const QByteArray inodeString(strtok(nullptr, " "));
+        bool ok = false;
+        const ino_t inode = inodeString.toULongLong(&ok);
+        if (!ok) {
+            qCWarning(DRKONQI_LOG) << "inode appears to not be a ulonglong";
+        }
         // remainder is the pathname
         const QByteArray pathname = QByteArray(strtok(nullptr, "\n")).simplified(); // simplify to make evaluation easier
 
@@ -100,7 +105,7 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
                 break;
             }
 
-            if (info.st_ino != inode.toULongLong()) {
+            if (info.st_ino != inode) {
                 qCWarning(DRKONQI_LOG) << "Found mismatching inode on" << pathname << info.st_ino << inode;
                 return true;
                 break;
