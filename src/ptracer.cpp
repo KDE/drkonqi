@@ -15,8 +15,8 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 
-#include <poll.h>
 #include <errno.h>
+#include <poll.h>
 #include <unistd.h>
 
 void setPtracer(qint64 debuggerpid, qint64 debuggeepid)
