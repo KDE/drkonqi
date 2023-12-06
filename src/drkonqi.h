@@ -76,6 +76,8 @@ public:
 
     static DrKonqi *instance();
     QString m_glRenderer;
+    QString m_exceptionName;
+    QString m_exceptionWhat;
 
 private:
     DrKonqi();

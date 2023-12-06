@@ -357,6 +357,26 @@ void ReportInterface::prepareEventPayload()
                    });
     hash.insert(CONTEXTS_KEY, context);
 
+    if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
+        constexpr auto EXCEPTION_KEY = "exception"_L1;
+        constexpr auto VALUES_KEY = "values"_L1;
+        auto exception = hash.take(EXCEPTION_KEY).toHash();
+        auto values = exception.take(VALUES_KEY).toJsonArray();
+        // Preprend since the exception is likely the root of the problem stack.
+        values.prepend(QJsonObject({
+            {u"type"_s, DrKonqi::instance()->m_exceptionName},
+            {u"value"_s, DrKonqi::instance()->m_exceptionWhat},
+            {u"mechanism"_s,
+             QJsonObject{
+                 {u"handled"_s, false},
+                 {u"synthetic"_s, false},
+                 {u"type"_s, u"drkonqi"_s},
+             }},
+        }));
+        exception.insert(VALUES_KEY, values);
+        hash.insert(EXCEPTION_KEY, exception);
+    }
+
     m_sentryPostbox.addEventPayload(QJsonDocument::fromVariant(hash));
     maybePickUpPostbox();
 }
