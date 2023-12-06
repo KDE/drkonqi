@@ -326,36 +326,40 @@ void ReportInterface::prepareEventPayload()
     // replace the timestamp with the real timestamp (possibly originating in journald)
     hash.insert(u"timestamp"_s, DrKonqi::crashedApplication()->datetime().toUTC().toString(Qt::ISODateWithMs));
 
-    QList<QVariant> breadcrumbs;
-    const auto logs = DrKonqi::crashedApplication()->m_logs;
-    for (const auto &logEntry : logs) {
-        QVariantHash breadcrumb;
+    {
+        QList<QVariant> breadcrumbs;
+        const auto logs = DrKonqi::crashedApplication()->m_logs;
+        for (const auto &logEntry : logs) {
+            QVariantHash breadcrumb;
 
-        breadcrumb.insert(u"type"_s, u"debug"_s);
-        breadcrumb.insert(u"category"_s, logEntry.value("QT_CATEGORY"_ba, "default"_ba));
-        breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
-        breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba)));
-        auto ok = false;
-        auto realtime = logEntry.value("_SOURCE_REALTIME_TIMESTAMP"_ba).toULongLong(&ok);
-        if (ok && realtime > 0) {
-            std::chrono::microseconds timestamp(realtime);
-            std::chrono::duration<double> timestampDouble(timestamp);
-            breadcrumb.insert(u"timestamp"_s, QJsonValue(timestampDouble.count()));
+            breadcrumb.insert(u"type"_s, u"debug"_s);
+            breadcrumb.insert(u"category"_s, logEntry.value("QT_CATEGORY"_ba, "default"_ba));
+            breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
+            breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba)));
+            auto ok = false;
+            auto realtime = logEntry.value("_SOURCE_REALTIME_TIMESTAMP"_ba).toULongLong(&ok);
+            if (ok && realtime > 0) {
+                std::chrono::microseconds timestamp(realtime);
+                std::chrono::duration<double> timestampDouble(timestamp);
+                breadcrumb.insert(u"timestamp"_s, QJsonValue(timestampDouble.count()));
+            }
+
+            breadcrumbs.push_back(breadcrumb);
         }
-
-        breadcrumbs.push_back(breadcrumb);
+        std::reverse(breadcrumbs.begin(), breadcrumbs.end());
+        hash.insert(u"breadcrumbs"_s, breadcrumbs);
     }
-    std::reverse(breadcrumbs.begin(), breadcrumbs.end());
-    hash.insert(u"breadcrumbs"_s, breadcrumbs);
 
-    constexpr auto CONTEXTS_KEY = "contexts"_L1;
-    auto context = hash.take(CONTEXTS_KEY).toHash();
-    context.insert(u"gpu"_s,
-                   QVariantHash{
-                       {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
-                       {u"version"_s, QGuiApplication::platformName()},
-                   });
-    hash.insert(CONTEXTS_KEY, context);
+    {
+        constexpr auto CONTEXTS_KEY = "contexts"_L1;
+        auto context = hash.take(CONTEXTS_KEY).toHash();
+        context.insert(u"gpu"_s,
+                       QVariantHash{
+                           {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
+                           {u"version"_s, QGuiApplication::platformName()},
+                       });
+        hash.insert(CONTEXTS_KEY, context);
+    }
 
     if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
         constexpr auto EXCEPTION_KEY = "exception"_L1;
