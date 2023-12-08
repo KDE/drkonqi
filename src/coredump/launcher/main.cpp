@@ -154,7 +154,9 @@ static bool tryDrkonqi(const Coredump &dump)
     const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
     // Arm removal. In all cases we'll want to remove the kcrash metadata (we possibly created expanded drkonqi metadata instead)
     auto deleteFile = qScopeGuard([kcrashMetadataPath] {
-        QFile::remove(kcrashMetadataPath);
+        if (!kcrashMetadataPath.isEmpty()) { // don't warn about null path
+            QFile::remove(kcrashMetadataPath);
+        }
     });
 
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
