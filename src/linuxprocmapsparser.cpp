@@ -16,8 +16,11 @@
 #include <QDebug>
 #include <QFile>
 #include <QRegularExpression>
+#include <QStorageInfo>
 
 #include "drkonqi_debug.h"
+
+using namespace Qt::StringLiterals;
 
 bool LinuxProc::isLibraryPath(const QString &path)
 {
@@ -97,6 +100,14 @@ bool LinuxProc::hasMapsDeletedFiles(const QString &exePathString, const QByteArr
             break;
         }
         case Check::Stat: {
+            // Bit unfortunate this but when the file is on an overlayFS the entire stat validation system is unreliable.
+            // The inode in the /maps is the actual underlying inode, not the st_ino we'll get when stating through
+            // the overlay.
+            if (QStorageInfo storageInfo(QString::fromUtf8(pathname)); storageInfo.fileSystemType().contains("overlay"_L1)) {
+                qCDebug(DRKONQI_LOG) << "Couldn't perform stat check because file is on overlayfs" << pathname;
+                break;
+            }
+
             struct stat info {
             };
             const int ret = stat(pathname.constData(), &info);
