@@ -169,8 +169,12 @@ static bool tryDrkonqi(const Coredump &dump)
     metadata = synthesizeGenericInto(dump, metadata);
     writeToDisk(metadata, drkonqiMetadataPath);
 
+    if (metadata.isEmpty() || metadata[KCRASH_KEY].toObject().isEmpty()) {
+        return false; // no metadata, or no kcrash metadata -> don't know what to do with this
+    }
+
     if (!QFile::exists(dump.filename)) {
-        return false; // no trace, nothing to handle
+        return false; // no trace -> nothing to handle
     }
 
     if (qEnvironmentVariableIsSet("KDE_DEBUG")) {
