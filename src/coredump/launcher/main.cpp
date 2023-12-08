@@ -140,6 +140,20 @@ constexpr auto KCRASH_KEY = "kcrash"_L1;
     return arguments;
 }
 
+QJsonObject readFromDisk(const QString &drkonqiMetadataPath)
+{
+    if (!QFile::exists(drkonqiMetadataPath)) {
+        return {};
+    }
+
+    QFile file(drkonqiMetadataPath);
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "Failed to open for reading:" << drkonqiMetadataPath;
+    }
+
+    return QJsonDocument::fromJson(file.readAll()).object();
+}
+
 void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadataPath)
 {
     QDir().mkpath(QFileInfo(drkonqiMetadataPath).path());
@@ -164,10 +178,16 @@ static bool tryDrkonqi(const Coredump &dump)
 
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
 
-    auto metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath);
-    metadata = synthesizeKCrashInto(dump, metadata);
-    metadata = synthesizeGenericInto(dump, metadata);
-    writeToDisk(metadata, drkonqiMetadataPath);
+    QJsonObject metadata = readFromDisk(drkonqiMetadataPath);
+    if (metadata.isEmpty()) {
+        // if our metadata doesn't exist yet try to pick it up from kcrash
+        metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath);
+        // or synthesize it
+        metadata = synthesizeKCrashInto(dump, metadata);
+        // or force-handle the crash
+        metadata = synthesizeGenericInto(dump, metadata);
+        writeToDisk(metadata, drkonqiMetadataPath);
+    }
 
     if (metadata.isEmpty() || metadata[KCRASH_KEY].toObject().isEmpty()) {
         return false; // no metadata, or no kcrash metadata -> don't know what to do with this
