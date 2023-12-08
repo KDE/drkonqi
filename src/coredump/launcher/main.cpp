@@ -45,6 +45,8 @@ static QString drkonqiExe()
 }
 
 constexpr auto KCRASH_KEY = "kcrash"_L1;
+constexpr auto DRKONQI_KEY = "drkonqi"_L1;
+constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
 
 [[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath)
 {
@@ -68,7 +70,7 @@ constexpr auto KCRASH_KEY = "kcrash"_L1;
         contextObject.insert(u"journal"_s, journalObject);
     }
     {
-        contextObject.insert(u"drkonqi"_s, QJsonObject{{u"PickedUp"_s, true}});
+        contextObject.insert(DRKONQI_KEY, QJsonObject{{PICKED_UP_KEY, true}});
     }
 
     return contextObject;
@@ -166,6 +168,11 @@ void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadat
     }
 }
 
+bool isPickedUp(const QJsonObject &metadata)
+{
+    return metadata[DRKONQI_KEY].toObject().value(PICKED_UP_KEY).toBool(false);
+}
+
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
@@ -179,6 +186,9 @@ static bool tryDrkonqi(const Coredump &dump)
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
 
     QJsonObject metadata = readFromDisk(drkonqiMetadataPath);
+    if (isPickedUp(metadata)) {
+        return true; // already handled previously
+    }
     if (metadata.isEmpty()) {
         // if our metadata doesn't exist yet try to pick it up from kcrash
         metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath);
