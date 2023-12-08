@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2010-01-29 22:14+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -307,7 +307,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Недостасуваат симболи за барање грешки"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -346,6 +346,18 @@ msgstr ""
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2009, авторите на DrKonqi"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -471,19 +483,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Со ова копче се рестартира паднатата апликација."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Општо"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Инфор&мации за развивачот"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -492,7 +504,7 @@ msgstr ""
 "<para>Се извинуваме, <application>%1</application> се затвори неочекувано.</"
 "para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -503,7 +515,7 @@ msgid ""
 "Information</interface> tab.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -513,7 +525,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -525,7 +537,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -543,7 +555,7 @@ msgstr ""
 "известувањето за грешки.</link></para><para><note>Слободно може да го "
 "затворите дијалогов ако не сакате да известите за грешката.</note></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -557,13 +569,13 @@ msgstr ""
 "<para>Не може да известите за оваа грешка бидејќи за апликацијата нема "
 "адреса за известување на грешки.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Детали:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -577,7 +589,7 @@ msgstr ""
 "<para>Извршна: <application>%1</application> PID: <numid>%2</numid> Сигнал: "
 "%3 (%4)</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -585,31 +597,31 @@ msgctxt ""
 msgid "&Debug"
 msgstr ""
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Стартува програма за откривање грешки во паднатата апликација."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Го затвора дијалогот (ќе ги загубите информациите за падот.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:147
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE Ракувач со падови"
 
-#: main.cpp:149
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -618,37 +630,37 @@ msgstr ""
 "Ракувачот со падови од KDE дава повратна информација до корисникот ако "
 "некоја програма паднала."
 
-#: main.cpp:152
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, авторите на DrKonqi"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -656,7 +668,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Фатениот број на сигнал"
 
-#: main.cpp:164
+#: main.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -664,7 +676,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Името на програмата"
 
-#: main.cpp:165
+#: main.cpp:164
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -672,7 +684,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Патека до извршната датотека"
 
-#: main.cpp:166
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -680,7 +692,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Верзијата на програмата"
 
-#: main.cpp:167
+#: main.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -688,7 +700,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Адреса за пријавување грешки"
 
-#: main.cpp:168
+#: main.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -696,13 +708,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Преведеното име на програмата"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -710,7 +722,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "PID на програмата"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -718,37 +730,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Стартна ID на програмата"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Програмата е стартувана од kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Оневозможи произволен пристап до дискот"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Програмата беќе беше рестартирана"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -759,7 +771,7 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Backtrace of the crash I am sending:"
@@ -767,7 +779,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Трага од падот за кој известувам:"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1024,97 +1036,6 @@ msgstr ""
 "Треба да го инсталирате пакетот за откривање грешки (%1) и да кликнете на "
 "копчето <interface>Превчитај инфо за падот</interface>."
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "List of possible duplicate reports"
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Листа со можни дупликати на извештајот"
-
-#: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Пребарувам за дупликати (од %1 до %2)..."
-
-#: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Погледнете дали некој веќе известил за Вашата грешка. Ако има резултати од "
-"пребарувањето, кликнете двапати на извештај во листата и споредете го со "
-"Вашиот. Може да наведете дека е вашиот пад дупликат на тој извештај или "
-"директно да приложите информација во постојниот извештај."
-
-#: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open selected report"
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Отвори избран извештај"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Со ова копче може да ја видите информацијата за избраниот извештај за грешка."
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:95
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Со ова копче може да ја видите информацијата за избраниот извештај за грешка."
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr ""
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1217,6 +1138,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Повторно..."
+
 #: qml/MainPage.qml:55
 #, fuzzy
 #| msgctxt "@title"
@@ -1232,64 +1168,6 @@ msgstr "Испраќање извештај за грешка"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Инфор&мации за развивачот"
-
-#: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Already reported"
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Веќе е пријавено"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Затворено (%1)"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr ""
 
 #: qml/PreviewPage.qml:14
 #, fuzzy
@@ -1328,7 +1206,7 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr ""
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 #, fuzzy
 #| msgid ""
 #| "<strong>Please select which additional information you can provide:</"
@@ -1338,7 +1216,7 @@ msgid "Please provide the following information in English."
 msgstr ""
 "<strong>Изберете кои дополнителни информации може да ги дадете:</strong>"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Contents of the Report"
@@ -1346,7 +1224,7 @@ msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Содржина на извештајот"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1360,7 +1238,7 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "<strong>Information about the crash:</strong>"
@@ -1368,7 +1246,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "<strong>Информација за падот:</strong>"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1382,12 +1260,12 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr ""
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "We need more information"
@@ -1395,7 +1273,7 @@ msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Ни треба повеќе информација"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1403,7 +1281,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Метод на дистрибуција:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1411,7 +1289,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Платформата KDE е компајлирана од изворните датотеки"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1425,7 +1303,7 @@ msgstr ""
 "<note>Падот и информациите за системот ќе бидат автоматски додадени на "
 "извештајот за грешка.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview Report"
@@ -1507,7 +1385,12 @@ msgstr ""
 "Извештајот е испратен.<nl/>Адреса : <link>%1</link><nl/>Благодариме што "
 "придонесовте на KDE. Сега може да го затворите прозорецов."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr ""
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1515,17 +1398,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Асистент за известување за падови"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "<strong>Information about the crash:</strong>"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "<strong>Информација за падот:</strong>"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1566,7 +1462,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr ""
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1663,7 +1559,15 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Детали:"
+
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1671,7 +1575,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Извести за грешката"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1721,6 +1625,82 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "List of possible duplicate reports"
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Листа со можни дупликати на извештајот"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Searching for duplicates (from %1 to %2)..."
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Пребарувам за дупликати (од %1 до %2)..."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "See if your bug has already been reported. Double click a report in the "
+#~| "list and compare it to yours. You can suggest that your crash is a "
+#~| "duplicate of that report or directly attach your information to it."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Погледнете дали некој веќе известил за Вашата грешка. Ако има резултати "
+#~ "од пребарувањето, кликнете двапати на извештај во листата и споредете го "
+#~ "со Вашиот. Може да наведете дека е вашиот пад дупликат на тој извештај "
+#~ "или директно да приложите информација во постојниот извештај."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Open selected report"
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Отвори избран извештај"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Use this button to view the information of the selected bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Со ова копче може да ја видите информацијата за избраниот извештај за "
+#~ "грешка."
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Use this button to view the information of the selected bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Со ова копче може да ја видите информацијата за избраниот извештај за "
+#~ "грешка."
+
+#, fuzzy
+#~| msgctxt "@info bug resolution"
+#~| msgid "Already reported"
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Веќе е пријавено"
+
+#, fuzzy
+#~| msgctxt "@info bug status, %1 is the resolution"
+#~| msgid "Closed (%1)"
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Затворено (%1)"
 
 #, fuzzy
 #~| msgctxt "@info/rich"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2009-12-10 21:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -309,7 +309,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Felëją symbòle debùgòwaniô"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -348,6 +348,18 @@ msgstr ""
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi Authors"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -470,19 +482,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Brëkùjë ti knąpë do zrëszaniô załómóny aplikacëji znowa."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Spòdlowò"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Wëdowiédzô dlô rozwijôrzów"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -491,7 +503,7 @@ msgstr ""
 "<para>Przepôszómë, <application>%1</application> niespòdzajno "
 "zakùńczadzejanié.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -510,7 +522,7 @@ msgstr ""
 "bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
 "szlach z wëdowiédzë rozwijôrzów.)</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -528,7 +540,7 @@ msgstr ""
 "bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
 "szlach z wëdowiédzë rozwijôrzów.)</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -540,7 +552,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -558,7 +570,7 @@ msgstr ""
 "</link></para><para><note>Bezpieczno je zamknąc to òkno, jeżlë nie chcesz "
 "sélac rapòrtu ò felë.</note></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -572,13 +584,13 @@ msgstr ""
 "<para>Ni mòżesz wësłac rapòrtu ò ti felë, bò apliakcëjô ni wspierô adresë "
 "rapòrtowaniô felów.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detale:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -592,7 +604,7 @@ msgstr ""
 "<para>Wëkònëwólny lopk: <application>%1</application> PID: <numid>%2</numid> "
 "Sygnal: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button this is the debug menu button label which contains the "
@@ -604,31 +616,31 @@ msgctxt ""
 msgid "&Debug"
 msgstr "Debùgowanié"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Zrëszô programã do debùgòwaniô załómónëch aplikacëjów."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Zamkni to òkno (zdżinie wëdowiédzô ò załómaniu)."
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:147
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "Obsłużënk kriticznëch felów w KDE"
 
-#: main.cpp:149
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -637,37 +649,37 @@ msgstr ""
 "Obsłużënk kriticznych felów w KDE zezwôlô na sélanié ùsôdzcom programë "
 "wëdowiédzë ò ji załómaniu."
 
-#: main.cpp:152
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi Authors"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -675,7 +687,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Numer ùchwëconegò sygnalu"
 
-#: main.cpp:164
+#: main.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -683,7 +695,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Miono programë"
 
-#: main.cpp:165
+#: main.cpp:164
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -691,7 +703,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Stegna do programë"
 
-#: main.cpp:166
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -699,7 +711,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Numer wersëji programë"
 
-#: main.cpp:167
+#: main.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -707,7 +719,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Adresa sélaniô rapòrtu felë"
 
-#: main.cpp:168
+#: main.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -715,13 +727,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Przedolmaczoné miono programë"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -729,7 +741,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Identifikatora programë (PID)"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -737,37 +749,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Startowô identifikatora (ID) programë"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Programa bëła zrëszonô przez kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Wëłączë direktny przistãp do diskù"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Na programa òsta ju zrëszonô"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -778,7 +790,7 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Backtrace of the crash I am sending:"
@@ -786,7 +798,7 @@ msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Mój sélóny szlach załômaniô:"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1037,94 +1049,6 @@ msgstr ""
 "Je ce nót winstalowac paczet debùggera (%1) ë klëknąc na "
 "knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "List of possible duplicate reports"
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Dodôj mòżlëwé duplikatë rapòrtów"
-
-#: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Szëkba za duplikatama (òd %1 do %2)..."
-
-#: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Sprôwdzë, czë twòjô fela ni bëłą ju rapòrtowónô. Jeżlë dô skùtczi szëkbë, "
-"klëkni dëbeltno na rapòrt z lëstë ë przërówny gò ze swòjim. Mòżesz téż "
-"zasugerowac, że twòjé załomanié je duplikatã tegò rapòrtu."
-
-#: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Open selected report"
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Òtemkni wëbróny rapòrt"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "Brëkùjë ti knąpë abë òbaczëc wëdowiédzã ò wëbrónym rapòrce."
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:95
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr "Brëkùjë ti knąpë abë òbaczëc wëdowiédzã ò wëbrónym rapòrce."
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr ""
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1245,6 +1169,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Spróbùjë znowa..."
+
 #: qml/MainPage.qml:55
 #, fuzzy
 #| msgctxt "@title"
@@ -1260,67 +1199,6 @@ msgstr "Sélôj rapòrt ò załómaniu"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "&Wëdowiédzô dlô rozwijôrzów"
-
-#: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Already reported"
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Ju zrapòrtowóné"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Zamkłé (%1)"
-
-#: qml/PerfectDuplicatePage.qml:65
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Information"
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Wëdowiédzô ò załómaniu sã"
 
 #: qml/PreviewPage.qml:14
 #, fuzzy
@@ -1359,7 +1237,7 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr ""
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid "<note>You should write in English.</note>"
@@ -1367,7 +1245,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "<note>Je nót pisac pò anielskù.</note>"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Title of the bug report"
@@ -1375,7 +1253,7 @@ msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Titel rapòrtu ò felë"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1389,7 +1267,7 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "<strong>Information about the crash:</strong>"
@@ -1397,7 +1275,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "<strong>Wëdowiédzô ò załômaniu:</strong>"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1411,12 +1289,12 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr ""
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "We need more information"
@@ -1424,7 +1302,7 @@ msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Nama je nót wicy wëdowiédzë"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1432,7 +1310,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metoda distribùcëji:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1440,7 +1318,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Kòmpilacëjô KDE ze zdroju"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1454,7 +1332,7 @@ msgstr ""
 "<note>Wëdowiédzô ò załómaniu ë systemie bãdą aùtoamtno dodóné do rapòrtu ò "
 "felë.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview Report"
@@ -1535,7 +1413,12 @@ msgstr ""
 "Rapòrt załómaniô òstôł wësłóny. <nl/>URL: <link>%1</link><nl/>Dzãkùjë za "
 "pòmòc w rozwiju KDE. Mòżesz zamknąc terô to òkno."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr ""
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1543,17 +1426,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Asystent rapòrtowaniô załómaniô"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "What do you know about the crash?"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Co wiész ò tim załómaniu?"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1594,7 +1490,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr ""
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1690,7 +1586,15 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Detale:"
+
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1698,7 +1602,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Sélôj rapòrt ò felë"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1748,6 +1652,84 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "List of possible duplicate reports"
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Dodôj mòżlëwé duplikatë rapòrtów"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Searching for duplicates (from %1 to %2)..."
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Szëkba za duplikatama (òd %1 do %2)..."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "See if your bug has already been reported. Double click a report in the "
+#~| "list and compare it to yours. You can suggest that your crash is a "
+#~| "duplicate of that report or directly attach your information to it."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Sprôwdzë, czë twòjô fela ni bëłą ju rapòrtowónô. Jeżlë dô skùtczi szëkbë, "
+#~ "klëkni dëbeltno na rapòrt z lëstë ë przërówny gò ze swòjim. Mòżesz téż "
+#~ "zasugerowac, że twòjé załomanié je duplikatã tegò rapòrtu."
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Open selected report"
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Òtemkni wëbróny rapòrt"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Use this button to view the information of the selected bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "Brëkùjë ti knąpë abë òbaczëc wëdowiédzã ò wëbrónym rapòrce."
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Use this button to view the information of the selected bug report."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr "Brëkùjë ti knąpë abë òbaczëc wëdowiédzã ò wëbrónym rapòrce."
+
+#, fuzzy
+#~| msgctxt "@info bug resolution"
+#~| msgid "Already reported"
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Ju zrapòrtowóné"
+
+#, fuzzy
+#~| msgctxt "@info bug status, %1 is the resolution"
+#~| msgid "Closed (%1)"
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Zamkłé (%1)"
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "Crash Information"
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Wëdowiédzô ò załómaniu sã"
 
 #, fuzzy
 #~| msgctxt "@info/rich"
@@ -3192,13 +3174,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Nie jes gwës tegò co bëło robioné jak programa sã załóma, równak nie "
 #~ "chcesz bë rozwijôrze sparłãczëlë sã z tobą dlô dobëcô wicy wëdowiédzë."
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "What do you know about the crash?"
-#~ msgctxt "@title"
-#~ msgid "What do you know about the crash ?"
-#~ msgstr "Co wiész ò tim załómaniu?"
 
 #~ msgctxt "@info/rich"
 #~ msgid ""

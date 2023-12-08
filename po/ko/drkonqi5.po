@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-10-08 22:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -264,7 +264,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "빠진 디버그 정보 패키지"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -300,6 +300,18 @@ msgstr "과거 충돌에 대한 자세한 보기 제공"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -408,19 +420,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "이 단추를 클릭하면 충돌한 앱을 다시 시작합니다."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "일반(&G)"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "개발자 정보(&D)"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -429,7 +441,7 @@ msgstr ""
 "<para>죄송합니다. <application>%1</application> 앱이 예상하지 못하게 종료되었"
 "습니다.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -444,7 +456,7 @@ msgstr ""
 "url='%1'>직접</link> 보고해 주십시오. <interface>개발자 정보</interface> 탭"
 "의 역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -457,7 +469,7 @@ msgstr ""
 "었습니다.<nl />%1(으)로 이 버그를 수동으로 보고할 수 있습니다. <interface>개"
 "발자 정보</interface> 탭의 역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -474,7 +486,7 @@ msgstr ""
 "가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이 발생하지 않습니다.</"
 "para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -484,7 +496,7 @@ msgstr ""
 "<para>이 오류를 보고하여 KDE 소프트웨어를 개선하는 데 도움을 줄 수 있습니다."
 "<nl /><link url='%1'>버그 보고에 대하여 더 알아보십시오.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,13 +506,13 @@ msgstr ""
 "<para><application>%1</application> 앱의 버그를 보고하는 방법을 지정하지 않았"
 "기 때문에 버그를 보고할 수 없습니다.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "자세한 정보:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -510,7 +522,7 @@ msgstr ""
 "<para>실행 파일: <application>%1</application> PID: %2 시그널: %3 (%4) 시간: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -518,148 +530,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "디버그(&D)"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "충돌한 앱을 디버그하는 앱을 실행합니다."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "대화 상자 닫기 (충돌 정보를 저장하지 않습니다.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "%1(으)로 디버그"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "충돌 관리자"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "충돌 관리자는 프로그램이 충돌했을 때 사용자에게 알려 줍니다."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "검출된 시그널 <number>"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "프로그램 <Name>"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "실행 파일 <Path>"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "프로그램 <version>"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "사용할 버그 <address>"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "번역된 프로그램 <name>"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla 제품 이름"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "프로그램 <PID>"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "프로그램 시작 <ID>"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit가 프로그램을 시작했습니다"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "임의 디스크 접근 방지"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "프로그램을 다시 시작했습니다"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "프로그램을 실행된 상태로 두고 시작할 때 역추적 생성"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "문제가 발생한 <thread id>"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -670,12 +682,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "역추적(자동 충돌 정보) 가져오는 중"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "역추적 내용 표시(고급)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "다음"
@@ -866,77 +878,6 @@ msgstr ""
 "<emphasis strong='true'>디버거 앱(%1)을 설치한 다음 <interface>새로 고침</"
 "interface> 단추를 클릭하십시오.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "중복 가능성 있는 버그 찾기"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "버그 데이터베이스에서 중복 보고서 검색 중…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"버그가 보고되었는지 확인하십시오. 검색 결과가 있다면, 목록에서 보고서를 두 "
-"번 클릭해서 일어난 상황과 비교해 보십시오. 그 버그에서 일어난 상황이 일어났다"
-"고 알려 주셔도 됩니다."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "복제?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "현재 충돌이 다음 버그 보고의 충돌과 같은지 확신합니까?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "충돌이 중복됨"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"현재 충돌이 이 버그 보고와 중복됨을 확신할 수 있다면 이 동작을 사용하십시오"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "충돌이 중복이 아님"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "이 충돌이 관련된 것으로 제안"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"이 단추를 클릭하면 현재 충돌이\n"
-"                                     이 버그 보고와 관련이있는 것으로\n"
-"                                     제안합니다"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "이 충돌은 관련 없음"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1040,6 +981,21 @@ msgstr ""
 "업데이트가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이\n"
 "발생하지 않습니다.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "다시 시도"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1049,70 +1005,6 @@ msgstr "자동 보고서 보내기"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "개발자 정보 보기"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "문제가 이미 보고됨"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"충돌 정보는 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며, 이는 "
-"<emphasis strong='true'>이미 닫힌</emphasis> <link url=\"%2\">버그 %2</link>"
-"의 중복입니다."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"충돌 정보가 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며 이 버그"
-"는 <emphasis strong='true'>닫혔습니다.</emphasis>"
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"충돌 정보는 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며, 이는 "
-"<link url=\"%2\">버그 %2</link>의 <emphasis strong='true'>중복</emphasis>입니"
-"다"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"충돌 정보는 <emphasis strong='true'>중복된</emphasis> 것이며 과거에 <link "
-"url=\"%1\">버그 %2</link>(으)로 보고된 적이 있습니다."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"추가 정보를 입력할 수도 있으나, 새로운 정보가 있거나 정보를 요청받았을 경우에"
-"만 입력하십시오."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "닫기"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "개별 정보 첨부"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1143,17 +1035,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "충돌 정보 입력"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "다음 정보를 영어로 입력해 주십시오."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "버그 보고서 제목:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1178,12 +1070,12 @@ msgstr ""
 "couple of times\"</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "충돌 정보:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1204,27 +1096,27 @@ msgstr ""
 "<item>기본값이 아닌 앱 설정을 알려 주십시오.</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "최소 길이에 도달함"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "더 많은 정보가 필요함"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "배포판:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE 플랫폼을 소스에서 컴파일함"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1232,7 +1124,7 @@ msgid ""
 msgstr ""
 "<note>버그 보고서에는 충돌 및 시스템 정보가 자동으로 추가됩니다.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "보고서 미리 보기"
@@ -1284,17 +1176,25 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "KDE에 참여해 주셔서 감사합니다. 이 창을 닫아도 됩니다."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "데이터 대기 중…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "충돌 보고 보냄"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "앞으로 항상 자동으로 충돌 보고"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1304,6 +1204,19 @@ msgstr ""
 "항상 자동으로 KDE 충돌 추적 시스템으로 충돌 보고를 보냅니다. 사용자의 개입이 "
 "필요 없습니다.\n"
 "더 이상 충돌 알림을 받지 않게 됩니다."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "충돌 정보:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1338,7 +1251,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "연락하는 것에 동의합니다"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1415,13 +1328,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "숨기기"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "자세히"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "버그 보고"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1468,6 +1389,123 @@ msgstr "bugstest.kde.org 사용자 이름"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 암호"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "중복 가능성 있는 버그 찾기"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "버그 데이터베이스에서 중복 보고서 검색 중…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "버그가 보고되었는지 확인하십시오. 검색 결과가 있다면, 목록에서 보고서를 "
+#~ "두 번 클릭해서 일어난 상황과 비교해 보십시오. 그 버그에서 일어난 상황이 일"
+#~ "어났다고 알려 주셔도 됩니다."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "복제?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr "현재 충돌이 다음 버그 보고의 충돌과 같은지 확신합니까?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "충돌이 중복됨"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "현재 충돌이 이 버그 보고와 중복됨을 확신할 수 있다면 이 동작을 사용하십시"
+#~ "오"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "충돌이 중복이 아님"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "이 충돌이 관련된 것으로 제안"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "이 단추를 클릭하면 현재 충돌이\n"
+#~ "                                     이 버그 보고와 관련이있는 것으로\n"
+#~ "                                     제안합니다"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "이 충돌은 관련 없음"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "문제가 이미 보고됨"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "충돌 정보는 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며, 이"
+#~ "는 <emphasis strong='true'>이미 닫힌</emphasis> <link url=\"%2\">버그 %2</"
+#~ "link>의 중복입니다."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "충돌 정보가 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며 이 버"
+#~ "그는 <emphasis strong='true'>닫혔습니다.</emphasis>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "충돌 정보는 <link url=\"%1\">버그 %1</link>(으)로 보고된 적이 있으며, 이"
+#~ "는 <link url=\"%2\">버그 %2</link>의 <emphasis strong='true'>중복</"
+#~ "emphasis>입니다"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "충돌 정보는 <emphasis strong='true'>중복된</emphasis> 것이며 과거에 <link "
+#~ "url=\"%1\">버그 %2</link>(으)로 보고된 적이 있습니다."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "추가 정보를 입력할 수도 있으나, 새로운 정보가 있거나 정보를 요청받았을 경"
+#~ "우에만 입력하십시오."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "닫기"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "개별 정보 첨부"
 
 #~ msgctxt "@action"
 #~ msgid "Report on bugs.kde.org"

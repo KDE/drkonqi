@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2010-07-19 10:20+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -270,7 +270,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Missende útbrek symboal pakketten"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -309,6 +309,18 @@ msgstr ""
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2009, De DrKonqi skriuwers"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -432,19 +444,19 @@ msgid "Use this button to restart the crashed application."
 msgstr ""
 "Brûk dizze knop om it ferûngelokke programma op 'e nij útein te setten."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Algemien"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Un&twikkelders ynformaasje"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -452,7 +464,7 @@ msgid ""
 msgstr ""
 "<para>It spyt ús, <application>%1</application> slute ûnferwachts.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -475,7 +487,7 @@ msgstr ""
 "%1. Ferjit net om in trochslach der by te dwaan fan de Untwikkelders "
 "ynformaasje ljepper.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -494,7 +506,7 @@ msgstr ""
 "oan %1 (ynklusyf de trochslach fan de ûntwikkelders ynformaasje ljepper.)</"
 "para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -506,7 +518,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -524,7 +536,7 @@ msgstr ""
 "rapportearjen fan in brek.</link></para><para><note>It is feilich om dit "
 "skerm te sluten as jo dizze brek net rapportearje wolle.</note></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -538,13 +550,13 @@ msgstr ""
 "<para>Jo kinne dizze flater net rapporteaje, omdat it programma net in "
 "brekrapportear adres hat.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Details:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -558,7 +570,7 @@ msgstr ""
 "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
 "Sinjaal: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button this is the debug menu button label which contains the "
@@ -570,31 +582,31 @@ msgctxt ""
 msgid "&Debug"
 msgstr "Utbrekke"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Li in programma úfiere foar it útbrekke fan it ferûngelokke programma"
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Dit skerm slute (Jo sille de ûngelok ynformaasje ferlieze.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:147
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE crash programma"
 
-#: main.cpp:149
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -603,37 +615,37 @@ msgstr ""
 "It KDE-crash programma jout de brûker ynformaasje wannear in programma "
 "ferûngelokke is."
 
-#: main.cpp:152
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, De DrKonqi skriuwers"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -641,7 +653,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "It sinjaal nummer wat opfongen is."
 
-#: main.cpp:164
+#: main.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -649,7 +661,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Namme fan it programma"
 
-#: main.cpp:165
+#: main.cpp:164
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -657,7 +669,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Paad nei it útfierber triem"
 
-#: main.cpp:166
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -665,7 +677,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "De ferzje fan it programma"
 
-#: main.cpp:167
+#: main.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -673,7 +685,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "It te brûken brek-adres"
 
-#: main.cpp:168
+#: main.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -681,13 +693,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "De oersetten namme van it programma"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -695,7 +707,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "It PID fan it programma"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -703,37 +715,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Opstart-ID fan it programma"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "It programma wurde úteinsetten troch kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Willekeurige skiiftagong net tastean"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "It programma is al úteinsetten"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -744,7 +756,7 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgctxt "@info/plain"
 #| msgid ""
@@ -756,7 +768,7 @@ msgstr ""
 "Trochslach fan it ûngelok dat ik ûnderfûn haw:\n"
 "\n"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1032,107 +1044,6 @@ msgstr ""
 "Jo moatte de útbrek pakketten (%1) ynstallearje en klikke op de "
 "<interface>Op 'e nij lade</interface> knop."
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Sykje om mooglike dûbele brekrapporten"
-
-#: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Sykje om dûbele (fan %1 oant %2)..."
-
-#: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Sjoch as jo brek al rapportearre is. Dûbel klik in rapport yn de opsomming "
-"en ferlyk it mei dy fan jo. Jo kinne in suggestje dwaan dat jo brekrapport "
-"in dûbele is fan dat rapport of rjochtstreeks jo ynformaasje oan it "
-"taheakje. "
-
-#: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Duplicate report]"
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "[Al besteand rapport]"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:72
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Der binne gjin suvere dûbelen"
-
-#: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Brûk dizze knop om suggerearje dat it ûngelok dat jo hienen relatearre is "
-"oan dit brekrapport"
-
-#: qml/DuplicatesPage.qml:85
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Der binne gjin suvere dûbelen"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Suggearje dit ûngelok as relatearre"
-
-#: qml/DuplicatesPage.qml:95
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Brûk dizze knop om suggerearje dat it ûngelok dat jo hienen relatearre is "
-"oan dit brekrapport"
-
-#: qml/DuplicatesPage.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Suggearje dit ûngelok as relatearre"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1260,6 +1171,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Op 'e nij besykje..."
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1272,64 +1198,6 @@ msgstr ""
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Un&twikkelders ynformaasje"
-
-#: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info:shell"
-#| msgid "The program has already been restarted"
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "It programma is al úteinsetten"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Sluten (%1)"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr ""
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1366,7 +1234,7 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Fier de details fan it ferûngelokjen yn"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -1378,7 +1246,7 @@ msgstr ""
 "<strong>Selektearje hokker oanfoljende ynformaasje jo ferskaffe kinne:</"
 "strong>"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Contents of the Report"
@@ -1386,7 +1254,7 @@ msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Ynhâld fan it rapport"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 #, fuzzy
 #| msgctxt "@info:tooltip examples of good bug report titles"
 #| msgid ""
@@ -1414,7 +1282,7 @@ msgstr ""
 "resuming the computer and talking to a MSN buddy\"<nl />\"Kate closed while "
 "editing a log file and pressing the Delete key a couple of times\""
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1422,7 +1290,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Ynformaasje oer it rapportearjen fan brekken"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1436,17 +1304,17 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Minimale lingte is berikt"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Mear ynformaasje ferskaffe"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1454,7 +1322,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Distribúsje metoade:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1462,7 +1330,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE platfoarm is kompilearre fan boarnen"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1476,7 +1344,7 @@ msgstr ""
 "<note>It ûngelok en systeem ynformaasje sil automatysk taheakke wurde oan it "
 "brekrapport.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"
@@ -1557,7 +1425,12 @@ msgstr ""
 "Ferûngelok rapport is stjoerd.<nl/>URL: <link>%1</link><nl/>Tanke foar jo "
 "diel oan KDE. Jo kinne no dit finster slute."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr ""
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1565,17 +1438,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Assistint foar it rapportearjen fan ûngelokken"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Information about bug reporting"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Ynformaasje oer it rapportearjen fan brekken"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1627,7 +1513,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr ""
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1718,7 +1604,15 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Details:"
+
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1726,7 +1620,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Brek rapportearje"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1776,6 +1670,106 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Sykje om mooglike dûbele brekrapporten"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Searching for duplicates (from %1 to %2)..."
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Sykje om dûbele (fan %1 oant %2)..."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "See if your bug has already been reported. Double click a report in the "
+#~| "list and compare it to yours. You can suggest that your crash is a "
+#~| "duplicate of that report or directly attach your information to it."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Sjoch as jo brek al rapportearre is. Dûbel klik in rapport yn de "
+#~ "opsomming en ferlyk it mei dy fan jo. Jo kinne in suggestje dwaan dat jo "
+#~ "brekrapport in dûbele is fan dat rapport of rjochtstreeks jo ynformaasje "
+#~ "oan it taheakje. "
+
+#, fuzzy
+#~| msgctxt "@info/plain bug resolution"
+#~| msgid "[Duplicate report]"
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "[Al besteand rapport]"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Der binne gjin suvere dûbelen"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Brûk dizze knop om suggerearje dat it ûngelok dat jo hienen relatearre is "
+#~ "oan dit brekrapport"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Der binne gjin suvere dûbelen"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Suggearje dit ûngelok as relatearre"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Brûk dizze knop om suggerearje dat it ûngelok dat jo hienen relatearre is "
+#~ "oan dit brekrapport"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Suggest this crash is related"
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Suggearje dit ûngelok as relatearre"
+
+#, fuzzy
+#~| msgctxt "@info:shell"
+#~| msgid "The program has already been restarted"
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "It programma is al úteinsetten"
+
+#, fuzzy
+#~| msgctxt "@info bug status, %1 is the resolution"
+#~| msgid "Closed (%1)"
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Sluten (%1)"
 
 #, fuzzy
 #~| msgctxt "@info/rich"

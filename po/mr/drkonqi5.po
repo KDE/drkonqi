@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2013-03-28 15:44+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -240,7 +240,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "डिबग माहितीचे पॅकेजेस अनुपस्थित आहेत"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -277,6 +277,18 @@ msgstr ""
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi लेखक"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -398,26 +410,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "क्रॅश झालेला अनुप्रयोग पुन्हा सुरु करण्याकरिता हे बटन वापरा."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "सामान्य (&G)"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "विकासकर्ता माहिती (&D)"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para>क्षमा करा, <application>%1</application> अचानक बंद झाला.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -428,7 +440,7 @@ msgid ""
 "Information</interface> tab.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -438,7 +450,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -450,7 +462,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -458,7 +470,7 @@ msgid ""
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -468,13 +480,13 @@ msgstr ""
 "<para>या त्रुटीचा अहवाल तुम्ही पाठवू शकत नाही. कारण <application>%1</application> "
 "हा अनुप्रयोग बग अहवाल पाठविण्याचा पत्ता पुरवित नाही.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "तपशील :"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
@@ -489,7 +501,7 @@ msgstr ""
 "<para>एक्झिक्युटेबल : <application>%1</application> PID: <numid>%2</numid> "
 "सिग्नल : %3 (%4) वेळ : %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -497,68 +509,68 @@ msgctxt ""
 msgid "&Debug"
 msgstr "डिबग (&D)"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "क्रॅश झालेल्या अनुप्रयोगास डिबग करण्याकरिता कार्यक्रम सुरु करतो."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "हा संवाद बंद करा. (क्रॅश माहिती हरवेल.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:147
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "केडीई क्रॅश हॅन्डलर"
 
-#: main.cpp:149
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "कार्यक्रम क्रॅश झाला असल्यास केडीई क्रॅश हॅन्डलर वापरकर्ता प्रतिसाद पुरवितो"
 
-#: main.cpp:152
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, The DrKonqi लेखक"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "हान्स पेट्टर बीकर"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "डारिओ आन्ड्रेस रोड्रीग्वेझ"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "जॉर्ज किआजिआडाकिस"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "ए. एल. स्पेहर"
 
-#: main.cpp:163
+#: main.cpp:162
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -566,7 +578,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "संकेत क्रमांक जे प्राप्त केले गेले"
 
-#: main.cpp:164
+#: main.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -574,7 +586,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "कार्यक्रमाचे नाव"
 
-#: main.cpp:165
+#: main.cpp:164
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -582,7 +594,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "एक्जीक्यूटेबल करिता मार्ग"
 
-#: main.cpp:166
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -590,7 +602,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "कार्यक्रमाची आवृत्ती"
 
-#: main.cpp:167
+#: main.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -598,7 +610,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "वापरण्यासाठी बग पत्ता"
 
-#: main.cpp:168
+#: main.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -606,13 +618,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "कार्यक्रमाचे रूपांतरीत नाव"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -620,7 +632,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "कार्यक्रमाचा PID"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -628,31 +640,31 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "कार्यक्रमाचा सुरुवातीचा ID"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "कार्यक्रम kdeinit द्वारे सुरु केला गेला"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "अनियंत्रीत डिस्क प्रवेश अकार्यान्वित करा"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "कार्यक्रम पुन्हा सुरु केला गेला आहे"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "कार्यक्रम चालू ठेवा व सुरुवातीस बॅकट्रेस तयार करा"
 
-#: main.cpp:179
+#: main.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -660,7 +672,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "अपयशी थ्रेड ची थ्रेड id"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -671,14 +683,14 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "बॅकट्रेस घेत आहे (स्वयंचलित क्रॅश माहिती)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "बॅकट्रेस मजकूर दर्शवा (प्रगत)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -903,93 +915,6 @@ msgid ""
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "प्रतिरूप असण्याची शक्यता असलेले अहवाल बघा"
-
-#: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "प्रतिरूप शोधत आहे (%1 पासून %2 पर्यंत)..."
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-
-#: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Duplicate report]"
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "[प्रतिरूप अहवाल]"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:72
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "एकही खरा प्रतिरूप नाही"
-
-#: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "हा क्रॅश कोणत्या अहवालाशी संबंधित आहे ते सूचविण्यासाठी हे बटन वापरा"
-
-#: qml/DuplicatesPage.qml:85
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "एकही खरा प्रतिरूप नाही"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "हा क्रॅश कशाशी संबंधित आहे ते सूचवा"
-
-#: qml/DuplicatesPage.qml:95
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr "हा क्रॅश कोणत्या अहवालाशी संबंधित आहे ते सूचविण्यासाठी हे बटन वापरा"
-
-#: qml/DuplicatesPage.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "हा क्रॅश कशाशी संबंधित आहे ते सूचवा"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1078,6 +1003,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "पुन्हा प्रयत्न करा..."
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1090,64 +1030,6 @@ msgstr ""
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "विकासकर्ता माहिती (&D)"
-
-#: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug <numid>%1</numid>."
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "तुमची समस्या अगोदरच बग <numid>%1</numid> म्हणून सादर झाली आहे."
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
-msgctxt "@action:button"
-msgid "Close"
-msgstr "बंद केले (%1)"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr ""
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1176,7 +1058,7 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "क्रॅश बद्दल तपशील दाखल करा"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1186,7 +1068,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "<note>कृपया <strong>इंग्रजीतूनच</strong> लिहा.</note>"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Contents of the Report"
@@ -1194,7 +1076,7 @@ msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "अहवालातील मजकूर"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1208,7 +1090,7 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1216,7 +1098,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "बग अहवालाबद्दल माहिती"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1230,17 +1112,17 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "किमान लांबी झाली"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "अजुन माहिती पुरवा"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1248,7 +1130,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "वितरण व्यवस्था :"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1256,14 +1138,14 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "केडीई मंच हा स्रोतांपासून कंपाईल केलेला आहे"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"
@@ -1338,7 +1220,12 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "केडीई मध्ये सहभागी होण्याबद्दल धन्यवाद"
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr ""
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1346,17 +1233,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "अहवाल तयार करणारा सहायकाकडे तुमचे स्वागत आहे"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Information about bug reporting"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "बग अहवालाबद्दल माहिती"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1397,7 +1297,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr ""
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1486,7 +1386,15 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "तपशील :"
+
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report &Bug"
@@ -1494,7 +1402,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "बग अहवाल पाठवा (&B)"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Restart Application"
@@ -1544,6 +1452,85 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "प्रतिरूप असण्याची शक्यता असलेले अहवाल बघा"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Searching for duplicates (from %1 to %2)..."
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "प्रतिरूप शोधत आहे (%1 पासून %2 पर्यंत)..."
+
+#, fuzzy
+#~| msgctxt "@info/plain bug resolution"
+#~| msgid "[Duplicate report]"
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "[प्रतिरूप अहवाल]"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "एकही खरा प्रतिरूप नाही"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "हा क्रॅश कोणत्या अहवालाशी संबंधित आहे ते सूचविण्यासाठी हे बटन वापरा"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "एकही खरा प्रतिरूप नाही"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "हा क्रॅश कशाशी संबंधित आहे ते सूचवा"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr "हा क्रॅश कोणत्या अहवालाशी संबंधित आहे ते सूचविण्यासाठी हे बटन वापरा"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Suggest this crash is related"
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "हा क्रॅश कशाशी संबंधित आहे ते सूचवा"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Your problem has already been reported as bug <numid>%1</numid>."
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "तुमची समस्या अगोदरच बग <numid>%1</numid> म्हणून सादर झाली आहे."
+
+#, fuzzy
+#~| msgctxt "@info bug status, %1 is the resolution"
+#~| msgid "Closed (%1)"
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "बंद केले (%1)"
 
 #~ msgctxt "@title:window"
 #~ msgid "Select Filename"

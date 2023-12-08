@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-25 02:26\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -253,7 +253,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "缺少调试符号包"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -289,6 +289,18 @@ msgstr "显示过去程序崩溃的详细信息"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -397,26 +409,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "点击此按钮重新启动崩溃的应用程序。"
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "常规(&G)"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "开发人员信息(&D)"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para>非常抱歉，<application>%1</application> 已经意外关闭。</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -431,7 +443,7 @@ msgstr ""
 "统，并记得附上<interface>开发人员信息</interface>一栏中的回溯跟踪数据。</"
 "para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -444,7 +456,7 @@ msgstr ""
 "可以手动发送此报告到 %1 (请附上<interface>开发人员信息</interface>标签页中的"
 "回溯跟踪数据。)</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -460,7 +472,7 @@ msgstr ""
 "建议您在更新软件之后退出并重新登录系统，这将确保软件更新能得到完整应用并避免"
 "发生意外情况。</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -470,7 +482,7 @@ msgstr ""
 "<para>您可以报告此次错误，帮助我们改进 KDE 软件。<nl /><link url='%1'>查看程"
 "序缺陷报告的更多相关信息。</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -480,13 +492,13 @@ msgstr ""
 "<para>您无法报告此错误，因为 <application>%1</application> 并未提供接收报告的"
 "地址。</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "详情："
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -496,7 +508,7 @@ msgstr ""
 "<para>可执行程序：<application>%1</application> 进程编号：%2 信号：%3 (%4) 时"
 "间：%5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -504,148 +516,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "调试(&D)"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "启动崩溃调试程序。"
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "关闭此对话框 (崩溃信息将丢失)。"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "正在使用 %1 调试"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "崩溃处理程序"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "崩溃处理程序用于在程序崩溃时向用户提供反馈信息。"
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "捕获的信号<号码>"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "程序的<名称>"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "可执行程序的<路径>"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "程序的<版本>"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "程序缺陷报告的<网址>"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "程序的<译名>"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla 产品名称"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "程序的<进程号>"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "程序的启动<编号>"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "程序由 kdeinit 启动"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "禁用磁盘任意访问"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "程序已经重新启动"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "保持程序运行，启动时生成回溯跟踪数据"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "失败线程的<线程号>"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -656,12 +668,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "获取回溯跟踪数据 (自动崩溃信息)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "显示回溯数据内容 (高级)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "下一个"
@@ -848,75 +860,6 @@ msgstr ""
 "<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
 "</interface>按钮。</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "查找可能的重复报告"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "正在搜索程序缺陷数据库中的相似报告…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"检查您的情况是否已经存在重复报告。双击列表中的报告，与您遇到的情况进行比较。"
-"您可以将本次崩溃标注为与某个报告重复，也可以直接在某个报告后面补充您的信息。"
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "这是重复的报告吗？"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "您确定您的崩溃与这个程序缺陷报告的重复吗？"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "此崩溃与该报告重复"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "如果您确定您的崩溃与这个程序崩溃报告重复时，请使用此操作。"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "此崩溃与该报告不重复"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "标记崩溃相关性"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"点击此按钮表示\n"
-"                                     您遇到的崩溃\n"
-"                                     与这个程序缺陷报告有关"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "此崩溃与这个报告无关"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1016,6 +959,21 @@ msgstr ""
 "<para>建议您在更新软件之后退出并重新登录系统，\n"
 "这将确保软件更新能得到完整应用并避免发生意外情况。</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "重试"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1025,68 +983,6 @@ msgstr "发送自动报告"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "查看开发者信息"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "问题已被报告"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，\n"
-"它是<emphasis strong='true'>已关闭</emphasis>的<link url=\"%2\">Bug %2</link>"
-"的重复报告。"
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它已经被<emphasis "
-"strong='true'>关闭</emphasis>。"
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它是 <link url="
-"\"%2\">Bug %2</link> 的<emphasis strong='true'>重复报告</emphasis>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"您遇到的崩溃存在<emphasis strong='true'>重复报告</emphasis>，它已被报告为 "
-"<link url=\"%1\">Bug %2</link>。"
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"您可以选择添加额外信息，但只在您有新信息或者被请求的信息时才应该这样做。"
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "关闭"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "附加额外信息"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1117,17 +1013,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "输入本次崩溃的详情"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "请用英文提供下列信息。"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "程序缺陷报告的标题："
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1150,12 +1046,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "关于崩溃的信息："
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1176,34 +1072,34 @@ msgstr ""
 "<item>如果应用程序存在非默认的配置，请描述清楚</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "已满足最低长度要求"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "提供更多信息"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "发行方式："
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE 软件平台是从源代码编译的"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr "<note>注意：崩溃信息与系统信息将被自动附加到程序缺陷报告中。</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "预览报告"
@@ -1254,17 +1150,25 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "正在等待数据…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "崩溃报告已发送"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "以后总是自动报告崩溃"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1273,6 +1177,19 @@ msgid ""
 msgstr ""
 "总是自动提交崩溃报告到 KDE 崩溃跟踪系统。这不需要任何人工干预。您将不再收到关"
 "于崩溃的通知。"
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "关于崩溃的信息："
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1306,7 +1223,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "我同意开发人员联系我"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1383,13 +1300,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "隐藏"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "详细信息"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "报告程序缺陷"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1436,3 +1361,116 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "查找可能的重复报告"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "正在搜索程序缺陷数据库中的相似报告…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "检查您的情况是否已经存在重复报告。双击列表中的报告，与您遇到的情况进行比"
+#~ "较。您可以将本次崩溃标注为与某个报告重复，也可以直接在某个报告后面补充您的"
+#~ "信息。"
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "这是重复的报告吗？"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr "您确定您的崩溃与这个程序缺陷报告的重复吗？"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "此崩溃与该报告重复"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "如果您确定您的崩溃与这个程序崩溃报告重复时，请使用此操作。"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "此崩溃与该报告不重复"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "标记崩溃相关性"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "点击此按钮表示\n"
+#~ "                                     您遇到的崩溃\n"
+#~ "                                     与这个程序缺陷报告有关"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "此崩溃与这个报告无关"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "问题已被报告"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，\n"
+#~ "它是<emphasis strong='true'>已关闭</emphasis>的<link url=\"%2\">Bug %2</"
+#~ "link>的重复报告。"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它已经被<emphasis "
+#~ "strong='true'>关闭</emphasis>。"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它是 <link url="
+#~ "\"%2\">Bug %2</link> 的<emphasis strong='true'>重复报告</emphasis>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "您遇到的崩溃存在<emphasis strong='true'>重复报告</emphasis>，它已被报告为 "
+#~ "<link url=\"%1\">Bug %2</link>。"
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "您可以选择添加额外信息，但只在您有新信息或者被请求的信息时才应该这样做。"
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "关闭"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "附加额外信息"

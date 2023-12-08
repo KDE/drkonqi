@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-09-29 09:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -290,7 +290,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Virheenpaikannustietopaketteja puuttuu"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -328,6 +328,18 @@ msgstr "Tarjoaa yksityiskohtaisen näkymän aiempiin kaatumisiin"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2020–2022 DrKonqin tekijät"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -436,26 +448,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Käynnistä kaatunut sovellus uudelleen tästä painikkeesta."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Yleistä"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Ke&hittäjätiedot"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para><application>%1</application> sulkeutui yllättäen.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -472,7 +484,7 @@ msgstr ""
 "sisällyttää pinolistausta <interface>Kehittäjätiedot</interface>-"
 "välilehdeltä.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -486,7 +498,7 @@ msgstr ""
 "(jolloin tulisi sisällyttää <interface>Kehittäjätiedot</interface>-"
 "välilehdeltä pinolistaus).</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -503,7 +515,7 @@ msgstr ""
 "jälkeen on hyvä aina kirjautua ulos ja takaisin sisään, jotta päivitykset "
 "tulisivat sivuvaikutuksitta täysin voimaan.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -513,7 +525,7 @@ msgstr ""
 "<para>Voit auttaa meitä parantamaan KDE:tä ilmoittamalla tästä viasta.<nl /"
 "><link url='%1'>Lisätietoa vikojen ilmoittamisesta.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,13 +535,13 @@ msgstr ""
 "<para>Tästä viasta ei voi ilmoittaa, koska <application>%1</application> ei "
 "tarjoa vikailmoitusosoitetta.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Tiedot:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -539,7 +551,7 @@ msgstr ""
 "<para>Ohjelmatiedosto: <application>%1</application> Prosessitunniste: %2 "
 "Signaali: %3 (%4) Aika: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -547,148 +559,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Paikanna virhe"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Käynnistää ohjelman kaatuneen sovelluksen virheiden paikantamiseksi."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Sulje tämä ikkuna (kaatumistiedot menetetään)."
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Paikanna virhe ohjelmalla %1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Kaatumiskäsittelijä"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "Kaatumiskäsittelijä opastaa käyttäjää, jos sovellus kaatuu."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000–2018 DrKonqin tekijät"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Siepattu signaalinumero"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Ohjelman nimi"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Ohjelmatiedoston sijainti"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Ohjelman versio"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Käytettävä vikailmoitusosoite"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Ohjelman käännetty nimi"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla-tuotteen nimi"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Ohjelman prosessitunniste"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Ohjelman käynnistystunniste"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Ohjelman käynnisti kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Estä kiintolevyn mielivaltainen käyttö"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Ohjelma oli jo käynnistynyt uudelleen"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Pidä sovellus käynnissä ja tuota käynnistyksestä pinolistaus"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Epäonnistuvan säikeen tunniste"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -699,12 +711,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Noudetaan pinolistausta (automaattisia kaatumistietoja)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Näytä pinolistauksen sisältö (asiantuntijoille)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Seuraava"
@@ -901,79 +913,6 @@ msgstr ""
 "<emphasis strong='true'>Asenna ensin virheenpaikannussovellus (%1) ja "
 "napsauta sitten <interface>Lataa uudelleen</interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Tarkista ilmoituksen mahdolliset kaksoiskappaleet"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Etsitään virhetietokannasta kaksoiskappaleita…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Tarkista, onko viasta jo ilmoitettu. Jos hakutuloksia löytyy, "
-"kaksoisnapsauta ilmoitusta luettelosta ja vertaa sitä omaasi. Voit ehdottaa "
-"kaatumisesi sen ilmoituksen kaksoiskappaleeksi, tai lisätä tietosi siihen "
-"suoraan."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Kaksoiskappaleko?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "Oletko varma, että kaatumisesi on sama kuin tässä virheilmoituksessa?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Kaatuminen on kaksoiskappale"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Käytä tätä toimintoa, kun olet varma, että kaatumisesi on tämän "
-"virheilmoituksen kaksoiskappale"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Kaatuminen ei ole kaksoiskappale"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Ehdota tämä kaatuminen asiaan liittyväksi"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Tällä painikkeella voi vihjata, että\n"
-"                                     koettu kaatuminen liittyy tähän\n"
-"                                     virheilmoitukseen"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Tämä kaatuminen ei liity asiaan"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1080,6 +1019,21 @@ msgstr ""
 "takaisin sisään, jotta päivitykset tulisivat\n"
 "sivuvaikutuksitta täysin voimaan.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Yritä uudelleen"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1089,69 +1043,6 @@ msgstr "Lähetä automaattinen raportti"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Näytä kehitystiedot"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Ongelmasta on jo ilmoitettu"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
-"kaksoiskappale <emphasis strong='true'>suljetusta</emphasis> <link url="
-"\"%2\">viasta %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
-"<emphasis strong='true'>suljettu</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
-"<emphasis strong='true'>kaksoiskappale</emphasis> <link url=\"%2\">viasta "
-"%2</link>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Kaatumisesi on <emphasis strong='true'>kaksoiskappale</emphasis>, joka on jo "
-"ilmoitettu <link url=\"%1\">viaksi %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Voit lisätä lisätietoa, mutta vain jos se on uutta tai sitä on pyydetty."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Sulje"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Liitä lisätietoa"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1182,18 +1073,18 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Syötä tietoa kaatumisesta"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Anna seuraavat tiedot englanniksi."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Vikailmoituksen otsikko:"
 
 # Esimerkkejä on hyödytöntä kääntää, koska vikailmoitus joka tapauksessa pitää kirjoittaa englanniksi
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1216,12 +1107,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Tietoa kaatumisesta:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1244,27 +1135,27 @@ msgstr ""
 "<item>Mainitse sovelluksen ei-oletusarvoiset asetukset.</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Vähimmäispituus saavutettu"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Lisätietoa tarvitaan"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Jakelutapa:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE-alusta on käännetty lähdekoodista"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1273,7 +1164,7 @@ msgstr ""
 "<note>Kaatumis- ja järjestelmätiedot lisätään vikailmoitukseen "
 "automaattisesti.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Esikatsele vikailmoitusta"
@@ -1325,17 +1216,25 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Kiitos, että olet osa KDE:tä. Tämän ikkunan voi nyt sulkea."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "Odotetaan tietoja…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Kaatumisraportti lähetetty"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "Ilmoita kaatumisista vastaisuudessa aina automaattisesti"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1345,6 +1244,19 @@ msgstr ""
 "Tee aina automaattisesti kaatumisraportti KDE:n "
 "kaatumisjäljitysjärjestelmään. Käyttäjän toimia ei tarvita.\n"
 "Et saa enää ilmoituksia kaatumisista."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Tietoa kaatumisesta:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1381,7 +1293,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Hyväksyn mahdolliset yhteydenotot"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1459,13 +1371,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Piilota"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Tiedot"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Ilmoita viasta"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1512,6 +1432,124 @@ msgstr "bugstest.kde.org-käyttäjätunnus"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-salasana"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Tarkista ilmoituksen mahdolliset kaksoiskappaleet"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Etsitään virhetietokannasta kaksoiskappaleita…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Tarkista, onko viasta jo ilmoitettu. Jos hakutuloksia löytyy, "
+#~ "kaksoisnapsauta ilmoitusta luettelosta ja vertaa sitä omaasi. Voit "
+#~ "ehdottaa kaatumisesi sen ilmoituksen kaksoiskappaleeksi, tai lisätä "
+#~ "tietosi siihen suoraan."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Kaksoiskappaleko?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr ""
+#~ "Oletko varma, että kaatumisesi on sama kuin tässä virheilmoituksessa?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Kaatuminen on kaksoiskappale"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Käytä tätä toimintoa, kun olet varma, että kaatumisesi on tämän "
+#~ "virheilmoituksen kaksoiskappale"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Kaatuminen ei ole kaksoiskappale"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Ehdota tämä kaatuminen asiaan liittyväksi"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Tällä painikkeella voi vihjata, että\n"
+#~ "                                     koettu kaatuminen liittyy tähän\n"
+#~ "                                     virheilmoitukseen"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Tämä kaatuminen ei liity asiaan"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Ongelmasta on jo ilmoitettu"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
+#~ "kaksoiskappale <emphasis strong='true'>suljetusta</emphasis> <link url="
+#~ "\"%2\">viasta %2</link>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
+#~ "<emphasis strong='true'>suljettu</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Kaatumisesi on jo ilmoitettu <link url=\"%1\">viaksi %1</link>, joka on "
+#~ "<emphasis strong='true'>kaksoiskappale</emphasis> <link url=\"%2\">viasta "
+#~ "%2</link>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Kaatumisesi on <emphasis strong='true'>kaksoiskappale</emphasis>, joka on "
+#~ "jo ilmoitettu <link url=\"%1\">viaksi %2</link>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Voit lisätä lisätietoa, mutta vain jos se on uutta tai sitä on pyydetty."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Sulje"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Liitä lisätietoa"
 
 #, fuzzy
 #~| msgctxt "@info"

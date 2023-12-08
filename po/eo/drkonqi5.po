@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -283,7 +283,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Pakaĵoj por sencimigaj informoj mankas"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -321,6 +321,18 @@ msgstr "Proponas detalan vidon de pasintaj paneoj"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, La DrKonqi Aŭtoroj"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -429,19 +441,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Uzu ĉi tiun butonon por restartigi la kolapsitan aplikaĵon."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "Ĝ&enerala"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informoj por Programistoj"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -449,7 +461,7 @@ msgid ""
 msgstr ""
 "<para>Ni bedaŭras, <application>%1</application> neatendite fermiĝis.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -465,7 +477,7 @@ msgstr ""
 "sistemo de KDE. Ne forgesu inkluzivi la malantaŭan spuron el la langeto "
 "<interface>Informoj pri Programisto</interface>.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -479,7 +491,7 @@ msgstr ""
 "ĉi tiun cimon al %1 (inkluzive de la malantaŭa spuro de la langeto "
 "<interface>Informoj pri Programisto</interface>). </para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +509,7 @@ msgstr ""
 "por certigi, ke la ĝisdatigo estas plene aplikata kaj ne kaŭzos ajnan "
 "flankon. efikoj.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +519,7 @@ msgstr ""
 "<para>Vi povas helpi nin plibonigi KDE-Programaron raportante ĉi tiun eraron."
 "<nl /><link url='%1'>Lernu pli pri cimraportado.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -517,13 +529,13 @@ msgstr ""
 "<para>Vi ne povas raporti ĉi tiun eraron, ĉar <application>%1</application> "
 "ne provizas adreson pri cimraporto.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detaloj:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -533,7 +545,7 @@ msgstr ""
 "<para>Efektivigebla: <application>%1</application> PID: %2 Signalo: %3 (%4) "
 "Tempo: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -541,148 +553,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Sencimigi"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Lanĉas programon por sencimigi la paneintan aplikaĵon."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Fermi ĉi tiun dialogon (vi perdos la informojn pri kolapso)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Sencimigi en %1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Paneotraktilo"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "La Paneotraktilo donas al la uzanto sugestojn se programo paneis."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, La DrKonqi Aŭtoroj"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter BIEKER"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres RODRIGUEZ"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George KIAGIADAKIS"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. SPEHR"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "La signalo <nombro> kiu estis kaptita"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Nomo> de la programo"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Path> al la plenumebla"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "La <versio> de la programo"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "La cimo <adreso> uzinda"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Tradukita <nomo> de la programo"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla produktnomo"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "La <PID> de la programo"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Ekfunkciigo <ID> de la programo"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "La programaro estis startigita de kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Malŝalti arbitran diskaliron"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "La programaro estas jam restartigita"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Daŭrigi la programon kaj generi la retrospuron ĉe ekfunkciigo"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "La <fadeno-id> de la malsukcesa fadeno"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -693,12 +705,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Prenante la retrospuron (Aŭtomataj Paneoinformoj)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Montri enhavon de retrospurado (progresinta)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Poste"
@@ -892,80 +904,6 @@ msgstr ""
 "<emphasis strong='true'>Vi unue devas instali la sencimigilon (%1) kaj poste "
 "alklaku la butonon <interface>Reŝargi</interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Kontroli por eblaj duoblaj raportoj"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Serĉante cimdatumbazon por duplikatoj..."
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Vidu ĉu via cimo jam estis raportita. Duoble alklaku raporton en la listo "
-"kaj komparu ĝin kun via. Vi povas sugesti, ke via paneo estas duplikato de "
-"tiu raporto aŭ rekte ligi viajn informojn al ĝi."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Duobligi?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-"Ĉu vi estas tute certa, ke via paneo estas duplikato de ĉi tiu cimraporto?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Paneo estas duplikato"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Uzu ĉi tiun agon kiam vi certas, ke via paneo estas duplikato de ĉi tiu "
-"cimraporto"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Paneo ne estas duplikato"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Sugesti, ke ĉi tiu kolapso rilatas"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Uzu ĉi tiun butonon por sugesti, ke\n"
-"                                     la paneo, kiun vi spertis, rilatas al "
-"ĉi tiu\n"
-"                                     cimraporto"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Ĉi tiu paneo ne rilatas"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1074,6 +1012,21 @@ msgstr ""
 "in por certigi, ke la ĝisdatigo estas plene aplikata kaj estos ne kaŭzas\n"
 "ajn kromefikojn.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Reprovi"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1083,70 +1036,6 @@ msgstr "Sendi Aŭtomatan Raporton"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Vidu Informojn pri Programisto"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Problemo Estas Jam Raportita"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
-"estas duplikato de la <emphasis strong='true'>fermita</emphasis> <link url="
-"\"%2\">Cimo %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link> kiu estis "
-"<emphasis strong='true'>fermita</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
-"estas <emphasis strong='true'>duplikato</emphasis> de <link url=\"%2\">Cimo "
-"%2</link>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Via paneo estas <emphasis strong='true'>duplikato</emphasis> kaj jam estis "
-"raportita kiel <link url=\"%1\">Cimo %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Vi povas elekti aldoni pliajn informojn, sed vi faru tion nur se vi havas "
-"novajn aŭ petitajn informojn."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Fermi"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Aldoni Pliajn Informojn"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1177,17 +1066,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Enigi detalojn pri la kolapso"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Bonvolu provizi la sekvajn informojn en la angla."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Titolo de la cimraporto:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1211,12 +1100,12 @@ msgstr ""
 "klavon kelkfoje</item> ero>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Informoj pri la paneo:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1239,27 +1128,27 @@ msgstr ""
 "<item>Rimarku ajnan nedefaŭltan agordon en la aplikaĵo</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Minimuma longo atingita"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Provizu pliajn informojn"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metodo de distribuo:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE-Platformo estas kompilita el fonto"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1268,7 +1157,7 @@ msgstr ""
 "<note>La paneo kaj sistema informo estos aŭtomate aldonitaj al la cimraporto."
 "</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Antaŭrigarda Raporto"
@@ -1321,17 +1210,25 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dankon pro esti parto de KDE. Vi nun povas fermi ĉi tiun fenestron."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "Atendante datumojn…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Sendis Paneoraporton"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "Estonte ĉiam raporti paneojn aŭtomate"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1341,6 +1238,19 @@ msgstr ""
 "Ĉiam aŭtomate sendi paneoraporton al la cimspura sistemo de KDE. Ne necesas "
 "mana enigo.\n"
 "Vi ne plu ricevos ajn paneoraportojn."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Informoj pri la paneo:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1378,7 +1288,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Mi konsentas esti Kontaktita"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1457,13 +1367,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Kaŝi"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Detaloj"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Raporti cimon"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1510,3 +1428,122 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Kontroli por eblaj duoblaj raportoj"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Serĉante cimdatumbazon por duplikatoj..."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Vidu ĉu via cimo jam estis raportita. Duoble alklaku raporton en la listo "
+#~ "kaj komparu ĝin kun via. Vi povas sugesti, ke via paneo estas duplikato "
+#~ "de tiu raporto aŭ rekte ligi viajn informojn al ĝi."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Duobligi?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr ""
+#~ "Ĉu vi estas tute certa, ke via paneo estas duplikato de ĉi tiu cimraporto?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Paneo estas duplikato"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Uzu ĉi tiun agon kiam vi certas, ke via paneo estas duplikato de ĉi tiu "
+#~ "cimraporto"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Paneo ne estas duplikato"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Sugesti, ke ĉi tiu kolapso rilatas"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Uzu ĉi tiun butonon por sugesti, ke\n"
+#~ "                                     la paneo, kiun vi spertis, rilatas "
+#~ "al ĉi tiu\n"
+#~ "                                     cimraporto"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Ĉi tiu paneo ne rilatas"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Problemo Estas Jam Raportita"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
+#~ "estas duplikato de la <emphasis strong='true'>fermita</emphasis> <link "
+#~ "url=\"%2\">Cimo %2</link>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link> kiu "
+#~ "estis <emphasis strong='true'>fermita</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
+#~ "estas <emphasis strong='true'>duplikato</emphasis> de <link url="
+#~ "\"%2\">Cimo %2</link>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Via paneo estas <emphasis strong='true'>duplikato</emphasis> kaj jam "
+#~ "estis raportita kiel <link url=\"%1\">Cimo %2</link>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Vi povas elekti aldoni pliajn informojn, sed vi faru tion nur se vi havas "
+#~ "novajn aŭ petitajn informojn."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Fermi"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Aldoni Pliajn Informojn"

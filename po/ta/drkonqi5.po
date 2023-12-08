@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-09-10 18:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -259,7 +259,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "காணாத பிழைநீக்கவிவர தொகுப்புகள்"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -297,6 +297,18 @@ msgstr "இதற்கு முன்பு முறிவடைந்து�
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, DrKonqi நிரலாளர்கள்"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -405,19 +417,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "முறிவடைந்த செயலியை மீள்துவக்க இப்பட்டனைப் பயன்படுத்தலாம்"
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&பொதுவானவை"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&நிரலாளர்களின் விவரங்கள்"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -426,7 +438,7 @@ msgstr ""
 "<para>மன்னிக்கவும், <application>%1</application> எதிர்பாராத வித‍த்தில் முறிவடைந்த‍து."
 "</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -437,7 +449,7 @@ msgid ""
 "Information</interface> tab.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -447,7 +459,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -459,7 +471,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -469,7 +481,7 @@ msgstr ""
 "<para>இச்சிக்கலை தெரிவிப்பதன் மூலம் கே.டீ.யீ. மென்பொருட்களை மேம்படுத்த நீங்கள் உதவலாம்.<nl /"
 "><link url='%1'>பிழையறிக்கைகளைப் பற்றிய மேலும் விவரங்கள்.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -479,13 +491,13 @@ msgstr ""
 "<para><application>%1</application> பிழையறிக்கைகளுக்கான முகவரிகளை வழங்காத‍தால் "
 "இச்சிக்கலைத் தெரிவிக்க முடியாது.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "விவரங்கள்:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -495,7 +507,7 @@ msgstr ""
 "<para>நிரல்: <application>%1</application> பணியெண்: %2 சமிக்ஞை: %3 (%4) நேரம்: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -503,149 +515,149 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&பிழைநீக்கு"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "முறிவடைந்துள்ள செயலியை ஆராய உதவும் ஓர் நிரலைத் துவக்கும்."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "இச்சாளரத்தை மூடும் (முறிவு குறித்த விவரங்களை இழப்பீர்கள்)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "%1 என்பதில் பிழைநீக்கு"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "முறிவுக் கையாளி"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "நிரலொன்று முறிவடைகையில், முறிவுக் கையாளி பயனருக்கு அதுபற்றிய விவரங்களைக் காட்டும்."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, DrKonqi நிரலாளர்கள்"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr ""
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr ""
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr ""
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr ""
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "நாங்கள் பெற்ற சைகையின் எண் (<number>)"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "நிரலின் பெயர் (<Name>)"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "செயலிக்கான பாதை (<Path>)"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "நிரலின் பதிப்பு (<version>)"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "பிழைதெரிவிப்பு முகவரி (<address>)"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "மொழிபெயர்க்கபட்டுள்ள நிரலின் பெயர் (<name>)"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "நிரலின் செயலெண் (<PID>)"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "நிரலின் துவக்க எண் (<ID>)"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "இந்நிரல் kdeinit ஆல் துவக்கப்பட்டது"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr ""
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "இந்நிரல் ஏற்கனவே மீள்துவக்கப்பட்டுள்ளது"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -656,12 +668,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "முறிவுகுறித்த விவரங்கள் பெறப்படுகின்றன (தானியங்கி backtrace உருவாக்கம்)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "backtrace-ஐ காட்டு (நிபுணர்களுக்கு)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "அடுத்தது"
@@ -837,77 +849,6 @@ msgstr ""
 "<emphasis strong='true'>பிழைநீக்க நிரலை (%1) நிறுவி <interface>மீளேற்று</"
 "interface> எனும் பட்டனை அழுத்த வேண்டும்.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "மற்றவர்களின் இதைப்போன்ற அறிக்கைகளை கண்டுபிடித்தல்"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "இதுபோன்ற பிழையறிக்கைகளைத் தேடுகிறது…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"இந்த பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளதா என்பதைப் பார்க்கவும். பட்டியலிலுள்ள ஓர் அறிக்கையின் "
-"மீது இரட்டை கிளிக் செய்து உங்கள் பிழையறிக்கையுடன் ஒப்பிடலாம். இரண்டும் ஒன்றாக இருந்தால் "
-"உங்கள் பிழையறிக்கை அதன் நகலென்று குறிப்பிடலாம், அல்லது உங்கள் முறிவுகுறித்த விவரங்களை "
-"நேரடியாக அவ்வறிக்கையுடனேயே இணைக்கலாம்."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "நகலா?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "உங்கள் முறிவு இவ்வறிக்கையின் நகலென்று உறுதியாக நம்புகிறீர்களா?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "முறிவு நகலானது"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "உங்கள் முறிவு இதன் நகல் என்று உறுதியாக நம்பினால் இப்பட்டமை அழுத்தவும்"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "முறிவு நகலில்லை"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "இது தொடர்புடையதாக இருக்கலாம்"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"நீங்கள் எதிர்கொண்ட முறிவு இந்த அறிக்கையுடன்\n"
-"தொடர்புடையதாக இருக்கலாம் என்பதை குறிக்க\n"
-"இப்பட்டனைப் பயன்படுத்தலாம்"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "இதனுடன் தோடர்பல்ல"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -991,6 +932,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "மீண்டும் முயற்சி"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1000,58 +956,6 @@ msgstr "தானியக்க பிழையறிக்கையை அன�
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "நிரலாளர்களுக்கான விவரங்களைக் காட்டு"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "இப்பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளது"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "மூடு"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "மேம்பட்ட விவரங்களை இணை"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1082,17 +986,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "முறிவுகுறித்த விவரங்களை உள்ளிடவும்"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "பின்வரும் விவரங்களை ஆங்கிலத்தில் நிரப்புங்கள்."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "பிழையறிக்கையின் தலைப்பு:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1115,12 +1019,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "முறிவைப்பற்றிய விவரங்கள்:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1134,34 +1038,34 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "குறைந்தபட்ச நீளம் அடையப்பட்டுள்ளது"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "மேலும் விவரங்களை உள்ளிடுங்கள்"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "நிறுவிய விதம்:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr ""
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "அறிக்கையின் முன்னோட்டங்காண்"
@@ -1214,22 +1118,43 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "கே.டீ.யீ.க்கு பங்களித்தமைக்கு நன்றி. இச்சாளரத்தை இப்போது நீங்கள் மூடலாம்."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "தரவுக்கு காத்திருக்கிறது…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "பிழையறிக்கை அனுப்ப‍ப்பட்டுள்ளது"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "வருங்காலத்தில் முறிவுகளை தானாக தெரிவி"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "முறிவைப்பற்றிய விவரங்கள்:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1260,7 +1185,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "என்னை தொடர்புகொள்ளலாம் என ஒப்புக்கொள்கிறேன்"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1338,13 +1263,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "மறை"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "விவரங்கள்"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "தெரிவி"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1391,6 +1324,78 @@ msgstr "bugstest.kde.org பயனர் பெயர்"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org கடவுச்சொல்"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "மற்றவர்களின் இதைப்போன்ற அறிக்கைகளை கண்டுபிடித்தல்"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "இதுபோன்ற பிழையறிக்கைகளைத் தேடுகிறது…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "இந்த பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளதா என்பதைப் பார்க்கவும். பட்டியலிலுள்ள ஓர் "
+#~ "அறிக்கையின் மீது இரட்டை கிளிக் செய்து உங்கள் பிழையறிக்கையுடன் ஒப்பிடலாம். இரண்டும் "
+#~ "ஒன்றாக இருந்தால் உங்கள் பிழையறிக்கை அதன் நகலென்று குறிப்பிடலாம், அல்லது உங்கள் "
+#~ "முறிவுகுறித்த விவரங்களை நேரடியாக அவ்வறிக்கையுடனேயே இணைக்கலாம்."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "நகலா?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr "உங்கள் முறிவு இவ்வறிக்கையின் நகலென்று உறுதியாக நம்புகிறீர்களா?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "முறிவு நகலானது"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "உங்கள் முறிவு இதன் நகல் என்று உறுதியாக நம்பினால் இப்பட்டமை அழுத்தவும்"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "முறிவு நகலில்லை"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "இது தொடர்புடையதாக இருக்கலாம்"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "நீங்கள் எதிர்கொண்ட முறிவு இந்த அறிக்கையுடன்\n"
+#~ "தொடர்புடையதாக இருக்கலாம் என்பதை குறிக்க\n"
+#~ "இப்பட்டனைப் பயன்படுத்தலாம்"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "இதனுடன் தோடர்பல்ல"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "இப்பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளது"
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "மூடு"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "மேம்பட்ட விவரங்களை இணை"
 
 #~ msgctxt "@action"
 #~ msgid "Report on bugs.kde.org"

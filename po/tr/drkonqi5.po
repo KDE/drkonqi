@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-03 13:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -286,7 +286,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Eksik hata ayıklama bilgisi paketleri"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -324,6 +324,18 @@ msgstr "Geçmiş çökmelerin ayrıntılı görünümünü sunar"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, Dr. Konqi Yazarları"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -432,19 +444,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Çöken uygulamayı yeniden başlatmak için bu düğmeyi kullanın."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Genel"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Geliştirici Bilgisi"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -453,7 +465,7 @@ msgstr ""
 "<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
 "biçimde kapandı.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -469,7 +481,7 @@ msgstr ""
 "rapor edin</link>. <interface>Geliştirici Bilgileri</interface> sekmesindeki "
 "geri izi eklemeyi unutmayın.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -483,7 +495,7 @@ msgstr ""
 "(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
 "birlikte) bildirebilirsiniz.</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,7 +514,7 @@ msgstr ""
 "için oturumu kapatıp yeniden açmak her zaman iyi bir fikirdir ve bir yan "
 "etkisi yoktur.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -513,7 +525,7 @@ msgstr ""
 "olabilirsiniz.<nl /><link url='%1'>Hata raporlaması hakkında daha fazla "
 "bilgi edinin.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,13 +535,13 @@ msgstr ""
 "<para><application>%1</application> uygulaması herhangi bir hata bildirim "
 "adresi sağlamadığından, bu uygulama için hata bildiremezsiniz.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Ayrıntılar:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -539,7 +551,7 @@ msgstr ""
 "<para>Yürütülebilir: <application>%1</application> Süreç Kimliği: %2 Sinyal: "
 "%3 (%4) Zaman: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -547,150 +559,150 @@ msgctxt ""
 msgid "&Debug"
 msgstr "H&ata Ayıkla"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Çöken uygulamanın hatalarını ayıklamak için bir uygulama başlatır."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "%1 içinde hata ayıkla"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Çökme İşleyicisi"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Çökme İşleyicisi, bir uygulama çöktüğünde kullanıcının geri bildirimini "
 "iletir."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, Dr. Konqi Yazarları"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Yakalanan <number> numaralı sinyal"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Uygulamanın <adı>"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Yürütülebilirin <yolu>"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Uygulama <sürümü>"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Kullanılacak hata <adresi>"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Uygulamanın çevrilmiş <adı>"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla ürün adı"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Uygulamanın <süreç numarası>"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Uygulamanın <kimlik numarası>"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Uygulamanın kdeinit tarafından başlatılmış"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Rastgele disk erişimini kapat"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Uygulama zaten başlatılmış"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Uygulamayı çalışır durumda tut ve geri izi başlangıçta oluştur"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Başarısız iş parçacığının <iş parçaçığı kimliği>"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -703,12 +715,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Geri İz Alınıyor (Otomatik Çökme Bilgisi)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Geri İz İçeriğini Göster (Gelişmiş)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Sonraki"
@@ -902,79 +914,6 @@ msgstr ""
 "ve <interface>Yeniden Yükle</interface> düğmesine basmanız gerekiyor.</"
 "emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Olası Aynı Raporları Ara"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Olası benzer kayıtlar için veritabanı aranıyor..."
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Gözlemlediğiniz hatanın daha önceden raporlanıp raporlanmadığını denetleyin. "
-"Listedeki bir rapora çift tıklayın ve gözlemlediğiniz hatayla karşılaştırın. "
-"Raporladığınız hatanın daha önce bildirilmiş olan bir hata ile aynı olduğuna "
-"karar verebilir ya da doğrudan bilgilerinizi o hataya ekleyebilirsiniz."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Yinelenmiş?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "Çökmenin, bu hata raporunun aynısı olduğundan emin misiniz?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Çökme kaydı önceden açılmış"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Çökmenin, bu hata kaydının aynısı olduğundan eminseniz bu eylemi kullanın"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Çökme, aynısı değil"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Bu çökmenin ilgili olduğunu öner"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Deneyimlediğiniz çökmenin bu hata kaydı\n"
-"                                     ile benzer/ilişkin olduğunu "
-"belirtmekiçin bu düğmeyi\n"
-"                                     kullanın"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Bu çökme ilgili değil"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1083,6 +1022,21 @@ msgstr ""
 "olmayacağından emin olmak için oturumu kapatıp yeniden\n"
 "açmak her zaman iyi bir fikirdir ve bir yan etkisi yoktur.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Yeniden Dene"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1092,70 +1046,6 @@ msgstr "Otomatik Rapor Gönder"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Geliştirici Bilgisini Gör"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Sorun Önceden Bildirilmiş"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
-"\"%2\">Hata %2</link> kaydının bir yinelenmişi olarak <link url=\"%1\">Hata "
-"%1</link> adresinde bildirilmiş."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
-"\"%1\">Hata %1</link> olarak bildirilmiş."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Çökme, halihazırda <link url=\"%2\">Hata %2</link> kaydının <emphasis "
-"strong='true'>aynısı</emphasis> olan <link url=\"%1\">Hata %1</link> olarak "
-"bildirilmiş."
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Çökme, halihazırda <link url=\"%1\">Bug %2</link> kaydının <emphasis "
-"strong='true'>aynısı</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Ek bilgi eklemeyi seçebilirsiniz; ancak bunu yalnızca yeni veya istenen "
-"bilgi varsa yapın."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Kapat"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Ek Bilgi İliştir"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1187,17 +1077,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Çökme Ayrıntıları Girin"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Lütfen aşağıdaki bilgiyi İngilizce yazın."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Hata raporunun başlığı:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1220,12 +1110,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Çökme hakkında bilgi:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1248,27 +1138,27 @@ msgstr ""
 "item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "En kısa uzunluğa ulaşıldı"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Daha fazla bilgi verin"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Dağıtım yöntemi:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE Platformu kaynaktan derlendi"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1277,7 +1167,7 @@ msgstr ""
 "<note>Çökme ve sistem bilgisi, hata kaydına kendiliğinden eklenecektir.</"
 "note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Raporu Önizle"
@@ -1332,17 +1222,25 @@ msgstr ""
 "KDE'nin bir parçası olduğunuz için teşekkürler. Artık bu pencereyi "
 "kapatabilirsiniz."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "Veri bekleniyor…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Çökme Raporu Gönderildi"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "Gelecekte çökmeleri her zaman kendiliğinden bildir"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1352,6 +1250,19 @@ msgstr ""
 "Çökme raporlarını KDE'nin çökme izleme sistemine her zaman kendiliğinden "
 "gönderin. Elle girdi gerekmez.\n"
 "Herhangi bir çökme bildirimi almazsınız."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Çökme hakkında bilgi:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1389,7 +1300,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Benimle İletişime Geçilebilir"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1468,13 +1379,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Gizle"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Ayrıntılar"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Hata Bildir"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1521,6 +1440,125 @@ msgstr "bugstest.kde.org kullanıcı adı"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org parolası"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Olası Aynı Raporları Ara"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Olası benzer kayıtlar için veritabanı aranıyor..."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Gözlemlediğiniz hatanın daha önceden raporlanıp raporlanmadığını "
+#~ "denetleyin. Listedeki bir rapora çift tıklayın ve gözlemlediğiniz hatayla "
+#~ "karşılaştırın. Raporladığınız hatanın daha önce bildirilmiş olan bir hata "
+#~ "ile aynı olduğuna karar verebilir ya da doğrudan bilgilerinizi o hataya "
+#~ "ekleyebilirsiniz."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Yinelenmiş?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr "Çökmenin, bu hata raporunun aynısı olduğundan emin misiniz?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Çökme kaydı önceden açılmış"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Çökmenin, bu hata kaydının aynısı olduğundan eminseniz bu eylemi kullanın"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Çökme, aynısı değil"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Bu çökmenin ilgili olduğunu öner"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Deneyimlediğiniz çökmenin bu hata kaydı\n"
+#~ "                                     ile benzer/ilişkin olduğunu "
+#~ "belirtmekiçin bu düğmeyi\n"
+#~ "                                     kullanın"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Bu çökme ilgili değil"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Sorun Önceden Bildirilmiş"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
+#~ "\"%2\">Hata %2</link> kaydının bir yinelenmişi olarak <link url="
+#~ "\"%1\">Hata %1</link> adresinde bildirilmiş."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
+#~ "\"%1\">Hata %1</link> olarak bildirilmiş."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Çökme, halihazırda <link url=\"%2\">Hata %2</link> kaydının <emphasis "
+#~ "strong='true'>aynısı</emphasis> olan <link url=\"%1\">Hata %1</link> "
+#~ "olarak bildirilmiş."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Çökme, halihazırda <link url=\"%1\">Bug %2</link> kaydının <emphasis "
+#~ "strong='true'>aynısı</emphasis>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Ek bilgi eklemeyi seçebilirsiniz; ancak bunu yalnızca yeni veya istenen "
+#~ "bilgi varsa yapın."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Kapat"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Ek Bilgi İliştir"
 
 #~ msgctxt "@action"
 #~ msgid "Report on bugs.kde.org"

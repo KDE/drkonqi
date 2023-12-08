@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-05 19:08+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -303,7 +303,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Paquets d'informations de débogage absents"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -341,6 +341,18 @@ msgstr "Fournit un affichage détaillé des anciens plantages"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2022, les auteurs de DrKonqi"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -453,19 +465,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Utiliser ce bouton pour redémarrer l'application plantée."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Général"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informations pour le &développeur"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -474,7 +486,7 @@ msgstr ""
 "<para>Nous sommes désolés, l'application <application>%1</application> s'est "
 "arrêtée subitement.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -491,7 +503,7 @@ msgstr ""
 "KDE. N'oubliez pas de fournir la pile d'appels à partir de l'onglet "
 "<interface> « Informations du développeur » ).</interface></para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -505,7 +517,7 @@ msgstr ""
 "manuellement ce bogue à %1 (en incluant la pile d'appels à partir de "
 "l'onglet <interface> « Informations du développeur » </interface>).</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -524,7 +536,7 @@ msgstr ""
 "que la mise à jour soit entièrement appliquée et ne cause aucun effet "
 "secondaire.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -535,7 +547,7 @@ msgstr ""
 "cette erreur.<nl /><link url='%1'>En savoir plus sur comment faire un "
 "rapport de bogue.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -546,13 +558,13 @@ msgstr ""
 "<application>%1</application> ne fournit pas d'adresse de rapport de bogues."
 "</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Détails :"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -562,7 +574,7 @@ msgstr ""
 "<para>Exécutable : <application>%1</application> PID : %2 Signal : %3 (%4) "
 "Temps : %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -570,150 +582,150 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Déboguer"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "Démarre un programme pour déboguer l'application plantée."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Fermer cette fenêtre (vous perdrez les informations de plantage)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Déboguer dans %1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Gestionnaire de plantages"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Le gestionnaire de plantage de KDE fournit des informations à l'utilisateur "
 "lorsqu'un programme s'est planté."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, les auteurs de DrKonqi"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Le signal <numéro> qui a été intercepté"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Nom> du programme"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Emplacement> de l'exécutable"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "La <version> du programme"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "L'<adresse> de bogue à utiliser"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Nom <traduit> du programme"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nom du produit sous Bugzilla"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Le numéro de processus <PID> du programme"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "<ID> de démarrage du programme"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Le programme a été démarré par « kdeinit »"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Désactiver les accès aléatoires au disque"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Le programme a déjà été redémarré"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Laisser le programme lancé et générer une pile d'appels au démarrage"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "L'<identifiant> du processus défaillant"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -726,12 +738,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Extraction de la pile d'appels (informations automatiques du plantage)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Afficher le contenu de la pile d'appels (avancé)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Prochain"
@@ -935,82 +947,6 @@ msgstr ""
 "débogage (« %1 ») et ensuite, puis cliquer sur le bouton "
 "<interface>Recharger</interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Rechercher des duplicatas potentiels du rapport"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Recherche de doublons dans la base de données des bogues en cours..."
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Vérifiez si votre bogue a déjà été rapporté. Double-cliquez sur un des "
-"rapports de la liste pour les comparer au vôtre. Vous pouvez suggérer que "
-"votre plantage est similaire à l'un des rapports de cette liste ou y "
-"attacher directement vos informations."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Dupliqué ?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-"Êtes-vous bien certain que votre plantage est un doublon signalé dans ce "
-"rapport de bug ?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Le plantage est un doublon"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Utilisez cette action si vous être certain que votre plantage est un doublon "
-"de ce rapport de bogue."
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Le plantage n'est pas un doublon."
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Suggérer que ce plantage est lié"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Utilisez ce bouton pour suggérer \n"
-"\t\t\t\t\t que le plantage auquel vous avez été confronté est lié à ce "
-"rapport\n"
-"\t\t\t\t\t de bogue"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Ce plantage n'est pas lié"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1126,6 +1062,21 @@ msgstr ""
 "aucun\n"
 "effet secondaire.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Ré-essayer"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1135,71 +1086,6 @@ msgstr "Envoyer automatiquement le rapport de plantage"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Afficher les informations pour l'équipe de développement"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Le problème a déjà été rapporté."
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Votre plantage a déjà été signalé comme le <link url=\"%1\">bogue %1</link>, "
-"qui est un doublon du <link url=\"%2\">bogue %2</link> déjà <emphasis "
-"strong='true'>fermé</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Votre plantage a déjà été signalé comme <link url=\"%1\">bogue %1</link>, "
-"ayant lui-même été <emphasis strong='true'>fermé</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Votre plantage a déjà été signalé comme le <a href=\"%1\">bogue %1</a>, "
-"étant lui-même un <emphasis strong='true'>doublon</emphasis> du <link url="
-"\"%2\">bogue %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Votre plantage est un <emphasis strong='true'>doublon</emphasis> et a déjà "
-"été signalé comme <a href=\"%1\">bogue %1</a>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Vous pouvez choisir d'ajouter des informations supplémentaires. Cependant, "
-"vous ne devez le faire que si vous avez des informations nouvelles ou "
-"demandées."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Fermer"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Joindre des informations additionnelles"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1231,17 +1117,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Saisissez les détails concernant le plantage"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Veuillez fournir les informations suivantes en anglais."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Titre du rapport de bogue :"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1266,12 +1152,12 @@ msgstr ""
 "« Suppression » plusieurs fois.</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Informations concernant le plantage :"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1295,27 +1181,27 @@ msgstr ""
 "l'application</item>.\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Longueur minimale atteinte"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Fournir plus d'informations"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Méthode de distribution :"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "La plate-forme KDE est compilée depuis les sources."
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1324,7 +1210,7 @@ msgstr ""
 "<note>Les informations sur le plantage et le système seront automatiquement "
 "ajoutées au rapport de bogue.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Afficher un aperçu du rapport"
@@ -1378,17 +1264,25 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
 "Merci de contribuer à KDE. Vous pouvez maintenant fermer cette fenêtre."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "En attente de données..."
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Rapport de plantage envoyé"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "Toujours signaler automatiquement les plantages dans le futur"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1398,6 +1292,19 @@ msgstr ""
 "Toujours envoyer automatiquement un rapport de plantage au système de suivi "
 "des bogues de KDE. Aucune saisie manuelle n'est requise. \n"
 "Vous ne recevrez plus de notifications de plantage."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Informations concernant le plantage :"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1435,7 +1342,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Je suis d'accord pour être contacté"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1514,13 +1421,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Masquer"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Détails"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Rapporter un bogue"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1569,6 +1484,129 @@ msgstr "Nom d'utilisateur pour « bugstest.kde.org »"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Mot de passe pour « bugstest.kde.org »"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Rechercher des duplicatas potentiels du rapport"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr ""
+#~ "Recherche de doublons dans la base de données des bogues en cours..."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Vérifiez si votre bogue a déjà été rapporté. Double-cliquez sur un des "
+#~ "rapports de la liste pour les comparer au vôtre. Vous pouvez suggérer que "
+#~ "votre plantage est similaire à l'un des rapports de cette liste ou y "
+#~ "attacher directement vos informations."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Dupliqué ?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr ""
+#~ "Êtes-vous bien certain que votre plantage est un doublon signalé dans ce "
+#~ "rapport de bug ?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Le plantage est un doublon"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Utilisez cette action si vous être certain que votre plantage est un "
+#~ "doublon de ce rapport de bogue."
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Le plantage n'est pas un doublon."
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Suggérer que ce plantage est lié"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Utilisez ce bouton pour suggérer \n"
+#~ "\t\t\t\t\t que le plantage auquel vous avez été confronté est lié à ce "
+#~ "rapport\n"
+#~ "\t\t\t\t\t de bogue"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Ce plantage n'est pas lié"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Le problème a déjà été rapporté."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Votre plantage a déjà été signalé comme le <link url=\"%1\">bogue %1</"
+#~ "link>, qui est un doublon du <link url=\"%2\">bogue %2</link> déjà "
+#~ "<emphasis strong='true'>fermé</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Votre plantage a déjà été signalé comme <link url=\"%1\">bogue %1</link>, "
+#~ "ayant lui-même été <emphasis strong='true'>fermé</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Votre plantage a déjà été signalé comme le <a href=\"%1\">bogue %1</a>, "
+#~ "étant lui-même un <emphasis strong='true'>doublon</emphasis> du <link url="
+#~ "\"%2\">bogue %2</link>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Votre plantage est un <emphasis strong='true'>doublon</emphasis> et a "
+#~ "déjà été signalé comme <a href=\"%1\">bogue %1</a>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Vous pouvez choisir d'ajouter des informations supplémentaires. "
+#~ "Cependant, vous ne devez le faire que si vous avez des informations "
+#~ "nouvelles ou demandées."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Fermer"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Joindre des informations additionnelles"
 
 #~ msgctxt "@action"
 #~ msgid "Report on bugs.kde.org"

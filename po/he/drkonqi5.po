@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-08 01:19+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -274,7 +274,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "סמלי ניפוי שגיאות חסרים"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -310,6 +310,18 @@ msgstr "מציע תצוגה מפורטת של קריסות עבר"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020‏-2022, יוצרי DrKonqi"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -418,26 +430,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "אפשר להשתמש בכפתור זה כדי להפעיל יישום שקרס מחדש."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&כללי"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "מידע למ&פתחים"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para>‏<application>%1</application> נסגר במפתיע, עימך הסליחה.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -452,7 +464,7 @@ msgstr ""
 "השגיאה הזאת למערכת מעקב התקלות של KDE. לא לשכוח לכלול את ניתוח המהלכים "
 "מהלשונית <interface>מידע למפתחים</interface>.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -465,7 +477,7 @@ msgstr ""
 ">אפשר לדווח על התקלה הזאת ידנית דרך %1 (כולל ניתוח המהלכים מהלשונית "
 "<interface>מידע למפתחים</interface>.)</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -481,7 +493,7 @@ msgstr ""
 "para><para>לאחר עדכון תמיד כדאי לצאת מההפעלה ולחזור אליה כדי לוודא שהעדכון "
 "חל במלואו ולא יגרום לתופעות לוואי.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -491,7 +503,7 @@ msgstr ""
 "<para>אפשר לסייע לנו לשפר את התוכנות של KDE על ידי דיווח על השגיאה הזאת.<nl /"
 "><link url='%1'>מידע נוסף על דיווח תקלות.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -501,13 +513,13 @@ msgstr ""
 "<para>אי אפשר לדווח על השגיאה הזאת כיוון ש־<application>%1</application> לא "
 "מספק כתובת לדיווח תקלות.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "פרטים:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -517,7 +529,7 @@ msgstr ""
 "<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): <numid>%2</"
 "numid> אות (Signal): %3 (%4) מועד: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -525,148 +537,148 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&ניפוי שגיאות"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "מתחיל את התוכנית כדי לנפות את השגיאות ביישום שקרס."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "סגירת החלונית הזאת (פרטי הקריסה יאבדו.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "ניפוי שגיאות ב־%1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "מטפל בקריסות"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "המטפל בקריסות מספק לך משוב משתמש אם תוכנית קרסה."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000‏-2018, יוצרי DrKonqi"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "האנס פטר ביקר"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "דריו אנדרס רודריגז"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "ג׳ורג׳ קיאגיאדקיס"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "א. ל. ספהר"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "האות <מספר> שנתפס"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<שם> התוכנית"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<נתיב> לקובץ ההפעלה"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "ה<גרסה> של התוכנית"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "<כתובת> התקלה לשימוש"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "<שם> מתורגם של התוכנית"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "שם המוצר ב־Bugzilla"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "ה<מזהה> (PID) של היישום"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "<מזהה> (ID) האתחול של התוכנית"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "התוכנית הופעלה על ידי kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "השבתת גישה שרירותית לכונן"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "היישום כבר הופעל מחדש"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "לשמור על היישום פעיל ולייצר את ניתוח המהלכים עם ההפעלה"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<מזהה התהליכון> (thread id) של התהליכון שנכשל"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -677,12 +689,12 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "ניתוח המהלכים (פרטי קריסה אוטומטיים) מתקבל"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "הצגת תוכן ניתוח המהלכים (מתקדם)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "הבא"
@@ -873,76 +885,6 @@ msgstr ""
 "<emphasis strong='true'>צריך קודם להתקין את היישום מנפה השגיאות (%1) ואז "
 "ללחוץ על הכפתור <interface>טעינה מחדש</interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "חיפוש אחר דיווחים כפולים אפשריים"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "מתבצע חיפוש במסד נתוני התקלות אחר כפילויות…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"אפשר לבדוק אם התקלה שלך כבר דווחה. לחיצה כפולה על דוח ברשימה תשווה אותו "
-"לשלך. אפשר להציע שהקריסה שלך היא כפילה של הדוח הזה או לצרף את המידע שלך "
-"ישירות אליה."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "כפול?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr "האם ברור לך לחלוטין שהקריסה שלך היא כפילה של דוח התקלה הזה?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "הקריסה היא כפילות"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "להשתמש בפעולה הזאת אם ברור לך שהקריסה שלך היא כפילה של דוח תקלה זה"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "הקריסה אינה כפילות"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "להציע שהקריסה הזאת קשורה"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"יש להשתמש בכפתור זה כדי להציע\n"
-"                                     שהקריסה שחווית קשורה לדוח\n"
-"                                     תקלה זה"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "הקריסה הזאת לא קשורה"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1045,6 +987,21 @@ msgstr ""
 "ולחזור אליה כדי לוודא שהעדכון חל במלואו ולא יגרום\n"
 "לתופעות לוואי.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "ניסיון חוזר"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1054,67 +1011,6 @@ msgstr "שליחת דוח אוטומטי"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "הצגת פרטים למפתחים"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "הבעיה כבר דווחה"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא כפילה של "
-"<link url=\"%2\">תקלה %2</link> <emphasis strong='true'>שנסגרה</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"הקריסה שלך כבר דווחה בתור <a href=\"%1\">תקלה %1</a> שכבר <emphasis "
-"strong='true'>נסגרה</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא <emphasis "
-"strong='true'>כפילה</emphasis> של <link url=\"%2\">תקלה %2</link>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"הקריסה שלך היא <emphasis strong='true'>כפילה</emphasis> וכבר דווחה דווחה "
-"בתור <link url=\"%1\">תקלה %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"אפשר לבחור להוסיף מידע נוסף אך כדאי לעשות זאת רק עם יש לך מידע חדש או נחוץ."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "סגירה"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "צירוף מידע נוסף"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1145,17 +1041,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "נא למלא את פרטי הקריסה"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "נא לספק את הפרטים הבאים באנגלית."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "כותרת דוח התקלה:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1177,12 +1073,12 @@ msgstr ""
 "item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "פרטים על הקריסה:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1203,34 +1099,34 @@ msgstr ""
 "<item>לציין הגדרות שחורגות מברירת המחדל ביישום</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "הגעת לגודל המזערי"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "נא לספק מידע נוסף"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "שיטת הפצה:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "פלטפורמת ‏KDE הודרה מקוד מקור"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr "<note>הקריסה ופרטי המערכת יתווספו אוטומטית לדיווח התקלה.</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "הצגה מקדימה של דוח"
@@ -1281,17 +1177,25 @@ msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "תודה על שלקחת חלק בעשייה של KDE. עכשיו אפשר לסגור את החלון הזה."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "בהמתנה לנתונים…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "דוח הקריסה נשלח"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "תמיד לדווח על קריסות אוטומטית בעתיד"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1301,6 +1205,19 @@ msgstr ""
 "תמיד להגיש דוחות קריסה למערכת מעקב התקלות של KDE אוטומטית. לא נדרש קלט "
 "ידנית.\n"
 "לא יופיעו עוד בפניך התראות על קריסות."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "פרטים על הקריסה:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1334,7 +1251,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "מקובל עליי שייצרו איתי קשר"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1411,13 +1328,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "הסתרה"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "פרטים"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "דיווח על תקלה"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1464,6 +1389,119 @@ msgstr "שם משתמש ב־bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "סיסמה ב־bugstest.kde.org"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "חיפוש אחר דיווחים כפולים אפשריים"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "מתבצע חיפוש במסד נתוני התקלות אחר כפילויות…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "אפשר לבדוק אם התקלה שלך כבר דווחה. לחיצה כפולה על דוח ברשימה תשווה אותו "
+#~ "לשלך. אפשר להציע שהקריסה שלך היא כפילה של הדוח הזה או לצרף את המידע שלך "
+#~ "ישירות אליה."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "כפול?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr "האם ברור לך לחלוטין שהקריסה שלך היא כפילה של דוח התקלה הזה?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "הקריסה היא כפילות"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "להשתמש בפעולה הזאת אם ברור לך שהקריסה שלך היא כפילה של דוח תקלה זה"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "הקריסה אינה כפילות"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "להציע שהקריסה הזאת קשורה"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "יש להשתמש בכפתור זה כדי להציע\n"
+#~ "                                     שהקריסה שחווית קשורה לדוח\n"
+#~ "                                     תקלה זה"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "הקריסה הזאת לא קשורה"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "הבעיה כבר דווחה"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא כפילה של "
+#~ "<link url=\"%2\">תקלה %2</link> <emphasis strong='true'>שנסגרה</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "הקריסה שלך כבר דווחה בתור <a href=\"%1\">תקלה %1</a> שכבר <emphasis "
+#~ "strong='true'>נסגרה</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא <emphasis "
+#~ "strong='true'>כפילה</emphasis> של <link url=\"%2\">תקלה %2</link>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "הקריסה שלך היא <emphasis strong='true'>כפילה</emphasis> וכבר דווחה דווחה "
+#~ "בתור <link url=\"%1\">תקלה %2</link>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "אפשר לבחור להוסיף מידע נוסף אך כדאי לעשות זאת רק עם יש לך מידע חדש או "
+#~ "נחוץ."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "סגירה"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "צירוף מידע נוסף"
 
 #, fuzzy
 #~ msgctxt "@info/rich"

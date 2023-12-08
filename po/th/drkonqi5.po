@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -276,7 +276,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "ไม่มีแพกเกจข้อมูลรายละเอียดสำหรับการดีบั๊ก"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -314,6 +314,18 @@ msgstr ""
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "สงวนลิขสิทธิ์ (C) 2000-2009, กลุ่มผู้เขียน DrKonqi"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -436,19 +448,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ใช้ปุ่มนี้เพื่อเริ่มการทำงานของโปรแกรมที่ทำงานล้มเหลวใหม่อีกครั้ง"
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&ข้อมูลทั่วไป"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -457,7 +469,7 @@ msgstr ""
 "<para>ต้องขออภัยด้วย เนื่องจากโปรแกรม <application>%1</application> "
 "ปิดตัวเองอย่างไม่คาดคิด</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -479,7 +491,7 @@ msgstr ""
 "><nl /> โปรดทำการรายงานข้อผิดพลาดนี้ว่า \"drkonqi\" ทำงานผิดพลาดด้วยตัวคุณเอง ไปยัง %1 "
 "และอย่างลืมรวบรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -498,7 +510,7 @@ msgstr ""
 ">คุณสามารถรายงานข้อผิดพลาดนี้ด้วยตัวคุณเอง ไปยัง %1 "
 "(โดยรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย)</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -510,7 +522,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -529,7 +541,7 @@ msgstr ""
 "para><para><note>คุณสามารถปิดกล่องแจ้งรายงานนี้ได้อย่างปลอดภัย "
 "หากคุณไม่ต้องการจะแจ้งรายงานข้อผิดพลาดนี้</note></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -543,13 +555,13 @@ msgstr ""
 "<para>คุณไม่สามารถจะรายงานข้อผิดพลาดนี้ได้ เนื่องจากตัวโปรแกรม "
 "ไม่ได้ให้ที่อยู่ในการแจ้งข้อผิดพลาดมาด้วย</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "รายละเอียด:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -563,7 +575,7 @@ msgstr ""
 "<para>แฟ้มประมวลผล: <application>%1</application> <br/>เลขโพรเซส (PID): "
 "<numid>%2</numid> <br/>สัญญาณ: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button this is the debug menu button label which contains the "
@@ -575,68 +587,68 @@ msgctxt ""
 msgid "&Debug"
 msgstr "ดีบั๊ก"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr "เริ่มการทำงานของโปรแกรมดีบั๊ก เพื่อดีบั๊กโปรแกรมที่ทำงานล้มเหลว"
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "ปิดกล่องแจ้งรายงานนี้ (คุณจะสูญเสียข้อมูลรายละเอียดของการทำงานล้มเหลว)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr ""
 
-#: main.cpp:147
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "ตัวดักจับข้อขัดข้องของ KDE"
 
-#: main.cpp:149
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "ตัวดักจับข้อขัดข้องของ KDE เพื่อให้ผู้ใช้ได้แจ้งข้อผิดพลาดกลับ หากโปรแกรมทำงานขัดข้อง"
 
-#: main.cpp:152
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "สงวนลิขสิทธิ์ (C) 2000-2009, กลุ่มผู้เขียน DrKonqi"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -644,7 +656,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "หมายเลขสัญญาณที่ได้รับ"
 
-#: main.cpp:164
+#: main.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -652,7 +664,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "ชื่อของโปรแกรม"
 
-#: main.cpp:165
+#: main.cpp:164
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -660,7 +672,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "พาธของแฟ้มประมวลผล"
 
-#: main.cpp:166
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -668,7 +680,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "รุ่นของโปรแกรม"
 
-#: main.cpp:167
+#: main.cpp:166
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -676,7 +688,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "ที่อยู่ของข้อผิดพลาดที่ใช้"
 
-#: main.cpp:168
+#: main.cpp:167
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -684,13 +696,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "ชื่อของโปรแกรมที่ผ่านการแปลแล้ว"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -698,7 +710,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "เลขโพรเซส (PID) ของโปรแกรม"
 
-#: main.cpp:171
+#: main.cpp:170
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -706,31 +718,31 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "เลขเริ่มทำงานของโปรแกรม"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "โปรแกรมถูกเรียกให้ทำงานโดย kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "ปิดการให้เข้าถึงดิสก์"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "โปรแกรมถูกเริ่มการทำงานใหม่ไปแล้ว"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "ให้โปรแกรมนี้ทำงานต่อไป และสร้างการติดตามย้อนกลับของการเริ่มทำงาน"
 
-#: main.cpp:179
+#: main.cpp:178
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -738,7 +750,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "หมายเลขเธรดของเธรดที่ล้มเหลว"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -749,14 +761,14 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "กำลังดึงข้อมูลติดตามการทำงานย้อนกลับ (ข้อมูลอัตโนมัติของการทำงานขัดข้อง)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 #, fuzzy
 #| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "แสดงเนื้อหาการติดตามการทำงานย้อนกลับ (ขั้นสูง)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -1046,102 +1058,6 @@ msgstr ""
 "คุณจำเป็นต้องทำการติดตั้งแพกเกจเครื่องมือดีบั๊ก (%1) ก่อน แล้วคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "หาดูว่ามีรายงานใด ๆ ที่อาจจะเป็นรายงานที่ซ้ำกัน"
-
-#: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "กำลังค้นหาตัวที่ซ้ำกัน (จาก %1 ถึง %2)..."
-
-#: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"ดูว่าข้อผิดพลาดของคุณมีการแจ้งรายงานแล้วหรือยัง แล้วดับเบิลคลิกที่รายงานในช่องรายการ "
-"แล้วทำการเปรียบเทียบมันกับของคุณเอง คุณสามารถจะจำแนกได้ว่าข้อขัดข้องของคุณนั้น "
-"ซ้ำกับรายงานนั้นหรือไม่ หากใช่ก็สามารถจะทำการแนบข้อมูลของคุณเองไปยังรายงานนั้นได้"
-
-#: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Duplicate report]"
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "[รายงานซ้ำ]"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-
-#: qml/DuplicatesPage.qml:72
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "ไม่มีรายงานที่ซ้ำกันจริง ๆ"
-
-#: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr "ใช้ปุ่มนี้เพื่อแนะนำว่าข้อขัดข้องที่คุณพบนั้น มีส่วนเกี่ยวพันกับรายงานข้อผิดพลาดนี้"
-
-#: qml/DuplicatesPage.qml:85
-#, fuzzy
-#| msgid "There are no real duplicates"
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "ไม่มีรายงานที่ซ้ำกันจริง ๆ"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "แนะนำข้อขัดข้องนี้ว่ามีส่วนเกี่ยวพันกัน"
-
-#: qml/DuplicatesPage.qml:95
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr "ใช้ปุ่มนี้เพื่อแนะนำว่าข้อขัดข้องที่คุณพบนั้น มีส่วนเกี่ยวพันกับรายงานข้อผิดพลาดนี้"
-
-#: qml/DuplicatesPage.qml:108
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "แนะนำข้อขัดข้องนี้ว่ามีส่วนเกี่ยวพันกัน"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1265,6 +1181,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "ลองใหม่..."
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1277,63 +1208,6 @@ msgstr ""
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
-
-#: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgid "You are going to mark your crash as related to bug <numid>%1</numid>"
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "คุณกำลังจะทำการตั้งให้ข้อขัดข้องของคุณมีส่วนเกี่ยวพันกับข้อผิดพลาด <numid>%1</numid>"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-
-#: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
-msgctxt "@action:button"
-msgid "Close"
-msgstr "ถูกปิดแล้ว (%1)"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr ""
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1369,7 +1243,7 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "ป้อนรายละเอียดเกี่ยวกับข้อขัดข้อง"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -1379,7 +1253,7 @@ msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "<strong>โปรดเลือกข้อมูลเพิ่มเติมที่คุณสามารถจะให้มาได้:</strong>"
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Contents of the Report"
@@ -1387,7 +1261,7 @@ msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "เนื้อหาของรายงาน"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 #, fuzzy
 #| msgctxt "@info:tooltip examples of good bug report titles"
 #| msgid ""
@@ -1415,7 +1289,7 @@ msgstr ""
 "computer and talking to a MSN buddy\"<nl />\"Kate closed while editing a log "
 "file and pressing the Delete key a couple of times\""
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1423,7 +1297,7 @@ msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "ข้อมูลเกี่ยวกับการรายงานข้อผิดพลาด"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1437,17 +1311,17 @@ msgid ""
 "</list>"
 msgstr ""
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "พบว่ายาวน้อยกว่าค่าความยาวต่ำสุด"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "แจ้งข้อมูลรายละเอียดที่มากขึ้น"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 #, fuzzy
 #| msgctxt "@title:group"
 #| msgid "Distribution method:"
@@ -1455,7 +1329,7 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "วิธีการแจกจ่าย:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1463,7 +1337,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "แพลทฟอร์ม KDE ถูกคอมไพล์โดยตรงจากรหัสต้นฉบับ"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1477,7 +1351,7 @@ msgstr ""
 "<note>ข้อมูลรายละเอียดของข้อขัดข้องและระบบ จะถูกเพิ่มเข้าไปยังรายงานข้อผิดพลาดโดยอัตโนมัติ</"
 "note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"
@@ -1556,7 +1430,12 @@ msgstr ""
 "ส่งรายงานข้อขัดข้องแล้ว<nl/>ที่อยู่ URL: <link>%1</link><nl/"
 ">ขอขอบคุณที่คุณเข้ามาเป็นส่วนหนึ่งของ KDE ในตอนนี้ คุณสามารถปิดหน้าต่างนี้ได้แล้ว"
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr ""
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1564,17 +1443,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Information about bug reporting"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "ข้อมูลเกี่ยวกับการรายงานข้อผิดพลาด"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1626,7 +1518,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr ""
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1719,7 +1611,15 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr ""
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "รายละเอียด:"
+
+#: statusnotifier.cpp:123
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Report Bug"
@@ -1727,7 +1627,7 @@ msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "รายงานข้อผิดพลาด"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restart Application"
@@ -1777,6 +1677,101 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "หาดูว่ามีรายงานใด ๆ ที่อาจจะเป็นรายงานที่ซ้ำกัน"
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Searching for duplicates (from %1 to %2)..."
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "กำลังค้นหาตัวที่ซ้ำกัน (จาก %1 ถึง %2)..."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "See if your bug has already been reported. Double click a report in the "
+#~| "list and compare it to yours. You can suggest that your crash is a "
+#~| "duplicate of that report or directly attach your information to it."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "ดูว่าข้อผิดพลาดของคุณมีการแจ้งรายงานแล้วหรือยัง แล้วดับเบิลคลิกที่รายงานในช่องรายการ "
+#~ "แล้วทำการเปรียบเทียบมันกับของคุณเอง คุณสามารถจะจำแนกได้ว่าข้อขัดข้องของคุณนั้น "
+#~ "ซ้ำกับรายงานนั้นหรือไม่ หากใช่ก็สามารถจะทำการแนบข้อมูลของคุณเองไปยังรายงานนั้นได้"
+
+#, fuzzy
+#~| msgctxt "@info/plain bug resolution"
+#~| msgid "[Duplicate report]"
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "[รายงานซ้ำ]"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "ไม่มีรายงานที่ซ้ำกันจริง ๆ"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr "ใช้ปุ่มนี้เพื่อแนะนำว่าข้อขัดข้องที่คุณพบนั้น มีส่วนเกี่ยวพันกับรายงานข้อผิดพลาดนี้"
+
+#, fuzzy
+#~| msgid "There are no real duplicates"
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "ไม่มีรายงานที่ซ้ำกันจริง ๆ"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "แนะนำข้อขัดข้องนี้ว่ามีส่วนเกี่ยวพันกัน"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid ""
+#~| "Use this button to suggest that the crash you experienced is related to "
+#~| "this bug report"
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr "ใช้ปุ่มนี้เพื่อแนะนำว่าข้อขัดข้องที่คุณพบนั้น มีส่วนเกี่ยวพันกับรายงานข้อผิดพลาดนี้"
+
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Suggest this crash is related"
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "แนะนำข้อขัดข้องนี้ว่ามีส่วนเกี่ยวพันกัน"
+
+#, fuzzy
+#~| msgid ""
+#~| "You are going to mark your crash as related to bug <numid>%1</numid>"
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "คุณกำลังจะทำการตั้งให้ข้อขัดข้องของคุณมีส่วนเกี่ยวพันกับข้อผิดพลาด <numid>%1</numid>"
+
+#, fuzzy
+#~| msgctxt "@info bug status, %1 is the resolution"
+#~| msgid "Closed (%1)"
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "ถูกปิดแล้ว (%1)"
 
 #, fuzzy
 #~| msgctxt "@info/rich"

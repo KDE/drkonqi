@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-11-03 18:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -289,7 +289,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Не встановлено пакунків з даними для налагоджування"
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -329,6 +329,18 @@ msgstr "Докладні матеріал щодо попередніх авар
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© Розробники DrKonqi, 2020–2022"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -443,19 +455,19 @@ msgstr ""
 "Натисніть цю кнопку, щоб перезапустити програму, що аварійно завершила "
 "роботу."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Загальне"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Від&омості для розробника"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -464,7 +476,7 @@ msgstr ""
 "<para>Вибачте, але програма <application>%1</application> завершила роботу у "
 "аварійному режимі.</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -481,7 +493,7 @@ msgstr ""
 "вадами у KDE. Не забудьте додати до звіту дані зворотного трасування, "
 "наведені на вкладці відомостей для розробників.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -495,7 +507,7 @@ msgstr ""
 "повідомити про цю ваду вручну до %1 (додавши до звіту зворотне трасування з "
 "вкладки «Відомості для розробника»).</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -514,7 +526,7 @@ msgstr ""
 "щоб забезпечити повне застосування оновлення без будь-яких побіжних ефектів."
 "</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -525,7 +537,7 @@ msgstr ""
 "надсиланням звіту щодо цієї помилки.<nl /><link url='%1'>Дізнатися більше "
 "про звітування про вади.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -536,13 +548,13 @@ msgstr ""
 "<application>%1</application> не передбачено адреси для звітування про вади."
 "</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Подробиці:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -552,7 +564,7 @@ msgstr ""
 "<para>Виконуваний файл: <application>%1</application> PID: %2 Сигнал: %3 "
 "(%4) Час: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -560,7 +572,7 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Діагностика"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
@@ -568,144 +580,144 @@ msgstr ""
 "Запустити програму для пошуку джерела вад у програмі, що аварійно завершила "
 "роботу."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Закрити це вікно (ви втратите всі дані щодо аварійного завершення)."
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Діагностика за допомогою %1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Обробник аварій"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Аналізатор аварій надсилає звіт користувача, якщо якась з програм завершила "
 "роботу у аварійному режимі.завершила роботу у аварійному режимі."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© Розробники DrKonqi, 2000–2018"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Номер сигналу, який було визначено"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Назва програми"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Шлях до програми"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Версія програми"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Адреса запису помилки, яким слід скористатися"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Перекладена назва програми"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Назва продукту у Bugzilla"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "PID програми"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Ідентифікатор запуску програми"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Програму було запущено з kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Заборонити довільний доступ до диска"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Програму вже було перезапущено"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Не зупиняти програму і створити зворотне трасування під час запуску"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Ідентифікатор помилкової гілки виконання програми"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -718,14 +730,14 @@ msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Отримання зворотного трасування (дані отримані автоматично)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr ""
 "Показати дані зворотного трасування аварії для порівняння (для досвідчених "
 "користувачів)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Далі"
@@ -924,80 +936,6 @@ msgstr ""
 "<emphasis strong='true'>Вам слід встановити програму для пошуку вад (%1) і "
 "натиснути кнопку <interface>Перезавантажити</interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Пошук можливих дублікатів звіту"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Пошук дублікатів у базі даних вад…"
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Спробуйте знайти вади, подібні до вашої. Ви зможете натиснути пункт вади у "
-"списку для перегляду звіту і порівняння його з вашим. Можливо, знайдена вами "
-"вада є дублікатом вади з якогось звіту і вам достатньо просто долучити до "
-"відповідного повідомлення власні дані."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Повторення?"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-"Ви справді вважаєте, що аварійне завершення роботи є тим самим, що і у цьому "
-"звіті щодо вади?"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Аварія є повторенням"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Скористайтеся цим пунктом, якщо ви справді вважаєте, що аварійне завершення "
-"роботи є тим самим, що і у цьому звіті щодо вади"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Аварія не є повторенням"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Вважати це аварійне завершення пов’язаним"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Натисніть цю кнопку, щоб повідомити, що ваше аварійне завершення пов’язано з "
-"відповідним звітом про ваду"
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Ці аварії не пов'язано між собою"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1106,6 +1044,21 @@ msgstr ""
 "щоб забезпечити повне застосування оновлення без будь-яких побіжних ефектів."
 "</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Повторити"
+
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
@@ -1115,72 +1068,6 @@ msgstr "Надіслати автоматичний звіт"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Переглянути відомості для розробників"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Про ваду вже повідомлено"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Про ваду, з якою ви зустрілися, вже повідомлено у звіті щодо <link url="
-"\"%1\">вади %1</link>, яка є повторенням <emphasis strong='true'>закритої</"
-"emphasis> <link url=\"%2\">вади %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Про ваду, з якою ви зіткнулися, вже повідомлено у звіті щодо <link url="
-"\"%1\">вади %1</link>. Цей звіт було <emphasis strong='true'>закрито</"
-"emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Про ваду, з якою ви зустрілися, вже повідомлено у звіті щодо <link url="
-"\"%1\">вади %1</link>, яка є <emphasis strong='true'>дублікатом</emphasis> "
-"<link url=\"%2\">вади %2</link>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Ваш звіт щодо вади є <emphasis strong='true'>повторенням</emphasis>, про "
-"таке аварійне завершення вже повідомлено у звіті щодо <link url=\"%1\">вади "
-"%2</link>."
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Ви можете вказати додаткові відомості, але це слід робити, лише якщо у вас є "
-"щось нове або потрібне розробникам."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Закрити"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Долучити додаткові відомості"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1212,17 +1099,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Введення даних щодо аварійного завершення"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Будь ласка, надайте вказану нижче інформацію, англійською."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Заголовок звіту про помилку:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1251,12 +1138,12 @@ msgstr ""
 "роботу після декількох натискань клавіші Delete)</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Дані щодо звіту щодо аварійного завершення:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1279,27 +1166,27 @@ msgstr ""
 "<item>вкажіть усі нетипові налаштування у програмі</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Додано мінімальну можливу порцію текстової інформації"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Потрібно більше даних"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Спосіб пакування:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Платформу KDE зібрано з початкового коду"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1308,7 +1195,7 @@ msgstr ""
 "<note>Дані щодо аварії і системи буде автоматично додано до звіту про ваду.</"
 "note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Попередній перегляд звіту"
@@ -1362,17 +1249,25 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
 "Дякуємо вам за ваш внесок у розвиток KDE. Тепер ви можете закрити це вікно."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "Очікуємо на дані…"
+
+#: qml/SentryPage.qml:53
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Звіт щодо аварії надіслано"
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr "Завжди автоматично звітувати про аварії у майбутньому"
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1382,6 +1277,19 @@ msgstr ""
 "Завжди автоматично надсилати звіт щодо аварії до системи стеження за "
 "аваріями KDE. Потреби у втручанні вручну не буде.\n"
 "Ви більше не отримуватимете сповіщень про аварії."
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Information about the crash:"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Дані щодо звіту щодо аварійного завершення:"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
+msgstr ""
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1418,7 +1326,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Погоджуюсь на співпрацю"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1497,13 +1405,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Приховати"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Подробиці"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Надіслати звіт про помилку"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1550,6 +1466,127 @@ msgstr "Ім'я користувача bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Пароль до bugstest.kde.org"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Пошук можливих дублікатів звіту"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Пошук дублікатів у базі даних вад…"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Спробуйте знайти вади, подібні до вашої. Ви зможете натиснути пункт вади "
+#~ "у списку для перегляду звіту і порівняння його з вашим. Можливо, знайдена "
+#~ "вами вада є дублікатом вади з якогось звіту і вам достатньо просто "
+#~ "долучити до відповідного повідомлення власні дані."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Повторення?"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr ""
+#~ "Ви справді вважаєте, що аварійне завершення роботи є тим самим, що і у "
+#~ "цьому звіті щодо вади?"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Аварія є повторенням"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Скористайтеся цим пунктом, якщо ви справді вважаєте, що аварійне "
+#~ "завершення роботи є тим самим, що і у цьому звіті щодо вади"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Аварія не є повторенням"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Вважати це аварійне завершення пов’язаним"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Натисніть цю кнопку, щоб повідомити, що ваше аварійне завершення "
+#~ "пов’язано з відповідним звітом про ваду"
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Ці аварії не пов'язано між собою"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Про ваду вже повідомлено"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Про ваду, з якою ви зустрілися, вже повідомлено у звіті щодо <link url="
+#~ "\"%1\">вади %1</link>, яка є повторенням <emphasis "
+#~ "strong='true'>закритої</emphasis> <link url=\"%2\">вади %2</link>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Про ваду, з якою ви зіткнулися, вже повідомлено у звіті щодо <link url="
+#~ "\"%1\">вади %1</link>. Цей звіт було <emphasis strong='true'>закрито</"
+#~ "emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Про ваду, з якою ви зустрілися, вже повідомлено у звіті щодо <link url="
+#~ "\"%1\">вади %1</link>, яка є <emphasis strong='true'>дублікатом</"
+#~ "emphasis> <link url=\"%2\">вади %2</link>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Ваш звіт щодо вади є <emphasis strong='true'>повторенням</emphasis>, про "
+#~ "таке аварійне завершення вже повідомлено у звіті щодо <link url="
+#~ "\"%1\">вади %2</link>."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Ви можете вказати додаткові відомості, але це слід робити, лише якщо у "
+#~ "вас є щось нове або потрібне розробникам."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Закрити"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Долучити додаткові відомості"
 
 #~ msgctxt "@action"
 #~ msgid "Report on bugs.kde.org"

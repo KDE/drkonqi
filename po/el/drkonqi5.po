@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-02 01:37+0000\n"
+"POT-Creation-Date: 2023-12-08 01:35+0000\n"
 "PO-Revision-Date: 2023-08-15 00:49+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -300,7 +300,7 @@ msgctxt "messagebox title"
 msgid "Missing debug information packages"
 msgstr "Πληροφορίες πακέτων αποσφαλμάτωσης που λείπουν."
 
-#: bugzillaintegration/reportinterface.cpp:192
+#: bugzillaintegration/reportinterface.cpp:176
 #, kde-kuit-format
 msgctxt "@info/plain"
 msgid ""
@@ -338,6 +338,18 @@ msgstr "Προσφέρει, λεπτομερείς προβολή προηγμέ
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
+
+#: coredump/gui/Patient.cpp:57
+#, kde-format
+msgctxt "@title"
+msgid "Failure"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:58
+#, kde-format
+msgctxt "@info"
+msgid "Failed to access crash data for unknown reasons."
+msgstr ""
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -454,19 +466,19 @@ msgstr ""
 "Χρησιμοποιήστε αυτό το κουμπί για να επανεκκινήσετε την εφαρμογή που "
 "κατέρρευσε."
 
-#: drkonqidialog.cpp:122
+#: drkonqidialog.cpp:128
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Γενικά"
 
-#: drkonqidialog.cpp:126
+#: drkonqidialog.cpp:132
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Πληροφορίες προγραμματιστή"
 
-#: drkonqidialog.cpp:161 qml/MainPage.qml:29
+#: drkonqidialog.cpp:167 qml/MainPage.qml:29
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -475,7 +487,7 @@ msgstr ""
 "<para>Λυπούμαστε, η εφαρμογή <application>%1</application> έκλεισε απρόσμενα."
 "</para>"
 
-#: drkonqidialog.cpp:169
+#: drkonqidialog.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -492,7 +504,7 @@ msgstr ""
 "συμπεριλάβετε και τις πληροφορίες κατάρρευσης από την καρτέλα "
 "<interface>Πληροφορίες προγραμματιστή</interface>.</para>"
 
-#: drkonqidialog.cpp:179
+#: drkonqidialog.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +519,7 @@ msgstr ""
 "πληροφορίες κατάρρευσης από την καρτέλα <interface>Πληροφορίες "
 "προγραμματιστή</interface>.)</para>"
 
-#: drkonqidialog.cpp:188
+#: drkonqidialog.cpp:194
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -526,7 +538,7 @@ msgstr ""
 "να βεβαιωθείτε ότι η ενημέρωση έχει εφαρμοστεί πλήρως και δεν θα προκαλέσει "
 "άλλα προβλήματα.</para>"
 
-#: drkonqidialog.cpp:197 qml/main.qml:62
+#: drkonqidialog.cpp:203 qml/main.qml:62
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -537,7 +549,7 @@ msgstr ""
 "αναφέροντας αυτό το σφάλμα.<nl /><link url='%1'>Μάθετε περισσότερα για την "
 "αναφορά σφαλμάτων.</link></para>"
 
-#: drkonqidialog.cpp:204 qml/main.qml:24
+#: drkonqidialog.cpp:210 qml/main.qml:24
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,13 +559,13 @@ msgstr ""
 "<para>Δεν μπορείτε να αναφέρετε αυτό το σφάλμα, γιατί η <application>%1</"
 "application> δεν παρέχει μία διεύθυνση αναφοράς σφάλματος.</para>"
 
-#: drkonqidialog.cpp:212
+#: drkonqidialog.cpp:218
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Λεπτομέρειες:"
 
-#: drkonqidialog.cpp:216
+#: drkonqidialog.cpp:222
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -563,7 +575,7 @@ msgstr ""
 "<para>Εκτελέσιμο: <application>%1</application> PID: %2 Σήμα: %3 (%4) "
 "Χρόνος: %5 %6</para>"
 
-#: drkonqidialog.cpp:246
+#: drkonqidialog.cpp:245
 #, kde-format
 msgctxt ""
 "@action:button this is the debug menu button label which contains the "
@@ -571,139 +583,139 @@ msgctxt ""
 msgid "&Debug"
 msgstr "&Αποσφαλμάτωση"
 
-#: drkonqidialog.cpp:248
+#: drkonqidialog.cpp:247
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
 msgstr ""
 "Ξεκινήστε ένα πρόγραμμα για να αποσφαλματώσετε την εφαρμογή που κατέρρευσε."
 
-#: drkonqidialog.cpp:277
+#: drkonqidialog.cpp:276
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Κλείστε αυτόν τον διάλογο (θα χάσετε τις πληροφορίες κατάρρευσης.)"
 
-#: drkonqidialog.cpp:286
+#: drkonqidialog.cpp:285
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
 msgstr "Αποσφαλμάτωση με το %1"
 
-#: main.cpp:147
+#: main.cpp:146
 #, kde-format
 msgid "Crash Handler"
 msgstr "Ο διαχειριστής καταρρεύσεων"
 
-#: main.cpp:149
+#: main.cpp:148
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Ο διαχειριστής κατάρρευσης δίνει στο χρήστη πληροφορίες αν ένα πρόγραμμα "
 "έχει καταρρεύσει."
 
-#: main.cpp:152
+#: main.cpp:151
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:153
+#: main.cpp:152
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:154
+#: main.cpp:153
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:155
+#: main.cpp:154
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "Γιώργος Καγιαδάκης"
 
-#: main.cpp:156
+#: main.cpp:155
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:163
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Ο <αριθμός> του σήματος που πιάστηκε"
 
-#: main.cpp:164
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Το <όνομα> του προγράμματος"
 
-#: main.cpp:165
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Η <διαδρομή> για το εκτελέσιμο"
 
-#: main.cpp:166
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Η <έκδοση> του προγράμματος"
 
-#: main.cpp:167
+#: main.cpp:166
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Η <διεύθυνση> σφαλμάτων για να χρησιμοποιήσετε"
 
-#: main.cpp:168
+#: main.cpp:167
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Μεταφρασμένο <όνομα> του προγράμματος"
 
-#: main.cpp:169
+#: main.cpp:168
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Όνομα προϊόντος του Bugzilla"
 
-#: main.cpp:170
+#: main.cpp:169
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Το <PID> του προγράμματος"
 
-#: main.cpp:171
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Το <ID> εκκίνησης του προγράμματος"
 
-#: main.cpp:172
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Το πρόγραμμα εκκινήθηκε από το kdeinit"
 
-#: main.cpp:173
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Απενεργοποίησε την αυθαίρετη προσπέλαση του δίσκου"
 
-#: main.cpp:174
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Το πρόγραμμα έχει ήδη επανεκκινηθεί"
 
-#: main.cpp:177
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
@@ -711,13 +723,13 @@ msgstr ""
 "Διατήρηση της εκτέλεσης του προγράμματος και δημιουργία των πληροφοριών "
 "κατάρρευσης κατά την εκκίνηση"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Το <αναγνωριστικό νήματος> που απέτυχε"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -732,12 +744,12 @@ msgstr ""
 "Εξαγωγή των πληροφοριών κατάρρευσης (Αυτοματοποιημένες πληροφορίες "
 "κατάρρευσης)"
 
-#: qml/BacktracePage.qml:25
+#: qml/BacktracePage.qml:24
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Προβολή περιεχομένου backtrace (προχωρημένο)"
 
-#: qml/BacktracePage.qml:46 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:128
+#: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
 msgstr "Επόμενο"
@@ -957,81 +969,6 @@ msgstr ""
 "απασφαλματωτή (%1) και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</"
 "interface>.</emphasis>"
 
-#: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
-msgctxt "@title"
-msgid "Look for Possible Duplicate Reports"
-msgstr "Κοιτάξτε για πιθανές διπλοεγγραφές αναφορών σφαλμάτων"
-
-#: qml/DuplicatesLoadingPage.qml:46
-msgctxt "@info"
-msgid "Searching bug database for duplicates…"
-msgstr "Αναζήτηση στη βάση δεδομένων σφαλμάτων για διπλότυπα..."
-
-#: qml/DuplicatesPage.qml:20
-msgctxt "@info/rich"
-msgid ""
-"See if your bug has already been reported. Double click a report in the list "
-"and compare it to yours. You can suggest that your crash is a duplicate of "
-"that report or directly attach your information to it."
-msgstr ""
-"Δείτε αν το σφάλμα έχει ήδη αναφερθεί. Κάντε διπλό κλικ στην λίστα και "
-"συγκρίνετε με το δικό σας. Μπορείτε να προτείνετε ότι η αναφορά σας είναι "
-"μια διπλότυπη αυτής της αναφοράς ή να επισυνάψετε κατευθείαν τις πληροφορίες "
-"σας σε αυτή."
-
-#: qml/DuplicatesPage.qml:45
-msgctxt "@title"
-msgid "Duplicate?"
-msgstr "Διπλότυπο;"
-
-#: qml/DuplicatesPage.qml:46
-msgctxt "@label"
-msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
-"Είστε βέβαιοι ότι η κατάρρευση είναι διπλότυπη αυτής της αναφοράς σφάλματος;"
-
-#: qml/DuplicatesPage.qml:72
-msgctxt "@action:button"
-msgid "Crash is a duplicate"
-msgstr "Η κατάρρευση είναι διπλότυπη"
-
-#: qml/DuplicatesPage.qml:74
-msgctxt "@info:tooltip"
-msgid ""
-"Use this action when you are certain that your crash is a duplicate of this "
-"bug report"
-msgstr ""
-"Χρησιμοποιήστε αυτή την ενέργεια όταν είστε σίγουροι ότι η κατάρρευση είναι "
-"διπλότυπη αυτής της αναφοράς σφάλματος"
-
-#: qml/DuplicatesPage.qml:85
-msgctxt "@action:button"
-msgid "Crash is not a duplicate"
-msgstr "Η κατάρρευση δεν είναι διπλότυπη"
-
-#: qml/DuplicatesPage.qml:93
-msgctxt "@action:button"
-msgid "Suggest this crash is related"
-msgstr "Προτείνετε ότι αυτή η κατάρρευση σχετίζεται"
-
-#: qml/DuplicatesPage.qml:95
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to suggest that\n"
-"                                     the crash you experienced is related to "
-"this bug\n"
-"                                     report"
-msgstr ""
-"Χρησιμοποιήστε αυτό το κουμπί για να\n"
-"                                      προτείνετε πως η κατάρρευση που "
-"αντιμετωπίσατε σχετίζεται με αυτή την αναφορά "
-"σφάλματος                                      "
-
-#: qml/DuplicatesPage.qml:108
-msgctxt "@action:button"
-msgid "This crash is not related"
-msgstr "Αυτή η κατάρρευση δεν σχετίζεται"
-
 #: qml/LoginPage.qml:14
 msgctxt "@title"
 msgid "Login into the bug tracking system"
@@ -1161,6 +1098,21 @@ msgstr ""
 "προκαλέσει\n"
 "οποιεσδήποτε παρενέργειες.</para>"
 
+#: qml/main.qml:83
+msgctxt "@label"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, or "
+"close the window."
+msgstr ""
+
+#: qml/main.qml:88
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Retry"
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Επανάληψη"
+
 #: qml/MainPage.qml:55
 #, fuzzy
 #| msgctxt "@title"
@@ -1176,70 +1128,6 @@ msgstr "Αποστολή αναφοράς κατάρρευσης"
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "Πληροφορίες Προγραμματιστή"
-
-#: qml/PerfectDuplicatePage.qml:14
-msgctxt "@title"
-msgid "Problem is Already Reported"
-msgstr "Το πρόβλημα έχει ήδη αναφερθεί"
-
-#: qml/PerfectDuplicatePage.qml:29
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
-"url=\"%2\">Bug %2</link>."
-msgstr ""
-"Η συγκεκριμένη κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %1</"
-"link>, η οποία είναι διπλότυπη του <emphasis strong='true'>κλειστού</"
-"emphasis> <link url=\"%2\">Σφάλματος %2</link>."
-
-#: qml/PerfectDuplicatePage.qml:34
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
-"has been <emphasis strong='true'>closed</emphasis>."
-msgstr ""
-"Η κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %1</link>το οποίο "
-"έχει <emphasis strong='true'>κλείσει</emphasis>."
-
-#: qml/PerfectDuplicatePage.qml:39
-msgctxt "@info"
-msgid ""
-"Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-"which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-"\"%2\">Bug %2</link>"
-msgstr ""
-"Η κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %1</link>, το "
-"οποίο είναι <emphasis strong='true'>διπλότυπο</emphasis> του <link url="
-"\"%2\">Σφάλματος %2</link>"
-
-#: qml/PerfectDuplicatePage.qml:43
-msgctxt "@info"
-msgid ""
-"Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
-"been reported as <link url=\"%1\">Bug %2</link>."
-msgstr ""
-"Η κατάρρευση είναι <emphasis strong='true'>διπλότυπη</emphasis> και έχει ήδη "
-"αναφερθεί ως <link url=\"%1\">Σφάλμα %2</link>. "
-
-#: qml/PerfectDuplicatePage.qml:52
-msgctxt "@label"
-msgid ""
-"You may choose to add additional information, but you should only do so if "
-"you have new or requested information."
-msgstr ""
-"Μπορείτε να προσθέσετε περισσότερες πληροφορίες, αλλά θα πρέπει να το κάνετε "
-"μόνο αν έχετε νέες πληροφορίες ή πληροφορίες που σας ζητήθηκαν."
-
-#: qml/PerfectDuplicatePage.qml:60
-msgctxt "@action:button"
-msgid "Close"
-msgstr "Κλείσιμο"
-
-#: qml/PerfectDuplicatePage.qml:65
-msgctxt "@action:button"
-msgid "Attach Additional Information"
-msgstr "Επισύναψη Επιπρόσθετων Πληροφοριών "
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1271,17 +1159,17 @@ msgctxt "@title"
 msgid "Enter the Details about the Crash"
 msgstr "Εισάγετε τις πληροφορίες για την κατάρρευση"
 
-#: qml/ReportPage.qml:26
+#: qml/ReportPage.qml:23
 msgctxt "@info"
 msgid "Please provide the following information in English."
 msgstr "Παρακαλώ να παρέχετε τις παρακάτω πληροφορίες στα Αγγλικά."
 
-#: qml/ReportPage.qml:35 qml/ReportPage.qml:54
+#: qml/ReportPage.qml:30 qml/ReportPage.qml:49
 msgctxt "@info"
 msgid "Title of the bug report:"
 msgstr "Τίτλος της αναφοράς σφάλματος:"
 
-#: qml/ReportPage.qml:40
+#: qml/ReportPage.qml:35
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1304,12 +1192,12 @@ msgstr ""
 "couple of times</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:61 qml/ReportPage.qml:103
+#: qml/ReportPage.qml:56 qml/ReportPage.qml:98
 msgctxt "@info"
 msgid "Information about the crash:"
 msgstr "Πληροφορίες για την κατάρρευση:"
 
-#: qml/ReportPage.qml:66
+#: qml/ReportPage.qml:61
 msgctxt "@info"
 msgid ""
 "<subtitle>Describe in as much detail as possible the crash circumstances:</"
@@ -1332,27 +1220,27 @@ msgstr ""
 "<item>Σημειώστε οποιαδήποτε μη-προεπιλεγμένη ρύθμιση της εφαρμογής</item>\n"
 "</list>"
 
-#: qml/ReportPage.qml:80
+#: qml/ReportPage.qml:75
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
 msgstr "Το ελάχιστο μήκος επετεύχθη"
 
-#: qml/ReportPage.qml:82
+#: qml/ReportPage.qml:77
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
 msgstr "Παρέχετε περισσότερες πληροφορίες"
 
-#: qml/ReportPage.qml:109
+#: qml/ReportPage.qml:104
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Μέθοδος διανομής:"
 
-#: qml/ReportPage.qml:132
+#: qml/ReportPage.qml:127
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Η πλατφόρμα KDE έχει μεταγλωττιστεί από τον πηγαίο κώδικα"
 
-#: qml/ReportPage.qml:140
+#: qml/ReportPage.qml:135
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1361,7 +1249,7 @@ msgstr ""
 "<note>Οι πληροφορίες κατάρρευσης και οι πληροφορίες συστήματος θα προστεθούν "
 "αυτόματα στην αναφορά σφάλματος</note>"
 
-#: qml/ReportPage.qml:149
+#: qml/ReportPage.qml:144
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Προεπισκόπηση της αναφοράς"
@@ -1419,7 +1307,15 @@ msgstr ""
 "Ευχαριστούμε που είστε μέρος του KDE. Μπορείτε τώρα να κλείσετε αυτό το "
 "παράθυρο."
 
-#: qml/SentryPage.qml:47
+#: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Waiting for data…"
+msgctxt "@label"
+msgid "Collecting crash data…"
+msgstr "Αναμονή για δεδομένα..."
+
+#: qml/SentryPage.qml:53
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Crash Report Sent"
@@ -1427,17 +1323,30 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Η αναφορά σφάλματος απεστάλη "
 
-#: qml/SentryPage.qml:54
+#: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
 
-#: qml/SentryPage.qml:63
+#: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
 "No manual input required.\n"
 "You will not receive any more crash notifications."
+msgstr ""
+
+#: qml/SentryPage.qml:80
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "What do you know about the crash?"
+msgctxt "@label placeholder text in TextArea"
+msgid "Tell us more about the crash…"
+msgstr "Τι γνωρίζετε για την κατάρρευση;"
+
+#: qml/SentryPage.qml:90
+msgctxt "@action:button"
+msgid "Send Message"
 msgstr ""
 
 #: qml/WelcomePage.qml:14
@@ -1477,7 +1386,7 @@ msgctxt "@action:button"
 msgid "I Agree to be Contacted"
 msgstr "Συμφωνώ να επικοινωνήσουν μαζί μου"
 
-#: qmlextensions/platformmodel.cpp:36
+#: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
@@ -1558,13 +1467,21 @@ msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
 msgstr "Απόκρυψη"
 
-#: statusnotifier.cpp:119
+#: statusnotifier.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Λεπτομέρειες"
+
+#: statusnotifier.cpp:123
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
 msgstr "Αναφορά σφάλματος"
 
-#: statusnotifier.cpp:125
+#: statusnotifier.cpp:128
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
@@ -1611,6 +1528,127 @@ msgstr "bugstest.kde.org Όνομα χρήστη"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org κωδικός"
+
+#~ msgctxt "@title"
+#~ msgid "Look for Possible Duplicate Reports"
+#~ msgstr "Κοιτάξτε για πιθανές διπλοεγγραφές αναφορών σφαλμάτων"
+
+#~ msgctxt "@info"
+#~ msgid "Searching bug database for duplicates…"
+#~ msgstr "Αναζήτηση στη βάση δεδομένων σφαλμάτων για διπλότυπα..."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "See if your bug has already been reported. Double click a report in the "
+#~ "list and compare it to yours. You can suggest that your crash is a "
+#~ "duplicate of that report or directly attach your information to it."
+#~ msgstr ""
+#~ "Δείτε αν το σφάλμα έχει ήδη αναφερθεί. Κάντε διπλό κλικ στην λίστα και "
+#~ "συγκρίνετε με το δικό σας. Μπορείτε να προτείνετε ότι η αναφορά σας είναι "
+#~ "μια διπλότυπη αυτής της αναφοράς ή να επισυνάψετε κατευθείαν τις "
+#~ "πληροφορίες σας σε αυτή."
+
+#~ msgctxt "@title"
+#~ msgid "Duplicate?"
+#~ msgstr "Διπλότυπο;"
+
+#~ msgctxt "@label"
+#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
+#~ msgstr ""
+#~ "Είστε βέβαιοι ότι η κατάρρευση είναι διπλότυπη αυτής της αναφοράς "
+#~ "σφάλματος;"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is a duplicate"
+#~ msgstr "Η κατάρρευση είναι διπλότυπη"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this action when you are certain that your crash is a duplicate of "
+#~ "this bug report"
+#~ msgstr ""
+#~ "Χρησιμοποιήστε αυτή την ενέργεια όταν είστε σίγουροι ότι η κατάρρευση "
+#~ "είναι διπλότυπη αυτής της αναφοράς σφάλματος"
+
+#~ msgctxt "@action:button"
+#~ msgid "Crash is not a duplicate"
+#~ msgstr "Η κατάρρευση δεν είναι διπλότυπη"
+
+#~ msgctxt "@action:button"
+#~ msgid "Suggest this crash is related"
+#~ msgstr "Προτείνετε ότι αυτή η κατάρρευση σχετίζεται"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to suggest that\n"
+#~ "                                     the crash you experienced is related "
+#~ "to this bug\n"
+#~ "                                     report"
+#~ msgstr ""
+#~ "Χρησιμοποιήστε αυτό το κουμπί για να\n"
+#~ "                                      προτείνετε πως η κατάρρευση που "
+#~ "αντιμετωπίσατε σχετίζεται με αυτή την αναφορά "
+#~ "σφάλματος                                      "
+
+#~ msgctxt "@action:button"
+#~ msgid "This crash is not related"
+#~ msgstr "Αυτή η κατάρρευση δεν σχετίζεται"
+
+#~ msgctxt "@title"
+#~ msgid "Problem is Already Reported"
+#~ msgstr "Το πρόβλημα έχει ήδη αναφερθεί"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
+#~ "<link url=\"%2\">Bug %2</link>."
+#~ msgstr ""
+#~ "Η συγκεκριμένη κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα "
+#~ "%1</link>, η οποία είναι διπλότυπη του <emphasis strong='true'>κλειστού</"
+#~ "emphasis> <link url=\"%2\">Σφάλματος %2</link>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
+#~ "which has been <emphasis strong='true'>closed</emphasis>."
+#~ msgstr ""
+#~ "Η κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %1</link>το "
+#~ "οποίο έχει <emphasis strong='true'>κλείσει</emphasis>."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
+#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
+#~ "\"%2\">Bug %2</link>"
+#~ msgstr ""
+#~ "Η κατάρρευση έχει ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %1</link>, το "
+#~ "οποίο είναι <emphasis strong='true'>διπλότυπο</emphasis> του <link url="
+#~ "\"%2\">Σφάλματος %2</link>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
+#~ "already been reported as <link url=\"%1\">Bug %2</link>."
+#~ msgstr ""
+#~ "Η κατάρρευση είναι <emphasis strong='true'>διπλότυπη</emphasis> και έχει "
+#~ "ήδη αναφερθεί ως <link url=\"%1\">Σφάλμα %2</link>. "
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You may choose to add additional information, but you should only do so "
+#~ "if you have new or requested information."
+#~ msgstr ""
+#~ "Μπορείτε να προσθέσετε περισσότερες πληροφορίες, αλλά θα πρέπει να το "
+#~ "κάνετε μόνο αν έχετε νέες πληροφορίες ή πληροφορίες που σας ζητήθηκαν."
+
+#~ msgctxt "@action:button"
+#~ msgid "Close"
+#~ msgstr "Κλείσιμο"
+
+#~ msgctxt "@action:button"
+#~ msgid "Attach Additional Information"
+#~ msgstr "Επισύναψη Επιπρόσθετων Πληροφοριών "
 
 #, fuzzy
 #~| msgctxt "@info"
@@ -3438,13 +3476,6 @@ msgstr "bugstest.kde.org κωδικός"
 #~ "Δεν είστε σίγουροι τι κάνατε όταν η εφαρμογή κατέρρευσε, και δεν θέλετε "
 #~ "οι προγραμματιστές να επικοινωνήσουν για περισσότερες πληροφορίες μαζί "
 #~ "σας, αν το κρίνουν σκόπιμο."
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "What do you know about the crash?"
-#~ msgctxt "@title"
-#~ msgid "What do you know about the crash ?"
-#~ msgstr "Τι γνωρίζετε για την κατάρρευση;"
 
 #~ msgctxt "@info/rich"
 #~ msgid ""
