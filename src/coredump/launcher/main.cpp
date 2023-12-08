@@ -71,15 +71,6 @@ constexpr auto KCRASH_KEY = "kcrash"_L1;
         contextObject.insert(u"drkonqi"_s, QJsonObject{{u"PickedUp"_s, true}});
     }
 
-    QDir().mkpath(QFileInfo(drkonqiMetadataPath).path());
-
-    QFile file(drkonqiMetadataPath);
-    if (file.open(QFile::WriteOnly | QFile::Truncate)) {
-        file.write(QJsonDocument(contextObject).toJson());
-    } else {
-        qWarning() << "Failed to open for writing:" << drkonqiMetadataPath;
-    }
-
     return contextObject;
 }
 
@@ -149,6 +140,18 @@ constexpr auto KCRASH_KEY = "kcrash"_L1;
     return arguments;
 }
 
+void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadataPath)
+{
+    QDir().mkpath(QFileInfo(drkonqiMetadataPath).path());
+
+    QFile file(drkonqiMetadataPath);
+    if (file.open(QFile::WriteOnly | QFile::Truncate)) {
+        file.write(QJsonDocument(contextObject).toJson());
+    } else {
+        qWarning() << "Failed to open for writing:" << drkonqiMetadataPath;
+    }
+}
+
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
@@ -164,6 +167,7 @@ static bool tryDrkonqi(const Coredump &dump)
     auto metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath, drkonqiMetadataPath);
     metadata = synthesizeKCrashInto(dump, metadata);
     metadata = synthesizeGenericInto(dump, metadata);
+    writeToDisk(metadata, drkonqiMetadataPath);
 
     if (!QFile::exists(dump.filename)) {
         return false; // no trace, nothing to handle
