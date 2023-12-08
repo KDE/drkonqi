@@ -103,6 +103,7 @@ class PreambleTest(Chai):
 
         thread = preamble.SentryThread(thread, is_crashed=False)
         self.assert_equal({'crashed': False,
+                           'current': False,
                            'held_locks': {},
                            'state': None,
                             'id': 456,

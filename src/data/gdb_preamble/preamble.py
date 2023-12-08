@@ -253,6 +253,7 @@ class SentryTrace:
         self.is_crashed = is_crashed
         self.lock_reasons = {}
         self.was_main_thread = False
+        self.crashed = self.is_crashed # different from is_crashed (=input) this indicates if we stumbled over the kcrash handler
 
     def to_dict(self):
         frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(self.frame) ]
@@ -271,6 +272,7 @@ class SentryTrace:
                     self.lock_reasons[address] = r
                 if frame.function().startswith('KCrash::defaultCrashHandler'):
                     kcrash_index = index
+                    self.crashed = True
                 if frame.function().startswith('QCoreApplication::exec'):
                     self.was_main_thread = True
             if frame.type() == gdb.SIGTRAMP_FRAME:
@@ -300,7 +302,8 @@ class SentryThread:
             'stacktrace': trace.to_dict(),
             'id': self.thread.ptid[1],
             'name': self.thread.name,
-            'crashed': self.is_crashed,
+            'current': self.is_crashed,
+            'crashed': trace.crashed, # side effect
             'main': trace.was_main_thread, # side effect
             'held_locks': trace.lock_reasons, # side effect
         }
