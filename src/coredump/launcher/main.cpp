@@ -46,7 +46,7 @@ static QString drkonqiExe()
 
 constexpr auto KCRASH_KEY = "kcrash"_L1;
 
-[[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath, const QString &drkonqiMetadataPath)
+[[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath)
 {
     auto contextObject = QJsonObject{{u"version"_s, 2}};
     {
@@ -164,7 +164,7 @@ static bool tryDrkonqi(const Coredump &dump)
 
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
 
-    auto metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath, drkonqiMetadataPath);
+    auto metadata = kcrashToDrKonqiMetadata(dump, kcrashMetadataPath);
     metadata = synthesizeKCrashInto(dump, metadata);
     metadata = synthesizeGenericInto(dump, metadata);
     writeToDisk(metadata, drkonqiMetadataPath);
