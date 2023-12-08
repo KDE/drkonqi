@@ -11,8 +11,13 @@ DefaultDependencies=no
 ListenSequentialPacket=/run/user/%U/drkonqi-coredump-launcher
 SocketMode=0600
 Accept=yes
+# Disable trigger limit for the benefit of older systemds
+# TODO: remove in favor of PollLimitBurst mechanism once systemd 255 is in ubuntu LTS
+TriggerLimitBurst=0
 # NB: this effectively also limits how many concurrent drkonqis run!
 MaxConnections=16
 
 [Install]
 WantedBy=sockets.target
+# Prevents trigger-limit-hit failure state by restarting the unit (systemd 250[?])
+UpheldBy=sockets.target
