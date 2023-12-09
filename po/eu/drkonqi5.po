@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-03 22:06+0100\n"
+"PO-Revision-Date: 2023-12-08 09:39+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -326,13 +326,13 @@ msgstr "(C) 2020-2022, DrKonqi-ren egileak"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Akatsa"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Kraskadura datuak atzitzea huts egin du arrazoi ezezagunengatik."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1030,11 +1030,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Kraskadurari buruzko datuak biltzea huts egin du arrazoi ezezagunengatik. "
+"Berriz saiatu edo leihoa itxi dezakezu."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Berriz saiatu"
@@ -1225,12 +1224,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Eskerrik asko KDEren zati izateagatik. Orain leiho hau itxi dezakezu."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Datuen zain..."
+msgstr "Kraskaduraren datuak biltzen..."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1254,17 +1250,14 @@ msgstr ""
 "Ez duzu kraskadura jakinarazpen gehiago jasoko."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Kraskadurari buruzko informazioa:"
+msgstr "Ezaguzu kraskadurari buruz gehiago..."
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Bidali mezua"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1381,12 +1374,10 @@ msgid "Hide"
 msgstr "Ezkutatu"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Zehaztasunak"
+msgstr "Gehitu xehetasunak"
 
 #: statusnotifier.cpp:123
 #, kde-format

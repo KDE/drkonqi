@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-12 16:39+0100\n"
+"PO-Revision-Date: 2023-12-08 19:15+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -326,13 +326,13 @@ msgstr "(C) 2020-2022, La DrKonqi Aŭtoroj"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Malsukceso"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Malsukcesis aliri paneodatenojn pro nekonataj kialoj."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1018,11 +1018,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Kolekto de paneinformoj malsukcesis pro nekonataj kialoj. Vi povas reprovi "
+"aŭ fermi la fenestron."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reprovi"
@@ -1211,12 +1210,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dankon pro esti parto de KDE. Vi nun povas fermi ĉi tiun fenestron."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Atendante datumojn…"
+msgstr "Arigante paneodatumojn…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1240,17 +1236,14 @@ msgstr ""
 "Vi ne plu ricevos ajn paneoraportojn."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Informoj pri la paneo:"
+msgstr "Rakontu al ni pli pri la paneo…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Sendi Mesaĝon"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1368,12 +1361,10 @@ msgid "Hide"
 msgstr "Kaŝi"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Detaloj"
+msgstr "Aldoni Detalojn"
 
 #: statusnotifier.cpp:123
 #, kde-format
@@ -1428,122 +1419,3 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "Kontroli por eblaj duoblaj raportoj"
-
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "Serĉante cimdatumbazon por duplikatoj..."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "Vidu ĉu via cimo jam estis raportita. Duoble alklaku raporton en la listo "
-#~ "kaj komparu ĝin kun via. Vi povas sugesti, ke via paneo estas duplikato "
-#~ "de tiu raporto aŭ rekte ligi viajn informojn al ĝi."
-
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "Duobligi?"
-
-#~ msgctxt "@label"
-#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
-#~ msgstr ""
-#~ "Ĉu vi estas tute certa, ke via paneo estas duplikato de ĉi tiu cimraporto?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "Paneo estas duplikato"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this action when you are certain that your crash is a duplicate of "
-#~ "this bug report"
-#~ msgstr ""
-#~ "Uzu ĉi tiun agon kiam vi certas, ke via paneo estas duplikato de ĉi tiu "
-#~ "cimraporto"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "Paneo ne estas duplikato"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "Sugesti, ke ĉi tiu kolapso rilatas"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "Uzu ĉi tiun butonon por sugesti, ke\n"
-#~ "                                     la paneo, kiun vi spertis, rilatas "
-#~ "al ĉi tiu\n"
-#~ "                                     cimraporto"
-
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "Ĉi tiu paneo ne rilatas"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "Problemo Estas Jam Raportita"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
-#~ "estas duplikato de la <emphasis strong='true'>fermita</emphasis> <link "
-#~ "url=\"%2\">Cimo %2</link>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link> kiu "
-#~ "estis <emphasis strong='true'>fermita</emphasis>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "Via paneo jam estis raportita kiel <link url=\"%1\">Cimo %1</link>, kiu "
-#~ "estas <emphasis strong='true'>duplikato</emphasis> de <link url="
-#~ "\"%2\">Cimo %2</link>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "Via paneo estas <emphasis strong='true'>duplikato</emphasis> kaj jam "
-#~ "estis raportita kiel <link url=\"%1\">Cimo %2</link>."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You may choose to add additional information, but you should only do so "
-#~ "if you have new or requested information."
-#~ msgstr ""
-#~ "Vi povas elekti aldoni pliajn informojn, sed vi faru tion nur se vi havas "
-#~ "novajn aŭ petitajn informojn."
-
-#~ msgctxt "@action:button"
-#~ msgid "Close"
-#~ msgstr "Fermi"
-
-#~ msgctxt "@action:button"
-#~ msgid "Attach Additional Information"
-#~ msgstr "Aldoni Pliajn Informojn"

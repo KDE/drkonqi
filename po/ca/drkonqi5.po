@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-03 09:33+0100\n"
+"PO-Revision-Date: 2023-12-08 11:55+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -328,13 +328,14 @@ msgstr "(C) 2020-2022, The DrKonqi Authors"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Fallada"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
+"No s'ha pogut accedir a les dades de la fallada per motius desconeguts."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1039,11 +1040,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Ha fallat la recopilació de la informació de la fallada per motius "
+"desconeguts. Podeu tornar-ho a provar o tancar la finestra."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reintenta"
@@ -1234,12 +1234,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Gràcies per formar part de KDE. Ara podeu tancar aquesta finestra."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "S'estan esperant les dades…"
+msgstr "S'estan recopilant les dades de la fallada…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1263,17 +1260,14 @@ msgstr ""
 "No rebreu més notificacions de fallada."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Informació quant a la fallada:"
+msgstr "Informació addicional quant a la fallada…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Envia el missatge"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1391,12 +1385,10 @@ msgid "Hide"
 msgstr "Oculta"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Detalls"
+msgstr "Afegeix detalls"
 
 #: statusnotifier.cpp:123
 #, kde-format
@@ -1451,127 +1443,3 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "Cerca de possibles informes duplicats"
-
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "S'estan cercant els duplicats a la base de dades d'errors…"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "Vegeu si l'error ja ha estat informat. Feu doble clic en un informe de la "
-#~ "llista i compareu-lo amb el vostre. Podeu suggerir que la vostra fallada "
-#~ "sigui un duplicat d'aquest informe o directament adjuntar-hi la "
-#~ "informació."
-
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "Duplicat?"
-
-#~ msgctxt "@label"
-#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
-#~ msgstr ""
-#~ "Segur que la vostra fallada és un duplicat d'aquest informe d'error?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "La fallada és un duplicat"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this action when you are certain that your crash is a duplicate of "
-#~ "this bug report"
-#~ msgstr ""
-#~ "Utilitzeu aquesta acció quan estigueu segur que la fallada és un duplicat "
-#~ "d'aquest informe d'error"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "La fallada no és cap duplicat"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "Suggereixo que aquesta fallada està relacionada"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "Utilitzeu aquest botó per a suggerir que\n"
-#~ "                                     la fallada que heu experimentat està "
-#~ "relacionada\n"
-#~ "                                     amb aquest informe d'error"
-
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "Aquesta fallada no està relacionada"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "El problema ja s'ha informat"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "Aquesta fallada ja s'ha informat com a <link url=\"%1\">error %1</link>, "
-#~ "el qual és un duplicat de l'<link url=\"%2\">error %2</link> <emphasis "
-#~ "strong='true'>tancat</emphasis>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "Aquesta fallada ja s'ha informat com a <link url=\"%1\">error %1</link>, "
-#~ "el qual s'ha <emphasis strong='true'>tancat</emphasis>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "Aquesta fallada ja s'ha informat com a <link url=\"%1\">error %1</link>, "
-#~ "i és un <emphasis strong='true'>duplicat</emphasis> de l'<link url="
-#~ "\"%2\">error %2</link>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "Aquesta fallada és un <emphasis strong='true'>duplicat</emphasis> i ja "
-#~ "s'ha informat com a <link url=\"%1\">error %2</link>."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You may choose to add additional information, but you should only do so "
-#~ "if you have new or requested information."
-#~ msgstr ""
-#~ "Podeu triar afegir informació addicional, però només ho hauríeu de fer si "
-#~ "teniu informació nova o sol·licitada."
-
-#~ msgctxt "@action:button"
-#~ msgid "Close"
-#~ msgstr "Tanca"
-
-#~ msgctxt "@action:button"
-#~ msgid "Attach Additional Information"
-#~ msgstr "Adjunta informació addicional"
-
-#~ msgctxt "@action"
-#~ msgid "Report on bugs.kde.org"
-#~ msgstr "Informe a bugs.kde.org"

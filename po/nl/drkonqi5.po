@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-03 11:10+0100\n"
+"PO-Revision-Date: 2023-12-08 11:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -317,13 +317,13 @@ msgstr "(C) 2020-2022, De auteurs van DrKonqi"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Mislukt"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Toegang tot gegevens van crash is mislukt om onbekende reden."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1023,11 +1023,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Verzamelen van informatie over de crash is om onbekende reden mislukt. U "
+"kunt het opnieuw proberen of het venster sluiten."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Opnieuw proberen"
@@ -1214,12 +1213,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dank voor het deel uitmaken van KDE. U kunt dit venster nu sluiten."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Wachten op gegevens…"
+msgstr "Gegevens van crash verzamelen…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1243,17 +1239,14 @@ msgstr ""
 "U zult niet langer een melding van crashes ontvangen."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Informatie over de crash:"
+msgstr "Vertel ons meer over de crash…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Bericht verzenden"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1373,12 +1366,10 @@ msgid "Hide"
 msgstr "Verbergen"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Details"
+msgstr "Details toevoegen"
 
 #: statusnotifier.cpp:123
 #, kde-format

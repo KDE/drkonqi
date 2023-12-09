@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-04 06:47+0100\n"
+"PO-Revision-Date: 2023-12-08 06:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -314,13 +314,13 @@ msgstr "(C) 2020-2022, DrKonqi -ის ავტორები"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "წარუმატებელი"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "ავარიის მონაცემებთან წვდომა ჩავარდა უცნობი მიზეზების გამო."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1013,14 +1013,13 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"ავარიის ინფორმაციის მოგროვების მცდელობა ჩავარდა უცნობი მიზეზის გამო. "
+"შეგიძლიათ, თავიდან სცადოთ ან დახუროთ ფანჯარა."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
-msgstr "გამეორება"
+msgstr "თავიდან ცდა"
 
 #: qml/MainPage.qml:55
 msgctxt "@action"
@@ -1208,12 +1207,9 @@ msgstr ""
 "მადლობა, რომ KDE-ის ნაწილი ბრძანდებით. ახლა შეგიძლიათ, დახუროთ ეს ფანჯარა."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "მონაცემების მოლოდინი…"
+msgstr "ავარიის მონაცემების მოგროვება…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1237,17 +1233,14 @@ msgstr ""
 "ხელით ჩარევა არ დაგჭირდებათ. ავარიის შესახებ მეტ შეტყობინებას აღარ მიიღებთ."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "ინფორმაცია ავარიის შესახებ:"
+msgstr "გვითხარით მეტი ავარიის შესახებ…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "შეტყობინების გაგზავნა"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1367,12 +1360,10 @@ msgid "Hide"
 msgstr "დამალვა"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "დეტალები"
+msgstr "დეტალების დამატება"
 
 #: statusnotifier.cpp:123
 #, kde-format

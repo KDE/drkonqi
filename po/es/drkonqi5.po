@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-03 18:12+0100\n"
+"PO-Revision-Date: 2023-12-09 01:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -335,13 +335,15 @@ msgstr "© 2020-2022, los autores de DrKonqi"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Fallo"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
+"No se ha podido acceder a los datos del fallo de la aplicación por motivos "
+"desconocidos."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1039,14 +1041,13 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"La recopilación de información sobre el fallo no se ha podido completar por "
+"motivos desconocidos. Puede volver a intentarlo o cerrar la ventana."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
-msgstr "Volver a intentar"
+msgstr "Volver a intentarlo"
 
 #: qml/MainPage.qml:55
 msgctxt "@action"
@@ -1234,12 +1235,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Gracias por ser parte de KDE. Ya puede cerrar esta ventana."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Esperando datos..."
+msgstr "Recopilando datos del fallo..."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1263,17 +1261,14 @@ msgstr ""
 "No volverá a recibir más notificaciones de fallos."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Información sobre el fallo:"
+msgstr "Díganos más sobre el fallo..."
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Enviar mensaje"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1391,12 +1386,10 @@ msgid "Hide"
 msgstr "Ocultar"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Detalles"
+msgstr "Añadir detalles"
 
 #: statusnotifier.cpp:123
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-03 18:44+0200\n"
+"PO-Revision-Date: 2023-12-08 23:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -334,13 +334,13 @@ msgstr "© Розробники DrKonqi, 2020–2022"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Помилка"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Не вдалося отримати доступ до даних аварії з невідомих причин."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1050,11 +1050,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Не вдалося зібрати дані щодо аварії з невідомих причин. Ви можете повторити "
+"спробу або закрити вікно."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторити"
@@ -1250,12 +1249,9 @@ msgstr ""
 "Дякуємо вам за ваш внесок у розвиток KDE. Тепер ви можете закрити це вікно."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Очікуємо на дані…"
+msgstr "Зібрати дані щодо аварії…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1279,17 +1275,14 @@ msgstr ""
 "Ви більше не отримуватимете сповіщень про аварії."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Дані щодо звіту щодо аварійного завершення:"
+msgstr "Повідомте нам більше про аварію…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Надіслати повідомлення"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1406,12 +1399,10 @@ msgid "Hide"
 msgstr "Приховати"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Подробиці"
+msgstr "Додати подробиці"
 
 #: statusnotifier.cpp:123
 #, kde-format
