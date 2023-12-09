@@ -264,7 +264,7 @@ int main(int argc, char *argv[])
     const bool restarted = parser.isSet(restartedOption);
 
     // Whether the user should be encouraged to file a bug report
-    const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), "General").readEntry("InteractionAllowed", true);
+    const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("General")).readEntry("InteractionAllowed", true);
     const bool shuttingDown = isShuttingDown();
 
     if (forceDialog) {

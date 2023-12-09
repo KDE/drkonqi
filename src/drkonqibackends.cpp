@@ -182,7 +182,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "DrKonqi");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("DrKonqi"));
 #if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED > 1070
     QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("lldb"));
 #elif !defined(Q_OS_WIN)

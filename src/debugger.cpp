@@ -48,24 +48,24 @@ bool Debugger::isInstalled() const
 
 QString Debugger::displayName() const
 {
-    return isValid() ? m_config->group("General").readEntry("Name") : QString();
+    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("Name") : QString();
 }
 
 QString Debugger::codeName() const
 {
     // fall back to the "TryExec" string if "CodeName" is not specified.
     // for most debuggers those strings should be the same
-    return isValid() ? m_config->group("General").readEntry("CodeName", tryExec()) : QString();
+    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("CodeName", tryExec()) : QString();
 }
 
 QString Debugger::tryExec() const
 {
-    return isValid() ? m_config->group("General").readEntry("TryExec") : QString();
+    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("TryExec") : QString();
 }
 
 QStringList Debugger::supportedBackends() const
 {
-    return isValid() ? m_config->group("General").readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
+    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
 }
 
 void Debugger::setUsedBackend(const QString &backendName)

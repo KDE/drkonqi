@@ -85,13 +85,13 @@ SystemInformation::SystemInformation(Config infoConfig, QObject *parent)
     m_operatingSystem = fetchOSDetailInformation();
     tryToSetBugzillaPlatform();
 
-    KConfigGroup config(KSharedConfig::openConfig(), "SystemInformation");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SystemInformation"));
     m_compiledSources = config.readEntry("CompiledSources", false);
 }
 
 SystemInformation::~SystemInformation()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "SystemInformation");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SystemInformation"));
     config.writeEntry("CompiledSources", m_compiledSources);
     config.sync();
 }

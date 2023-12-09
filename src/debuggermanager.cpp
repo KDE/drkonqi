@@ -67,7 +67,7 @@ bool DebuggerManager::debuggerIsRunning() const
 
 bool DebuggerManager::showExternalDebuggers() const
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "DrKonqi");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("DrKonqi"));
     return config.readEntry("ShowDebugButton", false);
 }
 

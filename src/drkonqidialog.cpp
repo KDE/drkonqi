@@ -121,7 +121,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget *parent)
 
     connect(m_tabWidget, &QTabWidget::currentChanged, this, &DrKonqiDialog::tabIndexChanged);
 
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
 
     if (!config.readEntry(QStringLiteral("ShowOnlyBacktrace"), false)) {
         buildIntroWidget();
@@ -145,7 +145,7 @@ DrKonqiDialog::DrKonqiDialog(QWidget *parent)
 
 DrKonqiDialog::~DrKonqiDialog()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
     KWindowConfig::saveWindowSize(windowHandle(), config);
 }
 

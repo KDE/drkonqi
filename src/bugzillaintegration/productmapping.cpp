@@ -61,7 +61,7 @@ void ProductMapping::map(const QString &appName)
 void ProductMapping::mapUsingInternalFile(const QString &appName)
 {
     KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::AppDataLocation);
-    const KConfigGroup mappings = mappingsFile.group("Mappings");
+    const KConfigGroup mappings = mappingsFile.group(QStringLiteral("Mappings"));
     if (mappings.hasKey(appName)) {
         if (m_hasExternallyProvidedProductName) {
             qCWarning(DRKONQI_LOG) << "Mapping found despite product information being provided by the application. Consider removing the mapping entry"
@@ -90,7 +90,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString &bugzilla
     // Groups -> kdepim=kontact|kmail|korganizer|akonadi|pimlibs..etc
 
     KConfig mappingsFile(QString::fromLatin1("mappings"), KConfig::NoGlobals, QStandardPaths::AppDataLocation);
-    const KConfigGroup productGroup = mappingsFile.group("ProductGroup");
+    const KConfigGroup productGroup = mappingsFile.group(QStringLiteral("ProductGroup"));
 
     // Get groups of the application
     QStringList groups;
@@ -112,7 +112,7 @@ void ProductMapping::getRelatedProductsUsingInternalFile(const QString &bugzilla
 
     // Get related products of each related group
     for (const QString &group : std::as_const(groups)) {
-        const KConfigGroup bzGroups = mappingsFile.group("BZGroups");
+        const KConfigGroup bzGroups = mappingsFile.group(QStringLiteral("BZGroups"));
         if (bzGroups.hasKey(group)) {
             QString bzGroup = bzGroups.readEntry(group);
             if (!bzGroup.isEmpty()) {
