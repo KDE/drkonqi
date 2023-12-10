@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-25 02:26\n"
+"PO-Revision-Date: 2023-12-09 09:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -294,13 +294,13 @@ msgstr "(C) 2020-2022, The DrKonqi Authors"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "失败"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "访问崩溃数据失败，原因未知。"
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -764,7 +764,7 @@ msgstr "开发者信息"
 #: qml/DeveloperPage.qml:33
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
-msgstr ""
+msgstr "报告到 %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -964,12 +964,9 @@ msgctxt "@label"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
-msgstr ""
+msgstr "收集崩溃信息失败，原因未知。您可以重试或者关闭此窗口。"
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "重试"
@@ -1151,12 +1148,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "正在等待数据…"
+msgstr "正在收集崩溃数据…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1179,17 +1173,14 @@ msgstr ""
 "于崩溃的通知。"
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "关于崩溃的信息："
+msgstr "填写关于此崩溃的更多信息…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "发送信息"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1301,12 +1292,10 @@ msgid "Hide"
 msgstr "隐藏"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "详细信息"
+msgstr "添加详情"
 
 #: statusnotifier.cpp:123
 #, kde-format
@@ -1361,116 +1350,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "查找可能的重复报告"
-
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "正在搜索程序缺陷数据库中的相似报告…"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "检查您的情况是否已经存在重复报告。双击列表中的报告，与您遇到的情况进行比"
-#~ "较。您可以将本次崩溃标注为与某个报告重复，也可以直接在某个报告后面补充您的"
-#~ "信息。"
-
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "这是重复的报告吗？"
-
-#~ msgctxt "@label"
-#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
-#~ msgstr "您确定您的崩溃与这个程序缺陷报告的重复吗？"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "此崩溃与该报告重复"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this action when you are certain that your crash is a duplicate of "
-#~ "this bug report"
-#~ msgstr "如果您确定您的崩溃与这个程序崩溃报告重复时，请使用此操作。"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "此崩溃与该报告不重复"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "标记崩溃相关性"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "点击此按钮表示\n"
-#~ "                                     您遇到的崩溃\n"
-#~ "                                     与这个程序缺陷报告有关"
-
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "此崩溃与这个报告无关"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "问题已被报告"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，\n"
-#~ "它是<emphasis strong='true'>已关闭</emphasis>的<link url=\"%2\">Bug %2</"
-#~ "link>的重复报告。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它已经被<emphasis "
-#~ "strong='true'>关闭</emphasis>。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "您遇到的崩溃已被报告为 <link url=\"%1\">Bug %1</link>，它是 <link url="
-#~ "\"%2\">Bug %2</link> 的<emphasis strong='true'>重复报告</emphasis>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "您遇到的崩溃存在<emphasis strong='true'>重复报告</emphasis>，它已被报告为 "
-#~ "<link url=\"%1\">Bug %2</link>。"
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You may choose to add additional information, but you should only do so "
-#~ "if you have new or requested information."
-#~ msgstr ""
-#~ "您可以选择添加额外信息，但只在您有新信息或者被请求的信息时才应该这样做。"
-
-#~ msgctxt "@action:button"
-#~ msgid "Close"
-#~ msgstr "关闭"
-
-#~ msgctxt "@action:button"
-#~ msgid "Attach Additional Information"
-#~ msgstr "附加额外信息"

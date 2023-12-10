@@ -17,21 +17,22 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:35+0000\n"
-"PO-Revision-Date: 2023-11-08 01:19+0200\n"
+"PO-Revision-Date: 2023-12-08 17:03+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -315,13 +316,13 @@ msgstr "(C) 2020‏-2022, יוצרי DrKonqi"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "כשל"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "הגישה לנתוני הקריסה נכשלה מסיבות לא ברורות."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -993,11 +994,9 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"איסוף פרטי הקריסה נכשל מסיבות לא ברורות. אפשר לנסות שוב או לסגור את החלון."
 
 #: qml/main.qml:88
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ניסיון חוזר"
@@ -1178,12 +1177,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "תודה על שלקחת חלק בעשייה של KDE. עכשיו אפשר לסגור את החלון הזה."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "בהמתנה לנתונים…"
+msgstr "נתוני הקריסה נאספים…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1207,17 +1203,14 @@ msgstr ""
 "לא יופיעו עוד בפניך התראות על קריסות."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "פרטים על הקריסה:"
+msgstr "נשמח לפירוט נוסף על הקריסה…"
 
 #: qml/SentryPage.qml:90
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "שליחת הודעה"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1329,12 +1322,10 @@ msgid "Hide"
 msgstr "הסתרה"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "פרטים"
+msgstr "הוספת פרטים"
 
 #: statusnotifier.cpp:123
 #, kde-format
