@@ -2,6 +2,8 @@
 
 #include "automaticcoredumpexcavator.h"
 
+#include <fcntl.h>
+
 #include <chrono>
 #include <filesystem>
 
@@ -9,6 +11,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
+#include <QDBusUnixFileDescriptor>
 #include <QDebug>
 
 #include "coredumpexcavator.h"
@@ -50,8 +53,20 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             return;
         }
 
-        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFrom"_L1);
-        msg << coredumpFileInfo.fileName(); // temp dir is constructed and managed by helper, no need to pass our presumed path in
+        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFromToDirFd"_L1);
+
+        int fd = open(qUtf8Printable(m_coreDir->path()), O_RDONLY | O_CLOEXEC | O_DIRECTORY);
+        if (fd < 0) {
+            int err = errno;
+            qWarning() << "Failed to open m_coreDir" << m_coreDir->path() << strerror(err);
+            Q_EMIT failed();
+            return;
+        }
+        auto closeFd = qScopeGuard([fd] {
+            close(fd);
+        });
+
+        msg << coredumpFileInfo.fileName() << QVariant::fromValue(QDBusUnixFileDescriptor(fd));
         static const auto connection = QDBusConnection::connectToBus(QDBusConnection::SystemBus, "drkonqi-polkit-system-connection"_L1);
         connection.interface()->setTimeout(std::chrono::milliseconds(5min).count());
         auto watcher = new QDBusPendingCallWatcher(connection.asyncCall(msg));
@@ -64,17 +79,6 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
                 Q_EMIT failed();
                 return;
             }
-
-            const QFileInfo excavatedCoreInfo(reply.value());
-            if (!QFile::rename(excavatedCoreInfo.filePath(), coreFileTarget)) {
-                qWarning() << "Failed to move excavated core to target location" << excavatedCoreInfo << coreFileTarget;
-                Q_EMIT failed();
-                return;
-            }
-            if (!QDir().remove(excavatedCoreInfo.path())) {
-                qWarning() << "Failed to remove polkit excavation directory";
-            }
-
             Q_EMIT excavated(coreFileTarget);
         });
     }

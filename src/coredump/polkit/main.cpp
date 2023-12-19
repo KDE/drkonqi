@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
+#include <fcntl.h>
+
 #include <filesystem>
 
 #include <QCoreApplication>
@@ -7,6 +9,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusContext>
 #include <QDBusMetaType>
+#include <QDBusUnixFileDescriptor>
 #include <QFileInfo>
 #include <QProcess>
 #include <QTemporaryDir>
@@ -24,21 +27,22 @@ class Helper : public QObject, protected QDBusContext
     Q_CLASSINFO("D-Bus Interface", "org.kde.drkonqi")
 
     static constexpr auto COREDUMP_PATH = "/var/lib/systemd/coredump/"_L1; // The path is hardcoded in systemd's coredump.c
-    static constexpr auto ACTION_NAME = "org.kde.drkonqi.excavateFrom"_L1;
+    static constexpr auto ACTION_NAME = "org.kde.drkonqi.excavateFromToDirFd"_L1;
+    static constexpr auto CORE_NAME = "core"_L1;
 
 public Q_SLOTS:
-    QString excavateFrom(const QString &coreName)
+    QString excavateFromToDirFd(const QString &coreName, const QDBusUnixFileDescriptor &targetDirFd)
     {
         auto loopLock = std::make_shared<QEventLoopLocker>();
-        QTemporaryDir tmpDir(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
-        if (!tmpDir.isValid()) {
+        auto tmpDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
+        if (!tmpDir->isValid()) {
             qWarning() << "tmpdir not valid";
             sendErrorReply(QDBusError::InternalError, "Failed to create temporary directory"_L1);
             return {};
         }
 
-        const QString coreFileDir = tmpDir.path();
-        const QString coreFileTarget = tmpDir.filePath("core"_L1);
+        const QString coreFileDir = tmpDir->path();
+        const QString coreFileTarget = tmpDir->filePath(CORE_NAME);
         const QString coreFile = COREDUMP_PATH + coreName;
 
         if (!isAuthorized(coreFile, coreFileTarget)) {
@@ -46,16 +50,13 @@ public Q_SLOTS:
             sendErrorReply(QDBusError::AccessDenied);
             return {};
         }
-        tmpDir.setAutoRemove(false);
 
         setDelayedReply(true);
 
         auto connection = this->connection();
-        auto reply = message().createReply();
-        const uint uid = connection.interface()->serviceUid(message().service());
+        auto msg = message();
 
-        // Keep the core secure by making it only accessible to owner. This is initially root
-        // and will be transferred to the UID of the caller upon excavation.
+        // Keep the core secure by making it only accessible to owner.
         const auto targetDir = QFileInfo(coreFileTarget).path();
         std::filesystem::permissions(targetDir.toStdString(), std::filesystem::perms::owner_all, std::filesystem::perm_options::replace);
 
@@ -63,20 +64,28 @@ public Q_SLOTS:
         connect(excavator,
                 &CoredumpExcavator::excavated,
                 this,
-                [loopLock, connection, reply, excavator, coreFileDir, coreFileTarget, uid](int exitCode) mutable {
+                [msg, tmpDir = std::move(tmpDir), loopLock, connection, excavator, coreFileDir, coreFileTarget, targetDirFd](int exitCode) mutable {
                     excavator->deleteLater();
 
-                    // Transfer ownership to caller.
-                    if (chown(qUtf8Printable(coreFileDir), uid, -1) != 0) {
-                        auto err = errno;
-                        qWarning() << "Failed to chown" << coreFileDir << strerror(err);
+                    int sourceDirFd = open(qUtf8Printable(coreFileDir), O_RDONLY | O_CLOEXEC | O_DIRECTORY);
+                    if (sourceDirFd < 0) {
+                        int err = errno;
+                        QString errString = u"Failed to open coreFileDir(%1): %2"_s.arg(coreFileDir, QString::fromUtf8(strerror(err)));
+                        connection.send(msg.createErrorReply(QDBusError::InternalError, errString));
+                        return;
                     }
-                    if (chown(qUtf8Printable(coreFileTarget), uid, -1) != 0) {
-                        auto err = errno;
-                        qWarning() << "Failed to chown" << coreFileTarget << strerror(err);
+                    auto closeFd = qScopeGuard([sourceDirFd] {
+                        close(sourceDirFd);
+                    });
+
+                    if (renameat(sourceDirFd, qUtf8Printable(CORE_NAME), targetDirFd.fileDescriptor(), qUtf8Printable(CORE_NAME)) != 0) {
+                        int err = errno;
+                        QString errString = u"Failed to rename between directory fds: %1"_s.arg(QString::fromUtf8(strerror(err)));
+                        connection.send(msg.createErrorReply(QDBusError::InternalError, errString));
+                        return;
                     }
 
-                    reply << (exitCode == 0 ? coreFileTarget : QString());
+                    auto reply = msg.createReply() << (exitCode == 0 ? CORE_NAME : QString());
                     connection.send(reply);
                 });
 
