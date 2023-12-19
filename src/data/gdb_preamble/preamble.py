@@ -11,7 +11,7 @@ sys.path.append(f'{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}/
 try:
     import sentry_sdk
     sentry_sdk.init(
-        dsn="https://d6d53bb0121041dd97f59e29051a1781@errors-eval.kde.org/13",
+        dsn="https://d6d53bb0121041dd97f59e29051a1781@crash-reports.kde.org/13",
         traces_sample_rate=1.0,
         release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
         ignore_errors=[KeyboardInterrupt],

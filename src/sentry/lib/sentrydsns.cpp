@@ -30,7 +30,7 @@ void SentryDSNs::load()
         return;
     }
 
-    QNetworkRequest request(QUrl("https://errors-eval.kde.org/_drkonqi_static/0/dsns.json"_L1));
+    QNetworkRequest request(QUrl("https://autoconfig.kde.org/drkonqi/sentry/0/dsns.json"_L1));
     auto reply = m_connection->get(request);
     connect(reply, &SentryReply::finished, this, [this, reply] {
         reply->deleteLater();
@@ -73,12 +73,12 @@ SentryDSNContext SentryDSNs::context(const QString &applicationName)
 
 QUrl SentryDSNContext::dsnUrl() const
 {
-    return QUrl("https://%1@errors-eval.kde.org/api/%2"_L1.arg(key, index));
+    return QUrl("https://%1@crash-reports.kde.org/api/%2"_L1.arg(key, index));
 }
 
 QUrl SentryDSNContext::envelopeUrl() const
 {
-    return QUrl("https://%1@errors-eval.kde.org/api/%2/envelope/"_L1.arg(key, index));
+    return QUrl("https://%1@crash-reports.kde.org/api/%2/envelope/"_L1.arg(key, index));
 }
 
 void SentryDSNs::loadData(const QByteArray &data)

@@ -18,7 +18,7 @@ public:
 
     SentryReply *get(const QNetworkRequest &request) override
     {
-        if (request.url() == QUrl("https://errors-eval.kde.org/_drkonqi_static/0/dsns.json"_L1)) {
+        if (request.url() == QUrl("https://autoconfig.kde.org/drkonqi/sentry/0/dsns.json"_L1)) {
             return new FileReply(QFINDTESTDATA("data/dsns.json"));
         }
 
@@ -68,8 +68,8 @@ private Q_SLOTS:
         QCOMPARE(context.index, "3"_L1);
         QCOMPARE(context.key, "ba18a003921d4ac281851019f69050b4"_L1);
         QCOMPARE(context.project, "kwrite"_L1);
-        QCOMPARE(context.dsnUrl(), QUrl("https://ba18a003921d4ac281851019f69050b4@errors-eval.kde.org/api/3"_L1));
-        QCOMPARE(context.envelopeUrl(), QUrl("https://ba18a003921d4ac281851019f69050b4@errors-eval.kde.org/api/3/envelope/"_L1));
+        QCOMPARE(context.dsnUrl(), QUrl("https://ba18a003921d4ac281851019f69050b4@crash-reports.kde.org/api/3"_L1));
+        QCOMPARE(context.envelopeUrl(), QUrl("https://ba18a003921d4ac281851019f69050b4@crash-reports.kde.org/api/3/envelope/"_L1));
     }
 
     void testFallthrough()

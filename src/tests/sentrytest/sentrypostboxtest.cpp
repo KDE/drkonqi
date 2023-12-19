@@ -19,7 +19,7 @@ public:
 
     SentryReply *get(const QNetworkRequest &request) override
     {
-        if (request.url() == QUrl("https://errors-eval.kde.org/_drkonqi_static/0/dsns.json"_L1)) {
+        if (request.url() == QUrl("https://autoconfig.kde.org/drkonqi/sentry/0/dsns.json"_L1)) {
             return new FileReply(QFINDTESTDATA("data/dsns.json"));
         }
 
@@ -30,7 +30,7 @@ public:
 
     SentryReply *post(const QNetworkRequest &request, const QByteArray &) override
     {
-        if (request.url() == QUrl("https://456f53a71a074438bbb786d6add63241@errors-eval.kde.org/api/11/envelope/"_L1)) {
+        if (request.url() == QUrl("https://456f53a71a074438bbb786d6add63241@crash-reports.kde.org/api/11/envelope/"_L1)) {
             return new FileReply("/dev/null"_L1);
         }
 
