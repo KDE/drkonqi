@@ -388,15 +388,12 @@ void ReportInterface::prepareEventPayload()
 void ReportInterface::prepareCrashEvent()
 {
     switch (DrKonqi::debuggerManager()->backtraceGenerator()->state()) {
-    case BacktraceGenerator::Failed:
-    case BacktraceGenerator::FailedToStart:
-        m_skipSentry = true;
-        Q_EMIT crashEventSent();
-        return;
     case BacktraceGenerator::Loaded:
         return prepareEventPayload();
     case BacktraceGenerator::Loading:
     case BacktraceGenerator::NotLoaded:
+    case BacktraceGenerator::Failed:
+    case BacktraceGenerator::FailedToStart:
         break;
     }
     static bool connected = false;
