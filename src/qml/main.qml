@@ -14,6 +14,7 @@ Kirigami.ApplicationWindow {
     property var bugzilla: reportInterface.bugzilla
     property bool canReport: false // can file a bug report
     property bool canAutoReport: false // can file a sentry report
+    readonly property bool generatorFailure: BacktraceGenerator.hasAnyFailure
 
     property string canReportText: {
         canReport = false
@@ -71,7 +72,7 @@ any side effects.</para>`);
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     height: minimumHeight
 
-    header: BacktraceGenerator.state === BacktraceGenerator.FailedToStart ? warningComponent.createObject(appWindow) : null
+    header: generatorFailure ? warningComponent.createObject(appWindow) : null
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
