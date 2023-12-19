@@ -44,6 +44,12 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
         });
         excavator->excavateFromTo(coredumpFilename, coreFileTarget);
     } else {
+        if (QFile::exists(coreFileTarget)) {
+            qDebug() << "Core already exists, returning early";
+            Q_EMIT excavated(coreFileTarget);
+            return;
+        }
+
         auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFrom"_L1);
         msg << coredumpFileInfo.fileName(); // temp dir is constructed and managed by helper, no need to pass our presumed path in
         static const auto connection = QDBusConnection::connectToBus(QDBusConnection::SystemBus, "drkonqi-polkit-system-connection"_L1);
