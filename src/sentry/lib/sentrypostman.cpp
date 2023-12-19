@@ -84,6 +84,7 @@ void SentryPostman::post(const QString &path, const QString &filename, const QDa
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-sentry-envelope"_L1);
     request.setHeader(QNetworkRequest::UserAgentHeader, "DrKonqi"_L1);
     // Auth is handled through the payload itself, it should carry a DSN.
+    qCDebug(SENTRY_DEBUG) << "requesting" << request.url();
 
     auto reply = m_connection.post(request, file.readAll());
     Transfer transfer{.path = path, .sentPath = SentryPaths::sentPayloadPath(filename), .reply = reply};
