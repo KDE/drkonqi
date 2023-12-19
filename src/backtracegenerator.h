@@ -26,6 +26,7 @@ class BacktraceGenerator : public QObject
     Q_OBJECT
 
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
+    Q_PROPERTY(bool hasAnyFailure READ hasAnyFailure NOTIFY stateChanged) // derives from state
     Q_PROPERTY(bool supportsSymbolResolution MEMBER m_supportsSymbolResolution CONSTANT)
     Q_PROPERTY(bool symbolResolution MEMBER m_symbolResolution NOTIFY symbolResolutionChanged)
 public:
@@ -67,6 +68,7 @@ public:
 
 public Q_SLOTS:
     void start();
+    bool hasAnyFailure();
 
 Q_SIGNALS:
     void starting();

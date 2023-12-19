@@ -50,7 +50,7 @@ namespace
 
 void aboutToQuit()
 {
-    if (ReportInterface::self()->hasCrashEventSent()) {
+    if (ReportInterface::self()->hasCrashEventSent() || DrKonqi::debuggerManager()->backtraceGenerator()->hasAnyFailure()) {
         qApp->quit();
     } else {
         // Add a fallback timer. This timer makes sure that drkonqi will definitely quit, even if it should
@@ -59,6 +59,11 @@ void aboutToQuit()
         timer.setInterval(5min); // arbitrary time limit for trace+submission
         QObject::connect(&timer, &QTimer::timeout, qApp, &QCoreApplication::quit);
         QObject::connect(ReportInterface::self(), &ReportInterface::crashEventSent, qApp, &QCoreApplication::quit);
+        QObject::connect(DrKonqi::debuggerManager()->backtraceGenerator(), &BacktraceGenerator::stateChanged, qApp, [] {
+            if (DrKonqi::debuggerManager()->backtraceGenerator()->hasAnyFailure()) {
+                qApp->quit();
+            }
+        });
         ReportInterface::self()->setSendWhenReady(true);
         timer.start();
     }

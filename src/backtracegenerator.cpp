@@ -267,4 +267,9 @@ void BacktraceGenerator::setBackendFailed()
     Q_EMIT failedToStart();
 }
 
+bool BacktraceGenerator::hasAnyFailure()
+{
+    return m_state == State::Failed || m_state == State::FailedToStart;
+}
+
 #include "moc_backtracegenerator.cpp"
