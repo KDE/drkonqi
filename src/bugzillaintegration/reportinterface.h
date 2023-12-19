@@ -44,7 +44,7 @@ class ReportInterface : public QObject
     Q_PROPERTY(uint attachToBugNumber READ attachToBugNumber WRITE setAttachToBugNumber NOTIFY attachToBugNumberChanged)
 
     Q_PROPERTY(uint sentReport MEMBER m_sentReport NOTIFY done)
-    Q_PROPERTY(uint crashEventSent READ hasCrashEventSent NOTIFY crashEventSent)
+    Q_PROPERTY(bool crashEventSent READ hasCrashEventSent NOTIFY crashEventSent)
 public:
     enum Reproducible {
         ReproducibleUnsure,
