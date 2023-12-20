@@ -78,6 +78,7 @@ You will not receive any more crash notifications.`)
             QQC2.TextArea {
                 id: detailArea
                 placeholderText: i18nc("@label placeholder text in TextArea", "Tell us more about the crash…")
+                wrapMode: Text.Wrap
             }
         }
 
