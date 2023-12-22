@@ -3,7 +3,7 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2007, 2008, 2009.
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2012, 2016, 2018, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2011, 2012, 2013, 2014, 2015, 2017, 2019, 2020, 2021.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2010.
+# SPDX-FileCopyrightText: 2009, 2010, 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010, 2011.
 # Hendrik Knackstedt <kn.hendrik@gmail.com>, 2011.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -330,13 +330,14 @@ msgstr "Copyright © 2020–2022, die DrKonqi-Autoren"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Fehler"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
+"Auf die Absturzdaten kann wegen unbekannter Gründe nicht zugegriffen werden."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -426,12 +427,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Die Datei zum Speichern des Fehlerberichts lässt sich nicht erstellen."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Bericht in Datei speichern"
+msgstr "Bericht speichern"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -823,9 +822,6 @@ msgid "Developer Information"
 msgstr "Entwickler-Informationen"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "An %1 berichten"
@@ -890,16 +886,6 @@ msgstr ""
 "analysierenden Fehlersuche verwendet.</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -919,13 +905,6 @@ msgstr ""
 "haben, klicken Sie bitte auf <interface>Neu laden</interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -935,8 +914,8 @@ msgid ""
 msgstr ""
 "Bitte lesen Sie <link url='%1'>wie man nützliche Fehlerberichte erstellt</"
 "link>, um zu erfahren, wie man eine nützliche Rückverfolgung eines Absturzes "
-"erzeugen kann. Nachdem Sie die nötigen Softwarepakete (<link "
-"url='%2'>Dateiliste</link>) installiert haben, klicken Sie auf bitte auf "
+"erzeugen kann. Nachdem Sie die nötigen Softwarepakete\n"
+"(<link url='%2'>Dateiliste</link>) installiert haben, klicken Sie bitte auf "
 "<interface>Neu laden</interface>."
 
 #: qml/DeveloperPage.qml:207
@@ -1088,20 +1067,14 @@ msgid "Retry"
 msgstr "Erneut versuchen"
 
 #: qml/MainPage.qml:55
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Send Crash Report"
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr "Fehlerbericht senden"
+msgstr "Automatischen Fehlerbericht senden"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Entwickler-Informationen"
+msgstr "Siehe Entwickler-Informationen"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1264,12 +1237,9 @@ msgid "Crash Report Sent"
 msgstr "Der Fehlerbericht wurde gesendet"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Anwendung neu starten"
+msgstr "%1 neu starten"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1284,17 +1254,11 @@ msgstr ""
 "schließen."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Warten auf Daten ..."
+msgstr "Zusammenstellen der Absturzdaten …"
 
 #: qml/SentryPage.qml:53
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Der Fehlerbericht wurde gesendet"
@@ -1302,7 +1266,7 @@ msgstr "Der Fehlerbericht wurde gesendet"
 #: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "Absturzberichte künftig immer automatisch berichten"
 
 #: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
@@ -1311,19 +1275,19 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Die Absturzberichte werden automatisch zum Fehlerberichtssystem von KDE "
+"übermittelt. Hierzu sind keine manuellen Eingaben mehr notwendig.\n"
+"Sie erhalten keine weiteren Benachrichtigungen zu den Abstürzen."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Was wissen Sie über den Absturz?"
+msgstr "Bitte schreiben Sie mehr über den Absturz …"
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Nachricht senden"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1407,14 +1371,14 @@ msgstr ""
 "verbessern."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Die Anwendung wurde unerwartet beendet"
+msgstr ""
+"Die Anwendung wurde unerwartet beendet. Ein Fehlerbericht wird automatisch "
+"gesendet."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1446,12 +1410,10 @@ msgid "Hide"
 msgstr "Ausblenden"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Details"
+msgstr "Details hinzufügen"
 
 #: statusnotifier.cpp:123
 #, kde-format
