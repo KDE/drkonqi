@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Grzesiek11 <grzesiek.jedenastka@outlook.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2023-11-04 12:26+0100\n"
-"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"PO-Revision-Date: 2023-12-23 13:53+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,9 +43,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"Użyj tego przycisku, aby ponownie wczytać dane o usterce (ślad wykonywania). "
-"Jest to przydatne, gdy nie masz wgranych odpowiednich pakietów do "
-"diagnostyki i chcesz uzyskać lepszy ślad."
+"Użyj tego przycisku, aby ponownie wczytać ślad wykonywania wysypanego "
+"programu. Użyj tego po dograniu nowych pakietów symboli diagnostycznych tak, "
+"aby uzyskać lepszy ślad wykonywania."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -76,7 +76,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
-"Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
+"Użyj tego przycisku, aby skopiować ślad wykonywania wysypanego programu do "
 "schowka."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
@@ -99,7 +99,7 @@ msgid ""
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
 "<h2>Czym jest \"ślad wykonywania\" ?</h2><p>Ślad wykonywania dokładnie "
-"opisuje co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
+"opisuje, co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
 "programistom do ustalania miejsca występowania błędu. Dane te mogą wydać ci "
 "się bez znaczenia, ale zawierają wiele użytecznych szczegółów.<br />Ślady "
 "wykonywania są często używane podczas diagnostyki interaktywnej lub po "
@@ -141,10 +141,10 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
-"Z programem, w którym wystąpiła usterka, powiązany jest inny proces "
-"diagnostyczny. Dlatego też program diagnostyczny DrKonqi nie może pobrać "
-"szczegółów o usterce. Proszę zamknąć inne wystąpienie programu "
-"diagnostycznego i nacisnąć na <interface>Wczytaj ponownie</interface>."
+"Z programem, który się wysypał, powiązany jest inny proces diagnostyczny. "
+"Dlatego też program diagnostyczny DrKonqi nie może pobrać szczegółów o "
+"usterce. Proszę zamknąć inne wystąpienie programu diagnostycznego i nacisnąć "
+"na <interface>Wczytaj ponownie</interface>."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -319,13 +319,15 @@ msgstr "(C) 2020-2022, Autorzy DrKonqi"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Porażka"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
+"Nie udało się uzyskać dostępu do danych, dotyczących wysypanego programu z "
+"nieznany powodów."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -1022,14 +1024,13 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Nie udało się zgromadzenie danych z wysypanego programu z nieznanych "
+"powodów. Możesz spróbować ponownie lub zamknąć to okno."
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
-msgstr "Ponów"
+msgstr "Spróbuj ponownie"
 
 #: qml/MainPage.qml:55
 msgctxt "@action"
@@ -1216,12 +1217,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Dziękujemy za bycie częścią KDE. Możesz teraz zamknąć to okno."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Oczekiwanie na dane..."
+msgstr "Zbieranie danych z wysypanego programu…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1245,17 +1243,14 @@ msgstr ""
 "Nie będziesz też więcej otrzymywać powiadomień o usterkach."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Szczegóły o usterce:"
+msgstr "Powiedz nam więcej o tym jak się wysypało…"
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Wyślij wiadomość"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1369,12 +1364,10 @@ msgid "Hide"
 msgstr "Ukryj"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Szczegóły"
+msgstr "Dodaj szczegóły"
 
 #: statusnotifier.cpp:123
 #, kde-format
