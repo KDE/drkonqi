@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"drkonqi5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"drkonqi\")
 
 include(CheckFunctionExists)
 

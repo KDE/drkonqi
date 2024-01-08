@@ -131,7 +131,7 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication app(argc, argv);
-    KLocalizedString::setApplicationDomain(QByteArrayLiteral("drkonqi5"));
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("drkonqi"));
 
     // We have somewhat special close behavior because of the internal debugger instance as well as auto-submission.
     // Make sure to honor SIGINT in a timely manner.
