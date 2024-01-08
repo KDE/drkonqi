@@ -1,7 +1,7 @@
 # Traducerea drkonqi.po în Română
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2002,2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2020, 2022, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011, 2013.
 # Cristian Buzduga <cristianbzdg@gmail.com>, 2011.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2022-12-28 20:54+0000\n"
+"PO-Revision-Date: 2024-01-07 16:54+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -294,19 +294,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Subprocesul s-a terminat cu eroare: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Subprocesul s-a prăbușit. Verificați-vă instalarea."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "Terapie intensivă DrKonqi"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -825,14 +825,6 @@ msgid "Save"
 msgstr "Salvează"
 
 #: qml/DeveloperPage.qml:109
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -845,12 +837,13 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
-"<h2>Ce este un „backtrace” ?</h2><p>Un backtrace în principiu descrie ce se "
-"întâmplă în interiorul aplicației când aceasta s-a prăbușit, astfel ca "
-"dezvoltatorii să poată depista de unde a început dezastrul. Acesta poate să "
-"vă pară fără niciun sens, dar poate să conțină o cantitate mare de "
-"informații utile.<br />Backtrace-urile sunt folosite de obicei în timpul "
-"depanării interactive și post-mortem.</p>"
+"<subtitle>Ce este un „backtrace” ?</subtitle><para>Un backtrace în principiu "
+"descrie ce se întâmplă în interiorul aplicației când\n"
+"aceasta s-a prăbușit, astfel ca dezvoltatorii să poată depista de unde a "
+"început dezastrul.\n"
+"Acesta poate să vă pară fără niciun sens, dar poate să conțină o cantitate "
+"mare de informații utile.<nl />Backtrace-urile sunt folosite de obicei în "
+"timpul depanării interactive și post-mortem.</para>"
 
 #: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
@@ -897,12 +890,12 @@ msgstr ""
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
 msgid "Look for Possible Duplicate Reports"
-msgstr "Caut posibile rapoarte duplicate"
+msgstr "Caută posibile rapoarte duplicate"
 
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "Se caută duplicate în baza de date cu defecte..."
+msgstr "Se caută duplicate în baza de date cu defecte…"
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -1159,22 +1152,18 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"Puteți alege să adăugați informații suplimentare, dar faceți aceasta numai "
+"dacă aveți informații noi sau cerute anterior."
 
 #: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Închis (%1)"
+msgstr "Închide"
 
 #: qml/PerfectDuplicatePage.qml:65
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Information"
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr "Informații despre prăbușire"
+msgstr "Atașează informații suplimentare"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1182,25 +1171,16 @@ msgid "Preview the Report"
 msgstr "Previzualizează raportul de prăbușire"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "This is a preview of the report's contents which will be sent. \n"
-#| "\n"
-#| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
-"Aceasta este o previzualizare a conținutului raportului care va fi trimis. \n"
-"\n"
-"Dacă doriți să-l modificați, mergeți la paginile precedente."
+"<para>Aceasta este o previzualizare a conținutului raportului care va fi "
+"trimis.</para><para>Dacă doriți să-l modificați, mergeți la paginile "
+"precedente.</para>"
 
 #: qml/PreviewPage.qml:38
-#, fuzzy
-#| msgctxt "@action button to submit report"
-#| msgid "Submit"
 msgctxt "@action:button"
 msgid "Submit"
 msgstr "Trimite"
@@ -1208,7 +1188,7 @@ msgstr "Trimite"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Se așteaptă date…"
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1216,32 +1196,16 @@ msgid "Enter the Details about the Crash"
 msgstr "Introduceți detaliile despre prăbușire"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "<strong>Furnizați următoarele informații în engleză.</strong>"
+msgstr "Vă rugăm să furnizați următoarele informații în engleză."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Title of the bug report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Titlul raportului de eroare"
+msgstr "Titlul raportului de defect:"
 
 #: qml/ReportPage.qml:40
-#, fuzzy
-#| msgctxt "@info:tooltip examples of good bug report titles"
-#| msgid ""
-#| "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after "
-#| "adding the Notes widget and writing on it\"<nl />\"Konqueror crashed when "
-#| "accessing the Facebook application 'X'\"<nl />\"Kopete suddenly closed "
-#| "after resuming the computer and talking to a MSN buddy\"<nl />\"Kate "
-#| "closed while editing a log file and pressing the Delete key a couple of "
-#| "times\""
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1254,19 +1218,21 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
-"<strong>Exemple de titluri bune:</strong><nl />„Plasma s-a prăbușit după "
-"adăugarea controlului Notițe și scrierea în el”<nl />„Konqueror s-a prăbușit "
-"când s-a accesat aplicația Facebook 'X'”<nl />„Kopete s-a închis brusc după "
-"reactivarea calculatorului și conversația cu un amic MSN”<nl />„Kate s-a "
-"închis în timpul editării unui fișier jurnal și apăsarea tastei Delete de "
-"câteva ori”"
+"<subtitle>Exemple de titluri bune:</subtitle>\n"
+"<list>\n"
+"<item>Plasma s-a prăbușit după adăugarea controlului Notițe și scrierea în "
+"el</item>\n"
+"<item>Konqueror s-a prăbușit când am accesat aplicația Facebook „X”</item>\n"
+"<item>Kopete s-a închis brusc după trezirea calculatorului și conversația cu "
+"un amic MSN</item>\n"
+"<item>Kate s-a închis în timpul redactării unui fișier cu jurnal și apăsarea "
+"tastei Delete de câteva ori</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Informații despre textul prăbușirii"
+msgstr "Informații despre prăbușire:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1281,6 +1247,15 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Descrieți, în cât mai multe detalii, circumstanțele prăbușirii:</"
+"subtitle>\n"
+"<list>\n"
+"<item>Enumerați ce acțiuni ați efectuat înăuntrul și în afara aplicației în "
+"momentul premergător prăbușirii.</item>\n"
+"<item>Menționați dacă ați observat vreun comportament neobișnuit în "
+"aplicație sau în întregul mediu.</item>\n"
+"<item>Menționați configurările aplicației ce au fost modificate.</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1293,121 +1268,78 @@ msgid "Provide more information"
 msgstr "Avem nevoie de mai multe informații"
 
 #: qml/ReportPage.qml:108
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metoda de distribuție:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr "Platforma KDE este compilată din surse"
+msgstr "Platforma KDE este compilată din sursă"
 
 #: qml/ReportPage.qml:139
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<i>Note:</i> The crash and system information will be automatically added "
-#| "to the bug report."
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<i>Notă:</i> Informațiile despre prăbușire și sistem vor fi adăugate automat "
-"la raportul de defect."
+"<note> Informațiile despre prăbușire și sistem vor fi adăugate automat la "
+"raportul de defect.</note>"
 
 #: qml/ReportPage.qml:148
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr "Previzualizează raportul de prăbușire"
+msgstr "Previzualizează raportul"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "&Salvare în fișier..."
+msgstr "Salvează raportul în fișier"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"Folosiți acest buton pentru a vedea informația raportului de defect ales."
+"Folosiți acest buton pentru a salva informațiile despre prăbușire în vederea "
+"raportării manuale."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "bugs.kde.org nu a putut fi contactat: <message>%1</message>"
+msgstr "Raportul de defect nu a putut fi trimis: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Reîncearcă expedierea"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Se expediază raportul de defect…"
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Asistent de raportare a prăbușirilor"
+msgstr "Raportul de prăbușire a fost trimis"
 
 #: qml/SentPage.qml:18
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "<link url='%1'>Report's webpage</link>"
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr "<link url='%1'>Pagina raportului</link>"
+msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
-"Raport de prăbușire expediat.<nl/>URL: <link>%1</link><nl/>Vă mulțumim că "
-"faceți parte din KDE. Puteți închide această fereastră."
+msgstr "Vă mulțumim că faceți parte din KDE. Puteți închide această fereastră."
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
 msgstr "Bine ați venit în asistentul de raportare"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
@@ -1417,14 +1349,6 @@ msgstr ""
 "procesul de raportare a defectului."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info note before starting the bug reporting process"
-#| msgid ""
-#| "<p><i>Note:</i> Since communication between you and the developers is "
-#| "required for effective debugging, to continue reporting this bug "
-#| "<strong>it is required for you to agree that developers may contact you.</"
-#| "strong></p><p>Feel free to close this dialog if you do not accept this.</"
-#| "p>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1434,16 +1358,17 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
-"<p><i>Notă:</i> Întrucât comunicarea dintre dumneavoastră și dezvoltatori "
-"este necesară pentru o depanare eficientă, pentru a continua raportarea "
-"acestui defect <strong>este necesar să acceptați că dezvoltatorii vă pot "
-"contacta.</strong></p><p>Puteți închide acest dialog dacă nu acceptați acest "
-"lucru.</p>"
+"<para><note>Întrucât comunicarea dintre dumneavoastră și dezvoltatori este "
+"necesară pentru o depanare eficientă,\n"
+"pentru a continua raportarea acestui defect <emphasis strong='true'>este "
+"necesar să acceptați că dezvoltatorii vă pot contacta</emphasis>.\n"
+"</note></para><para>Puteți închide acest dialog dacă nu acceptați acest "
+"lucru.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Sunt de acord să fiu contactat"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1518,7 +1443,7 @@ msgstr "Aplicația s-a închis pe neașteptate."
 #, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
-msgstr "Raportează defect"
+msgstr "Raportează defectul"
 
 #: statusnotifier.cpp:113
 #, kde-format
@@ -1529,45 +1454,44 @@ msgstr "Repornește aplicația"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Denumirea depanatorului transmisă fabricii de parcurgere"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Un fișier ce conține backtrace-ul."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib Test (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Aplicație de test pentru biblioteca „bugtracker manager”"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "(C) 2000-2009, Autorii DrKonqi"
+msgstr "(c) 2009, Dezvoltatorii DrKonqi2"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "utilizator bugstest.kde.org"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "parolă bugstest.kde.org"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
