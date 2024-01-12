@@ -3,6 +3,7 @@
 #include "automaticcoredumpexcavator.h"
 
 #include <fcntl.h>
+#include <unistd.h>
 
 #include <chrono>
 #include <filesystem>
