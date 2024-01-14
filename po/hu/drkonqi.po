@@ -4,13 +4,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2021-11-24 13:29+0100\n"
+"PO-Revision-Date: 2024-01-13 14:06+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Kiszel Kristóf,Szántó Tamás"
+msgstr "Kiszel Kristóf"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ulysses@fsf.hu,tszanto@interware.hu"
+msgstr "ulysses@fsf.hu"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -290,89 +290,82 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Az alfolyamat hibával lépett ki: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Az alfolyamat összeomlott. Ellenőrizze a telepítését."
 
 #: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Összeomlott folyamatok megjelenítője"
 
 #: coredump/gui/main.cpp:32
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Részletes áttekintést nyújt a korábbi összeomlásokról"
 
 #: coredump/gui/main.cpp:34
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "© A DrKonqi szerzői, 2000-2018."
+msgstr "© A DrKonqi szerzői, 2020-2022."
 
 #: coredump/gui/Patient.cpp:57
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Hiba"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Ismeretlen okokból nem sikerült elérni az összeomlási adatokat."
 
 #: coredump/gui/qml/DetailsPage.qml:19
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Részletek:"
+msgstr "Részletek"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Másolás a vágólapra"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Interaktív hibakereső futtatása"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Összeomlások"
 
 #: coredump/gui/qml/ListPage.qml:57
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "A hibajelentés elküldése"
+msgstr "Összeomlás-jelentések betöltése"
 
 #: coredump/gui/qml/ListPage.qml:65
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Még egyetlen folyamat sem omlott össze"
 
 #: coredump/gui/qml/ListPage.qml:73
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Nincsenek a keresésnek megfelelő összeomlások"
 
 #: coredump/gui/qml/main.qml:12
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Áttekintés"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -418,12 +411,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Nem sikerült létrehozni fájlt a bejelentési adatok elmentéséhez."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Menté&s fájlba…"
+msgstr "Jelentés mentése"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -575,19 +566,15 @@ msgid "Debug in %1"
 msgstr "Hibakeresés ezzel: %1"
 
 #: main.cpp:151
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "KDE programhiba-kezelő"
+msgstr "Programhiba-kezelő"
 
 #: main.cpp:153
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"A KDE program hibakezelője értesíti a felhasználót, ha egy program "
-"összeomlott."
+"A Programhiba-kezelő értesíti a felhasználót, ha egy program összeomlott."
 
 #: main.cpp:156
 #, kde-format
@@ -715,8 +702,6 @@ msgstr ""
 "Visszakövetési információk lekérése (Automatikus összeomlási információk)"
 
 #: qml/BacktracePage.qml:24
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Visszakövetés tartalmának megjelenítése (haladó)"
@@ -724,116 +709,68 @@ msgstr "Visszakövetés tartalmának megjelenítése (haladó)"
 #: qml/BacktracePage.qml:45 qml/ContextPage.qml:88
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Következő"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgstr "Nem sikerült kapcsolódni a bugs.kde.org-hoz: <message>%1.</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgid "Retry"
 msgctxt "@action"
 msgid "Retry"
 msgstr "Újra"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
 msgstr "Kapcsolódás ehhez: bugs.kde.org…"
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
 msgstr "Mit tud a hiba körülményeiről?"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr "<strong>Emlészik rá, hogy mit csinált az összeomlás előtt?</strong>"
+msgstr "Emlészik rá, hogy mit csinált az összeomlás előtt?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Igen"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Nem"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>Összeomlott újra az alkalmazás ugyanebben a szituációban?</strong>"
+msgstr "Összeomlott újra az alkalmazás ugyanebben a szituációban?"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Please select which additional information you can provide:</"
-#| "strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr ""
-"<strong>Válassza ki milyen további információkat tud megadni: </strong>"
+msgstr "Válassza ki milyen további információkat tud megadni:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Amit csináltam a(z) \"%1\" alkalmazás összeomlásakor"
+msgstr ""
+"Amit csináltam a(z) <application>%1</application> alkalmazás összeomlásakor"
 
 #: qml/ContextPage.qml:65
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Unusual desktop behavior I noticed"
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Szokatlan asztali viselkedést vettem észre"
 
 #: qml/ContextPage.qml:70
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Custom settings of the application that may be related"
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Az alkalmazás egyéni beállításai, amelyek kapcsolódhatnak"
@@ -841,35 +778,25 @@ msgstr "Az alkalmazás egyéni beállításai, amelyek kapcsolódhatnak"
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Nem kellőképpen hasznos"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
-"A szolgáltatott információkat nem lehet elég hasznosnak tekinteni ebben az "
-"esetben."
+"<para>A szolgáltatott információkat nem lehet elég hasznosnak tekinteni "
+"ebben az esetben. Ha nem jut eszébe több információ, bezárhatja a "
+"hibabejelentő ablakot.</para>"
 
 #: qml/DeveloperPage.qml:25
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "&Fejlesztői információk"
+msgstr "Fejlesztői információk"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Jelentés ide: %1"
@@ -880,28 +807,16 @@ msgid "Starts the bug report assistant."
 msgstr "Elindítja a hibabejelentő segédet."
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
 #: qml/DeveloperPage.qml:62
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "Új&ratöltés"
+msgstr "Újratöltés"
 
 #: qml/DeveloperPage.qml:64
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to reload the crash information (backtrace). This is "
-#| "useful when you have installed the proper debug symbol packages and you "
-#| "want to obtain a better backtrace."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -910,21 +825,19 @@ msgid ""
 "backtrace."
 msgstr ""
 "Ezzel a gombbal lehet újratölteni a visszakövetési adatokat. Akkor lehet rá "
-"szükség, ha telepítette a szükséges nyomkövetési csomagokat és részletesebb "
-"visszakövetési adatokat szeretne kapni."
+"szükség, ha telepítette\n"
+"a szükséges nyomkövetési csomagokat és részletesebb visszakövetési adatokat "
+"szeretne kapni."
 
 #: qml/DeveloperPage.qml:74
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Copy"
 msgctxt "@action:button"
 msgid "Copy"
-msgstr "Más&olás"
+msgstr "Másolás"
 
 #: qml/DeveloperPage.qml:81
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: qml/DeveloperPage.qml:120
 #, fuzzy
@@ -1157,8 +1070,6 @@ msgid ""
 msgstr ""
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Újra"
@@ -1198,9 +1109,6 @@ msgstr ""
 "Ha módosítani szeretné, menjen vissza az előző oldalra."
 
 #: qml/PreviewPage.qml:39
-#, fuzzy
-#| msgctxt "@action button to submit report"
-#| msgid "Submit"
 msgctxt "@action:button"
 msgid "Submit"
 msgstr "Elküldés"
@@ -1323,9 +1231,6 @@ msgstr ""
 "bekerülnek a hibabejelentésbe."
 
 #: qml/ReportPage.qml:144
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "A jelentés előnézete"
