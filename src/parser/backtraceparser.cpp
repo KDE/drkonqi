@@ -10,8 +10,6 @@
 #include "backtraceparsernull.h"
 #include "drkonqi_parser_debug.h"
 
-#include <ranges>
-
 #include <QMetaEnum>
 #include <QRegularExpression>
 
@@ -289,11 +287,7 @@ void BacktraceParser::calculateRatingData()
         qCDebug(DRKONQI_PARSER_LOG) << line.rating() << line.toString();
     }
 
-    { // unique libraries only
-        std::ranges::sort(d->m_librariesWithMissingDebugSymbols);
-        const auto [first, last] = std::ranges::unique(d->m_librariesWithMissingDebugSymbols);
-        d->m_librariesWithMissingDebugSymbols.erase(first, last);
-    }
+    d->m_librariesWithMissingDebugSymbols.removeDuplicates();
 
     // Generate a simplified backtrace
     //- Starts from the first useful function
