@@ -15,13 +15,13 @@
 # Abderrahim Kitouni <a.kitouni@gmail.com>, 2012.
 # Hajur Alasefer <frostbutterfly@gmail.com>, 2012.
 # Safa Alfulaij <safaalfulaij@hotmail.com>, 2013, 2016.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2023-04-06 12:37+0400\n"
+"PO-Revision-Date: 2024-01-20 18:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -318,13 +318,13 @@ msgstr "(C) 2020-2022 ، مؤلفو DrKonqi "
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "فشل"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "فشل في الوصول إلى بيانات الانهيار لأسباب مجهولة."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -410,12 +410,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "لا يمكن إنشاء ملف لحفظ التقرير فيه."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "احفظ التقرير إلى ملف"
+msgstr "احفظ التّقرير"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -789,9 +787,6 @@ msgid "Developer Information"
 msgstr "معلومات المطور"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "بلغّ إلى %1"
@@ -852,16 +847,6 @@ msgstr ""
 "تستعمل عادة أثناء التنقيح التفاعلي والتنقيح بعد الانهيار.</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -880,13 +865,6 @@ msgstr ""
 "الزر <interface> إعادة تحميل </interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -895,9 +873,9 @@ msgid ""
 "interface> button."
 msgstr ""
 "يرجى قراءة <link url='%1'> كيفية إنشاء تقارير أعطال مفيدة </link> لمعرفة "
-"كيفية الحصول على تتبع خلفي مفيد ؛ قم بتثبيت الحزم المطلوبة (<link "
-"url='%2'>قائمة الملفات </link>) وانقر فوق الزر <interface> إعادة تحميل </"
-"interface>."
+"كيفية الحصول على تتبع خلفي مفيد؛ قم بتثبيت الحزم المطلوبة \n"
+"(<link url='%2'>قائمة الملفات </link>) وانقر فوق الزر <interface> إعادة "
+"تحميل </interface>."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
@@ -963,16 +941,6 @@ msgstr ""
 "كلمة السر المعطاة."
 
 #: qml/main.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -988,18 +956,10 @@ msgstr ""
 "مخاطر الانهيار مرة أخرى.<nl /><nl />\n"
 "من فضلك أبلغ عن هذا الخطأ يدويا\n"
 " <link url='%1'>يدويا</link>. لا تنسَ إدراج \n"
-"بيانات التقفي من لسان <interface>معلومات \n"
+"بيانات التقفي من صفحة <interface>معلومات \n"
 "المطور</interface>.</para>"
 
 #: qml/main.qml:44
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1009,7 +969,7 @@ msgid ""
 msgstr ""
 "<para>مساعد الإبلاغ معطل لأن حوار معالج الانهيار شُغل في الوضع الآمن.<nl />\n"
 "يمكنك التبليغ عن الخطأ يدويا إلى <link>%1</link> (مع تضمين بيانات تتبع "
-"الانهيار من لسان <interface>معلومات المطور</interface>)</para>"
+"الانهيار من صفحة <interface>معلومات المطور</interface>)</para>"
 
 #: qml/main.qml:51
 msgctxt "@info"
@@ -1036,30 +996,23 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"فشل جمع معلومات الانهيار لأسباب مجهولة. يمكنك إعادة المحاولة، أو إغلاق "
+"النافذة."
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "أعِد المحاولة"
 
 #: qml/MainPage.qml:55
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Send Crash Report"
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr "أرسل تقرير الانهيار"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "معلومات المطور"
+msgstr "اطلع على معلومات المطور"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1215,12 +1168,9 @@ msgid "Crash Report Sent"
 msgstr "أرسل تقرير العلة"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "أعد تشغيل التطبيق"
+msgstr "أعد تشغيل %1"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1233,17 +1183,11 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "شكر لك لكونك جزء من كِيدِي. يمكنك الآن إغلاق هذه النافذة."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "ينتظر البيانات..."
+msgstr "يجمع  بيانات الانهيار..."
 
 #: qml/SentryPage.qml:53
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "أرسل تقرير العلة"
@@ -1251,7 +1195,7 @@ msgstr "أرسل تقرير العلة"
 #: qml/SentryPage.qml:60
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
-msgstr ""
+msgstr "بلغ عن الانهيارات آليا في المرات القادمة"
 
 #: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
@@ -1260,19 +1204,19 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"قم دائمًا بإرسال تقرير الانهيار تلقائيًا إلى نظام تتبع الأعطال الخاص بـكيدي.لا "
+"يلزم إدخال يدوي.\n"
+"لن تتلقى المزيد من إخطارات الانهيار."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "معلومات حول الانهيار"
+msgstr "أخبرنا المزيد عن معلومات حول الانهيار"
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "أرسل رسالة"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1349,14 +1293,12 @@ msgid "Please report this error to help improve this software."
 msgstr "‏الرجاء الإبلاغ عن هذا الخطأ لتحسين التطبيق."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "توقف التطبيق  بشكل غير متوقع."
+msgstr "توقف التطبيق بشكل غير متوقع. يبلغ الآن عن هذا آليا."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1386,12 +1328,10 @@ msgid "Hide"
 msgstr "أخفِ"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "التفاصيل"
+msgstr "أضف التفاصيل"
 
 #: statusnotifier.cpp:123
 #, kde-format
