@@ -7,7 +7,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2022.
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2023-09-29 09:46+0300\n"
+"PO-Revision-Date: 2024-01-18 17:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -333,13 +333,13 @@ msgstr "© 2020–2022 DrKonqin tekijät"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Virhe"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Kaatumistiedon saanti epäonnistui tuntemattomasta syystä."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -805,9 +805,6 @@ msgid "Developer Information"
 msgstr "Kehittäjätiedot"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Ilmoita osoitteeseen %1"
@@ -1025,11 +1022,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Kaatumistiedon kokoaminen epäonnistui tuntemattomasta syystä. Voit yrittää "
+"uudelleen tai sulkea ikkunan."
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yritä uudelleen"
@@ -1217,12 +1213,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Kiitos, että olet osa KDE:tä. Tämän ikkunan voi nyt sulkea."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Odotetaan tietoja…"
+msgstr "Kootaan kaatumistietoa…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1246,17 +1239,14 @@ msgstr ""
 "Et saa enää ilmoituksia kaatumisista."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Tietoa kaatumisesta:"
+msgstr "Anna lisätietoa kaatumisesta…"
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Lähetä viesti"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1372,12 +1362,10 @@ msgid "Hide"
 msgstr "Piilota"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Tiedot"
+msgstr "Anna lisätietoa"
 
 #: statusnotifier.cpp:123
 #, kde-format
