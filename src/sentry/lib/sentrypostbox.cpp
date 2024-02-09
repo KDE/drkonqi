@@ -43,7 +43,7 @@ void SentryPostbox::addUserFeedback(const QString &feedbackString)
 {
     const QJsonObject feedbackObject = {
         {u"event_id"_s, m_envelope.eventId()},
-        {QStringLiteral("name"), QStringLiteral("Anonymous")},
+        {QStringLiteral("name"), QStringLiteral("DrKonqi")},
         {QStringLiteral("email"), QStringLiteral("anonymous@kde.org")},
         {QStringLiteral("comments"), feedbackString},
     };
