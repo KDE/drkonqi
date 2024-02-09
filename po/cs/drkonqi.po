@@ -1008,12 +1008,9 @@ msgid ""
 msgstr ""
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
-msgstr "Zkusit znovu"
+msgstr ""
 
 #: qml/MainPage.qml:55
 msgctxt "@action"
@@ -1189,12 +1186,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Děkujeme za to, že jste součástí KDE. Nyní můžete toto okno zavřít."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Čeká se na data…"
+msgstr ""
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1215,12 +1209,9 @@ msgid ""
 msgstr ""
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Informace o pádu:"
+msgstr ""
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
@@ -1341,12 +1332,10 @@ msgid "Hide"
 msgstr "Skrýt"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Podrobnosti"
+msgstr ""
 
 #: statusnotifier.cpp:123
 #, kde-format
@@ -1401,107 +1390,3 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "Vyhledat možná duplicitní chybová hlášení"
-
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "Prohledávám databázi chyb na výskyt duplicit..."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "Zkontrolujte, zda již toto chybové hlášení nebylo podáno. Dvakrát "
-#~ "klikněte na hlášení v seznamu a porovnejte je se svým. Můžete navrhnout "
-#~ "své hlášení jako duplicitní k tomuto a přímo tak k němu přidat své "
-#~ "informace."
-
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "Duplikovat?"
-
-#~ msgctxt "@label"
-#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
-#~ msgstr ""
-#~ "Jste si jisti, že je tento pád duplicitní k tomuto chybovému hlášení?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "Pád je duplicitní"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "Pád není duplicitní"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "Navrhněte tento pád jako související"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "Použijte toto tlačítko pro navržení, že\n"
-#~ "                                     pád, ke kterému došlo, souvisí s "
-#~ "tímto chybovým\n"
-#~ "                                     hlášením"
-
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "Tento pád nijak nesouvisí"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "Problém byl již nahlášen"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "Váš pád byl již nahlášen jako<link url=\"%1\">chyba %1</link>, což je "
-#~ "duplikát <emphasis strong='true'>uzavřené</emphasis> <link url="
-#~ "\"%2\">chyby %2</link>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "Váš pád byl již nahlášen jako<link url=\"%1\">chyba %1</link> a tato "
-#~ "chyba již byla <emphasis strong='true'>uzavřena</emphasis>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "Váš pád byl již nahlášen jako<link url=\"%1\">chyba %1</link>, což je  "
-#~ "<emphasis strong='true'>duplikát </emphasis> <link url=\"%2\">chyby %2</"
-#~ "link>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "Váš pád je <emphasis strong='true'>duplikát</emphasis> a byl již nahlášen "
-#~ "jako <link url=\"%1\">chyba %2</link>."
-
-#~ msgctxt "@action:button"
-#~ msgid "Close"
-#~ msgstr "Zavřít"
-
-#~ msgctxt "@action:button"
-#~ msgid "Attach Additional Information"
-#~ msgstr "Přiložte další informace"
