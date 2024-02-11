@@ -14,21 +14,21 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2011.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2021.
+# SPDX-FileCopyrightText: 2019, 2021, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-21 02:00+0000\n"
-"PO-Revision-Date: 2022-09-05 11:07+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2024-02-10 13:22+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.01.95\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -320,7 +320,7 @@ msgstr "Сбой подпроцесса. Проверьте, правильно 
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Средство просмотра процессов со сбоями"
 
 #: coredump/gui/main.cpp:32
 #, kde-format
@@ -337,13 +337,13 @@ msgstr "© Разработчики DrKonqi, 2020-2022"
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Ошибка"
 
 #: coredump/gui/Patient.cpp:58
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Не удалось получить данные о произошедшем сбое по неизвестной причине."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -381,11 +381,9 @@ msgid "No crashes matching the search"
 msgstr "Нет сбоев, соответствующих критериям поиска"
 
 #: coredump/gui/qml/main.qml:12
-#, fuzzy
-#| msgid "&Overwrite"
 msgctxt "@title:window"
 msgid "Overview"
-msgstr "&Заменить"
+msgstr "Обзор"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -431,12 +429,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Не удалось создать файл для сохранения сообщения."
 
 #: drkonqi.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Save Report to File"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "Сохранить отчёт в файл"
+msgstr "Сохранить отчёт"
 
 #: drkonqi.cpp:185
 #, kde-kuit-format
@@ -592,19 +588,16 @@ msgid "Debug in %1"
 msgstr "Отладка в %1"
 
 #: main.cpp:151
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "Обработчик ошибок KDE"
+msgstr "Обработчик ошибок"
 
 #: main.cpp:153
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
-"Обработчик ошибок KDE даёт пользователю возможность узнать причины сбоев в "
-"работе программ."
+"Обработчик ошибок предоставляет пользователю возможность узнать причины "
+"сбоев в работе программ."
 
 #: main.cpp:156
 #, kde-format
@@ -827,12 +820,9 @@ msgid "Developer Information"
 msgstr "Информация для разработчиков"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
-msgstr "Отправить на %1"
+msgstr "Отправить в %1"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -896,16 +886,6 @@ msgstr ""
 "для интерактивной отладки и отладки после сбоя.</para>"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'> list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -925,13 +905,6 @@ msgstr ""
 "нажмите кнопку <interface>Обновить</interface>."
 
 #: qml/DeveloperPage.qml:195
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -941,8 +914,9 @@ msgid ""
 msgstr ""
 "Прочитайте, <link url='%1'>как создавать полезные сообщения об ошибках</"
 "link>, чтобы узнать, как получить полезный стек вызовов; установите "
-"необходимые пакеты (<link url='%2'>список файлов</link>) и нажмите кнопку "
-"<interface>Обновить</interface>."
+"необходимые пакеты\n"
+"(<link url='%2'>список файлов</link>) и нажмите кнопку <interface>Обновить</"
+"interface>."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
@@ -1010,16 +984,6 @@ msgstr ""
 "используя введённый адрес электронной почты и пароль."
 
 #: qml/main.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1035,18 +999,10 @@ msgstr ""
 "уменьшения риска повторных сбоев.<nl /><nl />\n"
 "Пожалуйста, <link url='%1'>передайте</link> отчёт об этой ошибке\n"
 "в систему отслеживания ошибок в KDE вручную. И не забудьте включить\n"
-"в сообщение стек вызовов с вкладки <interface>Информация для разработчиков</"
-"interface>.</para>"
+"в сообщение стек вызовов со страницы <interface>Информация для "
+"разработчиков</interface>.</para>"
 
 #: qml/main.qml:44
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1057,8 +1013,8 @@ msgstr ""
 "<para>Мастер сообщений отключён, так как диалог обработки сбоев запущен в "
 "безопасном режиме.<nl />\n"
 "Можно вручную сообщить об этой ошибке по адресу <link>%1</link> (включая "
-"стек вызовов с вкладки <interface>Информация для разработчиков</interface>)."
-"</para>"
+"стек вызовов со страницы <interface>Информация для разработчиков</"
+"interface>).</para>"
 
 #: qml/main.qml:51
 msgctxt "@info"
@@ -1085,30 +1041,23 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Сбор информации о причинах аварийного завершения работы приложения "
+"завершился неудачей. Вы можете повторить попытку или закрыть это окно."
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторить"
 
 #: qml/MainPage.qml:55
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Send Crash Report"
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr "Отправить сообщение"
+msgstr "Отправить автоматический отчёт"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Информация для разработчиков"
+msgstr "Просмотреть информацию для разработчиков"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1274,12 +1223,9 @@ msgid "Crash Report Sent"
 msgstr "Сообщение об ошибке отправлено"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Перезапустить программу"
+msgstr "Перезапустить приложение «%1»"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1293,17 +1239,11 @@ msgstr ""
 "Спасибо, что приняли участие в улучшении KDE. Теперь это окно можно закрыть."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Ожидание данных…"
+msgstr "Сбор данных…"
 
 #: qml/SentryPage.qml:53
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Сообщение об ошибке отправлено"
@@ -1312,6 +1252,7 @@ msgstr "Сообщение об ошибке отправлено"
 msgctxt "@label"
 msgid "Always report crashes automatically in the future"
 msgstr ""
+"Автоматически отправлять отчёты об аварийных завершениях работы приложений"
 
 #: qml/SentryPage.qml:69
 msgctxt "@info:tooltip"
@@ -1320,19 +1261,22 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Сообщения о сбоях приложений будут автоматически передаваться в систему "
+"отслеживания сбоев KDE без ввода данных вручную.\n"
+"Последующие уведомления об аварийных завершениях работы приложений будут "
+"скрыты."
 
 #: qml/SentryPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Сведения о сбое:"
+msgstr ""
+"Предоставьте дополнительную информацию об аварийном завершении работы "
+"приложения…"
 
 #: qml/SentryPage.qml:91
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Отправить отчёт"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1413,14 +1357,13 @@ msgid "Please report this error to help improve this software."
 msgstr "Отправьте сообщение об ошибке, чтобы улучшить эту программу."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Неожиданное завершение работы приложения."
+msgstr ""
+"Неожиданное завершение работы приложения. Выполняется отправка отчёта о сбое."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1450,12 +1393,10 @@ msgid "Hide"
 msgstr "Закрыть"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Подробности"
+msgstr "Добавить подробности"
 
 #: statusnotifier.cpp:123
 #, kde-format
