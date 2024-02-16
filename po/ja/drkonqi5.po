@@ -1,4 +1,5 @@
 # Translation of drkonqi into Japanese.
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Shinsaku Nakagawa <shinsaku@users.sourceforge.jp>, 2004.
@@ -16,14 +17,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2019-07-30 11:33+0900\n"
-"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"PO-Revision-Date: 2024-02-14 22:36+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.07.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -31,14 +32,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Taiki Komoda,Shinsaku Nakagawa,Shinichi Tsunoda, Jumpei Ogawa"
+msgstr ""
+"Taiki Komoda,Shinsaku Nakagawa,Shinichi Tsunoda, Jumpei Ogawa,Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "kom@kde.gr.jp,shinsaku@users.sourceforge.jp,tsuno@ngy.1st.ne.jp, "
-"phanective@gmail.com"
+"phanective@gmail.com,ryuichi_ya220@outlook.jp"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -54,6 +56,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
+"このボタンでクラッシュ情報 (バックトレース) を再読み込みできます。デバッグシ"
+"ンボルパッケージがインストールされており、より良いバックトレースを取得したい"
+"場合に便利です。"
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -65,7 +70,8 @@ msgstr "デバッグシンボルをインストール(&I)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
-msgstr "このボタンで欠けているデバッグシンボルパッケージをインストールします。"
+msgstr ""
+"このボタンで欠けているデバッグシンボルパッケージをインストールできます。"
 
 #: backtracewidget.cpp:77
 #, kde-format
@@ -74,6 +80,8 @@ msgid ""
 "Symbol installation is unavailable because the application was updated or "
 "uninstalled after it had been started."
 msgstr ""
+"アプリケーションが開始された後に更新またはアンインストールされたため、シンボ"
+"ルのインストールができません。"
 
 #: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
@@ -90,8 +98,8 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
-"このボタンでクラッシュ情報 (バックトレース) をファイルへ保存します。後で見て"
-"みたり、後でバグを報告するときに便利です。"
+"このボタンでクラッシュ情報 (バックトレース) をファイルへ保存します。内容を確"
+"認したり、後でバグを報告したりするときに便利です。"
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -102,6 +110,11 @@ msgid ""
 "they might actually contain a wealth of useful information.<br />Backtraces "
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
+"<h2>バックトレースとは？</h2><p>バックトレースにはクラッシュ時にアプリケー"
+"ション内部で何が起こっていたのかが記されており、開発者が問題を特定する際の手"
+"助けになります。意味がないように見えるときでも、実際には役に立つ情報を豊富に"
+"含んでいることがあります。<br/>バックトレースはインタラクティブな事後解析デ"
+"バッグでよく使用されます。</p>"
 
 #: backtracewidget.cpp:135
 #, kde-format
@@ -139,6 +152,9 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
+"他のデバッグプロセスがクラッシュしたアプリケーションにアタッチされています。"
+"そのため、DrKonqi デバッガはバックトレースを取得できません。他のデバッガを終"
+"了して<interface>再読み込み</interface>ボタンをクリックしてください。"
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -156,7 +172,7 @@ msgstr "生成されたクラッシュ情報は有益かもしれません"
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
-msgstr "生成されたクラッシュ情報は多分有益ではないでしょう"
+msgstr "生成されたクラッシュ情報はおそらく有益ではないでしょう"
 
 #: backtracewidget.cpp:250 qml/RatingItem.qml:49
 #, kde-format
@@ -183,6 +199,12 @@ msgid ""
 "the needed packages (<link url='%2'>list of files</link>) and click the "
 "<interface>Reload</interface> button."
 msgstr ""
+"<interface>デバッグシンボルをインストール</interface>ボタンをクリックして、自"
+"動的にデバッグ情報パッケージをインストールできます。このボタンが動作しない場"
+"合、<link url='%1'>「有益なバグレポートを作成する方法」</link>を読み、有益な"
+"バックトレースを取得する方法についてお知りおきください。必要なパッケージをイ"
+"ンストールして(<link url='%2'>ファイルのリスト</link>)<interface>再読み込み</"
+"interface>ボタンを押してください。"
 
 #: backtracewidget.cpp:285
 #, kde-kuit-format
@@ -193,10 +215,10 @@ msgid ""
 "url='%2'>list of files</link>) and click the <interface>Reload</interface> "
 "button."
 msgstr ""
-"<link url='%1'>有益なバグレポートを生成する方法</link> を読み、有益なバックト"
-"レースを得る方法をお知りください; 必要なパッケージをインストールして (<link "
-"url='%2'>ファイルのリスト</link>) <interface>再読み込み</interface>ボタンを押"
-"してください。"
+"<link url='%1'>「有益なバグレポートを作成する方法」</link>を読み、有益なバッ"
+"クトレースを取得する方法についてお知りおきください。必要なパッケージをインス"
+"トールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み</"
+"interface>ボタンを押してください。"
 
 #: backtracewidget.cpp:301
 #, kde-format
@@ -218,6 +240,8 @@ msgid ""
 "You could try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
+"<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生成で"
+"きます。"
 
 #: backtracewidget.cpp:316
 #, kde-format
@@ -235,12 +259,14 @@ msgid ""
 "<strong>You need to first install the debugger application (%1) then click "
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
+"<strong><interface>再読み込み</interface>ボタンをクリックする前に、デバッガア"
+"プリケーション (%1) をインストールしてください。</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
-msgstr ""
+msgstr "デバッグシンボルのインストール中にエラーが発生しました"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
@@ -249,12 +275,14 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
+"以下のアプリケーションとライブラリのデバッグ情報を含むパッケージが欠けていま"
+"す:"
 
 #: backtracewidget.cpp:418
 #, kde-format
 msgctxt "messagebox title"
 msgid "Missing debug information packages"
-msgstr ""
+msgstr "デバッグ情報パッケージが不足しています"
 
 #: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
@@ -270,83 +298,78 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "サブプロセスがエラーで終了しました: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr ""
+"サブプロセスがクラッシュしました。正しくインストールされているか確認してくだ"
+"さい。"
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "DrKonqi の集中治療室"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "過去のクラッシュに関する詳細情報を閲覧できます"
 
 #: coredump/gui/main.cpp:37
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2000-2009, The DrKonqi Authors"
+msgstr "(C) 2000-2022, The DrKonqi Authors"
 
 #: coredump/gui/qml/DetailsPage.qml:19
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "詳細:"
+msgstr "詳細"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "クリップボードにコピー"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "インタラクティブなデバッガを実行"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "クラッシュ"
 
 #: coredump/gui/qml/ListPage.qml:48
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "クラッシュレポートを送信"
+msgstr "クラッシュレポートを読み込み中"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "クラッシュしたプロセスはありません"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "検索にマッチするクラッシュはありません"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "集中治療室"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr ""
+msgstr "欠けているデバッグシンボルパッケージのインストールを要求しています..."
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -371,7 +394,7 @@ msgctxt "@info"
 msgid ""
 "An error was encountered during the installation of the debug symbol "
 "packages."
-msgstr "デバッグシンボルパッケージのインストール中にエラー。"
+msgstr "デバッグシンボルパッケージのインストール中にエラーが発生しました。"
 
 #: drkonqi.cpp:147
 #, kde-kuit-format
@@ -413,7 +436,7 @@ msgstr "このボタンでクラッシュしたアプリケーションを再起
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
-msgstr "一般(&G)"
+msgstr "全般(&G)"
 
 #: drkonqidialog.cpp:121
 #, kde-format
@@ -427,7 +450,8 @@ msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr ""
-"<para>すみません、<application>%1</application> が異常終了しました</para>"
+"<para>申し訳ございません、<application>%1</application> が異常終了しました。"
+"</para>"
 
 #: drkonqidialog.cpp:164
 #, kde-kuit-format
@@ -439,6 +463,10 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
+"<para>クラッシュハンドラ自身に不具合が発生したため、自動報告プロセスはlink "
+"<link url='%1'>手動での報告</link> をお願いします。レポートに<interface>開発"
+"者情報</interface>タブのバックトレースを含めることを忘れないでください。</"
+"para>"
 
 #: drkonqidialog.cpp:174
 #, kde-kuit-format
@@ -449,6 +477,9 @@ msgid ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 msgstr ""
+"<para>クラッシュハンドラがセーフモードで起動されたため、報告アシスタントは無"
+"効化されています。<nl />%1 への手動での報告を検討してください。(<interface>開"
+"発者情報</interface>タブのバックトレースを含めることができます。)</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -461,6 +492,11 @@ msgid ""
 "make sure the update is fully applied and will not cause any side effects.</"
 "para>"
 msgstr ""
+"<para>クラッシュしたアプリケーションが開始後に更新またはアンインストールされ"
+"たため、報告アシスタントは無効化されています。このような操作は正確なクラッ"
+"シュ報告を阻害します。また、このクラッシュの原因である可能性もあります。</"
+"para><para>更新内容を完全に適用するために、更新した後は常に再ログインするよう"
+"にしてください。</para>"
 
 #: drkonqidialog.cpp:192 qml/MainPage.qml:93
 #, kde-kuit-format
@@ -469,8 +505,8 @@ msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
-"<para>このエラーを報告することで KDE のソフトウェアを改善することに協力できま"
-"す<nl /><link url='%1'>バグレポートについて詳しく知る</link></para>"
+"<para>このエラーを報告することで KDE ソフトウェアの改善に協力できます。<nl /"
+"><link url='%1'>バグレポートについて詳しく知る</link></para>"
 
 #: drkonqidialog.cpp:199 qml/MainPage.qml:57
 #, kde-kuit-format
@@ -537,10 +573,9 @@ msgstr ""
 "ます。"
 
 #: main.cpp:117
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "(C) 2000-2009, The DrKonqi Authors"
+msgstr "(C) 2000-2018, The DrKonqi Authors"
 
 #: main.cpp:118
 #, kde-format
@@ -570,15 +605,13 @@ msgstr "A. L. Spehr"
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
-msgstr "捕まえたシグナル番号 <number>"
+msgstr "捕まえたシグナル番号"
 
 #: main.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Name of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
-msgstr "プログラム名"
+msgstr "プログラムの名前"
 
 #: main.cpp:130
 #, kde-format
@@ -608,7 +641,7 @@ msgstr "プログラムの翻訳名"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
-msgstr ""
+msgstr "Bugzilla 製品名"
 
 #: main.cpp:135
 #, kde-format
@@ -629,44 +662,41 @@ msgid "The program was started by kdeinit"
 msgstr "kdeinit が起動"
 
 #: main.cpp:138
-#, fuzzy, kde-format
-#| msgid "Disable arbitrary disk access"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
-msgstr "任意のディスクアクセスを不可能にします"
+msgstr "ディスクへの恣意的なアクセスを無効化"
 
 #: main.cpp:139
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
-msgstr "プログラムは再起動されました"
+msgstr "プログラムは既に再起動されました"
 
 #: main.cpp:142
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
-msgstr ""
+msgstr "プログラムを実行させ続け起動時にバックトレースを生成する"
 
 #: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
-msgstr ""
+msgstr "正常に動作していないスレッドの ID"
 
 #: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
-msgstr ""
+msgstr "通知を表示せずにデバッグダイアログを起動する"
 
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr ""
+msgstr "バックトレース (自動生成されるクラッシュ情報) を取得中"
 
 #: qml/BacktracePage.qml:26
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "バックトレース内容を表示 (上級)"
@@ -674,112 +704,75 @@ msgstr "バックトレース内容を表示 (上級)"
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "次へ"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error sending the crash report:  <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr "クラッシュレポートの送信に失敗しました: <message>%1</message>"
+msgstr "bugs.kde.org への接続に失敗しました: <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retry..."
 msgctxt "@action"
 msgid "Retry"
-msgstr "再試行..."
+msgstr "再試行"
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr ""
+msgstr "bugs.kde.org に接続しています..."
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
 msgstr "クラッシュについて何かわかっていることはありますか？"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr "<strong>クラッシュの前に何をしていたか憶えていますか？</strong>"
+msgstr "クラッシュの前に何をしていたか覚えていますか？"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "はい"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "いいえ"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>同じことを繰り返すと、アプリケーションはクラッシュしますか？</strong>"
+msgstr "同じことを繰り返すと、アプリケーションはクラッシュしますか？"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid "<note>You should write in English.</note>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr "<note>英語で書いてください</note>"
+msgstr "提供できる追加の情報を選択してください:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "「%1」がクラッシュしたときにしていたこと"
+msgstr "<application>%1</application> がクラッシュしたときにしていたこと"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
-msgstr ""
+msgstr "異常なデスクトップの挙動"
 
 #: qml/ContextPage.qml:70
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr ""
+msgstr "関連している可能性のあるアプリケーションの設定"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "十分に有益ではありません"
 
 #: qml/ContextPage.qml:80
 msgctxt "@info"
@@ -788,37 +781,26 @@ msgid ""
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
+"<para>提供された情報は十分に有益であると見なされません。これ以上の情報を提供"
+"できない場合、このダイアログを閉じてください。KDE ソフトウェアの改善に協力し"
+"ていただきまして、ありがとうございます。</para>"
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "開発者情報(&D)"
+msgstr "開発者情報"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "デバッグシンボルをインストール(&I)"
+msgstr "デバッグシンボルをインストール"
 
 #: qml/DeveloperPage.qml:54
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "再読み込み(&R)"
+msgstr "再読み込み"
 
 #: qml/DeveloperPage.qml:56
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to save the crash information (backtrace) to a file. This "
-#| "is useful if you want to take a look at it or to report the bug later."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -826,18 +808,19 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
-"このボタンでクラッシュ情報 (バックトレース) をファイルへ保存します。後で見て"
-"みたり、後でバグを報告するときに便利です。"
+"このボタンでクラッシュ情報 (バックトレース) を再読み込みします。\n"
+"デバッグシンボルパッケージがインストールされており、より良いバックトレースを"
+"取得したい場合に便利です。"
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "コピー"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: qml/DeveloperPage.qml:109
 msgctxt "@info"
@@ -852,15 +835,13 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
+"<subtitle>バックトレースとは？</subtitle><para>バックトレースにはクラッシュ時"
+"にアプリケーション内部で何が起こっていたのかが記されており、開発者が問題を特"
+"定する際の手助けになります。意味がないように見えるときでも、実際には役に立つ"
+"情報を豊富に含んでいることがあります。<nl />バックトレースはインタラクティブ"
+"な事後解析デバッグでよく使用されます。</para>"
 
 #: qml/DeveloperPage.qml:157
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -871,19 +852,14 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"<link url='%1'>有益なバグレポートを生成する方法</link> を読み、有益なバックト"
-"レースを得る方法をお知りください; 必要なパッケージをインストールして (<link "
-"url='%2'>ファイルのリスト</link>) <interface>再読み込み</interface>ボタンを押"
-"してください。"
+"<interface>デバッグシンボルをインストール</interface>ボタンをクリックして、自"
+"動的にデバッグ情報パッケージをインストールできます。このボタンが動作しない場"
+"合、<link url='%1'>「有益なバグレポートを作成する方法」</link>を読み、有益な"
+"バックトレースを取得する方法についてお知りおきください。 必要なパッケージをイ"
+"ンストールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み"
+"</interface>ボタンを押してください。"
 
 #: qml/DeveloperPage.qml:165
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -891,10 +867,10 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"<link url='%1'>有益なバグレポートを生成する方法</link> を読み、有益なバックト"
-"レースを得る方法をお知りください; 必要なパッケージをインストールして (<link "
-"url='%2'>ファイルのリスト</link>) <interface>再読み込み</interface>ボタンを押"
-"してください。"
+"<link url='%1'>「有益なバグレポートを作成する方法」</link>を読み、有益なバッ"
+"クトレースを取得する方法についてお知りおきください。必要なパッケージをインス"
+"トールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み</"
+"interface>ボタンを押してください。"
 
 #: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
@@ -902,6 +878,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'><interface>再読み込み</interface>ボタンをクリックする"
+"前に、デバッガアプリケーション (%1) をインストールしてください。</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -911,7 +889,7 @@ msgstr "重複レポートを検索"
 #: qml/DuplicatesLoadingPage.qml:46
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr ""
+msgstr "バグデータベースから重複を検索中..."
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -920,43 +898,40 @@ msgid ""
 "and compare it to yours. You can suggest that your crash is a duplicate of "
 "that report or directly attach your information to it."
 msgstr ""
+"このバグが既に報告されているか確認できます。リストされたレポートをダブルク"
+"リックして、あなたのバグと比較してください。クラッシュがそのレポートで報告さ"
+"れているものと同じであると提言したり、追加の情報を添付したりできます。"
 
 #: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "[Duplicate report]"
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr "[重複]"
+msgstr "重複？"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
 msgstr ""
+"クラッシュがこのバグレポートで報告されているものと同じであると確信しています"
+"か？"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr ""
+msgstr "はい"
 
 #: qml/DuplicatesPage.qml:76
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
-"このボタンで、あなたが経験したクラッシュがこのバグレポートを関連していると提"
-"言できます"
+"あなたが経験したクラッシュがこのバグレポートで報告されているものと同じである"
+"と確信できる場合は、このアクションを使用してください。"
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr ""
+msgstr "いいえ"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
@@ -964,11 +939,6 @@ msgid "Suggest this crash is related"
 msgstr "このクラッシュは関連していると提言する"
 
 #: qml/DuplicatesPage.qml:97
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
@@ -976,16 +946,14 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
-"このボタンで、あなたが経験したクラッシュがこのバグレポートを関連していると提"
-"言できます"
+"このボタンで、あなたが経験した\n"
+"クラッシュがこのバグレポートと\n"
+"関連していると提言できます"
 
 #: qml/DuplicatesPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "このクラッシュは関連していると提言する"
+msgstr "このクラッシュは関連していません"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -1000,7 +968,7 @@ msgstr "前に進むには %1 のアカウントにログインしてくださ�
 #: qml/LoginPage.qml:72
 msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
-msgstr ""
+msgstr "メールアドレス:"
 
 #: qml/LoginPage.qml:78
 msgctxt "@label:textbox bugzilla account password"
@@ -1022,6 +990,11 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
+"<note>開発者とのさらなる情報のやり取りのため、バグレポートを提出するには "
+"<link url='%1'>KDE バグトラッキングシステム</link> のユーザアカウントが必要で"
+"す。\n"
+"お持ちでない場合は、<link url='%2'>このページ</link> で自由に作成できます。使"
+"い捨てのメールアカウントは使わないでください。</note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -1029,23 +1002,15 @@ msgid "Login"
 msgstr "ログイン"
 
 #: qml/LoginPage.qml:107
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided username and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"このボタンを使って、与えられたユーザ名とパスワードを使って KDE バグトラッキン"
-"グシステムにログインしてください。"
+"提供されたメールアドレスとパスワードを使って KDE バグトラッキングシステムにロ"
+"グインするには、このボタンを使用してください。"
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "バグを報告"
@@ -1053,22 +1018,17 @@ msgstr "バグを報告"
 #: qml/MainPage.qml:22
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
-msgstr "バグレポートウィザードを起動。"
+msgstr "バグレポートウィザードを起動します。"
 
 #: qml/MainPage.qml:29
-#, fuzzy
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "アプリケーションを再起動(&R)"
+msgstr "アプリケーションを再起動"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "開発者情報(&D)"
+msgstr "開発者情報"
 
 #: qml/MainPage.qml:63
 msgctxt "@info"
@@ -1104,27 +1064,18 @@ msgid ""
 msgstr ""
 
 #: qml/MainPage.qml:108
-#, fuzzy
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#| "Time: %5 %6</para>"
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
 "<para>実行ファイル: <application>%1</application> PID: <numid>%2</numid> シグ"
-"ナル: %3 (%4) 日時: %5 %6</para>"
+"ナル: %3 (%4) 日時: %5 </para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "問題はバグ %1 として既に報告されています。"
+msgstr "問題は既に報告されています"
 
 #: qml/PerfectDuplicatePage.qml:29
 msgctxt "@info"
@@ -1133,6 +1084,9 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
+"このクラッシュについては既に <link url=\"%1\">Bug %1</link> で報告されてお"
+"り、これは<emphasis strong='true'>クローズされた</emphasis> <link url="
+"\"%2\">Bug %2</link> の重複レポートです。"
 
 #: qml/PerfectDuplicatePage.qml:34
 msgctxt "@info"
@@ -1140,6 +1094,8 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
+"このクラッシュについては <link url=\"%1\">Bug %1</link> で報告されており、こ"
+"れは既に<emphasis strong='true'>クローズ</emphasis>されています。"
 
 #: qml/PerfectDuplicatePage.qml:39
 msgctxt "@info"
@@ -1148,6 +1104,9 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
+"このクラッシュについては既に <link url=\"%1\">Bug %1</link> で報告されてお"
+"り、これは <link url=\"\">Bug %2</link> の<emphasis strong='true'>重複レポー"
+"ト</emphasis>です。"
 
 #: qml/PerfectDuplicatePage.qml:43
 msgctxt "@info"
@@ -1155,6 +1114,8 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
+"このクラッシュについては既に <link url=\"%\">Bug %2</link> で報告されており、"
+"<emphasis strong='true'>重複</emphasis>しています。"
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1162,21 +1123,23 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"新しい情報もしくは提供を求められている情報がある場合は、それを追加することが"
+"できます。"
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "追加の情報を添付する"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Preview the Report"
-msgstr "レポートのプレビュー"
+msgstr "レポートをプレビュー"
 
 #: qml/PreviewPage.qml:20
 msgctxt "@label/rich"
@@ -1184,16 +1147,18 @@ msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
+"<para>これは送信されるレポートのプレビューです。</para><para>変更する場合は、"
+"前のページに戻ってください。</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
 msgid "Submit"
-msgstr ""
+msgstr "送信"
 
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "データを待っています..."
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1201,21 +1166,14 @@ msgid "Enter the Details about the Crash"
 msgstr "クラッシュの詳細を入力"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "【注意】 <strong>英語で</strong>書いてください"
+msgstr "以下の情報を英語で書いてください。"
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "レポートの内容"
+msgstr "バグレポートのタイトル:"
 
 #: qml/ReportPage.qml:40
 msgctxt "@info:tooltip examples of good bug report titles"
@@ -1230,14 +1188,20 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>良いタイトルの例:</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application 'X'</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Information about bug reporting"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "バグ報告に関する情報"
+msgstr "クラッシュについての情報:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1252,11 +1216,19 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>クラッシュしたときの状況についてできるだけ詳しく説明してください:</"
+"subtitle>\n"
+"<list>\n"
+"<item>クラッシュする直前にアプリケーションの内側・外側で行っていたことについ"
+"ての詳細</item>\n"
+"<item>アプリケーションやデスクトップ環境の異常な挙動</item>\n"
+"<item>すべてのアプリケーションのデフォルトから変更された設定</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
 msgid "Minimum length reached"
-msgstr ""
+msgstr "最小の長さに到達しました"
 
 #: qml/ReportPage.qml:82
 msgctxt "the minimum required length of a text wasn't reached yet"
@@ -1266,15 +1238,12 @@ msgstr "もう少し情報を追加してください"
 #: qml/ReportPage.qml:108
 msgctxt "@info"
 msgid "Distribution method:"
-msgstr ""
+msgstr "配布された方法:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr "KDE プラットフォームをはソースからコンパイル"
+msgstr "ソースからコンパイルされた KDE プラットフォーム"
 
 #: qml/ReportPage.qml:139
 msgctxt "@info"
@@ -1282,98 +1251,70 @@ msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
+"<note>クラッシュとシステムに関する情報は自動的にバグレポートに追加されます。"
+"</note>"
 
 #: qml/ReportPage.qml:148
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr "レポートのプレビュー"
+msgstr "レポートをプレビュー"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "ファイルへ保存(&S)..."
+msgstr "レポートをファイルに保存"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to save the generated crash report information to a file. "
-#| "You can use this option to report the bug later."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"このボタンでクラッシュレポート情報を保存することができます。後でバグをレポー"
-"トするときに使うことができます。"
+"このボタンで手動でバグを報告する際に有用なクラッシュレポート情報を保存するこ"
+"とができます。"
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error sending the crash report:  <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "クラッシュレポートの送信に失敗しました: <message>%1</message>"
+msgstr "バグレポートの送信に失敗しました: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "送信を再試行"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "バグレポートを送信しています..."
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr ""
+msgstr "クラッシュレポートが送信されました"
 
 #: qml/SentPage.qml:18
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "<link url='%1'>Report's webpage</link>"
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr "<link url='%1'>レポートのウェブページ</link>"
+msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
 msgstr ""
-"クラッシュレポートを送信しました。<nl/>URL: <link>%1</link><nl/>KDE に協力し"
-"てくれてありがとうございます。このウィンドウを閉じてください。"
+"KDE ソフトウェアの改善に協力していただきまして、ありがとうございました。この"
+"ウィンドウを閉じてください。"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Close the Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr "ウィザードを閉じる"
+msgstr "バグ報告ウィザードへようこそ"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
-msgstr "ウィザードがクラッシュ情報を解析してバグレポートの手伝いをします。"
+msgstr "ウィザードがクラッシュ情報を解析して、バグの報告をお手伝いします。"
 
 #: qml/WelcomePage.qml:32
 msgctxt "@info/rich note before starting the bug reporting process"
@@ -1385,17 +1326,23 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
+"<para><note>効率的なデバッグのためには、開発者とバグ報告者との連絡が必要で"
+"す。\n"
+"そのため、このバグ報告を続行するには<emphasis strong='true'>開発者から連絡さ"
+"れることへの同意が必要です。</emphasis>\n"
+"</note></para><para>同意できない場合は、このダイアログを閉じてください。</"
+"para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "開発者から連絡されることに同意します"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
-msgstr ""
+msgstr "プラットフォームリストの取得に失敗しました"
 
 #: qmlextensions/reproducibilitymodel.cpp:38
 #, kde-format
@@ -1430,7 +1377,7 @@ msgstr "%1が異常終了しました"
 #: statusnotifier.cpp:54
 #, kde-format
 msgid "Please report this error to help improve this software."
-msgstr "このソフトウェアの改善のためにエラーを報告してください"
+msgstr "このソフトウェアの改善のためにエラーを報告してください。"
 
 #: statusnotifier.cpp:61
 #, kde-format
@@ -1446,22 +1393,19 @@ msgstr "アプリケーションを再起動(&R)"
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
-msgstr ""
+msgstr "非表示"
 
 #: statusnotifier.cpp:98
-#, fuzzy, kde-format
-#| msgid "Please report this error to help improve this software."
+#, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
-msgstr "このソフトウェアの改善のためにエラーを報告してください"
+msgstr "このソフトウェアの改善のためにエラーを報告してください。"
 
 #: statusnotifier.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
-msgstr "%1が異常終了しました"
+msgstr "アプリケーションが異常終了しました"
 
 #: statusnotifier.cpp:110
 #, kde-format
@@ -1478,42 +1422,41 @@ msgstr "アプリケーションを再起動"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "パーサファクトリに渡されるデバッガの名前"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "バックトレースを含むファイルです。"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib テスト (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "bugtracker manager lib のためのテストアプリケーション"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "(C) 2000-2009, The DrKonqi Authors"
+msgstr "(C) 2009, DrKonqi2 Developers"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org ユーザ名"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org パスワード"
