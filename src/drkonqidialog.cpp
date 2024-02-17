@@ -22,7 +22,6 @@
 #include <QStandardPaths>
 #include <QTabBar>
 #include <QTabWidget>
-#include <QtQml>
 
 #include "backtracegenerator.h"
 #include "backtraceparser.h"
