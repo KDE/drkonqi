@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2024-02-14 22:36+0900\n"
+"PO-Revision-Date: 2024-02-17 14:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -809,8 +809,8 @@ msgid ""
 "backtrace."
 msgstr ""
 "このボタンでクラッシュ情報 (バックトレース) を再読み込みします。\n"
-"デバッグシンボルパッケージがインストールされており、より良いバックトレースを"
-"取得したい場合に便利です。"
+"デバッグシンボルパッケージがインストールされ、より良いバックトレースが取得で"
+"きるようになったときに便利です。"
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
@@ -855,7 +855,7 @@ msgstr ""
 "<interface>デバッグシンボルをインストール</interface>ボタンをクリックして、自"
 "動的にデバッグ情報パッケージをインストールできます。このボタンが動作しない場"
 "合、<link url='%1'>「有益なバグレポートを作成する方法」</link>を読み、有益な"
-"バックトレースを取得する方法についてお知りおきください。 必要なパッケージをイ"
+"バックトレースを取得する方法についてお知りおきください。必要なパッケージをイ"
 "ンストールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み"
 "</interface>ボタンを押してください。"
 
@@ -958,7 +958,7 @@ msgstr "このクラッシュは関連していません"
 #: qml/LoginPage.qml:15
 msgctxt "@title"
 msgid "Login into the bug tracking system"
-msgstr "バグトラッキングシステムにログイン"
+msgstr "バグ追跡システムにログイン"
 
 #: qml/LoginPage.qml:67
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -991,8 +991,7 @@ msgid ""
 "accounts.</note>"
 msgstr ""
 "<note>開発者とのさらなる情報のやり取りのため、バグレポートを提出するには "
-"<link url='%1'>KDE バグトラッキングシステム</link> のユーザアカウントが必要で"
-"す。\n"
+"<link url='%1'>KDE バグ追跡システム</link> のユーザアカウントが必要です。\n"
 "お持ちでない場合は、<link url='%2'>このページ</link> で自由に作成できます。使"
 "い捨てのメールアカウントは使わないでください。</note>"
 
@@ -1007,8 +1006,8 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"提供されたメールアドレスとパスワードを使って KDE バグトラッキングシステムにロ"
-"グインするには、このボタンを使用してください。"
+"提供されたメールアドレスとパスワードを使って KDE バグ追跡システムにログインす"
+"るには、このボタンを使用してください。"
 
 #: qml/MainPage.qml:20
 msgctxt "@action"
@@ -1050,6 +1049,10 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
+"<para>クラッシュハンドラがセーフモードで起動されたため、報告アシスタントは無"
+"効化されています。<nl />\n"
+"<link>%1</link> への手動での報告を検討してください。(<interface>開発者情報</"
+"interface>タブのバックトレースを含めることができます。)</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
@@ -1222,7 +1225,7 @@ msgstr ""
 "<item>クラッシュする直前にアプリケーションの内側・外側で行っていたことについ"
 "ての詳細</item>\n"
 "<item>アプリケーションやデスクトップ環境の異常な挙動</item>\n"
-"<item>すべてのアプリケーションのデフォルトから変更された設定</item>\n"
+"<item>アプリケーションの標準設定から変更されたすべての設定</item>\n"
 "</list>"
 
 #: qml/ReportPage.qml:80
@@ -1372,7 +1375,7 @@ msgstr "いつも"
 #, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
-msgstr "%1が異常終了しました"
+msgstr "%1 が異常終了しました"
 
 #: statusnotifier.cpp:54
 #, kde-format
