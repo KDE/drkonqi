@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include <fcntl.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #include <filesystem>
+#include <optional>
 
 #include <QCoreApplication>
 #include <QDBusConnection>
@@ -21,14 +24,58 @@
 
 using namespace Qt::StringLiterals;
 
+namespace
+{
+constexpr auto COREDUMP_PATH = "/var/lib/systemd/coredump/"_L1; // The path is hardcoded in systemd's coredump.c
+constexpr auto ACTION_NAME = "org.kde.drkonqi.excavateFromToDirFd"_L1;
+constexpr auto CORE_NAME = "core"_L1;
+
+using ErrorString = QString;
+std::optional<ErrorString> renameOrCopy(int sourceDirFd, int targetDirFd)
+{
+    if (renameat(sourceDirFd, CORE_NAME.latin1(), targetDirFd, CORE_NAME.latin1()) == 0) {
+        return std::nullopt;
+    }
+    if (errno != EXDEV) {
+        auto err = errno;
+        return u"Failed to rename between directory fds: %1"_s.arg(QString::fromUtf8(strerror(err)));
+    }
+
+    const auto inFd = openat(sourceDirFd, CORE_NAME.latin1(), O_RDONLY | O_CLOEXEC | O_NOFOLLOW);
+    if (inFd == -1) {
+        auto err = errno;
+        return u"Failed to open input file: %1"_s.arg(QString::fromUtf8(strerror(err)));
+    }
+    auto closeInFd = qScopeGuard([inFd] {
+        close(inFd);
+    });
+
+    const auto outFd = openat(targetDirFd, CORE_NAME.latin1(), O_WRONLY | O_CLOEXEC | O_NOFOLLOW | O_CREAT | O_TRUNC);
+    if (outFd == -1) {
+        auto err = errno;
+        return u"Failed to open output file: %1"_s.arg(QString::fromUtf8(strerror(err)));
+    }
+    auto closeOutFd = qScopeGuard([outFd] {
+        close(outFd);
+    });
+
+    // Try copy_file_range
+    ssize_t ret = 0;
+    while ((ret = copy_file_range(inFd, nullptr, outFd, nullptr, 128 * 1024 * 1024 /* MiB */, 0)) > 0) { }
+    if (ret == 0) {
+        return {};
+    }
+
+    auto err = errno;
+    return u"Failed copy_file_range: %1"_s.arg(QString::fromUtf8(strerror(err)));
+}
+
+} // namespace
+
 class Helper : public QObject, protected QDBusContext
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.drkonqi")
-
-    static constexpr auto COREDUMP_PATH = "/var/lib/systemd/coredump/"_L1; // The path is hardcoded in systemd's coredump.c
-    static constexpr auto ACTION_NAME = "org.kde.drkonqi.excavateFromToDirFd"_L1;
-    static constexpr auto CORE_NAME = "core"_L1;
 
 public Q_SLOTS:
     QString excavateFromToDirFd(const QString &coreName, const QDBusUnixFileDescriptor &targetDirFd)
@@ -94,10 +141,8 @@ public Q_SLOTS:
                         close(sourceDirFd);
                     });
 
-                    if (renameat(sourceDirFd, qUtf8Printable(CORE_NAME), targetDirFd.fileDescriptor(), qUtf8Printable(CORE_NAME)) != 0) {
-                        int err = errno;
-                        QString errString = u"Failed to rename between directory fds: %1"_s.arg(QString::fromUtf8(strerror(err)));
-                        connection.send(msg.createErrorReply(QDBusError::InternalError, errString));
+                    if (auto errorString = renameOrCopy(sourceDirFd, targetDirFd.fileDescriptor()); errorString.has_value()) {
+                        connection.send(msg.createErrorReply(QDBusError::InternalError, errorString.value()));
                         return;
                     }
 
