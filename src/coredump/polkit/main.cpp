@@ -49,6 +49,13 @@ public Q_SLOTS:
             return {};
         }
 
+        // Ensure the core is kept secure!
+        Q_ASSERT([&tmpDir]() -> bool {
+            const auto targetDir = tmpDir.path();
+            const auto permissions = std::filesystem::status(targetDir.toStdString()).permissions();
+            return permissions == std::filesystem::perms::owner_all;
+        }());
+
         const QString coreFileDir = tmpDir.path();
         const QString coreFileTarget = tmpDir.filePath(CORE_NAME);
         const QString coreFile = COREDUMP_PATH + coreName;
@@ -63,10 +70,6 @@ public Q_SLOTS:
 
         auto connection = this->connection();
         auto msg = message();
-
-        // Keep the core secure by making it only accessible to owner.
-        const auto targetDir = QFileInfo(coreFileTarget).path();
-        std::filesystem::permissions(targetDir.toStdString(), std::filesystem::perms::owner_all, std::filesystem::perm_options::replace);
 
         auto excavator = new CoredumpExcavator(this);
         connect(excavator,
