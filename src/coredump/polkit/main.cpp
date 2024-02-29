@@ -75,6 +75,11 @@ public Q_SLOTS:
                 [msg, tmpDir = std::move(tmpDir), loopLock, connection, excavator, coreFileDir, coreFileTarget, targetDirFd](int exitCode) mutable {
                     excavator->deleteLater();
 
+                    if (exitCode != 0) {
+                        connection.send(msg.createReply() << QString());
+                        return;
+                    }
+
                     int sourceDirFd = open(qUtf8Printable(coreFileDir), O_RDONLY | O_CLOEXEC | O_DIRECTORY);
                     if (sourceDirFd < 0) {
                         int err = errno;
@@ -93,8 +98,7 @@ public Q_SLOTS:
                         return;
                     }
 
-                    auto reply = msg.createReply() << (exitCode == 0 ? CORE_NAME : QString());
-                    connection.send(reply);
+                    connection.send(msg.createReply() << CORE_NAME);
                 });
 
         excavator->excavateFromTo(coreFile, coreFileTarget);
