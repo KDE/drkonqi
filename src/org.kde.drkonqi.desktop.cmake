@@ -31,6 +31,7 @@ Name[ja]=Dr Konqi
 Name[ka]=Dr Konqi
 Name[ko]=Dr Konqi
 Name[lt]=Dr. Konqi
+Name[lv]=Dr Konqi
 Name[nb]=Dr Konqi
 Name[nl]=Dr Konqi
 Name[nn]=Dr Konqi
