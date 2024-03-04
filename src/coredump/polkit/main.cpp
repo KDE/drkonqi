@@ -27,7 +27,7 @@ using namespace Qt::StringLiterals;
 namespace
 {
 constexpr auto COREDUMP_PATH = "/var/lib/systemd/coredump/"_L1; // The path is hardcoded in systemd's coredump.c
-constexpr auto ACTION_NAME = "org.kde.drkonqi.excavateFromToDirFd"_L1;
+constexpr auto ACTION_NAME = "org.kde.drkonqi.saveCoreToDir"_L1;
 constexpr auto CORE_NAME = "core"_L1;
 
 using ErrorString = QString;
@@ -78,7 +78,7 @@ class Helper : public QObject, protected QDBusContext
     Q_CLASSINFO("D-Bus Interface", "org.kde.drkonqi")
 
 public Q_SLOTS:
-    QString excavateFromToDirFd(const QString &coreName, const QDBusUnixFileDescriptor &targetDirFd)
+    QString saveCoreToDir(const QString &coreName, const QDBusUnixFileDescriptor &targetDirFd)
     {
         auto loopLock = std::make_shared<QEventLoopLocker>();
 

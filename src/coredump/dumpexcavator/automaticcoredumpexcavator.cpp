@@ -54,7 +54,7 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             return;
         }
 
-        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "excavateFromToDirFd"_L1);
+        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "saveCoreToDir"_L1);
 
         int fd = open(qUtf8Printable(m_coreDir->path()), O_RDONLY | O_CLOEXEC | O_DIRECTORY);
         if (fd < 0) {
