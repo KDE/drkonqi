@@ -68,9 +68,8 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
         });
 
         msg << coredumpFileInfo.fileName() << QVariant::fromValue(QDBusUnixFileDescriptor(fd));
-        static const auto connection = QDBusConnection::connectToBus(QDBusConnection::SystemBus, "drkonqi-polkit-system-connection"_L1);
-        connection.interface()->setTimeout(std::chrono::milliseconds(5min).count());
-        auto watcher = new QDBusPendingCallWatcher(connection.asyncCall(msg));
+        constexpr auto timeout = std::chrono::milliseconds(5min).count();
+        auto watcher = new QDBusPendingCallWatcher(QDBusConnection::systemBus().asyncCall(msg, timeout));
         QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, coreFileTarget] {
             watcher->deleteLater();
             QDBusReply<QString> reply = *watcher;
