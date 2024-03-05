@@ -34,6 +34,12 @@ public Q_SLOTS:
     QString excavateFromToDirFd(const QString &coreName, const QDBusUnixFileDescriptor &targetDirFd)
     {
         auto loopLock = std::make_shared<QEventLoopLocker>();
+
+        if (coreName.contains('/'_L1)) { // don't allow anything that could look like a path
+            sendErrorReply(QDBusError::AccessDenied);
+            return {};
+        }
+
         auto tmpDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
         if (!tmpDir->isValid()) {
             qWarning() << "tmpdir not valid";
