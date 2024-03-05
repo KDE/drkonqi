@@ -82,13 +82,17 @@ public Q_SLOTS:
     {
         auto loopLock = std::make_shared<QEventLoopLocker>();
 
+        if (!isAuthorized(coreName)) {
+            qWarning() << "not authorized";
+            sendErrorReply(QDBusError::AccessDenied);
+            return {};
+        }
+
         if (coreName.contains('/'_L1)) { // don't allow anything that could look like a path
             sendErrorReply(QDBusError::AccessDenied);
             return {};
         }
 
-        // Create the tmpdir early because we need to know the involved paths ahead of authorization since we forward
-        // them into the polkit auth agent UI.
         QTemporaryDir tmpDir(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
         if (!tmpDir.isValid()) {
             qWarning() << "tmpdir not valid";
@@ -106,12 +110,6 @@ public Q_SLOTS:
         const QString coreFileDir = tmpDir.path();
         const QString coreFileTarget = tmpDir.filePath(CORE_NAME);
         const QString coreFile = COREDUMP_PATH + coreName;
-
-        if (!isAuthorized(coreFile, coreFileTarget)) {
-            qWarning() << "not authorized";
-            sendErrorReply(QDBusError::AccessDenied);
-            return {};
-        }
 
         setDelayedReply(true);
 
@@ -155,15 +153,14 @@ public Q_SLOTS:
     }
 
 private:
-    bool isAuthorized(const QString &coreName, const QString &coreFileTarget)
+    bool isAuthorized(const QString &coreName)
     {
         auto authority = PolkitQt1::Authority::instance();
         auto result = authority->checkAuthorizationSyncWithDetails(ACTION_NAME,
                                                                    PolkitQt1::SystemBusNameSubject(message().service()),
                                                                    PolkitQt1::Authority::AllowUserInteraction,
                                                                    {
-                                                                       {"coreFile"_L1, coreName}, //
-                                                                       {"coreFileTarget"_L1, coreFileTarget}, //
+                                                                       {"coreName"_L1, coreName}, //
                                                                    });
 
         if (authority->hasError()) {
