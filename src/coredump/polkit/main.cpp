@@ -40,15 +40,17 @@ public Q_SLOTS:
             return {};
         }
 
-        auto tmpDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
-        if (!tmpDir->isValid()) {
+        // Create the tmpdir early because we need to know the involved paths ahead of authorization since we forward
+        // them into the polkit auth agent UI.
+        QTemporaryDir tmpDir(QDir::tempPath() + "/drkonqi-coredump-excavator"_L1);
+        if (!tmpDir.isValid()) {
             qWarning() << "tmpdir not valid";
             sendErrorReply(QDBusError::InternalError, "Failed to create temporary directory"_L1);
             return {};
         }
 
-        const QString coreFileDir = tmpDir->path();
-        const QString coreFileTarget = tmpDir->filePath(CORE_NAME);
+        const QString coreFileDir = tmpDir.path();
+        const QString coreFileTarget = tmpDir.filePath(CORE_NAME);
         const QString coreFile = COREDUMP_PATH + coreName;
 
         if (!isAuthorized(coreFile, coreFileTarget)) {
