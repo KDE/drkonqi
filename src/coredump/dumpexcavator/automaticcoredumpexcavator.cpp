@@ -22,7 +22,7 @@ using namespace std::chrono_literals;
 
 void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
 {
-    if (!m_coreDir) {
+    if (!m_coreDir || !m_coreDir->isValid()) {
         m_coreDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + u"/drkonqi-core"_s);
         Q_ASSERT(m_coreDir->isValid());
         if (!m_coreDir->isValid()) {
@@ -54,12 +54,12 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             return;
         }
 
-        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "saveCoreToDir"_L1);
+        auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "saveCoreToFile"_L1);
 
-        int fd = open(qUtf8Printable(m_coreDir->path()), O_RDONLY | O_CLOEXEC | O_DIRECTORY);
+        int fd = open(qUtf8Printable(coreFileTarget), O_CREAT | O_WRONLY | O_CLOEXEC, S_IRUSR | S_IWUSR);
         if (fd < 0) {
             int err = errno;
-            qWarning() << "Failed to open m_coreDir" << m_coreDir->path() << strerror(err);
+            qWarning() << "Failed to open coreFileTarget" << coreFileTarget << strerror(err);
             Q_EMIT failed();
             return;
         }
@@ -75,6 +75,7 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             QDBusReply<QString> reply = *watcher;
             qWarning() << reply.isValid() << reply.error() << reply.value();
             if (!reply.isValid() || reply.value().isEmpty()) {
+                m_coreDir = nullptr;
                 qWarning() << "Failed to excavate core as admin:" << reply.error();
                 Q_EMIT failed();
                 return;
