@@ -70,6 +70,8 @@ Kirigami.Page {
 You will not receive any more crash notifications.`)
         }
 
+        DownloadSymbolsCheckBox {}
+
         QQC2.ScrollView {
             id: detailView
             Layout.fillWidth: true
