@@ -13,17 +13,37 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+#include <QNetworkInformation>
 #include <QTemporaryDir>
 
 #include <KProcess>
 #include <KShell>
 
 #include "parser/backtraceparser.h"
+#include "settings.h"
+
+bool isMeteredNetwork()
+{
+    if (!QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Metered)) {
+        qCDebug(DRKONQI_LOG) << "Failed to load QNetworkInformation backend";
+        return false;
+    }
+
+    if (!QNetworkInformation::instance()) {
+        qCDebug(DRKONQI_LOG) << "No QNetworkInformation instance";
+        return false;
+    }
+
+    const auto metered = QNetworkInformation::instance()->isMetered();
+    qCDebug(DRKONQI_LOG) << "Is metered:" << metered;
+    return metered;
+}
 
 BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent)
     : QObject(parent)
     , m_debugger(debugger)
     , m_supportsSymbolResolution(WITH_GDB12 && m_debugger.supportsCommandWithSymbolResolution())
+    , m_symbolResolution(m_debugger.supportsCommandWithSymbolResolution() && Settings::self()->downloadSymbols() && !isMeteredNetwork())
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);

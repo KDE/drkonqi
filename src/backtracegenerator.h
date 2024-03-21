@@ -95,7 +95,7 @@ private:
     QString m_parsedBacktrace;
     std::unique_ptr<QTemporaryDir> m_tempDirectory;
     const bool m_supportsSymbolResolution = false;
-    bool m_symbolResolution = false;
+    bool m_symbolResolution;
     QByteArray m_sentryPayload;
 
 #ifdef BACKTRACE_PARSER_DEBUG

@@ -86,11 +86,22 @@ installed the proper debug symbol packages and you want to obtain a better backt
     ]
 
     header: QQC2.ToolBar {
-        RatingItem {
-            id: ratingItem
-            anchors.fill: parent
-            failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart
-            loading: BacktraceGenerator.state === BacktraceGenerator.Loading
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+
+            RatingItem {
+                id: ratingItem
+                failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart
+                loading: BacktraceGenerator.state === BacktraceGenerator.Loading
+            }
+
+            DownloadSymbolsCheckBox {
+                Layout.alignment: Qt.AlignHCenter
+            }
         }
     }
 
@@ -124,6 +135,7 @@ actually contain a wealth of useful information.<nl />Backtraces are commonly
 used during interactive and post-mortem debugging.</para>`)
             }
         }
+
         QQC2.TextArea {
             id: traceArea
             Layout.fillWidth: true

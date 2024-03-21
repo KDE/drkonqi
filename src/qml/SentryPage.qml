@@ -54,20 +54,29 @@ Kirigami.Page {
             }
         }
 
-        QQC2.CheckBox {
+        Kirigami.FormLayout {
             Layout.alignment: Qt.AlignHCenter
-            checked: Settings.sentry
-            text: i18nc("@label", "Always report crashes automatically in the future")
-            onToggled: {
-                Settings.sentry = checked
-                Settings.save()
-            }
 
-            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nc("@info:tooltip",
+            QQC2.CheckBox {
+                Kirigami.FormData.label: i18nc("@label other side of row 'in the future: [x] submit stuff automatically", "In the future:")
+
+                checked: Settings.sentry
+                text: i18nc("@label", "Automatically report crashes")
+                onToggled: {
+                    Settings.sentry = checked
+                    Settings.save()
+                }
+
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nc("@info:tooltip",
 `Always automatically submit a crash report to KDE's crash tracking system. No manual input required.
 You will not receive any more crash notifications.`)
+            }
+
+            DownloadSymbolsCheckBox {
+                Layout.alignment: Qt.AlignLeft
+            }
         }
 
         QQC2.ScrollView {
