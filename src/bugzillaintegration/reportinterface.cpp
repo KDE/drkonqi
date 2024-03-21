@@ -335,7 +335,8 @@ void ReportInterface::prepareEventPayload()
             breadcrumb.insert(u"type"_s, u"debug"_s);
             breadcrumb.insert(u"category"_s, logEntry.value("QT_CATEGORY"_ba, "default"_ba));
             breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
-            breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba)));
+            // PRIORITY isn't a builtin field, it may be missing. Assume info (6) when it is missing.
+            breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba, "6"_ba)));
             auto ok = false;
             auto realtime = logEntry.value("_SOURCE_REALTIME_TIMESTAMP"_ba).toULongLong(&ok);
             if (ok && realtime > 0) {
