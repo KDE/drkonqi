@@ -196,6 +196,21 @@ class SentryFrame:
             'vars': SentryVariables(self.frame).to_dict()
         }
 
+'''Used when the stack trace was clamped because there are too many frames'''
+class ClampFrame:
+    def function(self):
+        return None
+
+    def type(self):
+        return None
+
+    def to_dict(self):
+        return {
+            'function': 'drkonqiStackTraceDepthExhaustedFramesAreMissingHere()',
+            'context_line': '... drkonqi stack trace depth exhausted',
+            'in_app': True,
+        }
+
 class SentryRegisters:
     def __init__(self, gdb_frame):
         self.frame = gdb_frame
@@ -256,7 +271,23 @@ class SentryTrace:
         self.crashed = self.is_crashed # different from is_crashed (=input) this indicates if we stumbled over the kcrash handler
 
     def to_dict(self):
-        frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(self.frame) ]
+        # Give em the clamps! When there are too many frames we cut them in the middle to prevent oversized payloads.
+        start_frames = []
+        end_frames = []
+        for frame in gdb.FrameIterator.FrameIterator(self.frame):
+            if len(start_frames) < 100:
+                start_frames.append(frame)
+            else:
+                end_frames.append(frame)
+                while len(end_frames) > 28:
+                    end_frames.pop(0)
+        frames = [ SentryFrame(frame) for frame in start_frames ]
+        if len(end_frames) > 0:
+            frames += [ ClampFrame() ]
+            frames += [ SentryFrame(frame) for frame in end_frames ]
+
+        print("frames!!!!!", len(frames), len(start_frames), len(end_frames))
+
         self.lock_reasons = {}
         self.was_main_thread = False
 
