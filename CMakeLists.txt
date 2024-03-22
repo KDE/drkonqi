@@ -58,9 +58,8 @@ find_package(
         StatusNotifierItem
 )
 
-ecm_find_qmlmodule(org.kde.kirigami 2.19)
+ecm_find_qmlmodule(org.kde.kirigami 2.20)
 ecm_find_qmlmodule(org.kde.kitemmodels 1.0)
-ecm_find_qmlmodule(org.kde.kcmutils 1.0)
 ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 
 find_package(Python3 3.8 COMPONENTS Interpreter)

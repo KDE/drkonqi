@@ -4,10 +4,9 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import org.kde.drkonqi 1.0
-import org.kde.kcmutils as KCM // why ContextualHelpButton is in kcm is anyone's guess
 
 Kirigami.Page {
     id: page
@@ -30,7 +29,7 @@ Kirigami.Page {
                     text: i18nc("@info", "Title of the bug report:")
                 }
 
-                KCM.ContextualHelpButton {
+                Kirigami.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip examples of good bug report titles",
 `<subtitle>Examples of good titles:</subtitle>
 <list>
@@ -56,7 +55,7 @@ Kirigami.Page {
                 text: i18nc("@info", "Information about the crash:")
             }
 
-            KCM.ContextualHelpButton {
+            Kirigami.ContextualHelpButton {
                 toolTipText: xi18nc("@info",
 `<subtitle>Describe in as much detail as possible the crash circumstances:</subtitle>
 <list>
