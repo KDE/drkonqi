@@ -326,6 +326,8 @@ void ReportInterface::prepareEventPayload()
     // replace the timestamp with the real timestamp (possibly originating in journald)
     hash.insert(u"timestamp"_s, DrKonqi::crashedApplication()->datetime().toUTC().toString(Qt::ISODateWithMs));
 
+    bool hadSomeVerbosity = false;
+
     {
         QList<QVariant> breadcrumbs;
         const auto logs = DrKonqi::crashedApplication()->m_logs;
@@ -333,10 +335,12 @@ void ReportInterface::prepareEventPayload()
             QVariantHash breadcrumb;
 
             breadcrumb.insert(u"type"_s, u"debug"_s);
-            breadcrumb.insert(u"category"_s, logEntry.value("QT_CATEGORY"_ba, "default"_ba));
+            const auto category = logEntry.value("QT_CATEGORY"_ba, "default"_ba);
+            breadcrumb.insert(u"category"_s, category);
             breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
             // PRIORITY isn't a builtin field, it may be missing. Assume info (6) when it is missing.
-            breadcrumb.insert(u"level"_s, journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba, "6"_ba)));
+            const auto level = journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba, "6"_ba));
+            breadcrumb.insert(u"level"_s, level);
             auto ok = false;
             auto realtime = logEntry.value("_SOURCE_REALTIME_TIMESTAMP"_ba).toULongLong(&ok);
             if (ok && realtime > 0) {
@@ -346,6 +350,11 @@ void ReportInterface::prepareEventPayload()
             }
 
             breadcrumbs.push_back(breadcrumb);
+
+            // Add an identifier tag if we had some debug output, suggesting some degree of verbosity
+            if (level == "debug"_ba && category != "default"_ba) {
+                hadSomeVerbosity = true;
+            }
         }
         std::reverse(breadcrumbs.begin(), breadcrumbs.end());
         hash.insert(u"breadcrumbs"_s, breadcrumbs);
@@ -357,9 +366,18 @@ void ReportInterface::prepareEventPayload()
         context.insert(u"gpu"_s,
                        QVariantHash{
                            {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
-                           {u"version"_s, QGuiApplication::platformName()},
+                           {u"version"_s, QGuiApplication::platformName()}, // NOTE: drkonqi gets invoked with the same platform as the crashed app
                        });
         hash.insert(CONTEXTS_KEY, context);
+    }
+
+    {
+        constexpr auto TAGS_KEY = "tags"_L1;
+        auto tags = hash.take(TAGS_KEY).toHash();
+        tags.insert(u"some_verbosity"_s, hadSomeVerbosity);
+        // Tag the gui platform as well because the version from the gpu field cannot be easily filtered for
+        tags.insert(u"gui_platform"_s, QGuiApplication::platformName()); // NOTE: drkonqi gets invoked with the same platform as the crashed app
+        hash.insert(TAGS_KEY, tags);
     }
 
     if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
