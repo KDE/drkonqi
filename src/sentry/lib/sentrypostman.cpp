@@ -91,7 +91,7 @@ void SentryPostman::post(const QString &path, const QString &filename, const QDa
     QObject::connect(reply, &SentryReply::finished, this, [transfer] {
         transfer.reply->deleteLater();
         qCDebug(SENTRY_DEBUG) << transfer.reply->error();
-        if (transfer.reply->error() < QNetworkReply::ContentAccessDenied /* retry network and proxy layer issues */) {
+        if (transfer.reply->error() != QNetworkReply::NoError) {
             qCWarning(SENTRY_DEBUG) << transfer.reply->error() << transfer.reply->errorString();
             return;
         }
