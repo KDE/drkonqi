@@ -9,11 +9,8 @@ After=plasma-core.target
 After=drkonqi-coredump-launcher.socket
 
 [Service]
-# wait until system has hopefully settled down from login
-ExecStartPre=/usr/bin/sleep 60
-ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-processor --pickup --uid %U
-TimeoutStartSec=90
-RuntimeMaxSec=31 minutes
+ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-processor --settle-first --pickup --uid %U
+RuntimeMaxSec=30 minutes
 
 [Install]
 WantedBy=plasma-core.target
