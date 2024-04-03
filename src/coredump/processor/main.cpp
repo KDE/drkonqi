@@ -3,6 +3,8 @@
     SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 */
 
+#include <thread>
+
 #include <QCommandLineParser>
 #include <QCoreApplication>
 #include <QDebug>
@@ -20,6 +22,7 @@
 #include <coredumpwatcher.h>
 #include <socket.h>
 
+using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 int main(int argc, char **argv)
@@ -32,6 +35,8 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.addHelpOption();
     parser.addVersionOption();
+    QCommandLineOption settleOption("settle-first"_L1, "Wait for system to settle before starting to process."_L1);
+    parser.addOption(settleOption);
     QCommandLineOption pickupOption("pickup"_L1, "Picking up old crashes, don't handle them if you can't tell if they were handled."_L1);
     parser.addOption(pickupOption);
     QCommandLineOption uidOption("uid"_L1, "UID to filter"_L1, "uid"_L1);
@@ -41,10 +46,15 @@ int main(int argc, char **argv)
     QCommandLineOption instanceOption("instance"_L1, "systemd-coredump@.service instance to filter"_L1, "instance"_L1);
     parser.addOption(instanceOption);
     parser.process(app);
+    const bool settle = parser.isSet(settleOption);
     const bool pickup = parser.isSet(pickupOption);
     const QString uid = parser.value(uidOption);
     const QString bootId = parser.value(bootIdOption);
     const QString instance = parser.value(instanceOption);
+
+    if (settle) {
+        std::this_thread::sleep_for(1min);
+    }
 
     auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
     Q_ASSERT(expectedJournal.ret == 0);
