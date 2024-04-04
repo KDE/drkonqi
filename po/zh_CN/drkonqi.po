@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-03-30 19:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -199,14 +199,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "调试器意外退出。"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "无法生成崩溃信息。"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -233,14 +233,14 @@ msgstr ""
 "<strong>请先安装调试器程序 (%1)，然后点击<interface>重新加载</interface>按"
 "钮。</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "安装调试符号包时出错"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -741,7 +741,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能相关的的应用程序自定义设置"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "信息不够详细"
@@ -802,7 +802,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -822,7 +822,7 @@ msgstr ""
 "但它们或许会包含一些有用的线索。<nl />\n"
 "回溯跟踪数据通常也被用于进行交互式和崩溃后调试。</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -839,7 +839,7 @@ msgstr ""
 "请安装所需的软件包(<link url='%2'>文件列表</link>)，然后请点击<interface>重新"
 "加载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -851,7 +851,7 @@ msgstr ""
 "跟踪数据。请安装所需的软件包(<link url='%2'>文件列表</link>)，然后点击"
 "<interface>重新加载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -859,6 +859,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
 "</interface>按钮。</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1157,12 +1171,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "崩溃报告已发送"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "以后总是自动报告崩溃"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Send Automatic Report"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "发送自动报告"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1172,12 +1195,12 @@ msgstr ""
 "总是自动提交崩溃报告到 KDE 崩溃跟踪系统。这不需要任何人工干预。您将不再收到关"
 "于崩溃的通知。"
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "填写关于此崩溃的更多信息…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "发送信息"
@@ -1350,3 +1373,7 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
+
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "以后总是自动报告崩溃"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2011-04-04 08:50+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -240,14 +240,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Debugger je neočekivano završio."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Informacije o padu ne mogu biti prikupljene."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -281,14 +281,14 @@ msgstr ""
 "Morate instalirati paket za debugiranje (%1) i kliknuti na gumb "
 "<interface>Ponovno učitaj</interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Pogreška prilikom instalacije simbola za ispitivanje kvarova."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -914,7 +914,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Prilagođene postavke aplikacije možda su povezane s ovime"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -1001,7 +1001,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -1015,7 +1015,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1042,7 +1042,7 @@ msgstr ""
 "padu programa; instalirajte potrebne pakete i kliknite na gumb "
 "<interface>Ponovno učitaj informacije o padu</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1062,7 +1062,7 @@ msgstr ""
 "rušenju. Instalirajte potrebne pakete (<link url='%2'>lista datoteka</link>) "
 "i kliknite na gumb <interface>Ponovno učitaj</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1075,6 +1075,20 @@ msgid ""
 msgstr ""
 "Morate instalirati paket za debugiranje (%1) i kliknuti na gumb "
 "<interface>Ponovno učitaj</interface>."
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1470,12 +1484,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Pomoćnik za prijavu pada"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@info bug resolution"
+#| msgid "Not a valid report/crash"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Nevaljali izvještaj o kvaru/rušenju"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1483,7 +1506,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "What do you know about the crash?"
@@ -1491,7 +1514,7 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Što znate o rušenju?"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
@@ -2463,10 +2486,6 @@ msgstr "bugstest.kde.org lozinka"
 #~ msgctxt "@info bug resolution"
 #~ msgid "Non-reproducible"
 #~ msgstr "Nemoguće ponoviti"
-
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not a valid report/crash"
-#~ msgstr "Nevaljali izvještaj o kvaru/rušenju"
 
 #~ msgctxt "@info bug resolution"
 #~ msgid "Not caused by a problem in the KDE's Applications or libraries"

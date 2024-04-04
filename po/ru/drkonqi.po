@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-02-04 19:40+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -237,14 +237,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Отладчик аварийно прекратил работу."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Невозможно собрать информацию об ошибке."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -272,14 +272,14 @@ msgstr ""
 "<strong>Сначала установите отладчик (%1), а затем нажмите кнопку "
 "<interface>Обновить</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Не удалось установить отладочные символы"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -798,7 +798,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Особые параметры приложения, которые могут иметь значение"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Недостаточно полезно"
@@ -862,7 +862,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Сохранить"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -885,7 +885,7 @@ msgstr ""
 "вызовов обычно используются\n"
 "для интерактивной отладки и отладки после сбоя.</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -904,7 +904,7 @@ msgstr ""
 "установите необходимые пакеты (<link url='%2'>список файлов</link>) и "
 "нажмите кнопку <interface>Обновить</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -918,7 +918,7 @@ msgstr ""
 "(<link url='%2'>список файлов</link>) и нажмите кнопку <interface>Обновить</"
 "interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -926,6 +926,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Сначала установите отладчик (%1), а затем нажмите "
 "кнопку <interface>Обновить</interface>.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1248,13 +1262,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Сообщение об ошибке отправлено"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
 msgstr ""
-"Автоматически отправлять отчёты об аварийных завершениях работы приложений"
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@info bug resolution"
+#| msgid "Not a valid report/crash"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "неверное сообщение"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1266,14 +1288,14 @@ msgstr ""
 "Последующие уведомления об аварийных завершениях работы приложений будут "
 "скрыты."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr ""
 "Предоставьте дополнительную информацию об аварийном завершении работы "
 "приложения…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Отправить отчёт"
@@ -1452,6 +1474,11 @@ msgstr "Имя пользователя bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Пароль bugstest.kde.org"
+
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr ""
+#~ "Автоматически отправлять отчёты об аварийных завершениях работы приложений"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
@@ -2277,10 +2304,6 @@ msgstr "Пароль bugstest.kde.org"
 #~ msgctxt "@info bug resolution"
 #~ msgid "Duplicate report (Already reported before)"
 #~ msgstr "Дублирующее сообщение (уже было представлено раньше)"
-
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not a valid report/crash"
-#~ msgstr "неверное сообщение"
 
 #~ msgctxt "@info bug resolution"
 #~ msgid "Not caused by a problem in the KDE's Applications or libraries"

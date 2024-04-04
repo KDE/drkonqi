@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2012-07-16 15:55+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -218,14 +218,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "ডিবাগার অপ্রত্যাশিতভাবে বন্ধ হয়ে গেছে।"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "ক্র্যাশ তথ্য উৎ‍পাদন করা যায়নি।"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, fuzzy, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -253,14 +253,14 @@ msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "ত্রুটিমুক্ত করা চিহ্নের ইনস্টলেশনের সময় ত্রুটি"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, fuzzy, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -826,7 +826,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "অ্যাপলিকেশনের স্বনির্বাচিত মানসমূহ যে সম্বন্ধস্থাপন করা হয়ত যাবে"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -898,7 +898,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 #, fuzzy
 msgctxt "@info"
 msgid ""
@@ -918,7 +918,7 @@ msgstr ""
 "তারা কার্যকর তথ্যের একটি সম্পদ প্রকৃতপক্ষে ধারণ করতে পারে।<br />Backtraces ক্রিয়া-"
 "প্রতিক্রিয়াশীল এবং post-mortem ত্রুটিমুক্তকরণের সময় সাধারণভাবে ব্যবহার করা হয়।</p>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -937,7 +937,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -951,7 +951,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -960,6 +960,20 @@ msgid ""
 msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1283,12 +1297,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "ক্র্যাশ রিপোর্টিং সহকারী"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@info bug resolution"
+#| msgid "Not a valid report/crash"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "এটি একটি বৈধ ক্র্যাশ বা রিপোর্ট নয়"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1296,7 +1319,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1304,7 +1327,7 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "বাগ রিপোর্টিং সম্বন্ধে তথ্য"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
@@ -2225,10 +2248,6 @@ msgstr ""
 #~ msgctxt "@info bug resolution"
 #~ msgid "Duplicate report (Already reported before)"
 #~ msgstr "নকল রিপোর্ট (ার পূর্বে ইতিমধ্যে রিপোর্ট করেছিল)"
-
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not a valid report/crash"
-#~ msgstr "এটি একটি বৈধ ক্র্যাশ বা রিপোর্ট নয়"
 
 #~ msgctxt "@info bug resolution"
 #~ msgid "Not caused by a problem in the KDE's Applications or libraries"

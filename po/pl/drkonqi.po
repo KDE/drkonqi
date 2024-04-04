@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2023-12-23 13:53+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nie udało się zebrać szczegółów o usterce."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a następnie "
 "nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Błąd podczas wgrywania symboli diagnostycznych"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -781,7 +781,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Niezwykłe ustawienia programu, które mogą mieć znaczenie"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niewystarczająco użyteczne"
@@ -845,7 +845,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -868,7 +868,7 @@ msgstr ""
 "używane podczas diagnostyki interaktywnej lub po zakończeniu pracy programu."
 "</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -887,7 +887,7 @@ msgstr ""
 "ślad wykonywania; wgraj potrzebne pakiety (<link url='%2'>lista plików</"
 "link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -901,7 +901,7 @@ msgstr ""
 "(<link url='%2'>spis pakietów</link>) i naciśnij na przycisk "
 "<interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -910,6 +910,20 @@ msgstr ""
 "<emphasis strong='true'>Najpierw musisz zainstalować program diagnostyczny "
 "(%1), a następnie nacisnąć na przycisk <interface>Wczytaj ponownie</"
 "interface>.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1226,12 +1240,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Wysłano zgłoszenie usterki"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "Zawsze zgłaszaj usterki samem w przyszłości"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@info bug resolution"
+#| msgid "Not a valid report/crash"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Nieprawidłowe zgłoszenie/błąd"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1242,12 +1265,12 @@ msgstr ""
 "wymagana żadna ręczna obsługa.\n"
 "Nie będziesz też więcej otrzymywać powiadomień o usterkach."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Powiedz nam więcej o tym jak się wysypało…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Wyślij wiadomość"
@@ -1422,6 +1445,10 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "Zawsze zgłaszaj usterki samem w przyszłości"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
@@ -2231,10 +2258,6 @@ msgstr "bugstest.kde.org hasło"
 #~ msgctxt "@info bug resolution"
 #~ msgid "Duplicate report (Already reported before)"
 #~ msgstr "Istniejące zgłoszenie (zgłoszono już wcześniej)"
-
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not a valid report/crash"
-#~ msgstr "Nieprawidłowe zgłoszenie/błąd"
 
 #~ msgctxt "@info bug resolution"
 #~ msgid "Not caused by a problem in the KDE's Applications or libraries"

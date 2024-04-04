@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2023-08-15 00:49+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -240,14 +240,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ο αποσφαλματωτής τερματίστηκε απροσδόκητα."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Οι πληροφορίες κατάρρευσης δεν μπόρεσαν να δημιουργηθούν."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -278,14 +278,14 @@ msgstr ""
 "και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</interface>.</"
 "strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Σφάλμα κατά την εγκατάσταση των συμβόλων αποσφαλμάτωσης"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -817,7 +817,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Προσαρμοσμένες ρυθμίσεις της εφαρμογής που πιθανόν να σχετίζονται"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Δεν είναι επαρκώς χρήσιμη"
@@ -885,7 +885,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -909,7 +909,7 @@ msgstr ""
 "κατά τη διάρκεια της διαδραστικής και της «μετά-θάνατον» αποσφαλμάτωσης.</"
 "para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -939,7 +939,7 @@ msgstr ""
 "url='%2'>λίστα αρχείων</link>) και πατήστε το κουμπί "
 "<interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -959,7 +959,7 @@ msgstr ""
 "κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link url='%2'>λίστα "
 "αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -968,6 +968,20 @@ msgstr ""
 "<emphasis strong='true'>Πρέπει πρώτα να εγκαταστήσετε την εφαρμογή "
 "απασφαλματωτή (%1) και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</"
 "interface>.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1323,12 +1337,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Η αναφορά σφάλματος απεστάλη "
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Automatically submit crash data"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Αυτόματη υποβολή δεδομένων κατάρρευση"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1336,7 +1359,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "What do you know about the crash?"
@@ -1344,7 +1367,7 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Τι γνωρίζετε για την κατάρρευση;"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
@@ -1685,10 +1708,6 @@ msgstr "bugstest.kde.org κωδικός"
 #~ msgctxt "@action"
 #~ msgid "Restart Application"
 #~ msgstr "Επανεκκίνηση Εφαρμογής"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "Αυτόματη υποβολή δεδομένων κατάρρευση"
 
 #~| msgctxt ""
 #~| "@info Note the time information is divided into date and time parts"

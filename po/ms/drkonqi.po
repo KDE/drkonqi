@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2010-07-18 21:35+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -190,14 +190,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr ""
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr ""
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, fuzzy, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -221,14 +221,14 @@ msgid ""
 "the <interface>Reload</interface> button.</strong>"
 msgstr "Anda hingga dan<interface> Ulangmuat Maklumat</interface>."
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Guna hingga henti."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -760,7 +760,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -829,7 +829,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -843,7 +843,7 @@ msgid ""
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -858,7 +858,7 @@ msgstr ""
 "<link url='%1'> hingga</link> hingga hingga a Selepas<interface> Ulangmuat "
 "Maklumat</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -870,13 +870,27 @@ msgstr ""
 "<link url='%1'> hingga</link> hingga hingga a Selepas<interface> Ulangmuat "
 "Maklumat</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr "Anda hingga dan<interface> Ulangmuat Maklumat</interface>."
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 #, fuzzy
@@ -1175,12 +1189,19 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Pembantu"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Tidak sah"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1188,7 +1209,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1196,7 +1217,7 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Maklumat mengenai laporan pepijat"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
@@ -1882,11 +1903,6 @@ msgstr ""
 #~ "Backtrace of the crash I experienced:\n"
 #~ "\n"
 #~ msgstr "Jejakundur bagi I am:"
-
-#, fuzzy
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not a valid report/crash"
-#~ msgstr "Tidak sah"
 
 #, fuzzy
 #~ msgctxt "@info bug report title (quoted)"

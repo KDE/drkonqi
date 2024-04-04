@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 20:14+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -208,14 +208,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "디버거가 예상치 않게 종료되었습니다."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "충돌 정보를 만들 수 없습니다."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -243,14 +243,14 @@ msgstr ""
 "<strong>디버거 패키지(%1)를 설치한 다음 <interface>새로 고침</interface> 단추"
 "를 클릭하십시오.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "디버그 기호 설치 중 오류 발생"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -755,7 +755,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "연관될 수도 있는 사용자 정의 설정"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
@@ -816,7 +816,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "저장"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -836,7 +836,7 @@ msgstr ""
 "들어 있을 수도 있습니다.<nl />역추적은 여러 디버깅 과정에서 사용됩니다.</"
 "para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -854,7 +854,7 @@ msgstr ""
 "필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록</link>) "
 "<interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -866,7 +866,7 @@ msgstr ""
 "는 방법을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>파"
 "일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -874,6 +874,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>디버거 앱(%1)을 설치한 다음 <interface>새로 고침</"
 "interface> 단추를 클릭하십시오.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1182,12 +1196,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "충돌 보고 보냄"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "앞으로 항상 자동으로 충돌 보고"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Automatically submit crash data"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "자동으로 충돌 데이터 제출"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1198,12 +1221,12 @@ msgstr ""
 "필요 없습니다.\n"
 "더 이상 충돌 알림을 받지 않게 됩니다."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "충돌에 대해서 알려 주십시오…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "메시지 보내기"
@@ -1378,6 +1401,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 암호"
 
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "앞으로 항상 자동으로 충돌 보고"
+
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
 #~ msgstr "중복 가능성 있는 버그 찾기"
@@ -1522,10 +1549,6 @@ msgstr "bugstest.kde.org 암호"
 #~ msgctxt "@action"
 #~ msgid "Restart Application"
 #~ msgstr "앱 다시 시작"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "자동으로 충돌 데이터 제출"
 
 #~ msgctxt ""
 #~ "@info Note the time information is divided into date and time parts"

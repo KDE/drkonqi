@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1676331 2024-03-24 01:08:18Z scripty $
+# $Id: drkonqi.po 1677078 2024-04-04 01:08:38Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2023-12-08 07:47+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -226,14 +226,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Razhroščevalnik je nepričakovano končal."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Podatkov o sesutju ni bilo mogoče ustvariti."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -263,14 +263,14 @@ msgstr ""
 "<strong>Najprej morate namestiti razhroščevalni program (%1) in nato "
 "klikniti na gumb <interface>Znova naloži</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Napaka med nameščanjem razhroščevalnih simbolov"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -789,7 +789,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Nastavitve programa po meri, ki bi lahko bile povezane"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ne dovolj koristno"
@@ -853,7 +853,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Shrani"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -874,7 +874,7 @@ msgstr ""
 "uporabljajo med\n"
 "interaktivnim razhroščevanjem ali pa razhroščevanjem po sesutju.</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -892,7 +892,7 @@ msgstr ""
 "povratno sled; namestite zahtevane pakete (<link url='%2'>seznam datotek</"
 "link>) in kliknite gumb <interface>Znova naloži</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -905,7 +905,7 @@ msgstr ""
 "namestite zahtevane pakete (<link url='%2'>seznam datotek</link>) in "
 "kliknite gumb <interface>Znova naloži</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -913,6 +913,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Najprej morate namestiti razhroščevalni program (%1) "
 "in nato klikniti na gumb <interface>Znova naloži</interface>.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1226,12 +1240,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Poročilo o sesutju poslano"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "V bodoče vedno samodejno poročaj o sesutjih"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Automatically submit crash data"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Samodejno predloži podatke o sesutju"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1242,12 +1265,12 @@ msgstr ""
 "Ročni vnos ni potreben.\n"
 "Ne boste več prejemali obvestil o sesutjih."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Povejte nam več o sesutju…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Pošlji sporočilo"
@@ -1428,6 +1451,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org geslo"
 
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "V bodoče vedno samodejno poročaj o sesutjih"
+
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
 #~ msgstr "Poiščite morebitna podvojena poročila"
@@ -1575,10 +1602,6 @@ msgstr "bugstest.kde.org geslo"
 #~ msgctxt "@action"
 #~ msgid "Restart Application"
 #~ msgstr "Znova zaženi aplikacijo"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "Samodejno predloži podatke o sesutju"
 
 #~ msgctxt ""
 #~ "@info Note the time information is divided into date and time parts"

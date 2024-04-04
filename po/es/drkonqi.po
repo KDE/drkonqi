@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2023-12-09 01:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -234,14 +234,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "El proceso depurador ha finalizado inesperadamente."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "No se ha podido generar la información sobre el fallo."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -270,14 +270,14 @@ msgstr ""
 "<strong>Debe instalar la aplicación de depuración (%1) y hacer clic en el "
 "botón <interface>Recargar</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Error durante la instalación de los símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -800,7 +800,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Preferencias de la aplicación que podrían estar relacionadas"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "No es suficientemente útil"
@@ -864,7 +864,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Guardar"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -885,7 +885,7 @@ msgstr ""
 "Las trazas inversas se suelen usar durante las sesiones de depuración "
 "interactivas y <i>post mortem</i>.</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -903,7 +903,7 @@ msgstr ""
 "inversa útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
 "archivos</link>), pulse el botón <interface>Volver a cargar</interface>."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -916,7 +916,7 @@ msgstr ""
 "necesarios (<link url='%2'>lista de archivos</link>) y pulse el botón "
 "<interface>Volver a cargar</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -924,6 +924,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Primero debe instalar la aplicación de depuración "
 "(%1) y pulsar el botón <interface>Volver a cargar</interface>.</emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1244,12 +1258,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Informe de fallo enviado"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "Informar siempre de fallos automáticamente en el futuro"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Automatically submit crash data"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Enviar automáticamente los datos del fallo"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1260,12 +1283,12 @@ msgstr ""
 "de fallos de KDE. No se necesita introducir datos de forma manual.\n"
 "No volverá a recibir más notificaciones de fallos."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Díganos más sobre el fallo..."
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Enviar mensaje"
@@ -1447,6 +1470,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contraseña de bugstest.kde.org"
 
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "Informar siempre de fallos automáticamente en el futuro"
+
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
 #~ msgstr "Lista de posibles informes duplicados"
@@ -1594,10 +1621,6 @@ msgstr "Contraseña de bugstest.kde.org"
 #~ msgctxt "@action"
 #~ msgid "Restart Application"
 #~ msgstr "Reiniciar la aplicación"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "Enviar automáticamente los datos del fallo"
 
 #~ msgctxt ""
 #~ "@info Note the time information is divided into date and time parts"

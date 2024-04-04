@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-24 00:39+0000\n"
+"POT-Creation-Date: 2024-04-04 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 20:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -229,14 +229,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Hata ayıklayıcıdan beklenmedik bir şekilde çıkıldı."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:201
-#: qml/DeveloperPage.qml:205
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
+#: qml/DeveloperPage.qml:217
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Çökme bilgileri oluşturulamadı."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:202
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -265,14 +265,14 @@ msgstr ""
 "<strong>Hata ayıklayıcı paketini (%1) kurun ve <interface>Yeniden Yükle</"
 "interface> düğmesine basın.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:103
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:229
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -789,7 +789,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "İlgili olabilecek özelleştirilmiş uygulama ayarları"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:222
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Yeteri Kadar Kullanışlı Değil"
@@ -851,7 +851,7 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Kaydet"
 
-#: qml/DeveloperPage.qml:120
+#: qml/DeveloperPage.qml:131
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -873,7 +873,7 @@ msgstr ""
 "etkileşimli ve olay sonrası hata ayıklama sırasında yaygın olarak kullanılır."
 "</para>"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -892,7 +892,7 @@ msgstr ""
 "(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
 "interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:195
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -905,7 +905,7 @@ msgstr ""
 "(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
 "interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -914,6 +914,20 @@ msgstr ""
 "<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurmanız (%1) "
 "ve <interface>Yeniden Yükle</interface> düğmesine basmanız gerekiyor.</"
 "emphasis>"
+
+#: qml/DownloadSymbolsCheckBox.qml:16
+msgctxt "@label"
+msgid "Automatically download debug symbols to enhance crash reports"
+msgstr ""
+
+#: qml/DownloadSymbolsCheckBox.qml:25
+msgctxt "@info:tooltip"
+msgid ""
+"Crash reports can be of greater value if additional debugging resources are "
+"downloaded from your distributor first.\n"
+"This causes downloads of unknown size when a crash occurs. This is skipped "
+"automatically when using a metered internet connection."
+msgstr ""
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1232,12 +1246,21 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Çökme Raporu Gönderildi"
 
-#: qml/SentryPage.qml:60
-msgctxt "@label"
-msgid "Always report crashes automatically in the future"
-msgstr "Gelecekte çökmeleri her zaman kendiliğinden bildir"
+#: qml/SentryPage.qml:61
+msgctxt ""
+"@label other side of row 'in the future: [x] submit stuff automatically"
+msgid "In the future:"
+msgstr ""
 
-#: qml/SentryPage.qml:69
+#: qml/SentryPage.qml:64
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Automatically submit crash data"
+msgctxt "@label"
+msgid "Automatically report crashes"
+msgstr "Çökme verisini kendiliğinden gönder"
+
+#: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system. "
@@ -1248,12 +1271,12 @@ msgstr ""
 "gönderin. Elle girdi gerekmez.\n"
 "Herhangi bir çökme bildirimi almazsınız."
 
-#: qml/SentryPage.qml:80
+#: qml/SentryPage.qml:89
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Çökme hakkında bize daha fazla bilgi verin…"
 
-#: qml/SentryPage.qml:91
+#: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "İletiyi Gönder"
@@ -1433,6 +1456,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org parolası"
 
+#~ msgctxt "@label"
+#~ msgid "Always report crashes automatically in the future"
+#~ msgstr "Gelecekte çökmeleri her zaman kendiliğinden bildir"
+
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
 #~ msgstr "Olası Aynı Raporları Ara"
@@ -1580,10 +1607,6 @@ msgstr "bugstest.kde.org parolası"
 #~ msgctxt "@action"
 #~ msgid "Restart Application"
 #~ msgstr "Uygulamayı Yeniden Başlat"
-
-#~ msgctxt "@label"
-#~ msgid "Automatically submit crash data"
-#~ msgstr "Çökme verisini kendiliğinden gönder"
 
 #~ msgctxt ""
 #~ "@info Note the time information is divided into date and time parts"
