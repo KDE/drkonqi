@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2024-01-20 18:58+0400\n"
+"PO-Revision-Date: 2024-04-04 11:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -889,7 +889,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "نزل رموز التنقيح آليا حتى تحسن من تقرير الانهيار"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -899,6 +899,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"يمكن أن تكون تقارير الأعطال ذات قيمة أكبر إذا نُزلت موارد تقيح إضافية من "
+"الموزع الخاص بك أولاً.\n"
+"يؤدي هذا إلى تنزيلات ذات حجم غير معروف عند حدوث انهيار.  سيُتخطى هذا تلقائيًا "
+"عند استخدام اتصال إنترنت محدود."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1210,15 +1214,12 @@ msgstr "أرسل تقرير العلة"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "في المستقبل:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "ليس تقريرا/انهيارا صحيحا"
+msgstr "بلغ آليا عن الانهيارات"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"

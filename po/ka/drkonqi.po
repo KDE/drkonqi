@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 06:28+0100\n"
+"PO-Revision-Date: 2024-04-04 08:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -901,6 +901,7 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"ავარიის ანგარიშების გასაფართოებლად გამართვის სიმბოლოების ავტომატური გადმოწერა"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -910,6 +911,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"ავარის ანგარიშებს მეტი მნიშვნელობა ექნება, თუ თქვენი დისტრიბუტორისგან "
+"გამართვის დამატებით რესურსებს გადმოწერთ.\n"
+"ეს უცნობი ზომის გადმოწერებს იწვევს, როცა ავარია ხდება. ავტომატურად "
+"გამოტოვებულია, როცა ინტერნეტკავშირი გაზომვადია."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1234,15 +1239,12 @@ msgstr "ავარიის ანგარიში გაგზავნი�
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "მომავალში:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "ავარიის მონაცემების ავტომატური გადაცემა"
+msgstr "ავარიის ავტომატური გადაცემა"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"

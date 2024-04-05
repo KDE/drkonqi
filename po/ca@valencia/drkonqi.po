@@ -1,11 +1,11 @@
 # Translation of drkonqi.po to Catalan (Valencian)
-# Copyright (C) 2000-2023 This_file_is_part_of_KDE
+# Copyright (C) 2000-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2001, 2002, 2004, 2005, 2006.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2010.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2014, 2017, 2019, 2020, 2021, 2022.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 11:55+0100\n"
+"PO-Revision-Date: 2024-04-04 13:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -929,6 +929,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Baixa automàticament els símbols de depuració per a millorar els informes de "
+"fallada"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -938,6 +940,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Els informes de fallada poden ser de més valor si primer es descarreguen els "
+"recursos de depuració addicionals des del vostre distribuïdor.\n"
+"Açò provoca baixades de mida desconeguda quan es produïx una fallada. Açò "
+"s'omet automàticament quan s'utilitza una connexió amb Internet mesurada."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1259,15 +1265,12 @@ msgstr "L'informe de fallada s'ha enviat"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "En el futur:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Envia un informe automàtic"
+msgstr "Informa automàticament de les fallades"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1464,7 +1467,3 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
-
-#~ msgctxt "@label"
-#~ msgid "Always report crashes automatically in the future"
-#~ msgstr "Informa sempre les fallades automàticament en el futur"

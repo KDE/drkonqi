@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1677078 2024-04-04 01:08:38Z scripty $
+# $Id: drkonqi.po 1677165 2024-04-05 01:08:44Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 07:47+0100\n"
+"PO-Revision-Date: 2024-04-04 07:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -918,6 +918,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Samodejno prenesi simbole za odpravljanje napak za izboljšanje poročila o "
+"zrušitvah"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -927,6 +929,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Poročila o zrušitvah imajo lahko večjo vrednost, če od vašega distributerja "
+"najprej prenesete dodatne vire za odpravljanje napak.\n"
+"To povzroči prenose neznane velikosti, ko pride do zrušitve. Pri uporabi "
+"merjene internetne povezave se to samodejno preskoči."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1244,15 +1250,12 @@ msgstr "Poročilo o sesutju poslano"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "V bodoče:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Samodejno predloži podatke o sesutju"
+msgstr "Samodejno poročaj o zrušitvah"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"

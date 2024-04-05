@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 11:30+0100\n"
+"PO-Revision-Date: 2024-04-04 13:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2014 t/m 2019;2021 t/m 2023"
+msgstr "Freek de Kruijf - 2014 t/m 2019;2021 t/m 2024"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -909,7 +909,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "Automatisch debugsymbolen downloaden om crashrapporten te verbeteren"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -919,6 +919,11 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Crashrapporten kunnen van grotere waarde zijn als additionele hulpbronnen "
+"voor debuggen eerst zijn gedownload uit uw distributie.\n"
+"Dit veroorzaakt het downloaden van onbekende grootte wanneer een crash "
+"plaatsvindt. Dit wordt automatisch overgeslagen wanneer een bemeterde "
+"internetconnectie wordt gebruikt."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1240,15 +1245,12 @@ msgstr "Crashrapport verzonden"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "In de toekomst:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Automatisch gegevens over crash indienen"
+msgstr "Automatisch crashes rapporteren"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"

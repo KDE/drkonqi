@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 20:01+0300\n"
+"PO-Revision-Date: 2024-04-04 16:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -110,7 +110,7 @@ msgid ""
 "they might actually contain a wealth of useful information.<br />Backtraces "
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
-"<h2>Bir \"geri iz\" nedir?</h2><p>Bir geri iz temel olarak çöktüğü zaman "
+"<h2>Bir “geri iz” nedir?</h2><p>Bir geri iz temel olarak çöktüğü zaman "
 "uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler "
 "bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız görünebilir "
 "ama aslında oldukça yararlı bilgiler içeriyor olabilirler.<br />Geri izler "
@@ -121,13 +121,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading..."
-msgstr "Yükleniyor..."
+msgstr "Yükleniyor…"
 
 #: backtracewidget.cpp:138
 #, kde-format
 msgctxt "@info:status"
 msgid "Generating backtrace... (this may take some time)"
-msgstr "Geri iz oluşturuluyor... (biraz zaman alabilir)"
+msgstr "Geri iz oluşturuluyor… (biraz zaman alabilir)"
 
 #: backtracewidget.cpp:189
 #, kde-format
@@ -205,7 +205,7 @@ msgstr ""
 "Eksik hata ayıklama paketlerini kendiliğinden kurmak için <interface>Hata "
 "Ayıklama Simgelerini Kur</interface> düğmesine tıklayabilirsiniz. Eğer bu "
 "yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
-"url='%1'>Nasıl yararlı hata raporları oluşturulur</link>  yazısını okuyun; "
+"url='%1'>Nasıl yararlı hata raporları oluşturulur</link> yazısını okuyun; "
 "gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
 "<interface>Yeniden Yükle</interface> düğmesine basın."
 
@@ -324,7 +324,7 @@ msgstr "Geçmiş çökmelerin ayrıntılı görünümünü sunar"
 #: coredump/gui/main.cpp:34
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2020-2022, Dr. Konqi Yazarları"
+msgstr "(C) 2020–2022, Dr. Konqi Yazarları"
 
 #: coredump/gui/Patient.cpp:57
 #, kde-format
@@ -382,7 +382,7 @@ msgstr "Genel Görünüm"
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr "Eksik hata ayıklama sembolleri paketleri kurulmak isteniyor..."
+msgstr "Eksik hata ayıklama sembolleri paketleri kurulmak isteniyor…"
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -593,7 +593,7 @@ msgstr ""
 #: main.cpp:156
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "(C) 2000-2018, Dr. Konqi Yazarları"
+msgstr "(C) 2000–2018, Dr. Konqi Yazarları"
 
 #: main.cpp:157
 #, kde-format
@@ -739,7 +739,7 @@ msgstr "Yeniden Dene"
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr "bugs.kde.org ile iletişim kurulmaya çalışılıyor..."
+msgstr "bugs.kde.org ile iletişim kurulmaya çalışılıyor…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -864,14 +864,12 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
-"<subtitle>Bir \"geri iz\" nedir?</subtitle><para>Bir geri iz temel olarak "
-"çöktüğü zaman\n"
-"uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler\n"
-"bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız "
-"görünebilir\n"
-"ama aslında oldukça yararlı bilgiler içeriyor olabilirler.<br />Geri izler\n"
-"etkileşimli ve olay sonrası hata ayıklama sırasında yaygın olarak kullanılır."
-"</para>"
+"<subtitle>Bir “geri iz” nedir?</subtitle><para>Bir geri iz, temel\n"
+"olarak çöktüğü zaman uygulamanın içinde neler olmakta olduğunu anlatır,\n"
+"böylece geliştiriciler bozukluğun nerede başladığını bulabilirler.\n"
+"Bunlar size anlamsız görünebilir; ancak aslında oldukça yararlı bilgiler\n"
+"içeriyor olabilirler.<br />Geri izler etkileşimli ve olay sonrası hata\n"
+"ayıklama sırasında yaygın olarak kullanılır.</para>"
 
 #: qml/DeveloperPage.qml:199
 msgctxt "@info/rich"
@@ -884,13 +882,15 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'>list of files</link>) "
 "and click the <interface>Reload</interface> button."
 msgstr ""
-"Eksik hata ayıklama paketlerini kendiliğinden yüklemek için <interface>Hata "
-"Ayıklama Sembollerini Kur</interface> düğmesine\n"
-"tıklayın. Eğer bu yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek "
-"için lütfen <link url='%1'>Nasıl yararlı hata raporları oluşturulur</link>  "
-"yazısını okuyun; gerekli paketleri kurun\n"
-"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
-"interface> düğmesine basın."
+"Eksik hata ayıklama paketlerini kendiliğinden yüklemek için <interface>Hata\n"
+"Ayıklama Sembollerini Kur</interface> düğmesine tıklayın. Eğer bu yöntem "
+"işe\n"
+"yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
+"url='%1'>Nasıl\n"
+"yararlı hata raporları oluşturulur</link> yazısını okuyun; gerekli "
+"paketleri\n"
+"kurun (<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden "
+"Yükle</interface> düğmesine basın."
 
 #: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
@@ -919,6 +919,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Çökme raporlarını iyileştirmek için hata ayıklama sembollerini kendiliğinden "
+"indir"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -928,6 +930,11 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Ek hata ayıklama özkaynaklarını dağtıcınızdan indirirseniz çökme raporları "
+"daha yararlı bilgiler içerebilir.\n"
+"Bu, bir çökme gerçekleştinde bir miktar indirme yapılması gerekeceği "
+"anlamına gelir. Ölçülü bir internet bağlantısı kullanıyorsanız bu genelde "
+"atlanır."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1212,7 +1219,7 @@ msgstr "Göndermeyi Yeniden Dene"
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr "Hata raporu gönderiliyor..."
+msgstr "Hata raporu gönderiliyor…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1250,15 +1257,12 @@ msgstr "Çökme Raporu Gönderildi"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Gelecekte:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Çökme verisini kendiliğinden gönder"
+msgstr "Çökmeleri kendiliğinden bildir"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1455,172 +1459,3 @@ msgstr "bugstest.kde.org kullanıcı adı"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org parolası"
-
-#~ msgctxt "@label"
-#~ msgid "Always report crashes automatically in the future"
-#~ msgstr "Gelecekte çökmeleri her zaman kendiliğinden bildir"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "Olası Aynı Raporları Ara"
-
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "Olası benzer kayıtlar için veritabanı aranıyor..."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "Gözlemlediğiniz hatanın daha önceden raporlanıp raporlanmadığını "
-#~ "denetleyin. Listedeki bir rapora çift tıklayın ve gözlemlediğiniz hatayla "
-#~ "karşılaştırın. Raporladığınız hatanın daha önce bildirilmiş olan bir hata "
-#~ "ile aynı olduğuna karar verebilir ya da doğrudan bilgilerinizi o hataya "
-#~ "ekleyebilirsiniz."
-
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "Yinelenmiş?"
-
-#~ msgctxt "@label"
-#~ msgid "Are you quite certain your crash is a duplicate of this bug report?"
-#~ msgstr "Çökmenin, bu hata raporunun aynısı olduğundan emin misiniz?"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "Çökme kaydı önceden açılmış"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this action when you are certain that your crash is a duplicate of "
-#~ "this bug report"
-#~ msgstr ""
-#~ "Çökmenin, bu hata kaydının aynısı olduğundan eminseniz bu eylemi kullanın"
-
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "Çökme, aynısı değil"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "Bu çökmenin ilgili olduğunu öner"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "Deneyimlediğiniz çökmenin bu hata kaydı\n"
-#~ "                                     ile benzer/ilişkin olduğunu "
-#~ "belirtmekiçin bu düğmeyi\n"
-#~ "                                     kullanın"
-
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "Bu çökme ilgili değil"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "Sorun Önceden Bildirilmiş"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
-#~ "\"%2\">Hata %2</link> kaydının bir yinelenmişi olarak <link url="
-#~ "\"%1\">Hata %1</link> adresinde bildirilmiş."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "Çökme, halihazırda <emphasis strong='true'>kapatılan</emphasis> <link url="
-#~ "\"%1\">Hata %1</link> olarak bildirilmiş."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "Çökme, halihazırda <link url=\"%2\">Hata %2</link> kaydının <emphasis "
-#~ "strong='true'>aynısı</emphasis> olan <link url=\"%1\">Hata %1</link> "
-#~ "olarak bildirilmiş."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "Çökme, halihazırda <link url=\"%1\">Bug %2</link> kaydının <emphasis "
-#~ "strong='true'>aynısı</emphasis>."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You may choose to add additional information, but you should only do so "
-#~ "if you have new or requested information."
-#~ msgstr ""
-#~ "Ek bilgi eklemeyi seçebilirsiniz; ancak bunu yalnızca yeni veya istenen "
-#~ "bilgi varsa yapın."
-
-#~ msgctxt "@action:button"
-#~ msgid "Close"
-#~ msgstr "Kapat"
-
-#~ msgctxt "@action:button"
-#~ msgid "Attach Additional Information"
-#~ msgstr "Ek Bilgi İliştir"
-
-#~ msgctxt "@action"
-#~ msgid "Report on bugs.kde.org"
-#~ msgstr "bugs.kde.org Adresinde Bildir"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
-#~ "learn how to get a useful backtrace; install the needed packages (<link "
-#~ "url='%2'>\n"
-#~ "list of files</link>) and click the <interface>Reload</interface> button."
-#~ msgstr ""
-#~ "Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
-#~ "hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri "
-#~ "kurun\n"
-#~ "(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
-#~ "interface> düğmesine basın."
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Filename"
-#~ msgstr "Dosya Adı Seç"
-
-#~ msgctxt "@action"
-#~ msgid "Report Bug"
-#~ msgstr "Hata Bildir"
-
-#~ msgctxt "@action"
-#~ msgid "Restart Application"
-#~ msgstr "Uygulamayı Yeniden Başlat"
-
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5</para>"
-#~ msgstr ""
-#~ "<para>Yürütülebilir: <application>%1</application> Süreç Kimliği: %2 "
-#~ "Sinyal: %3 (%4) Zaman: %5</para>"
-
-#~ msgctxt "@title CLI title"
-#~ msgid "DrKonqi Intensive Care"
-#~ msgstr "Dr. Konqi Yoğun Bakım"
-
-#~ msgctxt "@title:window"
-#~ msgid "Intensive Care"
-#~ msgstr "Yoğun Bakım"
