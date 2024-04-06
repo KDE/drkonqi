@@ -17,13 +17,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 17:03+0200\n"
+"PO-Revision-Date: 2024-04-04 08:18+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -889,7 +889,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "להוריד סמלי ניפוי שגיאות אוטומטית כדי להעשיר את דוחות הקריסה"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -899,6 +899,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"דיווחי קריסות יכולים לספק ערך רב יותר אם משאבי ניפוי שגיאות נוספים יתקבלו "
+"מהספק שלך תחילה.\n"
+"יכול לגרום להורדות בגודל בלתי ידוע כשמתרחשת קריסה. נפסח אוטומטית על חיבור "
+"אינטרנט מדוד/מוגבל."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1204,15 +1208,12 @@ msgstr "דוח הקריסה נשלח"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "בעתיד:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "דיווח באג/קריסה לא תקין"
+msgstr "לדווח על קריסות אוטומטית"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
