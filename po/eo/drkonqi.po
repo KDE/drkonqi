@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 19:15+0100\n"
+"PO-Revision-Date: 2024-04-06 22:35+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -907,7 +907,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "Aŭtomate elŝuti sencimigajn simboljon por plikvalitigi paneoraportojn"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -917,6 +917,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Paneraportoj povas esti de pli granda valoro se pliaj sencimigaj rimedoj "
+"unue estas elŝutitaj de via distribuisto.\n"
+"Ĉi tio kaŭzas elŝutojn de nekonata grandeco kiam fiasko okazas. Ĉi tio estas "
+"preterlasita aŭtomate kiam oni uzas mezuritan interretan konekton."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1237,15 +1241,12 @@ msgstr "Sendis Paneoraporton"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "En estonteco:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Sendi Aŭtomatan Raporton"
+msgstr "Aŭtomate raporti paneojn"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1442,7 +1443,3 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
-
-#~ msgctxt "@label"
-#~ msgid "Always report crashes automatically in the future"
-#~ msgstr "Estonte ĉiam raporti paneojn aŭtomate"
