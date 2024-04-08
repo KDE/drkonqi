@@ -83,11 +83,14 @@ public Q_SLOTS:
         }
 
         // Ensure the core is kept secure!
-        Q_ASSERT([&tmpDir]() -> bool {
-            const auto targetDir = tmpDir.path();
-            const auto permissions = std::filesystem::status(targetDir.toStdString()).permissions();
-            return permissions == std::filesystem::perms::owner_all;
-        }());
+        if ([&tmpDir]() -> bool {
+                const auto targetDir = tmpDir.path();
+                const auto permissions = std::filesystem::status(targetDir.toStdString()).permissions();
+                return permissions != std::filesystem::perms::owner_all;
+            }()) {
+            sendErrorReply(QDBusError::InternalError, "Directory permissions unsuitable for save core extraction"_L1);
+            return {};
+        }
 
         const QString coreFileDir = tmpDir.path();
         const QString coreFileTarget = tmpDir.filePath(CORE_NAME);
