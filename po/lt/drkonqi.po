@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2024-01-27 14:14+0200\n"
+"PO-Revision-Date: 2024-04-08 01:57+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -915,6 +915,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Automatiškai atsisiųsti derinimo simbolius, kad būtų patobulinti pranešimai "
+"apie strigtis"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -924,6 +926,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Pranešimai apie strigtis gali būti vertingesni, jei, iš pradžių, iš jūsų "
+"platinamojo paketo bus atsisiųsti papildomi derinimo ištekliai.\n"
+"Kai įvyksta strigtis, tai inicijuoja nežinomo dydžio atsisiuntimus. Tai "
+"automatiškai praleidžiama, kai yra naudojamas ribotų duomenų interneto ryšys."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1246,15 +1252,12 @@ msgstr "Pranešimas apie strigtį išsiųstas"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Ateityje:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Netinkamas pranešimas/strigtis"
+msgstr "Automatiškai pranešti apie strigtis"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1422,7 +1425,7 @@ msgstr "Derintuvės pavadinimas, perduodamas į analizatoriaus gamyklą"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr "Failas, kuriame yra pėdsakas"
+msgstr "Failas, kuriame yra pėdsakas."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format

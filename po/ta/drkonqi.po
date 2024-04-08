@@ -5,13 +5,13 @@
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000.
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# SPDX-FileCopyrightText: 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-08 20:40+0530\n"
+"PO-Revision-Date: 2024-04-07 16:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -762,12 +762,9 @@ msgid "Developer Information"
 msgstr "நிரலாளர்களுக்கான விவரங்கள்"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
-msgstr "தெரிவி"
+msgstr "%1 தனில் தெரிவி"
 
 #: qml/DeveloperPage.qml:35
 msgctxt "@info:tooltip"
@@ -954,9 +951,6 @@ msgid ""
 msgstr ""
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
@@ -1133,12 +1127,9 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "கே.டீ.யீ.க்கு பங்களித்தமைக்கு நன்றி. இச்சாளரத்தை இப்போது நீங்கள் மூடலாம்."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "தரவுக்கு காத்திருக்கிறது…"
+msgstr "முறிவுகுறித்த விவரங்களை சேகரிக்கிறது…"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1149,15 +1140,12 @@ msgstr "பிழையறிக்கை அனுப்ப‍ப்பட்�
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "இனிமேல்:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "தானியக்க பிழையறிக்கையை அனுப்பு"
+msgstr "பிழையறிக்கையைத் தானாக அனுப்பு"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1168,17 +1156,14 @@ msgid ""
 msgstr ""
 
 #: qml/SentryPage.qml:89
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "முறிவைப்பற்றிய விவரங்கள்:"
+msgstr "முறிவைப்பற்றிய விவரங்களை உள்ளிடவும்"
 
 #: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "செய்தியை அனுப்பு"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1212,7 +1197,7 @@ msgstr "என்னை தொடர்புகொள்ளலாம் என 
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
-msgstr ""
+msgstr "இயங்குதள விவரங்களைப் பெற முடியவில்லை"
 
 #: qmlextensions/reproducibilitymodel.cpp:38
 #, kde-format
@@ -1287,12 +1272,10 @@ msgid "Hide"
 msgstr "மறை"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "விவரங்கள்"
+msgstr "விவரங்களை சேர்"
 
 #: statusnotifier.cpp:123
 #, kde-format

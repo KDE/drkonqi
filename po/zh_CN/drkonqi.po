@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
+"PO-Revision-Date: 2024-04-07 00:28\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -863,7 +863,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "自动下载调试符号包以提高崩溃报告价值"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -873,6 +873,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"为了提高崩溃报告的价值，您可以选择自动从软件的发行机构下载额外的调试资源"
+"包。\n"
+"这将在崩溃时自动下载未知大小的软件包。当使用按流量计费网络连接时将不会自动下"
+"载。"
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1175,15 +1179,12 @@ msgstr "崩溃报告已发送"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "未来遇到崩溃时："
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "发送自动报告"
+msgstr "自动报告崩溃"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1373,7 +1374,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@label"
-#~ msgid "Always report crashes automatically in the future"
-#~ msgstr "以后总是自动报告崩溃"
