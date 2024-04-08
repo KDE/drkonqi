@@ -4,12 +4,14 @@
 
 #include <QObject>
 
+class QFile;
+
 class CoredumpExcavator : public QObject
 {
     Q_OBJECT
 public:
     using QObject::QObject;
-    void excavateFromTo(const QString &coreFile, const QString &coreFileTarget);
+    void excavateFromTo(const QString &coreFile, const std::shared_ptr<QFile> &coreFileTarget);
 
 Q_SIGNALS:
     void excavated(int exitCode);

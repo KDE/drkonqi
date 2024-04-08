@@ -36,6 +36,18 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
     const auto coreFileTarget = m_coreDir->filePath(u"core"_s);
     const auto coredumpFileInfo = QFileInfo(coredumpFilename);
 
+    auto coreFile = std::make_shared<QFile>(coreFileTarget);
+    if (coreFile->exists()) {
+        qDebug() << "Core already exists, returning early";
+        Q_EMIT excavated(coreFileTarget);
+        return;
+    }
+    if (!coreFile->open(QFile::WriteOnly, QFile::ReadUser | QFile::WriteUser)) {
+        qWarning() << "Failed to open coreFileTarget" << coreFileTarget << coreFile->errorString();
+        Q_EMIT failed();
+        return;
+    }
+
     if (coredumpFileInfo.isReadable()) {
         auto excavator = new CoredumpExcavator(this);
         connect(excavator, &CoredumpExcavator::excavated, this, [this, coreFileTarget](int exitCode) {
@@ -46,35 +58,18 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             }
             Q_EMIT excavated(coreFileTarget);
         });
-        excavator->excavateFromTo(coredumpFilename, coreFileTarget);
+        excavator->excavateFromTo(coredumpFilename, coreFile);
     } else {
-        if (QFile::exists(coreFileTarget)) {
-            qDebug() << "Core already exists, returning early";
-            Q_EMIT excavated(coreFileTarget);
-            return;
-        }
-
         auto msg = QDBusMessage::createMethodCall("org.kde.drkonqi"_L1, "/"_L1, "org.kde.drkonqi"_L1, "saveCoreToFile"_L1);
 
-        int fd = open(qUtf8Printable(coreFileTarget), O_CREAT | O_WRONLY | O_CLOEXEC, S_IRUSR | S_IWUSR);
-        if (fd < 0) {
-            int err = errno;
-            qWarning() << "Failed to open coreFileTarget" << coreFileTarget << strerror(err);
-            Q_EMIT failed();
-            return;
-        }
-        auto closeFd = qScopeGuard([fd] {
-            close(fd);
-        });
-
-        msg << coredumpFileInfo.fileName() << QVariant::fromValue(QDBusUnixFileDescriptor(fd));
+        msg << coredumpFileInfo.fileName() << QVariant::fromValue(QDBusUnixFileDescriptor(coreFile->handle()));
         constexpr auto timeout = std::chrono::milliseconds(5min).count();
         auto watcher = new QDBusPendingCallWatcher(QDBusConnection::systemBus().asyncCall(msg, timeout));
         QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, coreFileTarget] {
             watcher->deleteLater();
-            QDBusReply<QString> reply = *watcher;
-            qWarning() << reply.isValid() << reply.error() << reply.value();
-            if (!reply.isValid() || reply.value().isEmpty()) {
+            QDBusReply<void> reply = *watcher;
+            qWarning() << reply.isValid() << reply.error();
+            if (!reply.isValid()) {
                 m_coreDir = nullptr;
                 qWarning() << "Failed to excavate core as admin:" << reply.error();
                 Q_EMIT failed();
