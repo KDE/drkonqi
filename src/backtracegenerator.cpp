@@ -130,9 +130,8 @@ void BacktraceGenerator::slotReadInput()
     }
 }
 
-void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus)
+void BacktraceGenerator::resetProcess()
 {
-    // these are useless now
     if (m_proc) {
         m_proc->deleteLater();
         m_proc = nullptr;
@@ -141,6 +140,12 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
         m_temp->deleteLater();
         m_temp = nullptr;
     }
+}
+
+void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    // the process is useless now
+    resetProcess();
 
     // mark the end of the backtrace for the parser
     Q_EMIT newLine(QString());
@@ -182,15 +187,8 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
 {
     qCWarning(DRKONQI_LOG) << "Debugger process had an error" << error << m_proc->program() << m_proc->arguments() << m_proc->environment();
 
-    // we mustn't keep these around...
-    if (m_proc) {
-        m_proc->deleteLater();
-        m_proc = nullptr;
-    }
-    if (m_temp) {
-        m_temp->deleteLater();
-        m_temp = nullptr;
-    }
+    // make very sure the process is getting discarded, otherwise retry operations won't work
+    resetProcess();
 
     switch (error) {
     case QProcess::FailedToStart:
