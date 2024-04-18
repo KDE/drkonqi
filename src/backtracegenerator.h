@@ -86,6 +86,7 @@ private Q_SLOTS:
     void slotOnErrorOccurred(QProcess::ProcessError error);
 
 private:
+    void resetProcess();
     const Debugger m_debugger;
     KProcess *m_proc = nullptr;
     QTemporaryFile *m_temp = nullptr;
