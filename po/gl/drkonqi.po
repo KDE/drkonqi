@@ -11,14 +11,14 @@
 # Xosé <xosecalvo@gmail.com>, 2010.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-09 08:16+0100\n"
+"PO-Revision-Date: 2024-04-21 09:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -924,6 +924,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Descargar automaticamente os símbolos de depuración para mellorar os "
+"informes de quebras."
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -933,6 +935,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Os informes de quebras poden ser máis valiosos se primeiro descarga recursos "
+"de depuración adicionais do seu distribuidor.\n"
+"Isto provoca descargas dun tamaño descoñecido cando se producen quebras. "
+"Omítense automaticamente cando se usa unha conexión de internet con contador."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1250,15 +1256,12 @@ msgstr "Enviouse o informe de quebra"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "No futuro:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Enviar automaticamente os datos da quebra"
+msgstr "Informar automaticamente das quebras"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
