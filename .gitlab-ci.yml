@@ -6,3 +6,19 @@ include:
     file:
       - /gitlab-templates/linux-qt6.yml
       - /gitlab-templates/freebsd-qt6.yml
+
+# SPDX-License-Identifier: BSD-2-Clause
+# SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.org>
+
+reuse:
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: [""]
+  stage: build
+  tags:
+    - Linux
+  interruptible: true
+  script:
+    - cat .kde-reuse-ignore >> .gitignore
+    - git ls-files --exclude-standard --ignored -c --directory | xargs rm
+    - reuse lint
