@@ -33,9 +33,8 @@ DeveloperPage {
                 switch (usefulness) {
                 case BacktraceParser.ReallyUseful:
                 case BacktraceParser.MayBeUseful:
-                // TODO figure out how to best decide whether to move on or not
-                case BacktraceParser.ProbablyUseless:
                     return true
+                case BacktraceParser.ProbablyUseless:
                 case BacktraceParser.Useless:
                 case BacktraceParser.InvalidUsefulness:
                     return false
