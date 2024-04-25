@@ -1,9 +1,9 @@
+# SPDX-FileCopyrightText: 2009, 2010, 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2007, 2008, 2009.
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2012, 2016, 2018, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2011, 2012, 2013, 2014, 2015, 2017, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2009, 2010, 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010, 2011.
 # Hendrik Knackstedt <kn.hendrik@gmail.com>, 2011.
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-21 15:43+0100\n"
+"PO-Revision-Date: 2024-04-15 20:48+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -930,7 +930,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "Debug-Symbole für bessere Absturzberichte automatisch herunterladen"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -940,6 +940,11 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Absturzberichte können von größerem Wert sein, wenn zuerst zusätzliche Debug-"
+"Ressourcen von der Distribution heruntergeladen werden.\n"
+"Das bedeutet das Herunterladen von Daten unbekannter Größe, wenn ein Absturz "
+"auftritt. Bei volumenbasierten Internetverbindungen wird dies automatisch "
+"übersprungen."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1263,15 +1268,12 @@ msgstr "Der Fehlerbericht wurde gesendet"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Künftig:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Kein gültiger Bericht/Absturz"
+msgstr "Fehlerbericht automatisch senden"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
