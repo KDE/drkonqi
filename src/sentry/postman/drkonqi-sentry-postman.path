@@ -7,6 +7,8 @@ Description=Submitting pending crash events
 [Path]
 PathExistsGlob=%C/drkonqi/sentry-envelopes/*
 MakeDirectory=true
+TriggerLimitIntervalSec=30 minutes
+TriggerLimitBurst=4
 
 [Install]
 WantedBy=default.target plasma-core.target
