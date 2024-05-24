@@ -6,19 +6,20 @@
 # Bjarni R. Einarsson <bre@netverjar.is>, 2000.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
+# SPDX-FileCopyrightText: 2024 Gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2016-04-08 22:57+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-13 11:55+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -28,12 +29,16 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Richard Allen, Bjarni R. Einarsson, Smári P. McCarthy, Sveinn í Felli"
+msgstr ""
+"Richard Allen, Bjarni R. Einarsson, Smári P. McCarthy, Sveinn í Felli, "
+"Guðmundur Erlingsson"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ra@ra.is, bre@netverjar.is, spm@vlug.eyjar.is, sv1@fellsnet.is"
+msgstr ""
+"ra@ra.is, bre@netverjar.is, spm@vlug.eyjar.is, sv1@fellsnet.is, "
+"gudmundure@gmail.com"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -49,6 +54,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
+"Notaðu þennan hnapp til að hlaða hrunupplýsingarnar aftur inn "
+"(endurrakning). Þetta er gagnlegt þegar búið er að setja upp góðan "
+"aflúsunartáknapakka og þú vilt ná betri endurrakningu."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -60,7 +68,7 @@ msgstr "Setja upp &aflúsunartákn"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
+msgstr "Notaðu þennan hnapp til að setja upp aflúsunartáknapakkana sem vantar."
 
 #: backtracewidget.cpp:77
 #, kde-format
@@ -69,6 +77,8 @@ msgid ""
 "Symbol installation is unavailable because the application was updated or "
 "uninstalled after it had been started."
 msgstr ""
+"Uppsetning tákna er ekki í boði þar sem forritið var uppfært eða fjarlægt "
+"eftir að það var ræst."
 
 #: backtracewidget.cpp:85 qml/DeveloperPage.qml:67
 #, kde-format
@@ -76,6 +86,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
+"Notaðu þennan hnapp til að afrita villuupplýsingarnar (endurrakninguna) á "
+"klippispjaldið."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:75
 #, kde-format
@@ -84,6 +96,9 @@ msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
 "useful if you want to take a look at it or to report the bug later."
 msgstr ""
+"Notaðu þennan hnapp til að vista villuupplýsingarnar (endurrakninguna) í "
+"skrá. Þetta er gagnlegt ef þú vilt skoða gögnin eða senda inn villuskýrslu "
+"síðar."
 
 #: backtracewidget.cpp:115
 #, kde-format
@@ -94,6 +109,12 @@ msgid ""
 "they might actually contain a wealth of useful information.<br />Backtraces "
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
+"<h2>Hvað er \"endurrakning\" (e. backtrace)?</h2><p>Endurrakning lýsir því "
+"sem gerðist í forritinu þegar það hrundi svo forritarar þess geti rakið sig "
+"að uppruna villunnar. Þessi gögn virðast e.t.v. merkingarlaus við fyrstu sýn "
+"en þau innihalda mikið af gagnlegum upplýsingum. <br />Endurrakningar eru "
+"oft notaðar í aflúsun bæði þegar forritið er í keyrslu og eftir að það "
+"stöðvast.</p>"
 
 #: backtracewidget.cpp:135
 #, kde-format
@@ -105,7 +126,7 @@ msgstr "Hleður..."
 #, kde-format
 msgctxt "@info:status"
 msgid "Generating backtrace... (this may take some time)"
-msgstr ""
+msgstr "Útbý endurrakningu... (þetta gæti tekið nokkra stund)"
 
 #: backtracewidget.cpp:189
 #, kde-format
@@ -114,12 +135,14 @@ msgid ""
 "Another debugger is currently debugging the same application. The crash "
 "information could not be fetched."
 msgstr ""
+"Annað aflúsunarforrit er að aflúsa sama hugbúnað. Ekki var hægt að sækja "
+"villuupplýsingarnar."
 
 #: backtracewidget.cpp:193
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be fetched."
-msgstr ""
+msgstr "Ekki tókst að sækja villuupplýsingarnar."
 
 #: backtracewidget.cpp:196
 #, kde-kuit-format
@@ -129,6 +152,9 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
+"Önnur aflúsunarvinnsla er tengd forritinu sem hrundi. Af þeim sökum getur "
+"DrKonqi aflúsarinn ekki sótt endurrakninguna. Veldu annað aflúsunarforrit og "
+"smelltu á <interface>Endurhlaða</interface>."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
@@ -140,19 +166,19 @@ msgstr "Villuupplýsingarnar sem kerfið bjó til eru gagnlegar"
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
-msgstr ""
+msgstr "Villuupplýsingarnar sem kerfið bjó til gætu verið gagnlegar"
 
 #: backtracewidget.cpp:247 qml/RatingItem.qml:47
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
-msgstr ""
+msgstr "Villuupplýsingarnar sem kerfið bjó til eru líklega ekki gagnlegar"
 
 #: backtracewidget.cpp:250 qml/RatingItem.qml:49
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
-msgstr ""
+msgstr "Villuupplýsingarnar sem kerfið bjó til eru ekki gagnlegar"
 
 #: backtracewidget.cpp:255
 #, kde-format
@@ -161,6 +187,8 @@ msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
 msgstr ""
+"Einkunnagjöfin fyrir þessar villuupplýsingar er ógild. Þetta er villa í "
+"DrKonqi."
 
 #: backtracewidget.cpp:267
 #, kde-kuit-format
@@ -173,6 +201,13 @@ msgid ""
 "the needed packages (<link url='%2'>list of files</link>) and click the "
 "<interface>Reload</interface> button."
 msgstr ""
+"Þú getur smellt á hnappinn <interface>Setja upp aflúsunartákn</interface> "
+"til að setja sjálfkrafa upp þá aflúsunarupplýsingapakka sem vantar. Ef það "
+"virkar ekki: lestu yfir <link url='%1'>How to create useful crash reports</"
+"link> (hvernig útbúa á gagnlegar villuskýrslur) til að fá upplýsingar um "
+"hvernig gagnleg endurrakning er gerð; settu upp nauðsynlega pakka (<link "
+"url='%2'>listi yfir skrár</link>) og smelltu á hnappinn "
+"<interface>Endurhlaða</interface>."
 
 #: backtracewidget.cpp:285
 #, kde-kuit-format
@@ -183,19 +218,23 @@ msgid ""
 "url='%2'>list of files</link>) and click the <interface>Reload</interface> "
 "button."
 msgstr ""
+"Skoðaðu<link url='%1'>How to create useful crash reports</link> til að fá "
+"upplýsingar um hvernig gagnleg endurrakning er gerð; settu upp nauðsynlega "
+"pakka (<link url='%2'>listi yfir skrár</link>) og smelltu á hnappinn "
+"<interface>Endurhlaða</interface>."
 
 #: backtracewidget.cpp:301
 #, kde-format
 msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
-msgstr ""
+msgstr "Aflúsarinn stöðvaðist óvænt."
 
 #: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:171
 #: qml/DeveloperPage.qml:175
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
-msgstr ""
+msgstr "Ekki tókst að útbúa villuupplýsingarnar."
 
 #: backtracewidget.cpp:307 qml/DeveloperPage.qml:172
 #, kde-kuit-format
@@ -204,6 +243,8 @@ msgid ""
 "You could try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
+"Þú getur reynt að endurgera endurrakninguna með því að smella á hnappinn "
+"<interface>Endurhlaða</interface>"
 
 #: backtracewidget.cpp:316
 #, kde-format
@@ -212,6 +253,8 @@ msgid ""
 "<strong>The debugger application is missing or could not be launched.</"
 "strong>"
 msgstr ""
+"<strong>Aflúsunarforritið er ekki til staðar eða ekki tókst að keyra það.</"
+"strong>"
 
 #: backtracewidget.cpp:322
 #, kde-kuit-format
@@ -220,12 +263,14 @@ msgid ""
 "<strong>You need to first install the debugger application (%1) then click "
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
+"<strong>Þú þarft fyrst að setja upp aflúsunarforritið (%1) og smella svo á "
+"hnappinn <interface>Endurhlaða</interface>.</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:93
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
-msgstr ""
+msgstr "Villa við uppsetningu á aflúsunartáknum"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: backtracewidget.cpp:409 qml/DeveloperPage.qml:199
@@ -234,12 +279,14 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
+"Pakkarnir sem innihalda aflúsunarupplýsingar fyrir eftirfarandi hugbúnað og "
+"hugbúnaðarsöfn eru ekki til staðar:"
 
 #: backtracewidget.cpp:418
 #, kde-format
 msgctxt "messagebox title"
 msgid "Missing debug information packages"
-msgstr ""
+msgstr "Aflúsunarupplýsingapakka vantar"
 
 #: bugzillaintegration/reportinterface.cpp:191
 #, kde-kuit-format
@@ -255,88 +302,79 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Undirvinnsla hætti með villu: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Undirvinnsla hrundi. Kannaðu uppsetninguna þína."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "Bráðameðferð DrKonqi"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Veitir ítarlegt yfirlit yfir eldri hrun"
 
 #: coredump/gui/main.cpp:37
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2000-2009, DrKonqi höfundarnir"
+msgstr "(C) 2020-2022, höfundar DrKonqi"
 
 #: coredump/gui/qml/DetailsPage.qml:19
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Nánar:"
+msgstr "Upplýsingar"
 
 #: coredump/gui/qml/DetailsPage.qml:28
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Afrita á klippispjald"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Keyra gagnvirkan aflúsara"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Hrun"
 
 #: coredump/gui/qml/ListPage.qml:48
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Sendi villuskýrsluna"
+msgstr "Hleð villuskýrslur"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Engar vinnslur hafa hrunið enn sem komið er"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Engin hrun samsvara leitinni"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "Bráðameðferð"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr ""
+msgstr "Beðið um uppsetningu á aflúsunartáknapökkum sem vantar..."
 
 #: debugpackageinstaller.cpp:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Cancel"
+#, kde-format
 msgid "Cancel"
 msgstr "Hætta við"
 
@@ -344,13 +382,13 @@ msgstr "Hætta við"
 #, kde-format
 msgctxt "@title:window"
 msgid "Missing debug symbols"
-msgstr ""
+msgstr "Aflúsunartákn vantar"
 
 #: debugpackageinstaller.cpp:88
 #, kde-format
 msgctxt "@info"
 msgid "Could not find debug symbol packages for this application."
-msgstr ""
+msgstr "Tókst ekki að finna aflúsunartáknapakka fyrir þetta forrit."
 
 #: debugpackageinstaller.cpp:98
 #, kde-format
@@ -358,7 +396,7 @@ msgctxt "@info"
 msgid ""
 "An error was encountered during the installation of the debug symbol "
 "packages."
-msgstr ""
+msgstr "Villa kom upp við uppsetningu á aflúsunartáknapökkunum."
 
 #: drkonqi.cpp:147
 #, kde-kuit-format
@@ -394,7 +432,7 @@ msgstr "Endur&ræsa forrit"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
-msgstr ""
+msgstr "Notaðu þennan hnapp til að endurræsa hrunda forritið."
 
 #: drkonqidialog.cpp:117
 #, kde-format
@@ -425,6 +463,11 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
+"<para>Þar sem hrunumsjónarforritið sjálft hrundi er sjálfvirka "
+"skýrsluaðgerðin gerð óvirk til draga úr hættu á öðru hruni.<nl /> <nl /"
+"><link url='%1'>Sendu tilkynningu handvirkt</link> um þessa villu í KDE-"
+"villugrunninn. Ekki gleyma að setja með endurrakningu úr flipanum "
+"<interface>Upplýsingar fyrir forritara</interface>.</para>"
 
 #: drkonqidialog.cpp:174
 #, kde-kuit-format
@@ -435,6 +478,10 @@ msgid ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 msgstr ""
+"<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarglugginn var opnaður "
+"á öryggissniði (e. safe mode).<nl />Þú getur sent villuskýrsluna handvirkt "
+"til %1 (þ.m.t. endurrakninguna úr flipanum <interface>Upplýsingar fyrir "
+"forritara</interface>.)</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -447,6 +494,12 @@ msgid ""
 "make sure the update is fully applied and will not cause any side effects.</"
 "para>"
 msgstr ""
+"<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarforritið virðist "
+"hafa verið uppfært eða fjarlægt frá því það var opnað. Þetta kemur í veg "
+"fyrir nákvæma upplýsingagjöf um hrun og getur einnig verið ástæðan fyrir "
+"þessu hruni.</para><para>Eftir uppfærslu er alltaf góð hugmynd að skrá sig "
+"út og aftur inn til að tryggja að uppfærslan sé að fullu sett upp og valdi "
+"engum aukaverkunum.</para>"
 
 #: drkonqidialog.cpp:192 qml/MainPage.qml:93
 #, kde-kuit-format
@@ -455,18 +508,19 @@ msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
+"<para>Þú getur hjálpað okkur að bæta hugbúnað KDE með því að tilkynna þessa "
+"villu.<nl /><link url='%1'>Fá meiri upplýsingar um villutilkynningar</link></"
+"para>"
 
 #: drkonqidialog.cpp:199 qml/MainPage.qml:57
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
 "does not provide a bug reporting address.</para>"
-msgstr "<para>Fyrirgefðu, <application>%1</application> hætti óvænt.</para>"
+msgstr ""
+"<para>Þú getur ekki tilkynnt þessa villu þar sem <application>%1</"
+"application> gefur ekki upp villutilkynningarslóð.</para>"
 
 #: drkonqidialog.cpp:207 qml/MainPage.qml:102
 #, kde-format
@@ -475,19 +529,14 @@ msgid "Details:"
 msgstr "Nánar:"
 
 #: drkonqidialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4) Time: %5 %6</para>"
+#, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5 %6</para>"
 msgstr ""
-"<para>Keyrsluskrá: <application>%1</application> PID: <numid>%2</numid> "
-"Signal: %3 (%4) Tími: %5 %6</para>"
+"<para>Keyrsluskrá: <application>%1</application> PID: %2 Merki: %3 (%4) "
+"Tími: %5 %6</para>"
 
 #: drkonqidialog.cpp:241
 #, kde-format
@@ -501,19 +550,19 @@ msgstr "Af&lúsa"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Starts a program to debug the crashed application."
-msgstr ""
+msgstr "Ræsir forrit til að aflúsa hrunda hugbúnaðinn."
 
 #: drkonqidialog.cpp:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
+msgstr "Loka þessum svarglugga (hrunupplýsingarnar munu glatast)"
 
 #: drkonqidialog.cpp:281
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
-msgstr ""
+msgstr "Aflúsa í %1"
 
 #: main.cpp:112
 #, kde-format
@@ -526,10 +575,9 @@ msgid "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgstr "KDE öryggisnetið veitir aðstoð þegar forrit hrynja."
 
 #: main.cpp:117
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "(C) 2000-2009, DrKonqi höfundarnir"
+msgstr "(C) 2000-2018, DrKonqi höfundarnir"
 
 #: main.cpp:118
 #, kde-format
@@ -556,74 +604,58 @@ msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
 #: main.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "The signal number that was caught"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
-msgstr "Boðnúmer sem var gripið"
+msgstr "Merkis<númer> sem var gripið"
 
 #: main.cpp:129
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Name of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
-msgstr "Heiti forritsins"
+msgstr "<Heiti> forritsins"
 
 #: main.cpp:130
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Path to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
-msgstr "Slóð á forritið (executable)"
+msgstr "<Slóð> á keyrsluskrána"
 
 #: main.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "The version of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
-msgstr "Útgáfunúmer forrits"
+msgstr "<Útgáfa> forritsins"
 
 #: main.cpp:132
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "The bug address to use"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
-msgstr "Netfang til að senda villutilkynningar til"
+msgstr "<Vistfang> villu sem á að nota"
 
 #: main.cpp:133
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Translated name of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
-msgstr "Þýtt nafn forritsins"
+msgstr "Þýtt <nafn> forritsins"
 
 #: main.cpp:134
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
-msgstr ""
+msgstr "Bugzilla forritsheiti"
 
 #: main.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "The PID of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
-msgstr "PID tala (ferlisnúmer) forritsins"
+msgstr "<PID>-tala forritsins"
 
 #: main.cpp:136
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Startup ID of the program"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
-msgstr "Ræsinúmer forritsins (startup ID)"
+msgstr "Ræsinúmer forritsins (startup <ID>)"
 
 #: main.cpp:137
 #, kde-format
@@ -647,141 +679,103 @@ msgstr "Forritið hefur þegar verið endurræst"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
-msgstr ""
+msgstr "Halda forritinu í keyrslu og mynda endurrakningu við ræsingu"
 
 #: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
-msgstr ""
+msgstr "<Þráðarauðkenni> þráðarins sem brást"
 
 #: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
-msgstr ""
+msgstr "Ekki birta þessa tilkynningu heldur opna strax aflúsunargluggann"
 
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr ""
+msgstr "Sæki endurrakninguna (sjálfvirkar hrunupplýsingar)"
 
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr ""
+msgstr "Sýna innihald endurrakningar (ítarlegt)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Næsta"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error when trying to login: <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
-msgstr "Villa við innskráningu: <message>%1.</message>"
+msgstr "Mistókst að ná sambandi við bugs.kde.org: <message>%1.</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retry..."
 msgctxt "@action"
 msgid "Retry"
-msgstr "Reyna aftur..."
+msgstr "Reyna aftur"
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr ""
+msgstr "Reyni að ná sambandi við bugs.kde.org..."
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr "Hvað veistu um hrunið/villuna?"
+msgstr "Hvað veistu um hrunið?"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr ""
-"<strong>Manstu hvað þú varst að gera rétt áður en hrunið varð?</strong>"
+msgstr "Manstu hvað þú varst að gera rétt áður en hrunið varð?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Já"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Nei"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>Hrynur forritið aftur ef þú endurtekur samsvarandi aðstæður?</strong>"
+msgstr "Hrynur forritið aftur ef þú endurtekur samsvarandi aðstæður?"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr "<strong>Gefðu eftirfarandi upplýsingar á ensku.</strong>"
+msgstr "Veldu hvaða viðbótarupplýsingar þú getur veitt:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Hvað ég var að gera þegar \"%1\" forritið hrundi"
+msgstr ""
+"Hvað ég var að gera þegar forritið <application>%1</application> hrundi"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
-msgstr ""
+msgstr "Óvenjuleg virkni í skjáborðinu sem ég tók eftir"
 
 #: qml/ContextPage.qml:70
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr ""
+msgstr "Sérstillingar í forritinu sem gætu tengst þessu"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Ekki nægilega gagnlegt"
 
 #: qml/ContextPage.qml:80
 msgctxt "@info"
@@ -790,30 +784,24 @@ msgid ""
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
+"<para>Upplýsingarnar sem þú gafst upp teljast ekki nógu gagnlegar í þessu "
+"tilviki. Ef þér detta ekki í hug neinar aðrar upplýsingar máttu loka "
+"villutilkynningarglugganum.</para>"
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "&Upplýsingar forritara"
+msgstr "Upplýsingar forritara"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "Setja upp &aflúsunartákn"
+msgstr "Setja upp aflúsunartákn"
 
 #: qml/DeveloperPage.qml:54
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "Endu&rlesa"
+msgstr "Endurhlaða"
 
 #: qml/DeveloperPage.qml:56
 msgctxt "@info:tooltip"
@@ -823,16 +811,20 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
+"Notaðu þennan hnapp til að hlaða hrunupplýsingarnar aftur inn "
+"(endurrakning).\n"
+"Þetta er gagnlegt þegar búið er að setja upp góðan aflúsunartáknapakka og þú "
+"vilt ná betri endurrakningu."
 
 #: qml/DeveloperPage.qml:66
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "Afrita"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Vista"
 
 #: qml/DeveloperPage.qml:109
 msgctxt "@info"
@@ -847,6 +839,15 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
+"<subtitle>Hvað er \"endurrakning\" (e. backtrace)?</"
+"subtitle><para>Endurrakning lýsir því\n"
+"sem gerðist í forritinu þegar það hrundi svo forritarar þess geti rakið sig "
+"að uppruna\n"
+"villunnar. Þessi gögn virðast e.t.v. merkingarlaus við fyrstu sýn en þau "
+"innihalda\n"
+"\n"
+"mikið af gagnlegum upplýsingum.<nl />Endurrakningar eru oft notaðar bæði í\n"
+"gagnvirkri aflúsun og aflúsun eftir að forritið hefur stöðvast.</para>"
 
 #: qml/DeveloperPage.qml:157
 msgctxt "@info/rich"
@@ -859,6 +860,13 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"Þú getur smellt á hnappinn <interface>Setja upp aflúsunartákn</interface> "
+"til að setja sjálfkrafa upp þá aflúsunarupplýsingapakka sem vantar. Ef það "
+"virkar ekki:\n"
+"lestu yfir <link url='%1'>How to create useful crash reports</link> til að "
+"fá upplýsingar um hvernig gagnleg\n"
+"endurrakning er gerð; settu upp nauðsynlega pakka (<link url='%2'>listi yfir "
+"skrár</link>) og smelltu á hnappinn <interface>Endurhlaða</interface>."
 
 #: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
@@ -868,6 +876,10 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
+"Skoðaðu <link url='%1'>How to create useful crash reports</link> til að fá "
+"upplýsingar um hvernig gagnleg endurrakning er gerð.\n"
+"Settu upp nauðsynlega pakka (listi yfir skrár</link>) og smelltu á hnappinn "
+"<interface>Endurhlaða</interface>."
 
 #: qml/DeveloperPage.qml:177
 msgctxt "@info/rich"
@@ -875,6 +887,8 @@ msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>Þú þarft fyrst að setja upp aflúsunarforritið (%1) "
+"og smella svo á hnappinn <interface>Endurhlaða</interface>.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -882,12 +896,9 @@ msgid "Look for Possible Duplicate Reports"
 msgstr "Athuga með mögulega tvíteknar skýrslur"
 
 #: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "Leita að tvítökum (frá %1 til %2)..."
+msgstr "Leita í villugrunni að tvítekningum..."
 
 #: qml/DuplicatesPage.qml:20
 msgctxt "@info/rich"
@@ -896,26 +907,24 @@ msgid ""
 "and compare it to yours. You can suggest that your crash is a duplicate of "
 "that report or directly attach your information to it."
 msgstr ""
+"Athugaðu hvort nú þegar hafi verið tilkynnt um villuna þína. Tvísmelltu á "
+"skýrslu í listanum og berðu saman við þína. Þú getur lagt til að hrunið þitt "
+"sé tvítekning á þeirri skýrslu eða bætt upplýsingunum þínum við hana."
 
 #: qml/DuplicatesPage.qml:45
-#, fuzzy
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Duplicate report]"
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr "[Tvítekin villuskýrsla]"
+msgstr "Tvítekning?"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
+msgstr "Ertu alveg viss um að hrunið þitt sé tvítekning á þessari skýrslu?"
 
 #: qml/DuplicatesPage.qml:74
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is a duplicate"
-msgstr "Það eru engin raunveruleg tvítök"
+msgstr "Hrunið er tvítekning"
 
 #: qml/DuplicatesPage.qml:76
 msgctxt "@info:tooltip"
@@ -923,18 +932,18 @@ msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
 msgstr ""
+"Notaðu þessa aðgerð þegar þú ert viss um að hrunið þitt sé tvítekning á "
+"þessari villuskýrslu"
 
 #: qml/DuplicatesPage.qml:87
-#, fuzzy
-#| msgid "There are no real duplicates"
 msgctxt "@action:button"
 msgid "Crash is not a duplicate"
-msgstr "Það eru engin raunveruleg tvítök"
+msgstr "Hrunið er ekki tvítekning"
 
 #: qml/DuplicatesPage.qml:95
 msgctxt "@action:button"
 msgid "Suggest this crash is related"
-msgstr ""
+msgstr "Leggja til að hrunið sé tengt"
 
 #: qml/DuplicatesPage.qml:97
 msgctxt "@info:tooltip"
@@ -944,26 +953,29 @@ msgid ""
 "this bug\n"
 "                                     report"
 msgstr ""
+"Notaðu þennan hnapp til að leggja\n"
+"                                     til að hrunið hjá þér sé tengt "
+"þessarivilluskýrslu"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr ""
+msgstr "Þetta hrun er ótengt"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
 msgid "Login into the bug tracking system"
-msgstr ""
+msgstr "Skrá inn í villueftirlitskerfið"
 
 #: qml/LoginPage.qml:67
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
 msgid "You need to login with your %1 account in order to proceed."
-msgstr ""
+msgstr "Þú þarft að skrá þig inn á %1-aðganginn þinn til að geta haldið áfram."
 
 #: qml/LoginPage.qml:72
 msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
-msgstr ""
+msgstr "Netfang:"
 
 #: qml/LoginPage.qml:78
 msgctxt "@label:textbox bugzilla account password"
@@ -973,7 +985,7 @@ msgstr "Lykilorð:"
 #: qml/LoginPage.qml:85
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
-msgstr ""
+msgstr "Vista aðgangsupplýsingarnar með KDE Wallet-kerfinu"
 
 #: qml/LoginPage.qml:92
 msgctxt "@info/rich"
@@ -985,6 +997,12 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
+"<note>Þú þarft notandaaðgang á <link url='%1'>KDE villueftirlitskerfinu</"
+"link> til að geta sent inn villuskýrslu því við þurfum hugsanlega að hafa "
+"samband\n"
+"við þig síðar og biðja um frekari upplýsingar. Ef þú ert ekki með aðgang "
+"geturðu <link url='%2'>sett hann upp hér</link>. Ekki nota einnota netföng.</"
+"note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -997,14 +1015,13 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
+"Notaðu þennan hnapp til að skrá þig inn í KDE villuleitarkerfið með "
+"netfanginu og lykilorðinu sem þú gafst upp."
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Report &Bug"
 msgctxt "@action"
 msgid "Report Bug"
-msgstr "Tilkynna um &villu"
+msgstr "Senda villutilkynningu"
 
 #: qml/MainPage.qml:22
 msgctxt "@info:tooltip"
@@ -1012,20 +1029,14 @@ msgid "Starts the bug report assistant."
 msgstr "Ræsir hjálparforrit fyrir villuskýrslugerð."
 
 #: qml/MainPage.qml:29
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "Endur&ræsa forrit"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "&Upplýsingar forritara"
+msgstr "Upplýsingar forritara"
 
 #: qml/MainPage.qml:63
 msgctxt "@info"
@@ -1038,6 +1049,13 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
+"<para>Þar sem hrunumsjónarforritið sjálft hrundi er\n"
+"sjálfvirka skýrsluaðgerðin gerð óvirk til draga úr hættu\n"
+"á öðru hruni<nl />\n"
+"<nl /><link url='%1'>Sendu tilkynningu handvirkt</link>\n"
+"um þessa villu í KDE-villugrunninn Ekki gleyma að setja\n"
+"með endurrakningu úr flipanum\n"
+"<interface>Upplýsingar fyrir forritara</interface>."
 
 #: qml/MainPage.qml:75
 msgctxt "@info"
@@ -1047,6 +1065,10 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
+"<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarglugginn var opnaður "
+"á öryggissniði (e. safe mode).<nl />Þú getur sent villuskýrsluna handvirkt "
+"til <link>%1 (þ.m.t. endurrakninguna úr flipanum <interface>Upplýsingar "
+"fyrir forritara</interface>.)</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
@@ -1059,29 +1081,27 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+"<para>Skýrsluhjálpin er óvirk vegna þess að hrun-\n"
+"umsjónarforritið virðist hafa verið uppfært eða fjarlægt\n"
+"frá því það var opnað. Þetta kemur í veg fyrir nákvæma\n"
+"upplýsingagjöf um hrun og getur einnig verið ástæðan fyrir\n"
+"þessu hruni.</para><para>Eftir uppfærslu er alltaf góð\n"
+"hugmynd að skrá sig út og aftur inn til að tryggja að uppfærslan\n"
+"sé að fullu sett upp og valdi engum aukaverkunum.</"
 
 #: qml/MainPage.qml:108
-#, fuzzy
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4) Time: %5 %6</para>"
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
-"<para>Keyrsluskrá: <application>%1</application> PID: <numid>%2</numid> "
-"Signal: %3 (%4) Tími: %5 %6</para>"
+"<para>Keyrsluskrá: <application>%1</application> PID: %2 Merki: %3 (%4) "
+"Tími: %5 </para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info:shell"
-#| msgid "The program has already been restarted"
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "Forritið hefur þegar verið endurræst"
+msgstr "Villan hefur nú þegar verið tilkynnt"
 
 #: qml/PerfectDuplicatePage.qml:29
 msgctxt "@info"
@@ -1090,6 +1110,9 @@ msgid ""
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
+"Hrunið þitt hefur þegar verið tilkynnt sem <link url=\"%1\">Villa %1</link>, "
+"sem er tvítekning á <emphasis strong='true'>lokaðri</emphasis> <link url="
+"\"%2\">Villu %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:34
 msgctxt "@info"
@@ -1097,6 +1120,8 @@ msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
+"Hrunið þitt hefur þegar verið tilkynnt sem <link url=\"%1\">Villa %1</link>, "
+"sem hefur þegar verið <emphasis strong='true'>lokað</emphasis>"
 
 #: qml/PerfectDuplicatePage.qml:39
 msgctxt "@info"
@@ -1105,6 +1130,9 @@ msgid ""
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
+"Hrunið þitt hefur þegar verið tilkynnt sem <link url=\"%1\">Villa %1</link>, "
+"sem er <emphasis strong='true'>tvítekning</emphasis> á <link url="
+"\"%2\">Villu %2</link>"
 
 #: qml/PerfectDuplicatePage.qml:43
 msgctxt "@info"
@@ -1112,6 +1140,8 @@ msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
+"Hrunið þitt er <emphasis strong='true'>tvítekning</emphasis> og hefur þegar "
+"verið tilkynnt sem <link url=\"%1\">Villa %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
@@ -1119,19 +1149,18 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"Þú getur valið að bæta við viðbótarupplýsingum en ættir einungis að gera það "
+"ef þú ert með nýjar eða umbeðnar upplýsingar."
 
 #: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Lokað (%1)"
+msgstr "Loka"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
 msgid "Attach Additional Information"
-msgstr ""
+msgstr "Setja viðbótarupplýsingar í viðhengi"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1144,16 +1173,18 @@ msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
+"<para>Þetta er forskoðun á efni skýrslunnar sem verður send.</para><para>Ef "
+"þú vilt breyta einhverju skaltu fara á síðuna á undan.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
 msgid "Submit"
-msgstr ""
+msgstr "Senda"
 
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Beðið eftir gögnum..."
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1161,21 +1192,14 @@ msgid "Enter the Details about the Crash"
 msgstr "Setja inn upplýsingar um hrunið/villuna"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "<strong>Gefðu eftirfarandi upplýsingar á ensku.</strong>"
+msgstr "Gefðu upp eftirfarandi upplýsingar á ensku."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Innihald skýrslunnar"
+msgstr "Titill villuskýrslunnar:"
 
 #: qml/ReportPage.qml:40
 msgctxt "@info:tooltip examples of good bug report titles"
@@ -1190,14 +1214,21 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Dæmi um góða titila:</subtitle>\n"
+"<list>\n"
+"<item>Plasma hrundi eftir að Minnismiðagræju var bætt við og skrifað í hana</"
+"item>\n"
+"<item>Konqueror hrundi við að opna Facebook-forritið 'X'</item>\n"
+"<item>Kopete lokaðist eftir að tölvan var vakin úr dvala og spjallað við vin "
+"á MSN</item>\n"
+"<item>Kate lokaðist við að breyta annálsskrá og ýtt var nokkrum sinnum á "
+"Delete-lykilinn</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Information about bug reporting"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Upplýsingar um gerð villuskýrslna"
+msgstr "Upplýsingar um hrunið:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1212,6 +1243,15 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Lýstu eins nákvæmlega og hægt er aðdraganda hrunsins:</subtitle>\n"
+"<list>\n"
+"<item>Lýstu hvaða aðgerðir þú gerðir innan og utan forritsinsrétt áður en "
+"það hrundi.</item>\n"
+"<item>Nefndu ef þú tókst eftir óvenjulegri hegðun í forritinu eða í öllu "
+"umhverfinu.</item>\n"
+"<item>Nefndu ef stillingar aðrar en sjálfgefnar stillingar forritsins voru "
+"notaðar</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1224,27 +1264,16 @@ msgid "Provide more information"
 msgstr "Gefðu nánari upplýsingar"
 
 #: qml/ReportPage.qml:108
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Dreifingaraðferð:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr "KDE kerfið er sett upp úr upprunaskrám (compiled from sources)"
+msgstr "KDE Platform er byggt frá grunni með upprunakóða"
 
 #: qml/ReportPage.qml:139
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>The crash and system information will be automatically added to the "
-#| "bug report.</note>"
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1254,73 +1283,57 @@ msgstr ""
 "villuskýrsluna.</note>"
 
 #: qml/ReportPage.qml:148
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Forskoða villuskýrsluna"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "Vi&sta í skrá..."
+msgstr "Vista skýrslu í skrá..."
 
 #: qml/SendingPage.qml:46
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
+"Notaðu þennan hnapp til að vista hrunupplýsingarnar í skrá til að tilkynna "
+"handvirkt."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error when trying to login: <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "Villa við innskráningu: <message>%1.</message>"
+msgstr "Mistókst að senda villuskýrslu: <message>%1.</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Reyna aftur að senda"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Sendi villuskýrslu..."
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Hjálparforrit fyrir gerð villuskýrslna"
+msgstr "Villuskýrsla send"
 
 #: qml/SentPage.qml:18
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr ""
+msgstr "Slóð: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid "Thank you for being part of KDE!"
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr "Takk fyrir að taka þátt í KDE!"
+msgstr "Takk fyrir að taka þátt í KDE. Þú mátt núna loka glugganum."
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr "Velkomin(n) í villuskýrsluhjálparforritið"
+msgstr "Velkomin í villuskýrsluhjálpina"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1328,6 +1341,8 @@ msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
 msgstr ""
+"Þessi hjálp greinir hrunupplýsingarnar og leiðir þig í gegnum ferlið við að "
+"tilkynna um villuna."
 
 #: qml/WelcomePage.qml:32
 msgctxt "@info/rich note before starting the bug reporting process"
@@ -1339,17 +1354,23 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
+"<para><note>Þar sem samskipti á milli þín og forritaranna eru nauðsynleg "
+"fyrir vel heppnaða aflúsun\n"
+"<emphasis strong='true'>þarftu að samþykkja að forritaranir megi hafa "
+"samband við þig</emphasis> til að halda áfram.\n"
+"</note></para><para>Þú mátt auðvitað loka þessum glugga ef þú vilt það ekki."
+"</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Ég samþykki að haft sé samband við mig"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
-msgstr ""
+msgstr "Mistókst að sækja stýrikerfalista"
 
 #: qmlextensions/reproducibilitymodel.cpp:38
 #, kde-format
@@ -1379,24 +1400,20 @@ msgstr "Alltaf"
 #, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
-msgstr ""
+msgstr "%1 hætti óvænt"
 
 #: statusnotifier.cpp:54
 #, kde-format
 msgid "Please report this error to help improve this software."
-msgstr ""
+msgstr "Tilkynntu endilega þessa villu til að hægt sé að bæta forritið."
 
 #: statusnotifier.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report &Bug"
+#, kde-format
 msgid "Report &Bug"
-msgstr "Tilkynna um &villu"
+msgstr "Senda &villutilkynningu"
 
 #: statusnotifier.cpp:67
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
+#, kde-format
 msgid "&Restart Application"
 msgstr "Endur&ræsa forrit"
 
@@ -1404,82 +1421,73 @@ msgstr "Endur&ræsa forrit"
 #, kde-format
 msgctxt "Allows the user to hide this notifier item"
 msgid "Hide"
-msgstr ""
+msgstr "Fela"
 
 #: statusnotifier.cpp:98
 #, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
-msgstr ""
+msgstr "Tilkynntu endilega þessa villu til að hægt sé að bæta forritið."
 
 #: statusnotifier.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
+#, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
-msgstr "<para>Fyrirgefðu, <application>%1</application> hætti óvænt.</para>"
+msgstr "Forritið lokaðist óvænt."
 
 #: statusnotifier.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report &Bug"
+#, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Report Bug"
-msgstr "Tilkynna um &villu"
+msgstr "Senda villutilkynningu"
 
 #: statusnotifier.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
+#, kde-format
 msgctxt "Notification action button, keep short"
 msgid "Restart App"
-msgstr "Endur&ræsa forrit"
+msgstr "Endurræsa forrit"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Aflúsunarheitið sem sent er í þáttarasmiðjuna"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Skrá sem inniheldur endurrakninguna."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib-próf (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Prófunarforrit fyrir villurakningarstjóra"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "(C) 2000-2009, DrKonqi höfundarnir"
+msgstr "(c) 2009, DrKonqi höfundarnir"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "bugstest.kde.org notandanafn"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "bugstest.kde.org lykilorð"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
