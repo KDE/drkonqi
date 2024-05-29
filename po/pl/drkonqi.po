@@ -17,7 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,9 +42,9 @@ msgid ""
 "when you have installed the proper debug symbol packages and you want to "
 "obtain a better backtrace."
 msgstr ""
-"Użyj tego przycisku, aby ponownie wczytać ślad wykonywania wysypanego "
-"programu. Użyj tego po dograniu nowych pakietów symboli diagnostycznych tak, "
-"aby uzyskać lepszy ślad wykonywania."
+"Użyj tego przycisku, aby ponownie wczytać dane o usterce (ślad wykonywania). "
+"Jest to przydatne, gdy nie masz wgranych odpowiednich pakietów do "
+"diagnostyki i chcesz uzyskać lepszy ślad."
 
 #: backtracewidget.cpp:67
 #, kde-format
@@ -76,7 +75,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
-"Użyj tego przycisku, aby skopiować ślad wykonywania wysypanego programu do "
+"Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
 "schowka."
 
 #: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
@@ -99,7 +98,7 @@ msgid ""
 "are commonly used during interactive and post-mortem debugging.</p>"
 msgstr ""
 "<h2>Czym jest \"ślad wykonywania\" ?</h2><p>Ślad wykonywania dokładnie "
-"opisuje, co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
+"opisuje co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
 "programistom do ustalania miejsca występowania błędu. Dane te mogą wydać ci "
 "się bez znaczenia, ale zawierają wiele użytecznych szczegółów.<br />Ślady "
 "wykonywania są często używane podczas diagnostyki interaktywnej lub po "
@@ -115,7 +114,7 @@ msgstr "Wczytywanie..."
 #, kde-format
 msgctxt "@info:status"
 msgid "Generating backtrace... (this may take some time)"
-msgstr "Przygotowywanie śladu wykonywania... (to może chwilę potrwać)"
+msgstr "Zbieranie danych o usterce... (to może chwilę potrwać)"
 
 #: backtracewidget.cpp:189
 #, kde-format
@@ -131,7 +130,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be fetched."
-msgstr "Nie udało się pobrać szczegółów o wysypanym programie."
+msgstr "Nie udało się pobrać informacji o usterce."
 
 #: backtracewidget.cpp:196
 #, kde-kuit-format
@@ -141,34 +140,34 @@ msgid ""
 "the DrKonqi debugger cannot fetch the backtrace. Please close the other "
 "debugger and click <interface>Reload</interface>."
 msgstr ""
-"Z programem, który się wysypał, powiązany jest inny proces diagnostyczny. "
-"Dlatego też program diagnostyczny DrKonqi nie może pobrać szczegółów o "
-"usterce. Proszę zamknąć inne wystąpienie programu diagnostycznego i nacisnąć "
-"na <interface>Wczytaj ponownie</interface>."
+"Z programem, w którym wystąpiła usterka, powiązany jest inny proces "
+"diagnostyczny. Dlatego też program diagnostyczny DrKonqi nie może pobrać "
+"szczegółów o usterce. Proszę zamknąć inne wystąpienie programu "
+"diagnostycznego i nacisnąć na <interface>Wczytaj ponownie</interface>."
 
 #: backtracewidget.cpp:241 qml/RatingItem.qml:43
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
-msgstr "Zebrane dane o wysypanym programie są przydatne."
+msgstr "Zebrane dane o usterce są przydatne."
 
 #: backtracewidget.cpp:244 qml/RatingItem.qml:45
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
-msgstr "Zebrane dane o wysypanym programie mogą być przydatne."
+msgstr "Zebrane dane o usterce mogą być przydatne."
 
 #: backtracewidget.cpp:247 qml/RatingItem.qml:47
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
-msgstr "Zebrane dane o wysypanym programie prawdopodobnie nie są przydatne."
+msgstr "Zebrane dane o usterce prawdopodobnie nie są przydatne."
 
 #: backtracewidget.cpp:250 qml/RatingItem.qml:49
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
-msgstr "Zebrane dane o wysypanym programie nie są przydatne."
+msgstr "Zebrane dane o usterce nie są przydatne."
 
 #: backtracewidget.cpp:255
 #, kde-format
@@ -177,8 +176,7 @@ msgid ""
 "The rating of this crash information is invalid. This is a bug in DrKonqi "
 "itself."
 msgstr ""
-"Ocena szczegółów o wysypanym programie jest niepoprawna. Jest to błąd "
-"programu DrKonqi."
+"Ocena informacji o usterce jest niepoprawna. Jest to błąd programu DrKonqi."
 
 #: backtracewidget.cpp:267
 #, kde-kuit-format
@@ -223,7 +221,7 @@ msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
-msgstr "Nie udało się utworzyć szczegółów o wysypanym programie."
+msgstr "Nie udało się zebrać szczegółów o usterce."
 
 #: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
 #, kde-kuit-format
@@ -268,7 +266,7 @@ msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
 msgstr ""
-"Brakuje pakietów zawierających informacje diagnostyczne dla następujących "
+"Brakuje pakietów zawierających szczegóły diagnostyczne dla następujących "
 "programów i bibliotek:"
 
 #: backtracewidget.cpp:418
@@ -563,8 +561,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
-"Zamknij to okno (utracisz wtedy wszystkie szczegóły o wysypanym programie.)"
+msgstr "Zamknij to okno (wszystkie dane o usterce zostaną utracone.)"
 
 #: drkonqidialog.cpp:284
 #, kde-format
@@ -738,7 +735,7 @@ msgstr "Próba nawiązania połączenia z bugs.kde.org..."
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr "Czy wiesz coś szczególnego o okolicznościach wysypania się programu?"
+msgstr "Co wiesz o usterce?"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -771,7 +768,7 @@ msgctxt ""
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Co robiłem/am przed wysypaniem się <application>%1</application>"
+msgstr "Co robiłem/am przed usterką programu <application>%1</application>"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
@@ -941,7 +938,7 @@ msgstr "Logowanie do systemu obsługi błędów"
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
 msgid "You need to login with your %1 account in order to proceed."
-msgstr "Aby kontynuować, musisz się zalogować na swoje konto w %1."
+msgstr "Aby przejść dalej musisz wejść na swoje konto w %1."
 
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
@@ -956,7 +953,7 @@ msgstr "Hasło:"
 #: qml/LoginPage.qml:84
 msgctxt "@option:check"
 msgid "Save login information using the KDE Wallet system"
-msgstr "Zachowaj dane logowania przy użyciu systemu Portfela KDE"
+msgstr "Zachowaj te dane logowania w Portfelu KDE"
 
 #: qml/LoginPage.qml:91
 msgctxt "@info/rich"
@@ -971,9 +968,9 @@ msgstr ""
 "<note>Aby wysłać zgłoszenie o błędzie, musisz mieć konto użytkownika w <link "
 "url='%1'>Systemie obsługi błędów KDE</link>, ponieważ może zajść potrzeba "
 "późniejszego\n"
-"skontaktowania się z tobą w celu uzyskania dalszych informacji. Jeśli "
-"jeszcze nie posiadasz konta, możesz <link url='%2'>założyć je tutaj</link>. "
-"Nie zalecamy używania tymczasowych kont pocztowych.</note>"
+"napisania do ciebie w celu uzyskania dalszych szczegółów. Jeśli jeszcze nie "
+"posiadasz konta, możesz <link url='%2'>założyć je tutaj</link>. Nie zalecamy "
+"używania tymczasowych kont pocztowych.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -986,8 +983,8 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"Użyj tego przycisku, aby zalogować się do systemu obsługi błędów KDE przy "
-"użyciu wpisanego adresu pocztowego i hasła."
+"Użyj tego przycisku, aby wejść do systemu obsługi błędów KDE przy użyciu "
+"wpisanego adresu pocztowego i hasła."
 
 #: qml/main.qml:32
 msgctxt "@info"
@@ -1091,12 +1088,12 @@ msgstr "Oczekiwanie na dane..."
 #: qml/ReportPage.qml:14
 msgctxt "@title"
 msgid "Enter the Details about the Crash"
-msgstr "Opisz szczegółowo jak program się wysypał"
+msgstr "Podaj szczegóły o usterce"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "Napisz te dane po angielsku."
+msgstr "Tutaj pisz tylko po angielsku."
 
 #: qml/ReportPage.qml:29 qml/ReportPage.qml:48
 msgctxt "@info"
@@ -1164,7 +1161,7 @@ msgstr "Osiągnięto minimalną długość"
 #: qml/ReportPage.qml:76
 msgctxt "the minimum required length of a text wasn't reached yet"
 msgid "Provide more information"
-msgstr "Podaj więcej szczegółów"
+msgstr "Podaj więcej informacji"
 
 #: qml/ReportPage.qml:103
 msgctxt "@info"
@@ -1221,7 +1218,7 @@ msgstr "Wysyłanie zgłoszenia..."
 #: qml/SentPage.qml:12
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Zgłoszono wysypany program"
+msgstr "Zgłoszono usterkę"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
 msgctxt "@action %1 is an application name e.g. kwrite"
@@ -1443,13 +1440,13 @@ msgstr "(c) 2009, Autorzy DrKonqi2"
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr "nazwa użytkownika na bugstest.kde.org"
+msgstr "bugstest.kde.org nazwa_użytkownika"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr "hasło na bugstest.kde.org"
+msgstr "bugstest.kde.org hasło"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"
