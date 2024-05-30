@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-01-15 12:51+0100\n"
+"PO-Revision-Date: 2024-05-29 09:05+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.01.90\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -906,6 +906,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Hibakeresési szimbólumok automatikus letöltése az összeomlási jelentések "
+"javításához"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -915,6 +917,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Az összeomlásjelentések nagyobb értéket képviselhetnek, ha további "
+"hibakeresési erőforrásokat tölt le előbb közvetlenül a disztribútorától.\n"
+"Ez ismeretlen méretű letöltéseket jelent összeomlás bekövetkezésekor. "
+"Forgalmi díjas internetkapcsolat esetén automatikusan kihagyásra kerül."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1237,15 +1243,12 @@ msgstr "Összeomlási jelentés elküldve"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "A jövőben:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Érvénytelen jelentés/összeomlás"
+msgstr "Összeomlások automatikus jelentése"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
