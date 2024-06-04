@@ -54,7 +54,7 @@ public Q_SLOTS:
         auto msg = message();
 
         auto coreFileTarget = std::make_shared<QFile>();
-        auto dupeFileDescriptor = fcntl(targetFileFd.fileDescriptor(), F_DUPFD_CLOEXEC);
+        auto dupeFileDescriptor = fcntl(targetFileFd.fileDescriptor(), F_DUPFD_CLOEXEC, 0);
         if (dupeFileDescriptor == -1) {
             const auto error = errno;
             const QString errorString = u"Failed to duplicate file descriptor: (%1) %2"_s.arg(QString::number(error), QString::fromUtf8(strerror(error)));
