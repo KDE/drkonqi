@@ -54,7 +54,15 @@ public Q_SLOTS:
         auto msg = message();
 
         auto coreFileTarget = std::make_shared<QFile>();
-        if (!coreFileTarget->open(fcntl(targetFileFd.fileDescriptor(), F_DUPFD_CLOEXEC), QFile::WriteOnly, QFile::AutoCloseHandle)) {
+        auto dupeFileDescriptor = fcntl(targetFileFd.fileDescriptor(), F_DUPFD_CLOEXEC);
+        if (dupeFileDescriptor == -1) {
+            const auto error = errno;
+            const QString errorString = u"Failed to duplicate file descriptor: (%1) %2"_s.arg(QString::number(error), QString::fromUtf8(strerror(error)));
+            qWarning() << errorString;
+            sendErrorReply(QDBusError::InternalError, errorString);
+            return;
+        }
+        if (!coreFileTarget->open(dupeFileDescriptor, QFile::WriteOnly, QFile::AutoCloseHandle)) {
             QString errString = u"Failed to open coreFileTarget: %1"_s.arg(coreFileTarget->errorString());
             connection.send(msg.createErrorReply(QDBusError::InternalError, errString));
             return;
