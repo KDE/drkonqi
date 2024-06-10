@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-01-07 16:54+0000\n"
+"PO-Revision-Date: 2024-06-08 16:49+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -914,6 +914,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Descarcă automat simboluri de depanare pentru a îmbunătăți rapoartele despre "
+"prăbușiri"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -923,6 +925,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Rapoartele despre prăbușiri pot fi mai valoroase dacă se descarcă resurse "
+"suplimentare pentru depanare de la distribuția dumneavoastră.\n"
+"Aceasta declanșează descărcări de dimensiune necunoscută în cazul unei "
+"prăbușiri. Acestea sunt omise automat când folosiți o conexiune contorizată."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1245,15 +1251,12 @@ msgstr "Raportul de prăbușire a fost trimis"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Pe viitor:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Nu e un raport/prăbușire valid"
+msgstr "Raportează prăbușirile automat"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
