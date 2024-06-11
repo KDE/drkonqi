@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-06-09 15:49+0400\n"
+"PO-Revision-Date: 2024-06-10 11:52+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -923,6 +923,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Əgər əlavə sazlama mənbələri öncə distribyutorunuzdan endirilərsə qəza "
+"haqqında hesabat daha böyük dəyərdə ola bilər.\n"
+"Bu, qəza baş verdiyi zaman naməlum ölçülü endirmərə səbəb olur. Məhdud "
+"internet bağlantısı istifadə edildiyi zaman bu avtomatik ötürüləcəkdir."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -981,16 +985,6 @@ msgstr ""
 "daxil olmaq üçün bu düyməni istifadə edin."
 
 #: qml/main.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the\n"
-#| "automatic reporting process is disabled to reduce the\n"
-#| "risks of failing again.<nl /><nl />\n"
-#| "Please, <link url='%1'>manually report</link> this error\n"
-#| "to the KDE bug tracking system. Do not forget to include\n"
-#| "the backtrace from the <interface>Developer Information</interface>\n"
-#| "tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1004,20 +998,12 @@ msgstr ""
 "<para>Qəza İşləmcisinin özündə xəta baş verdiyi üçün \n"
 "avtomatik xəta hesabatı göndərmə prosesi yenidən baş \n"
 "verə biləcək xəta riskini azalmaq üçün \n"
-"qeyri-aktiv edildi.<nl /><nl />Lütfən xəta hesabatını KDE \n"
-"xəta izləmə sisteminə <link url='%1'>əl ilə göndər</link>.\n"
-"<interface>Tərtibatçı Məlumatları</interface> vərəqindən \n"
-"geri izi daxil etməyi unutmayın.</para>"
+"qeyri-aktiv edildi.<nl /><nl />\n"
+"Lütfən xəta hesabatını KDE xəta izləmə sisteminə <link url='%1'>\n"
+"Əl ilə</link> göndərin. <interface>Tərtibatçı məlumatları</interface>\n"
+"səhifəsindən geri izləri əlavə etməyi unutmayın.</para>"
 
 #: qml/main.qml:44
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />\n"
-#| "You can manually report this bug to <link>%1</link> (including the "
-#| "backtrace from the <interface>Developer Information</interface> tab.)</"
-#| "para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1025,10 +1011,10 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
-"<para>Hesabat köməkçisi qeyri-aktiv edildi çünki Xəta İşləmcisi dialoqu "
+"<para>Hesabat köməkçisi qeyri-aktiv edildi çünki Xəta işləyici dialoqu "
 "təhlükəsiz rejimdə açılmışdır.<nl />\n"
 "Siz xəta hesabatını <link>%1</link> (<interface>Tərtibatçı Məlumatları</"
-"interface> vərəqindən geri iz daxil olmaqla) əl ilə göndərə bilərsiniz.</"
+"interface> səhifəsindən geri iz daxil olmaqla) əl ilə göndərə bilərsiniz.</"
 "para>"
 
 #: qml/main.qml:51
@@ -1056,11 +1042,10 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Qəza məlumatlarının toplanması naməlum səbəbdən baş tutmadı. Siz yenidən "
+"cəhd edə və ya pəncərəni bağlaya bilərsiniz."
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Retry"
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Təkrarlamaq"
@@ -1068,15 +1053,12 @@ msgstr "Təkrarlamaq"
 #: qml/MainPage.qml:55
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Avtomatik hesabat göndərmək"
 
 #: qml/MainPage.qml:69
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "Tərtibatçı məlumatları"
+msgstr "Tərtibatçı məlumatlarına baxmaq"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
@@ -1237,12 +1219,9 @@ msgid "Crash Report Sent"
 msgstr "Qəza hesabatı göndərildi"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Tətbiqi yeniidən başlatmaq"
+msgstr "%1 yenidən başladın"
 
 #: qml/SentPage.qml:27
 msgctxt "@info"
@@ -1257,17 +1236,11 @@ msgstr ""
 "bağlaya bilərsiniz."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
 msgid "Collecting crash data…"
-msgstr "Verilənlər gözlənilir…"
+msgstr "Məlumatlar toplanır..."
 
 #: qml/SentryPage.qml:53
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Crash Report Sent"
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Qəza hesabatı göndərildi"
@@ -1276,15 +1249,12 @@ msgstr "Qəza hesabatı göndərildi"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Gələcəkdə:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Yararsız xəta/qəza hesabatı"
+msgstr "QƏza hesabatlatını avtomatik göndərmək"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1293,19 +1263,19 @@ msgid ""
 "No manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Həmişə avtomatik olaraq qəza hesabatlarını KDE-nin xəta izləmə sisteminə "
+"göndərir. Əl ilə daxil etmə tələb olunmur. Siz artıq baş verən qəza haqqında "
+"bildiriş almayacaqsınız."
 
 #: qml/SentryPage.qml:89
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Information about the crash:"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Qəza haqqında məlumat:"
+msgstr "Qəza haqqında əlavə məlumat verin..."
 
 #: qml/SentryPage.qml:100
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "İsmarıc göndərmək"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
@@ -1387,14 +1357,12 @@ msgid "Please report this error to help improve this software."
 msgstr "Bu proqram təminatını yaxşılaşdırmaq üçün lütfən bu xətanı bildirin."
 
 #: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "Notification text"
-#| msgid "The application closed unexpectedly."
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr "Bu tətbiq gözlənilmədən bağlandı."
+msgstr "Tətbiq gözlənilmədən bağlandı. Hesabat avtomatik göndərilir."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1424,12 +1392,10 @@ msgid "Hide"
 msgstr "Gizlətmək"
 
 #: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Təfərrüatlar"
+msgstr "Geniş məlumat əlavə edin"
 
 #: statusnotifier.cpp:123
 #, kde-format
