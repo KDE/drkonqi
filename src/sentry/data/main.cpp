@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     };
 
     auto fillProperties = [&blob]<typename... Args>(const BusInterface &iface, Args &&...properties) {
-        QDBusInterface dbusIface(iface.service, iface.path, iface.service, iface.bus);
+        QDBusInterface dbusIface(iface.service, iface.path, iface.interface, iface.bus);
         dbusIface.setTimeout(std::chrono::milliseconds(4s).count()); // arbitrarily low timeout
         for (const auto &property : {properties...}) {
             const QVariant value = dbusIface.property(qUtf8Printable(property));
