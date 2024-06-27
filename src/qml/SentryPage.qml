@@ -109,5 +109,16 @@ You will not receive any more crash notifications.`)
             visible: !detailView.visible
             Layout.fillHeight: true
         }
+
+        QQC2.Button {
+            visible: !detailView.visible
+            Layout.alignment: Qt.AlignRight
+            enabled: reportInterface.crashEventSent
+            icon.name: "checkmark-symbolic"
+            text: i18nc("@action:button", "Finish")
+            onClicked: {
+                Qt.quit()
+            }
+        }
     }
 }
