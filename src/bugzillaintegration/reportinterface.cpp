@@ -148,6 +148,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     } else {
         report.append(QLatin1Char('\n'));
     }
+    report.append(u"ApplicationNotResponding [ANR]: %1\n"_s.arg(crashedApp->wasNotResponding() ? u"true"_s : u"false"_s));
     report.append(QStringLiteral("Qt Version: %1\n").arg(sysInfo->qtVersion()));
     report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
 
@@ -286,6 +287,9 @@ Bugzilla::NewBug ReportInterface::newBugReportTemplate() const
     bug.priority = QLatin1String("NOR");
     bug.severity = QLatin1String("crash");
     bug.summary = m_reportTitle;
+    if (DrKonqi::crashedApplication()->wasNotResponding()) {
+        bug.summary.prepend("[ANR] "_L1);
+    }
 
     return bug;
 }
@@ -380,12 +384,34 @@ void ReportInterface::prepareEventPayload()
         hash.insert(TAGS_KEY, tags);
     }
 
-    if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
-        constexpr auto EXCEPTION_KEY = "exception"_L1;
-        constexpr auto VALUES_KEY = "values"_L1;
+    constexpr auto EXCEPTION_KEY = "exception"_L1;
+    constexpr auto VALUES_KEY = "values"_L1;
+
+    if (DrKonqi::instance()->crashedApplication()->wasNotResponding()) {
+        // Because of QJson shortcomings this is a bit of a mouthful.
+        // Essentially this force-changes the exception types to "ANR". It does so using a bunch of intermediate objects.
         auto exception = hash.take(EXCEPTION_KEY).toHash();
         auto values = exception.take(VALUES_KEY).toJsonArray();
-        // Preprend since the exception is likely the root of the problem stack.
+        QJsonArray newValues;
+        for (const auto &value : values) {
+            auto valueHash = value.toObject().toVariantHash();
+            auto mechanism = valueHash[u"mechanism"_s].toHash();
+            mechanism.insert(u"type"_s, u"ANR"_s);
+            mechanism.remove(u"handled"_s); // set to unknown. technically the ANR is the handling of the problem ;)
+            valueHash.insert(u"mechanism"_s, mechanism);
+            valueHash.insert(u"type"_s, u"ApplicationNotResponding"_s);
+            valueHash.insert(u"value"_s, u"Aborted because unresponsive (probably by the window manager)"_s);
+            newValues.append(QJsonObject::fromVariantHash(valueHash));
+        }
+        exception.insert(VALUES_KEY, newValues);
+        hash.insert(EXCEPTION_KEY, exception);
+        hash.insert(u"level"_s, u"error"_s);
+    }
+
+    if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
+        auto exception = hash.take(EXCEPTION_KEY).toHash();
+        auto values = exception.take(VALUES_KEY).toJsonArray();
+        // Prepend since the exception is likely the root of the problem stack.
         values.prepend(QJsonObject({
             {u"type"_s, DrKonqi::instance()->m_exceptionName},
             {u"value"_s, DrKonqi::instance()->m_exceptionWhat},

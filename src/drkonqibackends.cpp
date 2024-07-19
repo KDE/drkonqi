@@ -165,6 +165,9 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
     qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();
 
+    // We could support ANR by assuming time==now and bootid==current, but this backend is a bit dated anyway, so probably not
+    // worth it => always assume it wasn't ANR.
+    static constexpr auto applicationNotResponding = false;
     return new CrashedApplication(pid,
                                   DrKonqi::thread(),
                                   DrKonqi::signal(),
@@ -176,6 +179,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
                                   QDateTime::currentDateTime(),
                                   DrKonqi::isRestarted(),
                                   hasDeletedFiles,
+                                  applicationNotResponding,
                                   fakeBaseName,
                                   this);
 }

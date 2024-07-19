@@ -30,6 +30,11 @@ protected:
     DebuggerManager *constructDebuggerManager() override;
 
 private:
+    [[nodiscard]] std::optional<QByteArray> bootId() const;
+    [[nodiscard]] std::optional<std::chrono::microseconds> coreTimeSinceEpoch() const;
+    [[nodiscard]] bool resolveApplicationNotResponding() const;
+    [[nodiscard]] bool
+    applicationNotRespondingFileExists(const QString &exe, const QByteArray &bootId, const std::chrono::microseconds &coreTimeSinceEpoch) const;
     std::unique_ptr<CrashedApplication> m_crashedApplication;
     DebuggerManager *m_debuggerManager; // parented
     QHash<QByteArray, QByteArray> m_journalEntry;

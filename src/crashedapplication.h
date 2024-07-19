@@ -33,6 +33,7 @@ class CrashedApplication : public QObject
     Q_PROPERTY(bool hasBeenRestarted READ hasBeenRestarted NOTIFY restarted)
     Q_PROPERTY(QDateTime datetime READ datetime CONSTANT)
     Q_PROPERTY(bool hasDeletedFiles READ hasDeletedFiles CONSTANT)
+    Q_PROPERTY(bool wasNotResponding READ wasNotResponding CONSTANT)
 public:
     CrashedApplication(int pid,
                        int thread,
@@ -45,6 +46,7 @@ public:
                        const QDateTime &datetime = QDateTime::currentDateTime(),
                        bool restarted = false,
                        bool hasDeletedFiles = false,
+                       bool applicationNotResponding = false,
                        const QString &fakeBaseName = QString(),
                        QObject *parent = nullptr);
 
@@ -97,6 +99,8 @@ public:
     /** @returns whether mmap'd files have been deleted, e.g. updated since start of app */
     bool hasDeletedFiles() const;
 
+    [[nodiscard]] bool wasNotResponding() const;
+
 public Q_SLOTS:
     void restart();
 
@@ -116,6 +120,7 @@ protected:
     int m_thread;
     QDateTime m_datetime;
     bool m_hasDeletedFiles;
+    bool m_applicationNotResponding;
 
 public:
     // Only set for the 'coredumpd' backend. Path to on-disk core dump.

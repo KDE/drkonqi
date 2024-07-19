@@ -35,6 +35,7 @@ CrashedApplication::CrashedApplication(int pid,
                                        const QDateTime &datetime,
                                        bool restarted,
                                        bool hasDeletedFiles,
+                                       bool applicationNotResponding,
                                        const QString &fakeBaseName,
                                        QObject *parent)
 
@@ -51,7 +52,7 @@ CrashedApplication::CrashedApplication(int pid,
     , m_thread(thread)
     , m_datetime(datetime)
     , m_hasDeletedFiles(hasDeletedFiles)
-
+    , m_applicationNotResponding(applicationNotResponding)
 {
 }
 
@@ -232,6 +233,11 @@ QString getSuggestedKCrashFilename(const CrashedApplication *app)
     }
 
     return filename;
+}
+
+bool CrashedApplication::wasNotResponding() const
+{
+    return m_applicationNotResponding;
 }
 
 #include "moc_crashedapplication.cpp"

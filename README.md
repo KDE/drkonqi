@@ -70,3 +70,16 @@ bug reporting. The use is that for systems where we are completely in control we
 to differentiate a crash in middleware from one in the application space (or defects caused by the former in the latter).
 
 Please note that this mode requires correctly set up coredumpd support as outlined above.
+
+## Application Not Responding (ANR)
+
+DrKonqi supports detection of ANR scenarios with some help from the outside. Specifically a metadata file must be created
+in `~/.cache/drkonqi/application-not-responding/` followed by an ABRT signal to the unresponsive application.
+
+The metadata file must be named `$exe.$bootId.$pid.$timestamp.json`. It is currently empty but may gain optional content
+in the future.
+
+In a regular Plasma session this metadata file is created by KWin when an application is being killed for unresponsiveness.
+
+This feature is only supported with the coredumpd backend.
+Other backends record the ABRT as crash but will not be able to identify it as ANR.

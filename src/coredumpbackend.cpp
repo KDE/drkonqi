@@ -16,6 +16,7 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusReply>
 #include <QDebug>
+#include <QDirIterator>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QProcess>
@@ -36,9 +37,6 @@
 #include "drkonqi_debug.h"
 #include "linuxprocmapsparser.h"
 #include <coredumpexcavator.h>
-
-using namespace std::chrono_literals;
-using namespace Qt::StringLiterals;
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -215,7 +213,8 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                                                                 DrKonqi::productName(),
                                                                 datetime,
                                                                 DrKonqi::isRestarted(),
-                                                                hasDeletedFiles);
+                                                                hasDeletedFiles,
+                                                                resolveApplicationNotResponding());
 
     m_crashedApplication->m_logs = collectLogs(m_journalEntry[Coredump::keyCursor()],
                                                expectedJournal.value.get(),
@@ -261,6 +260,101 @@ void CoredumpBackend::prepareForDebugger()
         Q_EMIT preparedForDebugger();
     });
     m_excavator->excavateFrom(QString::fromUtf8(m_journalEntry["COREDUMP_FILENAME"]));
+}
+
+std::optional<QByteArray> CoredumpBackend::bootId() const
+{
+    auto ret = m_journalEntry.value("_BOOT_ID"_ba);
+    if (ret.isEmpty()) {
+        return {};
+    }
+    return ret;
+}
+
+std::optional<std::chrono::microseconds> CoredumpBackend::coreTimeSinceEpoch() const
+{
+    bool ok = false;
+    auto ret = m_journalEntry["COREDUMP_TIMESTAMP"].toLong(&ok);
+    if (!ok) {
+        return {};
+    }
+    return std::chrono::microseconds(ret);
+}
+
+bool CoredumpBackend::resolveApplicationNotResponding() const
+{
+    // Note that false may mean no ANR or no conclusive ANR. I toyed with the idea of making it return an optional but
+    // in truth it makes no difference. When we don't know that it is an ANR we must handle it like a regular crash anyway.
+
+    if (DrKonqi::pid() <= 0) {
+        return false; // invalid pid
+    }
+    if (m_journalEntry["COREDUMP_SIGNAL_NAME"] != "SIGABRT"_ba) {
+        return false; // not a suitable signal
+    }
+
+    const auto bootId = m_journalEntry.value("_BOOT_ID"_ba);
+    if (bootId.isEmpty()) {
+        qCWarning(DRKONQI_LOG) << "Ignoring potential ANR because we found no bootid in the journal";
+        return false;
+    }
+
+    bool ok = false;
+    auto coreTimeSinceEpochInt = m_journalEntry["COREDUMP_TIMESTAMP"].toLong(&ok);
+    if (!ok) {
+        qCWarning(DRKONQI_LOG) << "Ignoring potential ANR because we found no core time in the journal";
+        return false;
+    }
+    const std::chrono::microseconds coreTimeSinceEpoch(coreTimeSinceEpochInt);
+
+    const auto exe = QFileInfo(QString::fromUtf8(m_journalEntry["COREDUMP_EXE"])).baseName();
+    if (exe.isEmpty()) {
+        qCWarning(DRKONQI_LOG) << "Ignoring potential ANR because we found no exe in the journal";
+        return false;
+    }
+
+    return applicationNotRespondingFileExists(exe, bootId, coreTimeSinceEpoch);
+}
+bool CoredumpBackend::applicationNotRespondingFileExists(const QString &exe,
+                                                         const QByteArray &bootId,
+                                                         const std::chrono::microseconds &coreTimeSinceEpoch) const
+{
+    static const QString anrPath = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/drkonqi/application-not-responding/"_L1;
+    QDirIterator it(anrPath, QDir::Filter::Files);
+    while (it.hasNext()) {
+        it.next();
+        const auto name = it.fileName();
+        const auto parts = QStringView(name).split('.'_L1);
+        constexpr auto partsCount = 5;
+        if (parts.size() != partsCount) {
+            qCWarning(DRKONQI_LOG) << "unexpected part count when parsing ANR file" << name << parts;
+            continue;
+        }
+        const auto &partExe = parts[0];
+        const auto &partBootId = parts[1];
+        const auto &partPid = parts[2];
+        bool partTimeValid = false;
+        const auto &partTime = std::chrono::microseconds(parts[3].toLongLong(&partTimeValid));
+        // rest is .json
+        if (!partTimeValid) {
+            continue;
+        }
+        if (partExe != exe) {
+            continue;
+        }
+        if (partBootId != QString::fromUtf8(bootId)) {
+            continue;
+        }
+        if (partPid.toInt() != DrKonqi::pid()) {
+            continue;
+        }
+        if (partTime - coreTimeSinceEpoch > 60s) {
+            qCDebug(DRKONQI_LOG) << "Ignoring potential ANR the time delta is too great" << name << partTime << coreTimeSinceEpoch;
+            continue;
+        }
+        return true;
+    }
+    return false;
 }
 
 #include "moc_coredumpbackend.cpp"
