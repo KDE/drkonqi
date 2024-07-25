@@ -255,7 +255,7 @@ void BacktraceGenerator::setBackendPrepared()
     m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
     // check if the debugger should take its input from a file we'll generate,
     // and take the appropriate steps if so
-    QString stdinFile = m_debugger.backendValueOfParameter(QStringLiteral("ExecInputFile"));
+    QString stdinFile = m_debugger.execInputFile();
     Debugger::expandString(stdinFile, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
     if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
         m_proc->setStandardInputFile(stdinFile);

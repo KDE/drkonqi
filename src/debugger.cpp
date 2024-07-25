@@ -25,7 +25,7 @@ QList<Debugger> Debugger::availableInternalDebuggers(const QString &backend)
 
 bool Debugger::isValid() const
 {
-    return m_config;
+    return (!tryExec().isEmpty() || !displayName().isEmpty()) && m_data->backendData.has_value();
 }
 
 bool Debugger::isInstalled() const
@@ -42,87 +42,48 @@ bool Debugger::isInstalled() const
 
 QString Debugger::displayName() const
 {
-    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("Name") : QString();
+    return m_data->displayName;
 }
 
 QString Debugger::codeName() const
 {
     // fall back to the "TryExec" string if "CodeName" is not specified.
     // for most debuggers those strings should be the same
-    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("CodeName", tryExec()) : QString();
+    return !m_data->codeName.isEmpty() ? m_data->codeName : m_data->tryExec;
 }
 
 QString Debugger::tryExec() const
 {
-    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("TryExec") : QString();
-}
-
-QStringList Debugger::supportedBackends() const
-{
-    return isValid() ? m_config->group(QStringLiteral("General")).readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts) : QStringList();
-}
-
-void Debugger::setUsedBackend(const QString &backendName)
-{
-    if (supportedBackends().contains(backendName)) {
-        m_backend = backendName;
-    }
+    return m_data->tryExec;
 }
 
 QString Debugger::command() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return {};
-    }
-    return expandCommand(m_config->group(m_backend).readPathEntry("Exec", QString()));
+    return m_data->backendData->command;
 }
 
 bool Debugger::supportsCommandWithSymbolResolution() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return false;
-    }
-    return m_config->group(m_backend).hasKey("ExecWithSymbolResolution");
+    // TODO this is a bit pointless the resolver command falls back to command so you can just always use the resolver
+    return m_data->backendData->supportsCommandWithSymbolResolution;
 }
 
 QString Debugger::commandWithSymbolResolution() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return {};
-    }
-    return expandCommand(m_config->group(m_backend).readPathEntry("ExecWithSymbolResolution", command()));
+    return m_data->backendData->commandWithSymbolResolution;
 }
 
 QString Debugger::backtraceBatchCommands() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return {};
-    }
-    return expandCommand(m_config->group(m_backend).readPathEntry("BatchCommands", QString()));
+    return m_data->backendData->backtraceBatchCommands;
 }
 
 QString Debugger::preambleCommands() const
 {
-    if (!isValid() || !m_config->hasGroup(m_backend)) {
-        return {};
-    }
-    return expandCommand(m_config->group(m_backend).readPathEntry("PreambleCommands", QString()));
+    return m_data->backendData->preambleCommands;
 }
 
-QString Debugger::expandCommand(const QString &command) const
-{
-    static QHash<QString, QString> map = {
-        {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName(), QStandardPaths::LocateDirectory)},
-    };
-    return KMacroExpander::expandMacros(command, map);
-}
 
-QString Debugger::backendValueOfParameter(const QString &key) const
-{
-    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readEntry(key, QString()) : QString();
-}
-
-// static
 void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString &tempFile, const QString &preambleFile)
 {
     const CrashedApplication *appInfo = DrKonqi::crashedApplication();
@@ -146,7 +107,6 @@ void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString
     }
 }
 
-// static
 QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString &backend)
 {
     const QStringList debuggerDirs{// Search from application path, this helps when deploying an application
@@ -158,10 +118,8 @@ QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString 
 
     QList<Debugger> result;
     for (const auto &debuggerFile : debuggerFiles) {
-        Debugger debugger;
-        debugger.m_config = KSharedConfig::openConfig(debuggerFile);
-        if (debugger.supportedBackends().contains(backend)) {
-            debugger.setUsedBackend(backend);
+        Debugger debugger(KSharedConfig::openConfig(debuggerFile), backend);
+        if (debugger.isValid()) {
             result << debugger;
         }
     }
@@ -195,4 +153,47 @@ Debugger Debugger::findDebugger(const QList<Debugger> &debuggers, const QString 
     }
 
     return preferredDebugger;
+}
+
+std::optional<Debugger::BackendData> Debugger::loadBackendData(const KSharedConfig::Ptr &config, const QString &backend)
+{
+    const auto general = config->group(QStringLiteral("General"));
+    const auto supportedBackends = general.readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts);
+
+    if (!supportedBackends.contains(backend)) {
+        return {};
+    }
+
+    const auto expandCommand = [codeName = general.readEntry("CodeName")](const QString &command) {
+        static QHash<QString, QString> map = {
+            {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName, QStandardPaths::LocateDirectory)},
+        };
+        return KMacroExpander::expandMacros(command, map);
+    };
+
+    const auto group = config->group(backend);
+    const auto command = expandCommand(group.readPathEntry("Exec", QString()));
+    return BackendData{
+        .command = command,
+        .supportsCommandWithSymbolResolution = group.hasKey("ExecWithSymbolResolution"),
+        .commandWithSymbolResolution = expandCommand(group.readPathEntry("ExecWithSymbolResolution", command)),
+        .backtraceBatchCommands = expandCommand(group.readPathEntry("BatchCommands", QString())),
+        .preambleCommands = expandCommand(group.readPathEntry("PreambleCommands", QString())),
+        .execInputFile = group.readEntry("ExecInputFile"),
+    };
+}
+
+Debugger::Debugger(const KSharedConfig::Ptr &config, const QString &backend)
+    : m_data(new Data{
+          .displayName = config->group(QStringLiteral("General")).readEntry("Name"),
+          .codeName = config->group(QStringLiteral("General")).readEntry("CodeName"),
+          .tryExec = config->group(QStringLiteral("General")).readEntry("TryExec"),
+          .backendData = loadBackendData(config, backend),
+      })
+{
+}
+
+QString Debugger::execInputFile() const
+{
+    return m_data->backendData->execInputFile;
 }

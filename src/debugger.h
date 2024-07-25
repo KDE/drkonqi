@@ -40,14 +40,6 @@ public:
      */
     QString tryExec() const;
 
-    /** Returns a list with the drkonqi backends that this debugger supports */
-    QStringList supportedBackends() const;
-
-    /** Sets the backend to be used. This function must be called before using
-     * command(), backtraceBatchCommands()
-     */
-    void setUsedBackend(const QString &backendName);
-
     /** Returns the command that should be run to use the debugger */
     QString command() const;
 
@@ -67,8 +59,7 @@ public:
      */
     QString preambleCommands() const;
 
-    /** Returns the value of the arbitrary configuration parameter @param key, or an empty QString if @param key isn't defined */
-    QString backendValueOfParameter(const QString &key) const;
+    [[nodiscard]] QString execInputFile() const;
 
     enum ExpandStringUsage {
         ExpansionUsagePlainText,
@@ -81,12 +72,32 @@ public:
     static Debugger findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName);
 
 private:
+    static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
+    Debugger() = default;
+    Debugger(const KSharedConfig::Ptr &config, const QString &backend);
+
     // Similar to expandString but specifically for "staticish" expansion of commands with paths resolved at runtime.
     // Conceivably this could be changed to apply on (almost) every config read really.
-    QString expandCommand(const QString &command) const;
-    static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
-    KSharedConfig::Ptr m_config;
-    QString m_backend;
+    [[nodiscard]] static QString expandCommand(const QString &command);
+
+    struct BackendData {
+        QString command;
+        bool supportsCommandWithSymbolResolution;
+        QString commandWithSymbolResolution;
+        QString backtraceBatchCommands;
+        QString preambleCommands;
+        // FIXME this is only used by lldb and wholly pointless because lldb supports better interaction systems
+        QString execInputFile;
+    };
+    static std::optional<BackendData> loadBackendData(const KSharedConfig::Ptr &config, const QString &backend);
+
+    struct Data {
+        QString displayName;
+        QString codeName;
+        QString tryExec;
+        std::optional<BackendData> backendData;
+    };
+    std::shared_ptr<Data> m_data;
 };
 
 #endif
