@@ -72,13 +72,7 @@ public:
     static Debugger findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName);
 
 private:
-    static QList<Debugger> availableDebuggers(const QString &path, const QString &backend);
     Debugger() = default;
-    Debugger(const KSharedConfig::Ptr &config, const QString &backend);
-
-    // Similar to expandString but specifically for "staticish" expansion of commands with paths resolved at runtime.
-    // Conceivably this could be changed to apply on (almost) every config read really.
-    [[nodiscard]] static QString expandCommand(const QString &command);
 
     struct BackendData {
         QString command;
@@ -89,15 +83,16 @@ private:
         // FIXME this is only used by lldb and wholly pointless because lldb supports better interaction systems
         QString execInputFile;
     };
-    static std::optional<BackendData> loadBackendData(const KSharedConfig::Ptr &config, const QString &backend);
 
     struct Data {
         QString displayName;
+        // FIXME it's possible that we don't need this anymore once loading from ini is gone. it may only be used to resolve paths
         QString codeName;
         QString tryExec;
         std::optional<BackendData> backendData;
     };
     std::shared_ptr<Data> m_data;
+    Debugger(const std::shared_ptr<Data> &data);
 };
 
 #endif

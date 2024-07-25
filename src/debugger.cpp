@@ -9,6 +9,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KFileUtils>
+#include <KLocalizedString>
 #include <KMacroExpander>
 #include <QCoreApplication>
 #include <QDir>
@@ -17,15 +18,70 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+using namespace Qt::StringLiterals;
+
 // static
 QList<Debugger> Debugger::availableInternalDebuggers(const QString &backend)
 {
-    return availableDebuggers(QStringLiteral("debuggers/internal"), backend);
+    QList<Debugger> result;
+
+    const auto expandCommand = [](const QString &codeName, const QString &command) {
+        static QHash<QString, QString> map = {
+            {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName, QStandardPaths::LocateDirectory)},
+        };
+        return KMacroExpander::expandMacros(command, map);
+    };
+
+    if (backend == "KCrash"_L1) {
+        result.push_back(std::make_shared<Data>(
+            Data{.displayName = i18nc("@label the debugger called GDB", "GDB"),
+                 .codeName = u"gdb"_s,
+                 .tryExec = u"gdb"_s,
+                 .backendData =
+                     BackendData{.command = u"gdb -nw -n -batch -x %preamblefile -x %tempfile -p %pid %execpath"_s,
+                                 .supportsCommandWithSymbolResolution = true,
+                                 .commandWithSymbolResolution =
+                                     u"gdb -nw -n -batch --init-eval-command='set debuginfod enabled on' -x %preamblefile -x %tempfile -p %pid %execpath"_s,
+                                 .backtraceBatchCommands = u"thread\nthread apply all bt"_s,
+                                 .preambleCommands = expandCommand(
+                                     u"gdb"_s,
+                                     u"set width 200\nset backtrace limit 128\nsource %drkonqi_datadir/python/gdb_preamble/preamble.py\npy print_preamble()"_s),
+                                 .execInputFile = {}}}));
+
+        result.push_back(std::make_shared<Data>( //
+            Data{.displayName = i18nc("@label the debugger called LLDB", "LLDB"),
+                 .codeName = u"lldb"_s,
+                 .tryExec = u"lldb"_s,
+                 .backendData = BackendData{.command = u"lldb -p %pid"_s,
+                                            .supportsCommandWithSymbolResolution = false,
+                                            .commandWithSymbolResolution = {},
+                                            .backtraceBatchCommands = u"settings set term-width 200\nthread info\nbt all"_s,
+                                            .preambleCommands = {},
+                                            .execInputFile = u"%tempfile"_s}}));
+    } else if (backend == "coredump-core"_L1) {
+        result.push_back(std::make_shared<Data>( //
+            Data{
+                .displayName = i18nc("@label the debugger called GDB", "GDB"),
+                .codeName = u"gdb"_s,
+                .tryExec = u"gdb"_s,
+                .backendData = BackendData{
+                    .command = u"gdb --nw --nx --batch --command=%preamblefile --command=%tempfile --core=%corefile %execpath"_s,
+                    .supportsCommandWithSymbolResolution = true,
+                    .commandWithSymbolResolution =
+                        u"gdb --nw --nx --batch --init-eval-command='set debuginfod enabled on' --command=%preamblefile --command=%tempfile --core=%corefile %execpath"_s,
+                    .backtraceBatchCommands = u"thread\nthread apply all bt"_s,
+                    .preambleCommands = expandCommand(
+                        u"gdb"_s,
+                        u"set width 200\nset backtrace limit 128\nsource %drkonqi_datadir/python/gdb_preamble/preamble.py\npy print_preamble()"_s),
+                    .execInputFile = {}}}));
+    }
+
+    return result;
 }
 
 bool Debugger::isValid() const
 {
-    return (!tryExec().isEmpty() || !displayName().isEmpty()) && m_data->backendData.has_value();
+    return m_data && m_data->backendData.has_value() && (!tryExec().isEmpty() || !displayName().isEmpty());
 }
 
 bool Debugger::isInstalled() const
@@ -83,7 +139,6 @@ QString Debugger::preambleCommands() const
     return m_data->backendData->preambleCommands;
 }
 
-
 void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString &tempFile, const QString &preambleFile)
 {
     const CrashedApplication *appInfo = DrKonqi::crashedApplication();
@@ -105,25 +160,6 @@ void Debugger::expandString(QString &str, ExpandStringUsage usage, const QString
     } else {
         str = KMacroExpander::expandMacros(str, map);
     }
-}
-
-QList<Debugger> Debugger::availableDebuggers(const QString &path, const QString &backend)
-{
-    const QStringList debuggerDirs{// Search from application path, this helps when deploying an application
-                                   // as binary blob (e.g. Windows exe).
-                                   QCoreApplication::applicationDirPath() + QLatin1Char('/') + path,
-                                   // Search in default path
-                                   QStandardPaths::locate(QStandardPaths::AppDataLocation, path, QStandardPaths::LocateDirectory)};
-    const QStringList debuggerFiles = KFileUtils::findAllUniqueFiles(debuggerDirs);
-
-    QList<Debugger> result;
-    for (const auto &debuggerFile : debuggerFiles) {
-        Debugger debugger(KSharedConfig::openConfig(debuggerFile), backend);
-        if (debugger.isValid()) {
-            result << debugger;
-        }
-    }
-    return result;
 }
 
 Debugger Debugger::findDebugger(const QList<Debugger> &debuggers, const QString &defaultDebuggerCodeName)
@@ -155,45 +191,12 @@ Debugger Debugger::findDebugger(const QList<Debugger> &debuggers, const QString 
     return preferredDebugger;
 }
 
-std::optional<Debugger::BackendData> Debugger::loadBackendData(const KSharedConfig::Ptr &config, const QString &backend)
-{
-    const auto general = config->group(QStringLiteral("General"));
-    const auto supportedBackends = general.readEntry("Backends").split(QLatin1Char('|'), Qt::SkipEmptyParts);
-
-    if (!supportedBackends.contains(backend)) {
-        return {};
-    }
-
-    const auto expandCommand = [codeName = general.readEntry("CodeName")](const QString &command) {
-        static QHash<QString, QString> map = {
-            {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName, QStandardPaths::LocateDirectory)},
-        };
-        return KMacroExpander::expandMacros(command, map);
-    };
-
-    const auto group = config->group(backend);
-    const auto command = expandCommand(group.readPathEntry("Exec", QString()));
-    return BackendData{
-        .command = command,
-        .supportsCommandWithSymbolResolution = group.hasKey("ExecWithSymbolResolution"),
-        .commandWithSymbolResolution = expandCommand(group.readPathEntry("ExecWithSymbolResolution", command)),
-        .backtraceBatchCommands = expandCommand(group.readPathEntry("BatchCommands", QString())),
-        .preambleCommands = expandCommand(group.readPathEntry("PreambleCommands", QString())),
-        .execInputFile = group.readEntry("ExecInputFile"),
-    };
-}
-
-Debugger::Debugger(const KSharedConfig::Ptr &config, const QString &backend)
-    : m_data(new Data{
-          .displayName = config->group(QStringLiteral("General")).readEntry("Name"),
-          .codeName = config->group(QStringLiteral("General")).readEntry("CodeName"),
-          .tryExec = config->group(QStringLiteral("General")).readEntry("TryExec"),
-          .backendData = loadBackendData(config, backend),
-      })
-{
-}
-
 QString Debugger::execInputFile() const
 {
     return m_data->backendData->execInputFile;
+}
+
+Debugger::Debugger(const std::shared_ptr<Data> &data)
+    : m_data(data)
+{
 }
