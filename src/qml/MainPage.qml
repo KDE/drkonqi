@@ -21,7 +21,13 @@ Kirigami.Page {
     Component.onDestruction: Settings.save()
 
     ColumnLayout {
+        id: layout
+
         anchors.fill: parent
+
+        readonly property int widestMainPageButton: Math.max(autoReportButton.implicitWidth,
+                                                             devInfoButton.implicitWidth
+                                                            )
 
         QQC2.Label {
             Layout.fillWidth: true
@@ -39,36 +45,33 @@ Kirigami.Page {
             Layout.fillHeight: true
         }
 
-        GridLayout {
-            Layout.alignment: Qt.AlignHCenter
+        MainPageButton {
+            id: autoReportButton
 
-            columns: Kirigami.Settings.isMobile ? 1 : 2
-            rows: Kirigami.Settings.isMobile ? 2 : 1
+            Layout.preferredWidth: layout.widestMainPageButton
 
-            MainPageButton {
-                Layout.alignment: Qt.AlignHCenter
-
-                action: Kirigami.Action {
-                    enabled: Kirigami.Settings.isMobile ? true : canAutoReport
-                    visible: Kirigami.Settings.isMobile ? canAutoReport : true
-                    icon.name: "document-send-symbolic"
-                    text: i18nc("@action", "Send Automatic Report")
-                    onTriggered: {
-                        reportInterface.setSendWhenReady(true)
-                        reportInterface.sendSentryReport()
-                        pageStack.replace("qrc:/ui/SentryPage.qml")
-                    }
+            action: Kirigami.Action {
+                enabled: Kirigami.Settings.isMobile ? true : canAutoReport
+                visible: Kirigami.Settings.isMobile ? canAutoReport : true
+                icon.name: "document-send-symbolic"
+                text: i18nc("@action", "Send Automatic Report")
+                onTriggered: {
+                    reportInterface.setSendWhenReady(true)
+                    reportInterface.sendSentryReport()
+                    pageStack.replace("qrc:/ui/SentryPage.qml")
                 }
             }
+        }
 
-            MainPageButton {
-                Layout.alignment: Qt.AlignHCenter
+        MainPageButton {
+            id: devInfoButton
 
-                action: Kirigami.Action {
-                    icon.name: "code-class-symbolic"
-                    text: i18nc("@action", "See Developer Information")
-                    onTriggered: pageStack.push("qrc:/ui/DeveloperPage.qml")
-                }
+            Layout.preferredWidth: layout.widestMainPageButton
+
+            action: Kirigami.Action {
+                icon.name: "code-class-symbolic"
+                text: i18nc("@action", "See Developer Information")
+                onTriggered: pageStack.push("qrc:/ui/DeveloperPage.qml")
             }
         }
 

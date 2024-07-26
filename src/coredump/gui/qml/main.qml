@@ -12,6 +12,8 @@ Kirigami.ApplicationWindow {
     title: i18nc("@title:window", "Overview")
     minimumWidth: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
+    width: Kirigami.Settings.isMobile ? undefined : Kirigami.Units.gridUnit * 42
+    height: Kirigami.Settings.isMobile ? undefined : Kirigami.Units.gridUnit * 34
 
     pageStack.initialPage: ListPage {}
     pageStack.defaultColumnWidth: root.width // show single page

@@ -10,7 +10,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 QQC2.Button {
-    display: T.AbstractButton.TextUnderIcon
+    Layout.alignment: Qt.AlignHCenter
     icon.width: Kirigami.Units.iconSizes.huge
     icon.height: icon.width
     visible: action.visible
