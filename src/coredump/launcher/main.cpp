@@ -81,14 +81,14 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
     if (!metadata[KCRASH_KEY].toObject().isEmpty()) {
         return metadata; // already has data
     }
-    if (!dump.exe.endsWith("/kwin_wayland"_L1)) {
+    if (!dump.exe.endsWith("/kwin_wayland"_L1) && !dump.exe.endsWith("/kwin_x11"_L1)) {
         return metadata; // isn't kwin
     }
 
     auto object = metadata[KCRASH_KEY].toObject();
     object.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
     object.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
-    object.insert(u"restarted"_s, true); // Cannot restart kwin_wayland. Autostarts if anything.
+    object.insert(u"restarted"_s, true); // Cannot restart kwin. Autostarts if anything.
     object.insert(u"bugaddress"_s, u"submit@bugs.kde.org"_s);
     object.insert(u"appname"_s, dump.exe);
     metadata[KCRASH_KEY] = object;
