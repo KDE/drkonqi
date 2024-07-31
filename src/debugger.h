@@ -15,11 +15,10 @@ class Debugger
 {
 public:
     static QList<Debugger> availableInternalDebuggers(const QString &backend);
-    static QList<Debugger> availableExternalDebuggers(const QString &backend);
 
     /** Returns true if this Debugger instance is valid, or false otherwise.
      * Debugger instances are valid only if they have been constructed from
-     * availableInternalDebuggers() or availableExternalDebuggers(). If they
+     * availableInternalDebuggers(). If they
      * have been constructed directly using the Debugger constructor, they are invalid.
      */
     bool isValid() const;
@@ -45,7 +44,7 @@ public:
     QStringList supportedBackends() const;
 
     /** Sets the backend to be used. This function must be called before using
-     * command(), backtraceBatchCommands() or runInTerminal().
+     * command(), backtraceBatchCommands()
      */
     void setUsedBackend(const QString &backendName);
 
@@ -67,9 +66,6 @@ public:
      * getting the backtrace
      */
     QString preambleCommands() const;
-
-    /** If this is an external debugger, it returns whether it should be run in a terminal or not */
-    bool runInTerminal() const;
 
     /** Returns the value of the arbitrary configuration parameter @param key, or an empty QString if @param key isn't defined */
     QString backendValueOfParameter(const QString &key) const;

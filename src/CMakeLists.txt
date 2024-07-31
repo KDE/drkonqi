@@ -28,8 +28,6 @@ set(drkonqi_SRCS
     systeminformation.cpp
     crashedapplication.cpp
     debugger.cpp
-    debuggerlaunchers.cpp
-    ptracer.cpp
     debuggermanager.cpp
     statusnotifier.cpp
     statusnotifier_activationclosetimer.cpp
@@ -53,8 +51,6 @@ set(drkonqi_SRCS
     systeminformation.h
     crashedapplication.h
     debugger.h
-    debuggerlaunchers.h
-    ptracer.h
     debuggermanager.h
     statusnotifier.h
     statusnotifier_activationclosetimer.h

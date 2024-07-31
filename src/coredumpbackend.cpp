@@ -235,12 +235,11 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
 DebuggerManager *CoredumpBackend::constructDebuggerManager()
 {
     const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(CORE_BACKEND_TYPE);
-    const QList<Debugger> externalDebuggers = Debugger::availableExternalDebuggers(CORE_BACKEND_TYPE);
 
     const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, QStringLiteral("gdb")));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
 
-    m_debuggerManager = new DebuggerManager(preferredDebugger, externalDebuggers, this);
+    m_debuggerManager = new DebuggerManager(preferredDebugger, this);
     return m_debuggerManager;
 }
 

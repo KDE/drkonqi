@@ -5,12 +5,6 @@
 -->
 
 # DrKonqi
-## Activating the debug button for DrKonqi
-Add into `~/.config/drkonqirc`:
-```
-[DrKonqi]
-ShowDebugButton=true
-```
 
 ## Integrating with coredumpd
 We need to make sure that the `drkonqi-coredump-processor@.service` is enabled so that coredumpd knows to tell us when a crash happens. You can inspect it with:

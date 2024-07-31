@@ -19,7 +19,6 @@
 
 class BacktraceWidget;
 class QTabWidget;
-class AbstractDebuggerLauncher;
 class QDialogButtonBox;
 class QMenu;
 
@@ -39,10 +38,6 @@ private Q_SLOTS:
 
     void applicationRestarted(bool success);
 
-    void addDebugger(AbstractDebuggerLauncher *launcher);
-    void removeDebugger(AbstractDebuggerLauncher *launcher);
-    void enableDebugMenu(bool);
-
     // GUI
     void buildIntroWidget();
     void buildDialogButtons();
@@ -57,10 +52,7 @@ private:
 
     BacktraceWidget *m_backtraceWidget = nullptr;
 
-    QMenu *m_debugMenu = nullptr;
-    QHash<AbstractDebuggerLauncher *, QAction *> m_debugMenuActions;
     QDialogButtonBox *m_buttonBox = nullptr;
-    QPushButton *m_debugButton = nullptr;
     QPushButton *m_restartButton = nullptr;
     bool m_debugButtonInBox = false;
 };

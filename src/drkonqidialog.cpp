@@ -29,7 +29,6 @@
 #include "bugzillaintegration/bugzillalib.h"
 #include "config-drkonqi.h"
 #include "crashedapplication.h"
-#include "debuggerlaunchers.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqi_globals.h"
@@ -238,31 +237,6 @@ void DrKonqiDialog::buildDialogButtons()
     // Set dialog buttons
     m_buttonBox->setStandardButtons(QDialogButtonBox::Close);
 
-    // Default debugger button and menu (only for developer mode): User2
-    DebuggerManager *debuggerManager = DrKonqi::debuggerManager();
-    m_debugButton = new QPushButton(this);
-    KGuiItem2 debugItem(i18nc("@action:button this is the debug menu button label which contains the debugging applications", "&Debug"),
-                        QIcon::fromTheme(QStringLiteral("applications-development")),
-                        i18nc("@info:tooltip", "Starts a program to debug the crashed application."));
-    KGuiItem::assign(m_debugButton, debugItem);
-    m_debugButton->setVisible(false);
-
-    m_debugMenu = new QMenu(this);
-    m_debugButton->setMenu(m_debugMenu);
-
-    // Only add the debugger if requested by the config or if a KDevelop session is running.
-    const bool showExternal = debuggerManager->showExternalDebuggers();
-    QList<AbstractDebuggerLauncher *> debuggers = debuggerManager->availableExternalDebuggers();
-    for (AbstractDebuggerLauncher *launcher : std::as_const(debuggers)) {
-        if (showExternal || qobject_cast<DBusInterfaceLauncher *>(launcher)) {
-            addDebugger(launcher);
-        }
-    }
-
-    connect(debuggerManager, &DebuggerManager::externalDebuggerAdded, this, &DrKonqiDialog::addDebugger);
-    connect(debuggerManager, &DebuggerManager::externalDebuggerRemoved, this, &DrKonqiDialog::removeDebugger);
-    connect(debuggerManager, &DebuggerManager::debuggerRunning, this, &DrKonqiDialog::enableDebugMenu);
-
     // Restart application button
     m_restartButton = new QPushButton(m_buttonBox);
     KGuiItem::assign(m_restartButton, DrStandardGuiItem::appRestart());
@@ -276,54 +250,6 @@ void DrKonqiDialog::buildDialogButtons()
     m_buttonBox->button(QDialogButtonBox::Close)->setToolTip(tooltipText);
     m_buttonBox->button(QDialogButtonBox::Close)->setWhatsThis(tooltipText);
     m_buttonBox->button(QDialogButtonBox::Close)->setFocus();
-}
-
-void DrKonqiDialog::addDebugger(AbstractDebuggerLauncher *launcher)
-{
-    auto *action = new QAction(QIcon::fromTheme(QStringLiteral("applications-development")),
-                               i18nc("@action:inmenu 1 is the debugger name", "Debug in %1", launcher->name()),
-                               m_debugMenu);
-    m_debugMenu->addAction(action);
-    connect(action, &QAction::triggered, launcher, &AbstractDebuggerLauncher::start);
-    m_debugMenuActions.insert(launcher, action);
-
-    // Make sure that the debug button is the first button with action role to be
-    // inserted, then add the other buttons. See removeDebugger below for more information.
-    if (!m_debugButtonInBox) {
-        auto buttons = m_buttonBox->buttons();
-        m_buttonBox->addButton(m_debugButton, QDialogButtonBox::ActionRole);
-        m_debugButton->setVisible(true);
-        for (QAbstractButton *button : buttons) {
-            if (m_buttonBox->buttonRole(button) == QDialogButtonBox::ActionRole) {
-                m_buttonBox->addButton(button, QDialogButtonBox::ActionRole);
-            }
-        }
-        m_debugButtonInBox = true;
-    }
-}
-
-void DrKonqiDialog::removeDebugger(AbstractDebuggerLauncher *launcher)
-{
-    QAction *action = m_debugMenuActions.take(launcher);
-    if (action) {
-        m_debugMenu->removeAction(action);
-        action->deleteLater();
-        // Remove the button from the box, otherwise the box will force
-        // it visible as it calls show() explicitly. (QTBUG-3651)
-        if (m_debugMenu->isEmpty()) {
-            m_buttonBox->removeButton(m_debugButton);
-            m_debugButton->setVisible(false);
-            m_debugButton->setParent(this);
-            m_debugButtonInBox = false;
-        }
-    } else {
-        qCWarning(DRKONQI_LOG) << "Invalid launcher";
-    }
-}
-
-void DrKonqiDialog::enableDebugMenu(bool debuggerRunning)
-{
-    m_debugButton->setEnabled(!debuggerRunning);
 }
 
 void DrKonqiDialog::linkActivated(const QString &link)

@@ -11,33 +11,26 @@
 
 class BacktraceGenerator;
 class Debugger;
-class AbstractDebuggerLauncher;
 class AbstractDrKonqiBackend;
 
 class DebuggerManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit DebuggerManager(const Debugger &internalDebugger, const QList<Debugger> &externalDebuggers, AbstractDrKonqiBackend *backendParent);
+    explicit DebuggerManager(const Debugger &internalDebugger, AbstractDrKonqiBackend *backendParent);
     ~DebuggerManager() override;
 
     bool debuggerIsRunning() const;
-    bool showExternalDebuggers() const;
-    QList<AbstractDebuggerLauncher *> availableExternalDebuggers() const;
     BacktraceGenerator *backtraceGenerator() const;
-    void addDebugger(AbstractDebuggerLauncher *launcher, bool emitsignal = false);
 
 Q_SIGNALS:
     void debuggerStarting();
     void debuggerFinished();
     void debuggerRunning(bool running);
-    void externalDebuggerAdded(AbstractDebuggerLauncher *launcher);
-    void externalDebuggerRemoved(AbstractDebuggerLauncher *launcher);
 
 private Q_SLOTS:
     void onDebuggerStarting();
     void onDebuggerFinished();
-    void onDebuggerInvalidated();
 
 private:
     struct Private;

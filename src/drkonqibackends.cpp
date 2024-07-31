@@ -196,11 +196,10 @@ DebuggerManager *KCrashBackend::constructDebuggerManager()
 #endif
 
     const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
-    const QList<Debugger> externalDebuggers = Debugger::availableExternalDebuggers(QStringLiteral("KCrash"));
 
     const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, defaultDebuggerName));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
-    return new DebuggerManager(preferredDebugger, externalDebuggers, this);
+    return new DebuggerManager(preferredDebugger, this);
 }
 
 void KCrashBackend::stopAttachedProcess()

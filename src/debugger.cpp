@@ -23,12 +23,6 @@ QList<Debugger> Debugger::availableInternalDebuggers(const QString &backend)
     return availableDebuggers(QStringLiteral("debuggers/internal"), backend);
 }
 
-// static
-QList<Debugger> Debugger::availableExternalDebuggers(const QString &backend)
-{
-    return availableDebuggers(QStringLiteral("debuggers/external"), backend);
-}
-
 bool Debugger::isValid() const
 {
     return m_config;
@@ -121,11 +115,6 @@ QString Debugger::expandCommand(const QString &command) const
         {QStringLiteral("drkonqi_datadir"), QStandardPaths::locate(QStandardPaths::AppDataLocation, codeName(), QStandardPaths::LocateDirectory)},
     };
     return KMacroExpander::expandMacros(command, map);
-}
-
-bool Debugger::runInTerminal() const
-{
-    return (isValid() && m_config->hasGroup(m_backend)) ? m_config->group(m_backend).readEntry("Terminal", false) : false;
 }
 
 QString Debugger::backendValueOfParameter(const QString &key) const
