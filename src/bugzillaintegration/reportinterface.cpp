@@ -148,7 +148,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
     } else {
         report.append(QLatin1Char('\n'));
     }
-    report.append(QStringLiteral("Qt Version: %1\n").arg(sysInfo->qtVersion()));
+    report.append(QStringLiteral("Qt Version: %1\n").arg(DrKonqi::instance()->qtVersion()));
     report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
