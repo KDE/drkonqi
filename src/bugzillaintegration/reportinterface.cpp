@@ -381,6 +381,7 @@ void ReportInterface::prepareEventPayload()
         tags.insert(u"some_verbosity"_s, hadSomeVerbosity);
         // Tag the gui platform as well because the version from the gpu field cannot be easily filtered for
         tags.insert(u"gui_platform"_s, QGuiApplication::platformName()); // NOTE: drkonqi gets invoked with the same platform as the crashed app
+        tags.insert(u"qt_version"_s, DrKonqi::systemInformation()->qtVersion());
         hash.insert(TAGS_KEY, tags);
     }
 
