@@ -395,4 +395,13 @@ bool DrKonqi::minimalMode()
     return qEnvironmentVariableIntValue("DRKONQI_MINIMAL_MODE") > 0;
 }
 
+QString DrKonqi::qtVersion() const
+{
+    if (m_qtVersion.isEmpty()) {
+        // Legacy behavior had us not consume the qt version but instead use our qt version. Fall back to that.
+        return m_systemInformation->qtVersion();
+    }
+    return m_qtVersion;
+}
+
 #include "drkonqi.moc"

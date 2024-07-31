@@ -149,7 +149,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         report.append(QLatin1Char('\n'));
     }
     report.append(u"ApplicationNotResponding [ANR]: %1\n"_s.arg(crashedApp->wasNotResponding() ? u"true"_s : u"false"_s));
-    report.append(QStringLiteral("Qt Version: %1\n").arg(sysInfo->qtVersion()));
+    report.append(QStringLiteral("Qt Version: %1\n").arg(DrKonqi::instance()->qtVersion()));
     report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));

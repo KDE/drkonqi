@@ -78,6 +78,8 @@ public:
     QString m_glRenderer;
     QString m_exceptionName;
     QString m_exceptionWhat;
+    QString m_qtVersion;
+    [[nodiscard]] QString qtVersion() const;
 
 private:
     DrKonqi();
