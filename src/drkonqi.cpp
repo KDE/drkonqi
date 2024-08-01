@@ -404,4 +404,13 @@ QString DrKonqi::qtVersion() const
     return m_qtVersion;
 }
 
+QString DrKonqi::frameworksVersion() const
+{
+    if (m_frameworksVersion.isEmpty()) {
+        // Legacy behavior had us not consume the frameworks version but instead use our frameworks version. Fall back to that.
+        return m_systemInformation->frameworksVersion();
+    }
+    return m_frameworksVersion;
+}
+
 #include "drkonqi.moc"
