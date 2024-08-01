@@ -80,6 +80,8 @@ public:
     QString m_exceptionWhat;
     QString m_qtVersion;
     [[nodiscard]] QString qtVersion() const;
+    QString m_frameworksVersion;
+    [[nodiscard]] QString frameworksVersion() const;
 
 private:
     DrKonqi();

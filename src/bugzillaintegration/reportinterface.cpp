@@ -149,7 +149,7 @@ QString ReportInterface::generateReportFullText(DrKonqiStamp stamp, Backtrace in
         report.append(QLatin1Char('\n'));
     }
     report.append(QStringLiteral("Qt Version: %1\n").arg(DrKonqi::instance()->qtVersion()));
-    report.append(QStringLiteral("Frameworks Version: %1\n").arg(sysInfo->frameworksVersion()));
+    report.append(QStringLiteral("Frameworks Version: %1\n").arg(DrKonqi::instance()->frameworksVersion()));
 
     report.append(QStringLiteral("Operating System: %1\n").arg(sysInfo->operatingSystem()));
     report.append(QStringLiteral("Windowing System: %1\n").arg(sysInfo->windowSystem()));
@@ -378,6 +378,7 @@ void ReportInterface::prepareEventPayload()
         // Tag the gui platform as well because the version from the gpu field cannot be easily filtered for
         tags.insert(u"gui_platform"_s, QGuiApplication::platformName()); // NOTE: drkonqi gets invoked with the same platform as the crashed app
         tags.insert(u"qt_version"_s, DrKonqi::instance()->qtVersion());
+        tags.insert(u"kde_frameworks_version"_s, DrKonqi::instance()->frameworksVersion());
         hash.insert(TAGS_KEY, tags);
     }
 

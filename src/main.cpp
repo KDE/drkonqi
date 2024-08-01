@@ -186,6 +186,7 @@ int main(int argc, char *argv[])
     const QCommandLineOption exceptionNameOption(u"exceptionname"_s, u"The exception class name if an exception was the cause"_s, u"name"_s);
     const QCommandLineOption exceptionWhatOption(u"exceptionwhat"_s, u"The exception what string if an exception was the cause"_s, u"what"_s);
     const QCommandLineOption qtVersionOption(u"qtversion"_s, u"The version of Qt used by the process"_s, u"qtversion"_s);
+    const QCommandLineOption frameworksVersionOption(u"kdeframeworksversion"_s, u"The KDE Frameworks version used by the process"_s, u"kdeframeworksversion"_s);
 
     parser.addOptions({signalOption,
                        appNameOption,
@@ -205,7 +206,8 @@ int main(int argc, char *argv[])
                        glRendererOption,
                        exceptionNameOption,
                        exceptionWhatOption,
-                       qtVersionOption});
+                       qtVersionOption,
+                       frameworksVersionOption});
 
     // Add all unknown options but make sure to print a warning.
     // This enables older DrKonqi's to run by newer KCrash instances with
@@ -259,6 +261,7 @@ int main(int argc, char *argv[])
     }
     DrKonqi::instance()->m_exceptionWhat = parser.value(exceptionWhatOption);
     DrKonqi::instance()->m_qtVersion = parser.value(qtVersionOption);
+    DrKonqi::instance()->m_frameworksVersion = parser.value(frameworksVersionOption);
     auto forceDialog = parser.isSet(dialogOption);
 
     if (!DrKonqi::init()) {
