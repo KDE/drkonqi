@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-04-13 01:04-0300\n"
+"PO-Revision-Date: 2024-08-02 11:55-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -341,7 +341,7 @@ msgstr "Falha"
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Falha ao acessar os dados da falha por motivos desconhecidos."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -935,6 +935,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Baixe automaticamente símbolos de depuração para aprimorar relatórios de "
+"falhas"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -944,6 +946,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Relatórios de falhas podem ser de maior valor se recursos de depuração "
+"adicionais forem baixados de sua distribuição primeiro.\n"
+"Isso causa downloads de tamanho desconhecido quando ocorre uma falha. Isso é "
+"ignorado automaticamente ao usar uma conexão de internet restrita."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1059,6 +1065,8 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"A coleta de informações sobre a falha não foi concluída por razões "
+"desconhecidas. Você pode tentar novamente ou fechar a janela."
 
 #: qml/main.qml:89
 msgctxt "@action retry gathering crash data"
@@ -1262,7 +1270,7 @@ msgstr "Relatório de falha enviado"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "No futuro:"
 
 #: qml/SentryPage.qml:64
 msgctxt "@label"
