@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 19:27+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -452,19 +452,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Utilitzeu este botó per a tornar a iniciar l'aplicació que ha fallat."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&General"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informació del &desenvolupador"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -473,7 +473,7 @@ msgstr ""
 "<para>Ho sentim, <application>%1</application> s'ha tancat inesperadament.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -490,7 +490,7 @@ msgstr ""
 "inversa des de la pestanya <interface>Informació del desenvolupador</"
 "interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -504,7 +504,7 @@ msgstr ""
 "manualment a %1 (incloent-hi la traça inversa des de la pestanya "
 "<interface>Informació del desenvolupador</interface>).</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -522,7 +522,7 @@ msgstr ""
 "de la sessió i tornar a entrar-hi per tal d'assegurar que l'actualització "
 "s'ha aplicat completament i no provoca cap efecte col·lateral.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -532,7 +532,7 @@ msgstr ""
 "<para>Podeu ajudar a millorar el programari de KDE informant d'este error."
 "<nl /><link url='%1'>Apreneu més quant a informar d'errors.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -542,13 +542,13 @@ msgstr ""
 "<para>No podeu informar d'este error, perquè <application>%1</application> "
 "no ha proporcionat cap adreça d'informe d'error.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalls:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -558,32 +558,12 @@ msgstr ""
 "<para>Executable: <application>%1</application> PID: %2 Senyal: %3 (%4) "
 "Hora: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Depura"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Inicia un programa per a depurar l'aplicació que ha fallat."
-
 # skip-rule: punctuation-period-no
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Tanqueu este diàleg (perdreu la informació de la fallada)."
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Depura en %1"
 
 #: main.cpp:151
 #, kde-format
@@ -1472,3 +1452,17 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Depura"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Inicia un programa per a depurar l'aplicació que ha fallat."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Depura en %1"

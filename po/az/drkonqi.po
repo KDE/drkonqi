@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-06-10 11:52+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -439,19 +439,19 @@ msgid "Use this button to restart the crashed application."
 msgstr ""
 "Qəza baş vermiş tətbiqi yenidən başlatmaq üçün bu düymədən istifadə edin."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "Əs&as"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Tərtibatçı Məlumatları"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -459,7 +459,7 @@ msgid ""
 msgstr ""
 "<para>Təəsüf ki, <application>%1</application> gözlənilmədən bağlandı.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -475,7 +475,7 @@ msgstr ""
 "<link url='%1'>əl ilə göndər</link>. <interface>Tərtibatçı Məlumatları</"
 "interface> vərəqindən geri izi daxil etməyi unutmayın.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -489,7 +489,7 @@ msgstr ""
 "(<interface>Tərtibatçı Məlumatları</interface> vərəqindən geri iz daxil "
 "edilmiş) əl ilə göndərə bilərsiniz.</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +507,7 @@ msgstr ""
 "daxil olun ki, yenilənmələrin tam tətbiq olunduğuna və heç bir yan təsir "
 "göstərməyəcəyinə əmin olun.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -518,7 +518,7 @@ msgstr ""
 "kömək göstərə bilərsizniz.<nl /><link url='%1'>Xəta hesabatı haqqında daha "
 "çox öyrəniny</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -528,13 +528,13 @@ msgstr ""
 "<para>Siz bu xəta hesabatını göndərə bilməzsiniz, çünki, <application>%1</"
 "application> tətbiqi xəta hesabatı ünvanını təqdim etmir.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Təfərrüatlar:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -544,31 +544,11 @@ msgstr ""
 "<para>İcra faylı: <application>%1</application> PID: %2 Siqnal: %3 (%4) "
 "Vaxt: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Sazlama"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Çökən tətbiqdəki xətaları aradan qaldırmaq üçün proqram başladılır."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Bu dialoqu bağlamaq (xəta hesabatını itirəcəksiniz)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "%1 dəki xətanı aradan qaldırmaq"
 
 #: main.cpp:151
 #, kde-format
@@ -1455,6 +1435,20 @@ msgstr "bugstest.kde.org istifadəçi_adı"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org şifrəsi"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Sazlama"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Çökən tətbiqdəki xətaları aradan qaldırmaq üçün proqram başladılır."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "%1 dəki xətanı aradan qaldırmaq"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

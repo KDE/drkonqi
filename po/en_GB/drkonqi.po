@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-06-29 11:21+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -433,19 +433,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use this button to restart the crashed application."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&General"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Developer Information"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -453,7 +453,7 @@ msgid ""
 msgstr ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -469,7 +469,7 @@ msgstr ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -483,7 +483,7 @@ msgstr ""
 "(including the backtrace from the <interface>Developer Information</"
 "interface> tab.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -501,7 +501,7 @@ msgstr ""
 "make sure the update is fully applied and will not cause any side effects.</"
 "para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -511,7 +511,7 @@ msgstr ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
 "><link url='%1'>Learn more about bug reporting.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -521,13 +521,13 @@ msgstr ""
 "<para>You cannot report this error, because <application>%1</application> "
 "does not provide a bug reporting address.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Details:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -537,31 +537,11 @@ msgstr ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Debug"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Starts a program to debug the crashed application."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Close this dialogue (you will lose the crash information)."
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Debug in %1"
 
 #: main.cpp:151
 #, kde-format
@@ -1440,6 +1420,20 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Debug"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Starts a program to debug the crashed application."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Debug in %1"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

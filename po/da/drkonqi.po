@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -448,19 +448,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Brug denne knap til at genstarte programmet som brød sammen."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Generelt"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "U&dviklerinformation"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -468,7 +468,7 @@ msgid ""
 msgstr ""
 "<para>Vi beklager, <application>%1</application> lukkede uventet.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -484,7 +484,7 @@ msgstr ""
 "fejlrapportsystem. Glem ikke at medtage backtracet fra fanebladet "
 "<interface>Udviklerinformation</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 "rapportere denne fejl til %1 (inklusiv backtrace fra fanebladet "
 "<interface>Udviklerinformation</interface>.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 "ide at logge ud og ind igen, for at sikre at opdateringen er fuldt anvendt "
 "og ikke har nogle utilsigtede konsekvenser.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -526,7 +526,7 @@ msgstr ""
 "<para>Du kan hjælpe os med at forbedre KDE-software ved at rapportere denne "
 "fejl.<nl /> <link url='%1'>Lær mere om fejlrapportering.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -536,13 +536,13 @@ msgstr ""
 "<para>Du kan ikke rapportere denne fejl, da <application>%1</application> "
 "ikke angiver en adresse til fejlrapportering.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detaljer:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -552,31 +552,11 @@ msgstr ""
 "<para>Kørbar fil: <application>%1</application> PID: %2 Signal: %3 (%4) Tid: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Fejlsøg"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Starter et program til fejlsøgning af det program som brød sammen."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Luk denne dialog (du vil miste informationen om sammenbruddet.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Fejlsøgning med %1"
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1665,6 +1645,20 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Fejlsøg"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Starter et program til fejlsøgning af det program som brød sammen."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Fejlsøgning med %1"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

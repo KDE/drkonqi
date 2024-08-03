@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2022-08-05 22:46+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -445,19 +445,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use este botão para reiniciar a aplicação estoirada."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Geral"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informação &do Programador"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -466,7 +466,7 @@ msgstr ""
 "<para>Infelizmente, o <application>%1</application> estoirou de forma "
 "inesperada.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -483,7 +483,7 @@ msgstr ""
 "esqueça de incluir o registo de chamadas da página de <interface>Informação "
 "do Programador</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "este erro a %1 (incluindo o registo de chamadas da página de "
 "<interface>Informação do Programador</interface>.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -515,7 +515,7 @@ msgstr ""
 "ideia encerrar e reiniciar a sessão para garantir que a actualização foi "
 "aplicada por completo e não irá provocar nenhum efeito colateral.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -525,7 +525,7 @@ msgstr ""
 "<para>Poder-nos-á ajudar a melhorar o KDE se comunicar este erro.<nl /><link "
 "url='%1'>Aprenda mais sobre os relatórios de erros.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -535,13 +535,13 @@ msgstr ""
 "<para>Não poderá comunicar este erro, porque o <application>%1</application> "
 "não indica nenhum endereço de relatório de erros.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalhes:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -551,31 +551,11 @@ msgstr ""
 "<para>Executável: <application>%1</application> PID: %2 Sinal: %3 (%4) Hora: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Depurar"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Inicia um programa para depurar a aplicação estoirada."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Fechar esta janela (irá perder a informação do estoiro.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Depurar no %1"
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1505,6 +1485,20 @@ msgstr "Utilizador do bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Senha do bugstest.kde.org"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Depurar"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Inicia um programa para depurar a aplicação estoirada."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Depurar no %1"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

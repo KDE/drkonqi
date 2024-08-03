@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2014-09-18 15:23+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -445,19 +445,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Mit dissen Knoop kannst Du dat afstörte Programm nieg starten."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Allgemeen"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informatschonen för &Programmschrievers"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -465,7 +465,7 @@ msgid ""
 msgstr ""
 "<para>Oha, <application>%1</application> wöör unverwachtens utmaakt.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -480,7 +480,7 @@ msgstr ""
 "<link url='%1'>vun Hand</link> dat KDE-Fehlerpleegsysteem to, un föög em ok "
 "de Fehlerspoor vun't <interface>Schriever</interface>-Paneel bi.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,7 +494,7 @@ msgstr ""
 "tostüern (un de Fehlerspoor vun't <interface>Schriever</interface>-Paneel "
 "bifögen).</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -506,7 +506,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -524,7 +524,7 @@ msgstr ""
 "link></para><para><note>Du kannst dissen Dialoog eenfach tomaken, wenn Du "
 "den Fehler nich künnig maken wullt.</note></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -534,13 +534,13 @@ msgstr ""
 "<para>Du kannst dissen Fehler nich künnig maken, dat Programm <application>"
 "%1</application> stellt dor keen Fehlerbericht-Adress för praat.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Enkelheiten:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
@@ -555,31 +555,11 @@ msgstr ""
 "<para>Programmdatei: <application>%1</application> PID: <numid>%2</numid> "
 "Signaal: %3 (%4) Tiet: %5, %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Fehlersöök"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Röppt en Programm för de Fehlersöök binnen dat afstörte Programm op"
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Dissen Dialoog tomaken (de Afstört-Informatschonen kaamt weg)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Fehlersöök mit %1"
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1672,6 +1652,20 @@ msgstr "bugstest.kde.org brukernaam"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org Passwoort"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Fehlersöök"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Röppt en Programm för de Fehlersöök binnen dat afstörte Programm op"
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Fehlersöök mit %1"
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

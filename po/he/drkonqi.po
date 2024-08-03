@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 08:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -431,26 +431,26 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "אפשר להשתמש בכפתור זה כדי להפעיל יישום שקרס מחדש."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&כללי"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "מידע למ&פתחים"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
 msgstr "<para>‏<application>%1</application> נסגר במפתיע, עימך הסליחה.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -465,7 +465,7 @@ msgstr ""
 "השגיאה הזאת למערכת מעקב התקלות של KDE. לא לשכוח לכלול את ניתוח המהלכים "
 "מהלשונית <interface>מידע למפתחים</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -478,7 +478,7 @@ msgstr ""
 ">אפשר לדווח על התקלה הזאת ידנית דרך %1 (כולל ניתוח המהלכים מהלשונית "
 "<interface>מידע למפתחים</interface>.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,7 +494,7 @@ msgstr ""
 "para><para>לאחר עדכון תמיד כדאי לצאת מההפעלה ולחזור אליה כדי לוודא שהעדכון "
 "חל במלואו ולא יגרום לתופעות לוואי.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -504,7 +504,7 @@ msgstr ""
 "<para>אפשר לסייע לנו לשפר את התוכנות של KDE על ידי דיווח על השגיאה הזאת.<nl /"
 "><link url='%1'>מידע נוסף על דיווח תקלות.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -514,13 +514,13 @@ msgstr ""
 "<para>אי אפשר לדווח על השגיאה הזאת כיוון ש־<application>%1</application> לא "
 "מספק כתובת לדיווח תקלות.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "פרטים:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -530,31 +530,11 @@ msgstr ""
 "<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): <numid>%2</"
 "numid> אות (Signal): %3 (%4) מועד: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&ניפוי שגיאות"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "מתחיל את התוכנית כדי לנפות את השגיאות ביישום שקרס."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "סגירת החלונית הזאת (פרטי הקריסה יאבדו.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "ניפוי שגיאות ב־%1"
 
 #: main.cpp:151
 #, kde-format
@@ -1409,6 +1389,20 @@ msgstr "שם משתמש ב־bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "סיסמה ב־bugstest.kde.org"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&ניפוי שגיאות"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "מתחיל את התוכנית כדי לנפות את השגיאות ביישום שקרס."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "ניפוי שגיאות ב־%1"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"

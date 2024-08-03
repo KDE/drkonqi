@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2013-11-10 23:14+0000\n"
 "Last-Translator: Emrah Dautbegovic <edautbegov1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -445,19 +445,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Ovim dugmetom ponovo pokrećete srušeni program."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Opšte"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Podaci za programere"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -467,7 +467,7 @@ msgstr ""
 "<para><application>%1</application> se neočekivano $[po-rodu %1 zatvorio "
 "zatvorila zatvorilo].</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -483,7 +483,7 @@ msgstr ""
 "praćenje grešaka. Ne zaboravite uključiti povratno praćenje iz "
 "<interface>Informacije o programeru</interface>tab.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -497,7 +497,7 @@ msgstr ""
 "ovoj grešci %1 (uključujući povratno praćenje iz <interface>Informacije o "
 "programeru</interface>tab.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -509,7 +509,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -527,7 +527,7 @@ msgstr ""
 "para><para><note>Sigurno je zatvoriti ovaj razgovor ako ne želite "
 "izvjštavati o ovoj grešci.</note></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -537,13 +537,13 @@ msgstr ""
 "<para> Ne možete izvještavati o ovoj grešci, jer <application>%1</"
 "application> ne predviđa adresu izvještavanja o greškama.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalji:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
@@ -558,31 +558,11 @@ msgstr ""
 "<para>Izvršna: <application>%1</application> PID: <numid>%2</numid> Signal: "
 "%3 (%4) Vrijeme: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Ispravljanje"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Pokreće program za ispravljanje srušenog programa."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Zatvorite ovaj dijalog (izgubićete podatke o padu)."
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr ""
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1690,6 +1670,16 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Ispravljanje"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Pokreće program za ispravljanje srušenog programa."
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-02-29 12:14+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -434,19 +434,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Spiediet, lai pārstartētu avarējušo programmu."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Pamata"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informācija izstrādātājiem"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -455,7 +455,7 @@ msgstr ""
 "<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -471,7 +471,7 @@ msgstr ""
 "sistēmā. Neaizmirstiet iekļaut atpakaļceļu no cilnes <interface>Informācija "
 "izstrādātājiem</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -485,7 +485,7 @@ msgstr ""
 "atpakaļceļu no cilnes <interface>Informācija izstrādātājiem</interface>).</"
 "para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,7 +502,7 @@ msgstr ""
 "noderīgi izrakstīties no sistēmas un atkal tajā ierakstīties, lai visi "
 "atjauninājumi stātos spēkā un nerastos negaidīti blakus efekti.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -512,7 +512,7 @@ msgstr ""
 "<para>Varat palīdzēt mums uzlabot KDE programmatūru, ziņojot par šo kļūdu."
 "<nl /><link url='%1'>Uzziniet vairāk par kļūdu ziņošanu.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -522,13 +522,13 @@ msgstr ""
 "<para>Par šo kļūdu nevarat ziņot, jo <application>%1</application> programmā "
 "nav norādīta kļūdu ziņošanas adrese.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Informācija:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -538,31 +538,11 @@ msgstr ""
 "<para>Izpilddatne: <application>%1</application> PID: %2 Signāls: %3 (%4) "
 "Laiks: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Atkļūdot"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Palaiž programmu avarējušās programmas atkļūdošanai."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Aizvērt šo logu (avārijas informācija tiks pazaudēta.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Atkļūdot atkļūdotājā „%1“"
 
 #: main.cpp:151
 #, kde-format
@@ -1440,6 +1420,20 @@ msgstr "„bugstest.kde.org“ lietotājvārds"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "„bugstest.kde.org“ parole"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Atkļūdot"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Palaiž programmu avarējušās programmas atkļūdošanai."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Atkļūdot atkļūdotājā „%1“"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"

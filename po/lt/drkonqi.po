@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-07-10 01:14+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -439,19 +439,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Naudokite šį mygtuką, norėdami iš naujo paleisti užstrigusią programą."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Bendra"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informacija programuotojams"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -459,7 +459,7 @@ msgid ""
 msgstr ""
 "<para>Atleiskite, <application>%1</application> netikėtai užsivėrė.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -476,7 +476,7 @@ msgstr ""
 "<interface>Informacijos programuotojams</interface> kortelės įtraukti "
 "strigties pėdsaką.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -490,7 +490,7 @@ msgstr ""
 "šią klaidą į %1 (įskaitant strigties pėdsaką iš <interface>Informacijos "
 "programuotojams</interface> kortelės.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,7 +508,7 @@ msgstr ""
 "prisijungti, kad būtų užtikrinta, jog antaujinimas buvo pilnai pritaikytas "
 "ir nesukels jokių šalutinių poveikių.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -519,7 +519,7 @@ msgstr ""
 "įrangą.<nl /><link url='%1'>Sužinokite daugiau apie pranešimą apie klaidas.</"
 "link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -529,13 +529,13 @@ msgstr ""
 "<para>Jūs negalite pranešti apie šią klaidą, nes <application>%1</"
 "application> nepateikia pranešimų apie klaidas adreso.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Išsamiau:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -545,31 +545,11 @@ msgstr ""
 "<para>Vykdomas failas: <application>%1</application> PID: %2 Signalas: %3 "
 "(%4) Laikas: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Derinti"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Paleidžia programą, kad būtų galima derinti užstrigusią programą."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Užverti šį dialogą (prarasite visą informaciją apie strigtį)."
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Derinti naudojant %1"
 
 #: main.cpp:151
 #, kde-format
@@ -1458,6 +1438,20 @@ msgstr "bugstest.kde.org naudotojo vardas"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org slaptažodis"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Derinti"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Paleidžia programą, kad būtų galima derinti užstrigusią programą."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Derinti naudojant %1"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"

@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
-"PO-Revision-Date: 2024-04-13 01:04-0300\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"PO-Revision-Date: 2024-08-02 11:55-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -341,7 +341,7 @@ msgstr "Falha"
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Falha ao acessar os dados da falha por motivos desconhecidos."
 
 #: coredump/gui/qml/DetailsPage.qml:19
 msgctxt "@title"
@@ -457,19 +457,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use este botão para reiniciar o aplicativo que falhou."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Geral"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informações do &desenvolvedor"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -478,7 +478,7 @@ msgstr ""
 "<para>Desculpe-nos, mas o <application>%1</application> fechou de forma "
 "inesperada.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,7 +494,7 @@ msgstr ""
 "no sistema de registro de erros do KDE. Não esqueça de incluir o \"backtrace"
 "\" da aba <interface>Informações dos desenvolvedores</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,7 +508,7 @@ msgstr ""
 "relatar manualmente este erro a %1 (incluindo o \"backtrace\" da aba "
 "<interface>Informações dos desenvolvedores</interface>.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -527,7 +527,7 @@ msgstr ""
 "que a atualização foi completamente aplicada e não irá provocar nenhum "
 "efeito colateral.</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -538,7 +538,7 @@ msgstr ""
 "url='%1'>Aprenda mais sobre relatórios de erros.</link></para>"
 
 # Foi incluído "através deste assistente" para deixar a tradução mais clara. (Alvarenga)
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -549,13 +549,13 @@ msgstr ""
 "<application>%1</application> não fornece um endereço para relatórios de "
 "erros.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalhes:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -565,31 +565,11 @@ msgstr ""
 "<para>Executável: <application>%1</application> PID: %2 Sinal: %3 (%4) Data/"
 "Hora: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Depurar"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Inicia um programa para depuração do aplicativo que falhou."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Fecha esta caixa de diálogo (você perderá as informações da falha.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Depurar no %1"
 
 #: main.cpp:151
 #, kde-format
@@ -935,6 +915,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Baixe automaticamente símbolos de depuração para aprimorar relatórios de "
+"falhas"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -944,6 +926,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"Relatórios de falhas podem ser de maior valor se recursos de depuração "
+"adicionais forem baixados de sua distribuição primeiro.\n"
+"Isso causa downloads de tamanho desconhecido quando ocorre uma falha. Isso é "
+"ignorado automaticamente ao usar uma conexão de internet restrita."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1059,6 +1045,8 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"A coleta de informações sobre a falha não foi concluída por razões "
+"desconhecidas. Você pode tentar novamente ou fechar a janela."
 
 #: qml/main.qml:90
 msgctxt "@action retry gathering crash data"
@@ -1262,7 +1250,7 @@ msgstr "Relatório de falha enviado"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "No futuro:"
 
 #: qml/SentryPage.qml:64
 msgctxt "@label"
@@ -1471,6 +1459,20 @@ msgstr "Nome de usuário no bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Senha no bugstest.kde.org"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Depurar"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Inicia um programa para depuração do aplicativo que falhou."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Depurar no %1"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"

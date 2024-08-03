@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:04+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -436,19 +436,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "بۇ توپچا چېكىلسە يىمىرىلگەن ئەپ قايتا قوزغىلىدۇ."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "ئادەتتىكى(&G)"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "ئىجادىيەتچى ھەققىدە ئۇچۇر(&D)"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -457,7 +457,7 @@ msgstr ""
 "<para>ناھايىتى ئەپسۇس، <application>%1</application> تاسادىپىي تاقالدى.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -478,7 +478,7 @@ msgstr ""
 "قولدا %1 غا يوللىيالايسىز (<interface>ئىجادكارلار ئۇچۇرى</interface> "
 "بەتكۈچىگە ئارقا ئىزلاشنى قوشۇڭ.)</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -492,7 +492,7 @@ msgstr ""
 "قولدا %1 غا يوللىيالايسىز (<interface>ئىجادكارلار ئۇچۇرى</interface> "
 "بەتكۈچىگە ئارقا ئىزلاشنى قوشۇڭ.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -504,7 +504,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -522,7 +522,7 @@ msgstr ""
 "كۆپ بىلدۈرگۈ</link></para><para><note>ئەگەر بۇ خاتالىقنى دوكلات قىلىشنى "
 "خالىمىسىڭىز، بۇ سۆزلەشكۈنى بىخەتەر ھالدا تاقىۋەتسىڭىز بولىدۇ.</note></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -532,13 +532,13 @@ msgstr ""
 "<para>سىز بۇ خاتالىقنى يوللىيالمايسىز چۈنكى <application>%1</application> "
 "دوكلات ئادرېسىنى تەمىنلىمىگەن.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "تەپسىلاتى:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, fuzzy, kde-kuit-format
 #| msgctxt ""
 #| "@info Note the time information is divided into date and time parts"
@@ -553,31 +553,11 @@ msgstr ""
 "<para>پروگرامما: <application>%1</application> PID: <numid>%2</numid> "
 "سىگنال: %3 (%4) ۋاقىت: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "سازلا(&D)"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "يىمىرىلىشنى سازلايدىغان ئەپنى قوزغىتىدۇ."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "بۇ سۆزلەشكۈنى ياپىدۇ (يىمىرىلىش ئۇچۇرىنى يوقىتىسىز)."
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr ""
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1686,6 +1666,16 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "سازلا(&D)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "يىمىرىلىشنى سازلايدىغان ئەپنى قوزغىتىدۇ."
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"

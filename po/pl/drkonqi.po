@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 07:03+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -438,19 +438,19 @@ msgstr ""
 "Użyj tego przycisku, aby ponownie uruchomić program, w którym wystąpiła "
 "usterka."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "O&góły"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Szczegóły"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -459,7 +459,7 @@ msgstr ""
 "<para>Niestety, program <application>%1</application> niespodziewanie "
 "zakończył działanie.</para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -475,7 +475,7 @@ msgstr ""
 "zgłosić</link> ten błąd do systemu obsługi błędów KDE. Nie zapomnij dołączyć "
 "śladu z karty <interface>Informacji dla programisty</interface>.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -489,7 +489,7 @@ msgstr ""
 "ręcznie zgłosić ten błąd do %1 (dołączając ślad wykonywania z karty "
 "<interface>Szczegóły dla programisty</interface>.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,7 +507,7 @@ msgstr ""
 "zostało ono dobrze przeprowadzone i nie spowoduje żadnych skutków ubocznych."
 "</para>"
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -517,7 +517,7 @@ msgstr ""
 "<para>Zgłoszenie tego błędu może nam pomóc w usprawnieniu KDE.<nl /><link "
 "url='%1'>Dowiedz się więcej o zgłaszaniu błędów.</link></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -527,13 +527,13 @@ msgstr ""
 "<para>Nie możesz zgłosić tego błędu, ponieważ <application>%1</application> "
 "nie dostarcza adresu zgłaszania błędu.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Szczegóły:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -543,32 +543,11 @@ msgstr ""
 "<para>Plik wykonywalny: <application>%1</application> PID: %2 Sygnał: %3 "
 "(%4) Czas: %5 %6</para>"
 
-#: drkonqidialog.cpp:244
-#, kde-format
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "&Diagnozuj"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr ""
-"Uruchamia program do diagnozowania programu, w którym wystąpiła usterka."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Zamknij to okno (wszystkie dane o usterce zostaną utracone.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Diagnozowanie w %1"
 
 #: main.cpp:151
 #, kde-format
@@ -1453,6 +1432,21 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "&Diagnozuj"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr ""
+#~ "Uruchamia program do diagnozowania programu, w którym wystąpiła usterka."
+
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Diagnozowanie w %1"
 
 #~ msgctxt "@label"
 #~ msgid "Always report crashes automatically in the future"

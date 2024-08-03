@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2011-04-04 08:50+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -482,19 +482,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Koristite ovaj gumb da biste ponovno pokrenuli srušenu aplikaciju."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Općenito"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Informacije za razvijatelje"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -503,7 +503,7 @@ msgstr ""
 "<para>Žao nam je, ali <application>%1</application> je neočekivano završio.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -523,7 +523,7 @@ msgstr ""
 "%1 (uključujući pozadinski trag iz kartice o razvijateljskim "
 "informacijama.)</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -542,7 +542,7 @@ msgstr ""
 "%1 (uključujući pozadinski trag iz kartice o razvijateljskim "
 "informacijama.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -554,7 +554,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -572,7 +572,7 @@ msgstr ""
 "para><para><note>Možete sigurno zatvoriti ovaj dijalog ako ne želite "
 "prijaviti ovaj kvar.</note></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -586,13 +586,13 @@ msgstr ""
 "<para>Ne možete prijaviti ovaj kvar jer aplikacija nije dala adresu za "
 "prijavu kvara.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalji:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -606,39 +606,11 @@ msgstr ""
 "<para>Izvršna datoteka: <application>%1</application> PID: <numid>%2</numid> "
 "Signal: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:244
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button this is the debug menu button label which contains the "
-#| "debugging applications"
-#| msgid "Debug"
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "Ispravljanje kvarova"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Pokrene program za debugiranje srušene aplikacije."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Zatvori ovaj dialog (izgubit će se podaci o rušenju)"
-
-#: drkonqidialog.cpp:284
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button this is the debug menu button label which contains the "
-#| "debugging applications"
-#| msgid "Debug"
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr "Ispravljanje kvarova"
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1735,6 +1707,30 @@ msgstr "bugstest.kde.org korisničko ime"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org lozinka"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@action:button this is the debug menu button label which contains the "
+#~| "debugging applications"
+#~| msgid "Debug"
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "Ispravljanje kvarova"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr "Pokrene program za debugiranje srušene aplikacije."
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@action:button this is the debug menu button label which contains the "
+#~| "debugging applications"
+#~| msgid "Debug"
+#~ msgctxt "@action:inmenu 1 is the debugger name"
+#~ msgid "Debug in %1"
+#~ msgstr "Ispravljanje kvarova"
 
 #, fuzzy
 #~| msgctxt "@title"

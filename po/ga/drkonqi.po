@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:41+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -455,19 +455,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Úsáid an cnaipe seo chun an feidhmchlár a thuairteáil a atosú."
 
-#: drkonqidialog.cpp:127
+#: drkonqidialog.cpp:126
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Ginearálta"
 
-#: drkonqidialog.cpp:131
+#: drkonqidialog.cpp:130
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Eolas le haghaidh Forbróirí"
 
-#: drkonqidialog.cpp:166 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165 qml/MainPage.qml:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -476,7 +476,7 @@ msgstr ""
 "<para>Tá brón orainn, dhún <application>%1</application> gan súil leis.</"
 "para>"
 
-#: drkonqidialog.cpp:174
+#: drkonqidialog.cpp:173
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -499,7 +499,7 @@ msgstr ""
 "táirge \"drkonqi\" ag %1. Ná déan dearmad an cúl-lorg ón gcluaisín 'Eolas le "
 "haghaidh Forbróirí'.</para>"
 
-#: drkonqidialog.cpp:184
+#: drkonqidialog.cpp:183
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -518,7 +518,7 @@ msgstr ""
 "bhfabht seo de láimh ag %1 (an cúl-lorg ón gcluaisín 'Eolas le haghaidh "
 "Forbróirí' san áireamh.)</para>"
 
-#: drkonqidialog.cpp:193
+#: drkonqidialog.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -530,7 +530,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:202 qml/main.qml:63
+#: drkonqidialog.cpp:201 qml/main.qml:63
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -548,7 +548,7 @@ msgstr ""
 "fhabhtanna.</link></para><para><note>Tá cead agat an dialóg seo a dhúnadh "
 "mura mian leat tuairisc a dhéanamh ar an bhfabht seo.</note></para>"
 
-#: drkonqidialog.cpp:209 qml/main.qml:25
+#: drkonqidialog.cpp:208 qml/main.qml:25
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -562,13 +562,13 @@ msgstr ""
 "<para>Ní féidir leat tuairisc a dhéanamh ar an earráid seo, toisc nach "
 "soláthraíonn an feidhmchlár seoladh ríomhphoist le haghaidh fabhtanna.</para>"
 
-#: drkonqidialog.cpp:217
+#: drkonqidialog.cpp:216
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Mionsonraí:"
 
-#: drkonqidialog.cpp:221
+#: drkonqidialog.cpp:220
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -582,36 +582,12 @@ msgstr ""
 "<para>Clár inrite: <application>%1</application> Aitheantas an Phróisis: "
 "<numid>%2</numid> Comhartha: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:244
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button this is the debug menu button label which contains the "
-#| "debugging applications"
-#| msgid "Debug"
-msgctxt ""
-"@action:button this is the debug menu button label which contains the "
-"debugging applications"
-msgid "&Debug"
-msgstr "Dífhabhtóir"
-
-#: drkonqidialog.cpp:246
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Starts a program to debug the crashed application."
-msgstr "Tosaíonn sé seo ríomhchlár lenar féidir an feidhmchlár a dhífhabhtú."
-
-#: drkonqidialog.cpp:275
+#: drkonqidialog.cpp:249
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr ""
 "Dún an dialóg seo (caillfidh tú sonraí a bhaineann leis an tuairteáil.)"
-
-#: drkonqidialog.cpp:284
-#, kde-format
-msgctxt "@action:inmenu 1 is the debugger name"
-msgid "Debug in %1"
-msgstr ""
 
 #: main.cpp:151
 #, fuzzy, kde-format
@@ -1729,6 +1705,22 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@action:button this is the debug menu button label which contains the "
+#~| "debugging applications"
+#~| msgid "Debug"
+#~ msgctxt ""
+#~ "@action:button this is the debug menu button label which contains the "
+#~ "debugging applications"
+#~ msgid "&Debug"
+#~ msgstr "Dífhabhtóir"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Starts a program to debug the crashed application."
+#~ msgstr ""
+#~ "Tosaíonn sé seo ríomhchlár lenar féidir an feidhmchlár a dhífhabhtú."
 
 #~ msgctxt "@title"
 #~ msgid "Look for Possible Duplicate Reports"
