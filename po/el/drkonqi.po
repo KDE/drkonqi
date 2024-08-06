@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2023-08-15 00:49+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -958,8 +958,9 @@ msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This causes downloads of unknown size when a crash occurs. This is skipped "
-"automatically when using a metered internet connection."
+"This may also cause increased memory usage and will take longer, and causes "
+"downloads of unknown size when a crash occurs. This is skipped automatically "
+"when using a metered internet connection."
 msgstr ""
 
 #: qml/LoginPage.qml:14
@@ -1301,12 +1302,11 @@ msgstr ""
 "παράθυρο."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
-msgid "Collecting crash data…"
-msgstr "Αναμονή για δεδομένα..."
+msgid ""
+"Collecting crash data. The collected data will automatically submit in the "
+"background."
+msgstr ""
 
 #: qml/SentryPage.qml:53
 #, fuzzy
@@ -1535,6 +1535,13 @@ msgstr "bugstest.kde.org Όνομα χρήστη"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org κωδικός"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Waiting for data…"
+#~ msgctxt "@label"
+#~ msgid "Collecting crash data…"
+#~ msgstr "Αναμονή για δεδομένα..."
 
 #~ msgctxt ""
 #~ "@action:button this is the debug menu button label which contains the "

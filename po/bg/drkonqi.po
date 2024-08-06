@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1686204 2024-08-03 01:13:58Z scripty $
+# $Id: drkonqi.po 1686499 2024-08-06 01:13:42Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2024-06-28 21:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -910,12 +910,20 @@ msgstr ""
 "на докладите за сривове"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Crash reports can be of greater value if additional debugging resources "
+#| "are downloaded from your distributor first.\n"
+#| "This causes downloads of unknown size when a crash occurs. This is "
+#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This causes downloads of unknown size when a crash occurs. This is skipped "
-"automatically when using a metered internet connection."
+"This may also cause increased memory usage and will take longer, and causes "
+"downloads of unknown size when a crash occurs. This is skipped automatically "
+"when using a metered internet connection."
 msgstr ""
 "Докладите за сривове могат да бъдат от по -голяма полза, ако първо се "
 "изтеглят допълнителни ресурси за отстраняване на грешки от вашия "
@@ -1234,8 +1242,10 @@ msgstr ""
 
 #: qml/SentryPage.qml:32
 msgctxt "@label"
-msgid "Collecting crash data…"
-msgstr "Събиране на данни за срива…"
+msgid ""
+"Collecting crash data. The collected data will automatically submit in the "
+"background."
+msgstr ""
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1457,6 +1467,10 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
+
+#~ msgctxt "@label"
+#~ msgid "Collecting crash data…"
+#~ msgstr "Събиране на данни за срива…"
 
 #~ msgctxt ""
 #~ "@action:button this is the debug menu button label which contains the "

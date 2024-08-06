@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1686204 2024-08-03 01:13:58Z scripty $
+# $Id: drkonqi.po 1686499 2024-08-06 01:13:42Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2024-06-28 06:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -902,12 +902,20 @@ msgstr ""
 "zrušitvah"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Crash reports can be of greater value if additional debugging resources "
+#| "are downloaded from your distributor first.\n"
+#| "This causes downloads of unknown size when a crash occurs. This is "
+#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This causes downloads of unknown size when a crash occurs. This is skipped "
-"automatically when using a metered internet connection."
+"This may also cause increased memory usage and will take longer, and causes "
+"downloads of unknown size when a crash occurs. This is skipped automatically "
+"when using a metered internet connection."
 msgstr ""
 "Poročila o zrušitvah imajo lahko večjo vrednost, če od vašega distributerja "
 "najprej prenesete dodatne vire za odpravljanje napak.\n"
@@ -1218,8 +1226,10 @@ msgstr "Hvala, ker ste del KDE-ja. Sedaj lahko zaprete to okno."
 
 #: qml/SentryPage.qml:32
 msgctxt "@label"
-msgid "Collecting crash data…"
-msgstr "Zbiranje podatkov o sesutju…"
+msgid ""
+"Collecting crash data. The collected data will automatically submit in the "
+"background."
+msgstr ""
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1438,6 +1448,10 @@ msgstr "bugstest.kde.org uporabniško ime"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org geslo"
+
+#~ msgctxt "@label"
+#~ msgid "Collecting crash data…"
+#~ msgstr "Zbiranje podatkov o sesutju…"
 
 #~ msgctxt ""
 #~ "@action:button this is the debug menu button label which contains the "

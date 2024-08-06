@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2023-12-12 19:27+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -898,8 +898,9 @@ msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This causes downloads of unknown size when a crash occurs. This is skipped "
-"automatically when using a metered internet connection."
+"This may also cause increased memory usage and will take longer, and causes "
+"downloads of unknown size when a crash occurs. This is skipped automatically "
+"when using a metered internet connection."
 msgstr ""
 
 #: qml/LoginPage.qml:14
@@ -1223,12 +1224,11 @@ msgid "Thank you for being part of KDE. You can now close this window."
 msgstr "Ďakujeme, že ste súčasťou KDE. Toto okno môžete teraz zavrieť."
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Waiting for data…"
 msgctxt "@label"
-msgid "Collecting crash data…"
-msgstr "Čaká sa na dáta..."
+msgid ""
+"Collecting crash data. The collected data will automatically submit in the "
+"background."
+msgstr ""
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1452,6 +1452,13 @@ msgstr "používateľské meno pre bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "heslo pre bugstest.kde.org"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "Waiting for data…"
+#~ msgctxt "@label"
+#~ msgid "Collecting crash data…"
+#~ msgstr "Čaká sa na dáta..."
 
 #~ msgctxt ""
 #~ "@action:button this is the debug menu button label which contains the "
