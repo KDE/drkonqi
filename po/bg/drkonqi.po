@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1686499 2024-08-06 01:13:42Z scripty $
+# $Id: drkonqi.po 1686791 2024-08-08 01:14:07Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-06 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 21:05+0200\n"
+"PO-Revision-Date: 2024-08-07 09:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -910,13 +910,6 @@ msgstr ""
 "на докладите за сривове"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -928,8 +921,10 @@ msgstr ""
 "Докладите за сривове могат да бъдат от по -голяма полза, ако първо се "
 "изтеглят допълнителни ресурси за отстраняване на грешки от вашия "
 "дистрибутор.\n"
-"Това причинява изтегляния с неизвестен размер, когато се появи срив. Това се "
-"пропуска автоматично при използване на измервана интернет връзка."
+"Това също може да доведе до повишено използване на паметта и ще отнеме "
+"повече време, както и ще причини изтегляния с неизвестен размер, когато се "
+"случи срив. Това се пропуска автоматично при използване на измервана "
+"интернет връзка."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1246,6 +1241,8 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Събиране на данни за сривове. Събраните данни се изпращат автоматично във "
+"фонов режим."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
