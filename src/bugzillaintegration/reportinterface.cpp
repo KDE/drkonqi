@@ -644,9 +644,10 @@ bool ReportInterface::isCrashEventSendingEnabled() const
     qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
                          << "forceSentry:" << m_forceSentry //
                          << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles() //
-                         << "skipSentry:" << m_skipSentry;
+                         << "skipSentry:" << m_skipSentry //
+                         << "targetsBugzilla:" << DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
     const auto enabled = Settings::self()->sentry() || m_forceSentry;
-    return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles();
+    return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
 }
 
 void ReportInterface::setSendWhenReady(bool send)
