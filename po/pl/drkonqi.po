@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
-"PO-Revision-Date: 2024-07-21 07:03+0200\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
+"PO-Revision-Date: 2024-08-10 12:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "Wgraj symbole d&iagnostyczne"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -70,7 +70,7 @@ msgstr ""
 "Wgranie symboli jest niedostępne ponieważ aplikacja została uaktualniona lub "
 "usunięta po jej uruchomieniu."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -79,7 +79,7 @@ msgstr ""
 "Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
 "schowka."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -217,14 +217,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Nie udało się zebrać szczegółów o usterce."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -254,14 +254,14 @@ msgstr ""
 "<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a następnie "
 "nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Błąd podczas wgrywania symboli diagnostycznych"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -760,7 +760,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Niezwykłe ustawienia programu, które mogą mieć znaczenie"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niewystarczająco użyteczne"
@@ -786,22 +786,22 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Zgłoś na %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Wywołuje pomocnika zgłaszania błędów."
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Wgraj symbole diagnostyczne"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -814,17 +814,17 @@ msgstr ""
 "gdy nie masz wgranych odpowiednich pakietów do diagnostyki i chcesz uzyskać "
 "lepszy ślad."
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Skopiuj"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -847,7 +847,7 @@ msgstr ""
 "używane podczas diagnostyki interaktywnej lub po zakończeniu pracy programu."
 "</para>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -866,7 +866,7 @@ msgstr ""
 "ślad wykonywania; wgraj potrzebne pakiety (<link url='%2'>lista plików</"
 "link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -880,7 +880,7 @@ msgstr ""
 "(<link url='%2'>spis pakietów</link>) i naciśnij na przycisk "
 "<interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -898,13 +898,6 @@ msgstr ""
 "programie"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -915,8 +908,9 @@ msgid ""
 msgstr ""
 "Zgłoszenie wysypanego programu może stanowić większą wartość, gdy pobierzesz "
 "dodatkowe zasoby diagnostyczne ze swojej dystrybucji.\n"
-"Powoduje to pobieranie danych o nieznanym rozmiarze w przypadku wysypania "
-"się programu. Krok ten zostanie pominięty na połączeniach taryfowych."
+"Może to spowodować zwiększone wykorzystanie pamięci, zajmie dłużej, a także "
+"spowoduje pobranie danych o nieznanym rozmiarze w przypadku wysypania się "
+"programu. Krok ten zostanie pominięty na połączeniach taryfowych."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1229,6 +1223,7 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Gromadzenie danych po wysypaniu. Zgromadzone dane zostaną wysłane w tle."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
 "PO-Revision-Date: 2024-08-07 21:38+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -64,7 +64,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instalar os símbolos de depuración"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -82,7 +82,7 @@ msgstr ""
 "A instalación de símbolos non está dispoñíbel porque a aplicación se "
 "actualizou ou desinstalou despois de iniciarse."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -91,7 +91,7 @@ msgstr ""
 "Use este botón para copiar a información da quebra (o trazado inverso) no "
 "portapapeis."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -229,14 +229,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "O depurador saíu inesperadamente."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Non foi posíbel xerar información sobre a quebra."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -265,14 +265,14 @@ msgstr ""
 "<strong>Debe instalar a aplicación de depuración (%1) e premer o botón "
 "<interface>Cargar de novo</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Houbo un erro durante a instalación dos símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -775,7 +775,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Opcións personalizadas da aplicación que puideren estaren relacionadas"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Non é útil dabondo"
@@ -801,22 +801,22 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Informar en %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Inicia o asistente de informe do fallo."
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Instalar os símbolos de depuración"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Cargar de novo"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -829,17 +829,17 @@ msgstr ""
 "Isto é útil se ten instalados os paquetes de símbolos de depuración e quere\n"
 "obter un trazado mellorado."
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copiar"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Gardar"
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -860,7 +860,7 @@ msgstr ""
 "trazados inversos úsanse con frecuencia na depuración interactiva e na post-"
 "mortem.</para>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -878,7 +878,7 @@ msgstr ""
 "instale os paquetes que precise (<link url='%2'>lista de ficheiros</link>)e "
 "prema o botón <interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -891,7 +891,7 @@ msgstr ""
 "url='%2'>lista de ficheiros</link>) e prema o botón <interface>Cargar de "
 "novo</interface>."
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

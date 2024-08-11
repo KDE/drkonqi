@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -64,7 +64,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Instali sencimigajn simbolojn"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -81,7 +81,7 @@ msgstr ""
 "Simbolinstalado estas neatingebla ĉar la aplikaĵo estis ĝisdatigita aŭ "
 "malinstalita post kiam ĝi estis komencita."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -89,7 +89,7 @@ msgid ""
 msgstr ""
 "Uzu ĉi tiun butonon por kopii la paneoinformojn (retrospuro) al la tondujo."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -226,14 +226,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "La sencimigilo neatendite fermiĝis."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "La paneinformoj ne povis esti generita."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -261,14 +261,14 @@ msgstr ""
 "<strong>Vi devas unue instali la sencimigilon (%1) kaj poste alklaku la "
 "butonon <interface>Reŝargi</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Eraro dum la instalado de sencimigaj simboloj"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -758,7 +758,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Propraj agordoj de la aplikaĵo, kiuj eble rilatas"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ne Sufiĉe Utila"
@@ -784,22 +784,22 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Raporti pri %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Ĝi startas la asistilon de raporto de cimoj."
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Instalu Sencimigajn Simbolojn"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Reŝargi"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -812,17 +812,17 @@ msgstr ""
 "instalis la taŭgajn sencimsimbolpakaĵojn kaj vi volas akiri pli bonan "
 "retrospuron."
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopii"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Konservi"
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -843,7 +843,7 @@ msgstr ""
 "fakte enhavas multe da utilaj informoj.<nl />Retrospuroj estas ofte\n"
 "uzataj dum interaga kaj postmorta sencimigo.</para>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -862,7 +862,7 @@ msgstr ""
 "retrospuron; instalu la bezonatajn pakaĵojn (<link url='%2'> listo de "
 "dosieroj</link>) kaj alklaku la butonon <interface>Reŝargi</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -875,7 +875,7 @@ msgstr ""
 "url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
 "<interface>Reŝargi</interface>."
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

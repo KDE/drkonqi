@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -50,7 +50,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "安装调试符号包(&I)"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -64,14 +64,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr "无法安装调试符号，因为该程序在启动后已被更新或卸载。"
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "点击此按钮可将崩溃信息 (回溯跟踪数据) 复制到剪贴板。"
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -199,14 +199,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "调试器意外退出。"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "无法生成崩溃信息。"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -233,14 +233,14 @@ msgstr ""
 "<strong>请先安装调试器程序 (%1)，然后点击<interface>重新加载</interface>按"
 "钮。</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "安装调试符号包时出错"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -721,7 +721,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能相关的的应用程序自定义设置"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "信息不够详细"
@@ -746,22 +746,22 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "报告到 %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "启动程序缺陷报告助手。"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "安装调试符号包"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "重新加载"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -772,17 +772,17 @@ msgstr ""
 "点击此按钮可重新加载崩溃信息 (回溯跟踪数据)。在安装了目标软件的调试符号包后，"
 "您可以点击此按钮来生成更有价值的回溯跟踪数据。"
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "复制"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -802,7 +802,7 @@ msgstr ""
 "但它们或许会包含一些有用的线索。<nl />\n"
 "回溯跟踪数据通常也被用于进行交互式和崩溃后调试。</para>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -819,7 +819,7 @@ msgstr ""
 "请安装所需的软件包(<link url='%2'>文件列表</link>)，然后请点击<interface>重新"
 "加载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -831,7 +831,7 @@ msgstr ""
 "跟踪数据。请安装所需的软件包(<link url='%2'>文件列表</link>)，然后点击"
 "<interface>重新加载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Installér fejlsøgningssymboler"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -72,7 +72,7 @@ msgstr ""
 "Installation af symboler er ikke tilgængelig fordi programmet er blevet "
 "opdateret eller afinstalleret efter det blev startet."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "Brug denne knap til at kopiere sammenbrudsinformationen (backtrace) til "
 "udklipsholderen."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -220,14 +220,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Fejlsøgningsprogrammet afsluttede uventet."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Sammenbrudsinformationen kunne ikke genereres."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -256,14 +256,14 @@ msgstr ""
 "<strong>Du skal først installere fejlsøgningsprogrammet (%1) og trykke på "
 "knappen <interface>Genindlæs</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Fejl under installation af fejlsøgningssymboler"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -821,7 +821,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Tilpassede indstillinger for programmet som kan være relaterede"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -855,12 +855,12 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Rapportér til %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Start fejlrapporteringsassistenten."
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -868,7 +868,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Installér fejlsøgningssymboler"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -876,7 +876,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Genindlæs"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -894,7 +894,7 @@ msgstr ""
 "Dette er nyttigt, når du har installeret de korrekte debug-symbol-pakker og "
 "du vil opnå et bedre backtrace."
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Copy"
@@ -902,12 +902,12 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Kopiér"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 #, fuzzy
 #| msgid ""
 #| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
@@ -934,7 +934,7 @@ msgstr ""
 "kan faktisk indeholde et væld af nyttig information.<br />Backtraces bruges "
 "meget ofte under interaktiv og post-mortem fejlsøgning.</p>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -962,7 +962,7 @@ msgstr ""
 "url='%2'>liste over filer</link>) og tryk på knappen <interface>Genindlæs</"
 "interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -982,7 +982,7 @@ msgstr ""
 "nødvendige pakker (<link url='%2'>liste over filer</link>) og tryk på "
 "knappen <interface>Genindlæs</interface>."
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

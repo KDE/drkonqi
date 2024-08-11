@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-11 00:41+0000\n"
 "PO-Revision-Date: 2023-08-15 00:49+0300\n"
 "Last-Translator: George Stefanakis <george.stefanakis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Εγκατάσταση συμβόλων αποσφαλμάτωσης"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:55
+#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -86,7 +86,7 @@ msgstr ""
 "Η εγκατάσταση του συμβόλου δεν είναι διαθέσιμη επειδή η εφαρμογή ενημερώθηκε "
 "ή αφαιρέθηκε αφού είχε ξεκινήσει να εκτελείται."
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:75
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 "Χρησιμοποιήστε αυτό το κουμπί για να αντιγράψετε τις πληροφορίες κατάρρευσης "
 "στο πρόχειρο."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:83
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -240,14 +240,14 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Ο αποσφαλματωτής τερματίστηκε απροσδόκητα."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:213
-#: qml/DeveloperPage.qml:217
+#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:216
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Οι πληροφορίες κατάρρευσης δεν μπόρεσαν να δημιουργηθούν."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:214
+#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -278,14 +278,14 @@ msgstr ""
 "και έπειτα να πατήσετε το κουμπί <interface>Επαναφόρτωση</interface>.</"
 "strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:114
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Σφάλμα κατά την εγκατάσταση των συμβόλων αποσφαλμάτωσης"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:241
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -796,7 +796,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Προσαρμοσμένες ρυθμίσεις της εφαρμογής που πιθανόν να σχετίζονται"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:234
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Δεν είναι επαρκώς χρήσιμη"
@@ -826,22 +826,22 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Αναφορά σε %1"
 
-#: qml/DeveloperPage.qml:35
+#: qml/DeveloperPage.qml:34
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Κατάσταση βοηθού αναφοράς σφάλματος."
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:41
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Εγκατάσταση συμβόλων αποσφαλμάτωσης"
 
-#: qml/DeveloperPage.qml:62
+#: qml/DeveloperPage.qml:61
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Επαναφόρτωση"
 
-#: qml/DeveloperPage.qml:64
+#: qml/DeveloperPage.qml:63
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -854,17 +854,17 @@ msgstr ""
 "εγκαταστήσει τα κατάλληλα πακέτα συμβόλων αποσφαλμάτωσης και θέλετε να "
 "αποκτήσετε καλύτερες πληροφορίες κατάρρευσης."
 
-#: qml/DeveloperPage.qml:74
+#: qml/DeveloperPage.qml:73
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Αντιγραφή"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: qml/DeveloperPage.qml:131
+#: qml/DeveloperPage.qml:130
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -888,7 +888,7 @@ msgstr ""
 "κατά τη διάρκεια της διαδραστικής και της «μετά-θάνατον» αποσφαλμάτωσης.</"
 "para>"
 
-#: qml/DeveloperPage.qml:199
+#: qml/DeveloperPage.qml:198
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -918,7 +918,7 @@ msgstr ""
 "url='%2'>λίστα αρχείων</link>) και πατήστε το κουμπί "
 "<interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:206
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -938,7 +938,7 @@ msgstr ""
 "κατάρρευσης. Εγκαταστήστε τα απαραίτητα πακέτα (<link url='%2'>λίστα "
 "αρχείων</link>) και πατήστε το κουμπί <interface>Επαναφόρτωση</interface>."
 
-#: qml/DeveloperPage.qml:219
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
