@@ -846,13 +846,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "自动下载调试符号包以提高崩溃报告价值"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -863,8 +856,8 @@ msgid ""
 msgstr ""
 "为了提高崩溃报告的价值，您可以选择自动从软件的发行机构下载额外的调试资源"
 "包。\n"
-"这将在崩溃时自动下载未知大小的软件包。当使用按流量计费网络连接时将不会自动下"
-"载。"
+"这将增加内存占用并耗时更久，系统还要在崩溃时自动下载未知大小的软件包。当使用"
+"按流量计费网络连接时将不会自动下载。"
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1158,7 +1151,7 @@ msgctxt "@label"
 msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
-msgstr ""
+msgstr "正在收集崩溃数据。收集到的数据将自动在后台提交。"
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1369,7 +1362,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@label"
-#~ msgid "Collecting crash data…"
-#~ msgstr "正在收集崩溃数据…"
