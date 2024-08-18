@@ -16,11 +16,14 @@
 #include <QNetworkInformation>
 #include <QTemporaryDir>
 
+#include <KOSRelease>
 #include <KProcess>
 #include <KShell>
 
 #include "parser/backtraceparser.h"
 #include "settings.h"
+
+using namespace Qt::StringLiterals;
 
 bool isMeteredNetwork()
 {
@@ -227,6 +230,17 @@ void BacktraceGenerator::setBackendPrepared()
     } else {
         m_proc->setEnv(QStringLiteral("DRKONQI_TMP_DIR"), m_tempDirectory->path());
         m_proc->setEnv(QStringLiteral("DRKONQI_VERSION"), QStringLiteral(PROJECT_VERSION));
+        m_proc->setEnv(QStringLiteral("DRKONQI_DISTRIBUTION"), [] {
+            KOSRelease os;
+            QString dist = os.id();
+            if (!os.versionId().isEmpty()) {
+                dist += "_v"_L1 + os.versionId();
+            }
+            if (!os.buildId().isEmpty()) {
+                dist += "_b"_L1 + os.buildId();
+            }
+            return dist;
+        }());
         m_proc->setEnv(QStringLiteral("DRKONQI_APP_VERSION"), DrKonqi::appVersion());
         m_proc->setEnv(QStringLiteral("DRKONQI_SIGNAL"), QString::number(DrKonqi::signal()));
     }
