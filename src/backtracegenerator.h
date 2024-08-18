@@ -98,10 +98,6 @@ private:
     const bool m_supportsSymbolResolution = false;
     bool m_symbolResolution;
     QByteArray m_sentryPayload;
-
-#ifdef BACKTRACE_PARSER_DEBUG
-    BacktraceParser *m_debugParser = nullptr;
-#endif
 };
 
 #endif

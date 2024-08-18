@@ -69,11 +69,6 @@ ki18n_wrap_ui(drkonqi_SRCS
     ui/backtracewidget.ui
 )
 
-# if BACKTRACE_PARSER_DEBUG is enabled, it will show both the
-# parsed and the unparsed backtrace in the backtrace widget.
-# Comment this out for release.
-#add_definitions(-DBACKTRACE_PARSER_DEBUG)
-
 set(drkonqi_SRCS
     ${drkonqi_SRCS}
     bugzillaintegration/bugzillalib.cpp

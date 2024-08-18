@@ -50,11 +50,6 @@ BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);
-
-#ifdef BACKTRACE_PARSER_DEBUG
-    m_debugParser = BacktraceParser::newParser(QString(), this); // uses the null parser
-    m_debugParser->connectToGenerator(this);
-#endif
 }
 
 BacktraceGenerator::~BacktraceGenerator()
@@ -176,12 +171,6 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     }();
     m_state = Loaded;
     Q_EMIT stateChanged();
-
-#ifdef BACKTRACE_PARSER_DEBUG
-    // append the raw unparsed backtrace
-    m_parsedBacktrace += "\n------------ Unparsed Backtrace ------------\n";
-    m_parsedBacktrace += m_debugParser->parsedBacktrace(); // it's not really parsed, it's from the null parser.
-#endif
 
     Q_EMIT done();
 }
