@@ -24,7 +24,7 @@ class BugSearch : public QueryCommand
     BUGZILLA_MEMBER_PROPERTY(QStringList, order);
 
 public:
-    virtual Query toQuery() const override;
+    Query toQuery() const override;
 };
 
 } // namespace Bugzilla

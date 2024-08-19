@@ -26,7 +26,7 @@ class NewAttachment : public JsonCommand
     // flags property is not supported at this time
 
 public:
-    virtual QVariantHash toVariantHash() const override;
+    QVariantHash toVariantHash() const override;
 };
 
 } // namespace Bugzilla
