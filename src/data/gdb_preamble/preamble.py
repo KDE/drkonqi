@@ -14,6 +14,7 @@ try:
         dsn="https://d6d53bb0121041dd97f59e29051a1781@crash-reports.kde.org/13",
         traces_sample_rate=1.0,
         release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
+        dist=os.getenv('DRKONQI_DISTRIBUTION'),
         ignore_errors=[KeyboardInterrupt],
     )
 except ImportError:
