@@ -734,7 +734,7 @@ def print_sentry_payload(thread):
             tmpfile.write(json.dumps(payload))
             tmpfile.flush()
 
-def print_preamble():
+def print_preamble_internal():
     thread = gdb.selected_thread()
     if thread == None:
         # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
@@ -755,3 +755,11 @@ def print_preamble():
     except NoBuildIdException as e:
         print(e)
         pass
+
+def print_preamble():
+    try:
+        print_preamble_internal()
+    except Exception as e:
+        if 'sentry_sdk' in globals():
+            sentry_sdk.capture_exception(e)
+        raise(e)
