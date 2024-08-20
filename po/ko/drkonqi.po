@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-27 00:39+0000\n"
-"PO-Revision-Date: 2024-02-09 20:14+0100\n"
+"PO-Revision-Date: 2024-08-19 22:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -878,7 +878,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "충돌 보고를 개선할 수 있도록 자동으로 디버그 기호 다운로드"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -888,6 +888,10 @@ msgid ""
 "This causes downloads of unknown size when a crash occurs. This is skipped "
 "automatically when using a metered internet connection."
 msgstr ""
+"배포판에서 추가 디버그 리소스를 다운로드할 수 있으면 충돌 정보가 더 유용할 "
+"수 있습니다.\n"
+"충돌 시 추가 항목 다운로드로 인하여 충돌 보고서 작성에 더 오랜 시간이 걸릴 수"
+"도 있습니다. 종량제 인터넷 연결을 사용할 때에는 건너뜁니다."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1200,15 +1204,12 @@ msgstr "충돌 보고 보냄"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "미래에:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Automatically submit crash data"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "자동으로 충돌 데이터 제출"
+msgstr "자동으로 충돌 보고"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
