@@ -82,7 +82,22 @@ any side effects.</para>`);
     Component {
         id: warningComponent
         Kirigami.InlineMessage {
-            text: i18nc("@label", "Gathering crash information failed for unknown reasons. You can retry, or close the window.")
+            readonly property string fakeUrl: "fake://open-details" // onLinkActivated sends a string, so we treat this as string!
+            text: {
+                if (BacktraceGenerator.hasRawTraceData) {
+                    return xi18nc("@info",
+                        "Gathering crash information failed for unknown reasons. You can retry, close the window, or <link url='%1'>view detailed output</link>.",
+                        fakeUrl)
+                }
+                return i18nc("@info", "Gathering crash information failed for unknown reasons. You can retry, or close the window.")
+            }
+            onLinkActivated: link => {
+                if (link === fakeUrl) {
+                    Qt.openUrlExternally(BacktraceGenerator.rawTraceUrlAndDoNotAutoRemove())
+                } else {
+                    Qt.openUrlExternally(link)
+                }
+            }
             type: Kirigami.MessageType.Warning
             visible: true
             actions: [

@@ -209,11 +209,10 @@ backtrace; install the needed packages (<link url='%2'>list of files</link>) and
                             }
                         }
                     } else if (state == BacktraceGenerator.Failed) {
-                        traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
+                        traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich", `You could try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
                     } else if (state == BacktraceGenerator.FailedToStart) {
-                        // FIXME dupe from failed
-                        traceArea.text = i18nc("@info:status", "The crash information could not be generated.")
+                        traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich",
 `<emphasis strong='true'>You need to first install the debugger application (%1) then click the <interface>Reload</interface> button.</emphasis>`,
                                                    BacktraceGenerator.debuggerName())

@@ -13,12 +13,14 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+#include <QMetaEnum>
 #include <QNetworkInformation>
 #include <QTemporaryDir>
 
 #include <KOSRelease>
 #include <KProcess>
 #include <KShell>
+#include <cstddef>
 
 #include "parser/backtraceparser.h"
 #include "settings.h"
@@ -100,7 +102,9 @@ void BacktraceGenerator::slotReadInput()
     }
 
     // we do not know if the output array ends in the middle of an utf-8 sequence
-    m_output += m_proc->readAllStandardOutput();
+    const auto output = m_proc->readAll();
+    m_rawTraceBytes += output;
+    m_output += output;
 
     int pos;
     while ((pos = m_output.indexOf('\n')) != -1) {
@@ -145,6 +149,9 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     // the process is useless now
     resetProcess();
 
+    m_rawTraceBytes += u"Debugging ended with exit code '%1' and exit status '%2'\n"_s
+                           .arg(QString::number(exitCode), QString::fromUtf8(QMetaEnum::fromType<QProcess::ExitStatus>().key(exitStatus)))
+                           .toUtf8();
     // mark the end of the backtrace for the parser
     Q_EMIT newLine(QString());
 
@@ -251,7 +258,7 @@ void BacktraceGenerator::setBackendPrepared()
     Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
 
     *m_proc << KShell::splitArgs(str);
-    m_proc->setOutputChannelMode(KProcess::OnlyStdoutChannel);
+    m_proc->setOutputChannelMode(KProcess::MergedChannels);
     m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
     // check if the debugger should take its input from a file we'll generate,
     // and take the appropriate steps if so
@@ -260,11 +267,16 @@ void BacktraceGenerator::setBackendPrepared()
     if (!stdinFile.isEmpty() && QFile::exists(stdinFile)) {
         m_proc->setStandardInputFile(stdinFile);
     }
+
     connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
     connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
 
     qCDebug(DRKONQI_LOG) << "Starting debugger" << m_proc->program() << m_proc->arguments();
+    m_rawTraceUrl.clear();
+    m_rawTraceBytes.clear();
+    m_rawTraceBytes += u"Starting debugger %1\n"_s.arg(m_proc->program().join(' '_L1)).toUtf8();
+
     m_proc->start();
 }
 
@@ -299,6 +311,45 @@ void BacktraceGenerator::setBackendFailed()
 bool BacktraceGenerator::hasAnyFailure()
 {
     return m_state == State::Failed || m_state == State::FailedToStart;
+}
+
+QUrl BacktraceGenerator::rawTraceUrlAndDoNotAutoRemove()
+{
+    if (!m_rawTraceUrl.isEmpty()) {
+        return m_rawTraceUrl;
+    }
+
+    QTemporaryFile file{QDir::tempPath() + QLatin1String("/drkonqi.XXXXXX.txt")};
+    if (!file.open()) {
+        qCWarning(DRKONQI_LOG) << "Failed to open temporary file. Won't be able to capture output!" << file.error() << file.errorString();
+        return {};
+    }
+
+    off_t offset = 0;
+    while (offset < m_rawTraceBytes.size()) {
+        auto written = file.write(m_rawTraceBytes.data() + offset);
+        if (written == -1) {
+            qCWarning(DRKONQI_LOG) << "Error while writing raw trace file" << file.error() << file.errorString();
+            return {};
+        }
+        offset += written;
+    }
+    file.setAutoRemove(false);
+    file.close();
+
+    m_rawTraceUrl.setScheme(u"file"_s);
+    m_rawTraceUrl.setPath(file.fileName());
+    return m_rawTraceUrl;
+}
+
+QString BacktraceGenerator::rawTraceData()
+{
+    return QString::fromUtf8(m_rawTraceBytes);
+}
+
+bool BacktraceGenerator::hasRawTraceData() const
+{
+    return !m_rawTraceBytes.isEmpty();
 }
 
 #include "moc_backtracegenerator.cpp"

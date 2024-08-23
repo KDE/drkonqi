@@ -14,6 +14,7 @@
 
 #include <QProcess>
 #include <QTemporaryFile>
+#include <QUrl>
 
 #include "debugger.h"
 
@@ -29,6 +30,7 @@ class BacktraceGenerator : public QObject
     Q_PROPERTY(bool hasAnyFailure READ hasAnyFailure NOTIFY stateChanged) // derives from state
     Q_PROPERTY(bool supportsSymbolResolution MEMBER m_supportsSymbolResolution CONSTANT)
     Q_PROPERTY(bool symbolResolution MEMBER m_symbolResolution NOTIFY symbolResolutionChanged)
+    Q_PROPERTY(bool hasRawTraceData READ hasRawTraceData NOTIFY stateChanged) // derives from failure state which derives from state
 public:
     enum State {
         NotLoaded,
@@ -65,6 +67,9 @@ public:
     Q_INVOKABLE bool debuggerIsGDB() const;
     Q_INVOKABLE QString debuggerName() const;
     QByteArray sentryPayload() const;
+    Q_INVOKABLE [[nodiscard]] QUrl rawTraceUrlAndDoNotAutoRemove();
+    Q_INVOKABLE [[nodiscard]] QString rawTraceData();
+    [[nodiscard]] bool hasRawTraceData() const;
 
 public Q_SLOTS:
     void start();
@@ -98,6 +103,8 @@ private:
     const bool m_supportsSymbolResolution = false;
     bool m_symbolResolution;
     QByteArray m_sentryPayload;
+    QByteArray m_rawTraceBytes;
+    QUrl m_rawTraceUrl;
 };
 
 #endif
