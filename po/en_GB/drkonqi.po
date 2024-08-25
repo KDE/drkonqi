@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:40+0000\n"
-"PO-Revision-Date: 2024-06-29 11:21+0100\n"
+"PO-Revision-Date: 2024-08-24 12:01+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -368,13 +368,13 @@ msgstr "Overview"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -897,13 +897,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "Automatically download debug symbols to enhance crash reports"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -914,8 +907,9 @@ msgid ""
 msgstr ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This causes downloads of unknown size when a crash occurs. This is skipped "
-"automatically when using a metered internet connection."
+"This may also cause increased memory usage and will take longer, and causes "
+"downloads of unknown size when a crash occurs. This is skipped automatically "
+"when using a metered internet connection."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1225,6 +1219,8 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Collecting crash data. The collected data will automatically submit in the "
+"background."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
