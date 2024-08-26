@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-28 19:34+0200\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2024-08-25 21:24+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -384,13 +384,13 @@ msgstr "Übersicht"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -926,13 +926,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "Debug-Symbole für bessere Absturzberichte automatisch herunterladen"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -943,8 +936,9 @@ msgid ""
 msgstr ""
 "Der Wert von Absturzberichten wird deutlich erhöht, wenn zuvor zusätzliche "
 "Debug-Ressourcen von Ihrer Distribution heruntergeladen werden.\n"
-"Dies hat zur Folge, dass ein Download unbekannter Größe ausgelöst wird, wenn "
-"ein Absturz auftritt. Es wird automatisch übersprungen, wenn eine getaktete "
+"Dadurch wird mehr Arbeitsspeicher und mehr Zeit für die Rückverfolgung "
+"benötigt. Zudem wird ein Download unbekannter Größe ausgelöst, wenn ein "
+"Absturz auftritt. Es wird automatisch übersprungen, wenn eine getaktete "
 "Internetverbindung verwendet wird."
 
 #: qml/LoginPage.qml:14
@@ -1261,6 +1255,8 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Zusammenstellen der Absturzdaten. Die zusammengestellten Daten werden "
+"automatisch im Hintergrund gesendet."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1302,7 +1298,7 @@ msgstr "Nachricht senden"
 #: qml/SentryPage.qml:118
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Fertigstellen"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
