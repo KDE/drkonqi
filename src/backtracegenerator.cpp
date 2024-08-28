@@ -13,9 +13,12 @@
 #include "drkonqi.h"
 #include "drkonqi_debug.h"
 
+#include <QFutureWatcher>
+#include <QLockFile>
 #include <QMetaEnum>
 #include <QNetworkInformation>
 #include <QTemporaryDir>
+#include <QtConcurrent/QtConcurrent>
 
 #include <KOSRelease>
 #include <KProcess>
@@ -25,6 +28,7 @@
 #include "parser/backtraceparser.h"
 #include "settings.h"
 
+using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 bool isMeteredNetwork()
@@ -49,6 +53,18 @@ BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent
     , m_debugger(debugger)
     , m_supportsSymbolResolution(WITH_GDB12 && m_debugger.supportsCommandWithSymbolResolution())
     , m_symbolResolution(m_debugger.supportsCommandWithSymbolResolution() && Settings::self()->downloadSymbols() && !isMeteredNetwork())
+    , m_lockFile([]() -> QLockFile * {
+        const QString lockDir = QDir::homePath() + "/.local/share/drkonqi/"_L1;
+        if (!QDir().exists(lockDir)) {
+            if (!QDir().mkpath(lockDir)) {
+                qCWarning(DRKONQI_LOG) << "Failed to create lock path. Continuing without lock." << lockDir;
+                return nullptr;
+            }
+        }
+        auto lock = new QLockFile(lockDir + "debugger.lock"_L1); // static because multiple locks would conflict with each other
+        lock->setStaleLockTime(10min); // debugging can take a good while
+        return lock;
+    }())
 {
     m_parser = BacktraceParser::newParser(m_debugger.codeName(), this);
     m_parser->connectToGenerator(this);
@@ -69,6 +85,10 @@ BacktraceGenerator::~BacktraceGenerator()
             delete m_proc;
         }
         delete m_temp;
+    }
+    if (m_lockFile) {
+        m_lockFile->unlock();
+        delete m_lockFile;
     }
 }
 
@@ -132,7 +152,7 @@ void BacktraceGenerator::slotReadInput()
     }
 }
 
-void BacktraceGenerator::resetProcess()
+void BacktraceGenerator::resetProcessAndUnlock()
 {
     if (m_proc) {
         m_proc->deleteLater();
@@ -142,12 +162,15 @@ void BacktraceGenerator::resetProcess()
         m_temp->deleteLater();
         m_temp = nullptr;
     }
+    if (m_lockFile) {
+        m_lockFile->unlock();
+    }
 }
 
 void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus)
 {
     // the process is useless now
-    resetProcess();
+    resetProcessAndUnlock();
 
     m_rawTraceBytes += u"Debugging ended with exit code '%1' and exit status '%2'\n"_s
                            .arg(QString::number(exitCode), QString::fromUtf8(QMetaEnum::fromType<QProcess::ExitStatus>().key(exitStatus)))
@@ -187,7 +210,7 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
     qCWarning(DRKONQI_LOG) << "Debugger process had an error" << error << m_proc->program() << m_proc->arguments() << m_proc->environment();
 
     // make very sure the process is getting discarded, otherwise retry operations won't work
-    resetProcess();
+    resetProcessAndUnlock();
 
     switch (error) {
     case QProcess::FailedToStart:
@@ -205,6 +228,58 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
 
 void BacktraceGenerator::setBackendPrepared()
 {
+    Q_ASSERT(m_state == Loading);
+
+    if (!m_lockFile) {
+        qCDebug(DRKONQI_LOG) << "No lock file. Starting without lock.";
+        startProcess();
+        return;
+    }
+
+    if (m_lockFile->isLocked()) {
+        qCDebug(DRKONQI_LOG) << "Already have lock."; // shouldn't really happen but if it does, let's just roll with it
+        startProcess();
+        return;
+    }
+
+    if (m_lockWatcher) {
+        qCDebug(DRKONQI_LOG) << "Already waiting for a lock."; // shouldn't happen either but lock must not be called twice say the docs
+        return;
+    }
+
+    qCDebug(DRKONQI_LOG) << "Trying to get debugger lock";
+    if (!m_lockFile->tryLock(50ms)) {
+        qCDebug(DRKONQI_LOG) << "Failed to get lock, locking in a thread instead.";
+        m_lockWatcher = new QFutureWatcher<bool>(this);
+        connect(m_lockWatcher, &QFutureWatcher<bool>::finished, this, [this] {
+            qCDebug(DRKONQI_LOG) << "Delayed lock acquired";
+            m_lockWatcher->deleteLater();
+            m_lockWatcher = nullptr;
+            startProcess();
+        });
+
+        // To avoid deadlocks because of bugs we'll wait a random amount of time for locking. This should prevent
+        // us from getting stuck but still scatter concurrently started debuggers in a range of time.
+        // The minimum wait time is an arbitrary value. If this turns out too short we might have to tweak it using
+        // processor count as indicator of machine performance.
+        constexpr auto minimumWaitTimeMin = 5;
+        constexpr auto maximumWaitTimeMin = minimumWaitTimeMin + 10;
+        std::random_device randomDevice;
+        std::mt19937 generator(randomDevice());
+        std::uniform_int_distribution<> distribution(minimumWaitTimeMin, maximumWaitTimeMin);
+        const auto waitTime = std::chrono::minutes(distribution(generator));
+
+        m_lockWatcher->setFuture(QtConcurrent::run(qOverload<std::chrono::milliseconds>(&QLockFile::tryLock), m_lockFile, waitTime));
+
+        return;
+    }
+    startProcess();
+}
+
+void BacktraceGenerator::startProcess()
+{
+    qCDebug(DRKONQI_LOG) << "Starting process";
+
     // they should always be null before entering this function.
     Q_ASSERT(!m_proc);
     Q_ASSERT(!m_temp);

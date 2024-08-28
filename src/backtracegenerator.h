@@ -12,6 +12,7 @@
 
 #include <memory>
 
+#include <QFutureWatcher>
 #include <QProcess>
 #include <QTemporaryFile>
 #include <QUrl>
@@ -21,6 +22,7 @@
 class KProcess;
 class BacktraceParser;
 class QTemporaryDir;
+class QLockFile;
 
 class BacktraceGenerator : public QObject
 {
@@ -91,7 +93,8 @@ private Q_SLOTS:
     void slotOnErrorOccurred(QProcess::ProcessError error);
 
 private:
-    void resetProcess();
+    void resetProcessAndUnlock();
+    void startProcess();
     const Debugger m_debugger;
     KProcess *m_proc = nullptr;
     QTemporaryFile *m_temp = nullptr;
@@ -105,6 +108,8 @@ private:
     QByteArray m_sentryPayload;
     QByteArray m_rawTraceBytes;
     QUrl m_rawTraceUrl;
+    QLockFile *m_lockFile;
+    QFutureWatcher<bool> *m_lockWatcher = nullptr;
 };
 
 #endif
