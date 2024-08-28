@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2019-11-10 21:32+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -218,8 +218,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Silur lõpetas ootamatult töö."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -261,7 +260,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Viga silumissümbolite paigaldamisel"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -827,7 +826,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Rakenduse kohandatud seadistused, mis võivad olla asjakohased"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -985,7 +984,7 @@ msgstr ""
 "(<link url='%2'>failide loend</link>) ja klõpsa nupule <interface>Laadi "
 "uuesti</interface>."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1149,14 +1148,21 @@ msgstr ""
 "uuesti sisse, et uuendus ikka kindlasti kasutusele võetaks ega põhjustaks "
 "mingeid soovimatuid kõrvalmõjusid.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/main.qml:92
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 #, fuzzy
 #| msgid "Retry"
 msgctxt "@action retry gathering crash data"

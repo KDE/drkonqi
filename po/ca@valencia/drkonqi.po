@@ -13,15 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
-"PO-Revision-Date: 2024-08-06 13:22+0200\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"PO-Revision-Date: 2024-08-24 11:03+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -227,8 +227,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "El depurador s'ha tancat inesperadament."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -271,7 +270,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Error durant la instal·lació dels símbols de depuració"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -382,13 +381,13 @@ msgstr "Vista general"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -789,7 +788,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Pot estar relacionat amb una configuració personalitzada de l'aplicació"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "No és prou útil"
@@ -908,7 +907,7 @@ msgstr ""
 "(<link url='%2'>llista de fitxers</link>) i cliqueu en el botó "
 "<interface>Torna a carregar</interface>."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1048,8 +1047,27 @@ msgstr ""
 "de la sessió i tornar a entrar-hi per tal d'assegurar que l'actualització\n"
 "s'ha aplicat completament i no provoca cap efecte col·lateral.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+"Ha fallat la recopilació de la informació de la fallada per motius "
+"desconeguts. Podeu tornar-ho a provar o tancar la finestra."
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
@@ -1057,7 +1075,7 @@ msgstr ""
 "Ha fallat la recopilació de la informació de la fallada per motius "
 "desconeguts. Podeu tornar-ho a provar o tancar la finestra."
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reintenta"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2012-01-08 23:43+0530\n"
 "Last-Translator: s\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -223,8 +223,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "ದೋಷನಿವಾರಕವು ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಿರ್ಗಮಿಸಿದೆ."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -275,7 +274,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "ದೋಷ ನಿವಾರಕ ಚಿಹ್ನೆಗಳ ಅನುಸ್ಥಾಪನೆಯ ಸಮಯದಲ್ಲಿ ತೊಂದರೆ ಉಂಟಾಗಿದೆ"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -839,7 +838,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -968,7 +967,7 @@ msgstr ""
 "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
 "ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1099,14 +1098,21 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/main.qml:92
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Retry..."

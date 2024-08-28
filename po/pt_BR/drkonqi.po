@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-02 11:55-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -233,8 +233,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "O depurador encerrou inesperadamente."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -277,7 +276,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Erro durante a instalação dos símbolos de depuração"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -796,7 +795,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Configurações personalizadas do aplicativo que possam estar relacionadas"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Não suficientemente útil"
@@ -913,7 +912,7 @@ msgstr ""
 "(<link url='%2'>lista de arquivos</link>) e clique no botão "
 "<interface>Recarregar</interface>."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1059,8 +1058,27 @@ msgstr ""
 "a sessão para garantir que a atualização foi completamente aplicada\n"
 "e não irá provocar nenhum efeito colateral.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+"A coleta de informações sobre a falha não foi concluída por razões "
+"desconhecidas. Você pode tentar novamente ou fechar a janela."
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
@@ -1068,7 +1086,7 @@ msgstr ""
 "A coleta de informações sobre a falha não foi concluída por razões "
 "desconhecidas. Você pode tentar novamente ou fechar a janela."
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Repetir"

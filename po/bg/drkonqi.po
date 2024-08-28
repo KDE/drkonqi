@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1688482 2024-08-24 01:14:28Z scripty $
+# $Id: drkonqi.po 1688933 2024-08-28 01:13:41Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-07 09:51+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -225,8 +225,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Програмата за откриване на грешки се затвори неочаквано."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -270,7 +269,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Грешка по време на инсталирането на символи за отстраняване на грешки"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -785,7 +784,7 @@ msgid "Custom settings of the application that may be related"
 msgstr ""
 "Персонализирани настройки на приложението, които могат да бъдат свързани"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Недостатъчно полезен"
@@ -904,7 +903,7 @@ msgstr ""
 "файлове </link>) и щракнете върху бутон <interface> Презареждане </"
 "interface>."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1048,8 +1047,27 @@ msgstr ""
 " и се уверете, че актуализацията е приложена изцяло и няма да причини "
 "странични ефекти.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+"Събирането на информация за срива е неуспешна по неизвестни причини. Можете "
+"да опитате отново или да затворите този прозорец."
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
@@ -1057,7 +1075,7 @@ msgstr ""
 "Събирането на информация за срива е неуспешна по неизвестни причини. Можете "
 "да опитате отново или да затворите този прозорец."
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторно опитване"

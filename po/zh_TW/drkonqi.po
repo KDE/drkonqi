@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-25 01:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -213,8 +213,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "除錯器非預期結束。"
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -254,7 +253,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "安裝除錯符號軟體包時發生錯誤"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -748,7 +747,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能有關的自訂應用程式設定"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "不夠有用"
@@ -859,7 +858,7 @@ msgstr ""
 "（<link url='%2'>需要的檔案清單</link>），然後點擊「<interface>重新載入</"
 "interface>」按鍵。"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -980,14 +979,31 @@ msgstr ""
 "使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
 "入，以確保更新完全套用，且不會有任何副作用。</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr "收集崩潰資料時因不明原因而失敗。您可以重試，或關閉視窗。"
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr "收集崩潰資料時因不明原因而失敗。您可以重試，或關閉視窗。"
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "重試"

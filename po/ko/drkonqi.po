@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-19 22:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -208,8 +208,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "디버거가 예상치 않게 종료되었습니다."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -250,7 +249,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "디버그 기호 설치 중 오류 발생"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -747,7 +746,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "연관될 수도 있는 사용자 정의 설정"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
@@ -858,7 +857,7 @@ msgstr ""
 "는 방법을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>파"
 "일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -990,8 +989,27 @@ msgstr ""
 "업데이트가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이\n"
 "발생하지 않습니다.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+"알 수 없는 이유로 충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나 다시 시도"
+"할 수 있습니다."
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
@@ -999,7 +1017,7 @@ msgstr ""
 "알 수 없는 이유로 충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나 다시 시도"
 "할 수 있습니다."
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "다시 시도"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-24 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-12 15:52+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -223,8 +223,7 @@ msgctxt "@info:status"
 msgid "The debugger has quit unexpectedly."
 msgstr "Derintuvė netikėtai baigė darbą."
 
-#: backtracewidget.cpp:303 backtracewidget.cpp:319 qml/DeveloperPage.qml:212
-#: qml/DeveloperPage.qml:216
+#: backtracewidget.cpp:303 backtracewidget.cpp:319
 #, kde-format
 msgctxt "@info:status"
 msgid "The crash information could not be generated."
@@ -265,7 +264,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Klaida įdiegiant derinimo simbolius"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -772,7 +771,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Tinkintos programos nuostatos, kurios gali būti susijusios"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Nepakankamai naudingas"
@@ -893,7 +892,7 @@ msgstr ""
 "(<link url='%2'>failų sąrašas</link>) ir spustelėkite mygtuką "
 "<interface>Įkelti iš naujo</interface>."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:217
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
@@ -1035,8 +1034,27 @@ msgstr ""
 "kad būtų užtikrinta, jog antaujinimas buvo pilnai pritaikytas\n"
 "ir nesukels jokių šalutinių poveikių.</para>"
 
-#: qml/main.qml:85
-msgctxt "@label"
+#: qml/main.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed for unknown reasons. You can retry, close "
+"the window, or <link url='%1'>view detailed output</link>."
+msgstr ""
+"Informacijos rinkimas apie strigtį dėl nežinomų priežasčių patyrė nesėkmę. "
+"Galite bandyti dar kartą arba užverti šį langą."
+
+#: qml/main.qml:92
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, or "
+#| "close the window."
+msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
@@ -1044,7 +1062,7 @@ msgstr ""
 "Informacijos rinkimas apie strigtį dėl nežinomų priežasčių patyrė nesėkmę. "
 "Galite bandyti dar kartą arba užverti šį langą."
 
-#: qml/main.qml:90
+#: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Bandyti dar kartą"
