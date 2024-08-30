@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-02-29 12:14+0200\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-08-28 10:28+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -370,13 +370,13 @@ msgstr "Pārskats"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -894,6 +894,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Automātiski lejupielādējiet atkļūdošanas simbolus, lai uzlabotu avārijas "
+"ziņojumus"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -904,6 +906,11 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
+"Avārijas ziņojumiem būs lielāka vērtība, ja no sistēmas izplatītāja vispirms "
+"lejupielādēsiet atkļūdošanas resursus.\n"
+"Tie var avārijas brīdī palielināt atmiņas lietojumu un aizņemt vairāk laika, "
+"kā arī radīt nezināma izmēra lejupielādes. Lejupielādi sistēma automātiski "
+"izlaidīs, ja tā konstatē, ka interneta savienojums nav bezlimita."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1013,25 +1020,15 @@ msgstr ""
 "negaidīti blakus efekti.</para>"
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 "Avārijas informācijas iegūšana neizdevās nezināmu iemeslu dēļ. Varat mēģināt "
-"vēlreiz vai aizvērt šo logu."
+"vēlreiz, aizvērt šo logu vai <link url='%1'>aplūkot sīkāku izvadi</link>."
 
 #: qml/main.qml:92
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1232,7 +1229,7 @@ msgctxt "@label"
 msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
-msgstr ""
+msgstr "Avārijas datu iegūšana. Iegūtos datus automātiski nosūtīs fonā."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1243,15 +1240,12 @@ msgstr "Avārijas ziņojums ir nosūtīts"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Nākotnē:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Nav derīgs ziņojums/avārija"
+msgstr "Automātiski iesniegt informāciju par avārijām"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1277,7 +1271,7 @@ msgstr "Nosūtīt ziņojumu"
 #: qml/SentryPage.qml:118
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Pabeigt"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
