@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-09-11 10:10+0300\n"
+"PO-Revision-Date: 2024-09-16 13:46+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -389,13 +389,13 @@ msgstr "Обзор"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -926,7 +926,6 @@ msgstr ""
 "Автоматически загружать отладочные символы, чтобы улучшить отчёты об ошибках"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -937,9 +936,9 @@ msgid ""
 msgstr ""
 "Отчёты о сбоях будут информативнее, если сначала загрузить дополнительные "
 "отладочные ресурсы из хранилища вашего дистрибутива.\n"
-"Если эта опция включена, при сбое могут быть загружены данные неизвестного "
-"объёма. Такая загрузка автоматически отменяется, когда используется лимитное "
-"интернет-подключение."
+"Если эта опция включена, в случае сбоя потребуется больше памяти и времени, "
+"будет выполняться загрузка данных неизвестного объёма. Такая загрузка "
+"автоматически отменяется, когда используется лимитное интернет-подключение."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1050,24 +1049,23 @@ msgstr ""
 "выйти и снова войти в систему.</para>"
 
 #: qml/main.qml:89
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
-"Сбор информации о причинах аварийного завершения работы приложения "
-"завершился неудачей. Вы можете повторить попытку или закрыть это окно."
+"По неизвестной причине не удалось получить данные о произошедшем сбое. Можно "
+"повторить попытку, закрыть это окно или <link url='%1'>просмотреть подробный "
+"вывод</link>."
 
 #: qml/main.qml:92
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
-"Сбор информации о причинах аварийного завершения работы приложения "
-"завершился неудачей. Вы можете повторить попытку или закрыть это окно."
+"По неизвестной причине не удалось получить данные о произошедшем сбое. Можно "
+"повторить попытку или закрыть это окно."
 
 #: qml/main.qml:105
 msgctxt "@action retry gathering crash data"
@@ -1269,6 +1267,8 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Выполняется сбор данных о сбое. Собранные данные будут автоматически "
+"отправлены в фоновом режиме."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1313,7 +1313,7 @@ msgstr "Отправить отчёт"
 #: qml/SentryPage.qml:118
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Готово"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
