@@ -331,6 +331,7 @@ void ReportInterface::prepareEventPayload()
     hash.insert(u"timestamp"_s, DrKonqi::crashedApplication()->datetime().toUTC().toString(Qt::ISODateWithMs));
 
     bool hadSomeVerbosity = false;
+    bool hadIncompatibleQt = false;
 
     {
         QList<QVariant> breadcrumbs;
@@ -341,7 +342,8 @@ void ReportInterface::prepareEventPayload()
             breadcrumb.insert(u"type"_s, u"debug"_s);
             const auto category = logEntry.value("QT_CATEGORY"_ba, "default"_ba);
             breadcrumb.insert(u"category"_s, category);
-            breadcrumb.insert(u"message"_s, logEntry.value("MESSAGE"_ba));
+            const auto message = logEntry.value("MESSAGE"_ba);
+            breadcrumb.insert(u"message"_s, message);
             // PRIORITY isn't a builtin field, it may be missing. Assume info (6) when it is missing.
             const auto level = journalPriorityToSentryLevel(logEntry.value("PRIORITY"_ba, "6"_ba));
             breadcrumb.insert(u"level"_s, level);
@@ -358,6 +360,9 @@ void ReportInterface::prepareEventPayload()
             // Add an identifier tag if we had some debug output, suggesting some degree of verbosity
             if (level == "debug"_ba && category != "default"_ba) {
                 hadSomeVerbosity = true;
+            }
+            if (message.contains("Cannot mix incompatible Qt"_ba)) {
+                hadIncompatibleQt = true;
             }
         }
         std::reverse(breadcrumbs.begin(), breadcrumbs.end());
@@ -426,6 +431,11 @@ void ReportInterface::prepareEventPayload()
         }));
         exception.insert(VALUES_KEY, values);
         hash.insert(EXCEPTION_KEY, exception);
+    }
+
+    if (hadIncompatibleQt) {
+        hash.insert(u"message"_s, "Mixed Incompatible Qt Environment"_ba);
+        hash.insert(u"level"_s, u"info"_s);
     }
 
     m_sentryPostbox.addEventPayload(QJsonDocument::fromVariant(hash));
