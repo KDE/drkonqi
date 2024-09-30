@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 14:36+0200\n"
+"PO-Revision-Date: 2024-09-29 21:08+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -370,13 +370,13 @@ msgstr "Áttekintés"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -901,13 +901,6 @@ msgstr ""
 "javításához"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This causes downloads of unknown size when a crash occurs. This is "
-#| "skipped automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -918,7 +911,8 @@ msgid ""
 msgstr ""
 "Az összeomlásjelentések nagyobb értéket képviselhetnek, ha további "
 "hibakeresési erőforrásokat tölt le előbb közvetlenül a disztribútorától.\n"
-"Ez ismeretlen méretű letöltéseket jelent összeomlás bekövetkezésekor. "
+"Ez megnövekedett memóriahasználatot okozhat, és hosszabb időt vesz igénybe, "
+"és ismeretlen méretű letöltéseket jelent összeomlás bekövetkezésekor. "
 "Forgalmi díjas internetkapcsolat esetén automatikusan kihagyásra kerül."
 
 #: qml/LoginPage.qml:14
@@ -1029,25 +1023,16 @@ msgstr ""
 "mellékhatásokat.</para>"
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
-"Ismeretlen okokból nem sikerült összegyűjteni az összeomlási informácoókat. "
-"Megpróbálhatja újból, vagy bezárhatja az ablakot."
+"Ismeretlen okokból nem sikerült összegyűjteni az összeomlási információkat. "
+"Megpróbálhatja újból, bezárhatja az ablakot, vagy <link "
+"url='%1'>megtekintheti a részletes kimenetet</link>."
 
 #: qml/main.qml:92
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1253,6 +1238,8 @@ msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
 msgstr ""
+"Összeomlási adatok gyűjtése. Az összegyűjtött adatok automatikusan "
+"beküldésre kerülnek a háttérben."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
