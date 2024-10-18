@@ -90,6 +90,7 @@ void CredentialStore::store()
     if (!m_wallet->hasFolder(KWallet::Wallet::FormDataFolder())) {
         m_wallet->createFolder(KWallet::Wallet::FormDataFolder());
     }
+    m_wallet->setFolder(KWallet::Wallet::FormDataFolder());
 
     QMap<QString, QString> values;
     values.insert(QLatin1String(kWalletEntryUsername), m_email);
