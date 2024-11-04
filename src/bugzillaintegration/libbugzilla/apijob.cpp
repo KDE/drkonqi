@@ -39,8 +39,14 @@ void APIJob::setAutoStart(bool start)
 void APIJob::connectNotify(const QMetaMethod &signal)
 {
     if (m_autostart && signal == QMetaMethod::fromSignal(&KJob::finished)) {
-        qCDebug(BUGZILLA_LOG) << "auto starting";
-        start();
+        // Queue the start lest we start too early for our caller.
+        QMetaObject::invokeMethod(
+            this,
+            [this] {
+                qCDebug(BUGZILLA_LOG) << "auto starting";
+                start();
+            },
+            Qt::QueuedConnection);
     }
     KJob::connectNotify(signal);
 }
