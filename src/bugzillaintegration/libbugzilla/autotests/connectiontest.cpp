@@ -162,6 +162,8 @@ private Q_SLOTS:
                     socket->disconnect();
                     socket->close();
                     qDebug() << "socket closed";
+                } else {
+                    qWarning() << "Unexpected request" << readBlob;
                 }
             });
         });
