@@ -151,7 +151,7 @@ private Q_SLOTS:
                 readBlob += socket->readAll();
                 readBlob.replace("\r\n", "\n");
                 auto parts = readBlob.split("\n");
-                if (parts.contains("PUT /put HTTP/1.1") && parts.contains("Content-Length: 12") && parts.contains("hello there!")) {
+                if (parts.contains("PUT /put HTTP/1.1") && parts.contains("Content-Length: 12", Qt::CaseInsensitive) && parts.contains("hello there!")) {
                     QFile file(QFINDTESTDATA("data/put.http"));
                     file.open(QFile::ReadOnly | QFile::Text);
                     QByteArray ret = file.readAll();
