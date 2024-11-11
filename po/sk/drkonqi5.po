@@ -6,7 +6,7 @@
 # Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
 # Miroslav David <mirodav@gmail.com>, 2009.
 # Michal Sulek <misurel@gmail.com>, 2009, 2010, 2011.
-# Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2021.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2021, 2024 Roman Paholík <wizzardsk@gmail.com>
 # Mthw <jari_45@hotmail.com>, 2018.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019-2021.
 msgid ""
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2021-11-27 10:26+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-11-10 18:23+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.11.90\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -297,13 +297,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Podproces sa ukončil s chybou: %1"
 
 #: coredump/gui/DetailsLoader.cpp:34
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Podproces spadol. Skontrolujte svoju inštaláciu."
 
 #: coredump/gui/main.cpp:33
 #, kde-format
@@ -315,13 +315,12 @@ msgstr ""
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Ponúka podrobný prehľad minulých pádov"
 
 #: coredump/gui/main.cpp:37
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "(C) 2000-2018, Autori DrKonqi"
+msgstr "(C) 2020-2022, Autori DrKonqi"
 
 #: coredump/gui/qml/DetailsPage.qml:19
 #, fuzzy
@@ -329,40 +328,38 @@ msgstr "(C) 2000-2018, Autori DrKonqi"
 #| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Podrobnosti:"
+msgstr "Podrobnosti"
 
 #: coredump/gui/qml/DetailsPage.qml:28
+#, fuzzy
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopírovať do schránky"
 
 #: coredump/gui/qml/DetailsPage.qml:37
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Spustiť ladiaci program"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Spadnutia"
 
 #: coredump/gui/qml/ListPage.qml:48
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Odosielanie hlásenia o páde"
+msgstr "Načítanie hlásení o páde"
 
 #: coredump/gui/qml/ListPage.qml:56
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Zatiaľ nedošlo k pádu žiadneho procesu"
 
 #: coredump/gui/qml/ListPage.qml:64
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Žiadne pády zodpovedajúce hľadaniu"
 
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
@@ -706,21 +703,17 @@ msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Získavanie backtrace (automatická informácia o páde)"
 
 #: qml/BacktracePage.qml:26
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
 msgstr "Zobraziť obsah backtrace (pokročilé)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
+#, fuzzy
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Nasledujúci"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgstr "Nepodarilo sa kontaktovať bugs.kde.org:  <message>%1</message>"
@@ -730,140 +723,86 @@ msgstr "Nepodarilo sa kontaktovať bugs.kde.org:  <message>%1</message>"
 #| msgid "Retry"
 msgctxt "@action"
 msgid "Retry"
-msgstr "Skúsiť znova"
+msgstr "Skúsiť znovu"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr "Skúšam sa kontaktovať bugs.kde.org..."
+msgstr "Pokus o kontaktovanie bugs.kde.org..."
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
 msgid "What do You Know About the Crash?"
-msgstr "Čo viete o páde aplikácie?"
+msgstr "Čo viete o páde?"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr "<strong>Pamätáte si, čo ste robili pred pádom aplikácie?</strong>"
+msgstr "Pamätáte si, čo ste robili pred pádom?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Áno"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Nie"
 
 #: qml/ContextPage.qml:39
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr ""
-"<strong>Spadne aplikácia znovu, ak zopakujete tú istú situáciu?</strong>"
+msgstr "Spadne aplikácia znovu, ak zopakujete tú istú situáciu?"
 
 #: qml/ContextPage.qml:52
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Please select which additional information you can provide:</"
-#| "strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr ""
-"<strong>Prosím vyberte, ktoré ďalšie informácie môžete poskytnúť:</strong>"
+msgstr "Prosím vyberte, ktoré dodatočné informácie môžete poskytnúť:"
 
 #: qml/ContextPage.qml:59
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Čo som robil, keď spadla aplikácia \"%1\""
+msgstr "Čo som robil, keď spadla aplikácia <application>%1</application>"
 
 #: qml/ContextPage.qml:65
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Unusual desktop behavior I noticed"
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Neobvyklé správanie pracovnej plochy, ktoré som si všimol"
 
 #: qml/ContextPage.qml:70
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Custom settings of the application that may be related"
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
-msgstr "Vlastné nastavenie aplikácie, ktoré môže súvisieť s chybou"
+msgstr "Vlastné nastavenia aplikácie, ktoré môžu súvisieť"
 
 #: qml/ContextPage.qml:79 qml/DeveloperPage.qml:192
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Nedostatočne užitočné"
 
 #: qml/ContextPage.qml:80
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "<para>The information you can provide is not considered helpful enough in "
 "this case. If you can't think of any more information you can close the bug "
 "report dialog.</para>"
 msgstr ""
-"Informácie, ktoré môžete poskytnúť, nie sú v tomto prípade považované za "
-"dostatočne užitočné."
+"<para>Informácie, ktoré môžete poskytnúť, sa v tomto prípade nepovažujú za "
+"dostatočne užitočné. Ak vás nenapadajú žiadne ďalšie informácie, môžete "
+"dialógové okno hlásenia o chybe zatvoriť.</para>"
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "&Informácie pre vývojárov"
+msgstr "Informácie pre vývojárov"
 
 #: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "&Inštalovať ladiace symboly"
+msgstr "Inštalovať ladiace symboly"
 
 #: qml/DeveloperPage.qml:54
 #, fuzzy
@@ -871,15 +810,9 @@ msgstr "&Inštalovať ladiace symboly"
 #| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "Znovu &načítať"
+msgstr "Znovu načítať"
 
 #: qml/DeveloperPage.qml:56
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to reload the crash information (backtrace). This is "
-#| "useful when you have installed the proper debug symbol packages and you "
-#| "want to obtain a better backtrace."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -887,29 +820,24 @@ msgid ""
 "installed the proper debug symbol packages and you want to obtain a better "
 "backtrace."
 msgstr ""
-"Použite toto tlačidlo na znovu načítanie informácií o páde (backtrace). Je "
-"to užitočné, ak máte nainštalovaný správny ladiaci balíček a chcete získať "
+"Použite toto tlačidlo na opätovné načítanie informácií o páde (backtrace). "
+"Je to užitočné,\n"
+"ak máte nainštalované správne balíky ladiacich symbolov a chcete získať "
 "lepší backtrace."
 
 #: qml/DeveloperPage.qml:66
+#, fuzzy
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovať"
 
 #: qml/DeveloperPage.qml:73
+#, fuzzy
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 #: qml/DeveloperPage.qml:109
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
 msgctxt "@info"
 msgid ""
 "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
@@ -922,11 +850,13 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
-"<h2>Čo je \"backtrace\" ?</h2><p>Backtrace v podstate popisuje, čo sa stalo "
-"vo vnútri aplikácie pri jej páde, takže vývojári môžu vystopovať, kde začal "
-"neporiadok. Backtrace sa vám možno zdá bezvýznamné, ale v skutočnosti môže "
-"obsahovať množstvo užitočných informácií.<br />Backtrace sa bežne používa "
-"počas interaktívneho a post-mortem ladenia.</p>"
+"<subtitle>Čo je \"backtrace\"?</subtitle><para>Backtrace v podstate "
+"popisuje, čo sa stalo\n"
+"vo vnútri aplikácie pri jej páde, takže vývojári môžu vystopovať, kde začal\n"
+"neporiadok. Možno sa vám zdajú bezvýznamné, ale v skutočnosti môžu\n"
+"obsahovať množstvo užitočných informácií.<nl />Položky backtrace sa bežne "
+"používajú\n"
+"počas interaktívneho a následného ladenia.</para>"
 
 #: qml/DeveloperPage.qml:157
 #, fuzzy
@@ -949,11 +879,11 @@ msgid ""
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
 "Ak chcete automaticky nainštalovať chýbajúce ladiace balíčky, kliknite na "
-"tlačidlo <interface>Inštalovať ladiace symboly</interface>. Ak táto metóda "
+"tlačidlo <interface>Inštalovať ladiace symboly</interface>. Ak táto metóda\n"
 "nefunguje: prečítajte si <link url='%1'>Ako vytvoriť použiteľné hlásenie o "
-"chybe</link>, aby ste sa dozvedeli ako získať použiteľný backtrace; "
-"nainštalujte potrebné balíčky (<link url='%2'>zoznam súborov</link>) a "
-"kliknite na tlačidlo <interface>Znovu načítať</interface>."
+"chybe</link>, aby ste sa dozvedeli ako získať použiteľný\n"
+"backtrace; nainštalujte potrebné balíčky (<link url='%2'>zoznam súborov</"
+"link>) a kliknite na tlačidlo <interface>Znovu načítať</interface>."
 
 #: qml/DeveloperPage.qml:165
 #, fuzzy
@@ -976,18 +906,14 @@ msgstr ""
 "tlačidlo <interface>Znovu načítať</interface>."
 
 #: qml/DeveloperPage.qml:177
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>You need to first install the debugger application (%1) then "
-#| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<strong>Musíte nainštalovať ladiaci balíček (%1) a kliknúť na tlačidlo "
-"<interface>Znovu načítať</interface>.</strong>"
+"<emphasis strong='true'>Najprv je potrebné nainštalovať aplikáciu ladiaceho "
+"programu (%1) a potom kliknúť na tlačidlo <interface>Znovu načítať</"
+"interface>.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -1025,7 +951,7 @@ msgstr ""
 #| msgid "[Duplicate report]"
 msgctxt "@title"
 msgid "Duplicate?"
-msgstr "[Duplicitné hlásenie]"
+msgstr "Duplikovať"
 
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
@@ -1115,14 +1041,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Uložiť prihlasovacie informácie pomocou systému KDE Wallet"
 
 #: qml/LoginPage.qml:92
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1132,11 +1050,11 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
-"<note>Ak chcete odoslať hlásenie o chybe, musíte mať užívateľský účet v "
+"<note>Ak chcete odoslať hlásenie o chybe, musíte mať používateľský účet v "
 "<link url='%1'>systéme pre sledovanie chýb KDE</link>, pretože vás možno "
-"neskôr kontaktujeme kvôli ďalším informáciám. Ak ešte nemáte účet, môžete si "
-"ho <link url='%2'>vytvoriť tu</link>. Nepoužívajte jednorázové e-mailové "
-"účty.</note>"
+"neskôr kontaktujeme\n"
+"kvôli ďalším informáciám. Ak ešte nemáte účet, môžete si ho bezplatne <link "
+"url='%2'>vytvoriť tu</link>. Nepoužívajte jednorázové e-mailové účty.</note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -1153,9 +1071,6 @@ msgstr ""
 "pomocou emailovej adresy a hesla."
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
 msgstr "Nahlásiť chybu"
@@ -1173,12 +1088,9 @@ msgid "Restart Application"
 msgstr "Reštartovať aplikáciu"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "&Informácie pre vývojárov"
+msgstr "Informácie pre vývojárov"
 
 #: qml/MainPage.qml:63
 #, fuzzy
@@ -1226,15 +1138,6 @@ msgstr ""
 "interface>.)</para>"
 
 #: qml/MainPage.qml:82
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crashed application "
-#| "appears to have been updated or uninstalled since it had been started. "
-#| "This prevents accurate crash reporting and can also be the cause of this "
-#| "crash.</para><para>After updating it is always a good idea to log out and "
-#| "back in to make sure the update is fully applied and will not cause any "
-#| "side effects.</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1245,12 +1148,13 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
-"<para>Asistent hlásenia je zakázaný z dôvodu zlyhania aplikácie Zdá sa, že "
-"od spustenia bola aktualizovaná alebo odinštalovaná. Tým sa zabráni presnému "
-"hláseniu o zlyhaní a môže to byť tiež príčinou tohto zlyhania.</"
-"para><para>Po aktualizácii je vždy dobré sa odhlásiť a znova "
-"prihlásiťuistite sa, že aktualizácia je úplne aplikovaná a nespôsobí žiadne "
-"vedľajšie účinky.</para>"
+"<para>Asistent hlásenia je vypnutý, pretože sa zdá,\n"
+"že spadnutá aplikácia bola od jej spustenia aktualizovaná\n"
+"alebo odinštalovaná. To bráni presnému hláseniu o páde\n"
+"a môže byť aj príčinou tohto pádu.</para>\n"
+"<para>Po aktualizácii je vždy dobré sa odhlásiť a znova prihlásiť,\n"
+"aby ste sa uistili, že aktualizácia bola úplne aplikovaná\n"
+"a nespôsobí žiadne vedľajšie účinky.</para>"
 
 #: qml/MainPage.qml:108
 #, fuzzy
@@ -1346,7 +1250,7 @@ msgstr ""
 #| msgid "Closed (%1)"
 msgctxt "@action:button"
 msgid "Close"
-msgstr "Uzavreté (%1)"
+msgstr "Zavrieť"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
@@ -1359,19 +1263,13 @@ msgid "Preview the Report"
 msgstr "Náhľad hlásenia"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "This is a preview of the report's contents which will be sent. \n"
-#| "\n"
-#| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
-"Toto je náhľad obsahu hlásenia, ktoré bude odoslané. \n"
-"|nAk ho chcete zmeniť, prejdite na predchádzajúce stránky."
+"<para>Toto je náhľad obsahu hlásenia, ktoré bude odoslané.</para><para>Ak ho "
+"chcete zmeniť, prejdite na predchádzajúce stránky.</para>"
 
 #: qml/PreviewPage.qml:38
 #, fuzzy
@@ -1384,7 +1282,7 @@ msgstr "Odoslať"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Čaká sa na dáta..."
 
 #: qml/ReportPage.qml:15
 msgctxt "@title"
@@ -1392,32 +1290,16 @@ msgid "Enter the Details about the Crash"
 msgstr "Zadajte podrobnosti o páde"
 
 #: qml/ReportPage.qml:26
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "<strong>Prosím zadajte nasledovné informácie v angličtine.</strong>"
+msgstr "Prosím zadajte nasledovné informácie v angličtine."
 
 #: qml/ReportPage.qml:35 qml/ReportPage.qml:54
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Obsah hlásenia"
+msgstr "Názov hlásenia o chybe:"
 
 #: qml/ReportPage.qml:40
-#, fuzzy
-#| msgctxt "@info:tooltip examples of good bug report titles"
-#| msgid ""
-#| "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after "
-#| "adding the Notes widget and writing on it\"<nl />\"Konqueror crashed when "
-#| "accessing the Facebook application 'X'\"<nl />\"Kopete suddenly closed "
-#| "after resuming the computer and talking to a MSN buddy\"<nl />\"Kate "
-#| "closed while editing a log file and pressing the Delete key a couple of "
-#| "times\""
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1430,18 +1312,20 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
-"<strong>Príklady dobrých titulkov:</strong><nl />\"Plasma spadla po pridaní "
-"widgetu Poznámky a písaní do neho\"<nl />\"Konqueror spadol pri prístupe k "
-"Facebook aplikácii 'X'\"<nl />\"Kopete nečakane skončilo po prebudení "
-"počítača a písaní priateľovi na MSN\"<nl />\"Kate skončilo počas úpravy "
-"súboru so záznamom a stlačení niekoľko krát klávesy Delete\""
+"<subtitle>Príklady dobrých názvov:</subtitle>\n"
+"<list>\n"
+"<item>Plasma spadla po pridaní widgetu Poznámky a písaní do neho</item>\n"
+"<item>Konqueror spadol pri prístupe k Facebook aplikácii 'X'</item>\n"
+"<item>Kopete skončilo po prebudení počítača a písaní priateľovi na MSN</"
+"item>\n"
+"<item>Kate skončilo počas úpravy súboru záznamu a stlačení niekoľko krát "
+"klávesy Delete</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:61 qml/ReportPage.qml:102
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Informácie o texte pádu"
+msgstr "Informácie o páde:"
 
 #: qml/ReportPage.qml:66
 msgctxt "@info"
@@ -1456,6 +1340,15 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Opíšte čo najpodrobnejšie okolnosti pádu:</subtitle>\n"
+"<list>\n"
+"<item>Podrobne popíšte, ktoré činnosti ste vykonávali v aplikácii a mimo nej "
+"v okamihu pred pádom.</item>\n"
+"<item>Poznamenajte si, či ste v aplikácii alebo v celom prostredí "
+"zaznamenali nejaké nezvyčajné správanie.</item>\n"
+"<item>Poznamenajte akúkoľvek inú ako predvolenú konfiguráciu v aplikácii</"
+"item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:80
 msgctxt "the minimum required length of a text was reached"
@@ -1468,121 +1361,78 @@ msgid "Provide more information"
 msgstr "Poskytnite viac informácií"
 
 #: qml/ReportPage.qml:108
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metóda distribúcie:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
-msgstr "KDE je skompilované zo zdrojových kódov"
+msgstr "KDE Platform je skompilovaná zo zdrojových kódov"
 
 #: qml/ReportPage.qml:139
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<i>Note:</i> The crash and system information will be automatically added "
-#| "to the bug report."
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<i>Poznámka</i>:Informácie o páde a systéme budú do hlásenia o chybe pridané "
-"automaticky."
+"<note>Informácie o páde a systéme budú do hlásenia o chybe pridané "
+"automaticky.</note>"
 
 #: qml/ReportPage.qml:148
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Náhľad hlásenia"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "&Uložiť do súboru..."
+msgstr "Uložiť hlásenie do súboru"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
 msgstr ""
-"Použite toto tlačidlo na zobrazenie informácií o vybranom hlásení o chybe."
+"Toto tlačidlo slúži na uloženie informácií o páde do súboru na ručné "
+"nahlásenie."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info %1 is an error message from the backend"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "Nepodarilo sa kontaktovať bugs.kde.org:  <message>%1</message>"
+msgstr "Nepodarilo sa odoslať hlásenie o chybe: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Opätovné odoslanie"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "Odosiela sa hlásenie o chybe..."
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Asistent pre hlásenie pádu"
+msgstr "Hlásenie o páde odoslané"
 
 #: qml/SentPage.qml:18
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "<link url='%1'>Report's webpage</link>"
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr "<link url='%1'>Stránka s hlásením o chybe</link>"
+msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:23
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being part of KDE. You can now close this window."
-msgstr ""
-"Hlásenie o chybe bolo odoslané.<nl/>URL: <link>%1</link><nl/>Ďakujeme, že "
-"ste súčasťou KDE. Toto okno môžete teraz zavrieť."
+msgstr "Ďakujeme, že ste súčasťou KDE. Toto okno môžete teraz zavrieť."
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Welcome to the Reporting Assistant"
-msgstr "Víta vás asistent pre hlásenie pádu"
+msgstr "Vitajte v Asistentovi hlásenia"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
@@ -1592,14 +1442,6 @@ msgstr ""
 "nahlásenia chyby."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info note before starting the bug reporting process"
-#| msgid ""
-#| "<p><i>Note:</i> Since communication between you and the developers is "
-#| "required for effective debugging, to continue reporting this bug "
-#| "<strong>it is required for you to agree that developers may contact you.</"
-#| "strong></p><p>Feel free to close this dialog if you do not accept this.</"
-#| "p>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1609,15 +1451,17 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not accept this."
 "</para>"
 msgstr ""
-"<p><i>Poznámka</i>: Keďže k efektívnemu ladeniu chyby je potrebná "
-"komunikácia medzi vami a vývojármi, <strong>je potrebné súhlasiť s tým, že "
-"vás vývojári môžu kontaktovať</strong>.</p><p>Ak s tým nesúhlasíte, môžete "
-"kľudne zavrieť tento dialóg.</p> "
+"<para><note>Keďže k efektívnemu ladeniu chyby je potrebná komunikácia medzi "
+"vami a vývojármi,\n"
+"aby ste mohli pokračovať v hlásení tejto chyby <emphasis strong='true'>je "
+"potrebné súhlasiť s tým, že vás vývojári môžu kontaktovať</emphasis>.\n"
+"</note></para><para>Ak s tým nesúhlasíte, môžete kľudne zavrieť tento "
+"dialóg. </para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Súhlasím s kontaktovaním"
 
 #: qmlextensions/platformmodel.cpp:36
 #, kde-format
@@ -1703,45 +1547,44 @@ msgstr "Reštartovať aplikáciu"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Názov ladiaceho programu odovzdaný spracovaniu analyzátora"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Súbor obsahujúci backtrace."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib Test (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Testovacia aplikácia pre knižnicu správcu sledovania chýb"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2018, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "(C) 2000-2018, Autori DrKonqi"
+msgstr "(c) 2009, Vývojári DrKonqi2"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "používateľské meno pre bugstest.kde.org"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
+msgstr "heslo pre bugstest.kde.org"
 
 #~ msgctxt "@title title of the dialog"
 #~ msgid "About Bug Reporting - Help"
