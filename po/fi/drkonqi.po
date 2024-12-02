@@ -7,7 +7,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2022.
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-01-18 17:52+0200\n"
+"PO-Revision-Date: 2024-10-19 09:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,23 +28,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:09+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
-"Kim Enkovaara,Tapio Kautto, Ilpo Kantonen,Niklas Laxström,Teemu Rytilahti,"
-"Tommi Nieminen,Jorma Karvonen,Lasse Liehu"
+"Kim Enkovaara, Tapio Kautto, Ilpo Kantonen, Niklas Laxström, Teemu "
+"Rytilahti, Tommi Nieminen, Jorma Karvonen, Lasse Liehu"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"kim.enkovaara@iki.fi,eleknader@phnet.fi,ilpo@iki.fi,niklas.laxstrom"
-"+kdetrans@gmail.com,tpr@d5k.net,translator@legisign.org,karvonen.jorma@gmail."
-"com,lliehu@kolumbus.fi"
+"kim.enkovaara@iki.fi, eleknader@phnet.fi,ilpo@iki.fi, niklas.laxstrom"
+"+kdetrans@gmail.com, tpr@d5k.net, translator@legisign.org, karvonen."
+"jorma@gmail.com, lliehu@kolumbus.fi"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -384,13 +383,13 @@ msgstr "Yleiskuva"
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -905,6 +904,8 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Lataa virheenpaikannussymbolit automaattisesti kaatumistietojen "
+"parantamiseksi"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -915,6 +916,11 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
+"Kaatumistiedoista voisi olla enemmän apua, jos ensin ladataan jakelun  "
+"virheenpaikannuksen lisäresurssit.\n"
+"Tämä voi lisätä muistin käyttöä ja kestää kauemmin sekä aiheuttaa "
+"kaatumistilanteissa tuntemattoman suuruisia latauksia. Datamäärän mukaan "
+"maksullisessa internetyhteydessä tämä automaattisesti ohitetaan."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title"
@@ -1023,31 +1029,21 @@ msgstr ""
 "sivuvaikutuksitta täysin voimaan.</para>"
 
 #: qml/main.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
-"Kaatumistiedon kokoaminen epäonnistui tuntemattomasta syystä. Voit yrittää "
-"uudelleen tai sulkea ikkunan."
+"Tuntemattomasta syystä kaatumistiedon kerääminen epäonnistui. Voit yrittää "
+"uudelleen, sulkea ikkunan tai <link url='%1'>katsoa tarkat tiedot</link>."
 
 #: qml/main.qml:92
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, or "
-#| "close the window."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
-"Kaatumistiedon kokoaminen epäonnistui tuntemattomasta syystä. Voit yrittää "
+"Tuntemattomasta syystä kaatumistiedon kerääminen epäonnistui. Voit yrittää "
 "uudelleen tai sulkea ikkunan."
 
 #: qml/main.qml:105
@@ -1242,7 +1238,7 @@ msgctxt "@label"
 msgid ""
 "Collecting crash data. The collected data will automatically submit in the "
 "background."
-msgstr ""
+msgstr "Kerätään kaatumistietoa, joka lähetetään automaattisesti taustalla."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1253,15 +1249,12 @@ msgstr "Kaatumisraportti lähetetty"
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Vastaisuudessa:"
 
 #: qml/SentryPage.qml:64
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "Ei ole kelvollinen ilmoitus/kaatuminen"
+msgstr "Ilmoita kaatumisista automaattisesti"
 
 #: qml/SentryPage.qml:73
 msgctxt "@info:tooltip"
@@ -1287,7 +1280,7 @@ msgstr "Lähetä viesti"
 #: qml/SentryPage.qml:118
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Viimeistele"
 
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
