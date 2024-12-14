@@ -41,6 +41,7 @@ Name[pt]=Dr Konqi
 Name[pt_BR]=Dr Konqi
 Name[ro]=Dr. Konqi
 Name[ru]=Dr Konqi
+Name[sa]=डॉ. कोन्की
 Name[sk]=Dr Konqi
 Name[sl]=Dr Konqi
 Name[sr]=Др Конки
