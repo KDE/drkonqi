@@ -384,8 +384,15 @@ void ReportInterface::prepareEventPayload()
         constexpr auto TAGS_KEY = "tags"_L1;
         auto tags = hash.take(TAGS_KEY).toHash();
         tags.insert(u"some_verbosity"_s, hadSomeVerbosity);
+
         // Tag the gui platform as well because the version from the gpu field cannot be easily filtered for
-        tags.insert(u"gui_platform"_s, QGuiApplication::platformName()); // NOTE: drkonqi gets invoked with the same platform as the crashed app
+        // NOTE: drkonqi gets invoked with the same platform as the crashed app
+        QString guiPlatform = QGuiApplication::platformName();
+        if (guiPlatform == "xcb"_L1 && qgetenv("XDG_SESSION_TYPE") == "wayland") {
+            guiPlatform = u"xcb (XWayland)"_s;
+        }
+        tags.insert(u"gui_platform"_s, guiPlatform);
+
         tags.insert(u"qt_version"_s, DrKonqi::instance()->qtVersion());
         tags.insert(u"kde_frameworks_version"_s, DrKonqi::instance()->frameworksVersion());
         hash.insert(TAGS_KEY, tags);
