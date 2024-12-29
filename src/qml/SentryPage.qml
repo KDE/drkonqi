@@ -29,7 +29,7 @@ Kirigami.Page {
 
         QQC2.Label {
             Layout.alignment: Qt.AlignHCenter
-            text: i18nc("@label", "Collecting crash data. The collected data will automatically submit in the background.")
+            text: i18nc("@label submitting as crash report", "Collecting crash data. The collected data will automatically be submitted in the background.")
             visible: !reportInterface.crashEventSent
         }
 
