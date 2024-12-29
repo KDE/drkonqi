@@ -65,12 +65,6 @@ public:
     // e.g. KCrashBackend is ephemeral, CoredumpBackend is not.
     static bool isEphemeralCrash();
 
-    // Clean before quitting. This is not meant to ever get called if the quitting isn't the direct result of
-    // an intentional quit. The primary effect of this function is that the backend will clean up persistent
-    // backing data, such as coredumpd metadata files. We only want this to happen when we are certain
-    // that the user has seen the crash but chosen to ignore it (e.g. closed the dialog window)
-    static void cleanupBeforeQuit();
-
     // Whether to use the minimalistic UI or not. Defaults to false.
     static bool minimalMode();
 

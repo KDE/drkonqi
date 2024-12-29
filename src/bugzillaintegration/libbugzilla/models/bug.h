@@ -76,7 +76,6 @@ public:
     explicit Bug(const QVariantHash &object, QObject *parent = nullptr);
 
     qint64 id() const;
-    void setId(qint64 id);
 
     QVariant customField(const char *key);
 
