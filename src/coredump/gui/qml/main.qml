@@ -3,6 +3,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import org.kde.config as KConfig
 import org.kde.kirigami 2.19 as Kirigami
 
 
@@ -14,6 +15,10 @@ Kirigami.ApplicationWindow {
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 22
     width: Kirigami.Settings.isMobile ? undefined : Kirigami.Units.gridUnit * 42
     height: Kirigami.Settings.isMobile ? undefined : Kirigami.Units.gridUnit * 34
+
+    KConfig.WindowStateSaver {
+        configGroupName: "MainWindow"
+    }
 
     pageStack.initialPage: ListPage {}
     pageStack.defaultColumnWidth: root.width // show single page

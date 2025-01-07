@@ -3,6 +3,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import org.kde.config as KConfig
 import org.kde.kirigami 2.19 as Kirigami
 
 import org.kde.drkonqi 1.0
@@ -74,6 +75,10 @@ any side effects.</para>`);
     height: Kirigami.Settings.isMobile ? undefined : minimumHeight
 
     header: generatorFailure ? warningComponent.createObject(appWindow) : null
+
+    KConfig.WindowStateSaver {
+        configGroupName: "MainWindow"
+    }
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
