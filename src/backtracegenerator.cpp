@@ -52,7 +52,18 @@ BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent
     : QObject(parent)
     , m_debugger(debugger)
     , m_supportsSymbolResolution(m_debugger.supportsCommandWithSymbolResolution())
-    , m_symbolResolution(m_debugger.supportsCommandWithSymbolResolution() && Settings::self()->downloadSymbols() && !isMeteredNetwork())
+    , m_symbolResolution([this] {
+        const auto shouldResolveSymbols = [this] {
+            return m_debugger.supportsCommandWithSymbolResolution() && Settings::self()->downloadSymbols() && !isMeteredNetwork();
+        };
+        connect(Settings::self(), &Settings::DownloadSymbolsChanged, this, [this, shouldResolveSymbols] {
+            if (m_symbolResolution != shouldResolveSymbols()) {
+                m_symbolResolution = !m_symbolResolution;
+                Q_EMIT symbolResolutionChanged();
+            }
+        });
+        return shouldResolveSymbols();
+    }())
     , m_lockFile([]() -> QLockFile * {
         const QString lockDir = QDir::homePath() + "/.local/share/drkonqi/"_L1;
         if (!QDir().exists(lockDir)) {
