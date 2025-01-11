@@ -9,6 +9,7 @@
 #include <QDirIterator>
 #include <QEventLoopLocker>
 #include <QJsonDocument>
+#include <QJsonValue>
 
 #include "debug.h"
 #include "sentrypaths.h"

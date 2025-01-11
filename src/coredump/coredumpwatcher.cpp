@@ -5,6 +5,8 @@
 
 #include "coredumpwatcher.h"
 
+#include <QDebug>
+
 #include <cerrno>
 #include <optional>
 #include <utility>
