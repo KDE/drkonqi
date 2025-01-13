@@ -1,7 +1,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
 
 add_executable(drkonqi-coredump-cleanup main.cpp)
 install(TARGETS drkonqi-coredump-cleanup DESTINATION ${KDE_INSTALL_LIBEXECDIR})

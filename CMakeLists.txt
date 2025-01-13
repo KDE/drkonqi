@@ -35,7 +35,11 @@ option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install py
 
 kde_enable_exceptions()
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets Test DBus Concurrent Quick)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets DBus Concurrent Quick)
+
+if(BUILD_TESTING)
+    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test)
+endif()
 
 find_package(
     KF6
