@@ -95,48 +95,6 @@ if(Systemd_FOUND)
     )
 endif()
 
-if(MINGW)
-    find_package(ZLIB REQUIRED)
-    find_library(INTL_LIBRARY NAMES intl)
-    find_library(IBERTY_LIBRARY NAMES iberty)
-    find_library(BFD_LIBRARY NAMES bfd)
-    if(IBERTY_LIBRARY)
-        set(iberty_FOUND 1)
-    else()
-        set(msg "iberty")
-    endif()
-    if(BFD_LIBRARY)
-        set(bfd_FOUND 1)
-    else()
-        set(msg "${msg} bfd")
-    endif()
-    if(INTL_LIBRARY)
-        set(intl_FOUND 1)
-    else()
-        set(msg "${msg} intl")
-    endif()
-    if(msg)
-        message(FATAL_ERROR "could not find ${msg}")
-    endif()
-
-    add_library(intl SHARED IMPORTED)
-    set_target_properties(intl PROPERTIES IMPORTED_IMPLIB ${INTL_LIBRARY})
-    add_library(iberty STATIC IMPORTED)
-    set_target_properties(iberty PROPERTIES IMPORTED_LOCATION ${IBERTY_LIBRARY})
-    add_library(bfd STATIC IMPORTED)
-    set_target_properties(
-        bfd
-        PROPERTIES
-            IMPORTED_LOCATION ${BFD_LIBRARY}
-            # bfd header requires this to be defined
-            INTERFACE_COMPILE_DEFINITIONS "PACKAGE;PACKAGE_VERSION"
-    )
-    find_path(BFD_INCLUDE_DIR bfd.h)
-    include_directories(${BFD_INCLUDE_DIR})
-endif()
-
-include_directories("${CMAKE_CURRENT_BINARY_DIR}")
-
 add_subdirectory(src)
 
 # add clang-format target for all our real source files
