@@ -30,7 +30,6 @@ include(ECMSourceVersionControl)
 include(CMakeDependentOption)
 include(FindPythonModule)
 
-option(WITH_GDB12 "The gdb version available is at least GDB 12 (this enables dynamic debug symbol resolution even when no DEBUG_PACKAGE_INSTALLER_NAME is available)" FALSE)
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 
 kde_enable_exceptions()
@@ -71,6 +70,9 @@ find_package(Python3 3.8 COMPONENTS Interpreter)
 find_pythonmodule(psutil)
 find_pythonmodule(pygdbmi)
 find_pythonmodule(sentry_sdk)
+
+find_package(GDB 12)
+set_package_properties(GDB PROPERTIES TYPE RUNTIME PURPOSE "GDB is required for debugging")
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240

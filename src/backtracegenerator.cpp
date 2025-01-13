@@ -51,7 +51,7 @@ bool isMeteredNetwork()
 BacktraceGenerator::BacktraceGenerator(const Debugger &debugger, QObject *parent)
     : QObject(parent)
     , m_debugger(debugger)
-    , m_supportsSymbolResolution(WITH_GDB12 && m_debugger.supportsCommandWithSymbolResolution())
+    , m_supportsSymbolResolution(m_debugger.supportsCommandWithSymbolResolution())
     , m_symbolResolution(m_debugger.supportsCommandWithSymbolResolution() && Settings::self()->downloadSymbols() && !isMeteredNetwork())
     , m_lockFile([]() -> QLockFile * {
         const QString lockDir = QDir::homePath() + "/.local/share/drkonqi/"_L1;
