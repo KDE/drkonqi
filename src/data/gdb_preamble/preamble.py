@@ -25,7 +25,7 @@ os.environ['LC_ALL'] = 'C.UTF-8'
 import gdb
 from gdb.FrameDecorator import FrameDecorator
 
-from datetime import datetime
+from datetime import datetime, timezone
 import uuid
 import json
 import subprocess
@@ -513,7 +513,7 @@ class SentryEvent:
     def make(self, program, crash_thread):
         crash_signal = int(os.getenv('DRKONQI_SIGNAL'))
         vm = psutil.virtual_memory()
-        boot_time = datetime.utcfromtimestamp(psutil.boot_time()).strftime('%Y-%m-%dT%H:%M:%S')
+        boot_time = datetime.fromtimestamp(psutil.boot_time()).astimezone(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S')
 
         # crutch to get the build id. if we did this outside gdb I expect it'd be neater
         progfile = gdb.current_progspace().filename
@@ -530,7 +530,7 @@ class SentryEvent:
             ,
             'event_id': uuid.uuid4().hex,
             # Gets overwritten by ReportInterface with a more accurate value
-            'timestamp': datetime.utcnow().isoformat(),
+            'timestamp': datetime.now(timezone.utc).isoformat(),
             'message': 'Signal {} in {}'.format(crash_signal, program),
             'platform': 'native',
             'sdk': {
