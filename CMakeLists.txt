@@ -30,6 +30,7 @@ include(ECMSourceVersionControl)
 include(CMakeDependentOption)
 include(FindPythonModule)
 
+option(WITH_SYSTEMD "Enable systemd integration (note that crash reporting without systemd may eventually be deprecated)" ON)
 option(WITH_GDB12 "The gdb version available is at least GDB 12 (this enables dynamic debug symbol resolution even when no DEBUG_PACKAGE_INSTALLER_NAME is available)" FALSE)
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 
@@ -72,9 +73,9 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
 )
 
-if(CMAKE_SYSTEM_NAME MATCHES Linux)
+if(CMAKE_SYSTEM_NAME MATCHES Linux AND WITH_SYSTEMD)
     find_package(Systemd 249)
-    set_package_properties(Systemd PROPERTIES PURPOSE "Coredumpd integration.")
+    set_package_properties(Systemd PROPERTIES TYPE REQUIRED PURPOSE "Coredumpd integration.")
 endif()
 
 if(Systemd_FOUND)
