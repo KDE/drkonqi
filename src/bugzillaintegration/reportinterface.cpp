@@ -324,6 +324,7 @@ QByteArray journalPriorityToSentryLevel(const QByteArray &priorityBytes)
 void ReportInterface::prepareEventPayload()
 {
     auto eventPayload = DrKonqi::debuggerManager()->backtraceGenerator()->sentryPayload();
+    const auto receivedEmptyPayload = eventPayload.isEmpty();
     auto document = QJsonDocument::fromJson(eventPayload);
     auto hash = document.object().toVariantMap();
 
@@ -443,6 +444,11 @@ void ReportInterface::prepareEventPayload()
     if (hadIncompatibleQt) {
         hash.insert(u"message"_s, "Mixed Incompatible Qt Environment"_ba);
         hash.insert(u"level"_s, u"info"_s);
+    }
+
+    if (receivedEmptyPayload) {
+        hash.insert(u"message"_s, "Empty Sentry payload from GDB"_ba);
+        hash.insert(u"level"_s, u"warning"_s);
     }
 
     m_sentryPostbox.addEventPayload(QJsonDocument::fromVariant(hash));
