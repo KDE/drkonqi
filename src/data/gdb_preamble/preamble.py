@@ -570,13 +570,7 @@ class SentryEvent:
                     'timezone': base_data['Timezone'],
                     'processor_count': multiprocessing.cpu_count()
                 },
-                'os': {
-                    'name': base_data['OS_NAME'],
-                    'version': base_data['OS_VERSION_ID'],
-                    'build': base_data['OS_BUILD_ID'] if base_data['OS_BUILD_ID'] else base_data['OS_VARIANT_ID'],
-                    'kernel_version': os.uname().release,
-                    'raw_description': get_stdout(['uname', '-a'])
-                }
+                # 'os' gets injected on the cpp side so it is always available
             },
             'exception': { # https://develop.sentry.dev/sdk/event-payloads/exception/
                 'values': [
