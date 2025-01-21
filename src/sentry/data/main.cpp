@@ -66,7 +66,7 @@ int main(int argc, char **argv)
                    u"Timezone"_qs);
 
     QJsonDocument doc(QJsonObject::fromVariantHash(blob));
-    std::cout << doc.toJson().toStdString() << std::endl;
+    std::cout << doc.toJson().toStdString() << "\n" << std::flush;
 
     return 0;
 }
