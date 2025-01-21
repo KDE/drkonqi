@@ -65,12 +65,6 @@ int main(int argc, char **argv)
                     .bus = QDBusConnection::systemBus()},
                    u"Timezone"_qs);
 
-    KOSRelease os;
-    blob[u"OS_NAME"_qs] = os.name();
-    blob[u"OS_VERSION_ID"_qs] = os.versionId();
-    blob[u"OS_BUILD_ID"_qs] = os.buildId();
-    blob[u"OS_VARIANT_ID"_qs] = os.variantId();
-
     QJsonDocument doc(QJsonObject::fromVariantHash(blob));
     std::cout << doc.toJson().toStdString() << std::endl;
 

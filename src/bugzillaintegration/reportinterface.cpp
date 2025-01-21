@@ -9,6 +9,12 @@
  ******************************************************************/
 
 #include "reportinterface.h"
+#include "config-drkonqi.h"
+
+#if HAVE_UNAME
+#include <cerrno>
+#include <sys/utsname.h>
+#endif
 
 #include <chrono>
 
@@ -16,10 +22,10 @@
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>
+#include <KOSRelease>
 
 #include "backtracegenerator.h"
 #include "bugzillalib.h"
-#include "config-drkonqi.h"
 #include "crashedapplication.h"
 #include "debuggermanager.h"
 #include "drkonqi.h"
@@ -37,6 +43,42 @@ using namespace Qt::StringLiterals;
 // cannot be queried through the API, so handle this client-side in a hardcoded
 // fashion as well.
 static const int s_maxReportSize = 65535;
+
+namespace
+{
+struct UnameValues {
+    QString kernelVersion;
+    QString rawDescription;
+};
+
+char *safe_strerror(int error)
+{
+    constexpr auto maxBufferSize = 1024;
+    thread_local std::array<char, maxBufferSize> buffer;
+    // The return value changes depending on CFLAGS, so we intentionally do not do anything with it!
+    strerror_r(error, buffer.data(), buffer.size());
+    return buffer.data();
+}
+
+UnameValues unameValues()
+{
+    struct utsname name{};
+    if (uname(&name) == -1) {
+        const auto error = u"uname failed: %1"_s.arg(QString::fromUtf8(safe_strerror(errno)));
+        qCWarning(DRKONQI_LOG) << qUtf8Printable(error);
+        return {.kernelVersion = error, .rawDescription = error};
+    }
+
+    return UnameValues{
+        .kernelVersion = QString::fromUtf8(name.release),
+        .rawDescription = u"%1 %2 %3 %4 %5"_s.arg(QString::fromUtf8(name.sysname), //
+                                                  QString::fromUtf8(name.nodename),
+                                                  QString::fromUtf8(name.release),
+                                                  QString::fromUtf8(name.version),
+                                                  QString::fromUtf8(name.machine)),
+    };
+}
+} // namespace
 
 ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent)
@@ -377,6 +419,22 @@ void ReportInterface::prepareEventPayload()
                        QVariantHash{
                            {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
                            {u"version"_s, QGuiApplication::platformName()}, // NOTE: drkonqi gets invoked with the same platform as the crashed app
+                       });
+        hash.insert(CONTEXTS_KEY, context);
+    }
+
+    {
+        constexpr auto CONTEXTS_KEY = "contexts"_L1;
+        auto context = hash.take(CONTEXTS_KEY).toHash();
+        const auto uname = unameValues();
+        const KOSRelease os;
+        context.insert(u"os"_s,
+                       QVariantHash{
+                           {u"name"_s, os.name()}, //
+                           {u"version"_s, os.versionId()},
+                           {u"build"_s, os.buildId().isEmpty() ? os.variantId() : os.buildId()},
+                           {u"kernel_version"_s, uname.kernelVersion},
+                           {u"raw_description"_s, uname.rawDescription},
                        });
         hash.insert(CONTEXTS_KEY, context);
     }
