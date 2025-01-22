@@ -28,6 +28,8 @@ public:
     static Q_INVOKABLE QString kdeBugzillaDomain();
     static Q_INVOKABLE bool isSafer();
     static Q_INVOKABLE bool ignoreQuality();
+    static Q_INVOKABLE bool isUsingCoredumpd();
+    static Q_INVOKABLE QString distributionBugReportUrl();
 
 private:
     Q_PROPERTY(SystemInformation *systemInformation READ systemInformation CONSTANT)

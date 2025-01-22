@@ -7,6 +7,8 @@
 #include <QGuiApplication>
 #include <QUrl>
 
+#include <KOSRelease>
+
 #include "crashedapplication.h"
 #include "drkonqi.h"
 
@@ -49,6 +51,16 @@ SystemInformation *Doctore::systemInformation()
 Q_INVOKABLE bool Doctore::ignoreQuality()
 {
     return DrKonqi::ignoreQuality();
+}
+
+Q_INVOKABLE bool Doctore::isUsingCoredumpd()
+{
+    return DrKonqi::instance()->isUsingCoredumpd();
+}
+
+Q_INVOKABLE QString Doctore::distributionBugReportUrl()
+{
+    return KOSRelease().bugReportUrl();
 }
 
 #include "moc_doctore.cpp"

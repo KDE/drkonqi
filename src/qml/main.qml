@@ -58,6 +58,12 @@ in to make sure the update is fully applied and will not cause
 any side effects.</para>`);
         }
 
+        if (DrKonqi.backendClassName() !== "CoredumpBackend") {
+            return xi18nc("@info",
+`<para>The reporting assistant is disabled because it can't obtain sufficient metadata. Please <link url='%1'>report this to your distribution</link>.</para>`,
+                DrKonqi.distributionBugReportUrl())
+        }
+
         canReport = true
         canAutoReport = true
         return xi18nc("@info",

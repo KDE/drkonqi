@@ -76,6 +76,7 @@ public:
     [[nodiscard]] QString qtVersion() const;
     QString m_frameworksVersion;
     [[nodiscard]] QString frameworksVersion() const;
+    [[nodiscard]] bool isUsingCoredumpd() const;
 
 private:
     DrKonqi();

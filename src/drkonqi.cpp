@@ -413,4 +413,9 @@ QString DrKonqi::frameworksVersion() const
     return m_frameworksVersion;
 }
 
+bool DrKonqi::isUsingCoredumpd() const
+{
+    return qobject_cast<CoredumpBackend *>(m_backend);
+}
+
 #include "drkonqi.moc"

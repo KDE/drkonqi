@@ -658,13 +658,18 @@ bool ReportInterface::hasCrashEventSent() const
 
 bool ReportInterface::isCrashEventSendingEnabled() const
 {
-    qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
-                         << "forceSentry:" << m_forceSentry //
-                         << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles() //
-                         << "skipSentry:" << m_skipSentry //
-                         << "targetsBugzilla:" << DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
+    qCDebug(DRKONQI_LOG)
+        << "sentry:" << Settings::self()->sentry() //
+        << "forceSentry:" << m_forceSentry //
+        << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles() //
+        << "skipSentry:" << m_skipSentry //
+        << "targetsBugzilla:" << DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla() //
+        << "usingCoredumpd"
+        << DrKonqi::instance()->isUsingCoredumpd() // we intentionally ignore the setting when coredumpd is not in use as the data is much weaker
+        ;
     const auto enabled = Settings::self()->sentry() || m_forceSentry;
-    return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
+    return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla()
+        && DrKonqi::instance()->isUsingCoredumpd();
 }
 
 void ReportInterface::setSendWhenReady(bool send)
