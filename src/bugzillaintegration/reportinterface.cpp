@@ -778,7 +778,7 @@ ReportInterface *ReportInterface::self()
 
 bool ReportInterface::hasCrashEventSent() const
 {
-    return !isCrashEventSendingEnabled() || m_sentryPostbox.hasDelivered() || m_skipSentry;
+    return !isCrashEventSendingEnabled() || m_sentryPostbox.hasDelivered();
 }
 
 bool ReportInterface::isCrashEventSendingEnabled() const
@@ -786,7 +786,6 @@ bool ReportInterface::isCrashEventSendingEnabled() const
     qCDebug(DRKONQI_LOG) << "sentry:" << Settings::self()->sentry() //
                          << "forceSentry:" << m_forceSentry //
                          << "hasDeletedFiles:" << DrKonqi::crashedApplication()->hasDeletedFiles() //
-                         << "skipSentry:" << m_skipSentry //
                          << "targetsBugzilla:" << DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
     const auto enabled = Settings::self()->sentry() || m_forceSentry;
     return enabled && !DrKonqi::crashedApplication()->hasDeletedFiles() && DrKonqi::crashedApplication()->bugReportAddress().isKdeBugzilla();
