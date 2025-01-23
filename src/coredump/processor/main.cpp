@@ -12,6 +12,7 @@
 #include <QJsonDocument>
 #include <QLocalSocket>
 #include <QScopeGuard>
+#include <QVariant>
 
 #include <sys/resource.h>
 #include <sys/socket.h>

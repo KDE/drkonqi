@@ -5,6 +5,8 @@
 
 #include "coredump.h"
 
+#include <QVariant>
+
 using namespace Qt::StringLiterals;
 
 Coredump::Coredump(QByteArray cursor, EntriesHash data)
