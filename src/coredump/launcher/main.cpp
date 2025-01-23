@@ -44,7 +44,20 @@ static QString drkonqiExe()
     return exec;
 }
 
+QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
+{
+    QJsonObject object;
+    const QStringList keys = group.keyList();
+    for (const auto &key : keys) {
+        const auto value = group.readEntry(key);
+        object.insert(key, value);
+    }
+    return object;
+}
+
 constexpr auto KCRASH_KEY = "kcrash"_L1;
+constexpr auto KCRASH_TAGS_KEY = "kcrash-tags"_L1;
+constexpr auto KCRASH_EXTRA_DATA_KEY = "kcrash-extra-data"_L1;
 constexpr auto DRKONQI_KEY = "drkonqi"_L1;
 constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
 
@@ -52,15 +65,10 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
 {
     auto contextObject = QJsonObject{{u"version"_s, 2}};
     {
-        QJsonObject kcrashObject;
         KConfig kcrashMetadata(kcrashMetadataPath, KConfig::SimpleConfig);
-        auto group = kcrashMetadata.group(u"KCrash"_s);
-        const QStringList keys = group.keyList();
-        for (const auto &key : keys) {
-            const auto value = group.readEntry(key);
-            kcrashObject.insert(key, value);
-        }
-        contextObject.insert(KCRASH_KEY, kcrashObject);
+        contextObject.insert(KCRASH_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrash"_s)));
+        contextObject.insert(KCRASH_TAGS_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashTags"_s)));
+        contextObject.insert(KCRASH_EXTRA_DATA_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashExtra"_s)));
     }
     {
         QJsonObject journalObject;

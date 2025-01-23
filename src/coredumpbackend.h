@@ -9,6 +9,7 @@
 #include "drkonqibackends.h"
 
 #include <QHash>
+#include <QJsonDocument>
 #include <QTemporaryDir>
 
 #include <memory>
@@ -41,4 +42,5 @@ private:
     const QByteArray m_cursor;
     std::unique_ptr<QProcess> m_preparationProc;
     std::unique_ptr<AutomaticCoredumpExcavator> m_excavator;
+    QJsonDocument m_metadata;
 };

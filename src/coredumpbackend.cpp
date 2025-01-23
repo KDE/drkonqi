@@ -147,8 +147,8 @@ bool CoredumpBackend::init()
     if (!file.open(QFile::ReadOnly)) {
         return false;
     }
-    auto document = QJsonDocument::fromJson(file.readAll());
-    const auto journal = document[u"journal"_s].toObject().toVariantHash();
+    m_metadata = QJsonDocument::fromJson(file.readAll());
+    const auto journal = m_metadata[u"journal"_s].toObject().toVariantHash();
     for (auto [key, value] : journal.asKeyValueRange()) {
         m_journalEntry.insert(key.toUtf8(), value.toByteArray());
     }
@@ -225,6 +225,22 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
                                                    u"_EXE=%1"_s.arg(QString::fromUtf8(m_journalEntry["COREDUMP_EXE"])),
                                                    u"_BOOT_ID=%1"_s.arg(QString::fromUtf8(m_journalEntry["_BOOT_ID"])),
                                                });
+    m_crashedApplication->m_tags = [this] {
+        QHash<QString, QString> hash;
+        const auto details = m_metadata[u"kcrash-tags"_s].toObject().toVariantHash();
+        for (const auto &[key, value] : details.asKeyValueRange()) {
+            hash.insert(key, value.toString());
+        }
+        return hash;
+    }();
+    m_crashedApplication->m_extraData = [this] {
+        QHash<QString, QString> hash;
+        const auto details = m_metadata[u"kcrash-extra-data"_s].toObject().toVariantHash();
+        for (const auto &[key, value] : details.asKeyValueRange()) {
+            hash.insert(key, value.toString());
+        }
+        return hash;
+    }();
 
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
     qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();
