@@ -134,8 +134,17 @@ class SentryQMLThread:
 
 # Only grabing the most local block, technically we could also gather up encompassing scopes but it may be a bit much.
 class SentryVariables:
+    # All seen frames
+    frames_count: int = 1 # we divide by this, it had better be >0
+    # Amount of frames that had local variables
+    frames_with_vars: int = 0
+
+    def vars_rate():
+        return round(SentryVariables.frames_with_vars / SentryVariables.frames_count, 2)
+
     def __init__(self, frame):
         self.frame = frame
+        SentryVariables.frames_count = SentryVariables.frames_count + 1
 
     def block(self):
         try:
@@ -144,6 +153,12 @@ class SentryVariables:
             return None
 
     def to_dict(self):
+        ret = self._to_dict_internal()
+        if len(ret) > 0:
+            SentryVariables.frames_with_vars = SentryVariables.frames_with_vars + 1
+        return ret
+
+    def _to_dict_internal(self):
         ret = {}
         block = self.block()
         if not block:
@@ -541,9 +556,6 @@ class SentryEvent:
             # FIXME this is kind of wrong, program ought to be mapped to the project name via our DSNs mapping table (see reportinterface.cpp)
             'release': "{}@unknown".format(program),
             'dist': build_id,
-            'tags': {
-                'binary': program # for fallthrough we still need a convenient way to identify things
-            },
             # TODO environment entry (could be staging for beta releases?)
             'contexts': { # https://develop.sentry.dev/sdk/event-payloads/contexts/
                 'device': {
@@ -585,7 +597,15 @@ class SentryEvent:
                         'stacktrace': SentryTrace(crash_thread, True).to_dict(),
                     }
                 ]
-            }
+            },
+        }
+
+        # WARNING: must be after the trace is constructed so SentryVariables are counted
+        sentry_event['tags'] = {
+            'binary': program, # for fallthrough we still need a convenient way to identify things
+            # 0.02 is an arbitrary guess. May need tweaking.
+            'stack_vars': 'yes' if (SentryVariables.vars_rate() > 0.02) else 'no',
+            'stack_vars_rate': str(SentryVariables.vars_rate()), # must be str for sentry to consume it properly
         }
 
         if os.getenv('DRKONQI_APP_VERSION'):
