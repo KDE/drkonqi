@@ -241,6 +241,7 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
         }
         return hash;
     }();
+    m_crashedApplication->m_gpu = m_metadata[u"kcrash-gpu"_s].toObject().toVariantHash();
 
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
     qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();

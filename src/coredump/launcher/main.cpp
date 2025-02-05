@@ -58,6 +58,7 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
 constexpr auto KCRASH_KEY = "kcrash"_L1;
 constexpr auto KCRASH_TAGS_KEY = "kcrash-tags"_L1;
 constexpr auto KCRASH_EXTRA_DATA_KEY = "kcrash-extra-data"_L1;
+constexpr auto KCRASH_GPU_KEY = "kcrash-gpu"_L1;
 constexpr auto DRKONQI_KEY = "drkonqi"_L1;
 constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
 
@@ -69,6 +70,7 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
         contextObject.insert(KCRASH_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrash"_s)));
         contextObject.insert(KCRASH_TAGS_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashTags"_s)));
         contextObject.insert(KCRASH_EXTRA_DATA_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashExtra"_s)));
+        contextObject.insert(KCRASH_GPU_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashGPU"_s)));
     }
     {
         QJsonObject journalObject;

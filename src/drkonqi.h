@@ -69,7 +69,6 @@ public:
     static bool minimalMode();
 
     static DrKonqi *instance();
-    QString m_glRenderer;
     QString m_exceptionName;
     QString m_exceptionWhat;
     QString m_qtVersion;
