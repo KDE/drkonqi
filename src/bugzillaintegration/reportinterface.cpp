@@ -376,6 +376,24 @@ void ReportInterface::prepareEventPayload()
     bool hadSomeVerbosity = false;
     bool hadIncompatibleQt = false;
 
+    constexpr auto TAGS_KEY = "tags"_L1;
+
+    {
+        auto tags = hash.take(TAGS_KEY).toHash();
+        for (const auto &[key, value] : DrKonqi::crashedApplication()->m_tags.asKeyValueRange()) {
+            tags.insert(key, value);
+        }
+        hash.insert(TAGS_KEY, tags);
+    }
+
+    {
+        QVariantHash extra;
+        for (const auto &[key, value] : DrKonqi::crashedApplication()->m_extraData.asKeyValueRange()) {
+            extra.insert(key, value);
+        }
+        hash.insert(u"extra"_s, extra);
+    }
+
     {
         QList<QVariant> breadcrumbs;
         const auto logs = DrKonqi::crashedApplication()->m_logs;
@@ -440,7 +458,6 @@ void ReportInterface::prepareEventPayload()
     }
 
     {
-        constexpr auto TAGS_KEY = "tags"_L1;
         auto tags = hash.take(TAGS_KEY).toHash();
         tags.insert(u"some_verbosity"_s, hadSomeVerbosity);
 

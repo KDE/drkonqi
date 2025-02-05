@@ -127,6 +127,8 @@ public:
     QString m_coreFile;
     // Also only set for coredumpd backend. A bunch of log entries from journal.
     QList<EntriesHash> m_logs;
+    QHash<QString, QString> m_tags;
+    QHash<QString, QString> m_extraData;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app);
