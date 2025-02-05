@@ -129,6 +129,7 @@ public:
     QList<EntriesHash> m_logs;
     QHash<QString, QString> m_tags;
     QHash<QString, QString> m_extraData;
+    QVariantHash m_gpu;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app);

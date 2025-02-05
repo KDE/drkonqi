@@ -185,7 +185,7 @@ int main(int argc, char *argv[])
                                                      "the backtrace at startup"));
     const QCommandLineOption threadOption(QStringLiteral("thread"), i18nc("@info:shell", "The <thread id> of the failing thread"), QStringLiteral("threadid"));
     const QCommandLineOption dialogOption(QStringLiteral("dialog"), i18nc("@info:shell", "Do not show a notification but launch the debug dialog directly"));
-    const QCommandLineOption glRendererOption(u"glrenderer"_s, u"The GL_RENDERER used by the process"_s, u"glrenderer"_s);
+    const QCommandLineOption glRendererOption(u"glrenderer"_s, u"Legacy. Unused"_s, u"glrenderer"_s);
     const QCommandLineOption exceptionNameOption(u"exceptionname"_s, u"The exception class name if an exception was the cause"_s, u"name"_s);
     const QCommandLineOption exceptionWhatOption(u"exceptionwhat"_s, u"The exception what string if an exception was the cause"_s, u"what"_s);
     const QCommandLineOption qtVersionOption(u"qtversion"_s, u"The version of Qt used by the process"_s, u"qtversion"_s);
@@ -248,7 +248,6 @@ int main(int argc, char *argv[])
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
     DrKonqi::setThread(parser.value(threadOption).toInt());
     DrKonqi::setStartupId(parser.value(startupIdOption));
-    DrKonqi::instance()->m_glRenderer = parser.value(glRendererOption);
     DrKonqi::instance()->m_exceptionName = parser.value(exceptionNameOption);
     if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
         QProcess proc;
