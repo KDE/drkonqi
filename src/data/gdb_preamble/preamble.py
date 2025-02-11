@@ -39,6 +39,8 @@ import multiprocessing
 from pathlib import Path
 import psutil
 
+crashed_thread = None
+
 class UnexpectedMappingException(Exception):
     pass
 
@@ -134,19 +136,31 @@ class SentryQMLThread:
             return [data]
         return []
 
-# Only grabing the most local block, technically we could also gather up encompassing scopes but it may be a bit much.
-class SentryVariables:
+class SentryVariablesStatistics:
     # All seen frames
     frames_count: int = 1 # we divide by this, it had better be >0
     # Amount of frames that had local variables
     frames_with_vars: int = 0
 
-    def vars_rate():
-        return round(SentryVariables.frames_with_vars / SentryVariables.frames_count, 2)
+    # Only ever consider frames in the crashing thread!
+    # The other threads are 99% of the time not interesting.
 
+    def increment_frames():
+        if gdb.selected_thread() and gdb.selected_thread() == crashed_thread:
+            SentryVariablesStatistics.frames_count = SentryVariablesStatistics.frames_count + 1
+
+    def increment_vars():
+        if gdb.selected_thread() and gdb.selected_thread() == crashed_thread:
+            SentryVariablesStatistics.frames_with_vars = SentryVariablesStatistics.frames_with_vars + 1
+
+    def vars_rate():
+        return round(SentryVariablesStatistics.frames_with_vars / SentryVariablesStatistics.frames_count, 2)
+
+# Only grabing the most local block, technically we could also gather up encompassing scopes but it may be a bit much.
+class SentryVariables:
     def __init__(self, frame):
         self.frame = frame
-        SentryVariables.frames_count = SentryVariables.frames_count + 1
+        SentryVariablesStatistics.increment_frames()
 
     def block(self):
         try:
@@ -157,7 +171,7 @@ class SentryVariables:
     def to_dict(self):
         ret = self._to_dict_internal()
         if len(ret) > 0:
-            SentryVariables.frames_with_vars = SentryVariables.frames_with_vars + 1
+            SentryVariablesStatistics.increment_vars()
         return ret
 
     def _to_dict_internal(self):
@@ -599,9 +613,8 @@ class SentryEvent:
         # WARNING: must be after the trace is constructed so SentryVariables are counted
         sentry_event['tags'] = {
             'binary': program, # for fallthrough we still need a convenient way to identify things
-            # 0.02 is an arbitrary guess. May need tweaking.
-            'stack_vars': 'yes' if (SentryVariables.vars_rate() > 0.02) else 'no',
-            'stack_vars_rate': str(SentryVariables.vars_rate()), # must be str for sentry to consume it properly
+            'stack_vars': 'yes' if (SentryVariablesStatistics.vars_rate() > 0.25) else 'no',
+            'stack_vars_rate': str(SentryVariablesStatistics.vars_rate()), # must be str for sentry to consume it properly
         }
 
         if os.getenv('DRKONQI_APP_VERSION'):
@@ -761,6 +774,8 @@ def print_preamble_internal():
             level='debug',
             message=f'Selected thread {thread}',
         )
+    global crashed_thread
+    crashed_thread = thread
     # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
     print_kcrash_error_message()
     # changes current frame and thread!
