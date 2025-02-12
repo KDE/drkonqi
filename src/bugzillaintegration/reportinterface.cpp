@@ -33,6 +33,7 @@
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
 #include "sentryconnection.h"
+#include "sentryscope.h"
 #include "settings.h"
 #include "systeminformation.h"
 
@@ -377,6 +378,7 @@ void ReportInterface::prepareEventPayload()
     bool hadIncompatibleQt = false;
 
     constexpr auto TAGS_KEY = "tags"_L1;
+    constexpr auto CONTEXTS_KEY = "contexts"_L1;
 
     {
         auto tags = hash.take(TAGS_KEY).toHash();
@@ -431,7 +433,6 @@ void ReportInterface::prepareEventPayload()
     }
 
     {
-        constexpr auto CONTEXTS_KEY = "contexts"_L1;
         auto context = hash.take(CONTEXTS_KEY).toHash();
         context.insert(u"gpu"_s,
                        QVariantHash{
@@ -522,6 +523,18 @@ void ReportInterface::prepareEventPayload()
     }
 
     if (receivedEmptyPayload) {
+        // DrKonqi also had a problem, so lets tie this broken report to our preamble through the global trace id.
+        auto context = hash.take(CONTEXTS_KEY).toHash();
+        context.insert(u"trace"_s,
+                       QJsonObject{
+                           {u"trace_id"_s, SentryScope::instance()->traceId}, //
+                           {u"span_id"_s, SentryScope::instance()->spanId},
+                           {u"op"_s, u"drkonqi.trace"_s},
+                           {u"type"_s, u"trace"_s},
+                       });
+        hash.insert(CONTEXTS_KEY, context);
+
+        // And mark it as broken
         hash.insert(u"message"_s, "Empty Sentry payload from GDB"_ba);
         hash.insert(u"level"_s, u"warning"_s);
     }

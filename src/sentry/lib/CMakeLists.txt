@@ -18,7 +18,8 @@ add_library(DrKonqiSentryInternal STATIC
     sentryenvelope.cpp
     sentrypostbox.cpp
     sentrypaths.cpp
-    sentrypostman.cpp)
+    sentrypostman.cpp
+    sentryscope.cpp)
 target_link_libraries(DrKonqiSentryInternal
     Qt::Core
     Qt::Network

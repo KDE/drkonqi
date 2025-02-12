@@ -38,6 +38,7 @@
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "drkonqidialog.h"
+#include "sentryscope.h"
 #include "statusnotifier.h"
 
 using namespace std::chrono_literals;
@@ -141,6 +142,8 @@ int main(int argc, char *argv[])
             app.quit();
         }
     });
+
+    SentryScope::instance()->release = QStringLiteral("drkonqi@") + QLatin1StringView(PROJECT_VERSION);
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);

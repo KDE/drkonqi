@@ -26,6 +26,7 @@
 #include <cstddef>
 
 #include "parser/backtraceparser.h"
+#include "sentryscope.h"
 #include "settings.h"
 
 using namespace std::chrono_literals;
@@ -301,6 +302,11 @@ void BacktraceGenerator::startProcess()
 
     m_proc = new KProcess;
     m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C.UTF-8")); // force C locale
+
+    const auto sentryEnvironment = SentryScope::instance()->environment();
+    for (const auto &[key, value] : sentryEnvironment.asKeyValueRange()) {
+        m_proc->setEnv(key, value);
+    }
 
     // Temporary directory for the preamble.py to write data into, we can then conveniently pick it up from there.
     // Only useful for data that is not meant to appear in the trace (e.g. sentry payloads).
