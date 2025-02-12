@@ -16,6 +16,8 @@ try:
         release="drkonqi@" + os.getenv('DRKONQI_VERSION'),
         dist=os.getenv('DRKONQI_DISTRIBUTION'),
         ignore_errors=[KeyboardInterrupt],
+        # Shutdown performance doesn't matter all that much, give us ample time to send a possible report instead.
+        shutdown_timeout=30,
     )
 except ImportError:
     print("python sentry-sdk not installed :(")
