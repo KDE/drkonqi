@@ -271,22 +271,30 @@ Mapped address spaces:
     def test_sentry_image_mapping_fail(self):
         try:
             import sentry_sdk
+        except ModuleNotFoundError:
+            self.skipTest('sentry_sdk not available')
 
-            objfile = self.mock()
-            objfile.filename = '/usr/bin/true'
-            objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
+        objfile = self.mock()
+        objfile.filename = '/usr/bin/true'
+        objfile.build_id = '272ee025ad435f0e873aafd55dc65d8a4cb1d93f'
 
-            self.mock(gdb, 'objfiles')
-            self.expect(gdb.objfiles).returns([objfile])
+        self.mock(gdb, 'objfiles')
+        self.expect(gdb.objfiles).returns([objfile])
 
-            self.mock(gdb, 'lookup_objfile')
-            self.expect(gdb.lookup_objfile).returns(None)
+        self.mock(gdb, 'lookup_objfile')
+        self.expect(gdb.lookup_objfile).returns(None)
 
-            self.mock(sentry_sdk, 'capture_exception')
-            self.expect(sentry_sdk.capture_exception)
-            preamble.SentryImage('/usr/bin/true.so', 1000, 2000)
-        except Exception as err:
-            pass
+        progspace = self.mock()
+        inferior = self.mock()
+        inferior.pid = 0
+        self.expect(progspace.is_valid).returns(False)
+        inferior.progspace = progspace
+        self.mock(gdb, 'selected_inferior')
+        self.expect(gdb.selected_inferior).returns(inferior)
+
+        self.mock(sentry_sdk, 'capture_exception')
+        self.expect(sentry_sdk.capture_exception)
+        preamble.SentryImage('/usr/bin/true.so', 1000, 2000)
 
     def test_print_qml_frames(self):
         # the payload is missing a line -> we expect no assertions of any kind!
