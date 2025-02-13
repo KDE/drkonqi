@@ -144,11 +144,11 @@ class SentryVariablesStatistics:
     # The other threads are 99% of the time not interesting.
 
     def increment_frames():
-        if gdb.selected_thread() == crashed_thread:
+        if gdb.selected_thread() and gdb.selected_thread() == crashed_thread:
             SentryVariablesStatistics.frames_count = SentryVariablesStatistics.frames_count + 1
 
     def increment_vars():
-        if gdb.selected_thread() == crashed_thread:
+        if gdb.selected_thread() and gdb.selected_thread() == crashed_thread:
             SentryVariablesStatistics.frames_with_vars = SentryVariablesStatistics.frames_with_vars + 1
 
     def vars_rate():
@@ -158,7 +158,6 @@ class SentryVariablesStatistics:
 class SentryVariables:
     def __init__(self, frame):
         self.frame = frame
-        self.in_crashed_thread = gdb.selected_thread() == crashed_thread
         SentryVariablesStatistics.increment_frames()
 
     def block(self):
