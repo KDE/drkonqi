@@ -7,6 +7,7 @@ PartOf=graphical-session.target
 Requires=drkonqi-coredump-launcher.socket
 After=plasma-core.target
 After=drkonqi-coredump-launcher.socket
+ConditionUser=!@system
 
 [Service]
 ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-processor --settle-first --pickup --uid %U

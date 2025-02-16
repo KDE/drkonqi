@@ -4,6 +4,7 @@
 [Unit]
 Description=Launch DrKonqi for a systemd-coredump crash
 PartOf=graphical-session.target
+ConditionUser=!@system
 
 [Service]
 # Don't need to be working anywhere specific, use tmp.

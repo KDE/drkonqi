@@ -4,6 +4,7 @@
 [Unit]
 Description=Socket to launch DrKonqi for a systemd-coredump crash
 DefaultDependencies=no
+ConditionUser=!@system
 
 [Socket]
 # This is a bit problematic. Technically the user should be able to set the runtime dir via env as well, but we need
