@@ -434,11 +434,42 @@ void ReportInterface::prepareEventPayload()
 
     {
         auto context = hash.take(CONTEXTS_KEY).toHash();
-        context.insert(u"gpu"_s,
-                       QVariantHash{
-                           {u"name"_s, DrKonqi::instance()->m_glRenderer}, //
-                           {u"version"_s, QGuiApplication::platformName()}, // NOTE: drkonqi gets invoked with the same platform as the crashed app
-                       });
+        if (!DrKonqi::crashedApplication()->m_gpu.isEmpty()) {
+            QVariantHash data = DrKonqi::crashedApplication()->m_gpu;
+
+            auto ulonglongify = [&data](const QString &key) {
+                if (!data.contains(key)) {
+                    return;
+                }
+                const auto &value = data[key];
+                if (value.toString().isEmpty()) {
+                    return;
+                }
+                data[key] = value.toULongLong();
+            };
+
+            auto boolify = [&data](const QString &key) {
+                if (!data.contains(key)) {
+                    return;
+                }
+                const auto &value = data[key];
+                if (value.toString().isEmpty()) {
+                    return;
+                }
+                data[key] = value.toBool();
+            };
+
+            // We need to do some type coercion here since Sentry will get angry over incorrect incoming types
+            ulonglongify(u"max_texture_size"_s);
+            ulonglongify(u"memory_size"_s);
+            boolify(u"multi_threaded_rendering"_s);
+            boolify(u"supports_compute_shaders"_s);
+            boolify(u"supports_draw_call_instancing"_s);
+            boolify(u"supports_geometry_shaders"_s);
+            boolify(u"supports_ray_tracing"_s);
+
+            context.insert(u"gpu"_s, data);
+        }
         hash.insert(CONTEXTS_KEY, context);
     }
 
