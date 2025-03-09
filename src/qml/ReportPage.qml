@@ -11,7 +11,7 @@ import org.kde.drkonqi 1.0
 Kirigami.Page {
     id: page
 
-    title: i18nc("@title", "Enter the Details about the Crash")
+    title: i18nc("@title", "Enter Details About the Crash")
 
     property bool isComplete: contentCapacityBar.value >= contentCapacityBar.to
 

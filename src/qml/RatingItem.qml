@@ -40,13 +40,13 @@ RowLayout {
             case BacktraceParser.InvalidUsefulness:
                 return loadingMessage
             case BacktraceParser.ReallyUseful:
-                return i18nc("@info", "The generated crash information is useful");
+                return i18nc("@info", "The generated crash information is useful.");
             case BacktraceParser.MayBeUseful:
-                return i18nc("@info", "The generated crash information may be useful");
+                return i18nc("@info", "The generated crash information may be useful.");
             case BacktraceParser.ProbablyUseless:
-                return i18nc("@info", "The generated crash information is probably not useful");
+                return i18nc("@info", "The generated crash information is likely not useful.");
             case BacktraceParser.Useless:
-                return i18nc("@info", "The generated crash information is not useful");
+                return i18nc("@info", "The generated crash information is not useful.");
             }
         }
     }

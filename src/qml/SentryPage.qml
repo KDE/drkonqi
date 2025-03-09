@@ -9,7 +9,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 Kirigami.Page {
-    globalToolBarStyle: actions.size > 0 ? undefined : Kirigami.ApplicationHeaderStyle.None
+    title: i18nc("@title", "Automatic Report")
 
     actions: [
         Kirigami.Action {
@@ -57,6 +57,10 @@ Kirigami.Page {
         Kirigami.FormLayout {
             Layout.alignment: Qt.AlignHCenter
 
+            Kirigami.Separator {
+                Kirigami.FormData.isSection: true
+            }
+
             QQC2.CheckBox {
                 Kirigami.FormData.label: i18nc("@label other side of row 'in the future: [x] submit stuff automatically", "In the future:")
 
@@ -70,7 +74,7 @@ Kirigami.Page {
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.text: i18nc("@info:tooltip",
-`Always automatically submit a crash report to KDE's crash tracking system. No manual input required.
+`Always automatically submit a crash report to KDE's crash tracking system, with no manual input required.
 You will not receive any more crash notifications.`)
             }
 

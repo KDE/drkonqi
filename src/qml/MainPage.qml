@@ -9,9 +9,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 Kirigami.Page {
-    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
-
-    title: CrashedApplication.name
+    title: i18nc("@title", "Crash Handler")
 
     Component.onCompleted: {
         if (BacktraceGenerator.state === BacktraceGenerator.NotLoaded) {
@@ -24,16 +22,23 @@ Kirigami.Page {
         id: layout
 
         anchors.fill: parent
+        spacing: Kirigami.Units.smallSpacing
 
         readonly property int widestMainPageButton: Math.max(autoReportButton.implicitWidth,
                                                              devInfoButton.implicitWidth
                                                             )
 
-        QQC2.Label {
+        Kirigami.Heading {
             Layout.fillWidth: true
+            level: 1
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "<para>We are sorry, <application>%1</application> closed unexpectedly.</para>", CrashedApplication.name)
+            text: xi18nc("@info", "<application>%1</application> has closed unexpectedly.", CrashedApplication.name)
         }
+
+        Item {
+            height: Kirigami.Units.largeSpacing
+        }
+
         QQC2.Label {
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
@@ -58,7 +63,7 @@ Kirigami.Page {
                 onTriggered: {
                     reportInterface.setSendWhenReady(true)
                     reportInterface.sendSentryReport()
-                    pageStack.replace("qrc:/ui/SentryPage.qml")
+                    pageStack.push("qrc:/ui/SentryPage.qml")
                 }
             }
         }

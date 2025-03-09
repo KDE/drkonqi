@@ -23,7 +23,7 @@ Kirigami.Page {
         }
 
         function onBugzillaVersionError(error) {
-            console.log("errro " + error)
+            console.log("error " + error)
             inlineMessage.errorContext = error
             page.state = "error"
         }
@@ -40,7 +40,7 @@ Kirigami.Page {
 
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
-            text: xi18nc("@info", "Failed to contact bugs.kde.org: <message>%1</message>", errorContext)
+            text: xi18nc("@info", "Failed to contact %1: <message>%2</message>", Globals.bugzillaShortUrl, errorContext)
             visible: true
             actions: [
                 Kirigami.Action {
@@ -59,7 +59,7 @@ Kirigami.Page {
         visible: page.state === ""
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        text: i18nc("@info", "Trying to contact bugs.kde.org...")
+        text: i18nc("@info", "Trying to contact %1…", Globals.bugzillaShortUrl)
 
         QQC2.BusyIndicator {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter

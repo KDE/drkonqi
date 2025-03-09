@@ -23,6 +23,6 @@ RowLayout {
     Kirigami.ContextualHelpButton {
         toolTipText: i18nc("@info:tooltip",
 `Crash reports can be of greater value if additional debugging resources are downloaded from your distributor first.
-This may also cause increased memory usage and will take longer, and causes downloads of unknown size when a crash occurs. This is skipped automatically when using a metered internet connection.`)
+This may also cause increased memory usage, will take longer, and causes downloads of unknown size when a crash occurs. This is skipped automatically when using a metered internet connection.`)
     }
 }
