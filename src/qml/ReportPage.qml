@@ -11,7 +11,7 @@ import org.kde.drkonqi 1.0
 Kirigami.Page {
     id: page
 
-    title: i18nc("@title", "Enter the Details about the Crash")
+    title: i18nc("@title", "Enter Details About the Crash")
 
     property bool isComplete: contentCapacityBar.value >= contentCapacityBar.to
 
@@ -135,15 +135,19 @@ Kirigami.Page {
         }
     }
 
-    footer: FooterActionBar {
-        enabled: isComplete
-        actions: [
-            Kirigami.Action {
-                icon.name: "preview"
-                text: i18nc("@action:button", "Preview Report")
-                onTriggered: pageStack.push("qrc:/ui/PreviewPage.qml")
-            }
-        ]
+    footer: RowLayout {
+        spacing: Kirigami.Units.smallSpacing
+        
+        FooterActionBar {
+            enabled: isComplete
+            actions: [
+                Kirigami.Action {
+                    icon.name: "preview"
+                    text: i18nc("@action:button", "Preview Report")
+                    onTriggered: pageStack.push("qrc:/ui/PreviewPage.qml")
+                }
+            ]
+        }
     }
 
     Component.onCompleted: {

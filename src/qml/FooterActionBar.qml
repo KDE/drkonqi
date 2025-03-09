@@ -8,6 +8,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 Kirigami.ActionToolBar {
+    Layout.margins: Kirigami.Units.largeSpacing
     alignment: Qt.AlignRight
     flat: false
 }

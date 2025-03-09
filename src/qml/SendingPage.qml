@@ -17,7 +17,7 @@ Kirigami.Page {
             pageStack.replace("qrc:/ui/SentPage.qml", {bugNumber: reportInterface.sentReport})
         }
         function onSendReportError(msg) {
-            console.log("ERRROR" + msg)
+            console.log("ERROR" + msg)
             // TODO should going back be a thing?
             // pageStack.globalToolBar.showNavigationButtons = Kirigami.ApplicationHeaderStyle.Auto
             inlineMessage.errorContext = msg
@@ -32,7 +32,7 @@ Kirigami.Page {
             reportInterface.sendBugReport()
         }
         function onLoginError(msg) {
-            console.log("login ERRROR " + msg)
+            console.log("login ERROR " + msg)
             inlineMessage.errorContext = msg
             page.state = "error"
         }
@@ -78,7 +78,7 @@ Kirigami.Page {
         visible: page.state ===  ""
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        text: i18nc("@info", "Submitting bug report...")
+        text: i18nc("@info", "Submitting bug report…")
 
         QQC2.BusyIndicator {
             Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter

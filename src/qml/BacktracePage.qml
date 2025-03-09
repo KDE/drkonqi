@@ -8,7 +8,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 DeveloperPage {
-    title: i18nc("@title", "Fetching the Backtrace (Automatic Crash Information)")
+    title: i18nc("@title:window", "Fetching the Backtrace (Automatic Crash Information)")
     reportActionVisible: false
     basic: !advancedAction.checked
 

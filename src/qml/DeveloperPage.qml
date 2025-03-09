@@ -26,16 +26,6 @@ Kirigami.ScrollablePage {
 
     actions: [
         Kirigami.Action {
-            id: reportAction
-            enabled: Kirigami.Settings.isMobile ? true : canReport
-            visible: Kirigami.Settings.isMobile ? canReport : true
-            icon.name: "story-editor-symbolic"
-            text: i18nc("@action Report the bug on this domain", "Report on %1", Globals.bugzillaShortUrl)
-            tooltip: canReportText !== "" ? canReportText : i18nc("@info:tooltip", "Starts the bug report assistant.")
-            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
-        },
-
-        Kirigami.Action {
             id: installButton
             visible: false
             text: i18nc("@action:button", "Install Debug Symbols")
@@ -51,7 +41,17 @@ Kirigami.ScrollablePage {
                 }
             }
             icon.name: "install"
-            tooltip: i18nc("@info:tooltip", "Use this button to install the missing debug symbols packages.")
+            tooltip: i18nc("@info:tooltip", "Use this button to install the packages for missing debug symbols.")
+        },
+
+        Kirigami.Action {
+            id: reportAction
+            enabled: (Kirigami.Settings.isMobile ? true : canReport) && BacktraceGenerator.state === BacktraceGenerator.Loaded
+            visible: Kirigami.Settings.isMobile ? canReport : true
+            icon.name: "story-editor-symbolic"
+            text: i18nc("@action Report the bug on this domain", "Report on %1", Globals.bugzillaShortUrl)
+            tooltip: canReportText !== "" ? canReportText : i18nc("@info:tooltip", "Starts the bug report assistant.")
+            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
         },
 
         Kirigami.Action {
@@ -72,6 +72,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             icon.name: "edit-copy"
             text: i18nc("@action:button", "Copy")
             tooltip: i18nc("@info:tooltip", "Use this button to copy the crash information (backtrace) to the clipboard.")
+            enabled: BacktraceGenerator.state === BacktraceGenerator.Loaded
             onTriggered: DrKonqi.copyToClipboard(traceArea.text)
         },
 
@@ -80,6 +81,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             text: i18nc("@action:button", "Save")
             tooltip: xi18nc("@info:tooltip",
 `Use this button to save the crash information (backtrace) to a file. This is useful if you want to take a look at it or to report the bug later.`)
+            enabled: BacktraceGenerator.state === BacktraceGenerator.Loaded
             onTriggered: DrKonqi.saveReport(traceArea.text)
         }
     ]
@@ -116,6 +118,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
         RowLayout {
             visible: page.basic
             spacing: Kirigami.Units.smallSpacing
+            Layout.margins: Kirigami.Units.largeSpacing
             Layout.fillHeight: true
             Kirigami.Icon {
                 source: "help-hint"
@@ -127,10 +130,10 @@ installed the proper debug symbol packages and you want to obtain a better backt
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
                 text: xi18nc("@info",
-`<subtitle>What is a "backtrace" ?</subtitle><para>A backtrace basically describes what was
+`<subtitle>What is a backtrace?</subtitle><para>A backtrace describes what was
 happening inside the application when it crashed, so the developers may track
-down where the mess started. They may look meaningless to you, but they might
-actually contain a wealth of useful information.<nl />Backtraces are commonly
+down where the crash occured. They may look meaningless to you, but they can 
+contain a wealth of useful information.<nl />Backtraces are commonly
 used during interactive and post-mortem debugging.</para>`)
             }
         }
@@ -140,6 +143,9 @@ used during interactive and post-mortem debugging.</para>`)
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: text !== "" && !page.basic
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+            }
 
             // text: output.text
             font.family: "monospace"
@@ -195,26 +201,26 @@ used during interactive and post-mortem debugging.</para>`)
                         if (usefulness != BacktraceParser.ReallyUseful) {
                             if (debugPackageInstaller.canInstallDebugPackages || BacktraceGenerator.supportsSymbolResolution) {
                                 detailsLabel.text = xi18nc("@info/rich",
-`You can click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
-does not work: please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
-backtrace; install the needed packages (<link url='%2'>list of files</link>) and click the <interface>Reload</interface> button.`,
+`Click the <interface>Install Debug Symbols</interface> button in order to automatically install the missing debugging information packages. If this method
+does not work, read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful
+backtrace, install the needed packages (<link url='%2'>list of files</link>), then click the <interface>Reload</interface> button.`,
                                                             Globals.techbaseHowtoDoc, '#missingDebugPackages')
                                 installButton.visible = true
                                 debugPackageInstaller.setMissingLibraries(parser.librariesWithMissingDebugSymbols())
                             } else {
                                 detailsLabel.text = xi18nc("@info/rich",
-`Please read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace; install the needed packages
-(<link url='%2'>list of files</link>) and click the <interface>Reload</interface> button.`,
+`Read <link url='%1'>How to create useful crash reports</link> to learn how to get a useful backtrace, install the needed packages
+(<link url='%2'>list of files</link>), then click the <interface>Reload</interface> button.`,
                                                             Globals.techbaseHowtoDoc, '#missingDebugPackages')
                             }
                         }
                     } else if (state == BacktraceGenerator.Failed) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
-                        detailsLabel.text = xi18nc("@info/rich", `You could try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
+                        detailsLabel.text = xi18nc("@info/rich", `Try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
                     } else if (state == BacktraceGenerator.FailedToStart) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich",
-`<emphasis strong='true'>You need to first install the debugger application (%1) then click the <interface>Reload</interface> button.</emphasis>`,
+`<emphasis strong='true'>First install the debugger application (%1), then click the <interface>Reload</interface> button.</emphasis>`,
                                                    BacktraceGenerator.debuggerName())
                     }
                 }
@@ -223,6 +229,10 @@ backtrace; install the needed packages (<link url='%2'>list of files</link>) and
     }
 
     footer: ColumnLayout {
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+
         QQC2.Control { // Get standard padding so it doesn't stick to the edges, Label has none by default cause it isn't a Control
             Layout.fillWidth: true
             background: null
@@ -264,7 +274,7 @@ backtrace; install the needed packages (<link url='%2'>list of files</link>) and
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
             // Two bars because of https://bugs.kde.org/show_bug.cgi?id=451026
-            // Awkard though, maybe we should just live with everything being right aligned
+            // Awkward though, maybe we should just live with everything being right aligned
             FooterActionBar {
                 padding: 0
                 id: footerBarLeft
