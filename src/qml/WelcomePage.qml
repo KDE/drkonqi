@@ -11,7 +11,7 @@ import org.kde.drkonqi 1.0
 Kirigami.ScrollablePage {
     id: page
 
-    title: i18nc("@title:window", "Welcome to the Reporting Assistant")
+    title: i18nc("@title:window", "Reporting Assistant")
 
     ColumnLayout {
         QQC2.Label {
@@ -31,7 +31,7 @@ Kirigami.ScrollablePage {
                 text: xi18nc("@info/rich note before starting the bug reporting process",
 `<para><note>Since communication between you and the developers is required for effective debugging,
 to continue reporting this bug it is <emphasis strong='true'>required for you to agree that developers may contact you</emphasis>.
-</note></para><para>Feel free to close this dialog if you do not accept this.</para>`)
+</note></para><para>Feel free to close this dialog if you do not wish to accept this.</para>`)
                 wrapMode: Text.Wrap
             }
         }
@@ -44,10 +44,8 @@ to continue reporting this bug it is <emphasis strong='true'>required for you to
                 icon.name: "document-sign"
                 text: i18nc("@action:button", "I Agree to be Contacted")
                 onTriggered: {
-                    visible = false
                     pageStack.push("qrc:/ui/ContextPage.qml")
                 }
-                visible: true
             }
         ]
     }

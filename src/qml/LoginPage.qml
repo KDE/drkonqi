@@ -11,7 +11,7 @@ import org.kde.drkonqi 1.0
 
 Kirigami.ScrollablePage {
     id: page
-    title: i18nc("@title", "Login into the bug tracking system")
+    title: i18nc("@title:window", "Log in to the Bug Tracking System")
 
     property bool loggedIn: false
 
@@ -68,7 +68,7 @@ Kirigami.ScrollablePage {
         Kirigami.FormLayout {
             QQC2.TextField {
                 id: emailField
-                Kirigami.FormData.label: i18nc("@label:textbox bugzilla account email", "E-mail Address:")
+                Kirigami.FormData.label: i18nc("@label:textbox bugzilla account email", "Email Address:")
                 Accessible.name: Kirigami.FormData.label
                 onAccepted: loginAction.trigger()
             }
@@ -89,7 +89,7 @@ Kirigami.ScrollablePage {
             wrapMode: Text.Wrap
             text: xi18nc("@info/rich",
 `<note>You need a user account on the <link url='%1'>KDE bug tracking system</link> in order to file a bug report, because we may need to contact you later
-for requesting further information. If you do not have one, you can freely <link url='%2'>create one here</link>. Please do not use disposable email accounts.</note>`,
+to request further information. If you do not have one, you can freely <link url='%2'>create one here</link>. Please do not use disposable email addresses.</note>`,
                                     CrashedApplication.bugReportAddress,
                                     Globals.bugzillaCreateAccountUrl)
             onLinkActivated: link => Qt.openUrlExternally(link)
@@ -103,7 +103,7 @@ for requesting further information. If you do not have one, you can freely <link
                 enabled: emailField.text.length > 0 && passwordField.text.length > 0
                 icon.name: "network-connect"
                 text: i18nc("@action:button", "Login")
-                tooltip: xi18nc("@info:tooltip", "Use this button to login to the KDE bug tracking system using the provided e-mail address and password.")
+                tooltip: xi18nc("@info:tooltip", "Use this button to login to the KDE bug tracking system using the provided email address and password.")
                 onTriggered: {
                     bugzilla.tryLogin(emailField.text, passwordField.text)
                     page.enabled = false

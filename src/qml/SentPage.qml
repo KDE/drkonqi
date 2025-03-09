@@ -29,7 +29,7 @@ Kirigami.ScrollablePage {
             onLinkActivated: link => Qt.openUrlExternally(link)
         }
         QQC2.Label {
-            text: i18nc("@info", "Thank you for being part of KDE. You can now close this window.")
+            text: i18nc("@info", "Thank you for being a part of KDE. You may now close this window.")
             wrapMode: Text.Wrap
         }
     }

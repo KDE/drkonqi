@@ -11,13 +11,13 @@ import org.kde.drkonqi 1.0
 Kirigami.ScrollablePage {
     id: page
 
-    title: i18nc("@title", "Preview the Report")
+    title: i18nc("@title", "Bug Report Preview")
 
     ColumnLayout {
         QQC2.Label {
             Layout.fillWidth: true
             wrapMode: Text.Wrap
-            text: xi18nc("@label/rich", "<para>This is a preview of the report's contents which will be sent.</para><para>If you want to modify it go to the previous pages.</para>")
+            text: xi18nc("@label/rich", "<para>This is a preview of the contents of the report which will be sent.</para><para>If you want to modify the report, return to the previous pages.</para>")
         }
 
         // FIXME height is off maybe put the scrollview on the area instead of scrolling the page?

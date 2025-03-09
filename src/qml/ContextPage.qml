@@ -11,7 +11,7 @@ import org.kde.drkonqi 1.0
 Kirigami.ScrollablePage {
     id: page
 
-    title: i18nc("@title:window", "What do You Know About the Crash?")
+    title: i18nc("@title:window", "Your Knowledge")
 
     ColumnLayout {
         Kirigami.Heading {
@@ -35,6 +35,9 @@ Kirigami.ScrollablePage {
             checked: true
         }
 
+        Item {
+            height: Kirigami.Units.largeSpacing
+        }
         Kirigami.Heading {
             text: xi18nc("@info/rich", "Does the application crash again if you repeat the same situation?")
             level: 2
@@ -48,6 +51,9 @@ Kirigami.ScrollablePage {
             onCurrentValueChanged: reportInterface.reproducible = currentValue
         }
 
+        Item {
+            height: Kirigami.Units.largeSpacing
+        }
         Kirigami.Heading {
             text: xi18nc("@info/rich", "Please select which additional information you can provide:")
             level: 2
@@ -74,12 +80,16 @@ Kirigami.ScrollablePage {
     }
 
     footer: FooterActionBar {
-        Kirigami.PromptDialog {
+        Kirigami.Dialog {
             id: problemDialog
             title: i18nc("@title", "Not Sufficiently Useful")
-            subtitle: xi18nc("@info", "<para>The information you can provide is not considered helpful enough in this case. If you can't think of any more information you can close the bug report dialog.</para>")
-
+            padding: Kirigami.Units.largeSpacing
             showCloseButton: true
+            standardButtons: Kirigami.Dialog.NoButton
+            QQC2.Label {
+                text: i18nc("@info", `The information you can provide is not considered helpful enough in this case.
+If you can't think of any more information, you can close the bug report dialog.`)
+            }
         }
 
         actions: [
@@ -95,5 +105,6 @@ Kirigami.ScrollablePage {
                 }
             }
         ]
+
     }
 }

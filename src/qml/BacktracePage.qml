@@ -8,23 +8,14 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.drkonqi 1.0
 
 DeveloperPage {
-    title: i18nc("@title", "Fetching the Backtrace (Automatic Crash Information)")
+    title: i18nc("@title:window", "Fetching the Backtrace (Automatic Crash Information)")
     reportActionVisible: false
-    basic: !advancedAction.checked
 
     onTraceChanged: {
         reportInterface.backtrace = trace
     }
 
-    footerActionsLeft: [
-        Kirigami.Action {
-            id: advancedAction
-            checkable: true
-            icon.name: "code-context"
-            text: i18nc("@action:button", "Show backtrace content (advanced)")
-        }
-    ]
-    footerActionsRight: [
+    footerActions: [
         Kirigami.Action {
             enabled: {
                 if (DrKonqi.ignoreQuality() && state == BacktraceGenerator.Loaded) {
