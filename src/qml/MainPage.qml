@@ -32,7 +32,7 @@ Kirigami.Page {
             Layout.fillWidth: true
             level: 1
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "We are sorry, <application>%1</application> closed unexpectedly.", CrashedApplication.name)
+            text: xi18nc("@info", "<application>%1</application> has closed unexpectedly.", CrashedApplication.name)
         }
 
         Item {
