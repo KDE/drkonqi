@@ -298,7 +298,7 @@ void BacktraceParser::calculateRatingData()
     i.toFront(); // Reuse the list iterator
     int functionIndex = 0;
     bool firstUsefulFound = false;
-    while (i.hasNext() && functionIndex < 5) {
+    while (i.hasNext() && functionIndex < 16) {
         const BacktraceLine &line = i.next();
         if (!lineShouldBeIgnored(line) && isFunctionUseful(line)) { // Line is not garbage to use
             if (!firstUsefulFound) {
