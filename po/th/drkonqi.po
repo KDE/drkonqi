@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -55,7 +55,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&ติดตั้งสัญลักษณ์ต่าง ๆ สำหรับดีบั๊ก"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
+#: backtracewidget.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -69,7 +69,7 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 "ใช้ปุ่มนี้เพื่อทำการคัดลอกข้อมูลรายละเอียดของข้อขัดข้อง (การติดตามย้อนกลับ) ไปไว้ยังคลิปบอร์ด"
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -143,25 +143,25 @@ msgstr ""
 "จึงไม่สามารถจะดึงข้อมูลการติดตามการทำงานย้อนกลับได้ โปรดปิดเครื่องมือดีบั๊กตัวอื่นก่อน แล้วคลิกที่ "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: backtracewidget.cpp:241 qml/RatingItem.qml:43
+#: backtracewidget.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
 msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นมีประโยชน์"
 
-#: backtracewidget.cpp:244 qml/RatingItem.qml:45
+#: backtracewidget.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
 msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นอาจจะมีประโยชน์"
 
-#: backtracewidget.cpp:247 qml/RatingItem.qml:47
+#: backtracewidget.cpp:247
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
 msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นอาจจะไม่มีประโยชน์"
 
-#: backtracewidget.cpp:250 qml/RatingItem.qml:49
+#: backtracewidget.cpp:250
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
@@ -221,7 +221,7 @@ msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "ไม่สามารถสร้างข้อมูลรายละเอียดของข้อขัดข้องได้"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
+#: backtracewidget.cpp:307
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -262,7 +262,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "เกิดข้อผิดพลาดขึ้นระหว่างทำการติดตั้งสัญลักษณ์การดีบั๊ก"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -471,7 +471,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: drkonqidialog.cpp:165 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -744,18 +744,14 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr ""
 
 #: qml/BacktracePage.qml:11
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Fetching the Backtrace (Automatic Crash Information)"
+msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "กำลังดึงข้อมูลติดตามการทำงานย้อนกลับ (ข้อมูลอัตโนมัติของการทำงานขัดข้อง)"
 
-#: qml/BacktracePage.qml:24
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
-msgctxt "@action:button"
-msgid "Show backtrace content (advanced)"
-msgstr "แสดงเนื้อหาการติดตามการทำงานย้อนกลับ (ขั้นสูง)"
-
-#: qml/BacktracePage.qml:44 qml/ContextPage.qml:88
+#: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -765,7 +761,7 @@ msgstr ""
 #| msgctxt "@info:status"
 #| msgid "Error sending the crash report:  <message>%1.</message>"
 msgctxt "@info"
-msgid "Failed to contact bugs.kde.org: <message>%1</message>"
+msgid "Failed to contact %1: <message>%2</message>"
 msgstr "เกิดข้อผิดพลาดในการส่งรายงานข้อขัดข้อง:  <message>%1</message>"
 
 #: qml/BugzillaPage.qml:48
@@ -778,16 +774,13 @@ msgstr "ลองใหม่..."
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
-msgid "Trying to contact bugs.kde.org..."
+msgid "Trying to contact %1…"
 msgstr ""
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
-msgid "What do You Know About the Crash?"
-msgstr "คุณทราบอะไรบ้างเกี่ยวกับข้อขัดข้อง ?"
+msgid "Your Knowledge"
+msgstr ""
 
 #: qml/ContextPage.qml:18
 #, fuzzy
@@ -818,7 +811,7 @@ msgctxt "@action:button"
 msgid "No"
 msgstr "ไม่ใช่"
 
-#: qml/ContextPage.qml:39
+#: qml/ContextPage.qml:42
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -830,7 +823,7 @@ msgstr ""
 "<strong>โปรแกรมทำงานขัดข้องอีกครั้งใช่หรือไม่ เมื่อคุณได้ทำสิ่งต่าง ๆ ไปเหมือนครั้งก่อนหน้านี้ ?</"
 "strong>"
 
-#: qml/ContextPage.qml:52
+#: qml/ContextPage.qml:58
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -840,7 +833,7 @@ msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
 msgstr "<strong>โปรดเลือกข้อมูลเพิ่มเติมที่คุณสามารถจะให้มาได้:</strong>"
 
-#: qml/ContextPage.qml:59
+#: qml/ContextPage.qml:65
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash, "
@@ -853,7 +846,7 @@ msgid ""
 "What I was doing when the application <application>%1</application> crashed"
 msgstr "ฉันได้ทำอะไรไปบ้างเมื่อโปรแกรม \"%1\" ทำงานขัดข้อง"
 
-#: qml/ContextPage.qml:65
+#: qml/ContextPage.qml:71
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash"
@@ -862,7 +855,7 @@ msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "พฤติกรรมที่ไม่ปกติของพื้นที่ทำงานที่ฉันสังเกตพบ"
 
-#: qml/ContextPage.qml:70
+#: qml/ContextPage.qml:76
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash"
@@ -871,12 +864,12 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "การตั้งค่าต่าง ๆ ของโปรแกรมด้วยตนเอง ซึ่งอาจจะเกี่ยวพันกับข้อขัดข้อง"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
 
-#: qml/ContextPage.qml:80
+#: qml/ContextPage.qml:90
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -884,12 +877,13 @@ msgstr ""
 #| "case."
 msgctxt "@info"
 msgid ""
-"<para>The information you can provide is not considered helpful enough in "
-"this case. If you can't think of any more information you can close the bug "
-"report dialog.</para>"
+"The information you can provide is not considered helpful enough in this "
+"case.\n"
+"If you can't think of any more information, you can close the bug report "
+"dialog."
 msgstr "ข้อมูลรายละเอียดที่คุณสามารถให้ได้สามารถถูกพิจารณาว่าไม่มีประโยชน์เพียงพอ"
 
-#: qml/DeveloperPage.qml:25
+#: qml/DeveloperPage.qml:23
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -897,20 +891,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info/plain report to url/mail address"
-#| msgid "Report to %1"
-msgctxt "@action Report the bug on this domain"
-msgid "Report on %1"
-msgstr "แจ้งรายงานไปยัง %1"
-
-#: qml/DeveloperPage.qml:34
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "เริ่มตัวช่วยรายงานข้อผิดพลาด"
-
-#: qml/DeveloperPage.qml:41
+#: qml/DeveloperPage.qml:29
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -918,7 +899,28 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&ติดตั้งสัญลักษณ์ต่าง ๆ สำหรับดีบั๊ก"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:42
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Use this button to install the missing debug symbols packages."
+msgctxt "@info:tooltip"
+msgid "Use this button to install the packages for missing debug symbols."
+msgstr "ใช้ปุ่มนี้เพื่อทำการติดตั้งแพกเกจสำหรับทำการดีบั๊กเชิงสัญลักษณ์"
+
+#: qml/DeveloperPage.qml:50
+#, fuzzy
+#| msgctxt "@info/plain report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "แจ้งรายงานไปยัง %1"
+
+#: qml/DeveloperPage.qml:51
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "เริ่มตัวช่วยรายงานข้อผิดพลาด"
+
+#: qml/DeveloperPage.qml:59
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -926,7 +928,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "โ&หลดใหม่อีกครั้ง"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:61
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -944,47 +946,19 @@ msgstr ""
 "ซึ่งจะมีประโยชน์หากคุณได้ทำการติดตั้งแพกเกจสำหรับการดีบั๊กเชิงสัญลักษณ์แล้ว "
 "และคุณต้องการจะให้มีการติดตามการทำงานย้อนกลับที่ดีกว่าเดิม"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:71
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "คั&ดลอก"
 
-#: qml/DeveloperPage.qml:80
+#: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:130
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
-msgctxt "@info"
-msgid ""
-"<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-"describes what was\n"
-"happening inside the application when it crashed, so the developers may "
-"track\n"
-"down where the mess started. They may look meaningless to you, but they "
-"might\n"
-"actually contain a wealth of useful information.<nl />Backtraces are "
-"commonly\n"
-"used during interactive and post-mortem debugging.</para>"
-msgstr ""
-"<h2>\"การติดตามการทำงานย้อนกลับ\" คืออะไร ?</h2><p>การติดตามการทำงานย้อนกลับ "
-"จะอธิบายได้ว่า มีอะไรเกิดขึ้นบ้างภายในโปรแกรมเมื่อมันทำงานขัดข้อง "
-"โดยนักพัฒนาจะสามารถดูย้อนกลับลงไปจนถึงเมื่อโปรแกรมเพื่งเริมทำงานได้ "
-"แต่มันอาจจะดูไม่มีประโยชน์สำหรับคุณ แต่ก็จะมีคุณค่ามากเมื่อมีมันไว้เป็นข้อมูล "
-"เพื่อใช้ในการรายงานข้อผิดพลาด <br />การติดตามการทำงานย้อนกลับนั้น "
-"โดยทั่วไปแล้วจะถูกใช้ในระหว่างการโต้ตอบกับโปรแกรมในระหว่างทำการดีบั๊ก</p>"
-
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:179
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -996,13 +970,13 @@ msgstr ""
 #| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method\n"
-"does not work: please read <link url='%1'>How to create useful crash "
-"reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
-"and click the <interface>Reload</interface> button."
+"Click the <interface>Install Debug Symbols</interface> button in order to "
+"automatically install the missing debugging information packages. If this "
+"method\n"
+"does not work, read <link url='%1'>How to create useful crash reports</link> "
+"to learn how to get a useful\n"
+"backtrace, install the needed packages (<link url='%2'>list of files</"
+"link>), then click the <interface>Reload</interface> button."
 msgstr ""
 "คุณสามารถคลิกที่ปุ่ม <interface>ติดตั้งสัญลักษณ์ต่าง ๆ สำหรับดีบั๊ก</interface> "
 "เพื่อให้มีการติดตั้งแพกเกจที่ไม่มีอยู่ของข้อมูลของการดีบั๊ก หากวิธีนี้ยังใช้ไม่ได้อีก: โปรดอ่าน <link "
@@ -1011,7 +985,7 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:206
+#: qml/DeveloperPage.qml:187
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1021,9 +995,9 @@ msgstr ""
 #| "interface> button."
 msgctxt "@info/rich"
 msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages\n"
-"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"Read <link url='%1'>How to create useful crash reports</link> to learn how "
+"to get a useful backtrace, install the needed packages\n"
+"(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
 "โปรดอ่าน <link url='%1'>จะสร้างรายงานข้อผิดพลาดที่มีประโยชน์ได้อย่างไร</link> "
@@ -1031,7 +1005,21 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:217
+#: qml/DeveloperPage.qml:194
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"Try to regenerate the backtrace by clicking the <interface>Reload</"
+"interface> button."
+msgstr ""
+"คุณสามารถทำการสร้างการติดตามการทำงานย้อนกลับได้ใหม่ โดยคลิกที่ปุ่ม "
+"<interface>โหลดใหม่อีกคร้ง</interface>"
+
+#: qml/DeveloperPage.qml:198
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1039,8 +1027,8 @@ msgstr ""
 #| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
-"<emphasis strong='true'>You need to first install the debugger application "
-"(%1) then click the <interface>Reload</interface> button.</emphasis>"
+"<emphasis strong='true'>First install the debugger application (%1), then "
+"click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "คุณจำเป็นต้องทำการติดตั้งแพกเกจเครื่องมือดีบั๊ก (%1) ก่อน แล้วคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
@@ -1055,14 +1043,17 @@ msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This may also cause increased memory usage and will take longer, and causes "
+"This may also cause increased memory usage, will take longer, and causes "
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
 
 #: qml/LoginPage.qml:14
-msgctxt "@title"
-msgid "Login into the bug tracking system"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Login into the bug tracking system"
+msgctxt "@title:window"
+msgid "Log in to the Bug Tracking System"
 msgstr "ล็อกอินเข้าไปยังระบบติดตามข้อผิดพลาด"
 
 #: qml/LoginPage.qml:66
@@ -1075,7 +1066,7 @@ msgstr "คุณต้องทำการล็อกอินด้วยบ
 
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
-msgid "E-mail Address:"
+msgid "Email Address:"
 msgstr ""
 
 #: qml/LoginPage.qml:77
@@ -1102,9 +1093,9 @@ msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
 "link> in order to file a bug report, because we may need to contact you "
 "later\n"
-"for requesting further information. If you do not have one, you can freely "
-"<link url='%2'>create one here</link>. Please do not use disposable email "
-"accounts.</note>"
+"to request further information. If you do not have one, you can freely <link "
+"url='%2'>create one here</link>. Please do not use disposable email "
+"addresses.</note>"
 msgstr ""
 "<note>คุณต้องมีบัญชีผู้ใช้งานบน<link url='%1'>ระบบติดตามข้อผิดพลาดของ KDE</link> ก่อน "
 "จึงจะสามารถแจ้งรายงานข้อผิดพลาดได้ "
@@ -1124,8 +1115,8 @@ msgstr "ล็อกอิน"
 #| "provided username and password."
 msgctxt "@info:tooltip"
 msgid ""
-"Use this button to login to the KDE bug tracking system using the provided e-"
-"mail address and password."
+"Use this button to login to the KDE bug tracking system using the provided "
+"email address and password."
 msgstr "ใช้ปุ่มนี้เพื่อทำการล็อกอินไปยังระบบติดตามข้อผิดพลาดของ KDE โดยต้องป้อนชื่อผู้ใช้และรหัสผ่าน"
 
 #: qml/main.qml:33
@@ -1205,12 +1196,31 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ลองใหม่..."
 
-#: qml/MainPage.qml:57
+#: qml/MainPage.qml:12
+#, fuzzy
+#| msgid "The KDE Crash Handler"
+msgctxt "@title"
+msgid "Crash Handler"
+msgstr "ตัวดักจับข้อขัดข้องของ KDE"
+
+#: qml/MainPage.qml:35
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "@info"
+msgid "<application>%1</application> has closed unexpectedly."
+msgstr ""
+"<para>ต้องขออภัยด้วย เนื่องจากโปรแกรม <application>%1</application> "
+"ปิดตัวเองอย่างไม่คาดคิด</para>"
+
+#: qml/MainPage.qml:62
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr ""
 
-#: qml/MainPage.qml:73
+#: qml/MainPage.qml:78
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1219,9 +1229,11 @@ msgid "See Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
 #: qml/PreviewPage.qml:14
+#, fuzzy
+#| msgid "&Bug Report"
 msgctxt "@title"
-msgid "Preview the Report"
-msgstr "แสดงตัวอย่างของรายงาน"
+msgid "Bug Report Preview"
+msgstr "รายงานข้อ&ผิดพลาด"
 
 #: qml/PreviewPage.qml:20
 #, fuzzy
@@ -1231,8 +1243,9 @@ msgstr "แสดงตัวอย่างของรายงาน"
 #| "If you want to modify it go the previous pages."
 msgctxt "@label/rich"
 msgid ""
-"<para>This is a preview of the report's contents which will be sent.</"
-"para><para>If you want to modify it go to the previous pages.</para>"
+"<para>This is a preview of the contents of the report which will be sent.</"
+"para><para>If you want to modify the report, return to the previous pages.</"
+"para>"
 msgstr ""
 "นี่เป็นการแสดงตัวอย่างของเนื้อหาของรายงานที่จะถูกส่งไป <nl />\n"
 "หากคุณต้องการจะแก้ไขใด ๆ ให้ย้อนกลับไปยังหน้าก่อนนี้"
@@ -1247,9 +1260,44 @@ msgctxt "@info"
 msgid "Waiting for data…"
 msgstr ""
 
+#: qml/RatingItem.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is useful"
+msgctxt "@info"
+msgid "The generated crash information is useful."
+msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นมีประโยชน์"
+
+#: qml/RatingItem.qml:45
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information may be useful"
+msgctxt "@info"
+msgid "The generated crash information may be useful."
+msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นอาจจะมีประโยชน์"
+
+#: qml/RatingItem.qml:47
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is likely not useful."
+msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นไม่มีประโยชน์"
+
+#: qml/RatingItem.qml:49
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is not useful."
+msgstr "ข้อมูลรายละเอียดข้อขัดข้องที่ถูกสร้างขึ้นนั้นไม่มีประโยชน์"
+
 #: qml/ReportPage.qml:14
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
-msgid "Enter the Details about the Crash"
+msgid "Enter Details About the Crash"
 msgstr "ป้อนรายละเอียดเกี่ยวกับข้อขัดข้อง"
 
 #: qml/ReportPage.qml:22
@@ -1400,7 +1448,7 @@ msgstr ""
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
-msgid "Submitting bug report..."
+msgid "Submitting bug report…"
 msgstr ""
 
 #: qml/SentPage.qml:12
@@ -1434,10 +1482,18 @@ msgstr "<link url='%1'>หน้าเว็บของการรายงา
 #| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
 #| "of KDE. You can now close this window."
 msgctxt "@info"
-msgid "Thank you for being part of KDE. You can now close this window."
+msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
 "ส่งรายงานข้อขัดข้องแล้ว<nl/>ที่อยู่ URL: <link>%1</link><nl/"
 ">ขอขอบคุณที่คุณเข้ามาเป็นส่วนหนึ่งของ KDE ในตอนนี้ คุณสามารถปิดหน้าต่างนี้ได้แล้ว"
+
+#: qml/SentryPage.qml:12
+#, fuzzy
+#| msgctxt "@info bug resolution"
+#| msgid "Not a valid report/crash"
+msgctxt "@title"
+msgid "Automatic Report"
+msgstr "ไม่ใช่ข้อขัดข้อง/รายงานที่ใช้ได้"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1454,13 +1510,13 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
-#: qml/SentryPage.qml:61
+#: qml/SentryPage.qml:65
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:64
+#: qml/SentryPage.qml:68
 #, fuzzy
 #| msgctxt "@info bug resolution"
 #| msgid "Not a valid report/crash"
@@ -1468,15 +1524,15 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "ไม่ใช่ข้อขัดข้อง/รายงานที่ใช้ได้"
 
-#: qml/SentryPage.qml:73
+#: qml/SentryPage.qml:77
 msgctxt "@info:tooltip"
 msgid ""
-"Always automatically submit a crash report to KDE's crash tracking system. "
-"No manual input required.\n"
+"Always automatically submit a crash report to KDE's crash tracking system, "
+"with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:89
+#: qml/SentryPage.qml:93
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1484,12 +1540,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "ข้อมูลเกี่ยวกับการรายงานข้อผิดพลาด"
 
-#: qml/SentryPage.qml:100
+#: qml/SentryPage.qml:104
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:118
+#: qml/SentryPage.qml:122
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
@@ -1497,10 +1553,10 @@ msgstr ""
 #: qml/WelcomePage.qml:14
 #, fuzzy
 #| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
+#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
-msgid "Welcome to the Reporting Assistant"
-msgstr "ขอต้อนรับสู่ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
+msgid "Reporting Assistant"
+msgstr "ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
 #: qml/WelcomePage.qml:19
 #, fuzzy
@@ -1530,8 +1586,8 @@ msgid ""
 "for effective debugging,\n"
 "to continue reporting this bug it is <emphasis strong='true'>required for "
 "you to agree that developers may contact you</emphasis>.\n"
-"</note></para><para>Feel free to close this dialog if you do not accept this."
-"</para>"
+"</note></para><para>Feel free to close this dialog if you do not wish to "
+"accept this.</para>"
 msgstr ""
 "<p><note>จำเป็นจะต้องมีการติดต่อระหว่างคุณกับนักพัฒนา เพื่อการแก้ไขปัญหาอย่างมีประสิทธิภาพ "
 "ซึ่งหากจะทำการรายงานข้อผิดพลาดนี้ต่อไปนั้น "
@@ -1702,6 +1758,57 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Show backtrace content (advanced)"
+#~ msgctxt "@action:button"
+#~ msgid "Show backtrace content (advanced)"
+#~ msgstr "แสดงเนื้อหาการติดตามการทำงานย้อนกลับ (ขั้นสูง)"
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "What do you know about the crash?"
+#~ msgctxt "@title:window"
+#~ msgid "What do You Know About the Crash?"
+#~ msgstr "คุณทราบอะไรบ้างเกี่ยวกับข้อขัดข้อง ?"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes "
+#~| "what was happening inside the application when it crashed, so the "
+#~| "developers may track down where the mess started. They may look "
+#~| "meaningless to you, but they might actually contain a wealth of useful "
+#~| "information.<br />Backtraces are commonly used during interactive and "
+#~| "post-mortem debugging.</p>"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
+#~ "describes what was\n"
+#~ "happening inside the application when it crashed, so the developers may "
+#~ "track\n"
+#~ "down where the mess started. They may look meaningless to you, but they "
+#~ "might\n"
+#~ "actually contain a wealth of useful information.<nl />Backtraces are "
+#~ "commonly\n"
+#~ "used during interactive and post-mortem debugging.</para>"
+#~ msgstr ""
+#~ "<h2>\"การติดตามการทำงานย้อนกลับ\" คืออะไร ?</h2><p>การติดตามการทำงานย้อนกลับ "
+#~ "จะอธิบายได้ว่า มีอะไรเกิดขึ้นบ้างภายในโปรแกรมเมื่อมันทำงานขัดข้อง "
+#~ "โดยนักพัฒนาจะสามารถดูย้อนกลับลงไปจนถึงเมื่อโปรแกรมเพื่งเริมทำงานได้ "
+#~ "แต่มันอาจจะดูไม่มีประโยชน์สำหรับคุณ แต่ก็จะมีคุณค่ามากเมื่อมีมันไว้เป็นข้อมูล "
+#~ "เพื่อใช้ในการรายงานข้อผิดพลาด <br />การติดตามการทำงานย้อนกลับนั้น "
+#~ "โดยทั่วไปแล้วจะถูกใช้ในระหว่างการโต้ตอบกับโปรแกรมในระหว่างทำการดีบั๊ก</p>"
+
+#~ msgctxt "@title"
+#~ msgid "Preview the Report"
+#~ msgstr "แสดงตัวอย่างของรายงาน"
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "Welcome to the Reporting Assistant"
+#~ msgctxt "@title:window"
+#~ msgid "Welcome to the Reporting Assistant"
+#~ msgstr "ขอต้อนรับสู่ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
 #, fuzzy
 #~| msgctxt ""
@@ -1893,10 +2000,6 @@ msgstr ""
 #~ "ในการสร้างรายงานข้อผิดพลาดที่มีประโยชน์นั้น "
 #~ "เราต้องการทั้งข้อมูลรายละเอียดเกี่ยวกับทั้งการข้ดข้อง และข้อมูลของระบบของคุณด้วย "
 #~ "(คุณอาจต้องติดตั้งแพกเกจบางตัวที่ใช้ในการดีบั๊กด้วย)"
-
-#~ msgctxt "@title"
-#~ msgid "Bug Reporting Assistant Guide"
-#~ msgstr "ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
 #, fuzzy
 #~| msgctxt "@info/rich"
@@ -3460,12 +3563,6 @@ msgstr ""
 #~ "Content-Transfer-Encoding: 8bit\n"
 #~ "X-Generator: KBabel 1.11.4\n"
 #~ "Plural-Forms: nplurals=1; plural=0;\n"
-
-#, fuzzy
-#~| msgid "&Bug Report"
-#~ msgctxt "@title"
-#~ msgid "Bug Report Keywords"
-#~ msgstr "รายงานข้อ&ผิดพลาด"
 
 #~ msgid "Could not generate a backtrace as the debugger '%1' was not found."
 #~ msgstr "ไม่สามารถสร้างการติดตามย้อนหลังได้ เนื่องจากไม่พบเครื่องมือดีบั๊ก '%1'"

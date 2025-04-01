@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2013-07-06 01:28+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -56,7 +56,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Astaler simboles di disbugaedje"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
+#: backtracewidget.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -72,7 +72,7 @@ msgid ""
 "uninstalled after it had been started."
 msgstr ""
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 "Siervoz vs di ç' boton ci po copyî les informåcions sol tcheyaedje e rak "
 "(passêye e-n erî) dins l' presse-papî."
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -149,27 +149,27 @@ msgstr ""
 "erî. Cloyoz l' ôte disbugueu s' i vs plait eyet clitchî so "
 "<interface>Ritcherdjî</interface>."
 
-#: backtracewidget.cpp:241 qml/RatingItem.qml:43
+#: backtracewidget.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
 msgstr "Les informåcions sol tcheyaedje e rak d' askepeye est ahessåve"
 
-#: backtracewidget.cpp:244 qml/RatingItem.qml:45
+#: backtracewidget.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
 msgstr ""
 "Les informåcions sol tcheyaedje e rak d' askepeye pôrént esse ahessåves"
 
-#: backtracewidget.cpp:247 qml/RatingItem.qml:47
+#: backtracewidget.cpp:247
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
 msgstr ""
 "Les informåcions sol tcheyaedje e rak d' askepeye n' est motoit nén ahessåve"
 
-#: backtracewidget.cpp:250 qml/RatingItem.qml:49
+#: backtracewidget.cpp:250
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
@@ -230,7 +230,7 @@ msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "Dji n' a savou askepyî l' informåcion sol tcheyaedje e rak."
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
+#: backtracewidget.cpp:307
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -267,7 +267,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Åk n' a nén stî come dj' astaléve les simboles di disbugaedje"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -480,7 +480,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Informåcions sol &diswalpeu"
 
-#: drkonqidialog.cpp:165 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -728,19 +728,15 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr ""
 
 #: qml/BacktracePage.qml:11
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Fetching the Backtrace (Automatic Crash Information)"
+msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
 "Dji cwir li passêye e-n erî (Informåcions otomatikes sol tcheyaedje e rak)"
 
-#: qml/BacktracePage.qml:24
-#, fuzzy
-#| msgid "Show backtrace content (advanced)"
-msgctxt "@action:button"
-msgid "Show backtrace content (advanced)"
-msgstr "Mostrer çou k' i gn a el passêye e-n erî (spepieusmint)"
-
-#: qml/BacktracePage.qml:44 qml/ContextPage.qml:88
+#: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
 msgid "Next"
 msgstr ""
@@ -750,7 +746,7 @@ msgstr ""
 #| msgctxt "@info:status"
 #| msgid "Error when trying to login: <message>%1.</message>"
 msgctxt "@info"
-msgid "Failed to contact bugs.kde.org: <message>%1</message>"
+msgid "Failed to contact %1: <message>%2</message>"
 msgstr "Åk n' a nén stî come dji sayive di m' elodjî : <message>%1.</message>"
 
 #: qml/BugzillaPage.qml:48
@@ -763,16 +759,13 @@ msgstr "Risayî..."
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
-msgid "Trying to contact bugs.kde.org..."
+msgid "Trying to contact %1…"
 msgstr ""
 
 #: qml/ContextPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "What do you know about the crash?"
 msgctxt "@title:window"
-msgid "What do You Know About the Crash?"
-msgstr "Cwè savoz vs åd fwait do tcheyaedje e rak ?"
+msgid "Your Knowledge"
+msgstr ""
 
 #: qml/ContextPage.qml:18
 #, fuzzy
@@ -805,7 +798,7 @@ msgctxt "@action:button"
 msgid "No"
 msgstr "Neni"
 
-#: qml/ContextPage.qml:39
+#: qml/ContextPage.qml:42
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -817,7 +810,7 @@ msgstr ""
 "<strong>Est çk' el programe ritchait co e rak si vs rifjhoz totafwaitmint l' "
 "minme ?</strong>"
 
-#: qml/ContextPage.qml:52
+#: qml/ContextPage.qml:58
 #, fuzzy
 #| msgctxt "@label question"
 #| msgid ""
@@ -829,7 +822,7 @@ msgstr ""
 "<strong>Tchoezixhoz s' i vs plait kénès ôtès informåcions vos savoz dner :</"
 "strong>"
 
-#: qml/ContextPage.qml:59
+#: qml/ContextPage.qml:65
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash, "
@@ -842,7 +835,7 @@ msgid ""
 "What I was doing when the application <application>%1</application> crashed"
 msgstr "Çou k' dji fjheu cwand l' programe \"%1\" a tcheyou e rak"
 
-#: qml/ContextPage.qml:65
+#: qml/ContextPage.qml:71
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash"
@@ -851,7 +844,7 @@ msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Drole di dujhance do scribanne ki dj' a rimarké"
 
-#: qml/ContextPage.qml:70
+#: qml/ContextPage.qml:76
 #, fuzzy
 #| msgctxt ""
 #| "@option:check kind of information the user can provide about the crash"
@@ -860,12 +853,12 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Apontiaedjes a vosse môde do programe ki pôrént aveur vey avou"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
 
-#: qml/ContextPage.qml:80
+#: qml/ContextPage.qml:90
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -873,14 +866,15 @@ msgstr ""
 #| "case."
 msgctxt "@info"
 msgid ""
-"<para>The information you can provide is not considered helpful enough in "
-"this case. If you can't think of any more information you can close the bug "
-"report dialog.</para>"
+"The information you can provide is not considered helpful enough in this "
+"case.\n"
+"If you can't think of any more information, you can close the bug report "
+"dialog."
 msgstr ""
 "Les informåcions ki vos avoz dné ni sont nén considerêyes come nos aidant "
 "assez po ç' cas chal."
 
-#: qml/DeveloperPage.qml:25
+#: qml/DeveloperPage.qml:23
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -888,20 +882,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informåcions sol &diswalpeu"
 
-#: qml/DeveloperPage.qml:33
-#, fuzzy
-#| msgctxt "@info/plain report to url/mail address"
-#| msgid "Report to %1"
-msgctxt "@action Report the bug on this domain"
-msgid "Report on %1"
-msgstr "Rapoirter a %1"
-
-#: qml/DeveloperPage.qml:34
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "Enonde li macrea di rapoirtaedje di bug."
-
-#: qml/DeveloperPage.qml:41
+#: qml/DeveloperPage.qml:29
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -909,7 +890,30 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Astaler simboles di disbugaedje"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:42
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Use this button to install the missing debug symbols packages."
+msgctxt "@info:tooltip"
+msgid "Use this button to install the packages for missing debug symbols."
+msgstr ""
+"Siervoz vs di ç' boton ci po-z astaler les pacaedjes di simboles di "
+"disbugaedje mancants."
+
+#: qml/DeveloperPage.qml:50
+#, fuzzy
+#| msgctxt "@info/plain report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "Rapoirter a %1"
+
+#: qml/DeveloperPage.qml:51
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "Enonde li macrea di rapoirtaedje di bug."
+
+#: qml/DeveloperPage.qml:59
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -917,7 +921,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Ritcherdjî"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:61
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -935,47 +939,19 @@ msgstr ""
 "(passêye e-n erî). C' est ahessåve cwand vs avoz astalé li bou simbole di "
 "disbugaedje et k' vos vloz aveur ene meyeuse passêye e-n erî."
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:71
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Copyî"
 
-#: qml/DeveloperPage.qml:80
+#: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:130
-#, fuzzy
-#| msgid ""
-#| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#| "was happening inside the application when it crashed, so the developers "
-#| "may track down where the mess started. They may look meaningless to you, "
-#| "but they might actually contain a wealth of useful information.<br /"
-#| ">Backtraces are commonly used during interactive and post-mortem "
-#| "debugging.</p>"
-msgctxt "@info"
-msgid ""
-"<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-"describes what was\n"
-"happening inside the application when it crashed, so the developers may "
-"track\n"
-"down where the mess started. They may look meaningless to you, but they "
-"might\n"
-"actually contain a wealth of useful information.<nl />Backtraces are "
-"commonly\n"
-"used during interactive and post-mortem debugging.</para>"
-msgstr ""
-"<h2>Ene « passêye e-n erî », cwè çki c' est d' ça ?</h2><p>Ene passêye e-n "
-"erî discrît çou k' i s' a passé e programe cwand il a tcheyou e rak, po "
-"k' les programeus sepnuxhe ritrover wice kel disdût a comincî. I pôrént n' "
-"vos rén dire a vos mins aveur totes sôres di pondants et di djondants bén "
-"ahessåves.<br />Les passêye e-n erîs sont sovint eployîs sol tins do "
-"disbugaedje interactif et post-mortem.</p>"
-
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:179
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -987,13 +963,13 @@ msgstr ""
 #| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method\n"
-"does not work: please read <link url='%1'>How to create useful crash "
-"reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
-"and click the <interface>Reload</interface> button."
+"Click the <interface>Install Debug Symbols</interface> button in order to "
+"automatically install the missing debugging information packages. If this "
+"method\n"
+"does not work, read <link url='%1'>How to create useful crash reports</link> "
+"to learn how to get a useful\n"
+"backtrace, install the needed packages (<link url='%2'>list of files</"
+"link>), then click the <interface>Reload</interface> button."
 msgstr ""
 "Vos savoz clitchî sol  boton <interface>Astaler les simboles di disbugaedje</"
 "interface> po saveur astaler otomaticmint les pacaedjes mancants "
@@ -1003,7 +979,7 @@ msgstr ""
 "k' i fåt (<link url='%2'>lisse des fitchîs</link>) eyet clitchî sol boton "
 "<interface>Ritcherdjî</interface>."
 
-#: qml/DeveloperPage.qml:206
+#: qml/DeveloperPage.qml:187
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1013,9 +989,9 @@ msgstr ""
 #| "interface> button."
 msgctxt "@info/rich"
 msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages\n"
-"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"Read <link url='%1'>How to create useful crash reports</link> to learn how "
+"to get a useful backtrace, install the needed packages\n"
+"(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
 "Lijhoz s' i vs plait <link url='%1'>Comint ahiver des rapoirts di bug "
@@ -1023,7 +999,21 @@ msgstr ""
 "astalez les pacaedjes k' i fåt (<link url='%2'>lisse des fitchîs</link>) "
 "eyet clitchî sol boton <interface>Ritcherdjî</interface>."
 
-#: qml/DeveloperPage.qml:217
+#: qml/DeveloperPage.qml:194
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"Try to regenerate the backtrace by clicking the <interface>Reload</"
+"interface> button."
+msgstr ""
+"Vos pôrîz rsayî d' askepyî l' passêye e-n erî tot clitchant sol boton "
+"<interface>Ritcherdjî</interface>."
+
+#: qml/DeveloperPage.qml:198
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1031,8 +1021,8 @@ msgstr ""
 #| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
-"<emphasis strong='true'>You need to first install the debugger application "
-"(%1) then click the <interface>Reload</interface> button.</emphasis>"
+"<emphasis strong='true'>First install the debugger application (%1), then "
+"click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<strong>Vos dvoz astaler l' pacaedje do disbugueu (%1) ey adon clitchî sol "
 "boton <interface>Ritcherdjî</interface>.</strong>"
@@ -1047,14 +1037,17 @@ msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This may also cause increased memory usage and will take longer, and causes "
+"This may also cause increased memory usage, will take longer, and causes "
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
 
 #: qml/LoginPage.qml:14
-msgctxt "@title"
-msgid "Login into the bug tracking system"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Login into the bug tracking system"
+msgctxt "@title:window"
+msgid "Log in to the Bug Tracking System"
 msgstr "S' elodjî e sistinme di shuvou des bugs"
 
 #: qml/LoginPage.qml:66
@@ -1064,7 +1057,7 @@ msgstr ""
 
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
-msgid "E-mail Address:"
+msgid "Email Address:"
 msgstr ""
 
 #: qml/LoginPage.qml:77
@@ -1085,9 +1078,9 @@ msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
 "link> in order to file a bug report, because we may need to contact you "
 "later\n"
-"for requesting further information. If you do not have one, you can freely "
-"<link url='%2'>create one here</link>. Please do not use disposable email "
-"accounts.</note>"
+"to request further information. If you do not have one, you can freely <link "
+"url='%2'>create one here</link>. Please do not use disposable email "
+"addresses.</note>"
 msgstr ""
 
 #: qml/LoginPage.qml:105
@@ -1098,8 +1091,8 @@ msgstr "S' elodjî"
 #: qml/LoginPage.qml:106
 msgctxt "@info:tooltip"
 msgid ""
-"Use this button to login to the KDE bug tracking system using the provided e-"
-"mail address and password."
+"Use this button to login to the KDE bug tracking system using the provided "
+"email address and password."
 msgstr ""
 
 #: qml/main.qml:33
@@ -1157,12 +1150,31 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Risayî..."
 
-#: qml/MainPage.qml:57
+#: qml/MainPage.qml:12
+#, fuzzy
+#| msgid "The KDE Crash Handler"
+msgctxt "@title"
+msgid "Crash Handler"
+msgstr "L' apougneu d' tcheyaedjes e rak di KDE"
+
+#: qml/MainPage.qml:35
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "@info"
+msgid "<application>%1</application> has closed unexpectedly."
+msgstr ""
+"<para>Nos rgretans mins <application>%1</application>s' a cloyou d' ene "
+"façon nén ratindowe.</para>"
+
+#: qml/MainPage.qml:62
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr ""
 
-#: qml/MainPage.qml:73
+#: qml/MainPage.qml:78
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1171,9 +1183,11 @@ msgid "See Developer Information"
 msgstr "Informåcions sol &diswalpeu"
 
 #: qml/PreviewPage.qml:14
+#, fuzzy
+#| msgid "&Bug report"
 msgctxt "@title"
-msgid "Preview the Report"
-msgstr "Prévey li rapoirt"
+msgid "Bug Report Preview"
+msgstr "Rapoirt di &Bug"
 
 #: qml/PreviewPage.qml:20
 #, fuzzy
@@ -1183,8 +1197,9 @@ msgstr "Prévey li rapoirt"
 #| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
-"<para>This is a preview of the report's contents which will be sent.</"
-"para><para>If you want to modify it go to the previous pages.</para>"
+"<para>This is a preview of the contents of the report which will be sent.</"
+"para><para>If you want to modify the report, return to the previous pages.</"
+"para>"
 msgstr ""
 "Çouchal est on prévoeyaedje di çou k' i gn a e raoirt di bug ki va esse "
 "evoyî.<nl />\n"
@@ -1200,9 +1215,45 @@ msgctxt "@info"
 msgid "Waiting for data…"
 msgstr ""
 
+#: qml/RatingItem.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is useful"
+msgctxt "@info"
+msgid "The generated crash information is useful."
+msgstr "Les informåcions sol tcheyaedje e rak d' askepeye est ahessåve"
+
+#: qml/RatingItem.qml:45
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information may be useful"
+msgctxt "@info"
+msgid "The generated crash information may be useful."
+msgstr ""
+"Les informåcions sol tcheyaedje e rak d' askepeye pôrént esse ahessåves"
+
+#: qml/RatingItem.qml:47
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is likely not useful."
+msgstr "Les informåcions sol tcheyaedje e rak d' askepeye n' est nén ahessåve"
+
+#: qml/RatingItem.qml:49
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is not useful."
+msgstr "Les informåcions sol tcheyaedje e rak d' askepeye n' est nén ahessåve"
+
 #: qml/ReportPage.qml:14
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
-msgid "Enter the Details about the Crash"
+msgid "Enter Details About the Crash"
 msgstr "Dinez les detays sol tcheyaedje e rak"
 
 #: qml/ReportPage.qml:22
@@ -1343,7 +1394,7 @@ msgstr ""
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
-msgid "Submitting bug report..."
+msgid "Submitting bug report…"
 msgstr ""
 
 #: qml/SentPage.qml:12
@@ -1372,8 +1423,13 @@ msgstr ""
 #| msgctxt "@info/rich"
 #| msgid "Thank you for being part of KDE!"
 msgctxt "@info"
-msgid "Thank you for being part of KDE. You can now close this window."
+msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Gråces di fé pårteye di KDE !"
+
+#: qml/SentryPage.qml:12
+msgctxt "@title"
+msgid "Automatic Report"
+msgstr ""
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1390,26 +1446,26 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Macrea di rapoirt di tcheyaedje e rak"
 
-#: qml/SentryPage.qml:61
+#: qml/SentryPage.qml:65
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:64
+#: qml/SentryPage.qml:68
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr ""
 
-#: qml/SentryPage.qml:73
+#: qml/SentryPage.qml:77
 msgctxt "@info:tooltip"
 msgid ""
-"Always automatically submit a crash report to KDE's crash tracking system. "
-"No manual input required.\n"
+"Always automatically submit a crash report to KDE's crash tracking system, "
+"with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:89
+#: qml/SentryPage.qml:93
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1417,12 +1473,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Informåcions åd fwait do rapoirtaedje des bugs"
 
-#: qml/SentryPage.qml:100
+#: qml/SentryPage.qml:104
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:118
+#: qml/SentryPage.qml:122
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
@@ -1430,10 +1486,10 @@ msgstr ""
 #: qml/WelcomePage.qml:14
 #, fuzzy
 #| msgctxt "@title"
-#| msgid "Welcome to the Reporting Assistant"
+#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
-msgid "Welcome to the Reporting Assistant"
-msgstr "Wilicome e Macrea di rapoirtaedje"
+msgid "Reporting Assistant"
+msgstr "Guide do macrea d' rapoirtaedje di bug"
 
 #: qml/WelcomePage.qml:19
 #, fuzzy
@@ -1463,8 +1519,8 @@ msgid ""
 "for effective debugging,\n"
 "to continue reporting this bug it is <emphasis strong='true'>required for "
 "you to agree that developers may contact you</emphasis>.\n"
-"</note></para><para>Feel free to close this dialog if you do not accept this."
-"</para>"
+"</note></para><para>Feel free to close this dialog if you do not wish to "
+"accept this.</para>"
 msgstr ""
 "<p><note>Come i fåt kel cominicåcion inte vos eyet les programeus soeye "
 "possibe po saveur disbuguer comifåt, po continouwer a rapoirter ç' bug chal, "
@@ -1637,6 +1693,57 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Show backtrace content (advanced)"
+#~ msgctxt "@action:button"
+#~ msgid "Show backtrace content (advanced)"
+#~ msgstr "Mostrer çou k' i gn a el passêye e-n erî (spepieusmint)"
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "What do you know about the crash?"
+#~ msgctxt "@title:window"
+#~ msgid "What do You Know About the Crash?"
+#~ msgstr "Cwè savoz vs åd fwait do tcheyaedje e rak ?"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes "
+#~| "what was happening inside the application when it crashed, so the "
+#~| "developers may track down where the mess started. They may look "
+#~| "meaningless to you, but they might actually contain a wealth of useful "
+#~| "information.<br />Backtraces are commonly used during interactive and "
+#~| "post-mortem debugging.</p>"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
+#~ "describes what was\n"
+#~ "happening inside the application when it crashed, so the developers may "
+#~ "track\n"
+#~ "down where the mess started. They may look meaningless to you, but they "
+#~ "might\n"
+#~ "actually contain a wealth of useful information.<nl />Backtraces are "
+#~ "commonly\n"
+#~ "used during interactive and post-mortem debugging.</para>"
+#~ msgstr ""
+#~ "<h2>Ene « passêye e-n erî », cwè çki c' est d' ça ?</h2><p>Ene passêye e-"
+#~ "n erî discrît çou k' i s' a passé e programe cwand il a tcheyou e rak, po "
+#~ "k' les programeus sepnuxhe ritrover wice kel disdût a comincî. I pôrént "
+#~ "n' vos rén dire a vos mins aveur totes sôres di pondants et di djondants "
+#~ "bén ahessåves.<br />Les passêye e-n erîs sont sovint eployîs sol tins do "
+#~ "disbugaedje interactif et post-mortem.</p>"
+
+#~ msgctxt "@title"
+#~ msgid "Preview the Report"
+#~ msgstr "Prévey li rapoirt"
+
+#, fuzzy
+#~| msgctxt "@title"
+#~| msgid "Welcome to the Reporting Assistant"
+#~ msgctxt "@title:window"
+#~ msgid "Welcome to the Reporting Assistant"
+#~ msgstr "Wilicome e Macrea di rapoirtaedje"
+
 #~ msgctxt ""
 #~ "@action:button this is the debug menu button label which contains the "
 #~ "debugging applications"
@@ -1764,10 +1871,6 @@ msgstr ""
 #~ "Po ahiver on rapoirt di bug ahessåve, nos avans mezåjhe di kékès "
 #~ "infôrmåcions so, ambedeus, li tcheyaedje e rak eyet vosse sistinme. (Vos "
 #~ "dvroz kécfeye ossu astaler des pacaedjes di disbugaedje.)"
-
-#~ msgctxt "@title"
-#~ msgid "Bug Reporting Assistant Guide"
-#~ msgstr "Guide do macrea d' rapoirtaedje di bug"
 
 #~ msgctxt "@info/rich"
 #~ msgid ""
@@ -2892,12 +2995,6 @@ msgstr ""
 #~ "Content-Transfer-Encoding: 8bit\n"
 #~ "X-Generator: KBabel 1.0.2\n"
 #~ "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, fuzzy
-#~| msgid "&Bug report"
-#~ msgctxt "@title"
-#~ msgid "Bug Report Keywords"
-#~ msgstr "Rapoirt di &Bug"
 
 #, fuzzy
 #~| msgid "Backtrace Not Possible"

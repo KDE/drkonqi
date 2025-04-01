@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:41+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgctxt "@action:button"
 msgid "&Install Debug Symbols"
 msgstr "&Debug Symbols संस्थापनं कुर्वन्तु"
 
-#: backtracewidget.cpp:70 qml/DeveloperPage.qml:54
+#: backtracewidget.cpp:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use this button to install the missing debug symbols packages."
@@ -67,14 +67,14 @@ msgid ""
 "uninstalled after it had been started."
 msgstr "चिह्नस्थापनम् अनुपलब्धं यतः अनुप्रयोगः आरब्धस्य अनन्तरं अद्यतनं वा विस्थापनं वा कृतम् ।"
 
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:74
+#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "क्रैश सूचनां (backtrace) क्लिप्बोर्ड् प्रति प्रतिलिखितुं एतत् बटन् उपयुज्यताम् ।"
 
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:82
+#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -139,25 +139,25 @@ msgstr ""
 "backtrace आनेतुं न शक्नोति । कृपया अन्यं त्रुटिनिवारणं पिधाय <interface>पुनः लोड्</"
 "interface> नुदन्तु ।"
 
-#: backtracewidget.cpp:241 qml/RatingItem.qml:43
+#: backtracewidget.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
 msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी भवति"
 
-#: backtracewidget.cpp:244 qml/RatingItem.qml:45
+#: backtracewidget.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
 msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी भवितुम् अर्हति"
 
-#: backtracewidget.cpp:247 qml/RatingItem.qml:47
+#: backtracewidget.cpp:247
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
 msgstr "उत्पन्नं दुर्घटनासूचना सम्भवतः उपयोगी नास्ति"
 
-#: backtracewidget.cpp:250 qml/RatingItem.qml:49
+#: backtracewidget.cpp:250
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
@@ -214,7 +214,7 @@ msgctxt "@info:status"
 msgid "The crash information could not be generated."
 msgstr "दुर्घटनासूचना उत्पन्नं कर्तुं न शक्यते स्म ।"
 
-#: backtracewidget.cpp:307 qml/DeveloperPage.qml:213
+#: backtracewidget.cpp:307
 #, kde-kuit-format
 msgctxt "@info/rich"
 msgid ""
@@ -251,7 +251,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "त्रुटिनिवारणचिह्नानां संस्थापनकाले त्रुटिः"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -448,7 +448,7 @@ msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&विकासक सूचना"
 
-#: drkonqidialog.cpp:165 qml/MainPage.qml:35
+#: drkonqidialog.cpp:165
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -675,23 +675,24 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "सूचनां न दर्शयन्तु किन्तु प्रत्यक्षतया त्रुटिनिवारणसंवादं प्रारभत"
 
 #: qml/BacktracePage.qml:11
-msgctxt "@title"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Fetching the Backtrace (Automatic Crash Information)"
+msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Backtrace (स्वचालित दुर्घटना सूचना) आनेतुं ."
 
-#: qml/BacktracePage.qml:24
-msgctxt "@action:button"
-msgid "Show backtrace content (advanced)"
-msgstr "backtrace सामग्रीं दर्शयतु (उन्नत) ."
-
-#: qml/BacktracePage.qml:44 qml/ContextPage.qml:88
+#: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
 msgid "Next"
 msgstr "अग्रिम"
 
 #: qml/BugzillaPage.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
-msgid "Failed to contact bugs.kde.org: <message>%1</message>"
+msgid "Failed to contact %1: <message>%2</message>"
 msgstr "bugs.kde.org: <message>%1</message> इत्यनेन सह सम्पर्कं कर्तुं असफलम्"
 
 #: qml/BugzillaPage.qml:48
@@ -700,14 +701,17 @@ msgid "Retry"
 msgstr "पुनः प्रयासं कुर्वन्तु"
 
 #: qml/BugzillaPage.qml:62
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
-msgid "Trying to contact bugs.kde.org..."
+msgid "Trying to contact %1…"
 msgstr "bugs.kde.org इत्यनेन सह सम्पर्कं कर्तुं प्रयतमानोऽस्मि..."
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
-msgid "What do You Know About the Crash?"
-msgstr "दुर्घटनाविषये भवन्तः किं जानन्ति ?"
+msgid "Your Knowledge"
+msgstr ""
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -724,17 +728,17 @@ msgctxt "@action:button"
 msgid "No"
 msgstr "नहि"
 
-#: qml/ContextPage.qml:39
+#: qml/ContextPage.qml:42
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
 msgstr "यदि भवान् समाना स्थितिं पुनरावृत्तिं करोति तर्हि पुनः अनुप्रयोगः क्रैश भवति वा?"
 
-#: qml/ContextPage.qml:52
+#: qml/ContextPage.qml:58
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
 msgstr "कृपया चयनं कुर्वन्तु यत् भवान् काः अतिरिक्तसूचनाः दातुं शक्नुवन्ति:"
 
-#: qml/ContextPage.qml:59
+#: qml/ContextPage.qml:65
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
@@ -743,57 +747,72 @@ msgid ""
 msgstr ""
 "यदा अनुप्रयोगः <application>%1</application> दुर्घटना अभवत् तदा अहं किं करोमि स्म"
 
-#: qml/ContextPage.qml:65
+#: qml/ContextPage.qml:71
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "असामान्यः डेस्कटॉप् व्यवहारः मया अवलोकितः"
 
-#: qml/ContextPage.qml:70
+#: qml/ContextPage.qml:76
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "अनुप्रयोगस्य कस्टम् सेटिंग्स् ये सम्बद्धाः भवितुम् अर्हन्ति"
 
-#: qml/ContextPage.qml:79 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "न पर्याप्तं उपयोगी"
 
-#: qml/ContextPage.qml:80
+#: qml/ContextPage.qml:90
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>The information you can provide is not considered helpful enough in "
+#| "this case. If you can't think of any more information you can close the "
+#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
-"<para>The information you can provide is not considered helpful enough in "
-"this case. If you can't think of any more information you can close the bug "
-"report dialog.</para>"
+"The information you can provide is not considered helpful enough in this "
+"case.\n"
+"If you can't think of any more information, you can close the bug report "
+"dialog."
 msgstr ""
 "<para>भवता यत् सूचनां दातुं शक्नोति तत् अस्मिन् सन्दर्भे पर्याप्तं सहायकं न मन्यते । यदि भवान् "
 "अधिकानि सूचनानि चिन्तयितुं न शक्नोति तर्हि भवान् दोषप्रतिवेदनसंवादं पिधातुं शक्नोति।</para>"
 
-#: qml/DeveloperPage.qml:25
+#: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "विकासक सूचना"
 
-#: qml/DeveloperPage.qml:33
-msgctxt "@action Report the bug on this domain"
-msgid "Report on %1"
-msgstr "%1 इत्यस्य विषये प्रतिवेदनं कुर्वन्तु"
-
-#: qml/DeveloperPage.qml:34
-msgctxt "@info:tooltip"
-msgid "Starts the bug report assistant."
-msgstr "दोषप्रतिवेदनसहायकं आरभते ।"
-
-#: qml/DeveloperPage.qml:41
+#: qml/DeveloperPage.qml:29
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "त्रुटिनिवारणचिह्नानि संस्थापयन्तु"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:42
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Use this button to install the missing debug symbols packages."
+msgctxt "@info:tooltip"
+msgid "Use this button to install the packages for missing debug symbols."
+msgstr "लुप्तं त्रुटिनिवारणचिह्नसङ्कुलं संस्थापयितुं एतत् बटन् उपयुज्यताम् ।"
+
+#: qml/DeveloperPage.qml:50
+msgctxt "@action Report the bug on this domain"
+msgid "Report on %1"
+msgstr "%1 इत्यस्य विषये प्रतिवेदनं कुर्वन्तु"
+
+#: qml/DeveloperPage.qml:51
+msgctxt "@info:tooltip"
+msgid "Starts the bug report assistant."
+msgstr "दोषप्रतिवेदनसहायकं आरभते ।"
+
+#: qml/DeveloperPage.qml:59
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "पुनः लोड करें"
 
-#: qml/DeveloperPage.qml:63
+#: qml/DeveloperPage.qml:61
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -805,46 +824,36 @@ msgstr ""
 "उपयोगी भवति\n"
 "सम्यक् त्रुटिनिवारणचिह्नसंकुलं संस्थापितम् अस्ति तथा च भवान् उत्तमं पश्चात्तापं प्राप्तुम् इच्छति ।"
 
-#: qml/DeveloperPage.qml:73
+#: qml/DeveloperPage.qml:71
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "प्रतिलिपि"
 
-#: qml/DeveloperPage.qml:80
+#: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "रक्ष्"
 
-#: qml/DeveloperPage.qml:130
-msgctxt "@info"
-msgid ""
-"<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-"describes what was\n"
-"happening inside the application when it crashed, so the developers may "
-"track\n"
-"down where the mess started. They may look meaningless to you, but they "
-"might\n"
-"actually contain a wealth of useful information.<nl />Backtraces are "
-"commonly\n"
-"used during interactive and post-mortem debugging.</para>"
-msgstr ""
-"<subtitle>\"backtrace\" इति किम् ?</subtitle><para>backtrace मूलतः किं आसीत् इति "
-"वर्णयति\n"
-"अनुप्रयोगस्य अन्तः भवति यदा सः दुर्घटनाग्रस्तः अभवत्, अतः विकासकाः अनुसरणं कर्तुं शक्नुवन्ति\n"
-"अधः यत्र अव्यवस्था आरब्धा। ते भवतः दृष्ट्या निरर्थकाः दृश्यन्ते, परन्तु ते दृश्यन्ते\n"
-"वस्तुतः उपयोगी सूचनानां धनं भवति।<nl />पृष्ठलेखाः सामान्यतया भवन्ति\n"
-"अन्तरक्रियाशीलस्य तथा मृत्योः पश्चात् त्रुटिनिवारणस्य समये उपयुज्यते।</para>"
-
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:179
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You can click the <interface>Install Debug Symbols</interface> button in "
+#| "order to automatically install the missing debugging information "
+#| "packages. If this method\n"
+#| "does not work: please read <link url='%1'>How to create useful crash "
+#| "reports</link> to learn how to get a useful\n"
+#| "backtrace; install the needed packages (<link url='%2'>list of files</"
+#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method\n"
-"does not work: please read <link url='%1'>How to create useful crash "
-"reports</link> to learn how to get a useful\n"
-"backtrace; install the needed packages (<link url='%2'>list of files</link>) "
-"and click the <interface>Reload</interface> button."
+"Click the <interface>Install Debug Symbols</interface> button in order to "
+"automatically install the missing debugging information packages. If this "
+"method\n"
+"does not work, read <link url='%1'>How to create useful crash reports</link> "
+"to learn how to get a useful\n"
+"backtrace, install the needed packages (<link url='%2'>list of files</"
+"link>), then click the <interface>Reload</interface> button."
 msgstr ""
 "भवन्तः क्लिक् कर्तुं शक्नुवन्ति<interface> त्रुटिनिवारणचिह्नानि संस्थापयन्तु</interface> बटनं "
 "स्वयमेव अनुपलब्धान् त्रुटिनिवारणसूचनासङ्कुलं संस्थापयितुं । यदि एषा पद्धतिः कार्यं न करोति "
@@ -852,23 +861,50 @@ msgstr ""
 "पश्चात्तापं कथं प्राप्तुं शक्यते इति ज्ञातुं; आवश्यकानि संकुलानि संस्थापयन्तु (<link url='%2'> "
 "सञ्चिकानां सूची</link> ) इति क्लिक् कृत्वा<interface> पुनः लोड करें</interface> कड्मल।"
 
-#: qml/DeveloperPage.qml:206
+#: qml/DeveloperPage.qml:187
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "Please read <link url='%1'>How to create useful crash reports</link> to "
+#| "learn how to get a useful backtrace; install the needed packages\n"
+#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages\n"
-"(<link url='%2'>list of files</link>) and click the <interface>Reload</"
+"Read <link url='%1'>How to create useful crash reports</link> to learn how "
+"to get a useful backtrace, install the needed packages\n"
+"(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
 "कृपया पठन्तु<link url='%1'> उपयोगी क्रैश रिपोर्ट् कथं निर्मातव्यम्</link> उपयोगी "
 "पश्चात्तापं कथं प्राप्तुं शक्यते इति ज्ञातुं; आवश्यकानि संकुलानि संस्थापयन्तु (<link url='%2'> "
 "सञ्चिकानां सूची</link> ) इति क्लिक् कृत्वा<interface> पुनः लोड करें</interface> कड्मल।"
 
-#: qml/DeveloperPage.qml:217
+#: qml/DeveloperPage.qml:194
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
-"<emphasis strong='true'>You need to first install the debugger application "
-"(%1) then click the <interface>Reload</interface> button.</emphasis>"
+"Try to regenerate the backtrace by clicking the <interface>Reload</"
+"interface> button."
+msgstr ""
+"<interface>Reload</interface> इति बटन् नुत्वा भवान् backtrace पुनः उत्पन्नं कर्तुं "
+"प्रयतितुं शक्नोति स्म ।"
+
+#: qml/DeveloperPage.qml:198
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "<emphasis strong='true'>You need to first install the debugger "
+#| "application (%1) then click the <interface>Reload</interface> button.</"
+#| "emphasis>"
+msgctxt "@info/rich"
+msgid ""
+"<emphasis strong='true'>First install the debugger application (%1), then "
+"click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>भवता प्रथमं त्रुटिनिवारण-अनुप्रयोगं (%1) संस्थापयितुं आवश्यकं ततः "
 "<interface>पुनः लोड्</interface> बटनं नुदतु ।</emphasis>"
@@ -879,11 +915,19 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "दुर्घटना-रिपोर्ट्-वर्धनार्थं स्वयमेव त्रुटिनिवारण-चिह्नानि डाउनलोड् कुर्वन्तु"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Crash reports can be of greater value if additional debugging resources "
+#| "are downloaded from your distributor first.\n"
+#| "This may also cause increased memory usage and will take longer, and "
+#| "causes downloads of unknown size when a crash occurs. This is skipped "
+#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
 "downloaded from your distributor first.\n"
-"This may also cause increased memory usage and will take longer, and causes "
+"This may also cause increased memory usage, will take longer, and causes "
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
@@ -893,8 +937,11 @@ msgstr ""
 "अवतरणं भवति । मीटर् कृतस्य अन्तर्जालसम्पर्कस्य उपयोगे एतत् स्वयमेव लङ्घ्यते ।"
 
 #: qml/LoginPage.qml:14
-msgctxt "@title"
-msgid "Login into the bug tracking system"
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Login into the bug tracking system"
+msgctxt "@title:window"
+msgid "Log in to the Bug Tracking System"
 msgstr "दोषनिरीक्षणप्रणाल्यां प्रवेशं कुर्वन्तु"
 
 #: qml/LoginPage.qml:66
@@ -903,8 +950,11 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "अग्रे गन्तुं भवता स्वस्य %1 खातेन प्रवेशः करणीयः ।"
 
 #: qml/LoginPage.qml:71
+#, fuzzy
+#| msgctxt "@label:textbox bugzilla account email"
+#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
-msgid "E-mail Address:"
+msgid "Email Address:"
 msgstr "ई-मेल-सङ्केतः :"
 
 #: qml/LoginPage.qml:77
@@ -918,14 +968,23 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "KDE Wallet प्रणालीं उपयुज्य प्रवेशसूचनाः रक्षन्तु"
 
 #: qml/LoginPage.qml:91
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
+#| "system</link> in order to file a bug report, because we may need to "
+#| "contact you later\n"
+#| "for requesting further information. If you do not have one, you can "
+#| "freely <link url='%2'>create one here</link>. Please do not use "
+#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
 "link> in order to file a bug report, because we may need to contact you "
 "later\n"
-"for requesting further information. If you do not have one, you can freely "
-"<link url='%2'>create one here</link>. Please do not use disposable email "
-"accounts.</note>"
+"to request further information. If you do not have one, you can freely <link "
+"url='%2'>create one here</link>. Please do not use disposable email "
+"addresses.</note>"
 msgstr ""
 "<note>भवतः उपरि उपयोक्तृलेखस्य आवश्यकता अस्ति<link url='%1'> KDE दोषनिरीक्षणप्रणाली</"
 "link> दोषप्रतिवेदनं दातुं, यतः अधिकसूचनायाः अनुरोधाय पश्चात् भवता सह सम्पर्कः करणीयः "
@@ -938,10 +997,15 @@ msgid "Login"
 msgstr "प्रवेशः"
 
 #: qml/LoginPage.qml:106
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Use this button to login to the KDE bug tracking system using the "
+#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
-"Use this button to login to the KDE bug tracking system using the provided e-"
-"mail address and password."
+"Use this button to login to the KDE bug tracking system using the provided "
+"email address and password."
 msgstr ""
 "प्रदत्तं ई-मेल-सङ्केतं गुप्तशब्दं च उपयुज्य KDE दोषनिरीक्षणप्रणाल्यां प्रवेशार्थं एतत् बटन् "
 "उपयुज्यताम् ।"
@@ -1016,26 +1080,50 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "पुनः प्रयासं कुर्वन्तु"
 
-#: qml/MainPage.qml:57
+#: qml/MainPage.qml:12
+#, fuzzy
+#| msgid "Crash Handler"
+msgctxt "@title"
+msgid "Crash Handler"
+msgstr "क्रैश हैंडलर"
+
+#: qml/MainPage.qml:35
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "@info"
+msgid "<application>%1</application> has closed unexpectedly."
+msgstr ""
+"<para>क्षम्यतां, <application>%1</application> अप्रत्याशितरूपेण निमीलितम्।</para>"
+
+#: qml/MainPage.qml:62
 msgctxt "@action"
 msgid "Send Automatic Report"
 msgstr "स्वचालितं प्रतिवेदनं प्रेषयन्तु"
 
-#: qml/MainPage.qml:73
+#: qml/MainPage.qml:78
 msgctxt "@action"
 msgid "See Developer Information"
 msgstr "विकासकस्य सूचनां पश्यन्तु"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
-msgid "Preview the Report"
-msgstr "प्रतिवेदनस्य पूर्वावलोकनं कुर्वन्तु"
+msgid "Bug Report Preview"
+msgstr ""
 
 #: qml/PreviewPage.qml:20
+#, fuzzy
+#| msgctxt "@label/rich"
+#| msgid ""
+#| "<para>This is a preview of the report's contents which will be sent.</"
+#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
-"<para>This is a preview of the report's contents which will be sent.</"
-"para><para>If you want to modify it go to the previous pages.</para>"
+"<para>This is a preview of the contents of the report which will be sent.</"
+"para><para>If you want to modify the report, return to the previous pages.</"
+"para>"
 msgstr ""
 "<para>एतत् प्रतिवेदनस्य सामग्रीयाः पूर्वावलोकनम् अस्ति यत् प्रेषितं भविष्यति।</"
 "para><para>यदि भवान् तत् परिवर्तयितुम् इच्छति तर्हि पूर्वपृष्ठेषु गच्छतु।</para>"
@@ -1050,9 +1138,44 @@ msgctxt "@info"
 msgid "Waiting for data…"
 msgstr "दत्तांशस्य प्रतीक्षां कुर्वन्…"
 
+#: qml/RatingItem.qml:43
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is useful"
+msgctxt "@info"
+msgid "The generated crash information is useful."
+msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी भवति"
+
+#: qml/RatingItem.qml:45
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information may be useful"
+msgctxt "@info"
+msgid "The generated crash information may be useful."
+msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी भवितुम् अर्हति"
+
+#: qml/RatingItem.qml:47
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is likely not useful."
+msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी नास्ति"
+
+#: qml/RatingItem.qml:49
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The generated crash information is not useful"
+msgctxt "@info"
+msgid "The generated crash information is not useful."
+msgstr "उत्पन्नं दुर्घटनासूचना उपयोगी नास्ति"
+
 #: qml/ReportPage.qml:14
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
-msgid "Enter the Details about the Crash"
+msgid "Enter Details About the Crash"
 msgstr "दुर्घटनाविषये विवरणं प्रविशन्तु"
 
 #: qml/ReportPage.qml:22
@@ -1167,8 +1290,11 @@ msgid "Retry Submission"
 msgstr "प्रस्तुतीकरणस्य पुनः प्रयासं कुर्वन्तु"
 
 #: qml/SendingPage.qml:81
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Submitting bug report..."
 msgctxt "@info"
-msgid "Submitting bug report..."
+msgid "Submitting bug report…"
 msgstr "दोषप्रतिवेदनं प्रस्तौति..."
 
 #: qml/SentPage.qml:12
@@ -1187,9 +1313,20 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: 1.1.<link url='%1'> %1</link>"
 
 #: qml/SentPage.qml:32
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
-msgid "Thank you for being part of KDE. You can now close this window."
+msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "KDE इत्यस्य भागः भवितुं धन्यवादः। इदानीं भवान् एतत् विण्डो पिधातुं शक्नोति ।"
+
+#: qml/SentryPage.qml:12
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Send Automatic Report"
+msgctxt "@title"
+msgid "Automatic Report"
+msgstr "स्वचालितं प्रतिवेदनं प्रेषयन्तु"
 
 #: qml/SentryPage.qml:32
 #, fuzzy
@@ -1208,46 +1345,55 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "दुर्घटना प्रतिवेदन प्रेषितम्"
 
-#: qml/SentryPage.qml:61
+#: qml/SentryPage.qml:65
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr "भविष्ये :"
 
-#: qml/SentryPage.qml:64
+#: qml/SentryPage.qml:68
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "स्वयमेव दुर्घटनानां सूचनां ददातु"
 
-#: qml/SentryPage.qml:73
+#: qml/SentryPage.qml:77
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Always automatically submit a crash report to KDE's crash tracking "
+#| "system. No manual input required.\n"
+#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
-"Always automatically submit a crash report to KDE's crash tracking system. "
-"No manual input required.\n"
+"Always automatically submit a crash report to KDE's crash tracking system, "
+"with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
 "सर्वदा स्वयमेव KDE इत्यस्य दुर्घटनानिरीक्षणप्रणाल्यां दुर्घटनाप्रतिवेदनं प्रस्तौतु । मैनुअल् इनपुट् "
 "आवश्यकं नास्ति।\n"
 "भवन्तः अधिकानि दुर्घटनासूचनानि न प्राप्नुयुः।"
 
-#: qml/SentryPage.qml:89
+#: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "दुर्घटनायाः विषये अधिकं कथयन्तु…"
 
-#: qml/SentryPage.qml:100
+#: qml/SentryPage.qml:104
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "सन्देशं प्रेषयतु"
 
-#: qml/SentryPage.qml:118
+#: qml/SentryPage.qml:122
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "समापन"
 
 #: qml/WelcomePage.qml:14
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
-msgid "Welcome to the Reporting Assistant"
+msgid "Reporting Assistant"
 msgstr "रिपोर्टिंग् सहायकस्य स्वागतम्"
 
 #: qml/WelcomePage.qml:19
@@ -1260,14 +1406,23 @@ msgstr ""
 "।"
 
 #: qml/WelcomePage.qml:32
+#, fuzzy
+#| msgctxt "@info/rich note before starting the bug reporting process"
+#| msgid ""
+#| "<para><note>Since communication between you and the developers is "
+#| "required for effective debugging,\n"
+#| "to continue reporting this bug it is <emphasis strong='true'>required for "
+#| "you to agree that developers may contact you</emphasis>.\n"
+#| "</note></para><para>Feel free to close this dialog if you do not accept "
+#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
 "for effective debugging,\n"
 "to continue reporting this bug it is <emphasis strong='true'>required for "
 "you to agree that developers may contact you</emphasis>.\n"
-"</note></para><para>Feel free to close this dialog if you do not accept this."
-"</para>"
+"</note></para><para>Feel free to close this dialog if you do not wish to "
+"accept this.</para>"
 msgstr ""
 "<para><note>यतो हि प्रभावी त्रुटिनिवारणाय भवतः विकासकानां च मध्ये संचारः आवश्यकः "
 "अस्ति,\n"
@@ -1417,3 +1572,35 @@ msgstr "bugstest.kde.org उपयोक्तृनाम"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org गुप्तशब्दः"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show backtrace content (advanced)"
+#~ msgstr "backtrace सामग्रीं दर्शयतु (उन्नत) ."
+
+#~ msgctxt "@title:window"
+#~ msgid "What do You Know About the Crash?"
+#~ msgstr "दुर्घटनाविषये भवन्तः किं जानन्ति ?"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
+#~ "describes what was\n"
+#~ "happening inside the application when it crashed, so the developers may "
+#~ "track\n"
+#~ "down where the mess started. They may look meaningless to you, but they "
+#~ "might\n"
+#~ "actually contain a wealth of useful information.<nl />Backtraces are "
+#~ "commonly\n"
+#~ "used during interactive and post-mortem debugging.</para>"
+#~ msgstr ""
+#~ "<subtitle>\"backtrace\" इति किम् ?</subtitle><para>backtrace मूलतः किं आसीत् "
+#~ "इति वर्णयति\n"
+#~ "अनुप्रयोगस्य अन्तः भवति यदा सः दुर्घटनाग्रस्तः अभवत्, अतः विकासकाः अनुसरणं कर्तुं "
+#~ "शक्नुवन्ति\n"
+#~ "अधः यत्र अव्यवस्था आरब्धा। ते भवतः दृष्ट्या निरर्थकाः दृश्यन्ते, परन्तु ते दृश्यन्ते\n"
+#~ "वस्तुतः उपयोगी सूचनानां धनं भवति।<nl />पृष्ठलेखाः सामान्यतया भवन्ति\n"
+#~ "अन्तरक्रियाशीलस्य तथा मृत्योः पश्चात् त्रुटिनिवारणस्य समये उपयुज्यते।</para>"
+
+#~ msgctxt "@title"
+#~ msgid "Preview the Report"
+#~ msgstr "प्रतिवेदनस्य पूर्वावलोकनं कुर्वन्तु"
