@@ -1,27 +1,27 @@
 # Translation of drkonqi.po to Catalan (Valencian)
-# Copyright (C) 2000-2024 This_file_is_part_of_KDE
+# Copyright (C) 2000-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2001, 2002, 2004, 2005, 2006.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2010.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2014, 2017, 2019, 2020, 2021, 2022.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-12-30 08:45+0100\n"
+"PO-Revision-Date: 2025-04-01 09:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -709,9 +709,6 @@ msgstr ""
 "No mostres cap notificació, però inicia directament el diàleg de depuració"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Recuperació de la traça inversa (informació automàtica de la fallada)"
@@ -722,12 +719,9 @@ msgid "Next"
 msgstr "Següent"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "No s'ha pogut contactar amb bugs.kde.org: <message>%1</message>"
+msgstr "No s'ha pogut contactar amb %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -735,17 +729,14 @@ msgid "Retry"
 msgstr "Reintenta"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "S'està intentant contactar amb bugs.kde.org…"
+msgstr "S'està intentant contactar amb %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "El vostre coneixement"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -798,12 +789,6 @@ msgid "Not Sufficiently Useful"
 msgstr "No és prou útil"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -811,9 +796,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>La informació que podeu proporcionar no es considera prou útil per a "
-"este cas. Si no podeu pensar en més informació, podeu tancar el diàleg "
-"d'informe d'error.</para>"
+"La informació que podeu proporcionar no es considera prou útil per a este "
+"cas. Si no podeu pensar en més informació, podeu tancar el diàleg d'informe "
+"d'error."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -826,9 +811,6 @@ msgid "Install Debug Symbols"
 msgstr "Instal·la els símbols de depuració"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
@@ -874,16 +856,6 @@ msgid "Save"
 msgstr "Guarda"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -894,22 +866,15 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Podeu clicar en el botó <interface>Instal·la els símbols de depuració</"
+"Feu clic en el botó <interface>Instal·la els símbols de depuració</"
 "interface> per tal d'instal·lar automàticament els paquets amb la informació "
 "de depuració que falta.\n"
 "Si este mètode no funciona, llegiu <link url='%1'>Com crear informes de "
 "fallades útils</link> per a aprendre com aconseguir traces inverses útils;\n"
-"instal·leu els paquets necessaris (<link url='%2'>llista de fitxers</link>) "
-"i cliqueu en el botó <interface>Torna a carregar</interface>."
+"instal·leu els paquets necessaris (<link url='%2'>llista de fitxers</link>), "
+"després cliqueu en el botó <interface>Torna a carregar</interface>."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -920,37 +885,27 @@ msgstr ""
 "Llegiu <link url='%1'>Com crear informes de fallades útils</link> per a "
 "aprendre com aconseguir traces inverses útils; instal·leu els paquets "
 "necessaris\n"
-"(<link url='%2'>llista de fitxers</link>) i cliqueu en el botó "
+"(<link url='%2'>llista de fitxers</link>), després cliqueu en el botó "
 "<interface>Torna a carregar</interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Podeu intentar tornar a generar la traça inversa clicant en el botó "
+"Intenteu tornar a generar la traça inversa clicant en el botó "
 "<interface>Torna a carregar</interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Primer cal instal·lar l'aplicació de depuració (%1) "
-"i després clicar el botó <interface>Torna a carregar</interface>.</emphasis>"
+"<emphasis strong='true'>Primer instal·leu l'aplicació de depuració (%1) i "
+"després feu clic en el botó <interface>Torna a carregar</interface>.</"
+"emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -960,14 +915,6 @@ msgstr ""
 "fallada"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -978,14 +925,11 @@ msgid ""
 msgstr ""
 "Els informes de fallada poden ser de més valor si primer es descarreguen els "
 "recursos de depuració addicionals des del vostre distribuïdor.\n"
-"Açò també pot provocar un augment de l'ús de la memòria i pot tardar més, i "
+"Açò també pot provocar un augment de l'ús de la memòria, pot tardar més, i "
 "provoca baixades de mida desconeguda quan es produïx una fallada. Açò s'omet "
 "automàticament quan s'utilitza una connexió amb Internet mesurada."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Entra en el sistema de seguiments d'errors de KDE"
@@ -996,9 +940,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Cal entrar amb el vostre compte a %1 per tal de continuar."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "Adreça de correu:"
@@ -1015,15 +956,6 @@ msgstr ""
 "Guarda la informació d'entrada utilitzant el sistema de carteres de KDE"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1037,7 +969,7 @@ msgstr ""
 "d'errors de KDE</link> per tal d'emplenar un informe d'error, per què podria "
 "ser necessari contactar\n"
 "amb vós més avant per a demanar més informació. Si no en teniu cap, en podeu "
-"<link url='%2'>crear un ací</link> debades. Per favor, no utilitzeu comptes "
+"<link url='%2'>crear un ací</link> debades. Per favor, no utilitzeu adreces "
 "de correu d'un sol ús.</note>"
 
 #: qml/LoginPage.qml:105
@@ -1046,11 +978,6 @@ msgid "Login"
 msgstr "Entra"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1136,23 +1063,14 @@ msgid "Retry"
 msgstr "Reintenta"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Gestor de fallades"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Ho sentim, <application>%1</application> s'ha tancat inesperadament.</"
-"para>"
+msgstr "<application>%1</application> s'ha tancat inesperadament."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1167,14 +1085,9 @@ msgstr "Vegeu la informació del desenvolupador"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Vista prèvia de l'informe d'error"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1182,7 +1095,7 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Esta és una vista prèvia del contingut de l'informe que s'enviarà.</"
-"para><para>Si voleu modificar-lo, aneu fins a les pàgines anteriors.</para>"
+"para><para>Si voleu modificar-lo, torneu a les pàgines anteriors.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1195,41 +1108,26 @@ msgid "Waiting for data…"
 msgstr "S'estan esperant les dades…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "La informació generada de la fallada és útil"
+msgstr "La informació generada de la fallada és útil."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "La informació generada de la fallada pot ser útil"
+msgstr "La informació generada de la fallada pot ser útil."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "La informació generada de la fallada no és útil"
+msgstr "La informació generada de la fallada probablement no és útil."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "La informació generada de la fallada no és útil"
+msgstr "La informació generada de la fallada no és útil."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Introducció dels detalls de la fallada"
@@ -1354,9 +1252,6 @@ msgid "Retry Submission"
 msgstr "Torna a enviar"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "S'està enviant l'informe d'error…"
@@ -1377,20 +1272,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Gràcies per formar part de KDE. Ara podeu tancar esta finestra."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Envia un informe automàtic"
+msgstr "Informe automàtic"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1418,12 +1307,6 @@ msgid "Automatically report crashes"
 msgstr "Informa automàticament de les fallades"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1431,7 +1314,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 "Envia sempre automàticament un informe de fallada al sistema de seguiment de "
-"fallades de KDE. No cal cap entrada manual.\n"
+"fallades de KDE, sense cap entrada manual.\n"
 "No rebreu més notificacions de fallada."
 
 #: qml/SentryPage.qml:93
@@ -1450,12 +1333,9 @@ msgid "Finish"
 msgstr "Finalitza"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Us donem la benvinguda a l'assistent d'informes"
+msgstr "Assistent d'informes"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1467,15 +1347,6 @@ msgstr ""
 "procés d'informació de l'error."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1490,7 +1361,7 @@ msgstr ""
 "Per a continuar amb l'informe d'este error <emphasis strong='true'>es "
 "requerix que consentiu que els desenvolupadors puguen contactar-vos</"
 "emphasis>.\n"
-"</note></para><para>Podeu tancar este diàleg si no ho accepteu.</para>"
+"</note></para><para>Podeu tancar este diàleg si no voleu acceptar-ho.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1635,36 +1506,3 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
-
-#~ msgctxt "@action:button"
-#~ msgid "Show backtrace content (advanced)"
-#~ msgstr "Mostra el contingut de la traça inversa (avançat)"
-
-#~ msgctxt "@title:window"
-#~ msgid "What do You Know About the Crash?"
-#~ msgstr "Què coneixeu quant a la fallada?"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-#~ "describes what was\n"
-#~ "happening inside the application when it crashed, so the developers may "
-#~ "track\n"
-#~ "down where the mess started. They may look meaningless to you, but they "
-#~ "might\n"
-#~ "actually contain a wealth of useful information.<nl />Backtraces are "
-#~ "commonly\n"
-#~ "used during interactive and post-mortem debugging.</para>"
-#~ msgstr ""
-#~ "<subtitle>Què és una «traça inversa»?</subtitle><para>Una traça inversa "
-#~ "bàsicament descriu\n"
-#~ "què estava passant dins l'aplicació quan ha fallat, de manera que els "
-#~ "desenvolupadors podran\n"
-#~ "rastrejar a on s'ha iniciat el problema. Vos pot paréixer que no tenen "
-#~ "gaire significat, però poden\n"
-#~ "contindre informació útil abundant.<nl />Les traces inverses s'utilitzen "
-#~ "freqüentment durant la depuració interactiva i la post mortem.</para>"
-
-#~ msgctxt "@title"
-#~ msgid "Preview the Report"
-#~ msgstr "Vista prèvia de l'informe"

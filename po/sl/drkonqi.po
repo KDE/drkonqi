@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1706264 2025-04-01 01:21:05Z scripty $
+# $Id: drkonqi.po 1706323 2025-04-02 01:21:11Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-12-30 07:23+0100\n"
+"PO-Revision-Date: 2025-04-01 07:38+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -702,9 +702,6 @@ msgstr ""
 "razhroščevanje"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Pridobivanje povratne sledi (samodejni podatki o sesutju)"
@@ -715,12 +712,9 @@ msgid "Next"
 msgstr "Naslednji"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Kontakt s stranjo bugs.kde.org ni bil mogoč: <message>%1</message>"
+msgstr "Ni bilo mogoče vzpostaviti stika z %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -728,17 +722,14 @@ msgid "Retry"
 msgstr "Ponovno poskusi"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Poskušam pridobiti stik z bugs.kde.org..."
+msgstr "Poskus vzpostavitve stika z %1 …"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Vaše znanje"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -790,12 +781,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Ne dovolj koristno"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -803,9 +788,10 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para> Informacije, ki ste jih lahko posredovali v tem primeru, ne moremo "
-"smatrati zadostne za pomoč. Če se ne morete spomniti več informacij, lahko "
-"zaprete pogovorno okno za prijavo napake.</para>"
+"Informacije, ki jih lahko posredujete, se v tem primeru ne štejejo za dovolj "
+"koristne.\n"
+"Če se ne spomnite več informacij, lahko zaprete pogovorno okno s poročilom o "
+"napakah."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -818,13 +804,10 @@ msgid "Install Debug Symbols"
 msgstr "Namesti razhroščevalne simbole"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Kliknite ta gumb, da namestite manjkajoče pakete z razhroščevalnimi simboli."
+"S tem gumbom namestite pakete za manjkajoče simbole za odpravljanje napak."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -865,16 +848,6 @@ msgid "Save"
 msgstr "Shrani"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -885,21 +858,15 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Lahko kliknete gumb <interface>Install Debug Symbols</interface> za "
-"samodejno namestitev manjkajočih paketov z razhroščevalnimi podatki.\n"
-"Če ta metoda ne deluje: si preberite <link url='%1'>Kako ustvariti uporabna "
-"poročila o sesutjih</link>, da ugotovite kako dobiti uporabno\n"
+"Lahko kliknete gumb <interface>Namesti razhroščevalne simbole</interface> za "
+"samodejno namestitev manjkajočih paketov z razhroščevalnimi podatki. Če ta "
+"metoda\n"
+"ne deluje: si preberite <link url='%1'>Kako ustvariti uporabna poročila o "
+"sesutjih</link>, da ugotovite kako dobiti uporabno\n"
 "povratno sled; namestite zahtevane pakete (<link url='%2'>seznam datotek</"
 "link>) in kliknite gumb <interface>Znova naloži</interface>."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -909,30 +876,19 @@ msgid ""
 msgstr ""
 "Preberite si <link url='%1'>Kako ustvariti uporabna poročila o sesutjih</"
 "link>, da ugotovite kako dobiti uporabno povratno sled;\n"
-"namestite zahtevane pakete (<link url='%2'>seznam datotek</link>) in "
+"namestite zahtevane pakete (<link url='%2'>seznam datotek</link>), potem "
 "kliknite gumb <interface>Znova naloži</interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Povratno sled lahko poskusite ustvariti znova s klikom na gumb "
-"<interface>Znova naloži</interface>."
+"Poskusite obnoviti povratno sled s klikom na gumb <interface>Ponovno naloži</"
+"interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -949,14 +905,6 @@ msgstr ""
 "zrušitvah"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -967,14 +915,11 @@ msgid ""
 msgstr ""
 "Poročila o sesutju so lahko večja, če od vašega distributerja najprej "
 "prenesete dodatne vire za odpravljanje napak.\n"
-"To lahko povzroči tudi večjo porabo pomnilnika in bo trajalo dlje ter "
-"povzroči prenose neznane velikosti, ko pride do sesutja. Pri uporabi omejene "
-"merjene internetne povezave se to samodejno preskoči."
+"To lahko povzroči tudi večjo porabo pomnilnika, traja dlje časa in povzroči "
+"prenose neznane velikosti, ko pride do sesutja. Pri uporabi omejene "
+"internetne povezave se to samodejno preskoči."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Prijava v sistem za sledenje hroščem"
@@ -985,9 +930,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Da bi lahko nadaljevali, se morate prijaviti s svojim računom za %1."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "Naslov e-pošte:"
@@ -1003,15 +945,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Prijavne podatke shrani v KDE-jevo listnico"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1025,8 +958,8 @@ msgstr ""
 "sledenje hroščem</link>, kar je potrebno zato, da bi morda kasneje stopiti v "
 "stik z vami,\n"
 "da bi dobili dodatne informacije. Če računa še nimate, ga lahko <link "
-"url='%2'>prosto ustvarite tu</link>. Ne uporabljajte začasnih ali lažnih e-"
-"poštnih računov.</note>"
+"url='%2'>prosto ustvarite tu</link>. Ne uporabljajte začasnih e-poštnih "
+"računov.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1034,18 +967,13 @@ msgid "Login"
 msgstr "Prijava"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
-"Kliknite ta gumb, da se prijavite v KDE-jev sistem za sledenje programskih "
-"napak z že prej danim naslovom e-pošte in geslom."
+"S tem gumbom se prijavite v sistem za sledenje hroščem KDE z navedenim e-"
+"poštnim naslovom in geslom."
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1123,23 +1051,14 @@ msgid "Retry"
 msgstr "Poskusi ponovno"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Upravljalnik sesutij"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Se opravičujemo, program <application>%1</application> se je "
-"nepričakovano zaprl.</para>"
+msgstr "<application>%1</application> se je nepričakovano zaprla."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1154,14 +1073,9 @@ msgstr "Glejte informacije za razvijalce"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Predogled poročila o napakah"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1182,41 +1096,26 @@ msgid "Waiting for data…"
 msgstr "Čakajoč na podatke…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Ustvarjeni podatki o sesutju so uporabni"
+msgstr "Ustvarjeni podatki o sesutju so uporabni."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Ustvarjeni podatki o sesutju so morda uporabni"
+msgstr "Ustvarjeni podatki o sesutju so morda uporabni."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Ustvarjeni podatki o sesutju niso uporabni"
+msgstr "Ustvarjeni podatki o sesutju najbrž niso uporabni."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Ustvarjeni podatki o sesutju niso uporabni"
+msgstr "Ustvarjeni podatki o sesutju niso uporabni."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Vnesite podrobnosti o sesutju"
@@ -1339,12 +1238,9 @@ msgid "Retry Submission"
 msgstr "Ponovno poskusite prijaviti"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Prijavljanje poročila o hrošču..."
+msgstr "Prijavljanje poročila o hrošču…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1362,20 +1258,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Hvala, ker ste del KDE-ja. Sedaj lahko zaprete to okno."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Pošlji samodejno poročilo"
+msgstr "Samodejno poročilo"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1402,12 +1292,6 @@ msgid "Automatically report crashes"
 msgstr "Samodejno poročaj o zrušitvah"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1434,12 +1318,9 @@ msgid "Finish"
 msgstr "Končaj"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Vodnik za pomočnika za poročanje o hrošču"
+msgstr "Pomočnik za poročanje"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1451,15 +1332,6 @@ msgstr ""
 "poročanja o hrošču."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1469,11 +1341,11 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<para><note>Ker je za učinkovito razhroščevanje zahtevan vaš stik z "
-"razvijalci, se je\n"
-"za nadaljevanje poročanja o tem hrošču <emphasis strong='true'>potrebno "
-"strinjati, da lahko razvijalci stopijo v stik z vami.</emphasis>\n"
-"</note></para><para>Če se s tem ne strinjate, lahko zaprete to pogovorno "
+"<para><note>Ker je komunikacija med vami in razvijalci potrebna za "
+"učinkovito odpravljanje napak,\n"
+"in želite še naprej poročati o tej napaki, <emphasis strong='true'>se morate "
+"strinjati, da lahko razvijalci stopijo v stik z vami</emphasis>.\n"
+"</note></para><para>Če tega ne želite sprejeti, lahko zaprete to pogovorno "
 "okno.</para>"
 
 #: qml/WelcomePage.qml:45

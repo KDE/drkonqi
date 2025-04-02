@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-13 15:54+0300\n"
+"PO-Revision-Date: 2025-04-01 16:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -703,12 +703,9 @@ msgstr ""
 "başlat"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Geri İz Alınıyor (Otomatik Çökme Bilgisi)"
+msgstr "Geri İz Alınıyor (Çökme Bilgisi)"
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -716,12 +713,9 @@ msgid "Next"
 msgstr "Sonraki"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "bugs.kde.org ile iletişime geçilemedi: <message>%1</message>"
+msgstr "%1 ile iletişim kurulamadı: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -729,17 +723,14 @@ msgid "Retry"
 msgstr "Yeniden Dene"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "bugs.kde.org ile iletişim kurulmaya çalışılıyor…"
+msgstr "%1 ile iletişim kurulmaya çalışılıyor…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Bilgi Dağarcığınız"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -790,12 +781,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Yeteri Kadar Kullanışlı Değil"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -803,8 +788,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Sağladığınız bilgi, bu durum için yeterli değil. Verebileceğiniz başka "
-"bir bilgi yoksa hata raporu penceresini kapatabilirsniz.</para>"
+"Sağladığınız bilgi, bu durum için yeterli değil.\n"
+"Verebileceğiniz başka bir bilgi yoksa hata raporu iletişim kutusunu "
+"kapatabilirsiniz."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -817,13 +803,11 @@ msgid "Install Debug Symbols"
 msgstr "Hata Ayıklama Sembollerini Kur"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Eksik hata ayıklama sembolü paketlerini kurmak için bu düğmeyi kullanın."
+"Eksik hata ayıklama sembolleri için olan paketleri kurmak için bu düğmeyi "
+"kullanın."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -863,16 +847,6 @@ msgid "Save"
 msgstr "Kaydet"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -883,24 +857,14 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Eksik hata ayıklama paketlerini kendiliğinden yüklemek için <interface>Hata\n"
-"Ayıklama Sembollerini Kur</interface> düğmesine tıklayın. Eğer bu yöntem "
-"işe\n"
-"yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
-"url='%1'>Nasıl\n"
-"yararlı hata raporları oluşturulur</link> yazısını okuyun; gerekli "
-"paketleri\n"
-"kurun (<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden "
-"Yükle</interface> düğmesine basın."
+"Eksik hata ayıklama paketlerini kendiliğinden yüklemek için <interface>Hata "
+"Ayıklama Sembollerini Kur</interface> düğmesine tıklayın.\n"
+"Eğer bu yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek için <link "
+"url='%1'>Nasıl yararlı hata raporları oluşturulur</link> yazısını okuyun; "
+"gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
+"<interface>Yeniden Yükle</interface> düğmesine basın."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -908,40 +872,28 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
-"hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri kurun\n"
-"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
-"interface> düğmesine basın."
+"Yararlı geri iz almayı öğrenmek için <link url='%1'>Nasıl yararlı\n"
+"hata raporları oluşturulur</link> belgesini okuyun; gerekli\n"
+"paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve\n"
+"<interface>Yeniden Yükle</interface> düğmesine basın."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
 "<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
-"oluşturmayı deneyebilirsiniz."
+"üretmeyi deneyin."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurmanız (%1) "
-"ve <interface>Yeniden Yükle</interface> düğmesine basmanız gerekiyor.</"
-"emphasis>"
+"<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurun (%1) ve "
+"<interface>Yeniden Yükle</interface> düğmesine basın.</emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -951,14 +903,6 @@ msgstr ""
 "indir"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -974,12 +918,9 @@ msgstr ""
 "bağlantısı kullanıyorsanız bu genelde atlanır."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "Hata takip sistemine oturum açma"
+msgstr "Oturum Aç"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -987,9 +928,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Sürdürmek için %1 hesabınızla oturum açmanız gerekmektedir."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-posta adresi:"
@@ -1005,15 +943,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Oturum açma bilgilerini KDE Cüzdan Yöneticisini kullanarak kaydet"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1028,7 +957,7 @@ msgstr ""
 "sizden daha fazla bilgi istemek için sizinle iletişime geçmemiz "
 "gerekebilir.\n"
 "Eğer hesabınız yoksa <link url='%2'>buradan</link> bir tane açabilirsiniz. "
-"Lütfen tek kullanımlık e-posta hesapları kullanmayınız.</note>"
+"Lütfen tek kullanımlık e-posta adresleri kullanmayın.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1036,11 +965,6 @@ msgid "Login"
 msgstr "Oturum Aç"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1126,23 +1050,15 @@ msgid "Retry"
 msgstr "Yeniden Dene"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Çökme İşleyicisi"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
 msgstr ""
-"<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
-"biçimde kapandı.</para>"
+"<application>%1</application> uygulaması beklenmedik bir biçimde kapandı."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1157,14 +1073,9 @@ msgstr "Geliştirici Bilgisini Gör"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Hata Raporu Önizlemesi"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1172,8 +1083,8 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Bu, gönderilecek hata raporunun içeriğinin bir önizlemesidir.</"
-"para><para>Eğer raporu değiştirmek istiyorsanız önceki sayfalara geri dönün."
-"</para>"
+"para><para>Eğer raporda değişiklik yapmak istiyorsanız önceki sayfalara geri "
+"dönün.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1186,44 +1097,29 @@ msgid "Waiting for data…"
 msgstr "Veri bekleniyor…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Kendiliğinden üretilen çökme bilgisi yararlı"
+msgstr "Üretilen çökme bilgisi yararlı."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Oluşturulan çökme bilgisi yararlı olabilir"
+msgstr "Üretilen çökme bilgisi yararlı olabilir."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Çökme bilgisi yararlı değil"
+msgstr "Üretilen çökme bilgisi yararlı değil gibi görünüyor."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Çökme bilgisi yararlı değil"
+msgstr "Üretilen çökme bilgisi yararlı değil."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Çökme Ayrıntıları Girin"
+msgstr "Çökme Ayrıntılarını Gir"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1344,9 +1240,6 @@ msgid "Retry Submission"
 msgstr "Göndermeyi Yeniden Dene"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "Hata raporu gönderiliyor…"
@@ -1367,9 +1260,6 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
@@ -1377,12 +1267,9 @@ msgstr ""
 "kapatabilirsiniz."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Otomatik Rapor Gönder"
+msgstr "Kendiliğinden Rapor Gönderimi"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1410,12 +1297,6 @@ msgid "Automatically report crashes"
 msgstr "Çökmeleri kendiliğinden bildir"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1424,7 +1305,7 @@ msgid ""
 msgstr ""
 "Çökme raporlarını KDE’nin çökme izleme sistemine her zaman kendiliğinden "
 "gönderin. Elle girdi gerekmez.\n"
-"Herhangi bir çökme bildirimi almazsınız."
+"Bundan sonra herhangi bir çökme bildirimi almazsınız."
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
@@ -1442,12 +1323,9 @@ msgid "Finish"
 msgstr "Bitir"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Raporlama Yardımcısına Hoş Geldiniz"
+msgstr "Raporlama Yardımcısı"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1459,15 +1337,6 @@ msgstr ""
 "sürecinde size kılavuzluk yapacaktır."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1478,11 +1347,10 @@ msgid ""
 "accept this.</para>"
 msgstr ""
 "<para><note>Etkili hata ayıklama için sizin ve geliştiricilerin iletişimde "
-"kalması\n"
-"gerekeceğinden, <emphasis strong='true'>geliştiricilerin sizinle iletişime "
-"geçebileceğine onay vermeniz gerekmektedir</emphasis>.\n"
-"</note></para><para>Bunu kabul etmiyorsanız bu pencereyi kapatabilirsiniz.</"
-"para>"
+"kalması gerekeceğinden, <emphasis strong='true'>geliştiricilerin sizinle "
+"iletişime geçebileceğine onay vermeniz gerekmektedir</emphasis>.\n"
+"</note></para><para>Bunu kabul etmiyorsanız bu iletişim kutusunu "
+"kapatabilirsiniz.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"

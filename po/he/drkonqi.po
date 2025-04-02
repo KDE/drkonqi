@@ -17,13 +17,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2008, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-12-30 17:36+0200\n"
+"PO-Revision-Date: 2025-04-01 08:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -677,9 +677,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "לא להציג התראה, להפעיל את חלונית ניפוי השגיאות ישירות"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "ניתוח המהלכים (פרטי קריסה אוטומטיים) מתקבל"
@@ -690,12 +687,9 @@ msgid "Next"
 msgstr "הבא"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "יצירת קשר עם bugs.kde.org נכשלה: <message>%1</message>"
+msgstr "יצירת קשר עם %1 נכשלה: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -703,17 +697,14 @@ msgid "Retry"
 msgstr "ניסיון חוזר"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "מתבצע ניסיון ליצור קשר עם bugs.kde.org…"
+msgstr "מתבצע ניסיון ליצור קשר עם %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "הידע שלך"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -791,9 +782,6 @@ msgid "Install Debug Symbols"
 msgstr "התקנת סמלי ניפוי שגיאות"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "כפתור זה מתקין את חבילות סמלי ניפוי השגיאות החסרות."
@@ -885,11 +873,6 @@ msgstr ""
 "interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -899,12 +882,6 @@ msgstr ""
 "מחדש</interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -919,14 +896,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "להוריד סמלי ניפוי שגיאות אוטומטית כדי להעשיר את דוחות הקריסה"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -937,13 +906,10 @@ msgid ""
 msgstr ""
 "דיווחי קריסות יכולים לספק ערך רב יותר אם משאבי ניפוי שגיאות נוספים יתקבלו "
 "מהספק שלך תחילה.\n"
-"יכול גם לגרום להגדלת ניצולת הזיכרון ולארוך זמן רב יותר וגם לגרום להורדות "
-"בגודל בלתי ידוע כשמתרחשת קריסה. נפסח אוטומטית על חיבור אינטרנט מדוד/מוגבל."
+"יכול גם לגרום להגדלת ניצולת הזיכרון, לארוך זמן רב יותר ולגרום להורדות בגודל "
+"בלתי ידוע כשמתרחשת קריסה. נפסח אוטומטית על חיבור אינטרנט מדוד/מוגבל."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "כניסה למערכת מעקב התקלות"
@@ -954,9 +920,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "צריך להתחבר עם חשבון ה־%1 שלך כדי להמשיך."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "כתובת דוא״ל:"
@@ -1001,11 +964,6 @@ msgid "Login"
 msgstr "כניסה"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1085,21 +1043,14 @@ msgid "Retry"
 msgstr "ניסיון חוזר"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "מטפל בקריסות"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr "<para>‏<application>%1</application> נסגר במפתיע, עימך הסליחה.</para>"
+msgstr "‏<application>%1</application> נסגר במפתיע."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1114,14 +1065,9 @@ msgstr "הצגת פרטים למפתחים"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "תצוגה מקדימה של דיווח תקלה"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1142,44 +1088,29 @@ msgid "Waiting for data…"
 msgstr "בהמתנה לנתונים…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "פרטי הקריסה שנוצרו מביאים תועלת"
+msgstr "פרטי הקריסה שנוצרו מביאים תועלת."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "פרטי הקריסה שנוצרו עשוים להביא תועלת"
+msgstr "פרטי הקריסה שנוצרו עשויים להביא תועלת"
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "פרטי הקריסה לא מביאים תועלת"
+msgstr "פרטי הקריסה כנראה לא יביאו תועלת."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "פרטי הקריסה לא מביאים תועלת"
+msgstr "פרטי הקריסה חסרי תועלת."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "נא למלא את פרטי הקריסה"
+msgstr "נא למלא פרטים על הקריסה"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1293,9 +1224,6 @@ msgid "Retry Submission"
 msgstr "לנסות להגיש מחדש"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "דוח השגיאה מוגש…"
@@ -1316,20 +1244,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "כתובת: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr "תודה על שלקחת חלק בעשייה של KDE. עכשיו אפשר לסגור את החלון הזה."
+msgstr "תודה על שלקחת חלק בעשייה של KDE. אפשר לסגור את החלון הזה."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "שליחת דוח אוטומטי"
+msgstr "דוח אוטומטי"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1387,12 +1309,9 @@ msgid "Finish"
 msgstr "סיום"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "מדריך עזר לדיווח באגים"
+msgstr "מסייע דיווח"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1402,15 +1321,6 @@ msgid ""
 msgstr "המסייע ינתח את פרטי הקריסה וידריך אותך איך לדווח על תקלה."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
