@@ -655,12 +655,9 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "不显示通知，直接启动调试对话框"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "获取回溯跟踪数据 (自动崩溃信息)"
+msgstr ""
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -668,12 +665,9 @@ msgid "Next"
 msgstr "下一个"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "连接 bugs.kde.org 失败：<message>%1</message>"
+msgstr ""
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -681,12 +675,9 @@ msgid "Retry"
 msgstr "重试"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "正在尝试连接 bugs.kde.org..."
+msgstr ""
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -742,12 +733,6 @@ msgid "Not Sufficiently Useful"
 msgstr "信息不够详细"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -755,8 +740,6 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>在这种情况下，您能够提供的信息无法帮助我们确定问题的成因。 如果您回想不"
-"出更多信息，请关闭错误报告对话框。</para>"
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -769,12 +752,9 @@ msgid "Install Debug Symbols"
 msgstr "安装调试符号包"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr "点击此按钮可安装所需的调试符号包。"
+msgstr ""
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -813,16 +793,6 @@ msgid "Save"
 msgstr "保存"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -833,20 +803,8 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"您可以点击<interface>安装调试符号包</interface>按钮来立即安装所需的软件包。\n"
-"如果此方法无效：请阅读<link url='%1'>如何创建有用的崩溃报告</link>指引了解如"
-"何获取回溯跟踪数据。\n"
-"请安装所需的软件包(<link url='%2'>文件列表</link>)，然后请点击<interface>重新"
-"加载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -854,37 +812,20 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"请阅读<link url='%1'>如何创建有用的崩溃报告</link>指引了解如何获取有用的回溯"
-"跟踪数据。请安装所需的软件包(<link url='%2'>文件列表</link>)，然后点击"
-"<interface>重新加载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"您可以尝试点击<interface>重新加载</interface>按钮重新生成回溯跟踪数据。"
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
-"</interface>按钮。</emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -892,14 +833,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "自动下载调试符号包以提高崩溃报告价值"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -908,18 +841,11 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
-"为了提高崩溃报告的价值，您可以选择自动从软件的发行机构下载额外的调试资源"
-"包。\n"
-"这将增加内存占用并耗时更久，系统还要在崩溃时自动下载未知大小的软件包。当使用"
-"按流量计费网络连接时将不会自动下载。"
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "登录到 KDE 程序缺陷跟踪系统"
+msgstr ""
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -927,12 +853,9 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "您需要登录 %1 账户才能继续操作。"
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr "电子邮件地址："
+msgstr ""
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -945,15 +868,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "使用 KDE 密码库系统保存登录信息"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -963,10 +877,6 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
-"<note>您需要一个 <link url='%1'>KDE 程序缺陷跟踪系统</link>账户来提交错误报"
-"告，以便我们联系您了解更多具体情况。\n"
-"如果您并未注册该账户，请<link url='%2'>在此免费创建</link>。请勿使用一次性的"
-"电子邮件账户进行注册。</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -974,16 +884,11 @@ msgid "Login"
 msgstr "登录"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
-msgstr "点击此按钮可使用您的邮件地址和密码登录到 KDE 程序缺陷跟踪系统。"
+msgstr ""
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1054,21 +959,14 @@ msgid "Retry"
 msgstr "重试"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
-msgstr "崩溃处理程序"
+msgstr ""
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr "<para>非常抱歉，<application>%1</application> 已经意外关闭。</para>"
+msgstr ""
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1086,19 +984,12 @@ msgid "Bug Report Preview"
 msgstr ""
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
-"<para>这是您将要发送的报告内容的预览。</para><para>如果您还想修改它，请返回上"
-"一页。</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1111,44 +1002,29 @@ msgid "Waiting for data…"
 msgstr "正在等待数据…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "下面生成的崩溃信息具备参考价值"
+msgstr ""
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "下面生成的崩溃信息可能具备参考价值"
+msgstr ""
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "下面生成的崩溃信息不具备参考价值"
+msgstr ""
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "下面生成的崩溃信息不具备参考价值"
+msgstr ""
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "输入本次崩溃的详情"
+msgstr ""
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1263,12 +1139,9 @@ msgid "Retry Submission"
 msgstr "再次尝试提交"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "正在提交程序缺陷报告..."
+msgstr ""
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1286,20 +1159,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL：<link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
+msgstr ""
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "发送自动报告"
+msgstr ""
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1325,20 +1192,12 @@ msgid "Automatically report crashes"
 msgstr "自动报告崩溃"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
-"总是自动提交崩溃报告到 KDE 崩溃跟踪系统。这不需要任何人工干预。您将不再收到关"
-"于崩溃的通知。"
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
@@ -1356,12 +1215,9 @@ msgid "Finish"
 msgstr "结束"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "欢迎使用报告助手"
+msgstr ""
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1371,15 +1227,6 @@ msgid ""
 msgstr "本助手将分析崩溃信息，并引导您完成程序缺陷报告过程。"
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1389,10 +1236,6 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<para><note>注意：为了有效排查程序问题，您和开发人员之间的沟通必不可少。\n"
-"继续进行程序缺陷报告意味着<emphasis strong='true'>您同意开发人员与您联系</"
-"emphasis>。</note></para>\n"
-"<para>如果您不同意此条件，请关闭本对话框。</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1535,34 +1378,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@action:button"
-#~ msgid "Show backtrace content (advanced)"
-#~ msgstr "显示回溯数据内容 (高级)"
-
-#~ msgctxt "@title:window"
-#~ msgid "What do You Know About the Crash?"
-#~ msgstr "您对此次崩溃的情况掌握哪些信息？"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-#~ "describes what was\n"
-#~ "happening inside the application when it crashed, so the developers may "
-#~ "track\n"
-#~ "down where the mess started. They may look meaningless to you, but they "
-#~ "might\n"
-#~ "actually contain a wealth of useful information.<nl />Backtraces are "
-#~ "commonly\n"
-#~ "used during interactive and post-mortem debugging.</para>"
-#~ msgstr ""
-#~ "<subtitle>“回溯跟踪数据”是什么？</subtitle>\n"
-#~ "<para>回溯跟踪数据大致描述了在应用程序崩溃时它的内部情况，\n"
-#~ "开发人员可以通过这些数据分析崩溃的原因。\n"
-#~ "虽然您可能读不懂这些数据，\n"
-#~ "但它们或许会包含一些有用的线索。<nl />\n"
-#~ "回溯跟踪数据通常也被用于进行交互式和崩溃后调试。</para>"
-
-#~ msgctxt "@title"
-#~ msgid "Preview the Report"
-#~ msgstr "预览报告"
