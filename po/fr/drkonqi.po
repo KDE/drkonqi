@@ -11,7 +11,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2008, 2010, 2011.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2007, 2008.
-# SPDX-FileCopyrightText: 2011, 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2011, 2013, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Sébastien Renard <renard@kde.org>, 2011, 2012, 2016.
 # Vincent Pinon <vpinon@kde.org>, 2015, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-12-31 09:56+0100\n"
+"PO-Revision-Date: 2025-04-02 10:00+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -175,25 +175,28 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is useful"
-msgstr "Les informations du plantage sont utiles"
+msgstr "Les informations produites suite au plantage sont utilisables."
 
 #: backtracewidget.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information may be useful"
-msgstr "Les informations du plantage peuvent être utiles"
+msgstr ""
+"Les informations produites suite au plantage pourraient être utilisables."
 
 #: backtracewidget.cpp:247
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is probably not useful"
-msgstr "Les informations du plantage ne suffisent probablement pas"
+msgstr ""
+"Les informations produites suite au plantage ne sont pas probablement "
+"utilisables."
 
 #: backtracewidget.cpp:250
 #, kde-format
 msgctxt "@info"
 msgid "The generated crash information is not useful"
-msgstr "Les informations du plantage ne suffisent pas"
+msgstr "Les informations produites suite au plantage ne sont pas utilisables."
 
 #: backtracewidget.cpp:255
 #, kde-format
@@ -726,12 +729,11 @@ msgstr ""
 "dialogue de débogage"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Extraction de la pile d'appels (informations automatiques du plantage)"
+msgstr ""
+"Extraction de la pile d'appels (Informations du plantage produites "
+"automatiquement)"
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -739,13 +741,9 @@ msgid "Next"
 msgstr "Prochain"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr ""
-"Impossible de contacter le site « bugs.kde.org » : <message>%1</message>."
+msgstr "Impossible de contacter %1 : <message>%2</message>."
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -753,17 +751,14 @@ msgid "Retry"
 msgstr "Ré-essayer"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Tentative de connexion au site « bugs.kde.org » en cours..."
+msgstr "Tentative de connexion à %1 en cours..."
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Vos connaissances"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -818,12 +813,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Pas suffisamment utile"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -831,9 +820,10 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Les informations que vous pouvez fournir ne semblent pas assez utiles "
-"dans ce cas. Si vous ne pensez pas pouvoir fournir plus d'informations, vous "
-"pouvez alors fermer la boîte de dialogue du rapport.</para>"
+"Les informations que vous pouvez fournir ne semblent pas assez utilisables "
+"dans ce cas.\n"
+"Si vous ne pensez pas pouvoir fournir plus d'informations, vous pouvez "
+"fermer maintenant la boîte de dialogue de rapport.</para>"
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -846,14 +836,11 @@ msgid "Install Debug Symbols"
 msgstr "Installer des symboles de débogage"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Utilisez ce bouton pour installer les paquets manquants de symboles de "
-"débogage."
+"Veuillez utiliser ce bouton pour installer les paquets manquants de symboles "
+"de débogage."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -894,16 +881,6 @@ msgid "Save"
 msgstr "Enregistrer"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -914,23 +891,16 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Vous pouvez cliquer sur le bouton <interface>Installer des symboles de "
+"Veuillez cliquer sur le bouton <interface>Installer des symboles de "
 "débogage</interface> afin d'installer automatiquement les paquets manquants "
 "d'informations de débogage. Si cette méthode ne \n"
 "fonctionne pas : veuillez lire <link url='%1'>Comment créer des rapports de "
-"bogue utiles</link> pour apprendre\n"
-"comment obtenir une pile d'appels utile ; installer les paquets nécessaires "
-"(<link url='%2'>liste des fichiers</link>) et cliquez sur le bouton "
-"<interface>Recharger</interface>."
+"bogue utilisables</link> pour apprendre\n"
+"comment produire une pile d'appels utilisable, installer les paquets "
+"nécessaires (<link url='%2'>Liste des fichiers</link>) et cliquer sur le "
+"bouton <interface>Recharger</interface>."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -939,40 +909,29 @@ msgid ""
 "interface> button."
 msgstr ""
 "Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
-"plantages utiles</link> pour apprendre comment obtenir une pile d'appels "
-"utile, installer les paquets nécessaires\n"
-"(<link url='%2'>liste des fichiers</link>) puis cliquez sur le bouton "
-"<interface>Recharger</interface>."
+"plantages utilisables</link> pour apprendre comment obtenir une pile "
+"d'appels utilisable, installer les paquets nécessaires\n"
+"(<link url='%2'>liste des fichiers</link>) puis veuillez ensuite cliquer sur "
+"le bouton <interface>Recharger</interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Vous pouvez essayer de régénérer une pile d'appels en cliquant sur le bouton "
+"Veuillez essayer de régénérer la pile d'appels par un clic sur le bouton "
 "<interface>Recharger</interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Vous devez d'abord installer l'application de "
-"débogage (« %1 ») et ensuite, puis cliquer sur le bouton "
-"<interface>Recharger</interface>.</emphasis>"
+"<emphasis strong='true'>Veuillez d'abord installer l'application de débogage "
+"(%1) et ensuite cliquer sur le bouton <interface>Recharger</interface>.</"
+"emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -982,14 +941,6 @@ msgstr ""
 "rapports de plantages"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1001,18 +952,16 @@ msgstr ""
 "Les rapports de plantage peuvent être d'une plus grande valeur si des "
 "ressources de débogage supplémentaires sont d'abord téléchargées pour votre "
 "distribution.\n"
-"Ceci provoque aussi une utilisation plus importante de la mémoire et prend "
-"plus de temps, ainsi que des téléchargements de taille inconnue lorsqu'un "
-"plantage se produit. Ceci est ignoré automatiquement lorsque vous utilisez "
-"une connexion Internet avec un volume limité de données."
+"Ceci peut conduire aussi à une augmentation d'utilisation de la mémoire, un "
+"temps de génération plus important, ainsi que des téléchargements de taille "
+"inconnue lorsqu'un plantage se produit. Ce besoin est ignoré automatiquement "
+"lorsque vous utilisez une connexion Internet avec un volume limité de "
+"données."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "Connexion au système de suivi des bogues"
+msgstr "Se connecter au système de suivi des bogues"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -1021,12 +970,9 @@ msgstr ""
 "Vous devez vous connecter avec votre compte « %1 » pour pouvoir continuer."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr "Adresse de courrier électronique :"
+msgstr "Adresse de courriel :"
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -1039,15 +985,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Enregistrer les informations de connexion dans le portefeuille KDE"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1058,11 +995,11 @@ msgid ""
 "addresses.</note>"
 msgstr ""
 "<note>Vous avez besoin d'un compte utilisateur sur le <link url='%1'>système "
-"de suivi de bogues KDE</link> afin de créer un rapport de bogue. En effet, "
-"nous aurons, peut être, besoin de vous recontacter plus tard\n"
-"pour plus d'informations. Si vous n'en avez pas, vous pouvez librement en "
-"<link url='%2'>créer un ici</link>. Veuillez ne pas utiliser une adresse de "
-"courriel jetable.</note>"
+"de suivi de bogues de KDE</link> afin de remplir un rapport de bogue. En "
+"effet, nous aurons, peut être, besoin de vous contacter plus tard\n"
+"pour plus d'informations. Si vous n'avez aucun compte, vous pouvez librement "
+"en <link url='%2'>créer un ici</link>. Veuillez ne pas utiliser une adresse "
+"de courriel jetable.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1070,18 +1007,13 @@ msgid "Login"
 msgstr "Connexion"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
-"Utilisez ce bouton pour vous connecter au système de suivi des bogues KDE en "
-"utilisant votre adresse de courrier électronique et votre mot de passe."
+"Veuillez utiliser ce bouton pour vous connecter au système de suivi des "
+"bogues KDE en utilisant votre adresse de courriel et votre mot de passe."
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1166,23 +1098,14 @@ msgid "Retry"
 msgstr "Réessayer"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Gestionnaire de plantages"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Nous sommes désolés, l'application <application>%1</application> s'est "
-"arrêtée subitement.</para>"
+msgstr "L'application <application>%1</application> s'est arrêtée subitement."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1197,14 +1120,9 @@ msgstr "Afficher les informations pour l'équipe de développement"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Aperçu du rapport de bogue"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1212,8 +1130,8 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Ceci est un aperçu du contenu du rapport qui sera envoyé.</"
-"para><para>Si vous souhaitez le modifier, revenez vers les pages précédentes."
-"</para>"
+"para><para>Si vous souhaitez le modifier, veuillez revenir aux pages "
+"précédentes.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1226,44 +1144,32 @@ msgid "Waiting for data…"
 msgstr "En attente de données..."
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Les informations du plantage sont utiles"
+msgstr "Les informations produites suite au plantage sont utilisables."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Les informations du plantage peuvent être utiles"
+msgstr ""
+"Les informations produites concernant le plantage pourraient être utiles."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Les informations du plantage ne suffisent pas"
+msgstr ""
+"Les informations produites suite au plantage ne sont probablement pas "
+"utilisables."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Les informations du plantage ne suffisent pas"
+msgstr "Les informations produites suite au plantage ne sont pas utilisables."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Saisissez les détails concernant le plantage"
+msgstr "Veuillez saisir les détails concernant le plantage"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1387,12 +1293,9 @@ msgid "Retry Submission"
 msgstr "Effectuer une nouvelle tentative de publication"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Transmission d'un rapport de bogue..."
+msgstr "Transmission d'un rapport de bogue en cours..."
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1410,21 +1313,16 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL : <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
-"Merci de contribuer à KDE. Vous pouvez maintenant fermer cette fenêtre."
+"Merci pour votre contribution à la communauté de KDE. Vous pouvez maintenant "
+"fermer cette fenêtre."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Envoyer automatiquement le rapport de plantage"
+msgstr "Rapport automatique"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1452,12 +1350,6 @@ msgid "Automatically report crashes"
 msgstr "Signaler automatiquement les plantages"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1466,7 +1358,7 @@ msgid ""
 msgstr ""
 "Toujours envoyer automatiquement un rapport de plantage au système de suivi "
 "des bogues de KDE. Aucune saisie manuelle n'est requise. \n"
-"Vous ne recevrez plus de notifications de plantage."
+"Vous ne recevrez plus aucune notification de plantage."
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
@@ -1484,12 +1376,9 @@ msgid "Finish"
 msgstr "Terminer"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Guide pour l'assistant de rapport de bogues"
+msgstr "Assistant de rapport"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1501,15 +1390,6 @@ msgstr ""
 "le processus de rapport de bogue."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1519,12 +1399,13 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<para><note>Comme la communication entre vous et les développeurs est "
-"nécessaire pour un débogage efficace, \n"
+"<para><note>Comme la communication entre vous et l'équipe de développement "
+"est nécessaire pour un débogage efficace, \n"
 "il est nécessaire pour continuer <emphasis strong='true'>que vous acceptiez "
-"que les développeurs puissent vous contacter.</emphasis>\n"
-". </note></para><para>Vous pouvez tout à fait fermer cette fenêtre si vous "
-"ne l'acceptez pas cela.</para>"
+"que les membres de l'équipe de développement puissent vous contacter.</"
+"emphasis>.\n"
+"</note></para><para>Vous pouvez tout à fait fermer cette fenêtre de dialogue "
+"si vous ne souhaitez pas être contacté.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"

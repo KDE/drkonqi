@@ -657,7 +657,7 @@ msgstr "不显示通知，直接启动调试对话框"
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr ""
+msgstr "获取回溯跟踪数据 (自动崩溃信息)"
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -667,7 +667,7 @@ msgstr "下一个"
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr ""
+msgstr "连接 %1 失败：<message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -677,12 +677,12 @@ msgstr "重试"
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr ""
+msgstr "正在尝试连接 %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "您的知识"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -740,6 +740,8 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
+"在这种情况下，您能够提供的信息无法帮助我们确定问题的成因。 如果您回想不出更多"
+"信息，请关闭错误报告对话框。"
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -754,7 +756,7 @@ msgstr "安装调试符号包"
 #: qml/DeveloperPage.qml:42
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr ""
+msgstr "使用此按钮来安装缺少的调试符号软件包。"
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -803,6 +805,11 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
+"您可以点击<interface>安装调试符号包</interface>按钮来立即安装所需的软件包。\n"
+"如果此方法无效：请阅读<link url='%1'>如何创建有用的崩溃报告</link>指引了解如"
+"何获取回溯跟踪数据。\n"
+"请安装所需的软件包(<link url='%2'>文件列表</link>)，然后请点击<interface>重新"
+"加载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:187
 msgctxt "@info/rich"
@@ -812,6 +819,10 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
+"请阅读<link url='%1'>如何创建有用的崩溃报告</link>指引了解如何获取有用的回溯"
+"跟踪数据。\n"
+"请安装所需的软件包(<link url='%2'>文件列表</link>)，然后点击<interface>重新加"
+"载</interface>按钮。"
 
 #: qml/DeveloperPage.qml:194
 msgctxt "@info/rich"
@@ -819,6 +830,7 @@ msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
+"您可以尝试点击<interface>重新加载</interface>按钮重新生成回溯跟踪数据。"
 
 #: qml/DeveloperPage.qml:198
 msgctxt "@info/rich"
@@ -826,6 +838,8 @@ msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
+"</interface>按钮。</emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -841,11 +855,15 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
+"为了提高崩溃报告的价值，您可以选择自动从软件的发行机构下载额外的调试资源"
+"包。\n"
+"这将增加内存占用并耗时更久，系统还要在崩溃时自动下载未知大小的软件包。当使用"
+"按流量计费网络连接时将不会自动下载。"
 
 #: qml/LoginPage.qml:14
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr ""
+msgstr "登录到 KDE 程序缺陷跟踪系统"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -855,7 +873,7 @@ msgstr "您需要登录 %1 账户才能继续操作。"
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr ""
+msgstr "电邮地址："
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -877,6 +895,10 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
+"<note>您需要一个 <link url='%1'>KDE 程序缺陷跟踪系统</link>账户来提交错误报"
+"告，以便我们联系您了解更多具体情况。\n"
+"如果您并未注册该账户，请<link url='%2'>在此免费创建</link>。请勿使用一次性的"
+"电子邮件账户进行注册。</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -888,7 +910,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
-msgstr ""
+msgstr "点击此按钮可使用您的邮件地址和密码登录到 KDE 程序缺陷跟踪系统。"
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -961,12 +983,12 @@ msgstr "重试"
 #: qml/MainPage.qml:12
 msgctxt "@title"
 msgid "Crash Handler"
-msgstr ""
+msgstr "崩溃处理程序"
 
 #: qml/MainPage.qml:35
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
+msgstr "<application>%1</application> 意外关闭。"
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -981,7 +1003,7 @@ msgstr "查看开发者信息"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "程序缺陷报告预览"
 
 #: qml/PreviewPage.qml:20
 msgctxt "@label/rich"
@@ -990,6 +1012,8 @@ msgid ""
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
+"<para>这是您将要发送的报告内容的预览。</para><para>如果您还想修改它，请返回上"
+"一页。</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1004,27 +1028,27 @@ msgstr "正在等待数据…"
 #: qml/RatingItem.qml:43
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr ""
+msgstr "生成的崩溃信息具备参考价值。"
 
 #: qml/RatingItem.qml:45
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr ""
+msgstr "生成的崩溃信息可能具备参考价值。"
 
 #: qml/RatingItem.qml:47
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr ""
+msgstr "生成的崩溃信息可能不具备参考价值。"
 
 #: qml/RatingItem.qml:49
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr ""
+msgstr "生成的崩溃信息不具备参考价值。"
 
 #: qml/ReportPage.qml:14
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr ""
+msgstr "输入本次崩溃的详情"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1141,7 +1165,7 @@ msgstr "再次尝试提交"
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr ""
+msgstr "正在提交程序缺陷报告…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1161,12 +1185,12 @@ msgstr "URL：<link url='%1'>%1</link>"
 #: qml/SentPage.qml:32
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr ""
+msgstr "感谢您对 KDE 的帮助。您现在可以关闭此窗口。"
 
 #: qml/SentryPage.qml:12
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr ""
+msgstr "自动报告"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1198,6 +1222,8 @@ msgid ""
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"总是自动提交崩溃报告到 KDE 崩溃跟踪系统，无需人工干预。\n"
+"您将不再收到关于崩溃的通知。"
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
@@ -1217,7 +1243,7 @@ msgstr "结束"
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr ""
+msgstr "报告辅助程序"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1236,6 +1262,10 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
+"<para><note>注意：为了有效排查程序问题，您和开发人员之间的沟通必不可少。\n"
+"继续进行程序缺陷报告意味着<emphasis strong='true'>您同意开发人员与您联系</"
+"emphasis>。</note></para>\n"
+"<para>如果您不同意此条件，请关闭本对话框。</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
