@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-01-11 12:03+0100\n"
+"PO-Revision-Date: 2025-04-06 10:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -686,9 +686,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Visa inte en underrättelse utan starta felsökningsdialogrutan direkt"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Hämtar bakåtspårningen (automatisk kraschinformation)"
@@ -699,12 +696,9 @@ msgid "Next"
 msgstr "Nästa"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Misslyckades kontakta bugs.kde.org:  <message>%1</message>."
+msgstr "Misslyckades kontakta %1:  <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -712,17 +706,14 @@ msgid "Retry"
 msgstr "Försök igen"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Försöker kontakta bugs.kde.org ..."
+msgstr "Försöker kontakta %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Din kunskap"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -773,12 +764,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Inte tillräckligt användbar"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -786,9 +771,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Informationen du kan tillhandahålla anses inte ge tillräckligt mycket "
-"hjälp i det här fallet. om du inte kan komma på mer information kan du "
-"stänga felrapportdialogrutan.</para>"
+"Informationen du kan tillhandahålla anses inte ge tillräckligt mycket hjälp "
+"i det här fallet.\n"
+"Om du inte kan komma på mer information kan du stänga felrapportdialogrutan."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -801,13 +786,10 @@ msgid "Install Debug Symbols"
 msgstr "Installera felsökningssymboler"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Använd den här knappen för att installera saknade paket med "
+"Använd den här knappen för att installera paket med saknade "
 "felsökningssymboler."
 
 #: qml/DeveloperPage.qml:50
@@ -849,16 +831,6 @@ msgid "Save"
 msgstr "Spara"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -869,22 +841,15 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Du kan klicka på knappen <interface>Installera felsökningssymboler</"
-"interface> för att automatiskt installera de saknade paketen med "
-"felsökningssymboler. Om den metoden\n"
+"Klicka på knappen <interface>Installera felsökningssymboler</interface> för "
+"att automatiskt installera de saknade paketen med felsökningssymboler. Om "
+"den metoden\n"
 "inte fungerar: läs gärna <link url='%1'>Hur man skapar användbara "
 "kraschrapporter</link> för att ta reda på hur man får en användbar\n"
 "bakåtspårning. Installerat nödvändiga paket (<link url='%2'>fillista</link>) "
-"och klicka på knappen <interface>Uppdatera</interface>."
+"och klicka sedan på knappen <interface>Uppdatera</interface>."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -892,39 +857,28 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Läs gärna <link url='%1'>Hur man skapar användbara kraschrapporter</link> "
-"för att ta reda på hur man får en användbar bakåtspårning. Installera "
-"nödvändiga paket (<link url='%2'>fillista</link>) och klicka på knappen "
+"Läs <link url='%1'>Hur man skapar användbara kraschrapporter</link> för att "
+"ta reda på hur man får en användbar bakåtspårning. Installera nödvändiga "
+"paket (<link url='%2'>fillista</link>) och klicka sedan på knappen "
 "<interface>Uppdatera</interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Du kan försöka att skapa om bakåtspårningen genom att klicka på knappen "
+"Försöka att skapa om bakåtspårningen genom att klicka på knappen "
 "<interface>Uppdatera</interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Du måste först installera avlusningsprogrammet (%1), "
-"och därefter klicka på knappen <interface>Uppdatera</interface>.</emphasis>"
+"<emphasis strong='true'>Installera först avlusningsprogrammet (%1), och "
+"därefter klicka på knappen <interface>Uppdatera</interface>.</emphasis>"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -933,14 +887,6 @@ msgstr ""
 "Ladda automatiskt ner felsökningssymboler för att förbättra kraschrapporter"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -951,17 +897,14 @@ msgid ""
 msgstr ""
 "Kraschrapporter kan vara av större värde om ytterligare felsökningsresurser "
 "först laddas ner från distributören.\n"
-"Det kan också orsaka större minnesanvändning och ta längre, och resulterar i "
+"Det kan också orsaka större minnesanvändning, ta längre tid, och resultera i "
 "nerladdningar av okänd storlek när en krasch inträffar. Det hoppas över "
 "automatiskt när en uppmätt internetanslutning används."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "Logga in på KDE:s felspårningssystem"
+msgstr "Logga in på felspårningssystemet"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -969,9 +912,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Du måste logga in på kontot %1 för att fortsätta."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-postadress:"
@@ -987,15 +927,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Spara inloggningsinformation med användning av KDE:s plånbokssystem"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1009,8 +940,8 @@ msgstr ""
 "felspårningssystem</link> för att kunna skicka in en felrapport, eftersom vi "
 "kan behöva kontakta dig senare\n"
 "för att begära ytterligare information. Om du inte har ett, kan du fritt "
-"<link url='%2'>skapa ett här</link>. Använd inte tillfälliga e-postkonton.</"
-"note>"
+"<link url='%2'>skapa ett här</link>. Använd inte tillfälliga e-postadresser."
+"</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1018,18 +949,13 @@ msgid "Login"
 msgstr "Logga in"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
-"Använd knappen för att logga in på KDE:s felspårningssystem med den "
-"tillhandahållna e-postadressen och lösenordet."
+"Använd knappen för att logga in på KDE:s felspårningssystem med "
+"tillhandahållen e-postadress och lösenord."
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1108,22 +1034,14 @@ msgid "Retry"
 msgstr "Försök igen"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Kraschhanterare"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Tyvärr har <application>%1</application> avslutats oväntat.</para>"
+msgstr "<application>%1</application> har avslutats oväntat."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1138,14 +1056,9 @@ msgstr "Se utvecklarinformation"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Förhandsgranskning av felrapport"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1153,8 +1066,8 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Det här är en förhandsgranskning av innehållet i rapporten som kommer "
-"att skickas.</para><para>Om du vill ändra den, gå tillbaka till föregående "
-"sidor.</para>"
+"att skickas.</para><para>Om du vill ändra rapporten, gå tillbaka till "
+"föregående sidor.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1167,41 +1080,26 @@ msgid "Waiting for data…"
 msgstr "Väntar på data…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Den skapade kraschinformationen är användbar"
+msgstr "Den skapade kraschinformationen är användbar."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Den skapade kraschinformationen kan vara användbar"
+msgstr "Den skapade kraschinformationen kan vara användbar."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Den skapade kraschinformationen är inte användbar"
+msgstr "Den skapade kraschinformationen är troligen inte användbar."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Den skapade kraschinformationen är inte användbar"
+msgstr "Den skapade kraschinformationen är inte användbar."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Skriv in detaljinformation om kraschen"
@@ -1326,12 +1224,9 @@ msgid "Retry Submission"
 msgstr "Försök skicka in igen"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Skickar in felrapport..."
+msgstr "Skickar in felrapport…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1349,20 +1244,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "Webbadress: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Tack för ditt deltagande i KDE. Du kan nu stänga fönstret."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Skicka automatisk rapport"
+msgstr "Automatisk rapport"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1390,20 +1279,14 @@ msgid "Automatically report crashes"
 msgstr "Rapportera automatiskt krascher"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
-"Skicka alltid automatiskt en kraschrapport till KDE:s kraschspårningssystem. "
-"Ingen manuell inmatning krävs.\n"
+"Skicka alltid automatiskt en kraschrapport till KDE:s kraschspårningssystem, "
+"utan att någon manuell inmatning krävs.\n"
 "Du får inte några fler kraschunderrättelser."
 
 #: qml/SentryPage.qml:93
@@ -1422,12 +1305,9 @@ msgid "Finish"
 msgstr "Slutför"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Felrapporteringsguide"
+msgstr "Rapporteringsguide"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1439,15 +1319,6 @@ msgstr ""
 "felrapporteringsprocessen."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1462,7 +1333,7 @@ msgstr ""
 "<emphasis strong='true'>krävs att du går med på att utvecklarna får kontakta "
 "dig</emphasis>\n"
 " för att kunna fortsätta och rapportera felet.</note></para><para>Stäng "
-"gärna dialogrutan om du inte kan acceptera det.</para>"
+"gärna dialogrutan om du inte vill acceptera det.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"

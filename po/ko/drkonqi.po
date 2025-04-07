@@ -1,6 +1,6 @@
 # Translation of drkonqi.po to Korean.
 # Copyright (C) 2001-2004, 2007-2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2024 Park Sinjo <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2024, 2025 Park Sinjo <kde@peremen.name>
 # Shinjo Park <kde@peremen.name>, 2009, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-11-29 01:12+0100\n"
+"PO-Revision-Date: 2025-04-06 22:07+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -669,9 +669,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "알림을 표시하지 않고 디버그 대화 상자 바로 실행하기"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "역추적(자동 충돌 정보) 가져오는 중"
@@ -682,12 +679,9 @@ msgid "Next"
 msgstr "다음"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "bugs.kde.org에 연결하는 중 오류 발생: <message>%1</message>."
+msgstr "%1에 연결하는 중 오류 발생: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -695,17 +689,14 @@ msgid "Retry"
 msgstr "다시 시도"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "bugs.kde.org에 연결하는 중..."
+msgstr "%1에 연결하는 중…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "알고 있는 것"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -756,12 +747,6 @@ msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -769,8 +754,8 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>이 경우에 대해서는 제공한 정보가 유용하지 않습니다. 더 많은 정보를 제공"
-"할 수 없으면 버그 보고 대화 상자를 닫아도 됩니다.</para>"
+"이 경우에 대해서는 제공한 정보가 유용하지 않습니다.\n"
+"더 많은 정보를 제공할 수 없으면 버그 보고 대화 상자를 닫아도 됩니다."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -783,12 +768,9 @@ msgid "Install Debug Symbols"
 msgstr "디버그 기호 설치"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr "이 단추를 클릭하면 없는 디버그 기호를 설치합니다."
+msgstr "이 단추를 클릭하면 빠진 디버그 기호를 설치합니다."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -827,16 +809,6 @@ msgid "Save"
 msgstr "저장"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -855,13 +827,6 @@ msgstr ""
 "<interface>새로 고침</interface> 단추를 클릭하십시오."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -874,11 +839,6 @@ msgstr ""
 "일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -888,12 +848,6 @@ msgstr ""
 "있습니다."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -908,14 +862,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "충돌 보고를 개선할 수 있도록 자동으로 디버그 기호 다운로드"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -931,9 +877,6 @@ msgstr ""
 "니다."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "버그 추적 시스템 로그인"
@@ -944,9 +887,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "계속 진행하려면 %1 계정으로 로그인해야 합니다."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "이메일 주소:"
@@ -962,15 +902,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "KDE 지갑 시스템에 로그인 정보 저장하기"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -991,11 +922,6 @@ msgid "Login"
 msgstr "로그인"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1077,23 +1003,14 @@ msgid "Retry"
 msgstr "다시 시도"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "충돌 관리자"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>죄송합니다. <application>%1</application> 앱이 예상하지 못하게 종료되었"
-"습니다.</para>"
+msgstr "<application>%1</application> 앱이 예상하지 못하게 종료되었습니다."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1108,14 +1025,9 @@ msgstr "개발자 정보 보기"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "버그 보고서 미리 보기"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1136,41 +1048,26 @@ msgid "Waiting for data…"
 msgstr "데이터 대기 중…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "생성된 충돌 정보가 유용합니다"
+msgstr "생성된 충돌 정보가 유용합니다."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "생성된 충돌 정보가 유용할 것 같습니다"
+msgstr "생성된 충돌 정보가 유용할 것 같습니다."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "생성된 충돌 정보가 유용하지 않습니다"
+msgstr "생성된 충돌 정보가 유용하지 않을 것 같습니다."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "생성된 충돌 정보가 유용하지 않습니다"
+msgstr "생성된 충돌 정보가 유용하지 않습니다."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "충돌 정보 입력"
@@ -1292,12 +1189,9 @@ msgid "Retry Submission"
 msgstr "제출 다시 시도"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "버그 보고서 제출 중..."
+msgstr "버그 보고서 제출 중…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1315,27 +1209,16 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "KDE에 참여해 주셔서 감사합니다. 이 창을 닫아도 됩니다."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "자동 보고서 보내기"
+msgstr "자동 보고"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically submit in "
-#| "the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. The collected data will automatically be submitted in "
@@ -1361,12 +1244,6 @@ msgid "Automatically report crashes"
 msgstr "자동으로 충돌 보고"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1393,12 +1270,9 @@ msgid "Finish"
 msgstr "완료"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "버그 보고 도우미 안내"
+msgstr "보고 도우미"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1408,15 +1282,6 @@ msgid ""
 msgstr "이 도우미는 충돌 정보를 분석하고 버그 보고 과정을 안내합니다."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
