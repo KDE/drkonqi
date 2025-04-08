@@ -5,20 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2010, 2011, 2012.
-# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-12-30 17:19+0200\n"
+"PO-Revision-Date: 2025-04-06 17:43+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -685,12 +685,9 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Nerādīt paziņojumu, bet uzreiz palaist atkļūdošanas logu"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Ielādē atpakaļceļu (automātiskā avārijas informācija)"
+msgstr "Ielādē atpakaļceļu (automātisko avārijas informāciju)"
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -698,12 +695,9 @@ msgid "Next"
 msgstr "Nākamais"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Neizdevās savienoties ar „bugs.kde.org“: <message>%1</message>"
+msgstr "Neizdevās savienoties ar „%1“: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -711,17 +705,14 @@ msgid "Retry"
 msgstr "Mēģināt vēlreiz"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Mēģina savienoties ar „bugs.kde.org“..."
+msgstr "Mēģina savienoties ar „%1“…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Jūsu zināšanas"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -772,12 +763,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Nav pietiekami lietderīgi"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -785,9 +770,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Informācija, kuru varat sniegt, šajā gadījumā nav pietiekami noderīga. "
-"Ja nevarat iedomāties papildu informāciju, ko sniegt, varat aizvērt "
-"ziņošanas par kļūdu logu.</para>"
+"Informācija, kuru varat sniegt, šajā gadījumā nav pietiekami noderīga.\n"
+"Ja nevarat iedomāties papildu informāciju, ko varat sniegt, aizveriet "
+"ziņošanas par kļūdu logu."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -800,12 +785,10 @@ msgid "Install Debug Symbols"
 msgstr "Instalēt atkļūdošanas simbolus"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr "Spiediet, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
+msgstr ""
+"Izmantojiet šo pogu, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -846,16 +829,6 @@ msgid "Save"
 msgstr "Saglabāt"
 
 #: qml/DeveloperPage.qml:179
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -866,21 +839,14 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Varat nospiest pogu <interface>Instalēt atkļūdošanas simbolus</interface>, "
-"lai trūkstošās pakotnes instalētu automātiski. Ja šī metode\n"
+"Klikšķiniet uz pogas <interface>Instalēt atkļūdošanas simbolus</interface>, "
+"lai automātiski instalētu trūkstošās pakotnes. Ja šī metode\n"
 "nedarbojas, izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu ziņojumus</"
 "link>, lai uzzinātu, kā iegūt noderīgu atpakaļceļu, kā arī instalējiet "
-"vajadzīgās pakotnes (<link url='%2'>datņu saraksts</link>) un nospiediet "
+"vajadzīgās pakotnes (<link url='%2'>datņu saraksts</link>) un klikšķiniet "
 "<interface>Pārlādēt</interface>."
 
 #: qml/DeveloperPage.qml:187
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -891,30 +857,19 @@ msgstr ""
 "Izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu ziņojumus</link>, lai "
 "uzzinātu, kā iegūt noderīgu atpakaļceļu, kā arī instalējiet vajadzīgās "
 "pakotnes\n"
-"(<link url='%2'>datņu saraksts</link>) un nospiediet <interface>Pārlādēt</"
-"interface>."
+"(<link url='%2'>datņu saraksts</link>) un klikšķiniet uz "
+"<interface>Pārlādēt</interface>."
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Varat mēģināt atpakaļceļu ģenerēt vēlreiz, nospiežot pogu "
-"<interface>Pārlādēt</interface>."
+"Mēģiniet atpakaļceļu ģenerēt vēlreiz, nospiežot pogu <interface>Pārlādēt</"
+"interface>."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -931,14 +886,6 @@ msgstr ""
 "ziņojumus"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -949,14 +896,11 @@ msgid ""
 msgstr ""
 "Avārijas ziņojumiem būs lielāka vērtība, ja no sistēmas izplatītāja vispirms "
 "lejupielādēsiet atkļūdošanas resursus.\n"
-"Tie var avārijas brīdī palielināt atmiņas lietojumu un aizņemt vairāk laika, "
-"kā arī radīt nezināma izmēra lejupielādes. Lejupielādi sistēma automātiski "
-"izlaidīs, ja tā konstatē, ka interneta savienojums nav bezlimita."
+"Tie var palielināt izmantoties atmiņas lietojumu un aizņemt vairāk laika, kā "
+"arī avārijas brīdī radīt nezināma izmēra lejupielādes. Lejupielādi sistēma "
+"automātiski izlaidīs, ja tā konstatē, ka interneta savienojums nav bezlimita."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Ierakstīties kļūdu uzskaites sistēmā"
@@ -967,9 +911,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Lai turpinātu, ierakstieties savā „%1“ kontā."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-pasta adrese:"
@@ -985,15 +926,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Saglabāt ierakstīšanās informāciju KDE maka sistēmā"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1003,11 +935,11 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
-"<note>Jums ir nepieciešams lietotāja konts <link url='%1'>KDE kļūdu "
-"uzskaites sistēmā</link>, lai iesniegtu kļūdas ziņojumu, jo mums var rasties "
+"<note>Lai iesniegtu kļūdas ziņojumu, jums ir nepieciešams lietotāja konts "
+"<link url='%1'>KDE kļūdu uzskaites sistēmā</link>, jo mums var rasties "
 "vajadzība vēlāk\n"
-"ar jums sazināties, lai iegūtu sīkāku informāciju. Ja jums nav konta, varat "
-"to <link url='%2'>izveidot šeit</link>. Lūdzu, neizmantojiet pagaidu e-pasta "
+"ar jums sazināties papildinformācijas lūgšanai. Ja jums nav konta, varat to "
+"<link url='%2'>izveidot šeit</link>. Lūdzu, neizmantojiet pagaidu e-pasta "
 "kontus.</note>"
 
 #: qml/LoginPage.qml:105
@@ -1016,11 +948,6 @@ msgid "Login"
 msgstr "Ierakstīties"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1104,23 +1031,14 @@ msgid "Retry"
 msgstr "Mēģināt vēlreiz"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Avāriju apstrādātājs"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
-"para>"
+msgstr "<para>„<application>%1</application>“ negaidīti aizvērās.</para>"
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1133,19 +1051,11 @@ msgid "See Developer Information"
 msgstr "Skatīt informāciju izstrādātājiem"
 
 #: qml/PreviewPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Report Keywords"
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr "Kļūdas ziņojuma atslēgvārdi"
+msgstr "Kļūdas ziņojuma priekšskatījums"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1163,52 +1073,37 @@ msgstr "Iesniegt"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr "Gaida datus..."
+msgstr "Gaida datus…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Ģenerētā avārijas informācija ir noderīga"
+msgstr "Ģenerētā avārijas informācija ir noderīga."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Ģenerētā avārijas informācija varētu būt noderīga"
+msgstr "Ģenerētā avārijas informācija varētu būt noderīga."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Ģenerētā avārijas informācija nav noderīga"
+msgstr "Ģenerētā avārijas informācija visdrīzāk nav noderīga."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Ģenerētā avārijas informācija nav noderīga"
+msgstr "Ģenerētā avārijas informācija nav noderīga."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Ievadiet informāciju par avāriju"
+msgstr "Sniedziet informāciju par avāriju"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "Sekojošo informāciju sniedziet angļu valodā."
+msgstr "Šo informāciju sniedziet angļu valodā."
 
 #: qml/ReportPage.qml:29 qml/ReportPage.qml:48
 msgctxt "@info"
@@ -1324,12 +1219,9 @@ msgid "Retry Submission"
 msgstr "Atkārtot iesniegšanu"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Iesniedz kļūdas ziņojumu..."
+msgstr "Iesniedz kļūdas ziņojumu…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1347,20 +1239,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Paldies, ka esat daļa no KDE! Varat aizvērt šo logu."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Sūtīt automātisku ziņojumu"
+msgstr "Automātisks ziņojums"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1386,12 +1272,6 @@ msgid "Automatically report crashes"
 msgstr "Automātiski iesniegt informāciju par avārijām"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1399,13 +1279,13 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 "Vienmēr automātiski iesniegt avārijas ziņojumu KDE avāriju uzskaites "
-"sistēmā. Nav nepieciešamas neko ievadīt pašrocīgi.\n"
+"sistēmā, bez manuālas ievades.\n"
 "Vairāk ziņojumu par avārijām nesaņemsiet."
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Pastāstiet vairāk par avāriju..."
+msgstr "Pastāstiet vairāk par avāriju…"
 
 #: qml/SentryPage.qml:104
 msgctxt "@action:button"
@@ -1418,12 +1298,9 @@ msgid "Finish"
 msgstr "Pabeigt"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Kļūdu ziņošanas palīga ceļvedis"
+msgstr "Kļūdu ziņošanas palīgs"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1435,15 +1312,6 @@ msgstr ""
 "procesu."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1455,9 +1323,8 @@ msgid ""
 msgstr ""
 "<para><note>Tā kā efektīvai atkļūdošanai ir nepieciešama saziņa starp jums "
 "un izstrādātājiem,\n"
-"lai turpinātu ziņošanu par šo kļūdu, <emphasis strong='true'>jums ir "
-"jāpiekrīt nosacījumam, ka izstrādātāji drīkst ar jums kontaktēties.</"
-"emphasis>.\n"
+"lai turpinātu ziņošanu par šo kļūdu, <emphasis strong='true'>lūdzam piekrist "
+"nosacījumam, ka izstrādātāji drīkst ar jums sazināties.</emphasis>.\n"
 "</note></para><para>Varat aizvērt šo logu, ja jums šis nosacījums nav "
 "pieņemams.</para>"
 

@@ -15,14 +15,14 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2011.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# SPDX-FileCopyrightText: 2022, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-09-16 13:46+0300\n"
+"PO-Revision-Date: 2025-04-07 11:25+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -712,8 +712,6 @@ msgstr "Запускать диалог отладки без показа ув�
 
 #: qml/BacktracePage.qml:11
 #, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Получение стека вызовов (автоматической информации о сбое)"
@@ -725,8 +723,6 @@ msgstr "Далее"
 
 #: qml/BugzillaPage.qml:43
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
 msgstr "Не удалось связаться с bugs.kde.org: <message>%1</message>"
@@ -738,8 +734,6 @@ msgstr "Повторить"
 
 #: qml/BugzillaPage.qml:62
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
 msgstr "Попытка соединения с bugs.kde.org…"
@@ -801,11 +795,6 @@ msgstr "Недостаточно полезно"
 
 #: qml/ContextPage.qml:90
 #, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -829,8 +818,6 @@ msgstr "Установить отладочные символы"
 
 #: qml/DeveloperPage.qml:42
 #, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
@@ -877,15 +864,6 @@ msgstr "Сохранить"
 
 #: qml/DeveloperPage.qml:179
 #, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -906,12 +884,6 @@ msgstr ""
 
 #: qml/DeveloperPage.qml:187
 #, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -927,10 +899,6 @@ msgstr ""
 
 #: qml/DeveloperPage.qml:194
 #, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -941,11 +909,6 @@ msgstr ""
 
 #: qml/DeveloperPage.qml:198
 #, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -962,13 +925,6 @@ msgstr ""
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 #, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -985,8 +941,6 @@ msgstr ""
 
 #: qml/LoginPage.qml:14
 #, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Вход в систему отслеживания ошибок"
@@ -998,8 +952,6 @@ msgstr "Для продолжения необходимо войти на са�
 
 #: qml/LoginPage.qml:71
 #, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "Адрес электронной почты:"
@@ -1016,14 +968,6 @@ msgstr "Сохранить имя и пароль в бумажнике KDE"
 
 #: qml/LoginPage.qml:91
 #, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1047,10 +991,6 @@ msgstr "Войти"
 
 #: qml/LoginPage.qml:106
 #, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1137,17 +1077,12 @@ msgstr "Повторить"
 
 #: qml/MainPage.qml:12
 #, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Обработчик ошибок"
 
 #: qml/MainPage.qml:35
 #, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
 msgstr ""
@@ -1172,10 +1107,6 @@ msgstr "С&ообщение об ошибке"
 
 #: qml/PreviewPage.qml:20
 #, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1197,40 +1128,30 @@ msgstr "Ожидание данных…"
 
 #: qml/RatingItem.qml:43
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
 msgstr "Собранная информация о сбое полезна"
 
 #: qml/RatingItem.qml:45
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
 msgstr "Собранная информация о сбое может быть полезна"
 
 #: qml/RatingItem.qml:47
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
 msgstr "Собранная информация о сбое бесполезна"
 
 #: qml/RatingItem.qml:49
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
 msgstr "Собранная информация о сбое бесполезна"
 
 #: qml/ReportPage.qml:14
 #, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Подробная информация о сбое"
@@ -1361,8 +1282,6 @@ msgstr "Повторить отправку"
 
 #: qml/SendingPage.qml:81
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "Отправка сообщения об ошибке…"
@@ -1384,8 +1303,6 @@ msgstr "Адрес: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
 #, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
@@ -1393,18 +1310,11 @@ msgstr ""
 
 #: qml/SentryPage.qml:12
 #, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
 msgstr "Отправить автоматический отчёт"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically submit in "
-#| "the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. The collected data will automatically be submitted in "
@@ -1431,11 +1341,6 @@ msgstr "Автоматически отправлять сообщения об 
 
 #: qml/SentryPage.qml:77
 #, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1466,8 +1371,6 @@ msgstr "Готово"
 
 #: qml/WelcomePage.qml:14
 #, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
 msgstr "Мастер сообщения об ошибке"
@@ -1483,14 +1386,6 @@ msgstr ""
 
 #: qml/WelcomePage.qml:32
 #, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
