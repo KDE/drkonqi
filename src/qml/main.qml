@@ -89,6 +89,10 @@ any side effects.</para>`);
         Kirigami.InlineMessage {
             readonly property string fakeUrl: "fake://open-details" // onLinkActivated sends a string, so we treat this as string!
             text: {
+                if (BacktraceGenerator.state === BacktraceGenerator.MemoryPressure) {
+                    return i18nc("@info", "THERE IS NOT ENOUGH RAM FOR GDB. DOWNLOAD SOME MORE!")
+                }
+
                 if (BacktraceGenerator.hasRawTraceData) {
                     return xi18nc("@info",
                         "Gathering crash information failed for unknown reasons. You can retry, close the window, or <link url='%1'>view detailed output</link>.",

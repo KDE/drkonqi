@@ -92,9 +92,22 @@ installed the proper debug symbol packages and you want to obtain a better backt
             anchors.right: parent.right
             anchors.top: parent.top
 
+            Kirigami.InlineMessage {
+                Layout.fillWidth: true
+                text: i18nc("@info", "This backtrace is very limited because there was not enough memory available to generate a full backtrace. You can close some applications and try again.")
+                type: Kirigami.MessageType.Information
+                visible: BacktraceGenerator.crampedMemory
+                actions: [
+                    Kirigami.Action {
+                        text: i18nc("@action retry gathering crash data", "Retry")
+                        onTriggered: BacktraceGenerator.start()
+                    }
+                ]
+            }
+
             RatingItem {
                 id: ratingItem
-                failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart
+                failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart || BacktraceGenerator.state === BacktraceGenerator.MemoryPressure
                 loading: BacktraceGenerator.state === BacktraceGenerator.Loading
             }
 
@@ -197,6 +210,9 @@ backtrace, install the needed packages (<link url='%2'>list of files</link>), th
                         detailsLabel.text = xi18nc("@info/rich",
 `<emphasis strong='true'>First install the debugger application (%1), then click the <interface>Reload</interface> button.</emphasis>`,
                                                    BacktraceGenerator.debuggerName())
+                    } else if (state == BacktraceGenerator.MemoryPressure) {
+                        traceArea.text = BacktraceGenerator.rawTraceData()
+                        detailsLabel.text = xi18nc("@info/rich", `The backtrace generation was stopped due to memory pressure. You could try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
                     }
                 }
             }
