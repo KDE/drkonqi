@@ -32,6 +32,7 @@
 #include "drkonqi_debug.h"
 #include "parser/backtraceparser.h"
 #include "productmapping.h"
+#include "safe_strerror.h"
 #include "sentryconnection.h"
 #include "sentryscope.h"
 #include "settings.h"
@@ -51,15 +52,6 @@ struct UnameValues {
     QString kernelVersion;
     QString rawDescription;
 };
-
-char *safe_strerror(int error)
-{
-    constexpr auto maxBufferSize = 1024;
-    thread_local std::array<char, maxBufferSize> buffer;
-    // The return value changes depending on CFLAGS, so we intentionally do not do anything with it!
-    strerror_r(error, buffer.data(), buffer.size());
-    return buffer.data();
-}
 
 UnameValues unameValues()
 {
