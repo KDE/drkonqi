@@ -38,8 +38,10 @@ import platform
 import multiprocessing
 from pathlib import Path
 import psutil
+import traceback
 
 crashed_thread = None
+core_images = []
 
 class UnexpectedMappingException(Exception):
     pass
@@ -185,6 +187,7 @@ class SentryVariables:
                 ret[str(symbol)] = str(symbol.value(self.frame))
             except:
                 pass # either not a variable or not stringable
+
         return ret
 
 class SentryFrame:
@@ -218,15 +221,17 @@ class SentryFrame:
     def address(self):
         return ('0x%x' % self.frame.pc())
 
-    def to_dict(self):
-        return {
+    def to_dict(self, with_vars):
+        data = {
             'filename': mangle_path(self.filename()),
             'function': self.function(),
             'package': mangle_path(self.package()),
             'instruction_addr': self.address(),
             'lineno': self.lineNumber(),
-            'vars': SentryVariables(self.frame).to_dict()
         }
+        if with_vars:
+            data['vars'] = SentryVariables(self.frame).to_dict()
+        return data
 
 class SentryRegisters:
     def __init__(self, gdb_frame):
@@ -279,16 +284,76 @@ class LockReason:
         return None
 
 class SentryTrace:
+    loaded_solibs = []
+
     def __init__(self, thread, is_crashed):
         thread.switch()
-        self.frame = gdb.newest_frame()
         self.is_crashed = is_crashed
         self.lock_reasons = {}
         self.was_main_thread = False
         self.crashed = self.is_crashed # different from is_crashed (=input) this indicates if we stumbled over the kcrash handler
 
+    def load_solib(cramped):
+        # Lazy load solibs. This is super complicated because the gdb CLI and API don't actually give us all the control.
+        # Also loading new symbols resets the trace so we need to select-frames fairly aggressively.
+
+        i = -1
+
+        while True:
+            # Check if the next frame even exists
+            if i >= 0:
+                gdb.execute(f'select-frame {i}')
+                if not gdb.selected_frame().older():
+                    break
+
+            # Increment in the beginning so we can continue early without having to worry that the index will be off
+            i = i + 1
+
+            # Select the actual frame for loading
+            gdb.execute(f'select-frame {i}')
+            frame = gdb.selected_frame()
+
+            # Determine the solib path
+            solib = gdb.current_progspace().solib_name(frame.pc())
+            if solib in SentryTrace.loaded_solibs:
+                continue
+            for core_image in core_images:
+                if int(core_image.address, 16) <= frame.pc() < (int(core_image.address, 16) + core_image.length):
+                    image = core_image
+                    break
+            solib = solib or image.file
+
+            if solib in SentryTrace.loaded_solibs:
+                continue
+
+            # Actually execute the load
+            gdb.execute(f'sharedlibrary {solib}')
+            # Make sure we loaded the correct solib (guards against live system updates having removed the correct file)
+            objfile = gdb.lookup_objfile(image.build_id, by_build_id=True)
+            if objfile.build_id != image.build_id:
+                raise UnexpectedMappingException(f"Unexpected mapping for {image.file} ({image.build_id})")
+            if cramped:
+                # Explicit off in cramped mode even when the user enabled it.
+                gdb.execute('set debuginfod enabled off')
+            else:
+                # (Re)load the symbols
+                gdb.execute(f'add-symbol-file {solib}')
+
+            SentryTrace.loaded_solibs.append(solib)
+
+        gdb.execute('select-frame 0')
+
     def to_dict(self):
-        frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(self.frame) ]
+        cramped_memory = os.getenv('DRKONQI_MEMORY') == 'cramped' and self.is_crashed
+        little_memory = os.getenv('DRKONQI_MEMORY') == 'little' and self.is_crashed
+        some_memory = os.getenv('DRKONQI_MEMORY') == 'some'
+        spacious_memory = os.getenv('DRKONQI_MEMORY') == 'spacious'
+        # In spacious mode we load all solibs by default and don't need to do anything extra. All other modes load on-demand.
+        if cramped_memory or little_memory or some_memory:
+            SentryTrace.load_solib(cramped_memory)
+
+        frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(gdb.newest_frame()) ]
+
         self.lock_reasons = {}
         self.was_main_thread = False
 
@@ -317,7 +382,10 @@ class SentryTrace:
 
         # Sentry format wants oldest frame first.
         frames.reverse()
-        return { 'frames': [ frame.to_dict() for frame in frames ], 'registers': SentryRegisters(self.frame).to_dict() }
+        data = { 'frames': [ frame.to_dict(with_vars=(some_memory or spacious_memory)) for frame in frames ] }
+        if some_memory or spacious_memory:
+            data['registers'] = SentryRegisters(gdb.newest_frame()).to_dict()
+        return data
 
 class SentryThread:
     def __init__(self, gdb_thread, is_crashed):
@@ -365,56 +433,9 @@ class SentryThread:
         return payload
 
 class SentryImage:
-    # NOTE: realpath hacks because neon's gdb is confused over UsrMerge symlinking of /lib to /usr/lib messing up
-    # path consistency so always force realpathing for our purposes (this also is applied in SentryFrame)
-    _objfiles = {}
-
-    def objfiles(self):
-        if SentryImage._objfiles:
-            return SentryImage._objfiles
-
-        objfiles = {}
-        for objfile in gdb.objfiles():
-            objfiles[objfile.filename] = objfile
-            objfiles[os.path.realpath(objfile.filename)] = objfile
-        SentryImage._objfiles = objfiles
-        return objfiles
-
     # This can throw if objfiles fail to resolve!
-    def __init__(self, file, start, end):
-        # Awkwardly gdb python doesn't really give access to the solibs, meanwhile
-        # the CLI doesn't really give access to the build_id. So we need to tuck
-        # the two together to get comprehensive data on the loaded images.
-        self.valid = False
-        self.file = os.path.realpath(file)
-        self.image_start = start
-        self.image_end = end
-        # Required! We can't build a debug_id without it and we require a debug_id!
-        try:
-            # If the mapped file isn't actually a library it will not be in the objfile rendering the image moot.
-            # This happens because we need to construct off of proc mapping data. This also includes /dev nodes,
-            # cache files and the like. The easiest way to filter them out is to check if the file is in the objfiles.
-            self.objfile = self.objfiles()[self.file]
-        except KeyError:
-            if self.file.endswith(".so"):
-                try:
-                    lookup = gdb.lookup_objfile(self.file)
-                except ValueError:
-                    lookup = None
-                objfiles = gdb.objfiles()
-                self_objfiles = self.objfiles() # pull into scope so we have it in the trace in sentry
-                if 'sentry_sdk' in globals():
-                    progspace = gdb.selected_inferior().progspace
-                    pid_running = psutil.pid_exists(gdb.selected_inferior().pid)
-                    sentry_sdk.add_breadcrumb(
-                        category='debug',
-                        level='debug',
-                        message=f'Progspace {progspace} :: {progspace.filename} :: {progspace.is_valid()} :: pid running ({pid_running})',
-                    )
-                    sentry_sdk.capture_exception(UnexpectedMappingException("unexpected mapping fail {} {} {} {}"
-                                                                            .format(self.file, lookup, objfiles, self_objfiles)))
-            return
-        self.valid = True
+    def __init__(self, image):
+        self.image = image
 
     def debug_id(self):
         # Identifier of the dynamic library or executable.
@@ -428,107 +449,34 @@ class SentryImage:
         return str(uuid.UUID(bytes_le=binascii.unhexlify(build_id)[:truncate_bytes]))
 
     def build_id(self):
-        return self.objfile.build_id
+        return self.image.build_id
 
     def to_dict(self):
-        if not self.valid:
-            return None
         # https://develop.sentry.dev/sdk/event-payloads/debugmeta
 
         return {
             'type': 'elf',
-            'image_addr': hex(self.image_start),
-            'image_size': (self.image_end - self.image_start),
+            'image_addr': self.image.address,
+            'image_size': self.image.length,
             'debug_id': self.debug_id(),
             # 'debug_file': None, # technically could get this from objfiles somehow but probably not useful cause it can't be used for anything
             'code_id': self.build_id(),
-            'code_file': self.file,
+            'code_file': self.image.file,
             # 'image_vmaddr': None, # not available we'd have to read the ELF I think
             'arch': platform.machine(),
         }
 
-def get_stdout(proc):
-    proc = subprocess.run(proc, stdout=subprocess.PIPE)
+def get_stdout(proc, env=None):
+    proc = subprocess.run(proc, stdout=subprocess.PIPE, env=env)
     if proc.returncode != 0:
         return ''
     return proc.stdout.decode("utf-8").strip()
 
 class SentryImages:
-    _mapping_re = re.compile(
-        r"""(?x)
-
-        \s*
-
-        (?P<start>
-            0[xX][a-fA-F0-9]+
-        )
-
-        \s+
-
-        (?P<end>
-            0[xX][a-fA-F0-9]+
-        )
-
-        \s+
-
-        (?P<size>
-            0[xX][a-fA-F0-9]+
-        )
-
-        \s+
-
-        (?P<offset>
-            0[xX][a-fA-F0-9]+
-        )
-
-        \s+
-
-        (
-            (?P<permissions>
-            [rwxps-]+)
-            \s+
-        )?
-
-        (?P<file>
-            [\/|\/][\w|\S]+|\S+\.\S+|[a-zA-Z]*
-        )
-        """
-    )
-
-    def __init__(self):
-        # NB: gdb also has `info sharedlibrary` but that refers to section addresses inside the image. this would mess
-        # up symbolication as we need the correct image start in the memory region. The only way to get that is through
-        # proc mappings.
-        mapping = {}
-        try:
-            output = gdb.execute('info proc mappings', to_string=True)
-        except:
-            return
-        for line in output.splitlines():
-            match = SentryImages._mapping_re.match(line)
-            if not match:
-                continue
-            start = int(match.group('start'), 0)
-            end = int(match.group('end'), 0)
-            # we'll calculate size ourselves; the match is not used
-            # offset basically just skips over previous sections so we don't really care
-            file = match.group('file')
-            if file not in mapping:
-                mapping[file] = {'start': start, 'end': end}
-                continue
-            mapping[file]['start'] = min(mapping[file]['start'], start)
-            mapping[file]['end'] = max(mapping[file]['end'], end)
-
-        # TODO: if the regexing fails we could fall back to reading /proc/1/maps instead, I'd rather have more code than useless traces because of missing images
-        self.mappings = mapping
-
     def to_list(self):
         ret = []
-        if not self.mappings: return ret
-        for file, mapping in self.mappings.items():
-            image = SentryImage(file=file, start=mapping['start'], end=mapping['end'])
-            if not image.valid: # images are invalid if the file wasn't actually found in the gdb.objfiles
-                continue
+        for core_image in core_images:
+            image = SentryImage(image=core_image)
             ret.append(image.to_dict())
         return ret
 
@@ -549,6 +497,9 @@ class SentryEvent:
         # crutch to get the build id. if we did this outside gdb I expect it'd be neater
         progfile = gdb.current_progspace().filename
         build_id = gdb.lookup_objfile(progfile).build_id
+
+        # NOTE: this is run before the other threads because as a side effect it may load symbols that help other threads produce useful output.
+        stacktrace = SentryTrace(crash_thread, True).to_dict()
 
         base_data = json.loads(get_stdout(['drkonqi-sentry-data']))
         sentry_event = { # https://develop.sentry.dev/sdk/event-payloads/
@@ -604,7 +555,7 @@ class SentryEvent:
                                 },
                             },
                         },
-                        'stacktrace': SentryTrace(crash_thread, True).to_dict(),
+                        'stacktrace': stacktrace,
                     }
                 ]
             },
@@ -763,7 +714,51 @@ def print_sentry_payload(thread):
             tmpfile.write(json.dumps(payload))
             tmpfile.flush()
 
+class CoreImage:
+    def __init__(self, eu_unstrip_line):
+        self.valid = False
+
+        address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 5)
+        self.have_elf = file != '-'
+        self.have_dwarf = debug != '-'
+        self.build_id, self.build_id_address = build_id_pack.split('@', 2)
+        self.address, self.length = address_pack.split('+', 2)
+        self.length = int(self.length, 16)
+        if self.have_elf:
+            # For builtin images the file will be '.'. This notably happens for the executable itself, but also for linux-vdso.
+            # For the former we expect the name to be a path and for the latter we don't care since we can't resolve it anyway.
+            if file == '.':
+                if self.name.startswith('/'):
+                    self.file = self.name
+                else:
+                    return # invalid image (e.g. linux-vdso)
+            else:
+                self.file = file
+
+        self.valid = True
+
+def resolve_modules():
+    corefile = os.getenv("DRKONQI_COREFILE")
+    if not corefile:
+        raise RuntimeError("No corefile found. Cannot resolve modules.")
+
+    global core_images
+
+    env = os.environ.copy()
+    env.pop('DEBUGINFOD_URLS', None) # we don't want debug info downloads, we'll do them from gdb if necessary
+    # Beware that build ids from eu-unstrip are a bit unreliable in that we get back the current build id in case the
+    # core doesn't contain one. That makes the ids a bit unreliable but still better than nothing I suppose.
+    # Ultimately we'll want to use gdb here.
+    # https://sourceware.org/bugzilla/show_bug.cgi?id=32844
+    output = get_stdout(['eu-unstrip', "--list-only", f"--core={corefile}"], env=env)
+    for line in output.splitlines():
+        image = CoreImage(line)
+        if image.valid:
+            core_images.append(image)
+
 def print_preamble_internal():
+    resolve_modules()
+
     thread = gdb.selected_thread()
     if thread == None:
         # Can happen when e.g. the core is missing or not readable etc. We basically aren't debugging anything
@@ -784,6 +779,8 @@ def print_preamble_internal():
     try:
         print_sentry_payload(thread)
     except NoBuildIdException as e:
+        # TODO should this get re-raised
+        traceback.print_exc()
         print(e)
         pass
 
@@ -793,4 +790,6 @@ def print_preamble():
     except Exception as e:
         if 'sentry_sdk' in globals():
             sentry_sdk.capture_exception(e)
-        raise(e)
+        traceback.print_exc()
+        print(e)
+        gdb.execute('quit 1')

@@ -25,9 +25,11 @@
 #include <KShell>
 #include <cstddef>
 
+#include "crashedapplication.h"
 #include "parser/backtraceparser.h"
 #include "sentryscope.h"
 #include "settings.h"
+#include "systemd/memorypressure.h"
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -191,6 +193,13 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
     Q_EMIT newLine(QString());
 
     if (exitStatus != QProcess::NormalExit || exitCode != 0) {
+        if (MemoryPressure::instance()->level() == MemoryPressure::Level::High) {
+            m_state = MemoryPressure;
+            Q_EMIT stateChanged();
+            Q_EMIT someError();
+            return;
+        }
+
         m_state = Failed;
         Q_EMIT stateChanged();
         Q_EMIT someError();
@@ -211,6 +220,7 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
         }
         return file.readAll();
     }();
+
     m_state = Loaded;
     Q_EMIT stateChanged();
 
@@ -224,13 +234,24 @@ void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
     // make very sure the process is getting discarded, otherwise retry operations won't work
     resetProcessAndUnlock();
 
+    if (MemoryPressure::instance()->level() == MemoryPressure::Level::High) {
+        m_state = MemoryPressure;
+        Q_EMIT stateChanged();
+        Q_EMIT someError();
+        return;
+    }
+
     switch (error) {
     case QProcess::FailedToStart:
         m_state = FailedToStart;
         Q_EMIT stateChanged();
         Q_EMIT failedToStart();
         break;
-    default:
+    case QProcess::Crashed:
+    case QProcess::Timedout:
+    case QProcess::ReadError:
+    case QProcess::WriteError:
+    case QProcess::UnknownError:
         m_state = Failed;
         Q_EMIT stateChanged();
         Q_EMIT someError();
@@ -300,6 +321,12 @@ void BacktraceGenerator::startProcess()
 
     Q_EMIT starting();
 
+    s_fence.surroundMe();
+    connect(&s_fence, &MemoryFence::loaded, this, &BacktraceGenerator::startProcessInternal);
+}
+
+void BacktraceGenerator::startProcessInternal()
+{
     m_proc = new KProcess;
     m_proc->setEnv(QStringLiteral("LC_ALL"), QStringLiteral("C.UTF-8")); // force C locale
 
@@ -331,6 +358,7 @@ void BacktraceGenerator::startProcess()
         }());
         m_proc->setEnv(QStringLiteral("DRKONQI_APP_VERSION"), DrKonqi::appVersion());
         m_proc->setEnv(QStringLiteral("DRKONQI_SIGNAL"), QString::number(DrKonqi::signal()));
+        m_proc->setEnv(u"DRKONQI_COREFILE"_s, DrKonqi::crashedApplication()->m_coreFile);
     }
 
     m_temp = new QTemporaryFile;
@@ -350,6 +378,9 @@ void BacktraceGenerator::startProcess()
     Debugger::expandString(str, Debugger::ExpansionUsageShell, m_temp->fileName(), preamble->fileName());
 
     *m_proc << KShell::splitArgs(str);
+
+    memoryConstrainProc();
+
     m_proc->setOutputChannelMode(KProcess::MergedChannels);
     m_proc->setNextOpenMode(QIODevice::ReadWrite | QIODevice::Text);
     // check if the debugger should take its input from a file we'll generate,
@@ -360,6 +391,16 @@ void BacktraceGenerator::startProcess()
         m_proc->setStandardInputFile(stdinFile);
     }
 
+    connect(m_proc, &KProcess::started, this, [this] {
+        auto pid = m_proc->processId();
+        Q_EMIT MemoryPressure::instance()->monitoring(pid);
+        QFile adj("/proc/"_L1 + QString::number(pid) + "/oom_score_adj"_L1);
+        if (!adj.open(QIODevice::WriteOnly)) {
+            qCWarning(DRKONQI_LOG) << "Failed to open oom_score_adj for pid" << pid << adj.errorString();
+            return;
+        }
+        adj.write("1000\n"_ba);
+    });
     connect(m_proc, &KProcess::readyReadStandardOutput, this, &BacktraceGenerator::slotReadInput);
     connect(m_proc, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), this, &BacktraceGenerator::slotProcessExited);
     connect(m_proc, &KProcess::errorOccurred, this, &BacktraceGenerator::slotOnErrorOccurred);
@@ -370,6 +411,39 @@ void BacktraceGenerator::startProcess()
     m_rawTraceBytes += u"Starting debugger %1\n"_s.arg(m_proc->program().join(' '_L1)).toUtf8();
 
     m_proc->start();
+}
+
+void BacktraceGenerator::memoryConstrainProc()
+{
+    Q_ASSERT(m_proc);
+
+    MemoryPressure::instance()->reset();
+
+    m_crampedMemory = false;
+    auto arguments = m_proc->arguments();
+    switch (s_fence.size()) {
+    case MemoryFence::Size::Cramped:
+        m_crampedMemory = true;
+        m_proc->setEnv(u"DRKONQI_MEMORY"_s, u"cramped"_s);
+        arguments.prepend(u"--init-eval-command=set auto-solib-add off"_s);
+        arguments.prepend(u"--init-eval-command=maint set dwarf max-cache-age 0"_s);
+        break;
+    case MemoryFence::Size::Little:
+        m_proc->setEnv(u"DRKONQI_MEMORY"_s, u"little"_s);
+        arguments.prepend(u"--init-eval-command=set auto-solib-add off"_s);
+        break;
+    case MemoryFence::Size::Some:
+        m_proc->setEnv(u"DRKONQI_MEMORY"_s, u"some"_s);
+        arguments.prepend(u"--init-eval-command=set auto-solib-add off"_s);
+        break;
+    case MemoryFence::Size::Spacious:
+        m_proc->setEnv(u"DRKONQI_MEMORY"_s, u"spacious"_s);
+        // Nothing to do with arguments. Everything is enabled.
+        break;
+    }
+    qWarning() << "adjusting gdb profile for size" << s_fence.size();
+    m_proc->setArguments(arguments);
+    Q_EMIT crampedMemoryChanged();
 }
 
 bool BacktraceGenerator::debuggerIsGDB() const
@@ -402,7 +476,7 @@ void BacktraceGenerator::setBackendFailed()
 
 bool BacktraceGenerator::hasAnyFailure()
 {
-    return m_state == State::Failed || m_state == State::FailedToStart;
+    return m_state == State::Failed || m_state == State::FailedToStart || m_state == State::MemoryPressure;
 }
 
 QUrl BacktraceGenerator::rawTraceUrlAndDoNotAutoRemove()

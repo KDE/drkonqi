@@ -116,6 +116,8 @@ target_link_libraries(
     qbugzilla
 )
 
+add_subdirectory(systemd)
+
 if(Systemd_FOUND)
     add_subdirectory(coredump)
 

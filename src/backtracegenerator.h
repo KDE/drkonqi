@@ -18,6 +18,7 @@
 #include <QUrl>
 
 #include "debugger.h"
+#include "systemd/memoryfence.h"
 
 class KProcess;
 class BacktraceParser;
@@ -33,6 +34,7 @@ class BacktraceGenerator : public QObject
     Q_PROPERTY(bool supportsSymbolResolution MEMBER m_supportsSymbolResolution CONSTANT)
     Q_PROPERTY(bool symbolResolution MEMBER m_symbolResolution NOTIFY symbolResolutionChanged)
     Q_PROPERTY(bool hasRawTraceData READ hasRawTraceData NOTIFY stateChanged) // derives from failure state which derives from state
+    Q_PROPERTY(bool crampedMemory MEMBER m_crampedMemory NOTIFY crampedMemoryChanged)
 public:
     enum State {
         NotLoaded,
@@ -40,6 +42,7 @@ public:
         Loaded,
         Failed,
         FailedToStart,
+        MemoryPressure,
     };
     Q_ENUM(State)
 
@@ -86,6 +89,7 @@ Q_SIGNALS:
     void preparing();
     void stateChanged();
     void symbolResolutionChanged();
+    void crampedMemoryChanged();
 
 private Q_SLOTS:
     void slotProcessExited(int exitCode, QProcess::ExitStatus exitStatus);
@@ -95,6 +99,8 @@ private Q_SLOTS:
 private:
     void resetProcessAndUnlock();
     void startProcess();
+    void startProcessInternal();
+    void memoryConstrainProc();
     const Debugger m_debugger;
     KProcess *m_proc = nullptr;
     QTemporaryFile *m_temp = nullptr;
@@ -110,6 +116,8 @@ private:
     QUrl m_rawTraceUrl;
     QLockFile *m_lockFile;
     QFutureWatcher<bool> *m_lockWatcher = nullptr;
+    bool m_crampedMemory = false;
+    inline static MemoryFence s_fence;
 };
 
 #endif

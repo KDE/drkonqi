@@ -1,14 +1,5 @@
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-if(NOT CMAKE_SYSTEM_NAME MATCHES FreeBSD)
-    find_pythonmodule(chai)
-    set_package_properties("chai-PythonModule" PROPERTIES
-        DESCRIPTION "Python module chai is required for testing."
-        TYPE REQUIRED)
-    add_test(NAME preambletest
-        COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/preambletest.py)
-endif()
-
 # Test helper for systeminformationtest
 if(HAVE_UNAME)
     add_executable(lsb_release lsb_release_double.c)

@@ -575,6 +575,7 @@ void ReportInterface::prepareCrashEvent()
     case BacktraceGenerator::NotLoaded:
     case BacktraceGenerator::Failed:
     case BacktraceGenerator::FailedToStart:
+    case BacktraceGenerator::MemoryPressure:
         break;
     }
     static bool connected = false;
