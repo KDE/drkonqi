@@ -5,13 +5,13 @@
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000.
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-10 00:42+0000\n"
-"PO-Revision-Date: 2024-04-07 16:58+0530\n"
+"PO-Revision-Date: 2025-04-13 17:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -459,6 +459,10 @@ msgid ""
 "system. Do not forget to include the backtrace from the <interface>Developer "
 "Information</interface> tab.</para>"
 msgstr ""
+"<para>முறிவுக் கையாளியே முறிவடைந்துள்ளதால், தானியக்க பிழையறிக்கை முடக்கப்பட்டுள்ளது."
+"<nl /><nl />தயவுசெய்து இச்சிக்கலை கே.டீ.யீ.யின் பிழையறிக்கை தளத்தில்<link "
+"url='%1'>கைமுறையாக சமர்ப்பிக்கவும்</link>. <interface>நிரலாளர்களுக்கான விவரங்கள்</"
+"interface> எனும் கீற்றிலுள்ள விவரங்களை உங்கள் பிழையறிக்கையில் சேர்க்கவும்.</para>"
 
 #: drkonqidialog.cpp:183
 #, kde-kuit-format
@@ -628,7 +632,7 @@ msgstr "இந்நிரல் kdeinit ஆல் துவக்கப்ப�
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
-msgstr ""
+msgstr "கட்டுப்பாடற்ற வட்டு அணுகலை முடக்கு"
 
 #: main.cpp:181
 #, kde-format
@@ -655,9 +659,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "அறிவிப்பை காட்டாமல் நேரடியாக பிழைநீக்க சாளரத்தை திற"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "முறிவுகுறித்த விவரங்கள் பெறப்படுகின்றன (தானியங்கி backtrace உருவாக்கம்)"
@@ -668,12 +669,9 @@ msgid "Next"
 msgstr "அடுத்தது"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "bugs.kde.org தனை தொடர்புகொள்ள முடியவில்லை: <message>%1</message>"
+msgstr "%1 தனை தொடர்புகொள்ள முடியவில்லை: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -681,17 +679,14 @@ msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "bugs.kde.org தனை தொடர்புகொள்ள முயற்சிக்கிறது..."
+msgstr "%1 தனை தொடர்புகொள்ள முயற்சிக்கிறது..."
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "உங்களுக்கு தெரிந்தவை"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -742,12 +737,6 @@ msgid "Not Sufficiently Useful"
 msgstr "இதனால் எந்த பயனும் இல்லை"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -755,8 +744,8 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>பிழையை கண்டறிவதற்கு நீங்கள் கொடுத்த விவரங்கள் போதியவையாய் தெரியவில்லை. மேலும் "
-"விவரங்களை வழங்க முடியாத பட்சத்தில், இச்சாளரத்தை நீங்கள் மூடலாம்.</para>"
+"பிழையை கண்டறிவதற்கு நீங்கள் கொடுத்த விவரங்கள் போதியவையாய் தெரியவில்லை.\n"
+"மேலும் விவரங்களை வழங்க முடியாத பட்சத்தில், இச்சாளரத்தை நீங்கள் மூடலாம்."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -769,12 +758,9 @@ msgid "Install Debug Symbols"
 msgstr "பிழைநீக்க குறியீடுகளை நிறுவு"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr "தேவையான பிழைநீக்க குறியீட்டுத் தொகுப்புகளை நிறுவ இப்பட்டனைப் பயன்படுத்துங்கள்"
+msgstr "தேவையான பிழைநீக்க குறியீட்டுத் தொகுப்புகளை நிறுவ இப்பட்டனைப் பயன்படுத்தவும்"
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -834,11 +820,6 @@ msgid ""
 msgstr ""
 
 #: qml/DeveloperPage.qml:194
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -848,12 +829,6 @@ msgstr ""
 "சேகரிக்க முயற்சிக்கலாம்."
 
 #: qml/DeveloperPage.qml:198
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -866,6 +841,7 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"பிழையறிக்கைகளை மேம்படுத்தும் வகையில் பிழைநீக்க குறியீட்டு தொகுப்புகளை தானாக பதிவிறக்கு"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
 msgctxt "@info:tooltip"
@@ -878,9 +854,6 @@ msgid ""
 msgstr ""
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "பிழையறிக்கை கையாள் சேவையில் உள்நுழைக"
@@ -891,9 +864,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "தொடர உங்கள் %1 கணக்கில் நுழைய வேண்டும்."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "மின்னஞ்சல் முகவரி:"
@@ -925,11 +895,6 @@ msgid "Login"
 msgstr "நுழை"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -949,6 +914,13 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "page.</para>"
 msgstr ""
+"<para>முறிவுக் கையாளியே முறிவடைந்துள்ளதால்,\n"
+"தானியக்க பிழையறிக்கை முடக்கப்பட்டுள்ளது.<nl /><nl />\n"
+"தயவுசெய்து இச்சிக்கலை கே.டீ.யீ.யின் பிழையறிக்கை\n"
+"தளத்தில் <link url='%1'>கைமுறையாக சமர்ப்பிக்கவும்</link>.\n"
+" <interface>நிரலாளர்களுக்கான விவரங்கள்</interface>\n"
+"எனும் கீற்றிலுள்ள விவரங்களை உங்கள் பிழையறிக்கையில்\n"
+"சேர்க்கவும்.</para>"
 
 #: qml/main.qml:45
 msgctxt "@info"
@@ -977,6 +949,9 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
+"தெரியாத காரணத்தால் முறிவுகுறித்த விவரங்களை சேகரிப்பது தோல்வியடைந்தது. மீண்டும் "
+"முயற்சிக்கலாம், சாளரத்தை மூடலாம், அல்லது  <link url='%1'>கூடுதல் விவரங்களைக் காணலாம்</"
+"link>."
 
 #: qml/main.qml:97
 msgctxt "@info"
@@ -984,6 +959,8 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"தெரியாத காரணத்தால் முறிவுகுறித்த விவரங்களை சேகரிப்பது தோல்வியடைந்தது. மீண்டும் "
+"முயற்சிக்கலாம் அல்லது சாளரத்தை மூடலாம்."
 
 #: qml/main.qml:110
 msgctxt "@action retry gathering crash data"
@@ -991,23 +968,14 @@ msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "முறிவுக் கையாளி"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>மன்னிக்கவும், <application>%1</application> எதிர்பாராத வித‍த்தில் முறிவடைந்த‍து."
-"</para>"
+msgstr "<application>%1</application> எதிர்பாராத வித‍த்தில் முறிவடைந்த‍து."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1020,18 +988,11 @@ msgid "See Developer Information"
 msgstr "நிரலாளர்களுக்கான விவரங்களைக் காட்டு"
 
 #: qml/PreviewPage.qml:14
-#, fuzzy
-#| msgid "&Bug Report"
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr "&பிழையறிக்கை"
+msgstr "பிழையறிக்கையின் முன்னோட்டம்"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1039,7 +1000,7 @@ msgid ""
 "para>"
 msgstr ""
 "<para>இது, அனுப்ப‍ப்படவிருக்கும் பிழையறிக்கையின் முன்னோட்டம் ஆகும்.</"
-"para><para>இதிலுள்ளவற்றை மாற்ற, முந்தைய பக்கங்களுக்கு செல்லுங்கள்.</para>"
+"para><para>இதிலுள்ளவற்றை மாற்ற, முந்தைய பக்கங்களுக்கு செல்லவும்.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1052,41 +1013,26 @@ msgid "Waiting for data…"
 msgstr "தரவுக்கு காத்திருக்கிறது…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "முறிவைக்குறித்த இவ்விவரங்கள் பயனுள்ளவை"
+msgstr "முறிவுகுறித்த இவ்விவரங்கள் பயனுள்ளவை"
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "முறிவைக்குறித்த இவ்விவரங்கள் பயனுள்ளவையாக இருக்கலாம்"
+msgstr "முறிவுகுறித்த இவ்விவரங்கள் பயனுள்ளவையாக இருக்கலாம்"
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "முறிவைக்குறித்த இவ்விவரங்கள் பயனில்லாதவை"
+msgstr "முறிவுகுறித்த இவ்விவரங்கள் பயனில்லாதவை போல் தெரிகின்றன."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "முறிவைக்குறித்த இவ்விவரங்கள் பயனில்லாதவை"
+msgstr "முறிவுகுறித்த இவ்விவரங்கள் பயனில்லாதவை"
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "முறிவுகுறித்த விவரங்களை உள்ளிடவும்"
@@ -1142,6 +1088,14 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>முறிவை முடிந்தவரையில் விரிவாக விவரிக்கவும்:</subtitle>\n"
+"<list>\n"
+"<item>முறிவு நிகழ்ந்தபோது நீங்கள் செய்துகொண்டிருந்ததை குறிப்பிடவும்.</item>\n"
+"<item>செயலியிலோ கணினியிலோ ஏதாவது வழக்கத்துக்க மாறாக நிகழ்ந்திருந்தால் அதையும் "
+"குறிப்பிடவும்.</item>\n"
+"<item>செயலியின் அமைப்புகளில் எதையாவது இயல்பிருப்பிலிருந்து மாற்றியிருந்தால் அதையும் "
+"குறிப்பிடவும்.</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:74
 msgctxt "the minimum required length of a text was reached"
@@ -1169,6 +1123,8 @@ msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
+"<note>பிழைநீக்க விவரங்களும் கணினி குறித்த விவரங்களும் பிழையறிக்கையில் தானாக "
+"சேர்க்கப்படும்.</note>"
 
 #: qml/ReportPage.qml:143
 msgctxt "@action:button"
@@ -1199,12 +1155,9 @@ msgid "Retry Submission"
 msgstr "மீண்டும் சமர்ப்பிக்க முயற்சி"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "பிழையறிக்கை சமர்ப்பிக்கப்படுகிறது..."
+msgstr "பிழையறிக்கை சமர்ப்பிக்கப்படுகிறது…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1222,20 +1175,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "முகவரி: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "கே.டீ.யீ.க்கு பங்களித்தமைக்கு நன்றி. இச்சாளரத்தை இப்போது நீங்கள் மூடலாம்."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "தானியக்க பிழையறிக்கையை அனுப்பு"
+msgstr "தானியக்க பிழையறிக்கை"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1243,6 +1190,7 @@ msgid ""
 "Collecting crash data. The collected data will automatically be submitted in "
 "the background."
 msgstr ""
+"முறிவுகுறித்த விவரங்கள் சேகரிக்கப்படுகின்றன. முடிந்தபின் தானாக இவ்விவரங்கள் அனுப்பப்படும்."
 
 #: qml/SentryPage.qml:53
 msgctxt "@label"
@@ -1267,6 +1215,9 @@ msgid ""
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"வருங்கால முறிவுகளின் பின் நீங்கள் எதுவும் செய்யாமலே முறிவுகுறித்த விவரங்களை தானாக "
+"சமர்ப்பிக்கும்.\n"
+"முறிவுகள் குறித்த அறிவிப்புகளை இனிமேல் பெற மாட்டீர்கள்"
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
@@ -1281,15 +1232,12 @@ msgstr "செய்தியை அனுப்பு"
 #: qml/SentryPage.qml:122
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "முடி"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "பிழையறிக்கை உதவிநிரலுக்கு நல்வரவு"
+msgstr "பிழையறிக்கை உதவிநிரல்"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1297,6 +1245,7 @@ msgid ""
 "This assistant will analyze the crash information and guide you through the "
 "bug reporting process."
 msgstr ""
+"முறிவுகுறித்த விவரங்களை ஆராய்ந்து பிழையறிக்கையை சமர்ப்பிக்க இந்நிரல் உங்களுக்கு உதவும்."
 
 #: qml/WelcomePage.qml:32
 msgctxt "@info/rich note before starting the bug reporting process"
@@ -1308,6 +1257,9 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
+"<para><note><emphasis strong='true'>நிரலாளர்கள் உங்களைத் தொடர்புகொள்ளலாம் என "
+"ஒப்புகொண்டால்தான்</emphasis> பிழையறிக்கையை சமர்ப்பிக்க முடியும்.\n"
+"</note></para><para>விருப்பமில்லையேல், இச்சாளரத்தை மூடவும்.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1423,7 +1375,7 @@ msgstr ""
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "முறிவுகுறித்த விவரங்களைக் கொண்ட கோப்பு."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
