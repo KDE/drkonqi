@@ -123,7 +123,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             }
 
             // text: output.text
-            font.family: "monospace"
+            font: Kirigami.Theme.fixedWidthFont
             wrapMode: TextEdit.Wrap
             textFormat: TextEdit.PlainText
             readOnly: true

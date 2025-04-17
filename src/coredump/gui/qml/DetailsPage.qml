@@ -78,7 +78,7 @@ Kirigami.ScrollablePage {
             wrapMode: TextEdit.NoWrap
             textFormat: TextEdit.PlainText
             background.visible: false
-            font.family: "monospace"
+            font: Kirigami.Theme.fixedWidthFont
             text: page.text
             selectByMouse: Kirigami.Settings.isMobile ? false : true
 
