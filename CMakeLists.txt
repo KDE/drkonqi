@@ -29,7 +29,6 @@ include(ECMSourceVersionControl)
 include(CMakeDependentOption)
 include(FindPythonModule)
 
-option(WITH_SYSTEMD "Enable systemd integration (note that crash reporting without systemd may eventually be deprecated)" ON)
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 
 kde_enable_exceptions()
@@ -81,24 +80,20 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
 )
 
-if(CMAKE_SYSTEM_NAME MATCHES Linux AND WITH_SYSTEMD)
-    find_package(Systemd 249)
-    set_package_properties(Systemd PROPERTIES TYPE REQUIRED PURPOSE "Coredumpd integration.")
-endif()
+find_package(Systemd 249)
+set_package_properties(Systemd PROPERTIES TYPE REQUIRED PURPOSE "Coredumpd integration.")
 
-if(Systemd_FOUND)
-    find_package(PolkitQt6-1) # This is only used when extracting crashes from coredumpd
-    set_package_properties(PolkitQt6-1 PROPERTIES TYPE REQUIRED PURPOSE "Reading kwin_wayland crashes")
+find_package(PolkitQt6-1) # This is only used when extracting crashes from coredumpd
+set_package_properties(PolkitQt6-1 PROPERTIES TYPE REQUIRED PURPOSE "Reading kwin_wayland crashes")
 
-    find_package(coredumpctl)
-    set_package_properties(
-        coredumpctl
-        PROPERTIES
-        TYPE RUNTIME
-        DESCRIPTION "coredumpd CLI. part of systemd"
-        PURPOSE "Required for coredumpd support to work at runtime!"
-    )
-endif()
+find_package(coredumpctl)
+set_package_properties(
+    coredumpctl
+    PROPERTIES
+    TYPE RUNTIME
+    DESCRIPTION "coredumpd CLI. part of systemd"
+    PURPOSE "Required for coredumpd support to work at runtime!"
+)
 
 add_subdirectory(src)
 

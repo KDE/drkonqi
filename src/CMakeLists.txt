@@ -117,15 +117,12 @@ target_link_libraries(
 )
 
 add_subdirectory(systemd)
+add_subdirectory(coredump)
 
-if(Systemd_FOUND)
-    add_subdirectory(coredump)
-
-    target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp coredumpbackend.h)
-    target_link_libraries(DrKonqiInternal drkonqi-coredump) # needed for logs extraction
-    target_link_libraries(DrKonqiInternal drkonqi-coredumpexcavator)
-    target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
-endif()
+target_sources(DrKonqiInternal PRIVATE coredumpbackend.cpp coredumpbackend.h)
+target_link_libraries(DrKonqiInternal drkonqi-coredump) # needed for logs extraction
+target_link_libraries(DrKonqiInternal drkonqi-coredumpexcavator)
+target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
 
 add_executable(drkonqi main.cpp qml/qml.qrc)
 ecm_mark_nongui_executable(drkonqi)
