@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2025-04-01 16:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -264,14 +264,14 @@ msgstr ""
 "<strong>Hata ayıklayıcı paketini (%1) kurun ve <interface>Yeniden Yükle</"
 "interface> düğmesine basın.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -775,7 +775,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "İlgili olabilecek özelleştirilmiş uygulama ayarları"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Yeteri Kadar Kullanışlı Değil"
@@ -846,7 +846,19 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Kaydet"
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Yeniden Dene"
+
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -864,7 +876,7 @@ msgstr ""
 "gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
 "<interface>Yeniden Yükle</interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -877,7 +889,7 @@ msgstr ""
 "paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve\n"
 "<interface>Yeniden Yükle</interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -886,7 +898,7 @@ msgstr ""
 "<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
 "üretmeyi deneyin."
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -894,6 +906,21 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurun (%1) ve "
 "<interface>Yeniden Yükle</interface> düğmesine basın.</emphasis>"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
+"oluşturmayı deneyebilirsiniz."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1025,7 +1052,14 @@ msgstr ""
 "olmayacağından emin olmak için oturumu kapatıp yeniden\n"
 "açmak her zaman iyi bir fikirdir ve bir yan etkisi yoktur.</para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1035,7 +1069,7 @@ msgstr ""
 "deneyebilir, pencereyi kapatabilir veya <link url='%1'>ayrıntılı çıktıyı "
 "görüntüleyebilirsiniz</link>."
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1043,11 +1077,6 @@ msgid ""
 msgstr ""
 "Bilinmeyen nedenlerden dolayı çökme bilgisi toplanamadı. Yeniden deneyebilir "
 "veya pencereyi kapatabilirsiniz."
-
-#: qml/main.qml:110
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "Yeniden Dene"
 
 #: qml/MainPage.qml:12
 msgctxt "@title"

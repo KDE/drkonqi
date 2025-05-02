@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2025-04-07 15:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -246,14 +246,14 @@ msgstr ""
 "<strong>您需要先安裝除錯軟體包（%1），然後點擊「<interface>重新載入</"
 "interface>」。</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "安裝除錯符號軟體包時發生錯誤"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -742,7 +742,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能有關的自訂應用程式設定"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "不夠有用"
@@ -810,7 +810,19 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "儲存"
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "重試"
+
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -827,7 +839,7 @@ msgstr ""
 "之後安裝需要的軟體包（<link url='%2'>需要的檔案清單</link>），然後點擊"
 "「<interface>重新載入</interface>」按鈕。"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -840,14 +852,14 @@ msgstr ""
 "（<link url='%2'>需要的檔案清單</link>），然後點擊「<interface>重新載入</"
 "interface>」按鈕。"
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr "請試著點擊「<interface>重新載入</interface>」來重新產生回溯追蹤資料。"
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -855,6 +867,20 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>請先安裝除錯應用程式（%1），然後點擊「<interface>重新"
 "載入</interface>」按鈕。</emphasis>"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"您可以點擊「<interface>重新載入</interface>」來試著重新產生回溯追蹤資料。"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -968,7 +994,14 @@ msgstr ""
 "使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
 "入，以確保更新完全套用，且不會有任何副作用。</para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -977,17 +1010,12 @@ msgstr ""
 "收集崩潰資料時因不明原因而失敗。您可以重試、關閉視窗，或是<link url='%1'>檢視"
 "詳細輸出</link>。"
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr "收集崩潰資料時因不明原因而失敗。您可以重試，或關閉視窗。"
-
-#: qml/main.qml:110
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "重試"
 
 #: qml/MainPage.qml:12
 msgctxt "@title"

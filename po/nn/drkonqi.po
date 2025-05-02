@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2024-09-23 20:14+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -256,14 +256,14 @@ msgstr ""
 "<strong>Du må installera feilsøkings­pakken (%1) og så trykkja "
 "<interface>Last om att</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Klarte ikkje installera feilsøkingssymbola"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -768,7 +768,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Sjølvvalde innstillingar i programmet som kan vera innblanda"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ikkje nyttig nok"
@@ -841,7 +841,19 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Lagra"
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Prøv på nytt"
+
+#: qml/DeveloperPage.qml:192
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -861,7 +873,7 @@ msgstr ""
 "pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Last om "
 "att</interface>."
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -876,7 +888,7 @@ msgstr ""
 "(<link url='%2'>filliste</link>), og trykk så <interface>Last om att</"
 "interface>."
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -886,7 +898,7 @@ msgstr ""
 "Du kan prøva å laga tilbakeloggen på nytt ved å trykkja <interface>Last om "
 "att</interface>."
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -895,6 +907,21 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Du må først installera feilsøkings­pakken (%1) og så "
 "trykkja <interface>Last om att</interface>.</emphasis>"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"Du kan prøva å laga tilbakeloggen på nytt ved å trykkja <interface>Last om "
+"att</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1026,7 +1053,14 @@ msgstr ""
 "for å sikra at oppdateringa er teken i bruk og ikkje vil føra til problem.</"
 "para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1035,7 +1069,7 @@ msgstr ""
 "Klarte ikkje henta inn krasjdata, av ukjend grunn. Du kan prøva på nytt, "
 "lukka vindauget eller <link url='%1'>visa detaljerte utdata</link>."
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1043,11 +1077,6 @@ msgid ""
 msgstr ""
 "Klarte ikkje henta inn krasjdata, av ukjend grunn. Du kan prøva på nytt "
 "eller lukka vindauget."
-
-#: qml/main.qml:110
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "Prøv på nytt"
 
 #: qml/MainPage.qml:12
 #, fuzzy

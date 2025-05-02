@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2025-04-02 00:58+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -265,14 +265,14 @@ msgstr ""
 "<strong>Debe instalar la aplicación de depuración (%1) y hacer clic en el "
 "botón <interface>Recargar</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Error durante la instalación de los símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -784,7 +784,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Preferencias de la aplicación que podrían estar relacionadas"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "No es suficientemente útil"
@@ -857,7 +857,19 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Guardar"
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Volver a intentarlo"
+
+#: qml/DeveloperPage.qml:192
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -875,7 +887,7 @@ msgstr ""
 "inversa útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
 "archivos</link>), pulse el botón <interface>Volver a cargar</interface>."
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -888,7 +900,7 @@ msgstr ""
 "necesarios (<link url='%2'>lista de archivos</link>) y pulse el botón "
 "<interface>Volver a cargar</interface>."
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -897,7 +909,7 @@ msgstr ""
 "Trate de volver a generar la traza inversa pulsando el botón "
 "<interface>Recargar</interface>."
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -905,6 +917,21 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Instale primero la aplicación de depuración (%1) y "
 "pulse el botón <interface>Volver a cargar</interface>.</emphasis>"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"Puede intentar volver a generar la traza inversa haciendo clic en el botón "
+"<interface>Recargar</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1039,7 +1066,14 @@ msgstr ""
 "para asegurarse de que la actualización se ha aplicado correctamente y no\n"
 "provocará efectos colaterales.</para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1049,7 +1083,7 @@ msgstr ""
 "motivos desconocidos. Puede volver a intentarlo, cerrar la ventana o <link "
 "url='%1'>ver la salida detallada</link>."
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1057,11 +1091,6 @@ msgid ""
 msgstr ""
 "La recopilación de información sobre el fallo no se ha podido completar por "
 "motivos desconocidos. Puede volver a intentarlo o cerrar la ventana."
-
-#: qml/main.qml:110
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "Volver a intentarlo"
 
 #: qml/MainPage.qml:12
 msgctxt "@title"

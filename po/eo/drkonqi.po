@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 16:53+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -260,14 +260,14 @@ msgstr ""
 "<strong>Vi devas unue instali la sencimigilon (%1) kaj poste alklaku la "
 "butonon <interface>Reŝargi</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Eraro dum la instalado de sencimigaj simboloj"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -773,7 +773,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Propraj agordoj de la aplikaĵo, kiuj eble rilatas"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ne Sufiĉe Utila"
@@ -853,7 +853,19 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr "Konservi"
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "Reprovi"
+
+#: qml/DeveloperPage.qml:192
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -882,7 +894,7 @@ msgstr ""
 "retrospuron; instalu la bezonatajn pakaĵojn (<link url='%2'> listo de "
 "dosieroj</link>) kaj alklaku la butonon <interface>Reŝargi</interface>."
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -902,7 +914,7 @@ msgstr ""
 "url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
 "<interface>Reŝargi</interface>."
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -916,7 +928,7 @@ msgstr ""
 "Vi povus provi regeneri la malantaŭan spuron klakante la butonon "
 "<interface>Reŝargi</interface>."
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -930,6 +942,21 @@ msgid ""
 msgstr ""
 "<emphasis strong='true'>Vi unue devas instali la sencimigilon (%1) kaj poste "
 "alklaku la butonon <interface>Reŝargi</interface>.</emphasis>"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+#| msgctxt "@info/rich"
+#| msgid ""
+#| "You could try to regenerate the backtrace by clicking the "
+#| "<interface>Reload</interface> button."
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"Vi povus provi regeneri la malantaŭan spuron klakante la butonon "
+"<interface>Reŝargi</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1087,7 +1114,14 @@ msgstr ""
 "in por certigi, ke la ĝisdatigo estas plene aplikata kaj estos ne kaŭzas\n"
 "ajn kromefikojn.</para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1096,7 +1130,7 @@ msgstr ""
 "Kolekto de paneinformoj malsukcesis pro nekonataj kialoj. Vi povas reprovi, "
 "fermi la fenestron, aŭ <link url='%1'>rigardi detalan eligon</link>."
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1104,11 +1138,6 @@ msgid ""
 msgstr ""
 "Kolekto de paneinformoj malsukcesis pro nekonataj kialoj. Vi povas reprovi "
 "aŭ fermi la fenestron."
-
-#: qml/main.qml:110
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "Reprovi"
 
 #: qml/MainPage.qml:12
 #, fuzzy

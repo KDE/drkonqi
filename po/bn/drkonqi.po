@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-10 00:42+0000\n"
+"POT-Creation-Date: 2025-05-02 00:43+0000\n"
 "PO-Revision-Date: 2012-07-16 15:55+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -252,14 +252,14 @@ msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:113
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "ত্রুটিমুক্ত করা চিহ্নের ইনস্টলেশনের সময় ত্রুটি"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:223
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
 #, fuzzy, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -804,7 +804,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "অ্যাপলিকেশনের স্বনির্বাচিত মানসমূহ যে সম্বন্ধস্থাপন করা হয়ত যাবে"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:216
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -883,7 +883,22 @@ msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:179
+#: qml/DeveloperPage.qml:97
+msgctxt "@info"
+msgid ""
+"This backtrace is very limited because there was not enough memory available "
+"to generate a full backtrace. You can close some applications and try again."
+msgstr ""
+
+#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retry..."
+msgctxt "@action retry gathering crash data"
+msgid "Retry"
+msgstr "আবার চেষ্টা করো..."
+
+#: qml/DeveloperPage.qml:192
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -902,7 +917,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:187
+#: qml/DeveloperPage.qml:200
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -916,7 +931,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:194
+#: qml/DeveloperPage.qml:207
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -926,7 +941,7 @@ msgstr ""
 "আপনি ক্লিক করার মধ্যে ব্যাকট্রেস পুনরায় উৎ‍পাদন করতে চেষ্টা করতে "
 "পারেন<interface>রিলোড</interface>বাটন।"
 
-#: qml/DeveloperPage.qml:198
+#: qml/DeveloperPage.qml:211
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -935,6 +950,17 @@ msgid ""
 msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
+
+#: qml/DeveloperPage.qml:215
+#, fuzzy
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation was stopped due to memory pressure. You could try "
+"to regenerate the backtrace by clicking the <interface>Reload</interface> "
+"button."
+msgstr ""
+"আপনি ক্লিক করার মধ্যে ব্যাকট্রেস পুনরায় উৎ‍পাদন করতে চেষ্টা করতে "
+"পারেন<interface>রিলোড</interface>বাটন।"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1057,27 +1083,26 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:94
+#: qml/main.qml:93
+msgctxt "@info"
+msgid ""
+"There was not enough memory to gather crash information. You can close some "
+"applications to free up memory and try again."
+msgstr ""
+
+#: qml/main.qml:98
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 
-#: qml/main.qml:97
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
-
-#: qml/main.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retry..."
-msgctxt "@action retry gathering crash data"
-msgid "Retry"
-msgstr "আবার চেষ্টা করো..."
 
 #: qml/MainPage.qml:12
 #, fuzzy
