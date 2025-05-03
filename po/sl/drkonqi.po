@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1708138 2025-05-02 01:21:35Z scripty $
+# $Id: drkonqi.po 1708180 2025-05-03 01:22:02Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2025-04-01 07:38+0200\n"
+"PO-Revision-Date: 2025-05-02 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -853,6 +853,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Ta povratna sled je zelo omejena, ker ni bilo na voljo dovolj pomnilnika za "
+"ustvarjanje celotne povratne sledi. Nekatere aplikacije lahko zaprete in "
+"poskusite znova."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -910,19 +913,15 @@ msgstr ""
 "in nato klikniti na gumb <interface>Znova naloži</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Povratno sled lahko poskusite ustvariti znova s klikom na gumb "
-"<interface>Znova naloži</interface>."
+"Generiranje povratne sledi je bilo ustavljeno zaradi pritiska na pomnilnik. "
+"Povratno sled lahko poskusite znova ustvariti s klikom na gumb "
+"<interface>Ponovno naloži</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1059,6 +1058,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Za zbiranje informacij o sesutju ni bilo dovolj pomnilnika. Nekatere "
+"aplikacije lahko zaprete, da sprostite pomnilnik, in poskusite znova."
 
 #: qml/main.qml:98
 msgctxt "@info"
