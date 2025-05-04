@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2025-04-01 19:24+0300\n"
+"PO-Revision-Date: 2025-05-03 14:27+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -824,6 +824,8 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"ניתוח המהלכים מוגבל מאוד כיוון שאין מספיק זיכרון זמין לייצר ניתוח מהלכים "
+"מלא. אפשר לסגור חלק מהיישומים ולנסות שוב."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -880,19 +882,14 @@ msgstr ""
 "ללחוץ על הכפתור <interface>טעינה מחדש</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"אפשר לנסות ליצור את ניתוח המהלכים מחדש בלחיצה על הכפתור <interface>טעינה "
-"מחדש</interface>."
+"יצירת ניתוח המהלכים נעצר עקב עומס על הזיכרון. אפשר לנסות ליצור את ניתוח "
+"המהלכים מחדש בלחיצה על הכפתור <interface>טעינה מחדש</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1021,6 +1018,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"לא היה מספיק זיכרון כדי לאסוף פרטים על הקריסה. אפשר לסגור חלק מהיישומים כדי "
+"לפנות זיכרון ולנסות שוב."
 
 #: qml/main.qml:98
 msgctxt "@info"

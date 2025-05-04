@@ -1,4 +1,5 @@
 # Spanish translations for drkonqi.po package.
+# This file is distributed under the same license as the drkonqi package.
 #
 # SPDX-FileCopyrightText: 2001, 2002, 2003, 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
 # SPDX-FileCopyrightText: 2003, 2005, 2008 Jaime Robles <jaime@kde.org>
@@ -14,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2025-04-02 00:58+0100\n"
+"PO-Revision-Date: 2025-05-03 18:25+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -244,7 +245,7 @@ msgid ""
 "interface> button."
 msgstr ""
 "Puede intentar volver a generar la traza inversa haciendo clic en el botón "
-"<interface>Recargar</interface>."
+"<interface>Volver a cargar</interface>."
 
 #: backtracewidget.cpp:316
 #, kde-format
@@ -263,7 +264,7 @@ msgid ""
 "the <interface>Reload</interface> button.</strong>"
 msgstr ""
 "<strong>Debe instalar la aplicación de depuración (%1) y hacer clic en el "
-"botón <interface>Recargar</interface>.</strong>"
+"botón <interface>Volver a cargar</interface>.</strong>"
 
 #: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
 #, kde-format
@@ -863,6 +864,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Esta traza inversa es muy limitada porque no había suficiente memoria "
+"disponible para generar una traza inversa completa. Puede cerrar algunas "
+"aplicaciones y probar de nuevo."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -907,7 +911,7 @@ msgid ""
 "interface> button."
 msgstr ""
 "Trate de volver a generar la traza inversa pulsando el botón "
-"<interface>Recargar</interface>."
+"<interface>Volver a cargar</interface>."
 
 #: qml/DeveloperPage.qml:211
 msgctxt "@info/rich"
@@ -919,19 +923,15 @@ msgstr ""
 "pulse el botón <interface>Volver a cargar</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Puede intentar volver a generar la traza inversa haciendo clic en el botón "
-"<interface>Recargar</interface>."
+"Se ha detenido la generación de la traza inversa debido a la presión de la "
+"memoria. Puede intentar volver a generar la traza inversa pulsando el botón "
+"<interface>Volver a cargar</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1072,6 +1072,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"No había suficiente memoria para reunir información sobre el fallo. Puede "
+"cerrar algunas aplicaciones para liberar memoria y volver a intentarlo."
 
 #: qml/main.qml:98
 msgctxt "@info"
