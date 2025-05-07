@@ -484,6 +484,9 @@ class SentryEvent:
     def cpu_model(self):
         with open("/proc/cpuinfo") as f:
             for line in f.readlines():
+                line = line.strip()
+                if not line: # skip empty lines
+                    continue
                 key, value = line.split(':', 1)
                 if key.strip() == 'model name':
                     return value.strip()
