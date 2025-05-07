@@ -321,6 +321,8 @@ class SentryTrace:
                 if int(core_image.address, 16) <= frame.pc() < (int(core_image.address, 16) + core_image.length):
                     image = core_image
                     break
+            if not solib and not image:
+                raise UnexpectedMappingException("No solib and no image found for frame!")
             solib = solib or image.file
 
             if solib in SentryTrace.loaded_solibs:
