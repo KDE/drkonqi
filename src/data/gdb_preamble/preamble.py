@@ -484,7 +484,7 @@ class SentryEvent:
     def cpu_model(self):
         with open("/proc/cpuinfo") as f:
             for line in f.readlines():
-                key, value = line.split(':', 2)
+                key, value = line.split(':', 1)
                 if key.strip() == 'model name':
                     return value.strip()
         return None
@@ -718,11 +718,11 @@ class CoreImage:
     def __init__(self, eu_unstrip_line):
         self.valid = False
 
-        address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 5)
+        address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 4)
         self.have_elf = file != '-'
         self.have_dwarf = debug != '-'
-        self.build_id, self.build_id_address = build_id_pack.split('@', 2)
-        self.address, self.length = address_pack.split('+', 2)
+        self.build_id, self.build_id_address = build_id_pack.split('@', 1)
+        self.address, self.length = address_pack.split('+', 1)
         self.length = int(self.length, 16)
         if self.have_elf:
             # For builtin images the file will be '.'. This notably happens for the executable itself, but also for linux-vdso.
