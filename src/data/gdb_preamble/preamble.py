@@ -488,7 +488,8 @@ class SentryEvent:
                 if not line: # skip empty lines
                     continue
                 key, value = line.split(':', 1)
-                if key.strip() == 'model name':
+                key = key.strip()
+                if key == 'model name' or key == 'model': # on arm64 this is just 'model'
                     return value.strip()
         return None
 
