@@ -725,6 +725,8 @@ class CoreImage:
         address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 4)
         self.have_elf = file != '-'
         self.have_dwarf = debug != '-'
+        if build_id_pack == '-':
+            raise NoBuildIdException(f'No build id found in core image: {eu_unstrip_line}')
         self.build_id, self.build_id_address = build_id_pack.split('@', 1)
         self.address, self.length = address_pack.split('+', 1)
         self.length = int(self.length, 16)
