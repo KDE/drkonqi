@@ -317,6 +317,7 @@ class SentryTrace:
             solib = gdb.current_progspace().solib_name(frame.pc())
             if solib in SentryTrace.loaded_solibs:
                 continue
+            image = None
             for core_image in core_images:
                 if int(core_image.address, 16) <= frame.pc() < (int(core_image.address, 16) + core_image.length):
                     image = core_image
