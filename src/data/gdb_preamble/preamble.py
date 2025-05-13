@@ -313,13 +313,15 @@ class SentryTrace:
             gdb.execute(f'select-frame {i}')
             frame = gdb.selected_frame()
 
+            pc = frame.pc()
+
             # Determine the solib path
-            solib = gdb.current_progspace().solib_name(frame.pc())
+            solib = gdb.current_progspace().solib_name(pc)
             if solib in SentryTrace.loaded_solibs:
                 continue
             image = None
             for core_image in core_images:
-                if int(core_image.address, 16) <= frame.pc() < (int(core_image.address, 16) + core_image.length):
+                if int(core_image.address, 16) <= pc < (int(core_image.address, 16) + core_image.length):
                     image = core_image
                     break
             if not solib and not image:
