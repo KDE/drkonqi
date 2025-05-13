@@ -288,12 +288,13 @@ class SentryTrace:
 
     def __init__(self, thread, is_crashed):
         thread.switch()
+        self.thread = thread
         self.is_crashed = is_crashed
         self.lock_reasons = {}
         self.was_main_thread = False
         self.crashed = self.is_crashed # different from is_crashed (=input) this indicates if we stumbled over the kcrash handler
 
-    def load_solib(cramped):
+    def load_solib(thread, cramped): # NOTE: we pull thread into scope for its diagnostic value
         # Lazy load solibs. This is super complicated because the gdb CLI and API don't actually give us all the control.
         # Also loading new symbols resets the trace so we need to select-frames fairly aggressively.
 
@@ -355,7 +356,7 @@ class SentryTrace:
         spacious_memory = os.getenv('DRKONQI_MEMORY') == 'spacious'
         # In spacious mode we load all solibs by default and don't need to do anything extra. All other modes load on-demand.
         if cramped_memory or little_memory or some_memory:
-            SentryTrace.load_solib(cramped_memory)
+            SentryTrace.load_solib(self.thread, cramped_memory)
 
         frames = [ SentryFrame(frame) for frame in gdb.FrameIterator.FrameIterator(gdb.newest_frame()) ]
 
