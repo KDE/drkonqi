@@ -306,7 +306,7 @@ class SentryTrace:
                 if not gdb.selected_frame().older():
                     break
 
-            # Increment in the beginning so we can continue early without having to worry that the index will be off
+            # Increment in the beginning so we can `continue` early without having to worry that the index will be off
             i = i + 1
 
             # Select the actual frame for loading
