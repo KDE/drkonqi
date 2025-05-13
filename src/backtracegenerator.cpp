@@ -229,6 +229,10 @@ void BacktraceGenerator::slotProcessExited(int exitCode, QProcess::ExitStatus ex
 
 void BacktraceGenerator::slotOnErrorOccurred(QProcess::ProcessError error)
 {
+    if (!m_proc) { // happens when the process gets destroyed before it finished properly. Then the ~QProcess will issue the error signal.
+        return;
+    }
+
     qCWarning(DRKONQI_LOG) << "Debugger process had an error" << error << m_proc->program() << m_proc->arguments() << m_proc->environment();
 
     // make very sure the process is getting discarded, otherwise retry operations won't work
