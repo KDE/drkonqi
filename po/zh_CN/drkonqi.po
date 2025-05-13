@@ -800,6 +800,8 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"此回溯信息非常有限，因为当时可用内存不足，无法生成完整的回溯信息。您可以关闭"
+"一些应用程序之后重试。"
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -854,18 +856,14 @@ msgstr ""
 "</interface>按钮。</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"您可以尝试点击<interface>重新加载</interface>按钮重新生成回溯跟踪数据。"
+"由于内存不足，回溯生成已停止。您可以尝试点击 <interface>重新加载</interface> "
+"按钮重新生成回溯。"
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -991,6 +989,7 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"内存不足，无法收集崩溃信息。您可以关闭一些应用程序以释放内存，然后重试。"
 
 #: qml/main.qml:98
 msgctxt "@info"

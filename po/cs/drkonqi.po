@@ -680,12 +680,9 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Nezobrazovat upozornění, ale rovnou spustit ladicí dialog"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Stahování backtrace (Automatická informace o pádu)"
+msgstr ""
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -693,26 +690,19 @@ msgid "Next"
 msgstr "Další"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Nelze se připojit k bugs.kde.org: <message>%1</message>"
+msgstr ""
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
 msgid "Retry"
 msgstr "Zkusit znovu"
 
-# %s is FTP or HTTP
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Pokouším se připojit na bugs.kde.org..."
+msgstr ""
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -769,12 +759,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Nedostatečně použitelné"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -782,9 +766,6 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Informace, které poskytujete, nejsou v tomto případě považovány za "
-"dostatečně užitečné. Pokud vás nenapadají žádné další informace, můžete okno "
-"s hlášením zavřít.</para>"
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -797,13 +778,9 @@ msgid "Install Debug Symbols"
 msgstr "Nainstalovat ladicí symboly"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Použijte toto tlačítko pro instalaci chybějících balíčků s ladicími symboly."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -855,16 +832,6 @@ msgid "Retry"
 msgstr "Zkusit znovu"
 
 #: qml/DeveloperPage.qml:192
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -875,23 +842,8 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Pokud si přejete automaticky nainstalovat chybějící ladicí balíčky, klikněte "
-"na tlačítko <interface>Instalovat ladicí symboly</interface>. Pokud tato "
-"metoda\n"
-"nefunguje: prosím přečtěte si <link url='%1'>Jak vytvořit použitelné hlášení "
-"o chybě</link>, abyste se dozvěděli jak\n"
-"získat použitelný backtrace; nainstalujte potřebné balíčky (<link "
-"url='%2'>seznam souborů</link>) a klikněte na tlačítko <interface>Obnovit</"
-"interface>."
 
 #: qml/DeveloperPage.qml:200
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -899,54 +851,28 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Prosím, přečtěte si <link url='%1'>Jak vytvořit použitelná chybová hlášení</"
-"link> abyste se dozvěděli jak získat použitelný backtrace. Po instalaci\n"
-"potřebných balíčků (<link url='%2'>seznam souborů</link>), klikněte na "
-"tlačítko <interface>Obnovit</interface>."
 
 #: qml/DeveloperPage.qml:207
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Můžete zkusit znovu vygenerovat backtrace kliknutím na tlačítko "
-"<interface>Obnovit</interface>."
 
 #: qml/DeveloperPage.qml:211
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Je potřeba nainstalovat ladicí aplikaci (%1) a "
-"kliknout na tlačítko <interface>Obnovit</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Můžete zkusit znovu vygenerovat backtrace kliknutím na tlačítko "
-"<interface>Obnovit</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -964,12 +890,9 @@ msgid ""
 msgstr ""
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "Přihlášení do systému pro sledování chyb"
+msgstr ""
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -977,12 +900,9 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Pro další pokračování je potřeba se přihlásit do vašeho účtu %1."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr "E-mailová adresa:"
+msgstr ""
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -995,15 +915,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Uložit přihlašovací údaje pomocí systému KDE Wallet"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1013,12 +924,6 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
-"<note>Pokud si přejete odeslat hlášení o chybě, musíte mít uživatelský účet "
-"v <link url='%1'>systému pro sledování chyb KDE</link>, abychom vás mohli "
-"případně později\n"
-"kontaktovat s žádostí o poskytnutí dalších informací. Pokud ještě účet "
-"nemáte, můžete si jej <link url='%2'>založit</link>. Prosím, nepoužívejte "
-"jednorázové e-mailové účty.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1026,18 +931,11 @@ msgid "Login"
 msgstr "Přihlášení"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
-"Použijte tlačítko pro přihlášení do systému pro sledování chyb KDE pomocí e-"
-"mailu a hesla."
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1112,23 +1010,14 @@ msgid ""
 msgstr ""
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
-msgstr "Obsluha pádů"
+msgstr ""
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
 msgstr ""
-"<para>Omlouváme se, ale aplikace <application>%1</application> byla nečekaně "
-"ukončena.</para>"
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1146,19 +1035,12 @@ msgid "Bug Report Preview"
 msgstr ""
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
-"<para>Toto je náhled obsahu hlášení, které bude odesláno.</para><para>Pokud "
-"si jej přejete změnit, přejděte na předchozí strany.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1171,44 +1053,29 @@ msgid "Waiting for data…"
 msgstr "Čeká se na data…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Vygenerovaná informace o pádu je užitečná"
+msgstr ""
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Vygenerovaná informace o pádu může být užitečná"
+msgstr ""
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Vygenerovaná informace o pádu je nepoužitelná"
+msgstr ""
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Vygenerovaná informace o pádu je nepoužitelná"
+msgstr ""
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Zadejte podrobnosti o pádu"
+msgstr ""
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1320,12 +1187,9 @@ msgid "Retry Submission"
 msgstr "Zopakovat odeslání"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Odesílám chybové hlášení"
+msgstr ""
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1343,20 +1207,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr "Děkujeme za to, že jste součástí KDE. Nyní můžete toto okno zavřít."
+msgstr ""
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Odeslat automatické hlášení"
+msgstr ""
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1405,12 +1263,9 @@ msgid "Finish"
 msgstr "Dokončit"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Welcome to the Reporting Assistant"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Vítejte v asistentovi hlášení pádů"
+msgstr ""
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1422,15 +1277,6 @@ msgstr ""
 "chyby."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1440,12 +1286,6 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<para><note>Jelikož je pro efektivní ladění problému potřeba komunikace mezi "
-"vámi a vývojáři,\n"
-"je před pokračováním v hlášení <emphasis strong='true'>nutné, abyste "
-"souhlasili s možností být kontaktováni vývojáři</emphasis>.\n"
-"</note></para><para>Pokud s tímto nesouhlasíte, můžete toto okno klidně "
-"zavřít.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1588,35 +1428,3 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
-
-#~ msgctxt "@action:button"
-#~ msgid "Show backtrace content (advanced)"
-#~ msgstr "Zobrazit obsah backtrace (pokročilé)"
-
-#~ msgctxt "@title:window"
-#~ msgid "What do You Know About the Crash?"
-#~ msgstr "Co o pádu aplikace víte?"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-#~ "describes what was\n"
-#~ "happening inside the application when it crashed, so the developers may "
-#~ "track\n"
-#~ "down where the mess started. They may look meaningless to you, but they "
-#~ "might\n"
-#~ "actually contain a wealth of useful information.<nl />Backtraces are "
-#~ "commonly\n"
-#~ "used during interactive and post-mortem debugging.</para>"
-#~ msgstr ""
-#~ "<subtitle>Co je to \"backtrace\" ?</subtitle><para>Informace o pádu "
-#~ "(Backtrace) popisují, co se děje\n"
-#~ "uvnitř aplikace když spadla, takže vývojáři mohou vystopovat\n"
-#~ "počátek problému. vám mohou připadat bezvýznamné, ale ve skutečnosti "
-#~ "mohou\n"
-#~ "obsahovat spoustu užitečných informací.<nl />Backtrace je obvykle\n"
-#~ "využíváno interaktivního ladění po pádu aplikace.</para>"
-
-#~ msgctxt "@title"
-#~ msgid "Preview the Report"
-#~ msgstr "Náhled hlášení"
