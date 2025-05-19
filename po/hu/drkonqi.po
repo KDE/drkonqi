@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2025-01-21 21:04+0100\n"
+"PO-Revision-Date: 2025-05-18 20:26+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -687,9 +687,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Ne jelenjen meg értesítés, indítsa közvetlenül a hibakeresési ablakot"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr ""
@@ -701,12 +698,9 @@ msgid "Next"
 msgstr "Következő"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Nem sikerült kapcsolódni a bugs.kde.org-hoz: <message>%1.</message>"
+msgstr "Nem sikerült kapcsolódni ehhez: %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -714,17 +708,14 @@ msgid "Retry"
 msgstr "Újra"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Kapcsolódás ehhez: bugs.kde.org…"
+msgstr "Kapcsolódás ehhez: %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Az Ön ismeretei"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -776,12 +767,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Nem kellőképpen hasznos"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -789,9 +774,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>A szolgáltatott információkat nem lehet elég hasznosnak tekinteni "
-"ebben az esetben. Ha nem jut eszébe több információ, bezárhatja a "
-"hibabejelentő ablakot.</para>"
+"A szolgáltatott információkat nem lehet elég hasznosnak tekinteni ebben az "
+"esetben.\n"
+"Ha nem jut eszébe több információ, bezárhatja a hibabejelentő ablakot."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -804,9 +789,6 @@ msgid "Install Debug Symbols"
 msgstr "H&ibakövetési szimbólumok telepítése"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
@@ -857,6 +839,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Ezek a visszakövetési adatok korlátozottak, mivel nem volt elég memória a "
+"teljes visszakövetés előállításához. Néhány alkalmazás bezárása után újra "
+"megpróbálhatja."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -864,16 +849,6 @@ msgid "Retry"
 msgstr "Újra"
 
 #: qml/DeveloperPage.qml:192
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -893,13 +868,6 @@ msgstr ""
 "listája</link>) és kattintson az <interface>Újratöltés</interface> gombra."
 
 #: qml/DeveloperPage.qml:200
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -914,11 +882,6 @@ msgstr ""
 "<interface>Újratöltés</interface> gombra."
 
 #: qml/DeveloperPage.qml:207
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -928,12 +891,6 @@ msgstr ""
 "interface> gombra kattintva."
 
 #: qml/DeveloperPage.qml:211
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -943,19 +900,15 @@ msgstr ""
 "(%1), majd kattintson az <interface>Újratöltés</interface> gombra.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Megpróbálhatja újragenerálni a visszakövetést az <interface>Újratöltés</"
-"interface> gombra kattintva."
+"A visszakövetés előállítása memóriahiány miatt leállt. Megpróbálhatja "
+"újragenerálni a visszakövetést az <interface>Újratöltés</interface> gombra "
+"kattintva."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -965,14 +918,6 @@ msgstr ""
 "javításához"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -988,9 +933,6 @@ msgstr ""
 "Forgalmi díjas internetkapcsolat esetén automatikusan kihagyásra kerül."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Bejelentkezés a hibakövető rendszerbe"
@@ -1001,12 +943,9 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "A továbblépéshez először be kell jelentkeznie a(z) %1 fiókjával."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr "E-mail cím:"
+msgstr "E-mail-cím:"
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -1019,15 +958,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "A bejelentkezési adatok elmentése a KDE jelszókezelőjével"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1050,11 +980,6 @@ msgid "Login"
 msgstr "Bejelentkezés"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1120,6 +1045,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Nem volt elég memória az összeomlási információk összegyűjtéséhez. Memória "
+"felszabadításához bezárhat néhány alkalmazást, és újra megpróbálhatja."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -1141,23 +1068,14 @@ msgstr ""
 "Megpróbálhatja újból, vagy bezárhatja az ablakot."
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Programhiba-kezelő"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Sajnáljuk, de a(z) <application>%1</application> váratlanul leállt.</"
-"para>"
+msgstr "A(z) <application>%1</application> váratlanul bezárult."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1170,19 +1088,11 @@ msgid "See Developer Information"
 msgstr "Fejlesztői információk megtekintése"
 
 #: qml/PreviewPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Report Keywords"
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr "Hibabejelentési kulcsszavak"
+msgstr "Hibabejelentés előnézete"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1203,41 +1113,26 @@ msgid "Waiting for data…"
 msgstr "Várakozás az adatokra…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "A generált összeomlási információ hasznos"
+msgstr "A generált összeomlási információ hasznos."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "A generált összeomlási információ talán hasznos"
+msgstr "A generált összeomlási információ talán hasznos."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "A generált összeomlási információ nem hasznos"
+msgstr "A generált összeomlási információ valószínűleg nem hasznos."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "A generált összeomlási információ nem hasznos"
+msgstr "A generált összeomlási információ nem hasznos."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Adja meg a részleteket az összeomlásról"
@@ -1364,9 +1259,6 @@ msgid "Retry Submission"
 msgstr "Küldés újra"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "Hibajelentés küldése…"
@@ -1387,21 +1279,15 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
 "Köszönjük, hogy hozzájárult a KDE-hez. Most már bezárhatja ezt az ablakot."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Automatikus jelentés küldése"
+msgstr "Automatikus jelentés"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1429,12 +1315,6 @@ msgid "Automatically report crashes"
 msgstr "Összeomlások automatikus jelentése"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1442,7 +1322,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 "Mindig automatikusan elküldi az összeomlási jelentéseket a KDE összeomlás-"
-"követő rendszerébe. Nincs szükség kézi bevitelre.\n"
+"követő rendszerébe, nincs szükség kézi bevitelre.\n"
 "Nem fog több értesítést kapni az összeomlásokról."
 
 #: qml/SentryPage.qml:93
@@ -1461,12 +1341,9 @@ msgid "Finish"
 msgstr "Befejezés"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Hibabejelentési asszisztens útmutató"
+msgstr "Hibabejelentési segéd"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1478,15 +1355,6 @@ msgstr ""
 "a hibajelentési folyamaton."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1501,7 +1369,7 @@ msgstr ""
 "a hiba jelentésének a folytatásához  <emphasis strong='true'>szükséges "
 "elfogadnia, hogy a fejlesztők kapcsolatba léphetnek Önnel</emphasis>\n"
 "</note></para><para>Nyugodtan zárja be ezt a párbeszédablakot, ha nem "
-"fogadja el ezt.</para>"
+"szeretné ezt elfogadni.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
