@@ -103,6 +103,10 @@ Kirigami.Page {
             text: i18nc("@info", "Distribution method:")
         }
         RowLayout {
+            QQC2.BusyIndicator {
+                running: platformCombo.state === "loading"
+                visible: running
+            }
             QQC2.ComboBox {
                 id: platformCombo
                 model: PlatformModel {
@@ -120,7 +124,21 @@ Kirigami.Page {
                     if (model.initialized) { // lest we screw up initial platform detection
                         DrKonqi.systemInformation.bugzillaPlatform = currentValue
                     }
-                 }
+                }
+                enabled: platformCombo.state === ""
+                // Note that the combobox always has at least one entry (`unspecified`) so we need to replace that with
+                // the loading placeholder.
+                displayText: enabled ? undefined : i18nc("@item:inlistbox placeholder while loading", "Loading…")
+
+                states: [
+                    State {
+                        name: "loading"
+                        when: !platformCombo.model.initialized
+                    },
+                    State {
+                        name: ""
+                    }
+                ]
             }
             QQC2.CheckBox {
                 text: i18nc("@option:check", "KDE Platform is compiled from source")
