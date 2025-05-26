@@ -1,25 +1,25 @@
-# Translation for drkonqi5.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2024 This file is copyright:
+# Translation for drkonqi.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2025 This file is copyright:
 # This file is distributed under the same license as the drkonqi package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2024-12-31 19:12+0100\n"
+"PO-Revision-Date: 2025-05-25 19:34+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -699,12 +699,9 @@ msgstr ""
 "leihoa"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Aztarna lortzen (kraskaduraren informazio automatikoa)"
+msgstr "Atzeranzko aztarna lortzen (kraskaduraren informazio automatikoa)"
 
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
@@ -712,12 +709,9 @@ msgid "Next"
 msgstr "Hurrengoa"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "bugs.kde.org kontaktatzea huts egin du: <message>%1</message>"
+msgstr "%1 harremanean jartzea huts egin du: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -725,17 +719,14 @@ msgid "Retry"
 msgstr "Berriz saiatu"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "bugs.kde.org kontaktatzea saiatzen..."
+msgstr "%1(e)rekin harremanean jartzen saiatzen..."
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Zure ezagutza"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -788,12 +779,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Ez da nahikoa erabilgarria"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -801,9 +786,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Eman dezakezun informazioa, kasu honetan, ez da nahikoa lagungarria. "
+"Eman dezakezun informazioa, kasu honetan, ez da nahikoa lagungarria. "
 "Informazio gehiago bururatzen ez bazaizu, akats-txostenaren elkarrizketa-"
-"koadroa itxi dezakezu.</para>"
+"koadroa itxi dezakezu."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -816,9 +801,6 @@ msgid "Install Debug Symbols"
 msgstr "Instalatu arazteko sinboloak"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
@@ -868,6 +850,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Atzeranzko aztarna hau oso mugatua da, atzeranzko aztarna oso bat sortzeko "
+"adina memoria erabilgarri ez zegoelako. Aplikazio batzuk itxi eta berriz "
+"saia zaitezke."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -875,16 +860,6 @@ msgid "Retry"
 msgstr "Berriz saiatu"
 
 #: qml/DeveloperPage.qml:192
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -895,22 +870,15 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"<interface>Instalatu arazteko sinboloak</interface> botoian klik egin "
-"dezakezu, falta diren arazteko informazio-paketeak automatikoki "
-"instalatzeko. Metodo hori ez badabil:\n"
-"mesedez, irakurri <link url='%1'>Kraskadura-txosten baliagarriak nola sortu</"
-"link>, atzerako aztarna baliagarri bat nola lortu ikasteko;\n"
+"Egin klik <interface>Instalatu arazteko sinboloak</interface> botoian, falta "
+"diren arazteko informazio-paketeak automatikoki instalatzeko. Metodo hori ez "
+"badabil,\n"
+"irakurri <link url='%1'>Kraskadura-txosten baliagarriak nola sortu</link>, "
+"atzeranzko aztarna baliagarri bat nola lortu ikasteko;\n"
 "instalatu beharrezkoak diren paketeak (<link url='%2'>fitxategien zerrenda</"
 "link>) eta egin klik <interface>Birzamatu</interface> botoian."
 
 #: qml/DeveloperPage.qml:200
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -918,54 +886,39 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Mesedez, irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen "
-"baliagarriak nola sortu</link>, atzerako aztarna baliagarriak nola lortu\n"
+"Irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen baliagarriak nola "
+"sortu</link>, atzeranzko aztarna baliagarriak nola lortu\n"
 "ikasteko; instalatu beharrezko paketeak (<link url='%2'>fitxategi-zerrenda</"
-"link>) eta egin klik <interface>Birzamatu</interface> botoian."
+"link>) eta egin klik <interface>Birzamatu</interface> botoiari."
 
 #: qml/DeveloperPage.qml:207
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Aztarna berriz sortzen saia zaitezke; horretarako, egin klik "
-"<interface>Birzamatu</interface> botoian."
+"Atzeranzko aztarna berriz sortzen saiatu, <interface>Birzamatu</interface> "
+"botoiari klik eginda."
 
 #: qml/DeveloperPage.qml:211
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Aurrena arazteko aplikazioa (%1) instalatu behar "
-"duzu, ondoren egin klik <interface>Birzamatu</interface> botoian.</emphasis>"
+"<emphasis strong='true'>Aurrena instalatu arazteko aplikazioa (%1), ondoren "
+"egin klik <interface>Birzamatu</interface> botoiari.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Aztarna berriz sortzen saia zaitezke; horretarako, egin klik "
-"<interface>Birzamatu</interface> botoian."
+"Memoria presioagatik atzeranzko aztarnaren sorrera gelditu egin da."
+"Atzeranzko aztarna berriz sortzen saia zintezke, <interface>Birzamatu</"
+"interface> botoiari klik eginez."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -974,14 +927,6 @@ msgstr ""
 "Zama-jaitesi arazketa-ikurrak automatikoki kraxkadura-txostenak hobetzeko"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -990,20 +935,17 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
-"Kraxkadura-txostenek balio handikoagoa izan dezakete, aurrena zure "
+"Kraskadura-txostenek balio handikoagoa izan dezakete, aurrena zure "
 "banatzailearengandik arazteko baliabide gehigarriak zama-jaisten badituzu.\n"
-"Horrek memoriaren erabilera handitzea ere ekar lezake eta denbora gehiago "
-"beharko du, eta neurri ezezaguneko zama-jaitsierak eragiten ditu kraxkadurak "
+"Horrek memoriaren erabilera handitzea ere ekar lezake, denbora gehiago "
+"beharko du, eta neurri ezezaguneko zama-jaitsierak eragiten ditu kraskadurak "
 "gertatzen direnean. Hori automatikoki baztertzen da Interneteko konexio "
 "tarifatua erabiltzen denean."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "Saio-hasi akatsen jarraipena egiteko sisteman"
+msgstr "Saioa hasi akatsen jarraipena egiteko sisteman"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -1011,9 +953,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "%1 kontuarekin hasi behar duzu saioa aurrera egiteko."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-posta helbidea:"
@@ -1029,15 +968,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Gorde saioa hasteko informazioa KDEren zorro-sistema erabiliz"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1047,13 +977,13 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
-"<note><link url='%1'>KDEko akatsen jarraipena egiteko sisteman</link> "
+"<note><link url='%1'>KDEren akatsen jarraipena egiteko sisteman</link> "
 "erabiltzaile-kontu bat izan behar duzu akats txosten bat aurkezteko, "
 "aurrerago,\n"
 "informazio gehiago eskatzeko, zurekin harremanean jartzeko beharra izan "
 "dezakegulako. Halakorik ez baduzu, askatasun osoz <link url='%2'>hemen bat "
-"sor dezakezu</link>. Mesedez, ez erabili erabili eta botatzeko e-posta "
-"konturik.</note>"
+"sor</link> dezakezu. Mesedez, ez erabili erabili eta botatzeko e-posta "
+"helbiderik.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1061,18 +991,13 @@ msgid "Login"
 msgstr "Hasi saioa"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
 "Erabili botoi hau KDEren akatsen jarraipenerako sisteman dagokizun e-posta "
-"eta pasahitzarekin saio-hasteko."
+"eta pasahitzarekin saioa hasteko."
 
 #: qml/main.qml:33
 msgctxt "@info"
@@ -1131,6 +1056,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Ez zegoen kraskaduraren informazioa biltzeko behar adina memoria. Aplikazio "
+"batzuk itxi eta berriz saia zaitezke."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -1152,21 +1079,14 @@ msgstr ""
 "Berriz saiatu edo leihoa itxi dezakezu."
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Kraskadura maneiatzailea"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr "<para><application>%1</application> ustekabean itxi da.</para>"
+msgstr "<application>%1</application> ustekabean itxi da."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1181,22 +1101,17 @@ msgstr "Ikusi Garatzaileen informazioa"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Akats-txostenaren aurreikuspegia"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
-"<para>Hau da bidaliko den txostenaren edukiaren aurreikuspegi bat.</"
-"para><para>Aldatu nahi baduzu, joan aurreko orrietara.</para>"
+"<para>Hau bidaliko den txostenaren edukiaren aurreikuspegi bat da.</"
+"para><para>Txostena aldatu nahi baduzu, joan aurreko orrietara.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1209,44 +1124,30 @@ msgid "Waiting for data…"
 msgstr "Datuen zain..."
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Kraskadurari buruz sortutako informazioa baliagarria da"
+msgstr "Kraskadurari buruz sortutako informazioa baliagarria da."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Kraskadurari buruz sortutako informazioa baliagarria izan liteke"
+msgstr "Kraskadurari buruz sortutako informazioa baliagarria izan liteke."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Kraskadurari buruz sortutako informazioa ez da baliagarria"
+msgstr ""
+"Litekeena da kraskadurari buruz sortutako informazioa baliagarria ez izatea."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Kraskadurari buruz sortutako informazioa ez da baliagarria"
+msgstr "Kraskadurari buruz sortutako informazioa ez da baliagarria."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Idatzi kraskadurari buruzko xehetasunak"
+msgstr "Sartu kraskadurari buruzko xehetasunak"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1370,9 +1271,6 @@ msgid "Retry Submission"
 msgstr "Saiatu berriz bidaltzen"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "Akats txostena bidaltzen..."
@@ -1393,20 +1291,14 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URLa: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Eskerrik asko KDEren zati izateagatik. Orain leiho hau itxi dezakezu."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Bidali txosten automatikoa"
+msgstr "Txosten automatikoa"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1434,20 +1326,14 @@ msgid "Automatically report crashes"
 msgstr "Kraxkaduren berri automatikoki ematea"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
-"Bidali beti kraskadura txosten bat KDEren kraskaduren jarraipen sistemara "
-"automatikoki. Eskuz ezer sartu beharrik izan gabe.\n"
+"Bidali beti kraskadura txosten bat automatikoki KDEren kraskaduren "
+"jarraipenerako sistemara. Eskuz ezer sartu beharrik izan gabe.\n"
 "Ez duzu kraskadura jakinarazpen gehiago jasoko."
 
 #: qml/SentryPage.qml:93
@@ -1466,12 +1352,9 @@ msgid "Finish"
 msgstr "Bukatu"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Akatsak jakinarazteko laguntzailearen gida"
+msgstr "Txostenetarako laguntzailea"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1483,15 +1366,6 @@ msgstr ""
 "aurkezteko prozesuan gidatuko zaitu."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1506,8 +1380,8 @@ msgstr ""
 "akats honen berri emateko txostenarekin jarraitzeko <emphasis "
 "strong='true'>beharrezkoa da garatzaileak zurekin harremanean jar "
 "daitezkeela onartzea</emphasis>.\n"
-"</note></para><para>Hori onartzen ez baduzu, lasai itxi elkarrizketa-leiho "
-"hau.</para>"
+"</note></para><para>Hori onartu nahi ez baduzu, lasai itxi elkarrizketa-"
+"leiho hau.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
