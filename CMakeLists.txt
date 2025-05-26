@@ -80,7 +80,7 @@ ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
 )
 
-find_package(Systemd 249)
+find_package(Systemd 254)
 set_package_properties(Systemd PROPERTIES TYPE REQUIRED PURPOSE "Coredumpd integration.")
 
 find_package(PolkitQt6-1) # This is only used when extracting crashes from coredumpd
