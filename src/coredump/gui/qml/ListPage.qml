@@ -24,6 +24,7 @@ Kirigami.ScrollablePage {
     ListView {
         id: view
         reuseItems: true // We have a lot of items potentially, recycle them
+        currentIndex: -1
 
         KItemModels.KSortFilterProxyModel { // set as model during state change
             id: patientFilterModel
