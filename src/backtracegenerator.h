@@ -117,7 +117,6 @@ private:
     QLockFile *m_lockFile;
     QFutureWatcher<bool> *m_lockWatcher = nullptr;
     bool m_crampedMemory = false;
-    inline static MemoryFence s_fence;
 };
 
 #endif

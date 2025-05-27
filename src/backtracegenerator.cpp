@@ -34,6 +34,12 @@
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
+// WARNING: Do not make this a class member static or translation unit static. It uses QDBus internally and possibly
+// leads to defunct dbus connections when initialized during the __static_initialization_and_destruction, before the
+// QCoreApplication is set up.
+// https://bugs.kde.org/show_bug.cgi?id=504386
+Q_GLOBAL_STATIC(MemoryFence, s_fence)
+
 bool isMeteredNetwork()
 {
     if (!QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Metered)) {
@@ -325,8 +331,8 @@ void BacktraceGenerator::startProcess()
 
     Q_EMIT starting();
 
-    s_fence.surroundMe();
-    connect(&s_fence, &MemoryFence::loaded, this, &BacktraceGenerator::startProcessInternal);
+    s_fence->surroundMe();
+    connect(s_fence, &MemoryFence::loaded, this, &BacktraceGenerator::startProcessInternal);
 }
 
 void BacktraceGenerator::startProcessInternal()
@@ -425,7 +431,7 @@ void BacktraceGenerator::memoryConstrainProc()
 
     m_crampedMemory = false;
     auto arguments = m_proc->arguments();
-    switch (s_fence.size()) {
+    switch (s_fence->size()) {
     case MemoryFence::Size::Cramped:
         m_crampedMemory = true;
         m_proc->setEnv(u"DRKONQI_MEMORY"_s, u"cramped"_s);
@@ -445,7 +451,7 @@ void BacktraceGenerator::memoryConstrainProc()
         // Nothing to do with arguments. Everything is enabled.
         break;
     }
-    qWarning() << "adjusting gdb profile for size" << s_fence.size();
+    qWarning() << "adjusting gdb profile for size" << s_fence->size();
     m_proc->setArguments(arguments);
     Q_EMIT crampedMemoryChanged();
 }
