@@ -67,7 +67,6 @@ ecm_find_qmlmodule(org.kde.syntaxhighlighting 1.0)
 find_package(Python3 3.11 COMPONENTS Interpreter)
 
 find_pythonmodule(psutil)
-find_pythonmodule(pygdbmi)
 find_pythonmodule(sentry_sdk)
 
 find_package(GDB 12)

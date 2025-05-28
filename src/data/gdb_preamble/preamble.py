@@ -54,90 +54,6 @@ def mangle_path(path):
         return path
     return re.sub(str(Path.home()), "$HOME", path, count=1)
 
-class SentryQMLThread:
-    def __init__(self):
-        self.payload = None
-
-        # TODO this is largely a code dupe of print_qml_trace
-
-        if gdb.selected_inferior().connection.type == 'core':
-            # Only live processes can be traced unfortunately since we need to
-            # call a function on the process. That does not work on cores.
-            return
-
-        # should we iterate the inferiors? Probably makes no diff for 99% of apps.
-        for thread in gdb.selected_inferior().threads():
-            if not thread.is_valid() :
-                continue
-            thread.switch()
-            if gdb.selected_thread() != thread:
-                continue # failed to switch :shrug:
-
-            try:
-                frame = gdb.newest_frame()
-            except gdb.error:
-                pass
-            while frame:
-                ret = qml_trace_frame(frame)
-                if ret:
-                    self.payload = ret
-                    break
-                try:
-                    frame = frame.older()
-                except gdb.error:
-                    pass
-
-    def to_sentry_frame(self, frame):
-        print(frame)
-        blob = {
-            'platform': 'other', # always different from the cpp/native frames. alas, technically this frame isn't a javascript frame
-            'in_app': True # qml is always in the app I should think
-        }
-        if 'file' in frame: blob['filename'] = mangle_path(frame['file'])
-        if 'func' in frame: blob['function'] = frame['func']
-        if 'line' in frame: blob['lineno'] = int(frame['line'])
-        return blob
-
-    def to_sentry_frames(self, frames):
-        lst = []
-        for frame in frames:
-            data = self.to_sentry_frame(frame)
-            if not data:
-                continue
-            lst.append(data)
-        return lst
-
-    def to_dict(self):
-        if not self.payload:
-            return None
-
-        payload = self.payload
-
-        from pygdbmi import gdbmiparser
-        result = gdbmiparser.parse_response("*stopped," + payload)
-        frames = result['payload']['frame']
-        print(frames)
-        if type(frames) is dict: # single frames traces aren't arrays to make it more fun -.-
-            frames = [frames]
-        lst = self.to_sentry_frames(frames)
-        print(lst)
-        if lst:
-            return {
-                'id': 'QML', # docs say this is typically a number to there is indeed no enforcement it seems
-                'name': 'QML',
-                'crashed': True,
-                'stacktrace': {
-                    'frames': self.to_sentry_frames(frames)
-                }
-            }
-        return None
-
-    def to_list(self):
-        data = self.to_dict()
-        if data:
-            return [data]
-        return []
-
 class SentryVariablesStatistics:
     # All seen frames
     frames_count: int = 1 # we divide by this, it had better be >0
@@ -523,8 +439,7 @@ class SentryEvent:
             },
             'threads':  [ # https://develop.sentry.dev/sdk/event-payloads/threads/
                  SentryThread(thread, is_crashed=(thread == crash_thread)).to_dict() for thread in gdb.selected_inferior().threads()
-            ] # + SentryQMLThread().to_list(), TODO make qml more efficient it iterates everything again after the sentry threads were collected. a right waste of time!
-            ,
+            ],
             'event_id': uuid.uuid4().hex,
             # Gets overwritten by ReportInterface with a more accurate value
             'timestamp': datetime.now(timezone.utc).isoformat(),
@@ -587,125 +502,6 @@ class SentryEvent:
             sentry_event['release'] = '{}@{}'.format(program, os.getenv('DRKONQI_APP_VERSION'))
 
         return sentry_event
-
-def qml_trace_frame(frame):
-    # NB: Super inspired by QtCreator's gdbbridge.py (GPL3).
-    # I've made the code less of an eye sore though.
-
-    # This is a very exhaustive attempt at finding a frame that has a symbol to the
-    # QV4::ExecutionEngine as we need its address to get the QML trace via qt_v4StackTraceForEngine.
-    # Unfortunately there's no shorter way of accomplishing this since the engine isn't necessarily
-    # appearing as a frame (consequently we can't easily get to a this pointer).
-
-    try:
-        block = frame.block()
-    except:
-        block = None
-
-    if not block:
-        return None
-
-    for symbol in block:
-        if not symbol.is_variable and not symbol.is_argument:
-            continue
-
-        value = symbol.value(frame)
-        if value.is_optimized_out: # can't read values that have been optimized out
-            continue
-
-        typeobj = value.type
-        if typeobj.code != gdb.TYPE_CODE_PTR:
-            continue
-
-        dereferenced_type = typeobj.target().unqualified()
-        if dereferenced_type.name != 'QV4::ExecutionEngine':
-            continue
-
-        addr = int(value)
-        methods = [
-            'qt_v4StackTraceForEngine((void*)0x{0:x})',
-            'qt_v4StackTrace(((QV4::ExecutionEngine *)0x{0:x})->currentContext())',
-            'qt_v4StackTrace(((QV4::ExecutionEngine *)0x{0:x})->currentContext)',
-        ]
-        for method in methods:
-            try: # throws when the function is invalid
-                result = str(gdb.parse_and_eval(method.format(addr))).strip()
-            except gdb.error:
-                continue
-            if result:
-                # We need to massage the result a bit. It's of the form
-                #   "$addr    stack=[...."
-                # but we want to drop the addr as it's not useful data and can't get parsed.
-                # Also drop the stack nesting. Serves no purpose for us. Also unescape the quotes.
-                pos = result.find('"stack=[')
-                if pos != -1:
-                    result = result[pos + 8:-2]
-                    result = result.replace('\\\"', '\"')
-                    return result
-
-    return None
-
-def print_qml_frame(frame):
-    data = {
-        'level': '?',
-        'func': '?',
-        'file': '?',
-        'line': '?'
-    }
-    data.update(frame)
-    print("level={level} func={func} at={file}:{line}".format(**data) )
-
-def print_qml_frames(payload):
-    from pygdbmi import gdbmiparser
-    response = gdbmiparser.parse_response("*stopped," + payload)
-    frames = response['payload']['frame']
-    if type(frames) is dict: # single frames traces aren't arrays to make it more fun -.-
-        print_qml_frame(frames)
-    else: # presumably an iterable
-        for frame in frames:
-            print_qml_frame(frame)
-
-
-def print_qml_trace():
-    if gdb.selected_inferior().connection.type == 'core':
-        # Only live processes can be traced unfortunately since we need to
-        # call a function on the process. That does not work on cores.
-        print('Cannot QML trace cores :(')
-        return
-
-    try:
-        from pygdbmi import gdbmiparser
-    except ImportError:
-        print('Cannot QML trace cores because pygdbmi is missing :(')
-        return
-
-    # should we iterate the inferiors? Probably makes no diff for 99% of apps.
-    for thread in gdb.selected_inferior().threads():
-        if not thread.is_valid():
-            continue
-        thread.switch()
-        if gdb.selected_thread() != thread:
-            continue # failed to switch :shrug:
-
-        try:
-            frame = gdb.newest_frame()
-        except gdb.error:
-            pass
-        while frame:
-            ret = qml_trace_frame(frame)
-            if ret:
-                header = "____drkonqi_qmltrace_thread:{}____".format(str(thread.num))
-                print(frame)
-                print(header)
-                print_qml_frames(ret)
-                print('-' * len(header))
-                print("(beware that frames may have been optimized out)")
-                print() # separator newline
-                break # next thread (there should only be one engine per thread I think?)
-            try:
-                frame = frame.older()
-            except gdb.error:
-                pass
 
 def print_kcrash_error_message():
     symbol = gdb.lookup_static_symbol("s_kcrashErrorMessage")
@@ -789,11 +585,8 @@ def print_preamble_internal():
         )
     global crashed_thread
     crashed_thread = thread
-    # run this first as it expects the current frame to be the crashing one and qml tracing changes the frames around
+    # run this first as it expects the current frame to be the crashing one and further tracing changes the frames around
     print_kcrash_error_message()
-    # changes current frame and thread!
-    print_qml_trace()
-    # prints sentry report
     try:
         print_sentry_payload(thread)
     except NoBuildIdException as e:
