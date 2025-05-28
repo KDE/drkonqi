@@ -49,6 +49,9 @@ class UnexpectedMappingException(Exception):
 class NoBuildIdException(Exception):
     pass
 
+class DeletedMappingException(Exception):
+    pass
+
 def mangle_path(path):
     if not path:
         return path
@@ -531,6 +534,8 @@ class CoreImage:
         self.file = None # may not end up set otherwise causing exceptions
 
         address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 4)
+        if self.name.endswith(' (deleted)'):
+            raise DeletedMappingException(f'Unexpectedly stumbled over a deleted mapping: {eu_unstrip_line}')
         self.have_elf = file != '-'
         self.have_dwarf = debug != '-'
         if build_id_pack == '-':
