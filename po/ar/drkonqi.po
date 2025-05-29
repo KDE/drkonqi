@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2025-05-04 06:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1184,12 +1184,20 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "طريقة التوزيع:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "يحمل..."
+
+#: qml/ReportPage.qml:144
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "منصة كِيدِي بَنيت من المصدر"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1197,7 +1205,7 @@ msgid ""
 msgstr ""
 "<note> الانهيار و معلومات النظام ستضاف بشكل آلي إلى تقرير العلة .</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "عاين التقرير"

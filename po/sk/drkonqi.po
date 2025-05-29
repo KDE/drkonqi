@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2023-12-12 19:27+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1320,12 +1320,20 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metóda distribúcie:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Načítava sa..."
+
+#: qml/ReportPage.qml:144
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE Platform je skompilovaná zo zdrojových kódov"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1334,7 +1342,7 @@ msgstr ""
 "<note>Informácie o páde a systéme budú do hlásenia o chybe pridané "
 "automaticky.</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Náhľad hlásenia"

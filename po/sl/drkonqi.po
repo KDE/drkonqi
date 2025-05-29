@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1708180 2025-05-03 01:22:02Z scripty $
+# $Id: drkonqi.po 1709965 2025-05-29 01:23:06Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2025-05-02 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1225,12 +1225,20 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Način pridobitve:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Nalaganje ..."
+
+#: qml/ReportPage.qml:144
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE-jevi programi so prevedeni iz izvorne kode"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1239,7 +1247,7 @@ msgstr ""
 "<note>Podatki o sesutju in sistemu bodo samodejno dodani poročilu o hrošču.</"
 "note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Predogled poročila"

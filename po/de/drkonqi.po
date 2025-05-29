@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 03:30+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1344,12 +1344,20 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Distribution:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Wird geladen ..."
+
+#: qml/ReportPage.qml:144
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE ist aus Quelltexten kompiliert"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1358,7 +1366,7 @@ msgstr ""
 "<note>Die Informationen zum Absturz und zu Ihrem System werden automatisch "
 "an den Fehlerbericht angehängt.</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Berichtsvorschau"

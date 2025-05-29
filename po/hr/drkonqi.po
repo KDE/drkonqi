@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2011-04-04 08:50+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -1446,7 +1446,15 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metoda distribucije:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Učitavanje…"
+
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1454,7 +1462,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE Platforma kompilirana je iz izvornih datoteka"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1468,7 +1476,7 @@ msgstr ""
 "<note>Informacije o rušenju i sustavu bit će automatski dodane izvještaju o "
 "kvaru.</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"

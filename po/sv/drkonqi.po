@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2025-04-06 10:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1210,12 +1210,20 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Distributionsmetod:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Läser in..."
+
+#: qml/ReportPage.qml:144
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "KDE:s plattform är kompilerad från källkod"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
@@ -1224,7 +1232,7 @@ msgstr ""
 "<note>Krasch- och systeminformation läggs automatiskt till i felrapporten.</"
 "note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 msgctxt "@action:button"
 msgid "Preview Report"
 msgstr "Förhandsgranska rapport"

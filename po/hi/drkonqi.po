@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -1228,7 +1228,15 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "वितरण विधि :"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "लोड किया जा रहा है..."
+
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1236,14 +1244,14 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "केडीई प्लेटफ़ॉर्म को स्रोत से कम्पाइल किया गया है"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview the Report"

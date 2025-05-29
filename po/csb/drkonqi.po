@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-02 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:43+0000\n"
 "PO-Revision-Date: 2009-12-10 21:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -1406,7 +1406,15 @@ msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Metoda distribùcëji:"
 
-#: qml/ReportPage.qml:126
+#: qml/ReportPage.qml:131
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "Loading..."
+msgctxt "@item:inlistbox placeholder while loading"
+msgid "Loading…"
+msgstr "Ladowanié..."
+
+#: qml/ReportPage.qml:144
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "KDE Platform is compiled from sources"
@@ -1414,7 +1422,7 @@ msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Kòmpilacëjô KDE ze zdroju"
 
-#: qml/ReportPage.qml:134
+#: qml/ReportPage.qml:152
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1428,7 +1436,7 @@ msgstr ""
 "<note>Wëdowiédzô ò załómaniu ë systemie bãdą aùtoamtno dodóné do rapòrtu ò "
 "felë.</note>"
 
-#: qml/ReportPage.qml:143
+#: qml/ReportPage.qml:161
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Preview Report"
