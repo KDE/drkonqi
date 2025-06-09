@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2023-03-05 08:58+0100\n"
+"PO-Revision-Date: 2025-06-08 07:34+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -691,12 +692,12 @@ msgstr "Nie pokazuj powiadomienia, lecz otwórz okno diagnozowania bezpośrednio
 #: qml/BacktracePage.qml:12
 msgctxt "@title"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
-msgstr "Pobieranie śladu wykonywania (pozostałość po usterce)"
+msgstr "Pobieranie śladu wykonywania (dane z programu po jego wysypaniu)"
 
 #: qml/BacktracePage.qml:26
 msgctxt "@action:button"
 msgid "Show backtrace content (advanced)"
-msgstr "Pokaż treść śladu wykonywania (zaawansowane)"
+msgstr "Pokaż treść śladu wykonywania (dla doświadczonych)"
 
 #: qml/BacktracePage.qml:47 qml/ContextPage.qml:88 qml/DuplicatesPage.qml:130
 msgctxt "@action:button"
@@ -717,7 +718,7 @@ msgstr "Ponów"
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr "Próba nawiązania połączenia z bugs.kde.org..."
+msgstr "Próba nawiązania połączenia z bugs.kde.org…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -747,7 +748,7 @@ msgstr "Czy program wysypuje się po wykonaniu tych samych czynności?"
 #: qml/ContextPage.qml:52
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr "Wybierz dodatkowe dane, które możesz podać:"
+msgstr "Zaznacz dodatkowe szczegóły, które możesz podać:"
 
 #: qml/ContextPage.qml:59
 msgctxt ""
@@ -755,7 +756,7 @@ msgctxt ""
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Co robiłem/am przed usterką programu <application>%1</application>"
+msgstr "Co robiłem/am przed wysypaniem programu <application>%1</application>"
 
 #: qml/ContextPage.qml:65
 msgctxt "@action:check"
