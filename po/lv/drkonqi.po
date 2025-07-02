@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-29 00:43+0000\n"
-"PO-Revision-Date: 2025-04-06 17:43+0300\n"
+"PO-Revision-Date: 2025-06-30 16:44+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -834,6 +834,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Šis atpakaļceļš ir ļoti ierobežots, jo nepietika atmiņas, lai ģenerētu pilnu "
+"atpakaļceļu. Varat aizvērt kādu atvērto programmu (vai vairākas) un mēģināt "
+"vēlreiz."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -891,19 +894,14 @@ msgstr ""
 "bet pēc tam spiediet uz <interface>Pārlādēt</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Varat mēģināt atpakaļceļu ģenerēt vēlreiz, nospiežot pogu "
-"<interface>Pārlādēt</interface>."
+"Atpakaļceļa ir apturēt atmiņas trūkums dēļ. Varat mēģināt no jauna ģenerēt "
+"atpakaļceļu, klikšķinot uz <interface>Pārlādēt</interface> pogas."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -1040,6 +1038,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Pietrūk atmiņas informācijas par avāriju iegūšanai. Varat aizvērt kādu "
+"programmu (vai vairākas), lai atbrīvotu atmiņu, un mēģināt vēlreiz."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -1208,12 +1208,9 @@ msgid "Distribution method:"
 msgstr "Izplatīšanas metode:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Loading..."
 msgctxt "@item:inlistbox placeholder while loading"
 msgid "Loading…"
-msgstr "Ielādē..."
+msgstr "Ielādē…"
 
 #: qml/ReportPage.qml:144
 msgctxt "@option:check"
