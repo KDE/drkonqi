@@ -18,10 +18,20 @@ namespace Bugzilla
 {
 QJsonDocument APIJob::document() const
 {
-    ProtocolException::maybeThrow(this);
+    const auto document = QJsonDocument::fromJson(data());
+
+    try {
+        ProtocolException::maybeThrow(this);
+    } catch (const ProtocolException &e) {
+        // Something went wrong, let's see if the payload has more information.
+        // https://bugs.kde.org/show_bug.cgi?id=506717
+        APIException::maybeThrow(document);
+        // No? Then let's rethrow the original exception.
+        throw;
+    }
+
     Q_ASSERT(error() == KJob::NoError);
 
-    auto document = QJsonDocument::fromJson(data());
     APIException::maybeThrow(document);
     return document;
 }

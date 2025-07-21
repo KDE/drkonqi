@@ -126,6 +126,8 @@ private Q_SLOTS:
         HTTPConnection c(root);
         auto job = c.get("/hi");
         job->exec();
+        // Note that this implicitly tests behavior of APIJob where it is expected to return an APIException even though
+        // it also had a protocol exception (the payload has HTTP 401).
         QVERIFY_EXCEPTION_THROWN(job->document(), Bugzilla::APIException);
     }
 
