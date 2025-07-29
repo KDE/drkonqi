@@ -554,7 +554,7 @@ class CoreImage:
             else:
                 self.file = file
 
-        self.valid = True
+        self.valid = self.file is not None
 
 def resolve_modules():
     corefile = os.getenv("DRKONQI_COREFILE")
