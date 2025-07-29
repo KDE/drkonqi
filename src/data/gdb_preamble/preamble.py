@@ -531,7 +531,7 @@ def print_sentry_payload(thread):
 class CoreImage:
     def __init__(self, eu_unstrip_line):
         self.valid = False
-        self.file = None # may not end up set otherwise causing exceptions
+        self.file = None # may not end up set otherwise, causing exceptions
 
         address_pack, build_id_pack, file, debug, self.name = eu_unstrip_line.split(' ', 4)
         if self.name.endswith(' (deleted)'):
