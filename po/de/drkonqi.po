@@ -9,20 +9,21 @@
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # SPDX-FileCopyrightText: 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2025-02-22 03:30+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-08-05 14:30+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -118,15 +119,14 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Loading..."
-msgstr "Wird geladen ..."
+msgstr "Wird geladen …"
 
 #: backtracewidget.cpp:138
 #, kde-format
 msgctxt "@info:status"
 msgid "Generating backtrace... (this may take some time)"
 msgstr ""
-"Rückverfolgunginformationen werden gesammelt ... (dies kann eine Weile "
-"dauern)"
+"Rückverfolgungsinformationen werden gesammelt … (dies kann eine Weile dauern)"
 
 #: backtracewidget.cpp:189
 #, kde-format
@@ -325,7 +325,7 @@ msgstr "Zeigt ausführliche Angaben vergangener Abstürze"
 #: coredump/gui/main.cpp:34
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "Copyright © 2020–2022, die DrKonqi-Autoren"
+msgstr "© 2020–2022 Die DrKonqi-Autoren"
 
 #: coredump/gui/Patient.cpp:57
 #, kde-format
@@ -396,8 +396,7 @@ msgstr "LLDB"
 #, kde-format
 msgctxt "@info:progress"
 msgid "Requesting installation of missing debug symbols packages..."
-msgstr ""
-"Die automatische Installation fehlender Debug-Symbole wird angefordert ..."
+msgstr "Die Installation fehlender Debug-Symbol-Pakete wird angefordert …"
 
 #: debugpackageinstaller.cpp:53
 #, kde-format
@@ -593,7 +592,7 @@ msgstr ""
 #: main.cpp:159
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "Copyright © 2000–2018, die DrKonqi-Autoren"
+msgstr "© 2000–2018 Die DrKonqi-Autoren"
 
 #: main.cpp:160
 #, kde-format
@@ -712,9 +711,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Keine Benachrichtigung anzeigen, sonder den Fehlerdialog direkt öffnen"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Die Rückverfolgung wird abgerufen (Automatische Absturzinformationen)"
@@ -725,12 +721,9 @@ msgid "Next"
 msgstr "Weiter"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Fehler beim Verbinden mit bugs.kde.org: <message>%1.</message>"
+msgstr "Fehler beim Verbinden mit %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -738,17 +731,14 @@ msgid "Retry"
 msgstr "Erneut versuchen"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Verbindung zu bugs.kde.org wird aufgenommen ..."
+msgstr "Verbindungsversuch zu %1 …"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Ihr Wissen"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -802,12 +792,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Nicht hinreichend nützlich"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -815,10 +799,10 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Die von Ihnen beigesteuerten Informationen werden in diesem Fall als "
-"nicht ausreichend hilfreich eingestuft. Wenn Ihnen keine weiteren "
-"Informationen einfallen, können Sie den Fehlerberichtsdialog schließen.</"
-"para>"
+"Die von Ihnen beigesteuerten Informationen werden in diesem Fall als nicht "
+"ausreichend hilfreich eingestuft.\n"
+"Wenn Ihnen keine weiteren Informationen einfallen, können Sie den "
+"Fehlerberichtsdialog schließen."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -831,13 +815,10 @@ msgid "Install Debug Symbols"
 msgstr "Debug-Symbole &installieren"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Drücken Sie diesen Knopf, um die fehlenden Debug-Symbol-Pakete zu "
+"Verwenden Sie diesen Knopf, um die Pakete für fehlende Debug-Symbole zu "
 "installieren."
 
 #: qml/DeveloperPage.qml:50
@@ -884,6 +865,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Diese Rückverfolgung ist sehr begrenzt, da nicht genug Arbeitsspeicher zur "
+"Verfügung stand, um eine vollständige Rückverfolgung zu erstellen. Sie "
+"können einige Anwendungen schließen und es erneut versuchen."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -891,16 +875,6 @@ msgid "Retry"
 msgstr "Erneut versuchen"
 
 #: qml/DeveloperPage.qml:192
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -912,21 +886,15 @@ msgid ""
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
 "Um fehlende Symbole zur Fehlersuche automatisch zu installieren, können Sie "
-"den Knopf <interface>Debug-Symbole installieren</interface> drücken. Falls "
-"dies nicht funktioniert, lesen Sie bitte den Hilfetext <link url='%1'>wie "
-"man nützliche Fehlerberichte erstellt</link>. Dort erfahren Sie, wie man "
-"eine gute Rückverfolgung eines Absturzes erzeugen kann. Nachdem Sie die "
-"benötigten Softwarepakete (<link url='%2'>Dateiliste</link>) installiert "
-"haben, klicken Sie bitte auf <interface>Neu laden</interface>."
+"den Knopf <interface>Debug-Symbole installieren</interface> drücken.\n"
+"Falls dies nicht funktioniert, lesen Sie bitte <link url='%1'>wie man "
+"nützliche Fehlerberichte erstellt</link>.\n"
+"Dort erfahren Sie, wie man eine gute Rückverfolgung eines Absturzes erzeugen "
+"kann. Nachdem Sie die benötigten Softwarepakete (<link url='%2'>Dateiliste</"
+"link>) installiert haben, klicken Sie bitte auf <interface>Neu laden</"
+"interface>."
 
 #: qml/DeveloperPage.qml:200
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -934,33 +902,22 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Bitte lesen Sie <link url='%1'>wie man nützliche Fehlerberichte erstellt</"
-"link>, um zu erfahren, wie man eine nützliche Rückverfolgung eines Absturzes "
-"erzeugen kann. Nachdem Sie die nötigen Softwarepakete (<link "
-"url='%2'>Dateiliste</link>) installiert haben, klicken Sie auf bitte auf "
+"Bitte lesen Sie, <link url='%1'>wie man nützliche Fehlerberichte erstellt</"
+"link>. Dort erfahren Sie, wie man eine gute Rückverfolgung eines Absturzes "
+"erzeugen kann. Nachdem Sie die benötigten Softwarepakete (<link "
+"url='%2'>Dateiliste</link>) installiert haben, klicken Sie bitte auf "
 "<interface>Neu laden</interface>."
 
 #: qml/DeveloperPage.qml:207
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Sie können versuchen, die Rückverfolgung neu zu erzeugen, indem Sie auf "
+"Versuchen Sie, die Rückverfolgung neu zu erzeugen indem Sie auf "
 "<interface>Neu laden</interface> klicken."
 
 #: qml/DeveloperPage.qml:211
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -970,19 +927,15 @@ msgstr ""
 "drücken Sie anschließend auf <interface>Neu laden</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Sie können versuchen, die Rückverfolgung neu zu erzeugen, indem Sie auf "
-"<interface>Neu laden</interface> klicken."
+"Das Erstellen der Rückverfolgung wurde aufgrund von zu geringem "
+"Arbeitsspeicher beendet. Sie können versuchen, die Rückverfolgung neu zu "
+"erzeugen, indem Sie auf <interface>Neu laden</interface> klicken."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -990,14 +943,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "Debug-Symbole für bessere Absturzberichte automatisch herunterladen"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1010,16 +955,13 @@ msgstr ""
 "Debug-Ressourcen von Ihrer Distribution heruntergeladen werden.\n"
 "Dadurch wird mehr Arbeitsspeicher und mehr Zeit für die Rückverfolgung "
 "benötigt. Zudem wird ein Download unbekannter Größe ausgelöst, wenn ein "
-"Absturz auftritt. Es wird automatisch übersprungen, wenn eine getaktete "
+"Absturz auftritt. Dies wird automatisch übersprungen, wenn eine getaktete "
 "Internetverbindung verwendet wird."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
-msgstr "An der KDE-Fehlerdatenbank anmelden"
+msgstr "An der Fehlerdatenbank anmelden"
 
 #: qml/LoginPage.qml:66
 msgctxt "@info:status '1' is replaced with the short URL of the bugzilla "
@@ -1027,9 +969,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Um fortzufahren, müssen Sie sich mit Ihrem Zugang für %1 anmelden."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-Mail-Adresse:"
@@ -1045,15 +984,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Anmeldeinformationen im Passwortspeicher speichern"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1065,10 +995,10 @@ msgid ""
 msgstr ""
 "<note>Sie benötigen einen Zugang zur <link url='%1'>KDE-Fehlerdatenbank</"
 "link>, um einen Fehler zu melden. Dies ist erforderlich, damit wir Sie "
-"später kontaktieren können, um nähere Informationen zu erfragen. Wenn Sie "
-"noch keinen Zugang haben, können Sie <link url='%2'>hier</link> einen neuen "
-"Zugang anlegen. Bitte geben Sie hierbei Ihre „richtige“ E-Mail-Adresse an.</"
-"note>"
+"später kontaktieren können,\n"
+"um weitere Informationen zu erfragen. Wenn Sie noch keinen Zugang haben, "
+"können Sie <link url='%2'>hier</link> kostenlos einen neuen anlegen. Bitte "
+"geben Sie hierbei keine Wegwerf-E-Mail-Adresse an.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1076,11 +1006,6 @@ msgid "Login"
 msgstr "Anmelden"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1146,6 +1071,9 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Es war nicht genug Arbeitsspeicher verfügbar, um Absturzinformationen zu "
+"sammeln. Sie können einige Anwendungen schließen, um Speicher freizumachen "
+"und es erneut versuchen."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -1167,23 +1095,14 @@ msgstr ""
 "kann nochmals versucht oder das Fenster geschlossen werden."
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Absturzbehandlung"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Leider wurde das Programm <application>%1</application> unerwartet "
-"beendet.</para>"
+msgstr "<application>%1</application> wurde unerwartet beendet."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1198,23 +1117,18 @@ msgstr "Entwickler-Informationen ansehen"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Fehlerbericht-Vorschau"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
-"<para>Sie sehen eine Vorschau des Fehlerberichts, so wie er gesendet wird.</"
-"para><para>Falls Sie Änderungen vornehmen möchten, gehen Sie bitte zurück zu "
-"den vorherigen Seiten.</para>"
+"<para>Das ist eine Vorschau des zu sendenden Fehlerberichts.</"
+"para><para>Falls Sie Änderungen vornehmen möchten, gehen Sie bitte zu den "
+"vorherigen Seiten zurück.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1224,47 +1138,32 @@ msgstr "Absenden"
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr "Warten auf Daten ..."
+msgstr "Warten auf Daten …"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Die gesammelten Absturzinformationen sind nützlich"
+msgstr "Die gesammelten Absturzinformationen sind nützlich."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Die gesammelten Absturzinformationen könnten nützlich sein"
+msgstr "Die gesammelten Absturzinformationen könnten nützlich sein."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Die gesammelten Absturzinformationen sind nutzlos"
+msgstr "Die gesammelten Absturzinformationen sind wahrscheinlich nutzlos."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Die gesammelten Absturzinformationen sind nutzlos"
+msgstr "Die gesammelten Absturzinformationen sind nutzlos."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Informationen zum Absturz"
+msgstr "Informationen zum Absturz eingeben"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1387,12 +1286,9 @@ msgid "Retry Submission"
 msgstr "Übermittlung erneut versuchen"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Fehlerbericht wird versendet ..."
+msgstr "Fehlerbericht wird versendet …"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1410,9 +1306,6 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "Adresse:<link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr ""
@@ -1420,12 +1313,9 @@ msgstr ""
 "schließen."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Automatischen Fehlerbericht senden"
+msgstr "Automatischer Bericht"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1453,26 +1343,20 @@ msgid "Automatically report crashes"
 msgstr "Abstürze automatisch melden"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
-"Die Absturzberichte werden immer automatisch zum Fehlerberichtssystem von "
-"KDE übermittelt. Hierzu sind keine manuellen Eingaben mehr notwendig.\n"
-"Sie erhalten keine weiteren Benachrichtigungen zu den Abstürzen."
+"Absturzberichte immer automatisch zum Fehlerberichtssystem von KDE "
+"übermitteln. Hierzu sind keine manuellen Eingaben mehr notwendig.\n"
+"Sie erhalten keine weiteren Benachrichtigungen zu Abstürzen."
 
 #: qml/SentryPage.qml:93
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Bitte schreiben Sie mehr über den Absturz …"
+msgstr "Bitte schreiben Sie mehr über den Absturz …"
 
 #: qml/SentryPage.qml:104
 msgctxt "@action:button"
@@ -1485,12 +1369,9 @@ msgid "Finish"
 msgstr "Fertigstellen"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Assistent zum Einsenden von Fehlerberichten"
+msgstr "Assistent für Fehlerberichte"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1502,15 +1383,6 @@ msgstr ""
 "führen."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1520,12 +1392,13 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<para><note>Hinweis: Die Kommunikation zwischen Ihnen und den Entwicklern "
-"ist entscheidend für die Fehlersuche und -behebung. Um den Assistenten "
-"fortsetzen zu können, <emphasis strong='true'>müssen Sie zustimmen, dass die "
-"Entwickler Kontakt mit Ihnen aufnehmen dürfen.</emphasis>\n"
-"</note></para><para>Falls Sie dies nicht wünschen, können Sie den "
-"Assistenten an dieser Stelle selbstverständlich einfach beenden.</para>"
+"<para><note>Die Kommunikation zwischen Ihnen und den Entwicklern ist "
+"entscheidend für die Fehlersuche und -behebung.\n"
+"Um den Assistenten fortsetzen zu können, <emphasis strong='true'>müssen Sie "
+"zustimmen, dass die Entwickler Kontakt mit Ihnen aufnehmen dürfen</"
+"emphasis>.\n"
+"</note></para><para>Falls Sie dies nicht möchten, können Sie den Assistenten "
+"an dieser Stelle selbstverständlich einfach beenden.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1662,7 +1535,7 @@ msgstr "Testanwendung für Fehlerverfolgungssystem-Manager-Bibliothek"
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "Copyright © 2009, die DrKonqi2-Autoren"
+msgstr "© 2009 Die DrKonqi2-Autoren"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
