@@ -348,11 +348,12 @@ class SentryTrace:
                 # (Re)load the symbols
                 gdb.execute(f'add-symbol-file {solib}')
 
-            sentry_sdk.add_breadcrumb(
-                category='debug',
-                level='debug',
-                message=f'Loaded solib {solib}',
-            )
+            if 'sentry_sdk' in globals():
+                sentry_sdk.add_breadcrumb(
+                    category='debug',
+                    level='debug',
+                    message=f'Loaded solib {solib}',
+                )
             SentryTrace.loaded_solibs.append(solib)
 
         gdb.execute('select-frame 0')
