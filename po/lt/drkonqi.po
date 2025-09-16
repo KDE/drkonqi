@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-02 00:43+0000\n"
-"PO-Revision-Date: 2024-09-14 23:51+0300\n"
+"PO-Revision-Date: 2025-09-15 14:04+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -694,9 +694,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Nerodyti pranešimo, bet tiesiogiai paleisti derinimo dialogą"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Gaunamas strigties pėdsakas (Automatinė strigties informacija)"
@@ -707,12 +704,9 @@ msgid "Next"
 msgstr "Kitas"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Failed to contact bugs.kde.org: <message>%1</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Nepavyko susisiekti su bugs.kde.org: <message>%1</message>"
+msgstr "Nepavyko susisiekti su %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -720,17 +714,14 @@ msgid "Retry"
 msgstr "Bandyti dar kartą"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Trying to contact bugs.kde.org..."
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Bandoma susisiekti su bugs.kde.org..."
+msgstr "Bandoma susisiekti su %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Jūsų žinios"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -781,12 +772,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Nepakankamai naudingas"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The information you can provide is not considered helpful enough in "
-#| "this case. If you can't think of any more information you can close the "
-#| "bug report dialog.</para>"
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -794,9 +779,10 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Šiuo atveju, informacija, kurią galite pateikti, nėra laikoma "
-"pakankamai naudinga. Jei negalite pateikti jokios papildomos informacijos, "
-"galite užverti šį pranešimo apie klaidą dialogą.</para>"
+"Šiuo atveju, informacija, kurią galite pateikti, nėra laikoma pakankamai "
+"naudinga.\n"
+"Jei negalite pateikti jokios papildomos informacijos, galite užverti šį "
+"pranešimo apie klaidą dialogą."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -809,9 +795,6 @@ msgid "Install Debug Symbols"
 msgstr "Įdiegti derinimo simbolius"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
@@ -861,6 +844,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Šis strigties pėdsakas yra labai ribotas, nes nebuvo prieinama pakankamai "
+"atminties, kad būtų sukurtas visas strigties pėdsakas. Galite užverti tam "
+"tikras programas ir bandyti dar kartą."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -868,16 +854,6 @@ msgid "Retry"
 msgstr "Bandyti dar kartą"
 
 #: qml/DeveloperPage.qml:192
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method\n"
-#| "does not work: please read <link url='%1'>How to create useful crash "
-#| "reports</link> to learn how to get a useful\n"
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -888,23 +864,16 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
-"Galite spustelėti ant mygtuko <interface>Įdiegti derinimo simbolius</"
-"interface> norėdami automatiškai įsidiegti trūkstamus derinimo informacijos "
-"paketus. Jei šis\n"
-"metodas neveikia: skaitykite <link url='%1'>Kaip sukurti naudingus "
-"pranešimus apie strigtis</link>, kad sužinotumėte kaip gauti naudingą "
+"Spustelėkite ant mygtuko <interface>Įdiegti derinimo simbolius</interface> "
+"norėdami automatiškai įsidiegti trūkstamus derinimo informacijos paketus. "
+"Jei šis\n"
+"metodas neveikia, skaitykite <link url='%1'>Kaip sukurti naudingus "
+"pranešimus apie strigtis</link>, kad sužinotumėte, kaip gauti naudingą "
 "strigties pėdsaką;\n"
 "įdiekite reikiamus paketus (<link url='%2'>failų sąrašas</link>) ir "
 "spustelėkite mygtuką <interface>Įkelti iš naujo</interface>."
 
 #: qml/DeveloperPage.qml:200
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages\n"
-#| "(<link url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -913,55 +882,39 @@ msgid ""
 "interface> button."
 msgstr ""
 "Skaitykite <link url='%1'>Kaip sukurti naudingus pranešimus apie strigtis</"
-"link>, kad sužinotumėte kaip gauti naudingą strigties pėdsaką; įdiekite "
+"link>, kad sužinotumėte, kaip gauti naudingą strigties pėdsaką, įdiekite "
 "reikiamus paketus\n"
-"(<link url='%2'>failų sąrašas</link>) ir spustelėkite mygtuką "
+"(<link url='%2'>failų sąrašas</link>) ir tada spustelėkite mygtuką "
 "<interface>Įkelti iš naujo</interface>."
 
 #: qml/DeveloperPage.qml:207
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Galite pabandyti sukurti strigties pėdsaką, spusteldami mygtuką "
+"Galite pabandyti iš naujo sukurti strigties pėdsaką, spusteldami mygtuką "
 "<interface>Įkelti iš naujo</interface>."
 
 #: qml/DeveloperPage.qml:211
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<emphasis strong='true'>You need to first install the debugger "
-#| "application (%1) then click the <interface>Reload</interface> button.</"
-#| "emphasis>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Iš pradžių, turite įsidiegti derintuvės programą "
-"(%1), o paskui spustelėkite mygtuką <interface>Įkelti iš naujo</interface>.</"
-"emphasis>"
+"<emphasis strong='true'>Iš pradžių, įsidiekite derintuvės programą (%1), o "
+"tada spustelėkite mygtuką <interface>Įkelti iš naujo</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:215
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Galite pabandyti sukurti strigties pėdsaką, spusteldami mygtuką "
-"<interface>Įkelti iš naujo</interface>."
+"Strigties pėdsako kūrimas buvo sustabdytas dėl atminties spaudimo. Galite "
+"pabandyti sukurti strigties pėdsaką, spusteldami mygtuką <interface>Įkelti "
+"iš naujo</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:16
 msgctxt "@label"
@@ -971,14 +924,6 @@ msgstr ""
 "apie strigtis"
 
 #: qml/DownloadSymbolsCheckBox.qml:25
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Crash reports can be of greater value if additional debugging resources "
-#| "are downloaded from your distributor first.\n"
-#| "This may also cause increased memory usage and will take longer, and "
-#| "causes downloads of unknown size when a crash occurs. This is skipped "
-#| "automatically when using a metered internet connection."
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -989,15 +934,11 @@ msgid ""
 msgstr ""
 "Pranešimai apie strigtis gali būti vertingesni, jei, iš pradžių, iš jūsų "
 "platinamojo paketo bus atsisiųsti papildomi derinimo ištekliai.\n"
-"Tai tuo pačiu gali sukelti didesnį atminties naudojimą ir ilgiau užtrukti, "
-"be to, kai įvyksta strigtis, tai inicijuoja nežinomo dydžio atsisiuntimus. "
-"Tai automatiškai praleidžiama, kai yra naudojamas ribotų duomenų interneto "
-"ryšys."
+"Tai tuo pačiu gali sukelti didesnį atminties naudojimą, ilgiau užtrukti ir, "
+"kai įvyksta strigtis, tai inicijuoja nežinomo dydžio atsisiuntimus. Tai "
+"automatiškai praleidžiama, kai yra naudojamas ribotų duomenų interneto ryšys."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Prisijungti prie klaidų sekimo sistemos"
@@ -1008,9 +949,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Norėdami tęsti, turite prisijungti prie savo %1 paskyros."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
-#| msgctxt "@label:textbox bugzilla account email"
-#| msgid "E-mail Address:"
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "El. pašto adresas:"
@@ -1026,15 +964,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Įrašyti prisijungimo informaciją naudojant KDE slaptažodinių sistemą"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later\n"
-#| "for requesting further information. If you do not have one, you can "
-#| "freely <link url='%2'>create one here</link>. Please do not use "
-#| "disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1044,12 +973,12 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
-"<note>Norėdami pateikti pranešimą apie klaidą, turite turėti paskyrą <link "
-"url='%1'>KDE klaidų sekimo sistemoje</link>, nes vėliau mums gali prireikti "
-"su jumis susisiekti\n"
+"<note>Norėdami pateikti pranešimą apie klaidą, privalote <link url='%1'>KDE "
+"klaidų sekimo sistemoje</link> turėti paskyrą, nes vėliau mums gali "
+"prireikti su jumis susisiekti\n"
 "ir paprašyti tolimesnės informacijos. Jeigu paskyros neturite, galite "
 "laisvai <link url='%2'>ją susikurti čia</link>. Nenaudokite vienkartinių el. "
-"pašto paskyrų.</note>"
+"pašto adresų.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1057,11 +986,6 @@ msgid "Login"
 msgstr "Prisijungti"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided e-mail address and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -1129,6 +1053,9 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Nebuvo pakankamai atminties, kad būtų surinkta informacija apie strigtį. "
+"Galite užverti tam tikras programas, kad atlaisvintumėte atmintį, ir bandyti "
+"dar kartą."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -1150,22 +1077,14 @@ msgstr ""
 "Galite bandyti dar kartą arba užverti šį langą."
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Strigčių doroklė"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Atleiskite, <application>%1</application> netikėtai užsivėrė.</para>"
+msgstr "<application>%1</application> netikėtai užsivėrė."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -1180,14 +1099,9 @@ msgstr "Žiūrėti informaciją programuotojams"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Pranešimo apie klaidą peržiūra"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label/rich"
-#| msgid ""
-#| "<para>This is a preview of the report's contents which will be sent.</"
-#| "para><para>If you want to modify it go to the previous pages.</para>"
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -1195,8 +1109,8 @@ msgid ""
 "para>"
 msgstr ""
 "<para>Tai yra pranešimo turinio, kuris bus išsiųstas, peržiūra.</"
-"para><para>Jei norite ką nors pakeisti, grįžkite į ankstesnius puslapius.</"
-"para>"
+"para><para>Jei norite modifikuoti pranešimą, grįžkite į ankstesnius "
+"puslapius.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -1209,44 +1123,29 @@ msgid "Waiting for data…"
 msgstr "Laukiama duomenų…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Sukurta strigties informacija yra naudinga"
+msgstr "Sukurta strigties informacija yra naudinga."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Sukurta strigties informacija gali būti naudinga"
+msgstr "Sukurta strigties informacija gali būti naudinga."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Sukurta strigties informacija nėra naudinga"
+msgstr "Sukurta strigties informacija, greičiausiai, nėra naudinga."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Sukurta strigties informacija nėra naudinga"
+msgstr "Sukurta strigties informacija nėra naudinga."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
-msgstr "Įveskite išsamią strigties informaciją"
+msgstr "Įveskite išsamią informaciją apie strigtį"
 
 #: qml/ReportPage.qml:22
 msgctxt "@info"
@@ -1368,12 +1267,9 @@ msgid "Retry Submission"
 msgstr "Bandyti pateikti dar kartą"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Submitting bug report..."
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr "Pateikiamas pranešimas apie klaidą..."
+msgstr "Pateikiamas pranešimas apie klaidą…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
@@ -1391,27 +1287,16 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "URL adresas: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Thank you for being part of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Dėkojame, kad esate KDE dalis. Dabar, galite užverti šį langą."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Send Automatic Report"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Siųsti automatinį pranešimą"
+msgstr "Automatinis pranešimas"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically submit in "
-#| "the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. The collected data will automatically be submitted in "
@@ -1436,12 +1321,6 @@ msgid "Automatically report crashes"
 msgstr "Automatiškai pranešti apie strigtis"
 
 #: qml/SentryPage.qml:77
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Always automatically submit a crash report to KDE's crash tracking "
-#| "system. No manual input required.\n"
-#| "You will not receive any more crash notifications."
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1449,7 +1328,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 "Visada automatiškai pateikti pranešimą apie strigtį į KDE strigčių sekimo "
-"sistemą. Įvestis rankiniu būdu nebus reikalinga.\n"
+"sistemą be jokios būtinos įvesties rankiniu būdu.\n"
 "Jūs daugiau nebegausite pranešimų apie strigtis."
 
 #: qml/SentryPage.qml:93
@@ -1468,12 +1347,9 @@ msgid "Finish"
 msgstr "Baigti"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Pranešimo apie klaidą pagelbiklio vadovas"
+msgstr "Pranešimo pagelbiklis"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1485,15 +1361,6 @@ msgstr ""
 "apie klaidą procesą."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich note before starting the bug reporting process"
-#| msgid ""
-#| "<para><note>Since communication between you and the developers is "
-#| "required for effective debugging,\n"
-#| "to continue reporting this bug it is <emphasis strong='true'>required for "
-#| "you to agree that developers may contact you</emphasis>.\n"
-#| "</note></para><para>Feel free to close this dialog if you do not accept "
-#| "this.</para>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1505,7 +1372,7 @@ msgid ""
 msgstr ""
 "<para><note>Kadangi efektyviam derinimui yra reikalingas bendravimas tarp "
 "jūsų ir programuotojų,\n"
-"norint tęsti pranešimą apie šią klaidą, <emphasis strong='true'>turite "
+"norėdami tęsti pranešimą apie šią klaidą, <emphasis strong='true'>turite "
 "sutikti, kad programuotojai galės su jumis susisiekti.</emphasis>.\n"
 "</note></para><para>Jei nesutinkate, tiesiog, užverkite šį dialogą.</para>"
 
