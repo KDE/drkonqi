@@ -246,6 +246,8 @@ class SentryTrace:
                     break
             if not solib and not image:
                 raise UnexpectedMappingException(f"No solib and no image found for frame #{i} on thread {thread}! You could try with debug symbols downloading enabled.")
+            if not image:
+                raise UnexpectedMappingException(f"No image found for frame #{i} on thread {thread}!")
             solib = solib or image.file
 
             if solib in SentryTrace.loaded_solibs:
