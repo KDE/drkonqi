@@ -9,9 +9,13 @@ import org.kde.kirigami as Kirigami
 import org.kde.drkonqi as DrKonqi
 
 RowLayout {
+    id: root
+
     spacing: Kirigami.Units.smallSpacing
 
     QQC2.CheckBox {
+        Layout.fillWidth: true
+        Layout.maximumWidth: Math.min(implicitWidth, root.width)
         checked: DrKonqi.Settings.downloadSymbols
         text: i18nc("@label", "Automatically download debug symbols to enhance crash reports")
         onToggled: {

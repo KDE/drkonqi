@@ -112,6 +112,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             }
 
             DownloadSymbolsCheckBox {
+                Layout.maximumWidth: Math.min(implicitWidth, page.width - page.leftPadding - page.rightPadding)
                 Layout.alignment: Qt.AlignHCenter
             }
         }

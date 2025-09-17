@@ -28,8 +28,10 @@ Kirigami.Page {
         }
 
         QQC2.Label {
-            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
             text: i18nc("@label submitting as crash report", "Collecting crash data. The collected data will automatically be submitted in the background.")
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
             visible: !reportInterface.crashEventSent
         }
 
@@ -79,7 +81,7 @@ You will not receive any more crash notifications.`)
             }
 
             DownloadSymbolsCheckBox {
-                Layout.alignment: Qt.AlignLeft
+                Layout.fillWidth: true
             }
         }
 
