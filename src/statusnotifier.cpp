@@ -126,8 +126,11 @@ void StatusNotifier::notify(Activation activation)
     }
     if (canBeRestarted(crashedApp)) {
         auto action = notification->addAction(i18nc("Notification action button, keep short", "Restart App"));
-        connect(action, &KNotificationAction::activated, this, [crashedApp]() {
+        connect(action, &KNotificationAction::activated, this, [crashedApp, notification]() {
             if (canBeRestarted(crashedApp)) {
+                if (!notification->xdgActivationToken().isEmpty()) {
+                    DrKonqi::setStartupId(notification->xdgActivationToken());
+                }
                 crashedApp->restart();
             }
         });
