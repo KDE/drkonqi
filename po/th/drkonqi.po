@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 02:38+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -255,14 +255,14 @@ msgstr ""
 "คุณจำเป็นต้องทำการติดตั้งแพกเกจเครื่องมือดีบั๊ก (%1) ก่อน แล้วคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "เกิดข้อผิดพลาดขึ้นระหว่างทำการติดตั้งสัญลักษณ์การดีบั๊ก"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -864,7 +864,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "การตั้งค่าต่าง ๆ ของโปรแกรมด้วยตนเอง ซึ่งอาจจะเกี่ยวพันกับข้อขัดข้อง"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -973,7 +973,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ลองใหม่..."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1000,7 +1000,7 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1020,7 +1020,7 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1034,7 +1034,7 @@ msgstr ""
 "คุณสามารถทำการสร้างการติดตามการทำงานย้อนกลับได้ใหม่ โดยคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1048,7 +1048,7 @@ msgstr ""
 "คุณจำเป็นต้องทำการติดตั้งแพกเกจเครื่องมือดีบั๊ก (%1) ก่อน แล้วคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1063,12 +1063,12 @@ msgstr ""
 "คุณสามารถทำการสร้างการติดตามการทำงานย้อนกลับได้ใหม่ โดยคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1539,7 +1539,7 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1547,13 +1547,13 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "ตัวช่วยแนะนำการแจ้งรายงานข้อผิดพลาด"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 #, fuzzy
 #| msgctxt "@info bug resolution"
 #| msgid "Not a valid report/crash"
@@ -1561,7 +1561,7 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "ไม่ใช่ข้อขัดข้อง/รายงานที่ใช้ได้"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1569,7 +1569,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1577,12 +1577,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "ข้อมูลเกี่ยวกับการรายงานข้อผิดพลาด"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""

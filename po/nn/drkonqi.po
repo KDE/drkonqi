@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 02:38+0000\n"
 "PO-Revision-Date: 2024-09-23 20:14+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -256,14 +256,14 @@ msgstr ""
 "<strong>Du må installera feilsøkings­pakken (%1) og så trykkja "
 "<interface>Last om att</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Klarte ikkje installera feilsøkingssymbola"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -768,7 +768,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Sjølvvalde innstillingar i programmet som kan vera innblanda"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ikkje nyttig nok"
@@ -853,7 +853,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Prøv på nytt"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -873,7 +873,7 @@ msgstr ""
 "pakkane (<link url='%2'>filliste</link>), og trykk så <interface>Last om "
 "att</interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -888,7 +888,7 @@ msgstr ""
 "(<link url='%2'>filliste</link>), og trykk så <interface>Last om att</"
 "interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -898,7 +898,7 @@ msgstr ""
 "Du kan prøva å laga tilbakeloggen på nytt ved å trykkja <interface>Last om "
 "att</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -908,7 +908,7 @@ msgstr ""
 "<emphasis strong='true'>Du må først installera feilsøkings­pakken (%1) og så "
 "trykkja <interface>Last om att</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -923,12 +923,12 @@ msgstr ""
 "Du kan prøva å laga tilbakeloggen på nytt ved å trykkja <interface>Last om "
 "att</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "Last automatisk ned feilsøkings­symbol for å forbetra krasjrapportane"
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
@@ -1329,23 +1329,23 @@ msgstr ""
 "Samlar inn informasjon om krasjen. Innsamla data vert automatisk sende inn i "
 "bakgrunnen."
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Krasjrapporten er no send inn"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr "I framtida:"
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "Send automatisk krasjrapportar"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 #, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
@@ -1357,17 +1357,17 @@ msgstr ""
 "Dette krev inga manuell inntasting av informasjon.\n"
 "Du vert ikkje lenger varsla om krasjar."
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Fortel meir om krasjen …"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Send melding"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Fullfør"

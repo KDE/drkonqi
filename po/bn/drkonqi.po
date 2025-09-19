@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 02:38+0000\n"
 "PO-Revision-Date: 2012-07-16 15:55+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -252,14 +252,14 @@ msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "ত্রুটিমুক্ত করা চিহ্নের ইনস্টলেশনের সময় ত্রুটি"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, fuzzy, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -804,7 +804,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "অ্যাপলিকেশনের স্বনির্বাচিত মানসমূহ যে সম্বন্ধস্থাপন করা হয়ত যাবে"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -898,7 +898,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "আবার চেষ্টা করো..."
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -917,7 +917,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -931,7 +931,7 @@ msgstr ""
 "(<link url='%2'>ফাইলের তালিকা</link>) এবং ক্লিক করো<interface>রিলোড</"
 "interface>বাটন।"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -941,7 +941,7 @@ msgstr ""
 "আপনি ক্লিক করার মধ্যে ব্যাকট্রেস পুনরায় উৎ‍পাদন করতে চেষ্টা করতে "
 "পারেন<interface>রিলোড</interface>বাটন।"
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -951,7 +951,7 @@ msgstr ""
 "আপনি ডিবাগার প্যাকেজ ইনস্টল করতে প্রয়োজন বোধ করো (%1) এবং ক্লিক "
 "করো<interface>রিলোড</interface>বাটন।"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 msgctxt "@info/rich"
 msgid ""
@@ -962,12 +962,12 @@ msgstr ""
 "আপনি ক্লিক করার মধ্যে ব্যাকট্রেস পুনরায় উৎ‍পাদন করতে চেষ্টা করতে "
 "পারেন<interface>রিলোড</interface>বাটন।"
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1360,19 +1360,19 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 #, fuzzy
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "ক্র্যাশ রিপোর্টিং সহকারী"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 #, fuzzy
 #| msgctxt "@info bug resolution"
 #| msgid "Not a valid report/crash"
@@ -1380,7 +1380,7 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "এটি একটি বৈধ ক্র্যাশ বা রিপোর্ট নয়"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1388,7 +1388,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Information about bug reporting"
@@ -1396,12 +1396,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "বাগ রিপোর্টিং সম্বন্ধে তথ্য"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""

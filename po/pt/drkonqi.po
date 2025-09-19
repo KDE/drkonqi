@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 02:38+0000\n"
 "PO-Revision-Date: 2022-08-05 22:46+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -258,14 +258,14 @@ msgstr ""
 "<strong>Tem de instalar primeiro a aplicação do depurador (%1) e depois "
 "carregar no botão <interface>Recarregar</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Ocorreu um erro na instalação dos símbolos de depuração"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -789,7 +789,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Configuração personalizada da aplicação que possa estar relacionada"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Não Suficientemente Útil"
@@ -887,7 +887,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Repetir"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -916,7 +916,7 @@ msgstr ""
 "url='%2'>lista dos ficheiros</link>), poderá carregar no botão "
 "<interface>Recarregar</interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -936,7 +936,7 @@ msgstr ""
 "pacotes necessários (<link url='%2'>lista de ficheiros</link>) e carregue no "
 "botão <interface>Recarregar</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -950,7 +950,7 @@ msgstr ""
 "Poderá tentar gerar de novo o registo de chamadas se carregar no botão "
 "<interface>Actualizar</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -965,7 +965,7 @@ msgstr ""
 "<emphasis strong='true'>Tem de instalar primeiro a aplicação do depurador "
 "(%1) e depois carregar no botão <interface>Recarregar</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -980,12 +980,12 @@ msgstr ""
 "Poderá tentar gerar de novo o registo de chamadas se carregar no botão "
 "<interface>Actualizar</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1430,7 +1430,7 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Crash Report Sent"
@@ -1438,18 +1438,18 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Relatórios de Estoiro Enviado"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr ""
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1457,7 +1457,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Information about the crash:"
@@ -1465,12 +1465,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Informação sobre o estoiro:"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""
