@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2023-12-12 19:27+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -261,14 +261,14 @@ msgstr ""
 "<strong>Musíte nainštalovať ladiaci balíček (%1) a kliknúť na tlačidlo "
 "<interface>Znovu načítať</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Chyba počas inštalácie ladiacich symbolov"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -777,7 +777,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Vlastné nastavenia aplikácie, ktoré môžu súvisieť"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Nedostatočne užitočné"
@@ -870,7 +870,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Znovu"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -898,7 +898,7 @@ msgstr ""
 "backtrace; nainštalujte potrebné balíčky (<link url='%2'>zoznam súborov</"
 "link>) a kliknite na tlačidlo <interface>Znovu načítať</interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -918,7 +918,7 @@ msgstr ""
 "potrebné balíčky (<link url=''>zoznam súborov</link>) a kliknite na tlačidlo "
 "<interface>Znovu načítať</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -932,7 +932,7 @@ msgstr ""
 "Môžete skúsiť znovu vygenerovať backtrace pomocou tlačidla <interface>Znovu "
 "načítať</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -948,7 +948,7 @@ msgstr ""
 "programu (%1) a potom kliknúť na tlačidlo <interface>Znovu načítať</"
 "interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -963,12 +963,12 @@ msgstr ""
 "Môžete skúsiť znovu vygenerovať backtrace pomocou tlačidla <interface>Znovu "
 "načítať</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1416,18 +1416,18 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Hlásenie o páde odoslané"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 #, fuzzy
 #| msgctxt "@info bug resolution"
 #| msgid "Not a valid report/crash"
@@ -1435,7 +1435,7 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "Neplatné hlásenie/pád"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1452,7 +1452,7 @@ msgstr ""
 "KDE. Nevyžaduje sa žiadny manuálny vstup.\n"
 "Nebudete dostávať žiadne ďalšie oznámenia o zlyhaní."
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Information about the crash:"
@@ -1460,12 +1460,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Informácie o páde:"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Odoslať správu"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2025-07-17 18:26+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -266,14 +266,14 @@ msgstr ""
 "<strong>Asenna ensin virheenpaikannussovellus (%1) ja napsauta sitten "
 "<interface>Lataa uudelleen</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Virhe virheenpaikannussymbolien asennuksessa"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -770,7 +770,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Mukautetut sovellusasetukset, jotka voivat liittyä asiaan"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ei tarpeeksi hyödyllinen"
@@ -854,7 +854,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yritä uudelleen"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -873,7 +873,7 @@ msgstr ""
 "Asennettuasi tarpeelliset paketit (<link url='%2'>luettelo</link>) napsauta "
 "<interface>Lataa uudelleen</interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -886,7 +886,7 @@ msgstr ""
 "Asennettuasi tarpeelliset paketit (<link url='%2'>luettelo</link>) napsauta "
 "<interface>Lataa uudelleen</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -895,7 +895,7 @@ msgstr ""
 "Pinolistauksen voi yrittää tuottaa uudelleen napsauttamalla <interface>Lataa "
 "uudelleen</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -904,7 +904,7 @@ msgstr ""
 "<emphasis strong='true'>Asenna ensin virheenpaikannussovellus (%1) ja "
 "napsauta sitten <interface>Lataa uudelleen</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -915,14 +915,14 @@ msgstr ""
 "yrittää luoda uudelleen napsauttamalla <interface>Lataa uudelleen</"
 "interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 "Lataa virheenpaikannussymbolit automaattisesti kaatumistietojen "
 "parantamiseksi"
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1301,23 +1301,23 @@ msgid ""
 "the background."
 msgstr "Kerätään kaatumistietoa, joka lähetetään automaattisesti taustalla."
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Kaatumisraportti lähetetty"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr "Vastaisuudessa:"
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "Ilmoita kaatumisista automaattisesti"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1328,17 +1328,17 @@ msgstr ""
 "Käyttäjän toimia ei tarvita.\n"
 "Kaatumisista ei enää ilmoiteta."
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Anna lisätietoa kaatumisesta…"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Lähetä viesti"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Viimeistele"

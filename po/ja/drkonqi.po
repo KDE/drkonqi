@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2024-02-17 14:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -261,14 +261,14 @@ msgstr ""
 "<strong><interface>再読み込み</interface>ボタンをクリックする前に、デバッガア"
 "プリケーション (%1) をインストールしてください。</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "デバッグシンボルのインストール中にエラーが発生しました"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -776,7 +776,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "関連している可能性のあるアプリケーションの設定"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "十分に有益ではありません"
@@ -867,7 +867,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "再試行"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -895,7 +895,7 @@ msgstr ""
 "ンストールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み"
 "</interface>ボタンを押してください。"
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -915,7 +915,7 @@ msgstr ""
 "トールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み</"
 "interface>ボタンを押してください。"
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -929,7 +929,7 @@ msgstr ""
 "<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生成で"
 "きます。"
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -944,7 +944,7 @@ msgstr ""
 "<emphasis strong='true'><interface>再読み込み</interface>ボタンをクリックする"
 "前に、デバッガアプリケーション (%1) をインストールしてください。</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -959,12 +959,12 @@ msgstr ""
 "<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生成で"
 "きます。"
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1388,18 +1388,18 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "クラッシュレポートが送信されました"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Send Automatic Report"
@@ -1407,7 +1407,7 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "自動生成されたレポートを送信"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1424,17 +1424,17 @@ msgstr ""
 "動での入力は要求されません。\n"
 "クラッシュに関する通知は送信されなくなります。"
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "クラッシュについてさらにお聞かせください..."
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "メッセージを送信"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""

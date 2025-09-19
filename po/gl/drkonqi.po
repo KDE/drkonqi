@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2025-06-21 12:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -264,14 +264,14 @@ msgstr ""
 "<strong>Debe instalar a aplicación de depuración (%1) e premer o botón "
 "<interface>Cargar de novo</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Houbo un erro durante a instalación dos símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -787,7 +787,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Opcións personalizadas da aplicación que puideren estaren relacionadas"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Non é útil dabondo"
@@ -880,7 +880,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Intentalo de novo"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -908,7 +908,7 @@ msgstr ""
 "instale os paquetes que precise (<link url='%2'>lista de ficheiros</link>)e "
 "prema o botón <interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -928,7 +928,7 @@ msgstr ""
 "url='%2'>lista de ficheiros</link>) e prema o botón <interface>Cargar de "
 "novo</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -942,7 +942,7 @@ msgstr ""
 "Pode intentar xerar de novo o trazado inverso premendo o botón "
 "<interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -957,7 +957,7 @@ msgstr ""
 "<emphasis strong='true'>Debe instalar a aplicación de depuración (%1) e "
 "premer o botón <interface>Cargar de novo</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -972,14 +972,14 @@ msgstr ""
 "Pode intentar xerar de novo o trazado inverso premendo o botón "
 "<interface>Cargar de novo</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 "Descargar automaticamente os símbolos de depuración para mellorar os "
 "informes de quebras."
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1425,23 +1425,23 @@ msgstr ""
 "Recollendo os datos da quebra. Os datos recollidos remitiranse "
 "automaticamente en segundo plano."
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Enviouse o informe de quebra"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr "No futuro:"
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "Informar automaticamente das quebras"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1458,17 +1458,17 @@ msgstr ""
 "seguimento de quebras de KDE. Non require entrada manual.\n"
 "Non recibirá máis notificacións de quebras."
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Cóntenos máis sobre a quebra…"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "Enviar a mensaxe"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "Finalizar"

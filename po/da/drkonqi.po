@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -255,14 +255,14 @@ msgstr ""
 "<strong>Du skal først installere fejlsøgningsprogrammet (%1) og trykke på "
 "knappen <interface>Genindlæs</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Fejl under installation af fejlsøgningssymboler"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -825,7 +825,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Tilpassede indstillinger for programmet som kan være relaterede"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -936,7 +936,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Prøv igen"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -964,7 +964,7 @@ msgstr ""
 "url='%2'>liste over filer</link>) og tryk på knappen <interface>Genindlæs</"
 "interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -984,7 +984,7 @@ msgstr ""
 "nødvendige pakker (<link url='%2'>liste over filer</link>) og tryk på "
 "knappen <interface>Genindlæs</interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -998,7 +998,7 @@ msgstr ""
 "Du kan prøve at regenerere backtrace ved at trykke på knappen "
 "<interface>Genindlæs</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1012,7 +1012,7 @@ msgstr ""
 "<strong>Du skal først installere fejlsøgningsprogrammet (%1) og trykke på "
 "knappen <interface>Genindlæs</interface>.</strong>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1027,12 +1027,12 @@ msgstr ""
 "Du kan prøve at regenerere backtrace ved at trykke på knappen "
 "<interface>Genindlæs</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1529,7 +1529,7 @@ msgid ""
 "the background."
 msgstr ""
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Crash Reporting Assistant"
@@ -1537,13 +1537,13 @@ msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "Assistent til sammenbrudsrapportering"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr ""
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 #, fuzzy
 #| msgctxt "@info bug resolution"
 #| msgid "Not a valid report/crash"
@@ -1551,7 +1551,7 @@ msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "Ikke gyldig rapport/sammenbrud"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1559,7 +1559,7 @@ msgid ""
 "You will not receive any more crash notifications."
 msgstr ""
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "What do you know about the crash?"
@@ -1567,12 +1567,12 @@ msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "Hvad ved du om sammenbruddet?"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr ""
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr ""

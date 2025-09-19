@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:43+0000\n"
 "PO-Revision-Date: 2025-08-06 14:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -252,14 +252,14 @@ msgstr ""
 "<strong>تحتاج إلى تثبيت حزمة المنقح (%1) ثم انقر على زر <interface>أعد تحميل "
 "</interface>.</strong>"
 
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:126
+#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
 #, kde-format
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "خطأ أثناء تثبيت رموز التنقيح"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:239
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -749,7 +749,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "إعدادات مخصصة للتطبيق قد تكون ذات علاقة"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:232
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "غير مفيد بما فيه الكافية"
@@ -830,7 +830,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "أعِد المحاولة"
 
-#: qml/DeveloperPage.qml:192
+#: qml/DeveloperPage.qml:193
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -848,7 +848,7 @@ msgstr ""
 " ثبّت الحزم المطلوبة (<link url='%2'> قائمة الملفات </link>) وبعدها انقر فوق "
 "الزر <interface> أعد التحميل </interface>."
 
-#: qml/DeveloperPage.qml:200
+#: qml/DeveloperPage.qml:201
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -861,7 +861,7 @@ msgstr ""
 "(<link url='%2'>قائمة الملفات </link>) وبعدها انقر فوق الزر <interface> أعد "
 "التحميل </interface>."
 
-#: qml/DeveloperPage.qml:207
+#: qml/DeveloperPage.qml:208
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -869,7 +869,7 @@ msgid ""
 msgstr ""
 "حاول توليد معلومات التعقب بالنقر على زر <interface>أعد تحميل</interface>."
 
-#: qml/DeveloperPage.qml:211
+#: qml/DeveloperPage.qml:212
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -878,7 +878,7 @@ msgstr ""
 "<emphasis strong='true'>أولا ثبت حزمة المنقح (%1) ثم انقر على زر "
 "<interface>أعد تحميل </interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:215
+#: qml/DeveloperPage.qml:216
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -888,12 +888,12 @@ msgstr ""
 "توقف إنشاء التتبع الخلفي بسبب ضغط الذاكرة. يمكنك محاولة إعادة توليد التتبع "
 "الخلفي بالنقر فوق زر <interface>أعد تحميل</interface>."
 
-#: qml/DownloadSymbolsCheckBox.qml:16
+#: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "نزل رموز التنقيح آليّا حتى تحسن من تقرير الانهيار"
 
-#: qml/DownloadSymbolsCheckBox.qml:25
+#: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -1264,23 +1264,23 @@ msgid ""
 "the background."
 msgstr "يجمع  بيانات الانهيار. سترسل البيانات المجموعة آليّا في الخلفية."
 
-#: qml/SentryPage.qml:53
+#: qml/SentryPage.qml:55
 msgctxt "@label"
 msgid "Crash Report Sent"
 msgstr "أرسل تقرير العلة"
 
-#: qml/SentryPage.qml:65
+#: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
 msgstr "في المستقبل:"
 
-#: qml/SentryPage.qml:68
+#: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
 msgstr "بلغ آليّا عن الانهيارات"
 
-#: qml/SentryPage.qml:77
+#: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1291,17 +1291,17 @@ msgstr ""
 "يدوي.\n"
 "لن تتلقى المزيد من إشعارات الانهيار."
 
-#: qml/SentryPage.qml:93
+#: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
 msgstr "أخبرنا المزيد عن معلومات حول الانهيار"
 
-#: qml/SentryPage.qml:104
+#: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
 msgstr "أرسل رسالة"
 
-#: qml/SentryPage.qml:122
+#: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
 msgstr "أنهِ"
