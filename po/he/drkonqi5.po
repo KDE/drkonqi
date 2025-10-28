@@ -23,14 +23,14 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2025-10-08 11:00+0300\n"
+"PO-Revision-Date: 2025-10-27 21:59+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -700,7 +700,7 @@ msgstr "ניסיון חוזר"
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact bugs.kde.org..."
-msgstr ""
+msgstr "מתבצע ניסיון ליצור קשר עם bugs.kde.org…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
@@ -874,12 +874,9 @@ msgid "Look for Possible Duplicate Reports"
 msgstr "חיפוש אחר דיווחים כפולים אפשריים"
 
 #: qml/DuplicatesLoadingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Searching for duplicates (from %1 to %2)..."
 msgctxt "@info"
 msgid "Searching bug database for duplicates…"
-msgstr "חיפוש לדיווחים כפולים (מ־%1 עד %2)..."
+msgstr "מתבצע חיפוש אחר כפילויות במסד נתוני התקלות…"
 
 #: qml/DuplicatesPage.qml:20
 #, fuzzy
@@ -950,12 +947,9 @@ msgid ""
 msgstr "השתמש בכפתור זה כדי להציע שהקריסה שלך קשורה לדיווח הזה"
 
 #: qml/DuplicatesPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Suggest this crash is related"
 msgctxt "@action:button"
 msgid "This crash is not related"
-msgstr "הצע קריסה קשורה"
+msgstr "הקריסה הזאת לא קשורה"
 
 #: qml/LoginPage.qml:15
 msgctxt "@title"
@@ -970,7 +964,7 @@ msgstr "צריך להתחבר עם חשבון ה־%1 שלך כדי להמשיך.
 #: qml/LoginPage.qml:72
 msgctxt "@label:textbox bugzilla account email"
 msgid "E-mail Address:"
-msgstr ""
+msgstr "כתובת דוא״ל:"
 
 #: qml/LoginPage.qml:78
 msgctxt "@label:textbox bugzilla account password"
@@ -1025,12 +1019,9 @@ msgstr ""
 "משתמש וסיסמא."
 
 #: qml/MainPage.qml:20
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Report Bug"
 msgctxt "@action"
 msgid "Report Bug"
-msgstr "דווח באג"
+msgstr "דיווח על תקלה"
 
 #: qml/MainPage.qml:22
 msgctxt "@info:tooltip"
@@ -1038,19 +1029,14 @@ msgid "Starts the bug report assistant."
 msgstr "מפעיל את מסייע דוחות התקלות."
 
 #: qml/MainPage.qml:29
-#, fuzzy
-#| msgid "&Restart Application"
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "הפעל מחדש את היישום"
+msgstr "הפעלת היישום מחדש"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "Developer Information"
-msgstr "&מידע של מפתחים"
+msgstr "מידע למפתחים"
 
 #: qml/MainPage.qml:63
 #, fuzzy
@@ -1100,22 +1086,18 @@ msgstr ""
 "לתופעות לוואי.</para>"
 
 #: qml/MainPage.qml:108
-#, fuzzy
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
 "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
 "Time: %5</para>"
 msgstr ""
-"‏<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): <numid>%2</"
-"numid> איתות (Signal): %3 (%4)</para> "
+"<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): %2 אות "
+"(Signal): %3 (%4) מועד: %5</para>"
 
 #: qml/PerfectDuplicatePage.qml:14
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
 msgctxt "@title"
 msgid "Problem is Already Reported"
-msgstr "הבעיה שלך תועדה בתור באג מספר %1"
+msgstr "הבעיה שלך כבר מתועדת"
 
 #: qml/PerfectDuplicatePage.qml:29
 #, fuzzy
@@ -1183,12 +1165,9 @@ msgid ""
 msgstr ""
 
 #: qml/PerfectDuplicatePage.qml:60
-#, fuzzy
-#| msgctxt "@info bug status, %1 is the resolution"
-#| msgid "Closed (%1)"
 msgctxt "@action:button"
 msgid "Close"
-msgstr "נסגר (%1)"
+msgstr "סגירה"
 
 #: qml/PerfectDuplicatePage.qml:65
 msgctxt "@action:button"
@@ -1201,14 +1180,13 @@ msgid "Preview the Report"
 msgstr "תצוגה מקדימה של הדיווח"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the report's contents which will be sent.</"
 "para><para>If you want to modify it go to the previous pages.</para>"
 msgstr ""
-"זוהי תצוגה מקדימה של התוכן שישלח. <nl />\n"
-"אם אתה מעוניין לתקן את הדיווח, חזור לעמוד הקודם."
+"<para>זאת תצוגה מקדימה של תוכן הדוח שיישלח.</para><para>כדי לשנות אותה יש "
+"לחזור לעמודים הקודמים.</para>"
 
 #: qml/PreviewPage.qml:38
 msgctxt "@action:button"
@@ -1339,7 +1317,7 @@ msgstr "לנסות להגיש מחדש"
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report..."
-msgstr ""
+msgstr "דוח התקלה נשלח…"
 
 #: qml/SentPage.qml:12
 msgctxt "@title"
