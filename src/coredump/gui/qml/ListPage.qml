@@ -23,6 +23,9 @@ Kirigami.ScrollablePage {
 
     ListView {
         id: view
+
+        property bool argumentsApplied: Application.arguments.length > 1 ? false : true
+
         reuseItems: true // We have a lot of items potentially, recycle them
 
         KItemModels.KSortFilterProxyModel { // set as model during state change
@@ -31,6 +34,22 @@ Kirigami.ScrollablePage {
             filterRoleName: "ROLE_appName"
             sortRoleName: "modelIndex"
             sortOrder: Qt.DescendingOrder
+        }
+
+        onCountChanged: {
+            if (argumentsApplied || !model) {
+                return
+            }
+            for (let i = 0; i < model.count; ++i) {
+                const patient = model.data(model.index(i, 0), DrKonqi.PatientModel.ObjectRole)
+                if (patient.journalCursor === Application.arguments[1]) {
+                    view.currentIndex = i
+                    view.currentItem.clicked()
+
+                    argumentsApplied = true
+                    return
+                }
+            }
         }
 
         delegate: QQC2.ItemDelegate {

@@ -14,11 +14,6 @@ class DumpTruckInterface
 public:
     DumpTruckInterface() = default;
     virtual ~DumpTruckInterface() = default;
-    virtual bool handle(const Coredump &dump) = 0;
-
-private:
     Q_DISABLE_COPY_MOVE(DumpTruckInterface)
+    [[nodiscard]] virtual bool handle(const Coredump &dump) = 0;
 };
-
-#define DumpTruckInterface_IID "org.kde.drkonqi.DumpTruckInterface/1.0" // NOLINT
-Q_DECLARE_INTERFACE(DumpTruckInterface, DumpTruckInterface_IID) // NOLINT

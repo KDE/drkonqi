@@ -1,11 +1,7 @@
-/*
-    SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-    SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
-*/
+// SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+// SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
 
-#include "NotifierTruck.h"
-
-#include <chrono>
+#include "DevNotifierTruck.h"
 
 #include <QCoreApplication>
 #include <QFile>
@@ -18,8 +14,9 @@
 #include "../coredump.h"
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
-bool NotifyTruck::handle(const Coredump &dump)
+bool DevNotifierTruck::handle(const Coredump &dump)
 {
     if (!dump.m_rawData.value(dump.keyPickup()).isEmpty()) {
         // Pickups are currently not supported for notify handling. The problem is that we don't know if we already
@@ -29,11 +26,15 @@ bool NotifyTruck::handle(const Coredump &dump)
         return false;
     }
 
-    auto notification = new KNotification(QStringLiteral("applicationcrash"));
+    auto notification = new KNotification(u"applicationCrash"_s);
 
     // immediate exit signal. This gets disconnected should `activated` arrive first (in that case we
     // want to wait for the terminal app to start and not exit on further notification signals)
     QObject::connect(notification, &KNotification::closed, this, [this, notification] {
+        notification->disconnect(this);
+        qApp->exit(0);
+    });
+    QObject::connect(notification, &QObject::deleteLater, this, [this, notification] {
         notification->disconnect(this);
         qApp->exit(0);
     });
@@ -79,5 +80,3 @@ bool NotifyTruck::handle(const Coredump &dump)
     qApp->exec();
     return true;
 }
-
-#include "moc_NotifierTruck.cpp"

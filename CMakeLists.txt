@@ -30,6 +30,7 @@ include(CMakeDependentOption)
 include(FindPythonModule)
 
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
+option(WITH_GLOBAL_NOTIFIER "Build the global notifier that notifies about all coredumps on the system" ON)
 
 kde_enable_exceptions()
 

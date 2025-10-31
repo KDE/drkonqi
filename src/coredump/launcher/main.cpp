@@ -15,7 +15,6 @@
 #include <QFile>
 #include <QJsonDocument>
 #include <QLibraryInfo>
-#include <QPluginLoader>
 #include <QProcess>
 #include <QScopeGuard>
 #include <QStandardPaths>
@@ -26,7 +25,9 @@
 #include "../coredump.h"
 #include "../metadata.h"
 #include "../socket.h"
+#include "DevNotifierTruck.h"
 #include "DumpTruckInterface.h"
+#include "GlobalNotifierTruck.h"
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -259,19 +260,16 @@ static void onNewDump(const Coredump &dump)
         return;
     }
 
-    if (qEnvironmentVariableIntValue("KDE_COREDUMP_NOTIFY") >= 1) {
-        // Developers need to explicitly opt into the notifications. They
-        // have no l10n and are also uniquely useless to users.
-        static QPluginLoader loader(QStringLiteral("drkonqi/KDECoredumpNotifierTruck"));
-        if (!loader.load()) {
-            qWarning() << "failed to load" << loader.fileName() << loader.errorString();
+    if (qEnvironmentVariableIntValue("KDE_COREDUMP_NOTIFY") == 1) {
+        static DevNotifierTruck notifier;
+        if (notifier.handle(dump)) {
             return;
         }
-        auto notifier = qobject_cast<DumpTruckInterface *>(loader.instance());
-        Q_ASSERT(notifier);
-        if (notifier->handle(dump)) {
-            return;
-        }
+    }
+
+    static GlobalNotifierTruck notifier;
+    if (notifier.handle(dump)) {
+        return;
     }
 
     qWarning() << "Nothing handled the dump :O";

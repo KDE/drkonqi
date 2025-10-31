@@ -15,6 +15,7 @@ public:
         IndexRole = Qt::UserRole + 1,
         ObjectRole,
     };
+    Q_ENUM(ItemRole)
 
     explicit PatientModel(const QMetaObject &mo, QObject *parent = nullptr);
 

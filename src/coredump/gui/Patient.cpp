@@ -5,12 +5,15 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QDesktopServices>
 #include <QFileInfo>
 #include <QMessageBox>
 #include <QProcess>
+#include <QUrl>
 
 #include <KApplicationTrader>
 #include <KLocalizedString>
+#include <KOSRelease>
 #include <KShell>
 #include <KTerminalLauncherJob>
 
@@ -27,6 +30,42 @@ Patient::Patient(const Coredump &dump)
     , m_timestamp(dump.m_rawData["COREDUMP_TIMESTAMP"].toLong())
     , m_coredumpExe(dump.m_rawData["COREDUMP_EXE"])
     , m_coredumpCom(dump.m_rawData["COREDUMP_COMM"])
+    , m_faultEntityType([this, &dump] {
+        const QString userUnit = QString::fromUtf8(dump.m_rawData.value("COREDUMP_USER_UNIT"_ba));
+        const QString systemUnit = QString::fromUtf8(dump.m_rawData.value("COREDUMP_UNIT"_ba));
+
+        for (const auto &unit : {userUnit, systemUnit}) {
+            constexpr auto flatpakPrefix = "app-flatpak-"_L1;
+            if (!unit.startsWith(flatpakPrefix)) {
+                continue;
+            }
+
+            m_nameForFaultEntity = [&unit, &flatpakPrefix] {
+                const auto end = unit.mid(flatpakPrefix.size());
+                return end.left(end.indexOf('-'_L1));
+            }();
+            return FaultEntityType::Flatpak;
+        }
+
+        for (const auto &unit : {userUnit, systemUnit}) {
+            constexpr auto snapPrefix = "snap."_L1;
+            if (!unit.startsWith(snapPrefix)) {
+                continue;
+            }
+
+            m_nameForFaultEntity = [&unit, &snapPrefix] {
+                const auto end = unit.mid(snapPrefix.size());
+                return end.left(end.indexOf('.'_L1));
+            }();
+            return FaultEntityType::Snap;
+        }
+
+        // TODO: is it a KDE thing?
+
+        m_nameForFaultEntity = m_osRelease.prettyName();
+        return FaultEntityType::Distro;
+    }())
+    , m_journalCursor(QString::fromUtf8(dump.m_cursor))
 {
 }
 
@@ -102,7 +141,99 @@ QString Patient::iconName() const
 
 bool Patient::canDebug()
 {
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+    case FaultEntityType::Snap:
+        return false;
+    case FaultEntityType::Distro:
+    case FaultEntityType::KDE:
+        break; // only applicable for non-sandboxed software from us
+    }
     return m_coreFileInfo.exists();
+}
+
+[[nodiscard]] QString Patient::reasonForNoDebug() const
+{
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+        return i18nc("@info", "Debugging is not possible for crashes of software run inside a Flatpak sandbox at this time.");
+    case FaultEntityType::Snap:
+        return i18nc("@info", "Debugging is not possible for crashes of software run inside a Snap sandbox at this time.");
+    case FaultEntityType::Distro:
+    case FaultEntityType::KDE:
+        return {}; // always enabled
+    }
+    return i18nc("@info", "Debugging is no longer possible for this crash.");
+}
+
+bool Patient::canReport()
+{
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+        return false;
+    case FaultEntityType::Snap:
+        return true;
+    case FaultEntityType::Distro:
+        return !m_osRelease.bugReportUrl().isEmpty();
+    case FaultEntityType::KDE:
+        return false;
+    }
+    Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
+    return false;
+}
+
+QString Patient::reasonForNoReport() const
+{
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+        return i18nc("@info", "Reporting is not supported for Flatpak applications at this time.");
+    case FaultEntityType::KDE:
+        return i18nc("@info", "Reporting for KDE software is only available at the time of crash.");
+    case FaultEntityType::Snap:
+        return {}; // enabled -> simply direct to snap store
+    case FaultEntityType::Distro:
+        if (m_osRelease.bugReportUrl().isEmpty()) {
+            return i18nc("@info", "Your distribution has not provided a bug report URL. Please report this to your distribution.");
+        }
+        return {}; // enabled
+    }
+    Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
+    return QString();
+}
+
+void Patient::report()
+{
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+        // TODO lookup flatpak origin
+        return;
+    case FaultEntityType::Snap:
+        QDesktopServices::openUrl(QUrl(u"https://snapcraft.io/"_s.append(m_nameForFaultEntity)));
+        return;
+    case FaultEntityType::KDE:
+        // TODO
+        return;
+    case FaultEntityType::Distro:
+        QDesktopServices::openUrl(QUrl(m_osRelease.bugReportUrl()));
+        return;
+    }
+    Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
+}
+
+[[nodiscard]] QString Patient::faultEntityName() const
+{
+    switch (m_faultEntityType) {
+    case FaultEntityType::Flatpak:
+        return i18nc("@info the name of where to report bugs", "Flatpak");
+    case FaultEntityType::Snap:
+        return i18nc("@info the name of where to report bugs", "Snap Store");
+    case FaultEntityType::KDE:
+        return i18nc("@info the name of where to report bugs", "KDE");
+    case FaultEntityType::Distro:
+        return m_osRelease.prettyName();
+    }
+    Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
+    return {};
 }
 
 #include "moc_Patient.cpp"

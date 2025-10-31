@@ -6,6 +6,8 @@
 #include <QFileInfo>
 #include <QObject>
 
+#include <KOSRelease>
+
 #include <automaticcoredumpexcavator.h>
 
 class Coredump;
@@ -28,17 +30,25 @@ class Patient : public QObject
     MEMBER_PROPERTY(time_t, timestamp) = 0;
 #undef MEMBER_PROPERTY
     Q_PROPERTY(bool canDebug READ canDebug NOTIFY changed)
+    Q_PROPERTY(bool canReport READ canReport NOTIFY changed)
     Q_PROPERTY(QString dateTime READ dateTime NOTIFY changed)
     Q_PROPERTY(QString iconName READ iconName CONSTANT)
+    Q_PROPERTY(QString faultEntityName READ faultEntityName CONSTANT)
+    Q_PROPERTY(QString journalCursor MEMBER m_journalCursor CONSTANT)
 public:
     explicit Patient(const Coredump &dump);
 
     QStringList coredumpctlArguments(const QString &command) const;
 
     bool canDebug();
+    Q_INVOKABLE [[nodiscard]] QString reasonForNoDebug() const;
     Q_INVOKABLE void debug();
     QString dateTime() const;
     QString iconName() const;
+    [[nodiscard]] QString faultEntityName() const;
+    [[nodiscard]] bool canReport();
+    Q_INVOKABLE [[nodiscard]] QString reasonForNoReport() const;
+    Q_INVOKABLE void report();
 
 Q_SIGNALS:
     void changed();
@@ -51,6 +61,18 @@ private:
     const QByteArray m_coredumpCom;
     QString m_iconName;
     std::unique_ptr<AutomaticCoredumpExcavator> m_excavator;
+    QByteArray m_systemUnit;
+    QByteArray m_userUnit;
+    KOSRelease m_osRelease;
+    QString m_nameForFaultEntity; // Initialized before entityType because as part of the type resolution we also resolve this
+    enum class FaultEntityType {
+        Flatpak,
+        Snap,
+        KDE,
+        Distro // always when unknown
+    };
+    FaultEntityType m_faultEntityType;
+    QString m_journalCursor;
 };
 
 Q_DECLARE_METATYPE(time_t)

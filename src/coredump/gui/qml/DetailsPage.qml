@@ -6,6 +6,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.syntaxhighlighting 1.0
+import org.kde.coreaddons
 
 import org.kde.drkonqi.coredump.gui 1.0 as DrKonqi
 
@@ -23,6 +24,7 @@ Kirigami.ScrollablePage {
 
     actions: [
         Kirigami.Action {
+            id: copyToClipboardAction
             enabled: state === ""
             icon.name: "edit-copy"
             text: i18nc("@action", "Copy to Clipboard")
@@ -33,9 +35,20 @@ Kirigami.ScrollablePage {
         },
         Kirigami.Action {
             enabled: patient.canDebug
+            tooltip: patient.canDebug ? "" : patient.reasonForNoDebug()
             icon.name: "debug-run"
             text: i18nc("@action", "Run Interactive Debugger")
             onTriggered: patient.debug()
+        },
+        Kirigami.Action {
+            enabled: patient.canReport
+            tooltip: patient.canReport ? "" : patient.reasonForNoReport()
+            icon.name: "document-send"
+            text: i18nc("@action %1 is the name of a distribution", "Report to %1", patient.faultEntityName)
+            onTriggered: {
+                copyToClipboardAction.trigger()
+                patient.report()
+            }
         }
     ]
 
