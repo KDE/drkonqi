@@ -10,6 +10,7 @@ target_link_libraries(drkonqi-coredump-gui
     DrKonqiInternal
     Qt::Quick
     KF6::I18n
+    drkonqi-core
     drkonqi-coredump
     drkonqi-coredumpexcavator
 )

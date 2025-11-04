@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QFileInfo>
+#include <QJsonObject>
 #include <QObject>
 
 #include <KOSRelease>
@@ -40,7 +41,7 @@ public:
 
     QStringList coredumpctlArguments(const QString &command) const;
 
-    bool canDebug();
+    bool canDebug() const;
     Q_INVOKABLE [[nodiscard]] QString reasonForNoDebug() const;
     Q_INVOKABLE void debug();
     QString dateTime() const;
@@ -64,14 +65,19 @@ private:
     QByteArray m_systemUnit;
     QByteArray m_userUnit;
     KOSRelease m_osRelease;
-    QString m_nameForFaultEntity; // Initialized before entityType because as part of the type resolution we also resolve this
-    enum class FaultEntityType {
-        Flatpak,
-        Snap,
-        KDE,
-        Distro // always when unknown
-    };
-    FaultEntityType m_faultEntityType;
+    struct FaultContext {
+        enum class Entity {
+            Flatpak,
+            Snap,
+            KDE,
+            Distro // always when unknown
+        };
+        Entity entity;
+        QString name;
+        QString drkonqiMetadataPath = {}; // NOLINT this is not a redundant init!
+        QJsonObject drkonqiMetadata = {}; // NOLINT this is not a redundant init!
+        bool reportedToKDE = false;
+    } m_faultContext;
     QString m_journalCursor;
 };
 

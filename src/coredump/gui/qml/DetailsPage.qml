@@ -48,6 +48,7 @@ Kirigami.ScrollablePage {
             onTriggered: {
                 copyToClipboardAction.trigger()
                 patient.report()
+                enabled = false // one report per detail view (bit of a hack, not persistent or anything)
             }
         }
     ]
