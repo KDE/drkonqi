@@ -88,15 +88,14 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
         QString m_exe;
     };
 
+    // Be mindful of when QEventLoopLocker start and when they end! Specifically lambdas need suitable scoping so they eventually get destroyed.
+    qApp->setQuitLockEnabled(true);
+
     // Mind that m_cursor of the dump is empty because we don't resolve this from the journal but receive it as json from the processor.
     // As such we need to fetch the cursor from the payload. NOT the dump directly.
     Unit unit(dump.exe, dump.m_rawData.value(dump.keyCursor()), dump.m_rawData.value("COREDUMP_UNIT"_ba), dump.m_rawData.value("COREDUMP_USER_UNIT"_ba));
 
     auto notification = new KNotification(u"applicationCrash"_s);
-
-    QObject::connect(notification, &QObject::destroyed, this, [] {
-        qApp->exit(0);
-    });
 
     if (unit.isApp()) {
         notification->setTitle(i18nc("@title", "Application Crash", unit.name()));
@@ -107,9 +106,14 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
 
     notification->setText(xi18nc("@info", "<command>%1</command> has encountered a fatal error and was closed.", unit.name()));
     auto detailsAction = notification->addAction(i18nc("@action:button show crash details", "Details"));
-    connect(detailsAction, &KNotificationAction::activated, notification, [this, unit]() {
+    connect(detailsAction, &KNotificationAction::activated, notification, [this, unit, loopLocker = QEventLoopLocker()]() {
         auto job = new KIO::CommandLauncherJob(u"drkonqi-coredump-gui"_s, {unit.m_cursor}, this);
-        job->exec();
+        connect(job, &KJob::result, job, [loopLocker = QEventLoopLocker()](KJob *job) {
+            if (job->error()) {
+                qWarning() << "Failed to launch drkonqi-coredump-gui:" << job->errorString();
+            }
+        });
+        job->start();
     });
 
     notification->sendEvent();
