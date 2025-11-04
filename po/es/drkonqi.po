@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:43+0000\n"
+"POT-Creation-Date: 2025-11-04 00:43+0000\n"
 "PO-Revision-Date: 2025-05-29 12:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -328,13 +328,13 @@ msgstr "Ofrece una vista detallada de fallos anteriores"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2020-2022, los autores de DrKonqi"
 
-#: coredump/gui/Patient.cpp:57
+#: coredump/gui/Patient.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Fallo"
 
-#: coredump/gui/Patient.cpp:58
+#: coredump/gui/Patient.cpp:97
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
@@ -342,37 +342,105 @@ msgstr ""
 "No se ha podido acceder a los datos del fallo de la aplicación por motivos "
 "desconocidos."
 
-#: coredump/gui/qml/DetailsPage.qml:19
+#: coredump/gui/Patient.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Debugging is not possible for crashes of software run inside a Flatpak "
+"sandbox at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:161
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Debugging is not possible for crashes of software run inside a Snap sandbox "
+"at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid "Debugging is no longer possible for this crash."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:189
+#, kde-format
+msgctxt "@info"
+msgid "Reporting is not supported for Flatpak applications at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:191
+#, kde-format
+msgctxt "@info"
+msgid "Reporting for KDE software is only available at the time of crash."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:196
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Your distribution has not provided a bug report URL. Please report this to "
+"your distribution."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:227
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "Flatpak"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:229
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "Snap Store"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:231
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "KDE"
+msgstr ""
+
+#: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
 msgid "Details"
 msgstr "Detalles"
 
-#: coredump/gui/qml/DetailsPage.qml:28
+#: coredump/gui/qml/DetailsPage.qml:30
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Copiar en el portapapeles"
 
-#: coredump/gui/qml/DetailsPage.qml:37
+#: coredump/gui/qml/DetailsPage.qml:40
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Ejecutar el depurador interactivo"
+
+#: coredump/gui/qml/DetailsPage.qml:47
+#, fuzzy
+#| msgctxt "@action Report the bug on this domain"
+#| msgid "Report on %1"
+msgctxt "@action %1 is the name of a distribution"
+msgid "Report to %1"
+msgstr "Informar en %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
 msgstr "Fallos"
 
-#: coredump/gui/qml/ListPage.qml:57
+#: coredump/gui/qml/ListPage.qml:76
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Cargando informes de fallos"
 
-#: coredump/gui/qml/ListPage.qml:65
+#: coredump/gui/qml/ListPage.qml:84
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Todavía no ha fallado ningún proceso"
 
-#: coredump/gui/qml/ListPage.qml:73
+#: coredump/gui/qml/ListPage.qml:92
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "No hay fallos que coincidan con la búsqueda"
@@ -381,6 +449,33 @@ msgstr "No hay fallos que coincidan con la búsqueda"
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Resumen"
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:102
+#, kde-format
+msgctxt "@title"
+msgid "Application Crash"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:105
+#, kde-format
+msgctxt ""
+"@title service refers to a background service such as kwalletd or kded"
+msgid "Service Crash"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:108
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<command>%1</command> has encountered a fatal error and was closed."
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Details"
+msgctxt "@action:button show crash details"
+msgid "Details"
+msgstr "Detalles"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format

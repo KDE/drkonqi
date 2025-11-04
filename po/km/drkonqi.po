@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:43+0000\n"
+"POT-Creation-Date: 2025-11-04 00:43+0000\n"
 "PO-Revision-Date: 2012-06-15 14:16+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -300,19 +300,79 @@ msgstr ""
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០០-២០០៩ ដោយ​អ្នក​និពន្ធ DrKonqi"
 
-#: coredump/gui/Patient.cpp:57
+#: coredump/gui/Patient.cpp:96
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:58
+#: coredump/gui/Patient.cpp:97
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:19
+#: coredump/gui/Patient.cpp:159
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Debugging is not possible for crashes of software run inside a Flatpak "
+"sandbox at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:161
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Debugging is not possible for crashes of software run inside a Snap sandbox "
+"at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid "Debugging is no longer possible for this crash."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:189
+#, kde-format
+msgctxt "@info"
+msgid "Reporting is not supported for Flatpak applications at this time."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:191
+#, kde-format
+msgctxt "@info"
+msgid "Reporting for KDE software is only available at the time of crash."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:196
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Your distribution has not provided a bug report URL. Please report this to "
+"your distribution."
+msgstr ""
+
+#: coredump/gui/Patient.cpp:227
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "Flatpak"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:229
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "Snap Store"
+msgstr ""
+
+#: coredump/gui/Patient.cpp:231
+#, kde-format
+msgctxt "@info the name of where to report bugs"
+msgid "KDE"
+msgstr ""
+
+#: coredump/gui/qml/DetailsPage.qml:20
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Details:"
@@ -320,22 +380,30 @@ msgctxt "@title"
 msgid "Details"
 msgstr "​សេចក្ដី​លម្អិត ៖"
 
-#: coredump/gui/qml/DetailsPage.qml:28
+#: coredump/gui/qml/DetailsPage.qml:30
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:37
+#: coredump/gui/qml/DetailsPage.qml:40
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr ""
+
+#: coredump/gui/qml/DetailsPage.qml:47
+#, fuzzy
+#| msgctxt "@info/plain report to url/mail address"
+#| msgid "Report to %1"
+msgctxt "@action %1 is the name of a distribution"
+msgid "Report to %1"
+msgstr "រាយការណ៍​ទៅ​កាន់ %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:57
+#: coredump/gui/qml/ListPage.qml:76
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Sending the Crash Report"
@@ -343,12 +411,12 @@ msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "ផ្ញើ​របាយការណ៍​គាំង"
 
-#: coredump/gui/qml/ListPage.qml:65
+#: coredump/gui/qml/ListPage.qml:84
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:73
+#: coredump/gui/qml/ListPage.qml:92
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr ""
@@ -357,6 +425,35 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Overview"
 msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:102
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgctxt "@title"
+msgid "Application Crash"
+msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:105
+#, kde-format
+msgctxt ""
+"@title service refers to a background service such as kwalletd or kded"
+msgid "Service Crash"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:108
+#, kde-kuit-format
+msgctxt "@info"
+msgid "<command>%1</command> has encountered a fatal error and was closed."
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button show crash details"
+msgid "Details"
+msgstr "​សេចក្ដី​លម្អិត ៖"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1994,13 +2091,6 @@ msgstr ""
 #~ msgstr "រាយការណ៍​កំហុស"
 
 #, fuzzy
-#~| msgctxt "@action:button"
-#~| msgid "Restart Application"
-#~ msgctxt "@action"
-#~ msgid "Restart Application"
-#~ msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
-
-#, fuzzy
 #~| msgctxt "@info"
 #~| msgid ""
 #~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
@@ -2895,13 +2985,6 @@ msgstr ""
 #~ msgctxt "@info:status"
 #~ msgid "Error sending the crash report:  <message>%1.</message>"
 #~ msgstr "កំហុស​ក្នុងកា​រផ្ញើ​របាយការណ៍គាំង ៖  <message>%1 ។</message>"
-
-#, fuzzy
-#~| msgctxt "@info/plain report to url/mail address"
-#~| msgid "Report to %1"
-#~ msgctxt "@info report to KDE bugtracker address"
-#~ msgid "Report to %1"
-#~ msgstr "រាយការណ៍​ទៅ​កាន់ %1"
 
 #~ msgctxt "@action:button"
 #~ msgid "Search for more reports"
