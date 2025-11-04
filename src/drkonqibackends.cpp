@@ -22,8 +22,9 @@
 #include <KCrash>
 #include <QStandardPaths>
 
+#include <metadata.h>
+
 #include "backtracegenerator.h"
-#include "coredump/metadata.h"
 #include "crashedapplication.h"
 #include "debugger.h"
 #include "debuggermanager.h"

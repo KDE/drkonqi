@@ -11,6 +11,7 @@ endif()
 
 configure_file(config-drkonqi.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-drkonqi.h)
 
+add_subdirectory(core)
 add_subdirectory(bugzillaintegration/libbugzilla)
 add_subdirectory(data)
 add_subdirectory(parser)
@@ -113,6 +114,7 @@ target_link_libraries(
     KF6::SyntaxHighlighting # Backtrace Highlighting
     KF6::StatusNotifierItem
     drkonqi_backtrace_parser
+    drkonqi-core
     qbugzilla
 )
 

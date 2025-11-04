@@ -28,6 +28,7 @@
 #include <systemd/sd-journal.h>
 
 #include <coredump.h>
+#include <metadata.h>
 
 #include "bugzillaintegration/reportinterface.h"
 #include "crashedapplication.h"
@@ -169,10 +170,9 @@ bool CoredumpBackend::init()
             return;
         }
         auto object = QJsonDocument::fromJson(file.readAll()).object();
-        constexpr auto DRKONQI_KEY = "drkonqi"_L1;
-        auto drkonqiObject = object[DRKONQI_KEY].toObject();
-        drkonqiObject[u"sentryEventId"_s] = ReportInterface::self()->sentryEventId();
-        object[DRKONQI_KEY] = drkonqiObject;
+        auto drkonqiObject = object[Metadata::DRKONQI_KEY].toObject();
+        drkonqiObject[Metadata::SENTRY_EVENT_ID_KEY] = ReportInterface::self()->sentryEventId();
+        object[Metadata::DRKONQI_KEY] = drkonqiObject;
         file.reset();
         file.write(QJsonDocument(object).toJson());
     });

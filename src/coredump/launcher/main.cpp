@@ -22,8 +22,10 @@
 #include <KConfig>
 #include <KConfigGroup>
 
+#include <drkonqipaths.h>
+#include <metadata.h>
+
 #include "../coredump.h"
-#include "../metadata.h"
 #include "../socket.h"
 #include "DevNotifierTruck.h"
 #include "DumpTruckInterface.h"
@@ -31,19 +33,6 @@
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
-
-static QString drkonqiExe()
-{
-    // Borrowed from kcrash.cpp
-    static QStringList paths = QFile::decodeName(qgetenv("LIBEXEC_PATH")).split(QLatin1Char(':'), Qt::SkipEmptyParts)
-        + QStringList{
-            QCoreApplication::applicationDirPath(), // then look where our application binary is located
-            QLibraryInfo::path(QLibraryInfo::LibraryExecutablesPath), // look where libexec path is (can be set in qt.conf)
-            QFile::decodeName(KDE_INSTALL_FULL_LIBEXECDIR), // look at our installation location
-        };
-    static QString exec = QStandardPaths::findExecutable(QStringLiteral("drkonqi"), paths);
-    return exec;
-}
 
 QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
 {
@@ -56,22 +45,15 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
     return object;
 }
 
-constexpr auto KCRASH_KEY = "kcrash"_L1;
-constexpr auto KCRASH_TAGS_KEY = "kcrash-tags"_L1;
-constexpr auto KCRASH_EXTRA_DATA_KEY = "kcrash-extra-data"_L1;
-constexpr auto KCRASH_GPU_KEY = "kcrash-gpu"_L1;
-constexpr auto DRKONQI_KEY = "drkonqi"_L1;
-constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
-
 [[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath)
 {
     auto contextObject = QJsonObject{{u"version"_s, 2}};
     {
         KConfig kcrashMetadata(kcrashMetadataPath, KConfig::SimpleConfig);
-        contextObject.insert(KCRASH_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrash"_s)));
-        contextObject.insert(KCRASH_TAGS_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashTags"_s)));
-        contextObject.insert(KCRASH_EXTRA_DATA_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashExtra"_s)));
-        contextObject.insert(KCRASH_GPU_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashGPU"_s)));
+        contextObject.insert(Metadata::KCRASH_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrash"_s)));
+        contextObject.insert(Metadata::KCRASH_TAGS_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashTags"_s)));
+        contextObject.insert(Metadata::KCRASH_EXTRA_DATA_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashExtra"_s)));
+        contextObject.insert(Metadata::KCRASH_GPU_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashGPU"_s)));
     }
     {
         QJsonObject journalObject;
@@ -81,7 +63,7 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
         contextObject.insert(u"journal"_s, journalObject);
     }
     {
-        contextObject.insert(DRKONQI_KEY, QJsonObject{{PICKED_UP_KEY, true}});
+        contextObject.insert(Metadata::DRKONQI_KEY, QJsonObject{{Metadata::PICKED_UP_KEY, true}});
     }
 
     return contextObject;
@@ -89,27 +71,27 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
 
 [[nodiscard]] QJsonObject &synthesizeKCrashInto(const Coredump &dump, QJsonObject &metadata)
 {
-    if (!metadata[KCRASH_KEY].toObject().isEmpty()) {
+    if (!metadata[Metadata::KCRASH_KEY].toObject().isEmpty()) {
         return metadata; // already has data
     }
     if (!dump.exe.endsWith("/kwin_wayland"_L1) && !dump.exe.endsWith("/kwin_x11"_L1)) {
         return metadata; // isn't kwin
     }
 
-    auto object = metadata[KCRASH_KEY].toObject();
+    auto object = metadata[Metadata::KCRASH_KEY].toObject();
     object.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
     object.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
     object.insert(u"restarted"_s, true); // Cannot restart kwin. Autostarts if anything.
     object.insert(u"bugaddress"_s, u"submit@bugs.kde.org"_s);
     object.insert(u"appname"_s, dump.exe);
-    metadata[KCRASH_KEY] = object;
+    metadata[Metadata::KCRASH_KEY] = object;
 
     return metadata;
 }
 
 [[nodiscard]] QJsonObject &synthesizeGenericInto(const Coredump &dump, QJsonObject &metadata)
 {
-    auto object = metadata[KCRASH_KEY].toObject();
+    auto object = metadata[Metadata::KCRASH_KEY].toObject();
 
     if (!object.isEmpty()) {
         return metadata;
@@ -123,48 +105,9 @@ constexpr auto PICKED_UP_KEY = "PickedUp"_L1;
     object.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
     object.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
     object.insert(u"restarted"_s, true); // Cannot restart foreign apps!
-    metadata[KCRASH_KEY] = object;
+    metadata[Metadata::KCRASH_KEY] = object;
 
     return metadata;
-}
-
-[[nodiscard]] QStringList metadataArguments(const QVariantHash &kcrash)
-{
-    QStringList arguments;
-
-    for (auto [key, valueVariant] : kcrash.asKeyValueRange()) {
-        const auto value = valueVariant.toString();
-
-        if (key == QLatin1String("exe")) {
-            if (value.endsWith(QStringLiteral("/drkonqi"))) {
-                qWarning() << "drkonqi crashed, we aren't going to invoke it again, we might be the reason it crashed :O";
-                return {};
-            }
-            // exe purely exists for our benefit, don't forward it to drkonqi.
-            continue;
-        }
-
-        arguments << QStringLiteral("--%1").arg(key);
-        if (value != QLatin1String("true") && value != QLatin1String("false")) { // not a bool value, append as arg
-            arguments << value;
-        }
-    }
-
-    return arguments;
-}
-
-QJsonObject readFromDisk(const QString &drkonqiMetadataPath)
-{
-    if (!QFile::exists(drkonqiMetadataPath)) {
-        return {};
-    }
-
-    QFile file(drkonqiMetadataPath);
-    if (!file.open(QFile::ReadOnly)) {
-        qWarning() << "Failed to open for reading:" << drkonqiMetadataPath;
-    }
-
-    return QJsonDocument::fromJson(file.readAll()).object();
 }
 
 void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadataPath)
@@ -179,11 +122,6 @@ void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadat
     }
 }
 
-bool isPickedUp(const QJsonObject &metadata)
-{
-    return metadata[DRKONQI_KEY].toObject().value(PICKED_UP_KEY).toBool(false);
-}
-
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
@@ -196,8 +134,8 @@ static bool tryDrkonqi(const Coredump &dump)
 
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
 
-    QJsonObject metadata = readFromDisk(drkonqiMetadataPath);
-    if (isPickedUp(metadata)) {
+    QJsonObject metadata = Metadata::readFromDisk(drkonqiMetadataPath);
+    if (Metadata::isPickedUp(metadata)) {
         return true; // already handled previously
     }
     if (metadata.isEmpty()) {
@@ -210,7 +148,7 @@ static bool tryDrkonqi(const Coredump &dump)
         writeToDisk(metadata, drkonqiMetadataPath);
     }
 
-    if (metadata.isEmpty() || metadata[KCRASH_KEY].toObject().isEmpty()) {
+    if (metadata.isEmpty() || metadata[Metadata::KCRASH_KEY].toObject().isEmpty()) {
         return false; // no metadata, or no kcrash metadata -> don't know what to do with this
     }
 
@@ -223,7 +161,7 @@ static bool tryDrkonqi(const Coredump &dump)
         return false;
     }
 
-    if (drkonqiExe().isEmpty()) {
+    if (Paths::drkonqiExe().isEmpty()) {
         qWarning() << "Couldn't find drkonqi exe";
         return false;
     }
@@ -233,7 +171,7 @@ static bool tryDrkonqi(const Coredump &dump)
 
     // We must start drkonqi in a new slice. This launcher will want to terminate quickly and we enforce that
     // through maximum run time in the unit configuration. If drkonqi wasn't in a new slice it'd get killed with us.
-    QProcess::execute(drkonqiExe(), metadataArguments(metadata[KCRASH_KEY].toObject().toVariantHash()));
+    QProcess::execute(Paths::drkonqiExe(), Metadata::metadataArguments(metadata[Metadata::KCRASH_KEY].toObject().toVariantHash()));
 
     return true; // always considered handled, even if drkonqi crashes or something
 }
