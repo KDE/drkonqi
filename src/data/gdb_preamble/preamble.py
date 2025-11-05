@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-# SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2021-2025 Harald Sitter <sitter@kde.org>
 
 import os
 import sys
@@ -531,7 +531,35 @@ def print_sentry_payload(thread):
             tmpfile.write(json.dumps(payload))
             tmpfile.flush()
 
-class CoreImage:
+class GDBCoreImage:
+    def __init__(self, mapped_file):
+        self.valid = False
+        self.file = None # may not end up set otherwise, causing exceptions
+
+        self.file = mapped_file.filename
+        self.build_id = mapped_file.build_id
+        if self.build_id is None:
+            print(f'GDBCoreImage: No build id found in mapped file {mapped_file.filename}')
+            return # invalid
+
+        start = None
+        end = None
+        for region in mapped_file.regions:
+            if start is None or region.start < start:
+                start = region.start
+            if end is None or region.end > end:
+                end = region.end
+
+        if start is None or end is None:
+            print(f"GDBCoreImage: Could not determine valid address range for {mapped_file.filename}!")
+            return # invalid
+
+        self.address = '0x%x' % start
+        self.length = end - start
+
+        self.valid = True
+
+class EUUnstripCoreImage:
     def __init__(self, eu_unstrip_line):
         self.valid = False
         self.file = None # may not end up set otherwise, causing exceptions
@@ -542,7 +570,8 @@ class CoreImage:
         self.have_elf = file != '-'
         self.have_dwarf = debug != '-'
         if build_id_pack == '-':
-            raise NoBuildIdException(f'No build id found in core image: {eu_unstrip_line}')
+            print(f'No build id found in core image: {eu_unstrip_line}')
+            return # invalid
         self.build_id, self.build_id_address = build_id_pack.split('@', 1)
         self.address, self.length = address_pack.split('+', 1)
         self.length = int(self.length, 16)
@@ -559,11 +588,7 @@ class CoreImage:
 
         self.valid = self.file is not None
 
-def resolve_modules():
-    corefile = os.getenv("DRKONQI_COREFILE")
-    if not corefile:
-        raise RuntimeError("No corefile found. Cannot resolve modules.")
-
+def resolve_modules_eu_unstrip(corefile):
     global core_images
 
     env = os.environ.copy()
@@ -574,9 +599,39 @@ def resolve_modules():
     # https://sourceware.org/bugzilla/show_bug.cgi?id=32844
     output = get_stdout(['eu-unstrip', "--list-only", f"--core={corefile}"], env=env)
     for line in output.splitlines():
-        image = CoreImage(line)
+        image = EUUnstripCoreImage(line)
         if image.valid:
             core_images.append(image)
+
+def resolve_modules_gdb(corefile):
+    global core_images
+
+    for mapped_file in gdb.selected_inferior().corefile.mapped_files():
+        image = GDBCoreImage(mapped_file)
+        if image.valid:
+            core_images.append(image)
+
+def resolve_modules():
+    corefile = os.getenv("DRKONQI_COREFILE")
+    if not corefile:
+        raise RuntimeError("No corefile found. Cannot resolve modules.")
+
+    # I'd rather not have random name errors come out of the resolve function
+    # and trip us up. Instead check specifically if gdb.Corefile exists and only
+    # then run the resolve functions. Slightly more robust this way.
+    gdb_has_corefile_support = False
+    try:
+        gdb.Corefile
+        gdb_has_corefile_support = True
+    except NameError:
+        pass
+
+    if gdb_has_corefile_support:
+        print("Using gdb.Corefile to resolve modules.")
+        resolve_modules_gdb(corefile)
+    else:
+        print("Using eu-unstrip to resolve modules.")
+        resolve_modules_eu_unstrip(corefile)
 
 def print_preamble_internal():
     resolve_modules()

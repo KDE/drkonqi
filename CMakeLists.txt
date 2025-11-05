@@ -73,8 +73,10 @@ find_pythonmodule(sentry_sdk)
 find_package(GDB 12)
 set_package_properties(GDB PROPERTIES TYPE RUNTIME PURPOSE "GDB is required for debugging")
 
-find_package(eu-unstrip)
-set_package_properties(eu-unstrip PROPERTIES TYPE RUNTIME PURPOSE "eu-unstrip is required for debugging")
+if(GDB_VERSION VERSION_LESS "18")
+    find_package(eu-unstrip)
+    set_package_properties(eu-unstrip PROPERTIES TYPE RUNTIME PURPOSE "eu-unstrip is required for debugging")
+endif()
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2
     KF 5.240
