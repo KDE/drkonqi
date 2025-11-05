@@ -264,7 +264,7 @@ class SentryTrace:
                 gdb.execute('set debuginfod enabled off')
             else:
                 # (Re)load the symbols
-                gdb.execute(f'add-symbol-file {solib}')
+                gdb.execute(f'add-symbol-file "{solib}"')
 
             if 'sentry_sdk' in globals():
                 sentry_sdk.add_breadcrumb(
