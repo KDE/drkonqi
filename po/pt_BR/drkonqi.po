@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-08-02 09:29-0300\n"
+"PO-Revision-Date: 2025-11-04 08:39-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -350,6 +350,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Atualmente, a depuração não é possível para falhas de softwares executados "
+"dentro de um sandbox Flatpak."
 
 #: coredump/gui/Patient.cpp:161
 #, kde-format
@@ -358,24 +360,29 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Atualmente, a depuração não é possível para falhas de softwares executados "
+"dentro de um sandbox Snap."
 
 #: coredump/gui/Patient.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Não é mais possível depurar esse erro."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Atualmente, não há suporte para geração de relatórios em aplicativos Flatpak."
 
 #: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
 msgstr ""
+"Os relatórios de erros para o software KDE só estão disponíveis no momento "
+"da falha."
 
 #: coredump/gui/Patient.cpp:196
 #, kde-format
@@ -384,24 +391,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Sua distribuição não forneceu um URL para relatório de erros. Por favor, "
+"relate isso para sua distribuição."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Loja Snap"
 
 #: coredump/gui/Patient.cpp:231
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -419,9 +428,6 @@ msgid "Run Interactive Debugger"
 msgstr "Executar depurador interativo"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Relatar para %1"
@@ -452,30 +458,26 @@ msgid "Overview"
 msgstr "Visão geral"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:102
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Reiniciar aplicativo"
+msgstr "Falha do aplicativo"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Falha do serviço"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> encontrou um erro fatal e foi fechado."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Detalhes"

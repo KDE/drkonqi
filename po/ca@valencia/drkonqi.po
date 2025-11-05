@@ -14,16 +14,16 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 09:38+0200\n"
+"PO-Revision-Date: 2025-11-04 13:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -338,64 +338,72 @@ msgstr ""
 "No s'ha pogut accedir a les dades de la fallada per motius desconeguts."
 
 #: coredump/gui/Patient.cpp:159
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"En este moment, la depuració no és possible per a fallades de programari que "
+"s'executen dins d'un entorn de proves Flatpak."
 
 #: coredump/gui/Patient.cpp:161
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"En este moment, la depuració no és possible per a fallades de programari que "
+"s'executen dins d'un entorn de proves Snap."
 
 #: coredump/gui/Patient.cpp:166
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "La depuració ja no és possible per a esta fallada."
 
 #: coredump/gui/Patient.cpp:189
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "En este moment no s'admet l'informe per a les aplicacions Flatpak."
 
 #: coredump/gui/Patient.cpp:191
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
 msgstr ""
+"L'informe per al programari KDE només estarà disponible en el moment de la "
+"fallada."
 
 #: coredump/gui/Patient.cpp:196
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"La vostra distribució no ha proporcionat cap URL d'informe d'errors. "
+"Informeu d'açò a la vostra distribució."
 
 #: coredump/gui/Patient.cpp:227
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:231
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -413,9 +421,6 @@ msgid "Run Interactive Debugger"
 msgstr "Executa el depurador interactiu"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@action Report the bug on this domain"
-#| msgid "Report on %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Informa a %1"
@@ -446,28 +451,26 @@ msgid "Overview"
 msgstr "Vista general"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:102
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr ""
+msgstr "Fallada de l'aplicació"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
-#, kde-format
+#, fuzzy, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Fallada del servei"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> ha trobat un error fatal i s'ha tancat."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Detalls"

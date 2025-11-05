@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1721955 2025-11-04 01:24:12Z scripty $
+# $Id: drkonqi.po 1722020 2025-11-05 01:27:12Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 06:44+0200\n"
+"PO-Revision-Date: 2025-11-04 07:06+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -342,6 +342,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Odpravljanje napak ni mogoče pri sesutjih programske opreme, ki se izvaja "
+"znotraj peskovnika Flatpak."
 
 #: coredump/gui/Patient.cpp:161
 #, kde-format
@@ -350,24 +352,26 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Odpravljanje napak ni mogoče pri sesutjih programske opreme, ki se izvaja "
+"znotraj peskovnika Snap."
 
 #: coredump/gui/Patient.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Odpravljanje napak pri tem sesutju ni več mogoče."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Poročanje trenutno ni podprto za aplikacije Flatpak."
 
 #: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
-msgstr ""
+msgstr "Poročanje za programsko opremo KDE je na voljo samo v času sesutja."
 
 #: coredump/gui/Patient.cpp:196
 #, kde-format
@@ -376,24 +380,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Vaša distribucija ni navedla URL-ja za poročilo o napaki. Prosimo, da to "
+"sporočite svoji distribuciji."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:231
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -411,9 +417,6 @@ msgid "Run Interactive Debugger"
 msgstr "Poženi interaktivni razhroščevalnik"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Poročaj na %1"
@@ -444,30 +447,27 @@ msgid "Overview"
 msgstr "Pregled"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:102
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Znova zaženi aplikacijo"
+msgstr "Sesutje aplikacije"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Sesutje storitve"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
+"V ukazu <command>%1</command> je prišlo do usodne napake in je bil zaprt."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Podrobnosti"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 10:26+0200\n"
+"PO-Revision-Date: 2025-11-04 13:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -331,6 +331,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Debuggen is niet mogelijk voor crashes van software die nu in een Flatpak "
+"zandbak draait."
 
 #: coredump/gui/Patient.cpp:161
 #, kde-format
@@ -339,24 +341,29 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Debuggen is niet mogelijk voor crashes van software die nu in een Snap-"
+"zandbak draait."
 
 #: coredump/gui/Patient.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Debuggen is niet langer mogelijk voor deze crash."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Rapporteren wordt op dit moment niet ondersteund voor Flatpak toepassingen."
 
 #: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
 msgstr ""
+"Rapporteren voor KDE software is alleen beschikbaar op het moment van de "
+"crash."
 
 #: coredump/gui/Patient.cpp:196
 #, kde-format
@@ -365,24 +372,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Uw distributie heeft geen bugrapport URL geleverd. Rapporteer dit aan uw "
+"distributie."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap-opslag"
 
 #: coredump/gui/Patient.cpp:231
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -400,12 +409,9 @@ msgid "Run Interactive Debugger"
 msgstr "Interactieve debugger uitvoeren"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Rapporteer naar %1"
+msgstr "Rapporteer aan %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -433,30 +439,26 @@ msgid "Overview"
 msgstr "Overzicht"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:102
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Toepassing herstarten"
+msgstr "Crash van toepassing"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Crash van service"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> heft een fatale fout ondergaan en was gesloten."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Details"
