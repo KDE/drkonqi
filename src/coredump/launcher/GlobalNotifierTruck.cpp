@@ -110,6 +110,14 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
         auto job = new KIO::CommandLauncherJob(u"drkonqi-coredump-gui"_s, {unit.m_cursor}, this);
         connect(job, &KJob::result, job, [loopLocker = QEventLoopLocker()](KJob *job) {
             if (job->error()) {
+                auto errorNotification = KNotification::event(KNotification::Error,
+                                                              i18nc("@title", "Failed to Launch"),
+                                                              i18nc("@info", "Could not launch the Crashed Process Viewer."),
+                                                              u"tools-report-bug"_s);
+                connect(errorNotification, &KNotification::destroyed, errorNotification, [loopLocker = QEventLoopLocker()]() {
+                    // Only here to scope the loopLocker. Nothing to actually do.
+                });
+                errorNotification->sendEvent();
                 qWarning() << "Failed to launch drkonqi-coredump-gui:" << job->errorString();
             }
         });
