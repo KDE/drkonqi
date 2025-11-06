@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-05-30 17:35+0200\n"
+"PO-Revision-Date: 2025-11-04 14:06+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -126,7 +126,7 @@ msgstr ""
 "<h2>Qu'est-ce qu'une pile d'appels ?</h2><p>Une pile d'appels décrit tout "
 "simplement ce qui se passait dans l'application au moment du plantage, afin "
 "que les développeurs puissent comprendre où le problème a débuté. Elle "
-"devrait vous paraitre sans aucun sens mais peut contenir une mine "
+"devrait vous paraître sans aucun sens mais peut contenir une mine "
 "d'informations.<br />Les piles d'appels sont régulièrement utilisées lors du "
 "débogage interactif et post-mortem.</p>"
 
@@ -364,6 +364,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Le débogage n'est pas possible pour les plantages de logiciels exécutés à "
+"l'intérieur d'un bac à sable de Flatpak pour le moment."
 
 #: coredump/gui/Patient.cpp:161
 #, kde-format
@@ -372,24 +374,30 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Le débogage n'est pas possible pour les plantages de logiciels exécutés dans "
+"un bac à sable sous Snap pour le moment."
 
 #: coredump/gui/Patient.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Le débogage n'est plus possible pour ce plantage."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Le signalement n'est pas pris en charge pour les applications sous Flatpak "
+"pour le moment."
 
 #: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
 msgstr ""
+"Le signalement concernant les logiciels de KDE n'est possible qu'au moment "
+"du plantage."
 
 #: coredump/gui/Patient.cpp:196
 #, kde-format
@@ -398,24 +406,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Votre distribution n'a pas fourni d'URL de signalement de bogues. Veuillez "
+"le signaler à votre distribution."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Boutique Snap"
 
 #: coredump/gui/Patient.cpp:231
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -433,12 +443,9 @@ msgid "Run Interactive Debugger"
 msgstr "Lancer le débogueur interactif"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Rapporter à %1"
+msgstr "Signaler à %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -466,30 +473,26 @@ msgid "Overview"
 msgstr "Aperçu"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:102
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Re-démarrer une application"
+msgstr "Plantage d'une application"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Plantage d'un service"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> a rencontré une erreur fatale et a été fermé."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Détails"

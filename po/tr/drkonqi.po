@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-04 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 21:54+0300\n"
+"PO-Revision-Date: 2025-11-05 21:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -344,6 +344,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Bir Flatpak yalıtılmış ortamında çalışan yazılımlarda oluşan çökmeyi hata "
+"ayıklamak şu anda olanaklı değil."
 
 #: coredump/gui/Patient.cpp:161
 #, kde-format
@@ -352,24 +354,27 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Bir Snap yalıtılmış ortamında çalışan yazılımlarda oluşan çökmeyi hata "
+"ayıklamak şu anda olanaklı değil."
 
 #: coredump/gui/Patient.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Bu çökme için hata ayıklama artık olanaklı değil."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Flatpak uygulamaları için hata bildirme şu anda desteklenmiyor."
 
 #: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid "Reporting for KDE software is only available at the time of crash."
 msgstr ""
+"Şu anda yalnızca KDE yazılımlarında oluşan çökmeleri bildirebilirsiniz."
 
 #: coredump/gui/Patient.cpp:196
 #, kde-format
@@ -378,24 +383,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Dağıtımınız hata bildirmek için bir URL sağlamamış. Lütfen bunu dağıtımınıza "
+"söyleyin."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:229
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:231
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -413,12 +420,9 @@ msgid "Run Interactive Debugger"
 msgstr "Etkileşimli Hata Ayıklayıcıyı Çalıştır"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@action Report the bug on this domain"
-#| msgid "Report on %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Şurada Bildir: %1"
+msgstr "Şuraya Bildir: %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -449,25 +453,23 @@ msgstr "Genel Görünüm"
 #, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr ""
+msgstr "Uygulama Çökmesi"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:105
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Hizmet Çökmesi"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> onulmaz bir hatayla karşılaştı ve kapatıldı."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Ayrıntılar"
