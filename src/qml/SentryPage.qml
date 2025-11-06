@@ -101,10 +101,16 @@ You will not receive any more crash notifications.`)
             Layout.alignment: Qt.AlignRight
             visible: detailView.visible
             action: Kirigami.Action {
-                enabled: detailArea.text.length > 3
                 icon.name: "document-send-symbolic"
                 text: i18nc("@action:button", "Send Message")
                 onTriggered: {
+                    enabled = false
+                    // A message is not a coredump but that distinction is lost on users. Let them send message without
+                    // actually sending anything if it is likely useless.
+                    // https://bugs.kde.org/show_bug.cgi?id=505735
+                    if (detailArea.text.length < 4) {
+                        return
+                    }
                     reportInterface.createCrashMessage(detailArea.text)
                     detailView.visible = false
                 }
