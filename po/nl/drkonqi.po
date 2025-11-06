@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-11-04 13:52+0100\n"
+"PO-Revision-Date: 2025-11-06 12:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -345,14 +345,13 @@ msgstr ""
 "zandbak draait."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "Debuggen is niet langer mogelijk voor deze crash."
+msgstr ""
+"Debuggen is niet langer mogelijk voor deze crash. De core-dump ontbreekt."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -368,12 +367,10 @@ msgstr ""
 "Rapporteren wordt op dit moment niet ondersteund voor Flatpak toepassingen."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Probleem is al gerapporteerd"
+msgstr "Al gerapporteerd."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -477,15 +474,13 @@ msgstr "Details"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Starten is mislukt"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Viewer van gecrashte processen"
+msgstr "Kon de viewer van gecrashte processen niet starten."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format

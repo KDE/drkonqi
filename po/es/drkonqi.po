@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-11-05 00:17+0100\n"
+"PO-Revision-Date: 2025-11-06 12:01+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -363,14 +363,14 @@ msgstr ""
 "entorno aislado de Snap."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "La depuración ya no es posible para este fallo."
+msgstr ""
+"La depuración ya no es posible para este fallo. Falta el archivo de volcado "
+"del núcleo."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -388,7 +388,7 @@ msgstr "Por ahora no se puede informar de aplicaciones Flatpak."
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "Ya se ha informado."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -492,15 +492,13 @@ msgstr "Detalles"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "No se ha podido lanzar"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visor de los procesos que han fallado"
+msgstr "No se ha podido lanzar el visor del proceso que ha fallado."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1670,9 +1668,3 @@ msgstr "Usuario de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contraseña de bugstest.kde.org"
-
-#~ msgctxt "@info"
-#~ msgid "Reporting for KDE software is only available at the time of crash."
-#~ msgstr ""
-#~ "Los informes para el software de KDE solo están disponibles en el momento "
-#~ "del fallo."

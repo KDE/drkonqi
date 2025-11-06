@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-05-29 17:28+0300\n"
+"PO-Revision-Date: 2025-11-06 16:01+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -348,6 +348,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"У поточній версії діагностика для аварій у програмах, які запущено у "
+"пісочниці Flatpak, неможливо."
 
 #: coredump/gui/Patient.cpp:173
 #, kde-format
@@ -356,6 +358,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"У поточній версії діагностика для аварій у програмах, які запущено у "
+"пісочниці Snap, неможливо."
 
 #: coredump/gui/Patient.cpp:177
 #, kde-format
@@ -363,27 +367,26 @@ msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr ""
+msgstr "Діагностика для цієї аварії більше неможлива."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Цього разу підтримки звітування для програм Flatpak не передбачено."
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Звітування для програмного забезпечення KDE можливе лише одразу після аварії."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Про ваду вже повідомлено"
+msgstr "Звіт вже надіслано."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -392,24 +395,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Для вашого дистрибутива не передбачено адреси звітування щодо вад. Будь "
+"ласка, повідомте про це авторів вашого дистрибутива."
 
 #: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Крамниця Snap"
 
 #: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -427,9 +432,6 @@ msgid "Run Interactive Debugger"
 msgstr "Запустити інтерактивний засіб діагностики"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Надіслати звіт до %1"
@@ -460,30 +462,28 @@ msgid "Overview"
 msgstr "Огляд"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Перезапустити програму"
+msgstr "Аварія програми"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Аварія служби"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
+"У <command>%1</command> сталася критична помилка і роботу програми було "
+"завершено."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Подробиці"
@@ -492,15 +492,13 @@ msgstr "Подробиці"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Не вдалося запустити"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Переглядач аварійних процесів"
+msgstr "Не вдалося запустити засіб перегляду аварійно завершеного процесу."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format

@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-11-05 09:58+0100\n"
+"PO-Revision-Date: 2025-11-06 10:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -357,14 +357,14 @@ msgstr ""
 "d'un espai aïllat Snap en aquest moment."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "La depuració ja no és possible per a aquesta fallada."
+msgstr ""
+"La depuració ja no és possible per a aquesta fallada. Manca el fitxer de "
+"bolcat del nucli."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -382,7 +382,7 @@ msgstr "En aquest moment no s'admet l'informe per a les aplicacions Flatpak."
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "Ja s'ha informat."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -486,15 +486,13 @@ msgstr "Detalls"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Ha fallat en llançar"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visualitzador de processos fallats"
+msgstr "No s'ha pogut llançar el visualitzador de processos fallats."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
