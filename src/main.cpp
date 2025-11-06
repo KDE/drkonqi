@@ -131,6 +131,9 @@ int main(int argc, char *argv[])
     }
 #endif
 
+    // Session management is not needed, do not even connect in order to survive longer than ksmserver.
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
+
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("drkonqi"));
 
@@ -147,8 +150,6 @@ int main(int argc, char *argv[])
 
     // Prevent KApplication from setting the crash handler. We will set it later...
     setenv("KDE_DEBUG", "true", 1);
-    // Session management is not needed, do not even connect in order to survive longer than ksmserver.
-    unsetenv("SESSION_MANAGER");
 
     KAboutData aboutData(QStringLiteral("drkonqi"),
                          i18n("Crash Handler"),
