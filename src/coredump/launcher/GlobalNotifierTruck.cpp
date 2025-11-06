@@ -28,6 +28,11 @@ KService::Ptr serviceForUnitName(const QString &unitName)
     }
 
     if (auto service = KService::serviceByMenuId(serviceName.toString() + ".desktop"_L1); service) {
+        if (service->categories().contains("TerminalEmulator"_L1)) {
+            // Terminals most of the time host applications in their own cgroup, making it impossible to detect the
+            // correct service, if any.
+            return {};
+        }
         return service;
     }
     if (unitName.endsWith("@autostart.service"_L1)) {
