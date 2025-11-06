@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:43+0000\n"
+"POT-Creation-Date: 2025-11-06 08:07+0000\n"
 "PO-Revision-Date: 2025-11-04 10:11+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -311,19 +311,19 @@ msgstr "מציע תצוגה מפורטת של קריסות עבר"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020‏-2022, יוצרי DrKonqi"
 
-#: coredump/gui/Patient.cpp:96
+#: coredump/gui/Patient.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "כשל"
 
-#: coredump/gui/Patient.cpp:97
+#: coredump/gui/Patient.cpp:109
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "הגישה לנתוני הקריסה נכשלה מסיבות לא ברורות."
 
-#: coredump/gui/Patient.cpp:159
+#: coredump/gui/Patient.cpp:171
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -332,7 +332,7 @@ msgid ""
 msgstr ""
 "ניפוי שגיאות אינו אפשרי לקריסה של תוכנות שרצות בתוך ארגז חול של Flatpak כרגע."
 
-#: coredump/gui/Patient.cpp:161
+#: coredump/gui/Patient.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -341,25 +341,37 @@ msgid ""
 msgstr ""
 "ניפוי שגיאות אינו אפשרי לקריסה של תוכנות שרצות בתוך ארגז חול של Snap כרגע."
 
-#: coredump/gui/Patient.cpp:166
+#: coredump/gui/Patient.cpp:177
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Debugging is no longer possible for this crash."
+msgctxt "@info"
+msgid ""
+"Debugging is no longer possible for this crash. The core dump file is "
+"missing."
+msgstr "אין אפשרות יותר לניפוי שגיאות עבור הקריסה הזאת."
+
+#: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "אין אפשרות יותר לניפוי שגיאות עבור הקריסה הזאת."
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "אין תמיכה בדיווח על יישומי Flatpak כרגע."
 
-#: coredump/gui/Patient.cpp:191
-#, kde-format
+#: coredump/gui/Patient.cpp:210
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Problem is Already Reported"
 msgctxt "@info"
-msgid "Reporting for KDE software is only available at the time of crash."
-msgstr "דיווח על תוכנות KDE זמין רק בזמן קריסה."
+msgid "Already reported."
+msgstr "הבעיה כבר דווחה"
 
-#: coredump/gui/Patient.cpp:196
+#: coredump/gui/Patient.cpp:215
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -368,19 +380,19 @@ msgid ""
 msgstr ""
 "ההפצה שלך לא סיפקה כתובת לדיווח על תקלות. נא לדווח על התקלה הזאת להפצה שלך."
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:229
+#: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "חנות Snap"
 
-#: coredump/gui/Patient.cpp:231
+#: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -431,30 +443,44 @@ msgctxt "@title:window"
 msgid "Overview"
 msgstr "סקירה"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:102
+#: coredump/launcher/GlobalNotifierTruck.cpp:101
 #, kde-format
 msgctxt "@title"
 msgid "Application Crash"
 msgstr "קריסת יישום"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:105
+#: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
 msgstr "קריסת שירות"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:108
+#: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> נתקל בשגיאה חמורה ונסגר."
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "פרטים"
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:114
+#, kde-format
+msgctxt "@title"
+msgid "Failed to Launch"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:115
+#, fuzzy, kde-format
+#| msgctxt "@title CLI title"
+#| msgid "Crashed Processes Viewer"
+msgctxt "@info"
+msgid "Could not launch the Crashed Process Viewer."
+msgstr "מציג התהליכים שקרסו"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1565,6 +1591,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "סיסמה ב־bugstest.kde.org"
 
+#~ msgctxt "@info"
+#~ msgid "Reporting for KDE software is only available at the time of crash."
+#~ msgstr "דיווח על תוכנות KDE זמין רק בזמן קריסה."
+
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"
 #~ msgstr "הצגת תוכן ניתוח המהלכים (מתקדם)"
@@ -1680,10 +1710,6 @@ msgstr "סיסמה ב־bugstest.kde.org"
 #~ msgctxt "@action:button"
 #~ msgid "This crash is not related"
 #~ msgstr "הקריסה הזאת לא קשורה"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "הבעיה כבר דווחה"
 
 #~ msgctxt "@info"
 #~ msgid ""

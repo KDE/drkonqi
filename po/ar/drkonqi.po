@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:43+0000\n"
+"POT-Creation-Date: 2025-11-06 08:07+0000\n"
 "PO-Revision-Date: 2025-11-05 18:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -311,19 +311,19 @@ msgstr "يقدم عرض تفصيلي للانهيارات السابقة"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022، مؤلفو DrKonqi "
 
-#: coredump/gui/Patient.cpp:96
+#: coredump/gui/Patient.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "فشل"
 
-#: coredump/gui/Patient.cpp:97
+#: coredump/gui/Patient.cpp:109
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "فشل في الوصول إلى بيانات الانهيار لأسباب مجهولة."
 
-#: coredump/gui/Patient.cpp:159
+#: coredump/gui/Patient.cpp:171
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -333,7 +333,7 @@ msgstr ""
 "لا يمكن إجراء تنقيح الأخطاء في حالات تعطل البرامج المشغلة داخل صندوق الحماية "
 "فلات باك في الوقت الحالي."
 
-#: coredump/gui/Patient.cpp:161
+#: coredump/gui/Patient.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -343,25 +343,37 @@ msgstr ""
 "لا يمكن إجراء تنقيح الأخطاء في حالات تعطل البرامج المشغلة داخل صندوق الحماية "
 "سناب في الوقت الحالي."
 
-#: coredump/gui/Patient.cpp:166
+#: coredump/gui/Patient.cpp:177
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Debugging is no longer possible for this crash."
+msgctxt "@info"
+msgid ""
+"Debugging is no longer possible for this crash. The core dump file is "
+"missing."
+msgstr "لم يعد من الممكن تنقيح هذا الانهيار."
+
+#: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "لم يعد من الممكن تنقيح هذا الانهيار."
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "لا تتوفر ميزة الإبلاغ عن الأخطاء لتطبيقات فلات باك في الوقت الحالي."
 
-#: coredump/gui/Patient.cpp:191
-#, kde-format
+#: coredump/gui/Patient.cpp:210
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Problem is Already Reported"
 msgctxt "@info"
-msgid "Reporting for KDE software is only available at the time of crash."
-msgstr "لا يتوفر الإبلاغ عن برامج كيدي إلا في حالة حدوث عطل."
+msgid "Already reported."
+msgstr "المشكلة التي تصادفها قد أبلغ عنها بالفعل"
 
-#: coredump/gui/Patient.cpp:196
+#: coredump/gui/Patient.cpp:215
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -369,19 +381,19 @@ msgid ""
 "your distribution."
 msgstr "لم توفر توزيعتك عنوان لتقرير الأخطاء. يرجى الإبلاغ عن ذلك إلى توزيعتك."
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "فلات باك"
 
-#: coredump/gui/Patient.cpp:229
+#: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "متجر سناب"
 
-#: coredump/gui/Patient.cpp:231
+#: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -432,30 +444,44 @@ msgctxt "@title:window"
 msgid "Overview"
 msgstr "النظرة العامة"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:102
+#: coredump/launcher/GlobalNotifierTruck.cpp:101
 #, kde-format
 msgctxt "@title"
 msgid "Application Crash"
 msgstr "انهار تطبيق"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:105
+#: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
 msgstr "خدمة الانهيار"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:108
+#: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> واجه خطأ فادح وأُغلق."
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "التفاصيل"
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:114
+#, kde-format
+msgctxt "@title"
+msgid "Failed to Launch"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:115
+#, fuzzy, kde-format
+#| msgctxt "@title CLI title"
+#| msgid "Crashed Processes Viewer"
+msgctxt "@info"
+msgid "Could not launch the Crashed Process Viewer."
+msgstr "عارض العمليات المنهارة"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1569,6 +1595,10 @@ msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "كلمة سر bugstest.kde.org"
 
+#~ msgctxt "@info"
+#~ msgid "Reporting for KDE software is only available at the time of crash."
+#~ msgstr "لا يتوفر الإبلاغ عن برامج كيدي إلا في حالة حدوث عطل."
+
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"
 #~ msgstr "أظهر محتويات التتبع الخلفي للانهيار (متقدم)"
@@ -1683,10 +1713,6 @@ msgstr "كلمة سر bugstest.kde.org"
 #~ msgctxt "@action:button"
 #~ msgid "This crash is not related"
 #~ msgstr "هذا الانهيار غير ذي صلة"
-
-#~ msgctxt "@title"
-#~ msgid "Problem is Already Reported"
-#~ msgstr "المشكلة التي تصادفها قد أبلغ عنها بالفعل"
 
 #~ msgctxt "@info"
 #~ msgid ""

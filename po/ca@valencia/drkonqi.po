@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:43+0000\n"
+"POT-Creation-Date: 2025-11-06 08:07+0000\n"
 "PO-Revision-Date: 2025-11-05 09:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -324,20 +324,20 @@ msgstr "Oferix una vista detallada de les fallades passades"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
 
-#: coredump/gui/Patient.cpp:96
+#: coredump/gui/Patient.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Fallada"
 
-#: coredump/gui/Patient.cpp:97
+#: coredump/gui/Patient.cpp:109
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
 "No s'ha pogut accedir a les dades de la fallada per motius desconeguts."
 
-#: coredump/gui/Patient.cpp:159
+#: coredump/gui/Patient.cpp:171
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -347,7 +347,7 @@ msgstr ""
 "En este moment, la depuració no és possible per a fallades de programari que "
 "s'executen dins d'un espai aïllat Flatpak."
 
-#: coredump/gui/Patient.cpp:161
+#: coredump/gui/Patient.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -357,27 +357,35 @@ msgstr ""
 "En este moment, la depuració no és possible per a fallades de programari que "
 "s'executen dins d'un espai aïllat Snap."
 
-#: coredump/gui/Patient.cpp:166
+#: coredump/gui/Patient.cpp:177
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Debugging is no longer possible for this crash."
+msgctxt "@info"
+msgid ""
+"Debugging is no longer possible for this crash. The core dump file is "
+"missing."
+msgstr "La depuració ja no és possible per a esta fallada."
+
+#: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "La depuració ja no és possible per a esta fallada."
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "En este moment no s'admet l'informe per a les aplicacions Flatpak."
 
-#: coredump/gui/Patient.cpp:191
+#: coredump/gui/Patient.cpp:210
 #, kde-format
 msgctxt "@info"
-msgid "Reporting for KDE software is only available at the time of crash."
+msgid "Already reported."
 msgstr ""
-"L'informe per al programari KDE només estarà disponible en el moment de la "
-"fallada."
 
-#: coredump/gui/Patient.cpp:196
+#: coredump/gui/Patient.cpp:215
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -387,19 +395,19 @@ msgstr ""
 "La vostra distribució no ha proporcionat cap URL d'informe d'errors. "
 "Informeu d'açò a la vostra distribució."
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:229
+#: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap Store"
 
-#: coredump/gui/Patient.cpp:231
+#: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -450,30 +458,44 @@ msgctxt "@title:window"
 msgid "Overview"
 msgstr "Vista general"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:102
+#: coredump/launcher/GlobalNotifierTruck.cpp:101
 #, kde-format
 msgctxt "@title"
 msgid "Application Crash"
 msgstr "Fallada d'aplicació"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:105
+#: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
 msgstr "Fallada de servei"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:108
+#: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> ha trobat un error fatal i s'ha tancat."
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#: coredump/launcher/GlobalNotifierTruck.cpp:108
 #, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Detalls"
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:114
+#, kde-format
+msgctxt "@title"
+msgid "Failed to Launch"
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:115
+#, fuzzy, kde-format
+#| msgctxt "@title CLI title"
+#| msgid "Crashed Processes Viewer"
+msgctxt "@info"
+msgid "Could not launch the Crashed Process Viewer."
+msgstr "Visor de processos fallats"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1640,3 +1662,9 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
+
+#~ msgctxt "@info"
+#~ msgid "Reporting for KDE software is only available at the time of crash."
+#~ msgstr ""
+#~ "L'informe per al programari KDE només estarà disponible en el moment de "
+#~ "la fallada."
