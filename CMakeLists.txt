@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.22)
 
 project(drkonqi)
 set(PROJECT_VERSION "6.5.80")
@@ -31,6 +31,28 @@ include(FindPythonModule)
 
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 option(WITH_GLOBAL_NOTIFIER "Build the global notifier that notifies about all coredumps on the system" ON)
+
+set(DEFAULT_WITH_DRKONQI_REPORTING ON)
+cmake_host_system_information(RESULT DISTRO QUERY DISTRIB_INFO)
+if(${DISTRO_ID} STREQUAL "debian")
+    # Debian bug reporting guidelines say report to debian not upstream.
+    set(DEFAULT_WITH_DRKONQI_REPORTING OFF)
+endif()
+if(${DISTRO_ID} STREQUAL "ubuntu" OR ${DISTRO_ID} STREQUAL "kubuntu")
+    # Ubuntu has its own crash reporting system and versions are often lagging behind.
+    set(DEFAULT_WITH_DRKONQI_REPORTING OFF)
+endif()
+if(ECM_SOURCE_UNDER_VERSION_CONTROL)
+    # For development builds we want it on by default regardless of distro
+    set(DEFAULT_WITH_DRKONQI_REPORTING ON)
+endif()
+# Please disable it if your distribution does not intend to ship supported versions of KDE software.
+# e.g. if you are a LTS-style distro that only ships security fixes please disable this.
+# Users still get notified about crashes and guided towards reporting them to your bug tracker (via os-release's BUG_REPORT_URL).
+# This prevents users from reporting crashes in outdated software and then getting their bug closed immediately by a bot.
+# https://bugs.kde.org/show_bug.cgi?id=491790
+option(WITH_DRKONQI_REPORTING "Guided UI reporting of crashes via DrKonqi, also Sentry." ${DEFAULT_WITH_DRKONQI_REPORTING})
+add_feature_info(Reporting WITH_DRKONQI_REPORTING "guided reports to the KDE bugzilla. Disable when shipping outdated software!")
 
 kde_enable_exceptions()
 

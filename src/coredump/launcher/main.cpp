@@ -194,6 +194,10 @@ static bool tryDrkonqi(const Coredump &dump)
         }
     });
 
+#if !defined(WITH_DRKONQI_REPORTING)
+    return false; // DrKonqi reporting disabled at compile time. Let this crash fall through to the global notifier.
+#endif
+
     const QString drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
 
     QJsonObject metadata = readFromDisk(drkonqiMetadataPath);
