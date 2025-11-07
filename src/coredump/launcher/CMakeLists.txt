@@ -6,6 +6,9 @@ target_link_libraries(drkonqi-coredump-launcher Qt::Core KF6::ConfigCore KF6::No
 if(WITH_GLOBAL_NOTIFIER)
     target_compile_definitions(drkonqi-coredump-launcher PRIVATE -DWITH_GLOBAL_NOTIFIER)
 endif()
+if(WITH_DRKONQI_REPORTING)
+    target_compile_definitions(drkonqi-coredump-launcher PRIVATE -DWITH_DRKONQI_REPORTING)
+endif()
 install(TARGETS drkonqi-coredump-launcher DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
 configure_file(drkonqi-coredump-launcher@.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-launcher@.service)

@@ -32,6 +32,14 @@ include(FindPythonModule)
 option(WITH_PYTHON_VENDORING "Python dependency vendoring (cmake will install python dependencies into drkonqi's python tree)" ON)
 option(WITH_GLOBAL_NOTIFIER "Build the global notifier that notifies about all coredumps on the system" ON)
 
+# Please disable it if your distribution does not intend to ship supported versions of KDE software.
+# e.g. if you are a LTS-style distro that only ships security fixes please disable this.
+# Users still get notified about crashes and guided towards reporting them to your bug tracker (via os-release's BUG_REPORT_URL).
+# This prevents users from reporting crashes in outdated software and then getting their bug closed immediately by a bot.
+# https://bugs.kde.org/show_bug.cgi?id=491790
+option(WITH_DRKONQI_REPORTING "Guided UI reporting of crashes via DrKonqi, also Sentry." ON)
+add_feature_info(Reporting WITH_DRKONQI_REPORTING "guided reports to the KDE bugzilla. Disable when shipping older KDE software!")
+
 kde_enable_exceptions()
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Widgets DBus Concurrent Quick)
