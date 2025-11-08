@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1722130 2025-11-06 08:45:53Z scripty $
+# $Id: drkonqi.po 1722277 2025-11-08 01:24:05Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-11-04 07:06+0100\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
+"PO-Revision-Date: 2025-11-07 10:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -356,14 +356,14 @@ msgstr ""
 "znotraj peskovnika Snap."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "Odpravljanje napak pri tem sesutju ni več mogoče."
+msgstr ""
+"Odpravljanje napak pri tem sesutju ni več mogoče. Datoteka z izpisom "
+"pomnilnika manjka."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -378,12 +378,10 @@ msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "Poročanje trenutno ni podprto za aplikacije Flatpak."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Vaša težava je že prijavljena"
+msgstr "Že poročano."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -488,15 +486,13 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Zagon ni uspel"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Sesut vpogledovalnik procesov"
+msgstr "Ni bilo mogoče zagnati pregledovalnika sesutih procesov."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -691,132 +687,132 @@ msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Zapri to pogovorno okno (izgubili boste podatke o sesutju)"
 
-#: main.cpp:154
+#: main.cpp:155
 #, kde-format
 msgid "Crash Handler"
 msgstr "Upravljalnik sesutij"
 
-#: main.cpp:156
+#: main.cpp:157
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Upravljalnik sesutij daje uporabniku povratne informacije, če se je program "
 "sesul."
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000-2018, avtorji DrKonqi-ja"
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:170
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "<Številka> signala, ki je bil ujet"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Ime> programa"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Pot> do izvedljive datoteke"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "<Različica> programa"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "<Naslov> za hrošče, ki naj se uporabi"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Prevedeno <ime> programa"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilino ime izdelka"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "<PID> programa"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Zagonski <ID> programa"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Program je zagnal kdeinit"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Onemogoči poljuben dostop do diska"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program je že bil zagnan znova"
 
-#: main.cpp:184
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Ohrani program zagnan in ustvari povratno sled ob zagonu"
 
-#: main.cpp:186
+#: main.cpp:187
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<ID niti>, v kateri je prišlo do napake"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"

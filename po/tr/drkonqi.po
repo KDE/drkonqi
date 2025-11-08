@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-06 08:07+0000\n"
-"PO-Revision-Date: 2025-11-05 21:55+0300\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
+"PO-Revision-Date: 2025-11-07 19:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -358,14 +358,14 @@ msgstr ""
 "ayıklamak şu anda olanaklı değil."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "Bu çökme için hata ayıklama artık olanaklı değil."
+msgstr ""
+"Bu çökme için hata ayıklama artık olanaklı değil. Çekirdek döküm dosyası "
+"eksik."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "Flatpak uygulamaları için hata bildirme şu anda desteklenmiyor."
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "Halihazırda bildirildi."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -487,15 +487,13 @@ msgstr "Ayrıntılar"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Başlatılamadı"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Çöken Süreçler Görüntüleyicisi"
+msgstr "Çöken Süreçler Görüntüleyicisi başlatılamadı."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -689,132 +687,132 @@ msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
 
-#: main.cpp:154
+#: main.cpp:155
 #, kde-format
 msgid "Crash Handler"
 msgstr "Çökme İşleyicisi"
 
-#: main.cpp:156
+#: main.cpp:157
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Çökme İşleyicisi, bir uygulama çöktüğünde kullanıcının geri bildirimini "
 "iletir."
 
-#: main.cpp:159
+#: main.cpp:160
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000–2018, Dr. Konqi Yazarları"
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:170
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Yakalanan <number> numaralı sinyal"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Uygulamanın <adı>"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Yürütülebilirin <yolu>"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Uygulama <sürümü>"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Kullanılacak hata <adresi>"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Uygulamanın çevrilmiş <adı>"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla ürün adı"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Uygulamanın <süreç numarası>"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Uygulamanın <kimlik numarası>"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Uygulamanın kdeinit tarafından başlatılmış"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Rastgele disk erişimini kapat"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Uygulama zaten başlatılmış"
 
-#: main.cpp:184
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Uygulamayı çalışır durumda tut ve geri izi başlangıçta üret"
 
-#: main.cpp:186
+#: main.cpp:187
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Başarısız iş parçacığının <iş parçaçığı kimliği>"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
