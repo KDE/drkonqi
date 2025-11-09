@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2025-10-27 21:59+0200\n"
+"PO-Revision-Date: 2025-11-08 21:59+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -541,7 +541,7 @@ msgstr "סגירת החלונית הזאת (פרטי הקריסה יאבדו.)"
 #, kde-format
 msgctxt "@action:inmenu 1 is the debugger name"
 msgid "Debug in %1"
-msgstr ""
+msgstr "ניפוי שגיאות ב־%1"
 
 #: main.cpp:112
 #, kde-format
@@ -816,6 +816,12 @@ msgid ""
 "commonly\n"
 "used during interactive and post-mortem debugging.</para>"
 msgstr ""
+"<subtitle>מה זה „ניתוח מהלכים” (backtrace)?</subtitle><para>ניתוח מהלכים "
+"מתאר מה קרה\n"
+"בתוך היישום כשקרס, כדי שהמפתחים יוכלו לאתר איפה התחיל\n"
+"הבלגן. הם עשויים להיראות לך חסרי משמעות, אך הם עשויים להכיל\n"
+"המון מידע שימושי.<nl />ניתוחי מהלכים משמשים בעיקר במהלך ניפוי\n"
+"שגיאות אינטראקטיבי ולאחר תקלה.</para>"
 
 #: qml/DeveloperPage.qml:157
 #, fuzzy
@@ -844,7 +850,6 @@ msgstr ""
 "link>)ולחץ על הכפתור <interface>טען מחדש מידע קריסה</interface>."
 
 #: qml/DeveloperPage.qml:165
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "Please read <link url='%1'>How to create useful crash reports</link> to "
@@ -852,21 +857,18 @@ msgid ""
 "url='%2'>\n"
 "list of files</link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"תוכל להקיש על הלחצן <interface>התקן סמלי דיבוג</interface> כדי להתקין "
-"אוטומטית את חבילות סמלי הדיבאג החסרים. אם שיטה זו אינה עובדת: נא לקרוא את "
-"<link url='%1'>כיצד ליצור דיווחי קריסה יעילים</link> כדי ללמוד איך להוציא "
-"backtrace יעיל; התקן את החבילות הדרושות  (<link url='%2'>רשימת הקבצים</"
-"link>)ולחץ על הכפתור <interface>טען מחדש מידע קריסה</interface>."
+"נא לקרוא <link url='%1'>איך ליצור דוחות קריסה שימושיים</link> כדי ללמוד איך "
+"לקבל ניתוח מהלכים שימושי, להתקין את החבילות הנחוצות (<link url='%2'>\n"
+"רשימת הקבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</interface>."
 
 #: qml/DeveloperPage.qml:177
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>You need to first install the debugger application "
 "(%1) then click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"יש צורך להתקין את חבילת מנפה השגיאות (%1) וללחוץ על כפתור <interface>טען "
-"מחדש מידע קריסה</interface>."
+"<emphasis strong='true'>צריך קודם להתקין את היישום מנפה השגיאות (%1) ואז "
+"ללחוץ על הכפתור <interface>טעינה מחדש</interface>.</emphasis>"
 
 #: qml/DuplicatesLoadingPage.qml:14 qml/DuplicatesPage.qml:14
 msgctxt "@title"
@@ -903,7 +905,7 @@ msgstr "כפול?"
 #: qml/DuplicatesPage.qml:46
 msgctxt "@label"
 msgid "Are you quite certain your crash is a duplicate of this bug report?"
-msgstr ""
+msgstr "האם להערכתך הקריסה שלך היא כפילות של דוח השגיאה הזה?"
 
 #: qml/DuplicatesPage.qml:74
 msgctxt "@action:button"
