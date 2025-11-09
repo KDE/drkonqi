@@ -307,7 +307,7 @@ msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
-msgstr ""
+msgstr "目前无法对在 Flatpak 沙箱中运行的软件的崩溃进行调试。"
 
 #: coredump/gui/Patient.cpp:173
 #, kde-format
@@ -315,7 +315,7 @@ msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
-msgstr ""
+msgstr "目前无法对在 Snap 沙箱中运行的软件的崩溃进行调试。"
 
 #: coredump/gui/Patient.cpp:177
 #, kde-format
@@ -323,25 +323,25 @@ msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr ""
+msgstr "此崩溃已无法进行调试。它的核心转储文件已丢失。"
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "此崩溃已无法进行调试。"
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "目前不支持报告 Flatpak 应用程序的崩溃。"
 
 #: coredump/gui/Patient.cpp:210
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "已经报告。"
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -349,25 +349,25 @@ msgctxt "@info"
 msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
-msgstr ""
+msgstr "本机运行的发行版没有提供程序缺陷报告 URL，请自行向该发行版报告此崩溃。"
 
 #: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap 软件商店"
 
 #: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -385,9 +385,6 @@ msgid "Run Interactive Debugger"
 msgstr "运行交互式调试器"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@action Report the bug on this domain"
-#| msgid "Report on %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "报告到 %1"
@@ -421,25 +418,23 @@ msgstr "概览"
 #, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr ""
+msgstr "应用程序崩溃"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "服务崩溃"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> 遇到了一个致命错误并被关闭。"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "详细信息"
@@ -448,15 +443,13 @@ msgstr "详细信息"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "启动失败"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "崩溃进程查看器"
+msgstr "无法启动崩溃进程查看器"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format

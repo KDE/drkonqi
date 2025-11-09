@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-11-04 14:06+0100\n"
+"PO-Revision-Date: 2025-11-07 10:16+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -378,14 +378,14 @@ msgstr ""
 "un bac à sable sous Snap pour le moment."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "Le débogage n'est plus possible pour ce plantage."
+msgstr ""
+"Le débogage n'est plus possible pour ce plantage. Le fichier de l'état de la "
+"pile est absent."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -402,12 +402,10 @@ msgstr ""
 "pour le moment."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Le problème a déjà été rapporté."
+msgstr "Déjà signalé."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -511,15 +509,13 @@ msgstr "Détails"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Lancement impossible"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Afficheur des plantages de processus"
+msgstr "Impossible de lancer l'afficheur des processus plantés."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
