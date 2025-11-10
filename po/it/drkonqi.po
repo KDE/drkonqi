@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-05-30 08:29+0200\n"
+"PO-Revision-Date: 2025-11-07 09:50+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -335,6 +335,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Al momento è impossibile effettuare il debug per gli arresti anomali del "
+"software eseguito all'interno di una sandbox Flatpak."
 
 #: coredump/gui/Patient.cpp:173
 #, kde-format
@@ -343,6 +345,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Al momento non è possibile effettuare il debug per gli arresti anomali del "
+"software eseguito all'interno di una sandbox Snap."
 
 #: coredump/gui/Patient.cpp:177
 #, kde-format
@@ -351,26 +355,28 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Non è più possibile effettuare il debug per questo arresto anomalo. Manca il "
+"file core dump."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Per questo arresto anomalo non è più possibile effettuare il debug."
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Al momento la creazione di segnalazioni non è supportata per le applicazioni "
+"Flatpak."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Already reported]"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "[Già segnalato]"
+msgstr "Già segnalato."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -379,24 +385,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"La tua distribuzione non ha fornito un URL per la segnalazione dei bug. "
+"Segnalalo alla tua distribuzione."
 
 #: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -414,9 +422,6 @@ msgid "Run Interactive Debugger"
 msgstr "Esegui il debugger interattivo"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Segnala a %1"
@@ -447,30 +452,27 @@ msgid "Overview"
 msgstr "Panoramica"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Riavvia l'applicazione"
+msgstr "Arresto anomalo applicazione"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:104
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Arresto anomalo del servizio"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:107
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
+"<command>%1</command> ha riscontrato un errore grave ed è stato chiuso."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:108
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Dettagli"
@@ -479,15 +481,13 @@ msgstr "Dettagli"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Impossibile avviare"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:115
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visualizzatore processi terminati in modo inatteso"
+msgstr "Impossibile avviare il visore dei processi terminati in modo anomalo."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
