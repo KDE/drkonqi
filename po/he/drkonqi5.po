@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:34+0000\n"
-"PO-Revision-Date: 2025-11-08 21:59+0200\n"
+"PO-Revision-Date: 2025-11-10 14:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -979,14 +979,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "שמירת פרטי הגישה במערכת ניהול הסיסמאות של KDE"
 
 #: qml/LoginPage.qml:92
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -996,10 +988,10 @@ msgid ""
 "<link url='%2'>create one here</link>. Please do not use disposable email "
 "accounts.</note>"
 msgstr ""
-"‏<note>יש צורך בחשבון משתמש ב<link url='%1'>מערכת מעקב הבאגים של KDE</link> "
-"כדי למלא דיווח באג, היות ויש צורך ליצירת קשר עתידית על למנת לקבל מידע נוסף. "
-"אם אין לך חשבון משתמש, תוכל <link url='%2'>להרשם כאן</link>. בבקשה אל תשתמש "
-"בחשבון דוא\"ל חד פעמים.</note>"
+"<note>צריך חשבון משתמש ב<link url='%1'>מערכת מעקב התקלות של KDE</link> כדי "
+"להגיש דוח קריסה, כיוון שיכול להיות שנצטרך ליצור איתך קשר בהמשך ולבקש ממך\n"
+"מידע נוסף. אם אין לך חשבון, אפשר פשוט <link url='%2'>ליצור אחד כאן</link>. "
+"בבקשה לא להשתמש בחשבונות דוא״ל ארעיים.</note>"
 
 #: qml/LoginPage.qml:106
 msgctxt "@action:button"
@@ -1007,18 +999,13 @@ msgid "Login"
 msgstr "כניסה"
 
 #: qml/LoginPage.qml:107
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided username and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided e-"
 "mail address and password."
 msgstr ""
-"השתמש בכפתור זה על מנת להתחבר למערכת מעקב הבאגים של KDE, באמצעות הזנת שם "
-"משתמש וסיסמא."
+"אפשר להשתמש בכפתור הזה כדי להיכנס למערכת מעקב התקלות של KDE באמצעות כתובת "
+"הדוא״ל והסיסמה שסופקו."
 
 #: qml/MainPage.qml:20
 msgctxt "@action"
@@ -1041,7 +1028,6 @@ msgid "Developer Information"
 msgstr "מידע למפתחים"
 
 #: qml/MainPage.qml:63
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1052,9 +1038,12 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "tab.</para>"
 msgstr ""
-"<para>מסייע דיווח הבאגים אינו פעיל בגלל שדו־שיח מסייע הקריסה הותחל במצב בטוח."
-"<nl />תוכל לשלוח את דיווח הבאג ידנית אל %1 (כולל ה־backtrace מלשונית מידע "
-"הפיתוח).</para>"
+"<para>כיוון שהמטפל בשגיאות עצמו כשל, תהליך\n"
+"הדיווח האוטומטי מושבת כדי להפחית את הסיכון\n"
+"לכשל חוזר<nl /><nl />נא, <link url='%1'>לדווח ידנית</link> על השגיאה\n"
+"הזאת למערכת מעקב התקלות של KDE.\n"
+"לא לשכוח לכלול את ניתוח המהלכים\n"
+"מהלשונית <interface>מידע למפתחים</interface>.para>"
 
 #: qml/MainPage.qml:75
 #, fuzzy
@@ -1165,6 +1154,8 @@ msgid ""
 "You may choose to add additional information, but you should only do so if "
 "you have new or requested information."
 msgstr ""
+"אפשר לבחור להוסיף פרטים נוספים, אך כדאי לעשות זאת רק אם יש לך פרטים חדשים או "
+"כאלה שנתבקשו במפורש."
 
 #: qml/PerfectDuplicatePage.qml:60
 msgctxt "@action:button"
