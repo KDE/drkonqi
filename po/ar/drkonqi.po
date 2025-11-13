@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-12 00:45+0000\n"
-"PO-Revision-Date: 2025-11-05 18:34+0400\n"
+"PO-Revision-Date: 2025-11-12 19:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -344,14 +344,12 @@ msgstr ""
 "سناب في الوقت الحالي."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "لم يعد من الممكن تنقيح هذا الانهيار."
+msgstr "لم يعد من الممكن تنقيح هذا الانهيار. ملف تفريغ الذاكرة الأساسي مفقود."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -366,12 +364,10 @@ msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "لا تتوفر ميزة الإبلاغ عن الأخطاء لتطبيقات فلات باك في الوقت الحالي."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "المشكلة التي تصادفها قد أبلغ عنها بالفعل"
+msgstr "مُبلّغ عنها فعلًا"
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -473,15 +469,13 @@ msgstr "التفاصيل"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "فشل في التشغيل"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "عارض العمليات المنهارة"
+msgstr "تعذر تشغيل عارض العمليات المنهارة"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format

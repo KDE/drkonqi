@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-12 00:45+0000\n"
-"PO-Revision-Date: 2025-06-30 16:44+0300\n"
+"PO-Revision-Date: 2025-11-11 18:41+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -333,6 +333,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Šobrīd atkļūdošana nav iespējama „Flatpak“ smilškastē palaistu programmu "
+"avāriju gadījumā."
 
 #: coredump/gui/Patient.cpp:173
 #, kde-format
@@ -341,6 +343,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Šobrīd atkļūdošana nav iespējama „Snap“ smilškastē palaistu programmu "
+"avāriju gadījumā."
 
 #: coredump/gui/Patient.cpp:177
 #, kde-format
@@ -349,26 +353,26 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Šai avārijai atkļūdošana vairs nav pieejama. Trūkst pamatatmiņas izmetes "
+"datnes."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Šai avārijai atkļūdošana vairs nav iespējama."
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "„Flatpak“ programmām ziņošana par kļūdām nav atbalstīta."
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Already reported]"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "[Jau ziņots]"
+msgstr "Jau ziņots."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -377,24 +381,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Jūsu distribūcija nav norādījusi URL adresi, uz kuru sūtīt kļūdu ziņojumus. "
+"Lūdzu, ziņojiet par šo nepilnību distribūcijas veidotājiem."
 
 #: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -412,12 +418,9 @@ msgid "Run Interactive Debugger"
 msgstr "Palaist interaktīvo atkļūdotāju"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info/plain report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Ziņot %1"
+msgstr "Ziņot „%1“ veidotājiem"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -445,30 +448,26 @@ msgid "Overview"
 msgstr "Pārskats"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "Pārstartēt programmu"
+msgstr "Programma avarēja"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Serviss avarēja"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> saskārās ar fatālu kļūdu un tika aizvērts."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Informācija"
@@ -477,15 +476,13 @@ msgstr "Informācija"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Neizdevās palaist"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Avarējušo procesu skatītājs"
+msgstr "Neizdevās palaist avarējušu procesu skatītāju."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
