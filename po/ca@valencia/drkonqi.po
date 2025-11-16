@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-12 00:45+0000\n"
-"PO-Revision-Date: 2025-11-05 09:58+0100\n"
+"PO-Revision-Date: 2025-11-06 10:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -358,14 +358,14 @@ msgstr ""
 "s'executen dins d'un espai aïllat Snap."
 
 #: coredump/gui/Patient.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Debugging is no longer possible for this crash."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr "La depuració ja no és possible per a esta fallada."
+msgstr ""
+"La depuració ja no és possible per a esta fallada. Falta el fitxer de bolcat "
+"del nucli."
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
@@ -383,7 +383,7 @@ msgstr "En este moment no s'admet l'informe per a les aplicacions Flatpak."
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "Ja s'ha informat."
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -487,15 +487,13 @@ msgstr "Detalls"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "No s'ha pogut iniciar"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visor de processos fallats"
+msgstr "No s'ha pogut iniciar el visor de processos fallats."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -1662,9 +1660,3 @@ msgstr "Nom d'usuari de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contrasenya de bugstest.kde.org"
-
-#~ msgctxt "@info"
-#~ msgid "Reporting for KDE software is only available at the time of crash."
-#~ msgstr ""
-#~ "L'informe per al programari KDE només estarà disponible en el moment de "
-#~ "la fallada."
