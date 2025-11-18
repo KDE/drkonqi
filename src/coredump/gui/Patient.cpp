@@ -88,7 +88,19 @@ QStringList Patient::coredumpctlArguments(const QString &command) const
 
 void Patient::launchDebugger()
 {
-    const QString arguments = KShell::joinArgs({u"gdb"_s, u"--core=%1"_s.arg(m_coreFileInfo.filePath()), QString::fromUtf8(m_coredumpExe)});
+    const QString arguments = [this] {
+        switch (m_faultContext.entity) {
+        case FaultContext::Entity::Flatpak:
+            return KShell::joinArgs({u"flatpak-coredumpctl"_s, u"--coredumpctl-matches"_s, "COREDUMP_FILENAME="_L1 + m_origCoreFilename, m_faultContext.name});
+        case FaultContext::Entity::Distro:
+        case FaultContext::Entity::KDE:
+            return KShell::joinArgs({u"gdb"_s, u"--core=%1"_s.arg(m_coreFileInfo.filePath()), QString::fromUtf8(m_coredumpExe)});
+        case FaultContext::Entity::Snap:
+            break;
+        }
+        Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
+        return QString();
+    }();
     auto job = new KTerminalLauncherJob(arguments);
     connect(job, &KJob::result, this, [job] {
         job->deleteLater();
@@ -154,12 +166,12 @@ QString Patient::iconName() const
 bool Patient::canDebug() const
 {
     switch (m_faultContext.entity) {
-    case FaultContext::Entity::Flatpak:
     case FaultContext::Entity::Snap:
         return false;
+    case FaultContext::Entity::Flatpak:
     case FaultContext::Entity::Distro:
     case FaultContext::Entity::KDE:
-        break; // only applicable for non-sandboxed software from us
+        break;
     }
     return m_coreFileInfo.exists();
 }

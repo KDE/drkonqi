@@ -97,6 +97,15 @@ set_package_properties(
     PURPOSE "Required for coredumpd support to work at runtime!"
 )
 
+find_package(flatpak-coredumpctl)
+set_package_properties(
+    flatpak-coredumpctl
+    PROPERTIES
+    TYPE RUNTIME
+    DESCRIPTION "coredumpd CLI wrapper for flatpaks. part of flatpak"
+    PURPOSE "for debugging flatpaks. ONLY skip this if you absolutely cannot run flatpak on your system"
+)
+
 add_subdirectory(src)
 
 # add clang-format target for all our real source files
