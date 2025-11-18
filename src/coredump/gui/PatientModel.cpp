@@ -32,7 +32,6 @@ QVariant PatientModel::data(const QModelIndex &index, int role) const
     if (!hasIndex(index.row(), index.column())) {
         return {};
     }
-    // return QVariant::fromValue((QObject *)0x1);
     QObject *obj = m_objects.at(index.row());
     switch ((ItemRole)role) {
     case ObjectRole:
