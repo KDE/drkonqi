@@ -23,25 +23,25 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-11-10 14:28+0200\n"
+"PO-Revision-Date: 2025-11-18 08:46+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Netanel_h"
+msgstr "Netanel_h,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "netanel@gmx.com"
+msgstr "netanel@gmx.com,kde-l10n-he@kde.org"
 
 #: backtracewidget.cpp:57
 #, kde-format
@@ -824,15 +824,6 @@ msgstr ""
 "שגיאות אינטראקטיבי ולאחר תקלה.</para>"
 
 #: qml/DeveloperPage.qml:157
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "You can click the <interface>Install Debug Symbols</interface> button in "
@@ -843,11 +834,12 @@ msgid ""
 "backtrace; install the needed packages (<link url='%2'> list of files</"
 "link>) and click the <interface>Reload</interface> button."
 msgstr ""
-"תוכל להקיש על הלחצן <interface>התקן סמלי דיבוג</interface> כדי להתקין "
-"אוטומטית את חבילות סמלי הדיבאג החסרים. אם שיטה זו אינה עובדת: נא לקרוא את "
-"<link url='%1'>כיצד ליצור דיווחי קריסה יעילים</link> כדי ללמוד איך להוציא "
-"backtrace יעיל; התקן את החבילות הדרושות  (<link url='%2'>רשימת הקבצים</"
-"link>)ולחץ על הכפתור <interface>טען מחדש מידע קריסה</interface>."
+"אפשר ללחוץ על <interface>התקנת סמלי ניפוי שגיאות</interface> כדי להתקין "
+"אוטומטית את חבילות פרטי ניפוי השגיאות החסרות. אם השיטה הזאת לא עובדת: נא\n"
+"לקרוא את <link url='%1'>איך ליצור דוחות קריסה משמעותיים</link> כדי ללמוד איך "
+"לקבל ניתוחי מהלכים שימושיים, להתקין את החבילות הנחוצות (<link "
+"url='%2'>רשימת\n"
+"קבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</interface>."
 
 #: qml/DeveloperPage.qml:165
 msgctxt "@info/rich"
@@ -935,18 +927,16 @@ msgid "Suggest this crash is related"
 msgstr "הצעת קריסה קשורה"
 
 #: qml/DuplicatesPage.qml:97
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to suggest that\n"
 "                                     the crash you experienced is related to "
 "this bug\n"
 "                                     report"
-msgstr "השתמש בכפתור זה כדי להציע שהקריסה שלך קשורה לדיווח הזה"
+msgstr ""
+"אפשר להשתמש בכפתור הזה כדי להציע\n"
+"                                     שהקריסה שחווית קשורה לתיעוד התקלה\n"
+"                                     הזה"
 
 #: qml/DuplicatesPage.qml:110
 msgctxt "@action:button"
@@ -1046,7 +1036,6 @@ msgstr ""
 "מהלשונית <interface>מידע למפתחים</interface>.para>"
 
 #: qml/MainPage.qml:75
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1054,9 +1043,9 @@ msgid ""
 "You can manually report this bug to <link>%1</link> (including the backtrace "
 "from the <interface>Developer Information</interface> tab.)</para>"
 msgstr ""
-"<para>מסייע דיווח הבאגים אינו פעיל בגלל שדו־שיח מסייע הקריסה הותחל במצב בטוח."
-"<nl />תוכל לשלוח את דיווח הבאג ידנית אל %1 (כולל ה־backtrace מלשונית מידע "
-"הפיתוח).</para>"
+"<para>מסייע הדיווח הושבת כיוון שחלונית המטפל בקריסות הופעלה במצב בטוח.<nl /"
+">אפשר לדווח על התקלה הזאת ידנית דרך <link>%1</link> (כולל ניתוח המהלכים "
+"מהלשונית <interface>מידע למפתחים</interface>.)</para>"
 
 #: qml/MainPage.qml:82
 msgctxt "@info"
@@ -1091,62 +1080,41 @@ msgid "Problem is Already Reported"
 msgstr "הבעיה שלך כבר מתועדת"
 
 #: qml/PerfectDuplicatePage.qml:29
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a duplicate of the <emphasis strong='true'>closed</emphasis> <link "
 "url=\"%2\">Bug %2</link>."
 msgstr ""
-"הקריסה שלך דווחה <a href=\"%1\">כבאג מספר %1</a> שהוא דיווח כפול של <a href="
-"\"%2\">באג מספר %2</a> <strong>שהוא כבר נסגר</strong>."
+"הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא כפילות של "
+"<link url=\"%2\">תקלה %2</link><emphasis strong='true'>שנסגרה</emphasis>."
 
 #: qml/PerfectDuplicatePage.qml:34
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which "
-#| "has been <strong>closed</strong>."
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link> which "
 "has been <emphasis strong='true'>closed</emphasis>."
 msgstr ""
-"הקריסה שלך כבר דווחה בתור <a href=\"%1\">באג מספר %1</a> שהוא כבר "
-"<strong>דווח כנסגר</strong>."
+"הקריסה שלך כבר דווחה בתור <a href=\"%1\">תקלה %1</a> <strong>שנסגרה</strong>."
 
 #: qml/PerfectDuplicatePage.qml:39
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#| "is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>"
 msgctxt "@info"
 msgid ""
 "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
 "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
 "\"%2\">Bug %2</link>"
 msgstr ""
-"הקריסה שלך כבר דווחה בתור <a href=\"%1\">באג מספר %1</a>, שהוא בעצמו "
-"<strong>דיווח כפול</strong> של <a href=\"%2\">באג מספר %2</a>"
+"הקריסה שלך כבר דווחה בתור <link url=\"%1\">תקלה %1</link>, שהיא <emphasis "
+"strong='true'>כפילה</emphasis> של <link url=\"%2\">תקלה %2</link>"
 
 #: qml/PerfectDuplicatePage.qml:43
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Your crash is a <strong>duplicate</strong> and has already been reported "
-#| "as <a href=\"%1\">Bug %1</a>."
 msgctxt "@info"
 msgid ""
 "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has already "
 "been reported as <link url=\"%1\">Bug %2</link>."
 msgstr ""
-"הקריסה שלך היא <strong>דיווח כפול</strong> וכבר דווחה בתור <a href="
-"\"%1\">באג מספר %1</a>."
+"הקריסה שלך היא <emphasis strong='true'>שכפול</emphasis> וכבר דווחה בתור "
+"<link url=\"%1\">תקלה %2</link>."
 
 #: qml/PerfectDuplicatePage.qml:52
 msgctxt "@label"
