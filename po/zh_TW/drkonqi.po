@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-05-29 17:43+0900\n"
+"PO-Revision-Date: 2025-11-20 22:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -323,7 +323,7 @@ msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
-msgstr ""
+msgstr "目前不支援為在 Flatpak 沙盒中執行的應用程式的崩潰進行除錯。"
 
 #: coredump/gui/Patient.cpp:173
 #, kde-format
@@ -331,7 +331,7 @@ msgctxt "@info"
 msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
-msgstr ""
+msgstr "目前不支援為在 Snap 沙盒中執行的應用程式的崩潰進行除錯。"
 
 #: coredump/gui/Patient.cpp:177
 #, kde-format
@@ -339,27 +339,25 @@ msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr ""
+msgstr "無法再為此崩潰進行除錯。缺乏核心傾印檔案。"
 
 #: coredump/gui/Patient.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "無法再為此崩潰進行除錯。"
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "目前不支援為 Flatpak 應用程式進行回報。"
 
 #: coredump/gui/Patient.cpp:210
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "問題已被回報"
+msgstr "已經回報。"
 
 #: coredump/gui/Patient.cpp:215
 #, kde-format
@@ -367,25 +365,25 @@ msgctxt "@info"
 msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
-msgstr ""
+msgstr "您的發行版沒有提供錯誤回報用的網址。請將此問題回報給您的發行版。"
 
 #: coredump/gui/Patient.cpp:257
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:259
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap 商店"
 
 #: coredump/gui/Patient.cpp:261
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -403,9 +401,6 @@ msgid "Run Interactive Debugger"
 msgstr "執行互動式除錯器"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "回報給 %1"
@@ -436,30 +431,26 @@ msgid "Overview"
 msgstr "總覽"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title"
 msgid "Application Crash"
-msgstr "重新啟動應用程式"
+msgstr "應用程式崩潰"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
 #, kde-format
 msgctxt ""
 "@title service refers to a background service such as kwalletd or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "服務崩潰"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:112
 #, kde-kuit-format
 msgctxt "@info"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> 遇到嚴重錯誤而已關閉。"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:113
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "詳細資料"
@@ -468,15 +459,13 @@ msgstr "詳細資料"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "啟動失敗"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "崩潰行程檢視器"
+msgstr "無法啟動崩潰行程檢視器。"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
