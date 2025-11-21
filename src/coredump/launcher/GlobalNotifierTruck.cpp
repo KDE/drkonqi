@@ -103,10 +103,10 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
     auto notification = new KNotification(u"applicationCrash"_s);
 
     if (unit.isApp()) {
-        notification->setTitle(i18nc("@title", "Application Crash", unit.name()));
+        notification->setTitle(i18nc("@title:notification", "Application Crash"));
         notification->setIconName(unit.iconName());
     } else {
-        notification->setTitle(i18nc("@title service refers to a background service such as kwalletd or kded", "Service Crash", unit.name()));
+        notification->setTitle(i18nc("@title:notification service refers to a background service such as kwalletd or kded", "Service Crash"));
     }
 
     notification->setText(xi18nc("@info", "<command>%1</command> has encountered a fatal error and was closed.", unit.name()));
