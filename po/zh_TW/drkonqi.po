@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-22 00:43+0000\n"
 "PO-Revision-Date: 2025-11-20 22:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -305,19 +305,19 @@ msgstr "提供過去崩潰的詳細檢視"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, DrKonqi 作者群"
 
-#: coredump/gui/Patient.cpp:108
+#: coredump/gui/Patient.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "失敗"
 
-#: coredump/gui/Patient.cpp:109
+#: coredump/gui/Patient.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "存取崩潰資料時因不明原因而失敗。"
 
-#: coredump/gui/Patient.cpp:171
+#: coredump/gui/Patient.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -325,7 +325,7 @@ msgid ""
 "sandbox at this time."
 msgstr "目前不支援為在 Flatpak 沙盒中執行的應用程式的崩潰進行除錯。"
 
-#: coredump/gui/Patient.cpp:173
+#: coredump/gui/Patient.cpp:185
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -333,7 +333,7 @@ msgid ""
 "at this time."
 msgstr "目前不支援為在 Snap 沙盒中執行的應用程式的崩潰進行除錯。"
 
-#: coredump/gui/Patient.cpp:177
+#: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -341,25 +341,25 @@ msgid ""
 "missing."
 msgstr "無法再為此崩潰進行除錯。缺乏核心傾印檔案。"
 
-#: coredump/gui/Patient.cpp:181
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "無法再為此崩潰進行除錯。"
 
-#: coredump/gui/Patient.cpp:205
+#: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "目前不支援為 Flatpak 應用程式進行回報。"
 
-#: coredump/gui/Patient.cpp:210
+#: coredump/gui/Patient.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "已經回報。"
 
-#: coredump/gui/Patient.cpp:215
+#: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -367,19 +367,19 @@ msgid ""
 "your distribution."
 msgstr "您的發行版沒有提供錯誤回報用的網址。請將此問題回報給您的發行版。"
 
-#: coredump/gui/Patient.cpp:257
+#: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:259
+#: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap 商店"
 
-#: coredump/gui/Patient.cpp:261
+#: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -431,15 +431,21 @@ msgid "Overview"
 msgstr "總覽"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Application Crash"
+msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr "應用程式崩潰"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@title service refers to a background service such as kwalletd or kded"
+#| msgid "Service Crash"
 msgctxt ""
-"@title service refers to a background service such as kwalletd or kded"
+"@title:notification service refers to a background service such as kwalletd "
+"or kded"
 msgid "Service Crash"
 msgstr "服務崩潰"
 

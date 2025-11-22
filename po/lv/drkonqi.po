@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-22 00:43+0000\n"
 "PO-Revision-Date: 2025-11-11 18:41+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -314,19 +314,19 @@ msgstr "Sniedz sīkāku informāciju par notikušām avārijām"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020—2022, „DrKonqi“ autori"
 
-#: coredump/gui/Patient.cpp:108
+#: coredump/gui/Patient.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Neizdevās"
 
-#: coredump/gui/Patient.cpp:109
+#: coredump/gui/Patient.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "Neizdevās piekļūt avārijas datiem nezināmu iemeslu dēļ."
 
-#: coredump/gui/Patient.cpp:171
+#: coredump/gui/Patient.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 "Šobrīd atkļūdošana nav iespējama „Flatpak“ smilškastē palaistu programmu "
 "avāriju gadījumā."
 
-#: coredump/gui/Patient.cpp:173
+#: coredump/gui/Patient.cpp:185
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 "Šobrīd atkļūdošana nav iespējama „Snap“ smilškastē palaistu programmu "
 "avāriju gadījumā."
 
-#: coredump/gui/Patient.cpp:177
+#: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -356,25 +356,25 @@ msgstr ""
 "Šai avārijai atkļūdošana vairs nav pieejama. Trūkst pamatatmiņas izmetes "
 "datnes."
 
-#: coredump/gui/Patient.cpp:181
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "Šai avārijai atkļūdošana vairs nav iespējama."
 
-#: coredump/gui/Patient.cpp:205
+#: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "„Flatpak“ programmām ziņošana par kļūdām nav atbalstīta."
 
-#: coredump/gui/Patient.cpp:210
+#: coredump/gui/Patient.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "Jau ziņots."
 
-#: coredump/gui/Patient.cpp:215
+#: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -384,19 +384,19 @@ msgstr ""
 "Jūsu distribūcija nav norādījusi URL adresi, uz kuru sūtīt kļūdu ziņojumus. "
 "Lūdzu, ziņojiet par šo nepilnību distribūcijas veidotājiem."
 
-#: coredump/gui/Patient.cpp:257
+#: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:259
+#: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap Store"
 
-#: coredump/gui/Patient.cpp:261
+#: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -448,15 +448,21 @@ msgid "Overview"
 msgstr "Pārskats"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Application Crash"
+msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr "Programma avarēja"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@title service refers to a background service such as kwalletd or kded"
+#| msgid "Service Crash"
 msgctxt ""
-"@title service refers to a background service such as kwalletd or kded"
+"@title:notification service refers to a background service such as kwalletd "
+"or kded"
 msgid "Service Crash"
 msgstr "Serviss avarēja"
 

@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1723009 2025-11-17 12:32:57Z scripty $
+# $Id: drkonqi.po 1723545 2025-11-22 01:25:08Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-22 00:43+0000\n"
 "PO-Revision-Date: 2025-11-09 16:53+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -322,19 +322,19 @@ msgstr "Предоставя подробен изглед от минали с�
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
 
-#: coredump/gui/Patient.cpp:108
+#: coredump/gui/Patient.cpp:120
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Грешка"
 
-#: coredump/gui/Patient.cpp:109
+#: coredump/gui/Patient.cpp:121
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "Неуспешно получаване на достъп до данните за срива."
 
-#: coredump/gui/Patient.cpp:171
+#: coredump/gui/Patient.cpp:183
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -344,7 +344,7 @@ msgstr ""
 "В момента не е възможно отстраняване на грешки при сривове на софтуер, "
 "изпълняван във Flatpak sandbox."
 
-#: coredump/gui/Patient.cpp:173
+#: coredump/gui/Patient.cpp:185
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -354,7 +354,7 @@ msgstr ""
 "В момента не е възможно отстраняване на грешки при сривове на софтуер, "
 "изпълняван в Snap sandbox."
 
-#: coredump/gui/Patient.cpp:177
+#: coredump/gui/Patient.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -364,25 +364,25 @@ msgstr ""
 "Отстраняването на грешки вече не е възможно за този срив. Файлът с "
 "извлечената информация от паметта (core dump) липсва."
 
-#: coredump/gui/Patient.cpp:181
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "Отстраняването на грешки вече не е възможно за този срив."
 
-#: coredump/gui/Patient.cpp:205
+#: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "В момента докладването на грешки не се поддържа за Flatpak приложения."
 
-#: coredump/gui/Patient.cpp:210
+#: coredump/gui/Patient.cpp:222
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "Вече е докладвана."
 
-#: coredump/gui/Patient.cpp:215
+#: coredump/gui/Patient.cpp:227
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -392,19 +392,19 @@ msgstr ""
 "Вашата дистрибуция не е предоставила URL адрес за докладване на грешки. "
 "Моля, докладвайте това на вашата дистрибуция."
 
-#: coredump/gui/Patient.cpp:257
+#: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:259
+#: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap Store"
 
-#: coredump/gui/Patient.cpp:261
+#: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -456,15 +456,21 @@ msgid "Overview"
 msgstr "Преглед"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Application Crash"
+msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr "Срив на приложение"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@title service refers to a background service such as kwalletd or kded"
+#| msgid "Service Crash"
 msgctxt ""
-"@title service refers to a background service such as kwalletd or kded"
+"@title:notification service refers to a background service such as kwalletd "
+"or kded"
 msgid "Service Crash"
 msgstr "Срив на услуга"
 
