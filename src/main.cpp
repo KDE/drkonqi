@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <unistd.h>
 
+#include <QApplication>
 #include <QCommandLineParser>
 #include <QDBusConnection>
 #include <QDBusInterface>

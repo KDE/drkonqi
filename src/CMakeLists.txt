@@ -34,6 +34,7 @@ set(drkonqi_SRCS
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
+    drkonqiwidgetsdialog.cpp
     qmlextensions/platformmodel.cpp
     qmlextensions/reproducibilitymodel.cpp
     qmlextensions/credentialstore.cpp
