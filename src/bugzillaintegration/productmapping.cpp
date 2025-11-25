@@ -188,6 +188,7 @@ void ProductMapping::fallBackToKDE()
     disconnect(m_productInfoErrorConnection);
     m_bugzillaProductOriginal = m_bugzillaProduct;
     m_bugzillaProduct = QStringLiteral("kde");
+    m_bugzillaComponent = QStringLiteral("general");
     m_bugzillaManagerPtr->fetchProductInfo(m_bugzillaProduct);
 
     Q_EMIT resolved();
