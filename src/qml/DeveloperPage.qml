@@ -161,16 +161,41 @@ installed the proper debug symbol packages and you want to obtain a better backt
                 }
             }
 
+            Timer {
+                // Simple update compressor. We push new lines into the pendingLines and every n milliseconds we flush them
+                // to the text area. This prevents excessive UI updates from locking during layout recalculations.
+                id: textUpdateTimer
+
+                property list<string> pendingLines: []
+
+                interval: 500
+                repeat: false
+                running: false
+                onTriggered: traceArea.text += pendingLines.join('')
+
+                function reset() {
+                    pendingLines = []
+                    stop()
+                }
+            }
+
             Connections {
                 id: generatorConnections
                 target: BacktraceGenerator
-                function onNewLine(line) { traceArea.text += line }
+
+                function onNewLine(line) {
+                    textUpdateTimer.pendingLines.push(line)
+                    textUpdateTimer.start() // do not restart, we want to eventually flush the lines
+                }
+
                 function onStateChanged() {
                     console.log(BacktraceGenerator.state)
                     console.log(BacktraceGenerator.Loaded)
 
                     const state = BacktraceGenerator.state
                     page.state = state
+
+                    textUpdateTimer.reset()
 
                     installButton.visible = false
 
