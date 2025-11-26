@@ -185,7 +185,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
                         traceArea.ensureVisible(traceArea.cursorRectangle)
                         traceArea.cursorPosition = traceArea.text.indexOf("[KCrash Handler]")
                         traceArea.ensureVisible(traceArea.cursorRectangle)
-                        trace = traceArea.text // FIXME ensure this doesn't result in a binding
+                        trace = traceArea.text
 
                         if (usefulness != BacktraceParser.ReallyUseful) {
                             if (debugPackageInstaller.canInstallDebugPackages || BacktraceGenerator.supportsSymbolResolution) {
