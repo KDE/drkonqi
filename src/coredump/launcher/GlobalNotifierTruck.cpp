@@ -105,11 +105,17 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
     if (unit.isApp()) {
         notification->setTitle(i18nc("@title:notification", "Application Crash"));
         notification->setIconName(unit.iconName());
+        notification->setText(
+            xi18nc("@info notification text. %1 is a exe name. %2 is either a service name such as firefox or a cgroup name such as org.mozilla.firefox",
+                   "<command>%1</command> (part of <command>%2</command>) has encountered a fatal error and was closed.",
+                   dump.exe,
+                   unit.name()));
     } else {
         notification->setTitle(i18nc("@title:notification service refers to a background service such as kwalletd or kded", "Service Crash"));
+        notification->setText(
+            xi18nc("@info notification text. %1 is a exe name", "<command>%1</command> has encountered a fatal error and was closed.", dump.exe));
     }
 
-    notification->setText(xi18nc("@info", "<command>%1</command> has encountered a fatal error and was closed.", unit.name()));
     auto detailsAction = notification->addAction(i18nc("@action:button show crash details", "Details"));
     connect(detailsAction, &KNotificationAction::activated, notification, [this, unit, loopLocker = QEventLoopLocker()]() {
         auto job = new KIO::CommandLauncherJob(u"drkonqi-coredump-gui"_s, {unit.m_cursor}, this);
