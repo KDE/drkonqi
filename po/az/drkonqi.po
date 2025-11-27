@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2024-06-10 11:52+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -260,7 +260,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Sazlama simvollarının quraşdırılması zamanı xəta"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -572,19 +572,19 @@ msgid "Use this button to restart the crashed application."
 msgstr ""
 "Qəza baş vermiş tətbiqi yenidən başlatmaq üçün bu düymədən istifadə edin."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "Əs&as"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Tərtibatçı Məlumatları"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -592,7 +592,7 @@ msgid ""
 msgstr ""
 "<para>Təəsüf ki, <application>%1</application> gözlənilmədən bağlandı.</para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -608,7 +608,7 @@ msgstr ""
 "<link url='%1'>əl ilə göndər</link>. <interface>Tərtibatçı Məlumatları</"
 "interface> vərəqindən geri izi daxil etməyi unutmayın.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -622,7 +622,7 @@ msgstr ""
 "(<interface>Tərtibatçı Məlumatları</interface> vərəqindən geri iz daxil "
 "edilmiş) əl ilə göndərə bilərsiniz.</para>"
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -640,7 +640,7 @@ msgstr ""
 "daxil olun ki, yenilənmələrin tam tətbiq olunduğuna və heç bir yan təsir "
 "göstərməyəcəyinə əmin olun.</para>"
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -651,7 +651,7 @@ msgstr ""
 "kömək göstərə bilərsizniz.<nl /><link url='%1'>Xəta hesabatı haqqında daha "
 "çox öyrəniny</link></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -661,13 +661,13 @@ msgstr ""
 "<para>Siz bu xəta hesabatını göndərə bilməzsiniz, çünki, <application>%1</"
 "application> tətbiqi xəta hesabatı ünvanını təqdim etmir.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Təfərrüatlar:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -677,138 +677,138 @@ msgstr ""
 "<para>İcra faylı: <application>%1</application> PID: %2 Siqnal: %3 (%4) "
 "Vaxt: %5 %6</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Bu dialoqu bağlamaq (xəta hesabatını itirəcəksiniz)"
 
-#: main.cpp:155
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler"
 msgstr "Qəza işləyicisi"
 
-#: main.cpp:157
+#: main.cpp:158
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Qəza işləyicisi istifadəçiyə baş vermiş qəzanın səbəblərini öyrənməyə imkan "
 "verir"
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Tutulan <number> saylı siqnal"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Proqramın adı <Name>"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "İcra olunan fayla  yol <Path>"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Proqramın versiyası <version>"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "İstifadə olunmaq üçün xəta ünvanı <address>"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Proqramın tərcümə olunmuş adı <name>"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla məhsul adı"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Proqramın <PID>i"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Proqramın başlanğıc <ID> nömrəsi"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Proqram kdeinit tərəfindən başladılmışdlr"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Diskə ixtiyari girişi qadağan etmək"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Proqram artıq yenidən başladılıb"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Proqramı işlək vəziyyətdə saxlamaq və başlanğıcda geri iz yaratmaq"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Uğursuzluğun baş verdiyi əmrlər zəncirinin identifikatoru"
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -896,7 +896,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Tətbiqin sonradan dəyişdirilən qəza ilə əlqəli ola biləcək ayarları"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Kifayət qədər faydalı deyil"
@@ -989,7 +989,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Təkrarlamaq"
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1019,7 +1019,7 @@ msgstr ""
 "siyahısı</link>) və <interface>Yeniləmək</interface> düyməsinə vuraraq "
 "yenidən cəhd edin."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1039,7 +1039,7 @@ msgstr ""
 "lazımi paketləri quraşdırın (<link url='%2'>faylların siyahısı</link>) və "
 "<interface>Yeniləmək</interface> düyməsinə vurun."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1053,7 +1053,7 @@ msgstr ""
 "Siz <interface>Yeniləmək</interface> düyməsinə vuraraq geri iz yaradılmasına "
 "yenidən cəhd edə bilərsiniz."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1068,7 +1068,7 @@ msgstr ""
 "<emphasis strong='true'>Siz öncə sazlama tətbiqini (%1) quraşdırmanız "
 "lazımdır sonra <interface>Yeniləmək</interface> düyməsini vurun.</emphasis>"
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

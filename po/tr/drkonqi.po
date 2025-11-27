@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2025-11-22 18:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -271,7 +271,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -575,19 +575,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Çöken uygulamayı yeniden başlatmak için bu düğmeyi kullanın."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Genel"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Geliştirici Bilgisi"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -596,7 +596,7 @@ msgstr ""
 "<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
 "biçimde kapandı.</para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -612,7 +612,7 @@ msgstr ""
 "rapor edin</link>. <interface>Geliştirici Bilgileri</interface> sekmesindeki "
 "geri izi eklemeyi unutmayın.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -626,7 +626,7 @@ msgstr ""
 "(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
 "birlikte) bildirebilirsiniz.</para>"
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -645,7 +645,7 @@ msgstr ""
 "için oturumu kapatıp yeniden açmak her zaman iyi bir fikirdir ve bir yan "
 "etkisi yoktur.</para>"
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -656,7 +656,7 @@ msgstr ""
 "olabilirsiniz.<nl /><link url='%1'>Hata raporlaması hakkında daha fazla "
 "bilgi edinin.</link></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -666,13 +666,13 @@ msgstr ""
 "<para><application>%1</application> uygulaması herhangi bir hata bildirim "
 "adresi sağlamadığından, bu uygulama için hata bildiremezsiniz.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Ayrıntılar:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -682,138 +682,138 @@ msgstr ""
 "<para>Yürütülebilir: <application>%1</application> Süreç Kimliği: %2 Sinyal: "
 "%3 (%4) Zaman: %5 %6</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
 
-#: main.cpp:155
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler"
 msgstr "Çökme İşleyicisi"
 
-#: main.cpp:157
+#: main.cpp:158
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Çökme İşleyicisi, bir uygulama çöktüğünde kullanıcının geri bildirimini "
 "iletir."
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000–2018, Dr. Konqi Yazarları"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Yakalanan <number> numaralı sinyal"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Uygulamanın <adı>"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Yürütülebilirin <yolu>"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Uygulama <sürümü>"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Kullanılacak hata <adresi>"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Uygulamanın çevrilmiş <adı>"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla ürün adı"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Uygulamanın <süreç numarası>"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Uygulamanın <kimlik numarası>"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Uygulamanın kdeinit tarafından başlatılmış"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Rastgele disk erişimini kapat"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Uygulama zaten başlatılmış"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Uygulamayı çalışır durumda tut ve geri izi başlangıçta üret"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Başarısız iş parçacığının <iş parçaçığı kimliği>"
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -894,7 +894,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "İlgili olabilecek özelleştirilmiş uygulama ayarları"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Yeteri Kadar Kullanışlı Değil"
@@ -980,7 +980,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yeniden Dene"
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -998,7 +998,7 @@ msgstr ""
 "gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
 "<interface>Yeniden Yükle</interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -1011,7 +1011,7 @@ msgstr ""
 "paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve\n"
 "<interface>Yeniden Yükle</interface> düğmesine basın."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -1020,7 +1020,7 @@ msgstr ""
 "<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
 "üretmeyi deneyin."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -1029,7 +1029,7 @@ msgstr ""
 "<emphasis strong='true'>Öncelikle hata ayıklama uygulamasını kurun (%1) ve "
 "<interface>Yeniden Yükle</interface> düğmesine basın.</emphasis>"
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "

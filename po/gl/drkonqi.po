@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2025-06-21 12:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -271,7 +271,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Houbo un erro durante a instalación dos símbolos de depuración"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -583,19 +583,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use este botón para reiniciar a aplicación que quebrou."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Xeral"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Información para o equipo de &desenvolvemento"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -604,7 +604,7 @@ msgstr ""
 "<para>Sentímolo, <application>%1</application> pechouse inesperadamente.</"
 "para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -620,7 +620,7 @@ msgstr ""
 "seguimento de incidencias de KDE. Non esqueza incluír o trazado inverso da "
 "lapela de información para o equipo desenvolvedor.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -634,7 +634,7 @@ msgstr ""
 "fallo a %1 (incluíndo o trazado inverso da lapela de <interface>Información "
 "para o equipo desenvolvedor</interface>)</para>"
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -652,7 +652,7 @@ msgstr ""
 "asegurarse de que a actualización se aplica completamente e non causa ningún "
 "efecto secundario.</para>"
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -663,7 +663,7 @@ msgstr ""
 "erro.<nl /><link url='%1'>Aprenda máis sobre como informar de fallos.</"
 "link></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -673,13 +673,13 @@ msgstr ""
 "<para>Non pode comunicar este erro porque <application>%1</application> non "
 "fornece ningún enderezo de informe de fallos.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Detalles:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -689,138 +689,138 @@ msgstr ""
 "<para>Executábel: <application>%1</application> PID: %2 Sinal: %3 (%4) "
 "Duración: %5 %6</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Pechar este diálogo (perderá a información da quebra)."
 
-#: main.cpp:155
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler"
 msgstr "Xestor de quebras"
 
-#: main.cpp:157
+#: main.cpp:158
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "O xestor de quebras dálle información á persoa usuaria cando un programa "
 "quebra."
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000-2018 Persoas autoras de DrKonqi"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "O <número> do sinal que se atrapou"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "O <Nome> do programa"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "A <Ruta> ao executábel"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "A <versión> do programa"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "O <enderezo> de fallo para usar"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "O <nome> traducido do programa"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Nome do produto en Bugzilla"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "O <PID> do programa"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "O <ID> de inicio do programa"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "kdeinit iniciou o programa."
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Desactivar o acceso arbitrario ao disco"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "O programa xa se reiniciou."
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Manter o programa en execución e xerar o trazado inverso no inicio"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "O <identificador de fío> do fío que falla"
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -909,7 +909,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Opcións personalizadas da aplicación que puideren estaren relacionadas"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Non é útil dabondo"
@@ -1002,7 +1002,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Intentalo de novo"
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1030,7 +1030,7 @@ msgstr ""
 "instale os paquetes que precise (<link url='%2'>lista de ficheiros</link>)e "
 "prema o botón <interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1050,7 +1050,7 @@ msgstr ""
 "url='%2'>lista de ficheiros</link>) e prema o botón <interface>Cargar de "
 "novo</interface>."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1064,7 +1064,7 @@ msgstr ""
 "Pode intentar xerar de novo o trazado inverso premendo o botón "
 "<interface>Cargar de novo</interface>."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1079,7 +1079,7 @@ msgstr ""
 "<emphasis strong='true'>Debe instalar a aplicación de depuración (%1) e "
 "premer o botón <interface>Cargar de novo</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2025-11-22 15:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -273,7 +273,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Помилка під час спроби встановлення символів для налагоджування"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -586,19 +586,19 @@ msgstr ""
 "Натисніть цю кнопку, щоб перезапустити програму, що аварійно завершила "
 "роботу."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Загальне"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Від&омості для розробника"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 "<para>Вибачте, але програма <application>%1</application> завершила роботу у "
 "аварійному режимі.</para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -624,7 +624,7 @@ msgstr ""
 "вадами у KDE. Не забудьте додати до звіту дані зворотного трасування, "
 "наведені на вкладці відомостей для розробників.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -638,7 +638,7 @@ msgstr ""
 "повідомити про цю ваду вручну до %1 (додавши до звіту зворотне трасування з "
 "вкладки «Відомості для розробника»).</para>"
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -657,7 +657,7 @@ msgstr ""
 "щоб забезпечити повне застосування оновлення без будь-яких побіжних ефектів."
 "</para>"
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -668,7 +668,7 @@ msgstr ""
 "надсиланням звіту щодо цієї помилки.<nl /><link url='%1'>Дізнатися більше "
 "про звітування про вади.</link></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -679,13 +679,13 @@ msgstr ""
 "<application>%1</application> не передбачено адреси для звітування про вади."
 "</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Подробиці:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -695,138 +695,138 @@ msgstr ""
 "<para>Виконуваний файл: <application>%1</application> PID: %2 Сигнал: %3 "
 "(%4) Час: %5 %6</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Закрити це вікно (ви втратите всі дані щодо аварійного завершення)."
 
-#: main.cpp:155
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler"
 msgstr "Обробник аварій"
 
-#: main.cpp:157
+#: main.cpp:158
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Аналізатор аварій надсилає звіт користувача, якщо якась з програм завершила "
 "роботу у аварійному режимі.завершила роботу у аварійному режимі."
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© Розробники DrKonqi, 2000–2018"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Номер сигналу, який було визначено"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Назва програми"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Шлях до програми"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Версія програми"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Адреса запису помилки, яким слід скористатися"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Перекладена назва програми"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Назва продукту у Bugzilla"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "PID програми"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Ідентифікатор запуску програми"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Програму було запущено з kdeinit"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Заборонити довільний доступ до диска"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Програму вже було перезапущено"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Не зупиняти програму і створити зворотне трасування під час запуску"
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Ідентифікатор помилкової гілки виконання програми"
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -912,7 +912,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Нетипові параметри програми, які можуть бути причиною аварії"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Недостатньо корисні"
@@ -998,7 +998,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторити"
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -1017,7 +1017,7 @@ msgstr ""
 "встановлення потрібних пакунків (<link url='%2'>список файлів</link>) "
 "натисніть кнопку <interface>Перезавантажити</interface>."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -1030,7 +1030,7 @@ msgstr ""
 "встановлення потрібних пакунків(<link url='%2'>список файлів</link>) "
 "натисніть кнопку <interface>Перезавантажити</interface>."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -1039,7 +1039,7 @@ msgstr ""
 "Спробуйте повторно створити зворотне трасування натисканням кнопки "
 "<interface>Перезавантажити</interface>."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -1048,7 +1048,7 @@ msgstr ""
 "<emphasis strong='true'>Встановіть програму для пошуку вад (%1) і натиснути "
 "кнопку <interface>Перезавантажити</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "

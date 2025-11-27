@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -265,7 +265,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Earráid agus na siombailí dífhabhtaithe á suiteáil"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -587,19 +587,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Úsáid an cnaipe seo chun an feidhmchlár a thuairteáil a atosú."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Ginearálta"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&Eolas le haghaidh Forbróirí"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -608,7 +608,7 @@ msgstr ""
 "<para>Tá brón orainn, dhún <application>%1</application> gan súil leis.</"
 "para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -631,7 +631,7 @@ msgstr ""
 "táirge \"drkonqi\" ag %1. Ná déan dearmad an cúl-lorg ón gcluaisín 'Eolas le "
 "haghaidh Forbróirí'.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -650,7 +650,7 @@ msgstr ""
 "bhfabht seo de láimh ag %1 (an cúl-lorg ón gcluaisín 'Eolas le haghaidh "
 "Forbróirí' san áireamh.)</para>"
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -662,7 +662,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -680,7 +680,7 @@ msgstr ""
 "fhabhtanna.</link></para><para><note>Tá cead agat an dialóg seo a dhúnadh "
 "mura mian leat tuairisc a dhéanamh ar an bhfabht seo.</note></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -694,13 +694,13 @@ msgstr ""
 "<para>Ní féidir leat tuairisc a dhéanamh ar an earráid seo, toisc nach "
 "soláthraíonn an feidhmchlár seoladh ríomhphoist le haghaidh fabhtanna.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Mionsonraí:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -714,20 +714,20 @@ msgstr ""
 "<para>Clár inrite: <application>%1</application> Aitheantas an Phróisis: "
 "<numid>%2</numid> Comhartha: %3 (%4)</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr ""
 "Dún an dialóg seo (caillfidh tú sonraí a bhaineann leis an tuairteáil.)"
 
-#: main.cpp:155
+#: main.cpp:156
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "An Láimhseálaí Tuairteála KDE"
 
-#: main.cpp:157
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -736,37 +736,37 @@ msgstr ""
 "Tugann an láimhseálaí tuairteála KDE aiseolas don úsáideoir nuair a "
 "thuairteálann feidhmchlár."
 
-#: main.cpp:160
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000-2009, Údair DrKonqi"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -774,7 +774,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Uimhir an chomhartha a fuarthas"
 
-#: main.cpp:172
+#: main.cpp:173
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -782,7 +782,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Ainm an bhogearra"
 
-#: main.cpp:173
+#: main.cpp:174
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -790,7 +790,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Conair go dtí an comhad inrite"
 
-#: main.cpp:174
+#: main.cpp:175
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -798,7 +798,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Leagan an ríomhchláir"
 
-#: main.cpp:175
+#: main.cpp:176
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -806,7 +806,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Seoladh fabht le húsáid"
 
-#: main.cpp:176
+#: main.cpp:177
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -814,13 +814,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Ainm aistrithe an ríomhchláir"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:178
+#: main.cpp:179
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -828,7 +828,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Aitheantas phróiseas an chláir"
 
-#: main.cpp:179
+#: main.cpp:180
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -836,32 +836,32 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Aitheantas tosaigh an ríomhchláir"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Bhí an clár tosaithe ag kdeinit"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Díchumasaigh rochtain shaor ar an diosca"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Atosaíodh an feidhmchlár cheana"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 "Coinnigh an feidhmchlár ar siúl agus cruthaigh an cúl-lorg ag am tosaithe"
 
-#: main.cpp:187
+#: main.cpp:188
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -869,7 +869,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Aitheantas an shnáithe a theip"
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1000,7 +1000,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Socruithe feidhmchláir a d'fhéadfadh a bheith ábhartha"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -1110,7 +1110,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Atriail..."
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1138,7 +1138,7 @@ msgstr ""
 "url='%2'>liosta comhad</link>) agus cliceáil an cnaipe "
 "<interface>Athluchtaigh</interface>."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1158,7 +1158,7 @@ msgstr ""
 "dífhabhtaithe (<link url='%2'>liosta comhad</link>) agus cliceáil an cnaipe "
 "<interface>Athluchtaigh</interface>."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1172,7 +1172,7 @@ msgstr ""
 "B'fhéidir leat an cúl-lorg a athghiniúint tríd an gcnaipe "
 "<interface>Athluchtaigh</interface> a chliceáil."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1186,7 +1186,7 @@ msgstr ""
 "Caithfidh tú an dífhabhtóir (%1) a shuiteáil agus an cnaipe "
 "<interface>Athluchtaigh</interface> a chliceáil."
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

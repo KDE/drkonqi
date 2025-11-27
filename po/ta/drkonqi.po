@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2025-04-13 17:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -243,7 +243,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "பிழைநீக்க குறியீடுகளை நிறுவுவதில் சிக்கல்"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -550,19 +550,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "முறிவடைந்த செயலியை மீள்துவக்க இப்பட்டனைப் பயன்படுத்தலாம்"
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&பொதுவானவை"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "&நிரலாளர்களின் விவரங்கள்"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -571,7 +571,7 @@ msgstr ""
 "<para>மன்னிக்கவும், <application>%1</application> எதிர்பாராத வித‍த்தில் முறிவடைந்த‍து."
 "</para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -586,7 +586,7 @@ msgstr ""
 "url='%1'>கைமுறையாக சமர்ப்பிக்கவும்</link>. <interface>நிரலாளர்களுக்கான விவரங்கள்</"
 "interface> எனும் கீற்றிலுள்ள விவரங்களை உங்கள் பிழையறிக்கையில் சேர்க்கவும்.</para>"
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -596,7 +596,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -608,7 +608,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -618,7 +618,7 @@ msgstr ""
 "<para>இச்சிக்கலை தெரிவிப்பதன் மூலம் கே.டீ.யீ. மென்பொருட்களை மேம்படுத்த நீங்கள் உதவலாம்.<nl /"
 "><link url='%1'>பிழையறிக்கைகளைப் பற்றிய மேலும் விவரங்கள்.</link></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -628,13 +628,13 @@ msgstr ""
 "<para><application>%1</application> பிழையறிக்கைகளுக்கான முகவரிகளை வழங்காத‍தால் "
 "இச்சிக்கலைத் தெரிவிக்க முடியாது.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "விவரங்கள்:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, kde-kuit-format
 msgctxt "@info Note the time information is divided into date and time parts"
 msgid ""
@@ -644,137 +644,137 @@ msgstr ""
 "<para>நிரல்: <application>%1</application> பணியெண்: %2 சமிக்ஞை: %3 (%4) நேரம்: "
 "%5 %6</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "இச்சாளரத்தை மூடும் (முறிவு குறித்த விவரங்களை இழப்பீர்கள்)"
 
-#: main.cpp:155
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler"
 msgstr "முறிவுக் கையாளி"
 
-#: main.cpp:157
+#: main.cpp:158
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "நிரலொன்று முறிவடைகையில், முறிவுக் கையாளி பயனருக்கு அதுபற்றிய விவரங்களைக் காட்டும்."
 
-#: main.cpp:160
+#: main.cpp:161
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, DrKonqi நிரலாளர்கள்"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr ""
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr ""
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr ""
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr ""
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "நாங்கள் பெற்ற சைகையின் எண் (<number>)"
 
-#: main.cpp:172
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "நிரலின் பெயர் (<Name>)"
 
-#: main.cpp:173
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "செயலிக்கான பாதை (<Path>)"
 
-#: main.cpp:174
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "நிரலின் பதிப்பு (<version>)"
 
-#: main.cpp:175
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "பிழைதெரிவிப்பு முகவரி (<address>)"
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "மொழிபெயர்க்கபட்டுள்ள நிரலின் பெயர் (<name>)"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "நிரலின் செயலெண் (<PID>)"
 
-#: main.cpp:179
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "நிரலின் துவக்க எண் (<ID>)"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "இந்நிரல் kdeinit ஆல் துவக்கப்பட்டது"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "கட்டுப்பாடற்ற வட்டு அணுகலை முடக்கு"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "இந்நிரல் ஏற்கனவே மீள்துவக்கப்பட்டுள்ளது"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -853,7 +853,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "தொடர்புடையவையாய் இருக்கக்கூடிய இச்செயலியின் தனிப்பட்ட அமைப்புகள்"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "இதனால் எந்த பயனும் இல்லை"
@@ -932,7 +932,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -944,7 +944,7 @@ msgid ""
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -953,7 +953,7 @@ msgid ""
 "interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -962,7 +962,7 @@ msgstr ""
 "<interface>புதுப்பி</interface> பட்டனை அழுத்தி முறிவு விவரங்களை மறுபடியும் "
 "சேகரிக்க முயற்சிக்கலாம்."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
@@ -971,7 +971,7 @@ msgstr ""
 "<emphasis strong='true'>பிழைநீக்க நிரலை (%1) நிறுவி <interface>மீளேற்று</"
 "interface> எனும் பட்டனை அழுத்த வேண்டும்.</emphasis>"
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""

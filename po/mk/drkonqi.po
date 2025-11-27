@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:43+0000\n"
+"POT-Creation-Date: 2025-11-27 00:44+0000\n"
 "PO-Revision-Date: 2010-01-29 22:14+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -291,7 +291,7 @@ msgid "Error during the installation of debug symbols"
 msgstr "Грешка при инсталирањето на симболите за барање грешки"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:240
+#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
 #, kde-format
 msgid ""
 "The packages containing debug information for the following application and "
@@ -614,19 +614,19 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Со ова копче се рестартира паднатата апликација."
 
-#: drkonqidialog.cpp:126
+#: drkonqiwidgetsdialog.cpp:56
 #, kde-format
 msgctxt "@title:tab general information"
 msgid "&General"
 msgstr "&Општо"
 
-#: drkonqidialog.cpp:130
+#: drkonqiwidgetsdialog.cpp:60
 #, kde-format
 msgctxt "@title:tab"
 msgid "&Developer Information"
 msgstr "Инфор&мации за развивачот"
 
-#: drkonqidialog.cpp:165
+#: drkonqiwidgetsdialog.cpp:95
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -635,7 +635,7 @@ msgstr ""
 "<para>Се извинуваме, <application>%1</application> се затвори неочекувано.</"
 "para>"
 
-#: drkonqidialog.cpp:173
+#: drkonqiwidgetsdialog.cpp:103
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -646,7 +646,7 @@ msgid ""
 "Information</interface> tab.</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:183
+#: drkonqiwidgetsdialog.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -656,7 +656,7 @@ msgid ""
 "interface> tab.)</para>"
 msgstr ""
 
-#: drkonqidialog.cpp:192
+#: drkonqiwidgetsdialog.cpp:122
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -668,7 +668,7 @@ msgid ""
 "para>"
 msgstr ""
 
-#: drkonqidialog.cpp:201 qml/main.qml:64
+#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -686,7 +686,7 @@ msgstr ""
 "известувањето за грешки.</link></para><para><note>Слободно може да го "
 "затворите дијалогов ако не сакате да известите за грешката.</note></para>"
 
-#: drkonqidialog.cpp:208 qml/main.qml:26
+#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -700,13 +700,13 @@ msgstr ""
 "<para>Не може да известите за оваа грешка бидејќи за апликацијата нема "
 "адреса за известување на грешки.</para>"
 
-#: drkonqidialog.cpp:216
+#: drkonqiwidgetsdialog.cpp:146
 #, kde-format
 msgctxt "@label"
 msgid "Details:"
 msgstr "Детали:"
 
-#: drkonqidialog.cpp:220
+#: drkonqiwidgetsdialog.cpp:150
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -720,19 +720,19 @@ msgstr ""
 "<para>Извршна: <application>%1</application> PID: <numid>%2</numid> Сигнал: "
 "%3 (%4)</para>"
 
-#: drkonqidialog.cpp:249
+#: drkonqiwidgetsdialog.cpp:179
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Го затвора дијалогот (ќе ги загубите информациите за падот.)"
 
-#: main.cpp:155
+#: main.cpp:156
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE Ракувач со падови"
 
-#: main.cpp:157
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
@@ -741,37 +741,37 @@ msgstr ""
 "Ракувачот со падови од KDE дава повратна информација до корисникот ако "
 "некоја програма паднала."
 
-#: main.cpp:160
+#: main.cpp:161
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2009, авторите на DrKonqi"
 
-#: main.cpp:161
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:162
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:163
+#: main.cpp:164
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:164
+#: main.cpp:165
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:171
+#: main.cpp:172
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -779,7 +779,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Фатениот број на сигнал"
 
-#: main.cpp:172
+#: main.cpp:173
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -787,7 +787,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Името на програмата"
 
-#: main.cpp:173
+#: main.cpp:174
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -795,7 +795,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "Патека до извршната датотека"
 
-#: main.cpp:174
+#: main.cpp:175
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -803,7 +803,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Верзијата на програмата"
 
-#: main.cpp:175
+#: main.cpp:176
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -811,7 +811,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Адреса за пријавување грешки"
 
-#: main.cpp:176
+#: main.cpp:177
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -819,13 +819,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Преведеното име на програмата"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:178
+#: main.cpp:179
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The PID of the program"
@@ -833,7 +833,7 @@ msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "PID на програмата"
 
-#: main.cpp:179
+#: main.cpp:180
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -841,37 +841,37 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Стартна ID на програмата"
 
-#: main.cpp:180
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Програмата е стартувана од kdeinit"
 
-#: main.cpp:181
+#: main.cpp:182
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Оневозможи произволен пристап до дискот"
 
-#: main.cpp:182
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Програмата беќе беше рестартирана"
 
-#: main.cpp:185
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:187
+#: main.cpp:188
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:188
+#: main.cpp:189
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -979,7 +979,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:233
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -1082,7 +1082,7 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторно..."
 
-#: qml/DeveloperPage.qml:193
+#: qml/DeveloperPage.qml:218
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1109,7 +1109,7 @@ msgstr ""
 "корисна трага. Откако ќе ги инсталирате потребните пакети, кликнете на "
 "копчето <interface>Превчитај инфо за падот</interface>."
 
-#: qml/DeveloperPage.qml:201
+#: qml/DeveloperPage.qml:226
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1133,7 +1133,7 @@ msgstr ""
 "корисна трага. Откако ќе ги инсталирате потребните пакети, кликнете на "
 "копчето <interface>Превчитај инфо за падот</interface>."
 
-#: qml/DeveloperPage.qml:208
+#: qml/DeveloperPage.qml:233
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1147,7 +1147,7 @@ msgstr ""
 "Може да се обидете повторно да ја генерирате трагата со кликање на копчето "
 "<interface>Превчитај инфо за падот</interface>."
 
-#: qml/DeveloperPage.qml:212
+#: qml/DeveloperPage.qml:237
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1161,7 +1161,7 @@ msgstr ""
 "Треба да го инсталирате пакетот за откривање грешки (%1) и да кликнете на "
 "копчето <interface>Превчитај инфо за падот</interface>."
 
-#: qml/DeveloperPage.qml:216
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
