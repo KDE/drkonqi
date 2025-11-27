@@ -623,7 +623,7 @@ def resolve_modules():
     try:
         gdb.Corefile
         gdb_has_corefile_support = True
-    except NameError:
+    except (NameError, AttributeError):
         pass
 
     if gdb_has_corefile_support:
