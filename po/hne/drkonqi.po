@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2009-01-21 18:12+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -408,7 +408,17 @@ msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr ""
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:109
+#: coredump/launcher/GlobalNotifierTruck.cpp:110
+#, kde-kuit-format
+msgctxt ""
+"@info notification text. %1 is a exe name. %2 is either a service name such "
+"as firefox or a cgroup name such as org.mozilla.firefox"
+msgid ""
+"<command>%1</command> (part of <command>%2</command>) has encountered a "
+"fatal error and was closed."
+msgstr ""
+
+#: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
 msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
@@ -416,26 +426,26 @@ msgctxt ""
 msgid "Service Crash"
 msgstr ""
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:112
+#: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
-msgctxt "@info"
+msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:113
+#: coredump/launcher/GlobalNotifierTruck.cpp:119
 #, fuzzy, kde-format
 #| msgid "Show details"
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "विवरन देखाव"
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:119
+#: coredump/launcher/GlobalNotifierTruck.cpp:125
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
 msgstr ""
 
-#: coredump/launcher/GlobalNotifierTruck.cpp:120
+#: coredump/launcher/GlobalNotifierTruck.cpp:126
 #, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
