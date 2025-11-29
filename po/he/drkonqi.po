@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-23 08:23+0200\n"
+"PO-Revision-Date: 2025-11-28 23:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -446,16 +446,15 @@ msgid "Application Crash"
 msgstr "קריסת יישום"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt ""
 "@info notification text. %1 is a exe name. %2 is either a service name such "
 "as firefox or a cgroup name such as org.mozilla.firefox"
 msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
-msgstr "<command>%1</command> נתקל בשגיאה חמורה ונסגר."
+msgstr ""
+"<command>%1</command> (חלק מ־<command>%2</command>) נתקל בשגיאה חמורה ונסגר."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -466,9 +465,7 @@ msgid "Service Crash"
 msgstr "קריסת שירות"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> נתקל בשגיאה חמורה ונסגר."
