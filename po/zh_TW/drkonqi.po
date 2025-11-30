@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-20 22:19+0900\n"
+"PO-Revision-Date: 2025-11-29 17:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -431,30 +431,24 @@ msgid "Overview"
 msgstr "總覽"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Application Crash"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr "應用程式崩潰"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt ""
 "@info notification text. %1 is a exe name. %2 is either a service name such "
 "as firefox or a cgroup name such as org.mozilla.firefox"
 msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
-msgstr "<command>%1</command> 遇到嚴重錯誤而已關閉。"
+msgstr ""
+"<command>%1</command>（<command>%2</command> 的一部分）遇到嚴重錯誤而已關閉。"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@title service refers to a background service such as kwalletd or kded"
-#| msgid "Service Crash"
+#, kde-format
 msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
@@ -462,9 +456,7 @@ msgid "Service Crash"
 msgstr "服務崩潰"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> 遇到嚴重錯誤而已關閉。"
