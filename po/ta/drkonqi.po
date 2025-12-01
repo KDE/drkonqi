@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-04-13 17:42+0530\n"
+"PO-Revision-Date: 2025-11-30 14:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -346,12 +346,10 @@ msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "இப்பிழை ஏற்கனவே தெரிவிக்கப்பட்டுள்ளது"
+msgstr "ஏற்கனவே தெரிவிக்கப்பட்டுள்ளது."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -360,24 +358,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"உங்கள் இயங்குதளம், பிழையறிக்கைகளுக்கான முகவரியை வழங்கவில்லை. இதை உங்கள் இயங்குதள "
+"வழங்குநர்களிடம் தெரிவிக்கவும்."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "ஃபலாட்பாக்"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "ஸ்னாப் கிடங்கு"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "கே.டீ.யீ."
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -395,12 +395,9 @@ msgid "Run Interactive Debugger"
 msgstr "இடைவினை பிழைநீக்கியை இயக்கு"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@action Report the bug on this domain"
-#| msgid "Report on %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "%1 தனில் தெரிவி"
+msgstr "%1-க்கு தெரிவி"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -428,12 +425,10 @@ msgid "Overview"
 msgstr "மேலோட்டம்"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "செயலியை மீள்துவக்கு"
+msgstr "செயலி முறிவு"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -444,6 +439,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (<command>%2</command> தனின் பாகம்) சிக்கலை எதிர்கொண்டதால் "
+"முறிவடைந்தது."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -451,18 +448,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "சேவை முறிவு"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> சிக்கலை எதிர்கொண்டதால் முறிவடைந்தது."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "விவரங்கள்"
@@ -471,27 +466,25 @@ msgstr "விவரங்கள்"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "துவக்குவது தோல்வியடைந்தது"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "முறிவடைந்த பணிகளுக்கான காட்டி"
+msgstr "முறிவடைந்த பணிகளுக்கான காட்டியைது திறக்க முடியவில்லை."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "GDB"
 
 #: debugger.cpp:52
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -1274,9 +1267,6 @@ msgid "Distribution method:"
 msgstr "நிறுவிய விதம்:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Loading..."
 msgctxt "@item:inlistbox placeholder while loading"
 msgid "Loading…"
 msgstr "ஏற்றப்படுகிறது..."
