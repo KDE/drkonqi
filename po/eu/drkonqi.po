@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-05-29 21:30+0200\n"
+"PO-Revision-Date: 2025-12-07 21:47+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -340,6 +340,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Oraingoz ezin dira araztu Flatpak hondar-kaxa baten barruan exekutatzen "
+"diren softwareen kraskadurak."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -348,6 +350,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Oraingoz ezin dira araztu Snap hondar-kaxa baten barruan exekutatzen diren "
+"softwareen kraskadurak."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -356,26 +360,26 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Kraskadura honen arazketa jada ezin da egin. Egoera iraulketa fitxategia "
+"falta delako."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Kraskadura honen arazketa jada ezin da egin."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Oraingoz ez da onartzen Flatpak aplikazioetarako txostenak egitea."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@info/plain bug resolution"
-#| msgid "[Already reported]"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "[Dagoeneko txostenduta]"
+msgstr "Dagoeneko jakinarazita."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -384,24 +388,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Zure banaketak ez du akats txostenaren URLrik eman. Mesedez, eman honen "
+"berri zure banaketari."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap saltokia"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -419,12 +425,9 @@ msgid "Run Interactive Debugger"
 msgstr "Exekutatu araztaile elkarreragilea"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Jakinarazi hona: %1"
+msgstr "Jakinarazi %1(e)ri"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -452,12 +455,10 @@ msgid "Overview"
 msgstr "Ikuspegi orokorra"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "Berrabiarazi aplikazioa"
+msgstr "Aplikazio kraskadura"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -468,6 +469,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command>(e)k (<command>%2</command>(e)ren atala) errore larri "
+"bat aurkitu du eta itxi egin da."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -475,18 +478,17 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Zerbitzu kraskadura"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
+"<command>%1</command>(e)k errore larri bat aurkitu du eta itxi egin da."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Zehaztasunak"
@@ -495,15 +497,13 @@ msgstr "Zehaztasunak"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Abioak huts egin du"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Kraskatutako prozesuen erakuslea"
+msgstr "Ezin izan da Kraskatutako Prozesu Ikustailea abiarazi."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
