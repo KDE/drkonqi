@@ -23,14 +23,14 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:18+0000\n"
-"PO-Revision-Date: 2025-11-18 08:46+0200\n"
+"PO-Revision-Date: 2025-12-18 13:08+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -298,7 +298,7 @@ msgstr "תת־תהליך קרס. נא לבדוק שההתקנה תקינה."
 #, kde-format
 msgctxt "@title CLI title"
 msgid "DrKonqi Intensive Care"
-msgstr ""
+msgstr "טיפול קפדני של DrKonqi"
 
 #: coredump/gui/main.cpp:35
 #, kde-format
@@ -349,7 +349,7 @@ msgstr "אין קריסות שתואמות לחיפוש"
 #: coredump/gui/qml/main.qml:14
 msgctxt "@title:window"
 msgid "Intensive Care"
-msgstr ""
+msgstr "טיפול קפדני"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -873,21 +873,15 @@ msgid "Searching bug database for duplicates…"
 msgstr "מתבצע חיפוש אחר כפילויות במסד נתוני התקלות…"
 
 #: qml/DuplicatesPage.qml:20
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "See if your bug has already been reported. Double click a report in the "
-#| "list and compare it to yours. You can suggest that your crash is a "
-#| "duplicate of that report or directly attach your information to it."
 msgctxt "@info/rich"
 msgid ""
 "See if your bug has already been reported. Double click a report in the list "
 "and compare it to yours. You can suggest that your crash is a duplicate of "
 "that report or directly attach your information to it."
 msgstr ""
-"בדוק אם הבאג שלך כבר דווח. הקלק פעמיים על דיווח ברשימה והשווה אותו לדיווח "
-"שלך. תוכל לסמן את הקריסה שלך כדיווח כפול של דיווח אחר, או לצרף את מידע "
-"הקריסה שלך ישירות לדיווח אחר."
+"אפשר לבדוק אם התקלה שלך כבר דווחה. אפשר ללחוץ על דוח ברשימה פעמיים ולהשוות "
+"אותו לשלך. אפשר להציע שהקריסה שלך היא כפילות של הדוח הזה או לצרף את הפרטים "
+"שלך ישירות אליו."
 
 #: qml/DuplicatesPage.qml:45
 msgctxt "@title"
@@ -905,16 +899,13 @@ msgid "Crash is a duplicate"
 msgstr "דיווח הקריסה כפול"
 
 #: qml/DuplicatesPage.qml:76
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to suggest that the crash you experienced is related to "
-#| "this bug report"
 msgctxt "@info:tooltip"
 msgid ""
 "Use this action when you are certain that your crash is a duplicate of this "
 "bug report"
-msgstr "השתמש בכפתור זה כדי להציע שהקריסה שלך קשורה לדיווח הזה"
+msgstr ""
+"אפשר להשתמש בפעולה הזאת במקרה של חוסר ודאות בנוגע לכפילות של התקלה שלך כנגד "
+"דוח התקלה הזה"
 
 #: qml/DuplicatesPage.qml:87
 msgctxt "@action:button"
