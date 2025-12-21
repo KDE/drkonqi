@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-09-15 14:04+0300\n"
+"PO-Revision-Date: 2025-12-20 20:59+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -338,6 +338,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Šiuo metu neįmanomas programinės įrangos, veikiančios Flatpak smėliadėžėje, "
+"strigčių derinimas."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -346,6 +348,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Šiuo metu neįmanomas programinės įrangos, veikiančios Snap smėliadėžėje, "
+"strigčių derinimas."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -354,26 +358,27 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Šios strigties derinimas daugiau nebeįmanomas. Trūksta pagrindinės "
+"išklotinės failo."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Šios strigties derinimas daugiau nebeįmanomas."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Šiuo metu pranešimas, susijęs su Flatpak programomis, yra nepalaikomas."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Jūsų problema jau yra pranešta kaip klaida %1."
+msgstr "Jau pranešta."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -382,24 +387,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Jūsų platinamasis paketas nepateikė URL adreso, kuriuo galima būtų pranešti "
+"apie klaidas. Praneškite apie tai savo platinamajam paketui."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -417,12 +424,9 @@ msgid "Run Interactive Debugger"
 msgstr "Paleisti interaktyvią derintuvę"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Pranešti adresu %1"
+msgstr "Pranešti %1 platinamajam paketui"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -450,11 +454,10 @@ msgid "Overview"
 msgstr "Apžvalga"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgid "&Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "&Paleisti programą iš naujo"
+msgstr "Programos strigtis"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -465,6 +468,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (<command>%2</command> dalis) susidūrė su lemtingąja "
+"klaida ir buvo užverta."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -472,18 +477,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Tarnybos strigtis"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> susidūrė su lemtingąja klaida ir buvo užverta."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Išsamiau"
@@ -492,15 +495,13 @@ msgstr "Išsamiau"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Napavyko paleisti"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Užstrigusių procesų žiūryklė"
+msgstr "Nepavyko paleisti užstrigusių procesų žiūryklės."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
