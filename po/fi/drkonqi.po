@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-07-17 18:26+0300\n"
+"PO-Revision-Date: 2025-11-13 13:41+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -346,6 +346,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Ohjelmien kaatumisten virheenpaikannus ei toistaiseksi ole mahdollista "
+"Flatpak-hiekkalaatikossa suoritettaville ohjelmille."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -354,6 +356,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Ohjelmien kaatumisten virheenpaikannus ei toistaiseksi ole mahdollista Snap-"
+"hiekkalaatikossa suoritettaville ohjelmille."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -362,26 +366,26 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Tälle kaatumiselle virheenpaikannus ei enää ole mahdollista. "
+"Ydinvedostiedosto puuttuu."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Tälle kaatumiselle virheenpaikannus ei enää ole mahdollista."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Flatpak-sovelluksista ilmoittamista ei toistaiseksi tueta."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Ongelmasta on jo ilmoitettu"
+msgstr "On jo ilmoitettu."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -390,24 +394,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Jakelusi ei ole tarjonnut virheilmoituksen verkko-osoitetta. Ilmoita tästä "
+"jakelullesi."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -425,12 +431,9 @@ msgid "Run Interactive Debugger"
 msgstr "Käynnistä vuorovaikutteinen virheenpaikannin"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Ilmoita osoitteeseen %1"
+msgstr "Ilmoita jakelulle %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -490,9 +493,7 @@ msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Tiedot"
@@ -501,15 +502,13 @@ msgstr "Tiedot"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Käynnistys epäonnistui"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Kaatuneiden prosessien katselin"
+msgstr "Kaatuneiden prosessien katselinta ei voitu käynnistää."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
