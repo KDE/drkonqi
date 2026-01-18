@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-05-30 21:16+0200\n"
+"PO-Revision-Date: 2026-01-17 16:39+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -331,6 +331,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Felsökning är inte möjligt för krascher av programvara som körs inuti en "
+"Flatpak-sandlåda för närvarande."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -339,6 +341,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Felsökning är för närvarande inte möjligt för programkrascher som körs i en "
+"Snap-sandlåda."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -347,26 +351,26 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Felsökning är inte längre möjligt för den här kraschen. Kärnans kraschfil "
+"saknas."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Felsökning är inte längre möjligt för den här kraschen."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Rapportering stöds för närvarande inte för Flatpak-program."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Problemet har redan rapporterats"
+msgstr "Redan rapporterad."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -375,24 +379,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Din distribution har inte angett en webbadress för felrapportering. "
+"Rapportera det gärna till distributionen."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap butik"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -410,9 +416,6 @@ msgid "Run Interactive Debugger"
 msgstr "Kör interaktiv avlusare"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Rapportera till %1"
@@ -443,12 +446,10 @@ msgid "Overview"
 msgstr "Översikt"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "Starta om program"
+msgstr "Programkrasch"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -459,6 +460,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (del av <command>%2</command>) har stött på ett "
+"allvarligt fel och stängdes."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -466,18 +469,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "TJänstkrasch"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> har stötte på ett allvarligt fel och stängdes."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Detaljinformation"
@@ -486,15 +487,13 @@ msgstr "Detaljinformation"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Misslyckades starta"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visning av kraschade processer"
+msgstr "Kunde inte starta visning av kraschade processer"
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
