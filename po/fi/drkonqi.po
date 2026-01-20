@@ -7,7 +7,7 @@
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# SPDX-FileCopyrightText: 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2009, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2022.
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-13 13:41+0200\n"
+"PO-Revision-Date: 2026-01-02 11:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -461,12 +461,10 @@ msgid "Overview"
 msgstr "Yleiskuva"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "Käynnistä sovellus uudelleen"
+msgstr "Sovelluksen kaatuminen"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -477,6 +475,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (osa ohjelmaa <command>%2</command>) kohtasi vakavan "
+"virheen ja suljettiin."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -484,13 +484,13 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Palvelun kaatuminen"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> kohtasi vakavan virheen ja suljettiin."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
 #, kde-format
