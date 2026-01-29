@@ -20,6 +20,7 @@ constexpr auto KCRASH_KEY = QLatin1StringView("kcrash");
 constexpr auto KCRASH_TAGS_KEY = QLatin1StringView("kcrash-tags");
 constexpr auto KCRASH_EXTRA_DATA_KEY = QLatin1StringView("kcrash-extra-data");
 constexpr auto KCRASH_GPU_KEY = QLatin1StringView("kcrash-gpu");
+constexpr auto KCRASH_COMPLETE_KEY = QLatin1StringView("kcrash-complete");
 
 [[nodiscard]] QString drkonqiMetadataPath(const QString &exe, const QString &bootId, const QString &timestamp, int pid);
 [[nodiscard]] QString resolveKCrashMetadataPath(const QString &exe, const QString &bootId, int pid);
