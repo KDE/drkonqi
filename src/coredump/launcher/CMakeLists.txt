@@ -2,7 +2,17 @@
 # SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
 add_executable(drkonqi-coredump-launcher main.cpp GlobalNotifierTruck.cpp DevNotifierTruck.cpp)
-target_link_libraries(drkonqi-coredump-launcher Qt::Core KF6::ConfigCore KF6::Notifications KF6::KIOGui KF6::I18n drkonqi-core drkonqi-coredump)
+target_link_libraries(drkonqi-coredump-launcher
+    PRIVATE
+        Qt::Core
+        KF6::ConfigCore
+        KF6::Notifications
+        KF6::KIOGui
+        KF6::I18n
+        KF6::Crash
+        drkonqi-core
+        drkonqi-coredump
+)
 if(WITH_GLOBAL_NOTIFIER)
     target_compile_definitions(drkonqi-coredump-launcher PRIVATE -DWITH_GLOBAL_NOTIFIER)
 endif()

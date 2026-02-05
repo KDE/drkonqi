@@ -21,6 +21,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <kcrash_version.h>
 
 #include <drkonqipaths.h>
 #include <metadata.h>
@@ -48,12 +49,13 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
 [[nodiscard]] QJsonObject kcrashToDrKonqiMetadata(const Coredump &dump, const QString &kcrashMetadataPath)
 {
     auto contextObject = QJsonObject{{u"version"_s, 2}};
+    KConfig kcrashMetadata(kcrashMetadataPath, KConfig::SimpleConfig);
     {
-        KConfig kcrashMetadata(kcrashMetadataPath, KConfig::SimpleConfig);
         contextObject.insert(Metadata::KCRASH_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrash"_s)));
         contextObject.insert(Metadata::KCRASH_TAGS_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashTags"_s)));
         contextObject.insert(Metadata::KCRASH_EXTRA_DATA_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashExtra"_s)));
         contextObject.insert(Metadata::KCRASH_GPU_KEY, jsonObjectFromKConfigGroup(kcrashMetadata.group(u"KCrashGPU"_s)));
+        contextObject.insert(Metadata::KCRASH_COMPLETE_KEY, kcrashMetadata.hasGroup(u"KCrashComplete"_s));
     }
     {
         QJsonObject journalObject;
@@ -64,6 +66,30 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
     }
     {
         contextObject.insert(Metadata::DRKONQI_KEY, QJsonObject{{Metadata::PICKED_UP_KEY, true}});
+    }
+    if (kcrashMetadata.hasGroup(u"KCrash"_s) && !kcrashMetadata.hasGroup(u"KCrashComplete"_s)) {
+        // introduced in KCrash 6.23 to mark that the file was fully written (i.e. no crash mid-write).
+        // Fill a bunch of fallbacks when not complete. This will prevent drkonqi from failing assertions about missing data.
+        auto kcrash = contextObject[Metadata::KCRASH_KEY].toObject();
+        auto containsAndValid = [&kcrash](const QString &key) {
+            return kcrash.contains(key) && !kcrash.value(key).isUndefined();
+        };
+        if (!containsAndValid("signal"_L1)) {
+            kcrash.insert(u"signal"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_SIGNAL"))));
+        }
+        if (!containsAndValid("pid"_L1)) {
+            kcrash.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
+        }
+        if (!containsAndValid("restarted"_L1)) {
+            kcrash.insert(u"restarted"_s, true); // Unknown; pretend it was restarted lest we restart twice.
+        }
+        contextObject[Metadata::KCRASH_KEY] = kcrash;
+    } else {
+#if KCRASH_VERSION >= QT_VERSION_CHECK(6, 23, 0)
+        qWarning() << "KCrash metadata not marked complete. Please file a bug at bugs.kde.org giving as much detail about the crash as possible and maybe "
+                      "include the file"
+                   << kcrashMetadataPath;
+#endif
     }
 
     return contextObject;
