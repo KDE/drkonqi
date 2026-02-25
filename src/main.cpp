@@ -97,9 +97,7 @@ void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
     if (interactionAllowed) {
         statusNotifier->show();
     }
-    if (!restarted) {
-        statusNotifier->notify(activation);
-    }
+    statusNotifier->notify(activation);
     QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &aboutToQuit);
     QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, [] {
         openDrKonqiDialog(DrKonqiDialog::GoTo::Main);
