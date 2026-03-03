@@ -80,9 +80,6 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
         if (!containsAndValid("pid"_L1)) {
             kcrash.insert(u"pid"_s, QString::fromUtf8(dump.m_rawData.value(QByteArrayLiteral("COREDUMP_PID"))));
         }
-        if (!containsAndValid("restarted"_L1)) {
-            kcrash.insert(u"restarted"_s, true); // Unknown; pretend it was restarted lest we restart twice.
-        }
         contextObject[Metadata::KCRASH_KEY] = kcrash;
     } else {
 #if KCRASH_VERSION >= QT_VERSION_CHECK(6, 23, 0)
