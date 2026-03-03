@@ -81,3 +81,5 @@ void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
         Qt::QueuedConnection);
     engine->load(mainUrl);
 }
+
+#include "moc_drkonqidialog.cpp"

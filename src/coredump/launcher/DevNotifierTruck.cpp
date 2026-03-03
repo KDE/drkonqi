@@ -80,3 +80,5 @@ bool DevNotifierTruck::handle(const Coredump &dump)
     qApp->exec();
     return true;
 }
+
+#include "moc_DevNotifierTruck.cpp"

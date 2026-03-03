@@ -196,3 +196,5 @@ void DrKonqiWidgetsDialog::applicationRestarted(bool success)
 {
     m_restartButton->setEnabled(!success);
 }
+
+#include "moc_drkonqiwidgetsdialog.cpp"

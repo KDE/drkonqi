@@ -79,3 +79,5 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
         });
     }
 }
+
+#include "moc_automaticcoredumpexcavator.cpp"

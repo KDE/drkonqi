@@ -143,3 +143,5 @@ bool GlobalNotifierTruck::handle(const Coredump &dump)
     qApp->exec();
     return true;
 }
+
+#include "moc_GlobalNotifierTruck.cpp"
