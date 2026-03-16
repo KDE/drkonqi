@@ -1,14 +1,15 @@
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-# SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2021-2026 Harald Sitter <sitter@kde.org>
 
 [Unit]
-Description=Cleanup lingering KCrash metadata
-ConditionPathExistsGlob=%C/kcrash-metadata/*.ini
+Description=Cleaning DrKonqi data
+ConditionPathExistsGlob=|%C/kcrash-metadata/*.ini
+ConditionPathExistsGlob=|%C/drkonqi/cores/*
 PartOf=graphical-session.target
 After=plasma-core.target
 
 [Service]
-ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-cleanup %C/kcrash-metadata/
+ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-cleanup %C
 RuntimeMaxSec=30 minutes
 
 [Install]

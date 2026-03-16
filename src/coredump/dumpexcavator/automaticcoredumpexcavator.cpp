@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+// SPDX-FileCopyrightText: 2023-2026 Harald Sitter <sitter@kde.org>
 
 #include "automaticcoredumpexcavator.h"
 
@@ -14,6 +15,7 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusUnixFileDescriptor>
 #include <QDebug>
+#include <QStandardPaths>
 
 #include "coredumpexcavator.h"
 
@@ -22,8 +24,11 @@ using namespace std::chrono_literals;
 
 void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
 {
-    if (!m_coreDir || !m_coreDir->isValid()) {
-        m_coreDir = std::make_unique<QTemporaryDir>(QDir::tempPath() + u"/drkonqi-core"_s);
+    if (!m_coreDir || !m_coreDir->isValid()) { // lazy init m_coreDir
+        const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + u"/cores/"_s;
+        QDir().mkpath(cacheDir);
+
+        m_coreDir = std::make_unique<QTemporaryDir>(u"%1/%2-XXXXXX"_s.arg(cacheDir, QDateTime::currentDateTime().toString(Qt::ISODateWithMs)));
         Q_ASSERT(m_coreDir->isValid());
         if (!m_coreDir->isValid()) {
             Q_EMIT failed();
