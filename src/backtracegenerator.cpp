@@ -332,7 +332,7 @@ void BacktraceGenerator::startProcess()
     Q_EMIT starting();
 
     s_fence->surroundMe();
-    connect(s_fence, &MemoryFence::loaded, this, &BacktraceGenerator::startProcessInternal);
+    connect(s_fence, &MemoryFence::loaded, this, &BacktraceGenerator::startProcessInternal, Qt::UniqueConnection);
 }
 
 void BacktraceGenerator::startProcessInternal()
