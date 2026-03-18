@@ -324,6 +324,10 @@ class SentryThread:
     def __init__(self, gdb_thread, is_crashed):
         self.thread = gdb_thread
         self.is_crashed = is_crashed
+        self.name = self.thread.name
+
+        if self.is_crashed and (self.name is None or self.name == ''):
+            self.name = os.environ.get('DRKONQI_CRASHING_THREAD_NAME', None)
 
     def to_dict(self):
         # https://develop.sentry.dev/sdk/event-payloads/threads/
@@ -334,7 +338,7 @@ class SentryThread:
         payload = {
             'stacktrace': trace.to_dict(),
             'id': self.thread.ptid[1],
-            'name': self.thread.name,
+            'name': self.name,
             'current': self.is_crashed,
             'crashed': trace.crashed, # side effect
             'main': trace.was_main_thread, # side effect

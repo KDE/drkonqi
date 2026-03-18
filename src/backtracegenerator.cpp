@@ -369,6 +369,9 @@ void BacktraceGenerator::startProcessInternal()
         m_proc->setEnv(QStringLiteral("DRKONQI_APP_VERSION"), DrKonqi::appVersion());
         m_proc->setEnv(QStringLiteral("DRKONQI_SIGNAL"), QString::number(DrKonqi::signal()));
         m_proc->setEnv(u"DRKONQI_COREFILE"_s, DrKonqi::crashedApplication()->m_coreFile);
+        if (!DrKonqi::crashedApplication()->m_crashingThreadName.isEmpty()) {
+            m_proc->setEnv(u"DRKONQI_CRASHING_THREAD_NAME"_s, DrKonqi::crashedApplication()->m_crashingThreadName);
+        }
     }
 
     m_temp = new QTemporaryFile;
