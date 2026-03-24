@@ -5,21 +5,21 @@
 # Richard Allen <ra@ra.is>, 2000.
 # Bjarni R. Einarsson <bre@netverjar.is>, 2000.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2026 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-07-11 23:06+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-03-23 16:04+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -313,7 +313,7 @@ msgstr "Undirvinnsla hrundi. Kannaðu uppsetninguna þína."
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr "Skoðari fyrir hrundar vinnslur"
+msgstr "Skoðari fyrir hrunin ferli"
 
 #: coredump/gui/main.cpp:32
 #, kde-format
@@ -345,6 +345,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Villukembing (aflúsun) er í augnablikinu ekki möguleg fyrir hrun á hugbúnaði "
+"sem keyrir inni í Flatpak-sandkassa."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -353,6 +355,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Villukembing (aflúsun) er í augnablikinu ekki möguleg fyrir hrun á hugbúnaði "
+"sem keyrir inni í Snap-sandkassa."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -361,26 +365,27 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Villukembing (aflúsun) er ekki lengur möguleg fyrir þetta hrun. Kjarna-"
+"dembiskrána vantar."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Villukembing (aflúsun) er ekki lengur möguleg fyrir þetta hrun."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
+"Villutilkynningar eru í augnablikinu ekki studdar fyrir Flatpak-forrit."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Villan hefur nú þegar verið tilkynnt"
+msgstr "Hefur nú þegar verið tilkynnt."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -389,24 +394,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Dreifingin þín gefur ekki upp slóð til að senda á villuskýrslur. Tilkynntu "
+"þetta til dreifingaraðila þíns."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap-miðstöð"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -424,9 +431,6 @@ msgid "Run Interactive Debugger"
 msgstr "Keyra gagnvirkan aflúsara"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info/plain report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Senda villuskýrslu til %1"
@@ -444,7 +448,7 @@ msgstr "Hleð villuskýrslur"
 #: coredump/gui/qml/ListPage.qml:84
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr "Engar vinnslur hafa hrunið enn sem komið er"
+msgstr "Engin ferli hafa hrunið enn sem komið er"
 
 #: coredump/gui/qml/ListPage.qml:92
 msgctxt "@info place holder for empty listview"
@@ -457,12 +461,10 @@ msgid "Overview"
 msgstr "Yfirlit"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "Endur&ræsa forrit"
+msgstr "Forritshrun"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -473,6 +475,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (hluti af <command>%2</command>) rakst á alvarlega "
+"villu og var lokað."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -480,18 +484,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Hrun þjónustu"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> rakst á alvarlega villu og var lokað."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Nánar"
@@ -500,15 +502,13 @@ msgstr "Nánar"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Tókst ekki að ræsa"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Skoðari fyrir hrundar vinnslur"
+msgstr "Gat ekki ræst skoðara fyrir hrunin ferli."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
