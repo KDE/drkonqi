@@ -21,6 +21,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KCrash>
 #include <kcrash_version.h>
 
 #include <drkonqipaths.h>
@@ -248,6 +249,8 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("drkonqi-coredump-launcher"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
+
+    KCrash::initialize();
 
     if (sd_listen_fds(false) != 1) {
         qFatal("Not exactly one fd passed by systemd. Quel malheur!");
