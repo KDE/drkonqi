@@ -12,7 +12,6 @@ target_link_libraries(drkonqi-coredump-launcher
         KF6::I18n
         drkonqi-core
         drkonqi-coredump
-        $<COMPILE_ONLY:KF6::Crash>
 )
 if(WITH_GLOBAL_NOTIFIER)
     target_compile_definitions(drkonqi-coredump-launcher PRIVATE -DWITH_GLOBAL_NOTIFIER)
