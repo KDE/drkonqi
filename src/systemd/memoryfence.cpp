@@ -158,3 +158,5 @@ void MemoryFence::applyProperties(qulonglong memoryCurrent, qulonglong memoryAva
         Q_EMIT loaded();
     });
 }
+
+#include "moc_memoryfence.cpp"

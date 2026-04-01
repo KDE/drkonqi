@@ -31,3 +31,5 @@ void CoredumpExcavator::excavateFromTo(const QString &coreFile, const std::share
     });
     proc->start();
 }
+
+#include "moc_coredumpexcavator.cpp"

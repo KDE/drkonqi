@@ -208,3 +208,4 @@ MemoryPressure *MemoryPressure::instance()
 }
 
 #include "memorypressure.moc"
+#include "moc_memorypressure.cpp"

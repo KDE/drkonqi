@@ -242,6 +242,7 @@ CrashedApplication *CoredumpBackend::constructCrashedApplication()
         return hash;
     }();
     m_crashedApplication->m_gpu = m_metadata[u"kcrash-gpu"_s].toObject().toVariantHash();
+    m_crashedApplication->m_crashingThreadName = QString::fromUtf8(m_journalEntry["COREDUMP_THREAD_NAME"]);
 
     qCDebug(DRKONQI_LOG) << "Executable is:" << executable.absoluteFilePath();
     qCDebug(DRKONQI_LOG) << "Executable exists:" << executable.exists();

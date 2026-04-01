@@ -130,6 +130,8 @@ public:
     QHash<QString, QString> m_tags;
     QHash<QString, QString> m_extraData;
     QVariantHash m_gpu;
+    // Also only set for coredumpd backend. The name of the thread (/proc/pid/task/tid/comm)
+    QString m_crashingThreadName;
 };
 
 QString getSuggestedKCrashFilename(const CrashedApplication *app);

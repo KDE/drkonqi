@@ -5,20 +5,20 @@
 # Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2009.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2010, 2011, 2012.
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasūns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-11 18:41+0200\n"
+"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"PO-Revision-Date: 2026-03-04 17:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -448,30 +448,25 @@ msgid "Overview"
 msgstr "Pārskats"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Application Crash"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
 msgstr "Programma avarēja"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt ""
 "@info notification text. %1 is a exe name. %2 is either a service name such "
 "as firefox or a cgroup name such as org.mozilla.firefox"
 msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
-msgstr "<command>%1</command> saskārās ar fatālu kļūdu un tika aizvērts."
+msgstr ""
+"<command>%1</command> (daļa no <command>%2</command>) saskārās ar fatālu "
+"kļūdu un tika aizvērts."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@title service refers to a background service such as kwalletd or kded"
-#| msgid "Service Crash"
+#, kde-format
 msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
@@ -479,9 +474,7 @@ msgid "Service Crash"
 msgstr "Serviss avarēja"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid "<command>%1</command> has encountered a fatal error and was closed."
+#, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr "<command>%1</command> saskārās ar fatālu kļūdu un tika aizvērts."
@@ -565,7 +558,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Saglabāt ziņojumu"
 
-#: drkonqi.cpp:185
+#: drkonqi.cpp:186
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -693,130 +686,130 @@ msgctxt "@info:tooltip"
 msgid "Close this dialog (you will lose the crash information.)"
 msgstr "Aizvērt šo logu (avārijas informācija tiks pazaudēta.)"
 
-#: main.cpp:156
+#: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
 msgstr "Avāriju apstrādātājs"
 
-#: main.cpp:158
+#: main.cpp:156
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "Avāriju apstrādātājs informē lietotāju par programmas avāriju."
 
-#: main.cpp:161
+#: main.cpp:159
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000—2018, „DrKonqi“ autori"
 
-#: main.cpp:162
+#: main.cpp:160
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:163
+#: main.cpp:161
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:164
+#: main.cpp:162
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:165
+#: main.cpp:163
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:172
+#: main.cpp:170
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Pārtvertais signāls <numurs>"
 
-#: main.cpp:173
+#: main.cpp:171
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "Programmas <nosaukums>"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Ceļš> uz izpilddatni"
 
-#: main.cpp:175
+#: main.cpp:173
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Programmas <versija>"
 
-#: main.cpp:176
+#: main.cpp:174
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Izmantojamā kļūdas <adrese>"
 
-#: main.cpp:177
+#: main.cpp:175
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Tulkots programmas <nosaukums>"
 
-#: main.cpp:178
+#: main.cpp:176
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "„Bugzilla“ produkta nosaukums"
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <PID> of the program"
 msgstr "Programmas <PID>"
 
-#: main.cpp:180
+#: main.cpp:178
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Programmas palaišanas <ID>"
 
-#: main.cpp:181
+#: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program was started by kdeinit"
 msgstr "Programmu palaida „kdeinit“"
 
-#: main.cpp:182
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Aizliegt patvaļīgu piekļuvi diskam"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Programma jau ir pārstartēta"
 
-#: main.cpp:186
+#: main.cpp:184
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Palaižoties paturēt programmu darbojamies un ģenerēt tās atpakaļceļu"
 
-#: main.cpp:188
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Kļūdainā pavediena <pavediena id>"
 
-#: main.cpp:189
+#: main.cpp:187
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
