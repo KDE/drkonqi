@@ -18,9 +18,6 @@ add_subdirectory(parser)
 
 set(drkonqi_SRCS
     drkonqidialog.cpp
-    statuswidget.cpp
-    backtraceratingwidget.cpp
-    backtracewidget.cpp
     backtracegenerator.cpp
     drkonqi.cpp
     drkonqibackends.cpp
@@ -34,7 +31,6 @@ set(drkonqi_SRCS
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
-    drkonqiwidgetsdialog.cpp
     qmlextensions/platformmodel.cpp
     qmlextensions/reproducibilitymodel.cpp
     qmlextensions/credentialstore.cpp
@@ -42,9 +38,6 @@ set(drkonqi_SRCS
     qmlextensions/qobjectlistmodel.cpp
     qmlextensions/doctore.cpp
     drkonqidialog.h
-    statuswidget.h
-    backtraceratingwidget.h
-    backtracewidget.h
     backtracegenerator.h
     drkonqi.h
     drkonqibackends.h
@@ -64,11 +57,6 @@ set(drkonqi_SRCS
     qmlextensions/commentmodel.h
     qmlextensions/qobjectlistmodel.h
     qmlextensions/doctore.h
-)
-
-ki18n_wrap_ui(drkonqi_SRCS
-    ui/maindialog.ui
-    ui/backtracewidget.ui
 )
 
 set(drkonqi_SRCS
