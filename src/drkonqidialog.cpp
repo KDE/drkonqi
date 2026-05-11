@@ -12,13 +12,12 @@
 
 #include "backtracegenerator.h"
 #include "backtraceparser.h"
-#include "backtracewidget.h"
 #include "bugzillaintegration/bugzillalib.h"
 #include "config-drkonqi.h"
 #include "crashedapplication.h"
 #include "debuggermanager.h"
+#include "debugpackageinstaller.h"
 #include "drkonqi.h"
-#include "drkonqiwidgetsdialog.h"
 #include "qmlextensions/credentialstore.h"
 #include "qmlextensions/doctore.h"
 #include "qmlextensions/platformmodel.h"
@@ -27,11 +26,6 @@
 
 void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
 {
-    if (DrKonqi::isSafer() || DrKonqi::minimalMode()) {
-        (new DrKonqiWidgetsDialog(this))->show();
-        return;
-    }
-
     auto engine = new QQmlApplicationEngine(this);
 
     static auto l10nContext = new KLocalizedContext(engine);
@@ -65,8 +59,7 @@ void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
         this,
         [mainUrl, this, to](QObject *obj, const QUrl &objUrl) {
             if (!obj && mainUrl == objUrl) {
-                qWarning() << "Failed to load QML dialog, falling back to QWidget.";
-                (new DrKonqiWidgetsDialog(this))->show();
+                qWarning() << "Failed to load QML dialog";
                 return;
             }
 
