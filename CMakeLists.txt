@@ -6,6 +6,10 @@ set(PROJECT_VERSION "6.6.5")
 set(QT_MIN_VERSION "6.10.0")
 set(KF6_MIN_VERSION "6.22.0")
 
+if(${QT_MIN_VERSION} VERSION_GREATER_EQUAL "6.12.0")
+    message(FATAL_ERROR "Turn drkonqi-coredump-launcher into a qcoreapplication! https://bugs.kde.org/show_bug.cgi?id=517353")
+endif()
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 

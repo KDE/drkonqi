@@ -9,10 +9,10 @@
 
 #include <chrono>
 
-#include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
+#include <QGuiApplication>
 #include <QJsonDocument>
 #include <QLibraryInfo>
 #include <QProcess>
@@ -245,7 +245,7 @@ static void onNewDump(const Coredump &dump)
 
 int main(int argc, char **argv)
 {
-    QCoreApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("drkonqi-coredump-launcher"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
