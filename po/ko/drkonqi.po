@@ -1,6 +1,6 @@
 # Translation of drkonqi.po to Korean.
 # Copyright (C) 2001-2004, 2007-2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2024, 2025 Park Sinjo <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2024, 2025, 2026 Park Sinjo <kde@peremen.name>
 # Shinjo Park <kde@peremen.name>, 2009, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 #
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-19 00:47+0000\n"
-"PO-Revision-Date: 2025-06-11 00:11+0200\n"
+"PO-Revision-Date: 2026-05-25 18:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -319,6 +319,7 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Flatpak 샌드박스 내에서 실행 중인 소프트웨어의 디버그는 지원하지 않습니다."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -327,6 +328,7 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Snap 샌드박스 내에서 실행 중인 소프트웨어의 디버그는 지원하지 않습니다."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -334,27 +336,25 @@ msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr ""
+msgstr "이 충돌을 디버그할 수 없습니다. 코어 덤프 파일이 없습니다."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "이 충돌을 디버그할 수 없습니다."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Flatpak 앱의 충돌 보고는 현재 지원하지 않습니다."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Problem is Already Reported"
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "문제가 이미 보고됨"
+msgstr "이미 보고되었습니다."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -363,24 +363,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"배포판에서 버그 보고 URL을 지정하지 않았습니다. 배포판에 문제를 보고해 주십시"
+"오."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap 스토어"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -398,12 +400,9 @@ msgid "Run Interactive Debugger"
 msgstr "인터랙티브 디버거 실행"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "%1(으)로 보고"
+msgstr "%1에 보고"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -431,12 +430,10 @@ msgid "Overview"
 msgstr "요약"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "앱 다시 시작"
+msgstr "앱 충돌"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -447,6 +444,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command>(<command>%2</command>의 일부분)에서 치명적 오류가 발생"
+"하여 종료합니다."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -454,18 +453,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "서비스 충돌"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command>에서 치명적 오류가 발생하여 종료합니다."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "자세히"
@@ -474,15 +471,13 @@ msgstr "자세히"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "실행할 수 없음"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "충돌한 프로세스 뷰어"
+msgstr "충돌한 프로세스 뷰어를 실행할 수 없습니다."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
