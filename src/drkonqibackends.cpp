@@ -133,7 +133,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
         const QString exePath = QFile::symLinkTarget(exeProcPath);
 
         executable.setFile(exePath);
-        if (DrKonqi::isKdeinit() || executable.fileName().startsWith(QLatin1String("python"))) {
+        if (executable.fileName().startsWith(QLatin1String("python"))) {
             fakeBaseName = DrKonqi::appName();
         }
 
@@ -147,19 +147,14 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
         qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
     } else {
-        if (DrKonqi::isKdeinit()) {
-            executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
-            fakeBaseName = DrKonqi::appName();
+        QFileInfo execPath(DrKonqi::appName());
+        if (execPath.isAbsolute()) {
+            executable = execPath;
+        } else if (!DrKonqi::appPath().isEmpty()) {
+            QDir execDir(DrKonqi::appPath());
+            executable = QFileInfo(execDir.absoluteFilePath(execPath.fileName()));
         } else {
-            QFileInfo execPath(DrKonqi::appName());
-            if (execPath.isAbsolute()) {
-                executable = execPath;
-            } else if (!DrKonqi::appPath().isEmpty()) {
-                QDir execDir(DrKonqi::appPath());
-                executable = QFileInfo(execDir.absoluteFilePath(execPath.fileName()));
-            } else {
-                executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
-            }
+            executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
         }
     }
 

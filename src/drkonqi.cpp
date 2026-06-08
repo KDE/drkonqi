@@ -56,7 +56,6 @@ DrKonqi::DrKonqi()
     , m_backend(factorizeBackend())
     , m_signal(0)
     , m_pid(0)
-    , m_kdeinit(false)
     , m_safer(false)
     , m_restarted(false)
     , m_keepRunning(false)
@@ -240,11 +239,6 @@ void DrKonqi::setPid(int pid)
     instance()->m_pid = pid;
 }
 
-void DrKonqi::setKdeinit(bool kdeinit)
-{
-    instance()->m_kdeinit = kdeinit;
-}
-
 void DrKonqi::setSafer(bool safer)
 {
     instance()->m_safer = safer;
@@ -308,11 +302,6 @@ const QString &DrKonqi::productName()
 int DrKonqi::pid()
 {
     return instance()->m_pid;
-}
-
-bool DrKonqi::isKdeinit()
-{
-    return instance()->m_kdeinit;
 }
 
 bool DrKonqi::isSafer()
