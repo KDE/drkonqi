@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2022-09-05 23:25+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -532,19 +532,19 @@ msgid ""
 "packages."
 msgstr "Gặp lỗi khi đang cài đặt các gói kí hiệu gỡ lỗi."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Đã lưu báo cáo vào <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Không tạo được tệp để lưu báo cáo."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Save Report to File"
@@ -552,7 +552,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Lưu báo cáo vào tệp"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -780,34 +780,28 @@ msgstr "ID khởi động của chương trình"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Chương trình do kdeinit khởi động"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Tắt truy cập đĩa tuỳ ý"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Chương trình đã được khởi động lại rồi"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Để chương trình chạy tiếp và tạo vết ngăn xếp khi khởi động"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "ID luồng của luồng bị hỏng"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1778,6 +1772,10 @@ msgstr "tên người dùng bugtest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "mật khẩu bugtest.kde.org"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Chương trình do kdeinit khởi động"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"

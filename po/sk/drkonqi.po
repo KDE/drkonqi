@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2023-12-12 19:27+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -545,25 +545,25 @@ msgid ""
 "packages."
 msgstr "Nastala chyba počas inštalácie ladiacich balíčkov so symbolmi."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Hlásenie o chybe bolo uložené do <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Nepodarilo sa vytvoriť súbor, do ktorého sa má uložiť hlásenie."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Uložiť hlásenie"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -790,34 +790,28 @@ msgstr "Spúšťacie <ID> programu"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Program bol spustený pomocou kdeinit"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Zakázať náhodný prístup k disku"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program bol už reštartovaný"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Ponechať program bežať a vygenerovať backtrace pri spustení"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<ID vlákna>, v ktorom došlo k zlyhaniu"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1639,6 +1633,10 @@ msgstr "používateľské meno pre bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "heslo pre bugstest.kde.org"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Program bol spustený pomocou kdeinit"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"

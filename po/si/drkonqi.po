@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2011-09-28 19:56+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
@@ -532,19 +532,19 @@ msgid ""
 "packages."
 msgstr "නිවැරදිකරණ සංඛේත පැකේජයන් ස්ථාපනයේදී වරදක් හට ගැනිනි."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "<filename>%1</filename> වෙත වාර්ථාව සුරැකිනි."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "වාර්ථාව සුරැකීම සඳහා ගොනුවක් නිර්මාණය කල නොහැක."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Save to File..."
@@ -552,7 +552,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "ගොනුව වෙත සුරකින්න... (&S)"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -816,28 +816,22 @@ msgstr "වැඩසටහනේ ආරම්භක ID අංකය"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "මෙම වැඩසටහන kdeinit විසින් ආරම්භ කරන ල"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "අත්තනෝමතික තැටි පිවිසීම අක්‍රීය කරන්න"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "වැඩසටහන දැනටමත් ප්‍රථිස්තාපනය වී ඇත"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "වැඩසටහන දිගටම ධාවනය කරමින් ආරම්භයේදී හඹායෑම ජනනය කරන්න"
 
-#: main.cpp:186
+#: main.cpp:185
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -845,7 +839,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "වැටෙන ත්‍රෙඩ් හි ත්‍රෙඩ් id"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1881,6 +1875,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "මෙම වැඩසටහන kdeinit විසින් ආරම්භ කරන ල"
 
 #, fuzzy
 #~| msgid "Show backtrace content (advanced)"

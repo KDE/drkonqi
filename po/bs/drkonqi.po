@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-06-12 00:45+0000\n"
 "PO-Revision-Date: 2013-11-10 23:14+0000\n"
 "Last-Translator: Emrah Dautbegovic <edautbegov1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -548,19 +548,19 @@ msgid ""
 "packages."
 msgstr "Greška pri instaliranju paketa ispravljačkih simbola."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Izvještaj je sačuvan u <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:148
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Ne mogu da napravim fajl za upisivanje izvještaja."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:155
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Save to File..."
@@ -568,7 +568,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "&Sačuvaj u datotekul..."
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:185
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -821,28 +821,22 @@ msgstr "Radni ID programa"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Ovaj program je pokrenula <command>kdeinit</command>"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Isključi proizvoljan pristup disku"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Ovaj program je već pokrenut"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Ostavi program da se izvršava i stvori kontratrag pri pokretanju"
 
-#: main.cpp:186
+#: main.cpp:185
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -850,7 +844,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Oznaka niti koja je neuspjela"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -1915,6 +1909,10 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Ovaj program je pokrenula <command>kdeinit</command>"
 
 #, fuzzy
 #~| msgid "Show backtrace content (advanced)"
