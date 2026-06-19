@@ -4,13 +4,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2021, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021, 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-12 00:45+0000\n"
-"PO-Revision-Date: 2025-10-15 20:38+0200\n"
+"PO-Revision-Date: 2026-06-18 22:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -333,6 +333,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"A hibakeresés jelenleg nem lehetséges a Flatpak védőfalán belül futó "
+"szoftverek összeomlásai esetén."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -341,6 +343,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"A hibakeresés jelenleg nem lehetséges a Snap védőfalán belül futó szoftverek "
+"összeomlásai esetén."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -349,26 +353,26 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"A hibakeresés többé nem lehetséges ennél az összeomlásnál. A core dump fájl "
+"hiányzik."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "A hibakeresés többé nem lehetséges ennél az összeomlásnál."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "A jelentésküldés Flatpak alkalmazások esetén jelenleg nem támogatott."
 
 #: coredump/gui/Patient.cpp:222
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "A problémát már jelentették a(z) %1. hibaként."
+msgstr "Már bejelentették."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -377,24 +381,26 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"A disztribúciója nem adott meg hibabejelentési URL-t. Jelentse ezt a "
+"disztribúciójának."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -412,12 +418,9 @@ msgid "Run Interactive Debugger"
 msgstr "Interaktív hibakereső futtatása"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Jelentés ide: %1"
+msgstr "Jelentés itt: %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -445,11 +448,10 @@ msgid "Overview"
 msgstr "Áttekintés"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgid "&Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "&Alkalmazás újraindítása"
+msgstr "Alkalmazás-összeomlás"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -460,6 +462,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"A(z) <command>%1</command> (a(z) <command>%2</command> része) végzetes hibát "
+"észlelt, és bezárult."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -467,18 +471,16 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Szolgáltatás-összeomlás"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "A(z) <command>%1</command> végzetes hibát észlelt, és bezárult."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Részletek"
@@ -487,15 +489,13 @@ msgstr "Részletek"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Sikertelen indítás"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Összeomlott folyamatok megjelenítője"
+msgstr "Nem sikerült elindítani az Összeomlott folyamatok megjelenítőjét."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -518,7 +518,7 @@ msgstr "A hiányzó hibakövetési szimbólumcsomagok telepítésének kérése�
 #: debugpackageinstaller.cpp:53
 #, kde-format
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: debugpackageinstaller.cpp:58
 #, kde-format
