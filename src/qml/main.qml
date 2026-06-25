@@ -5,6 +5,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import org.kde.config as KConfig
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.ki18n
 
 import org.kde.drkonqi 1.0
 
@@ -94,6 +95,12 @@ any side effects.</para>`);
                 }
 
                 if (BacktraceGenerator.hasRawTraceData) {
+                    if (BacktraceGenerator.state === BacktraceGenerator.FailedToPrepare) {
+                        return KI18n.xi18nc("@info",
+                            "Gathering crash information failed. You can close the window, or <link url='%1'>view detailed output</link>.",
+                            fakeUrl)
+                    }
+
                     return xi18nc("@info",
                         "Gathering crash information failed for unknown reasons. You can retry, close the window, or <link url='%1'>view detailed output</link>.",
                         fakeUrl)

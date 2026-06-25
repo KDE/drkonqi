@@ -27,7 +27,7 @@ DebuggerManager::DebuggerManager(const Debugger &internalDebugger, AbstractDrKon
     connect(d->btGenerator, &BacktraceGenerator::someError, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::failedToStart, this, &DebuggerManager::onDebuggerFinished);
     connect(d->btGenerator, &BacktraceGenerator::preparing, backendParent, &AbstractDrKonqiBackend::prepareForDebugger);
-    connect(backendParent, &AbstractDrKonqiBackend::failedToPrepare, d->btGenerator, &BacktraceGenerator::setBackendFailed);
+    connect(backendParent, &AbstractDrKonqiBackend::failedToPrepare, d->btGenerator, &BacktraceGenerator::setBackendFailedToPrepare);
     connect(backendParent, &AbstractDrKonqiBackend::preparedForDebugger, d->btGenerator, &BacktraceGenerator::setBackendPrepared);
 }
 

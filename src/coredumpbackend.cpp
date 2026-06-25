@@ -9,6 +9,7 @@
 #include <chrono>
 
 #include <KCrash>
+#include <KLocalizedString>
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
@@ -269,9 +270,7 @@ void CoredumpBackend::prepareForDebugger()
     }
 
     m_excavator = std::make_unique<AutomaticCoredumpExcavator>();
-    connect(m_excavator.get(), &AutomaticCoredumpExcavator::failed, this, [this] {
-        Q_EMIT failedToPrepare();
-    });
+    connect(m_excavator.get(), &AutomaticCoredumpExcavator::failed, this, &CoredumpBackend::failedToPrepare);
     connect(m_excavator.get(), &AutomaticCoredumpExcavator::excavated, this, [this](const QString &corePath) {
         m_crashedApplication->m_coreFile = corePath;
         Q_EMIT preparedForDebugger();
