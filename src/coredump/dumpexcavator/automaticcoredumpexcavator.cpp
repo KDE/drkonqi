@@ -53,6 +53,12 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
         return;
     }
 
+    if (!coredumpFileInfo.exists()) {
+        qWarning() << "Coredump file does not exist" << coredumpFilename;
+        Q_EMIT failed();
+        return;
+    }
+
     if (coredumpFileInfo.isReadable()) {
         auto excavator = new CoredumpExcavator(this);
         connect(excavator, &CoredumpExcavator::excavated, this, [this, coreFileTarget](int exitCode) {
