@@ -6,6 +6,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as QQC2
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.syntaxhighlighting 1.0
+import org.kde.ki18n
 
 import org.kde.drkonqi 1.0
 
@@ -107,7 +108,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
 
             RatingItem {
                 id: ratingItem
-                failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart || BacktraceGenerator.state === BacktraceGenerator.MemoryPressure
+                failed: BacktraceGenerator.hasAnyFailure()
                 loading: BacktraceGenerator.state === BacktraceGenerator.Loading
             }
 
@@ -231,6 +232,9 @@ backtrace, install the needed packages (<link url='%2'>list of files</link>), th
                     } else if (state == BacktraceGenerator.Failed) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich", `Try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
+                    } else if (state == BacktraceGenerator.FailedToPrepare) {
+                        traceArea.text = BacktraceGenerator.rawTraceData()
+                        detailsLabel.text = KI18n.xi18nc("@info/rich", `The backtrace generation failed to prepare. This indicates a severe problem which you likely cannot resolve.`)
                     } else if (state == BacktraceGenerator.FailedToStart) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich",

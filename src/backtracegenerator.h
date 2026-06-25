@@ -41,6 +41,7 @@ public:
         Loading,
         Loaded,
         Failed,
+        FailedToPrepare,
         FailedToStart,
         MemoryPressure,
     };
@@ -67,7 +68,7 @@ public:
     // Called by manager when it is ready for us.
     void setBackendPrepared();
     // ... or not
-    void setBackendFailed();
+    void setBackendFailedToPrepare(const QString &context);
 
     Q_INVOKABLE bool debuggerIsGDB() const;
     Q_INVOKABLE QString debuggerName() const;
@@ -84,7 +85,7 @@ Q_SIGNALS:
     void starting();
     void newLine(const QString &str); // emitted for every line
     void someError();
-    void failedToStart();
+    void failedToStart(); // only exists for informing the backtracegenerator. Not used to indicate state changes etc
     void done();
     void preparing();
     void stateChanged();
