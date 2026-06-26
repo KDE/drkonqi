@@ -29,7 +29,7 @@ Kirigami.Page {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: i18nc("@label submitting as crash report", "Collecting crash data. The collected data will automatically be submitted in the background.")
+            text: i18nc("@label submitting as crash report", "Collecting crash data. This window can be closed. The collected data will automatically be submitted in the background.")
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
             visible: !reportInterface.crashEventSent
