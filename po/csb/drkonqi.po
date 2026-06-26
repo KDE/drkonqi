@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2009-12-10 21:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -28,285 +28,6 @@ msgstr "Mark Kwidzińsczi, Michôł Òstrowsczi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Zladëjë znowa"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Brëkùjë ti knąpë, abë wczëtac znowa wëdowiédzã ò załómaniu (szlach).  Je to "
-"dobré jak ni môsz winstalowónych pasownych paczetów do debùgòwaniô ë chcesz "
-"dobëc lepszi szlach."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instalëjë symbòle debùgowaniô"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Brëkùjë ti knąpë do winstalowaniô felëjącëch paczetów z symbòlama "
-"debùgòwaniô."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "Brëkùjë ti knąpë do kòpérowaniô do tacnika wëdowiédzë ò załómaniu."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Brëkùjë ti knąpë do zapisaniô do lopka wëdowiédzë ò załómaniu. Brëkòwné je "
-"to jeżlë chcesz pòzdze przezdrzec rapòrt ò felë."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Ladowanié..."
-
-#: backtracewidget.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Loading crash information... (this may take some time)"
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Ladowanié wëdowiédzë ò załómaniu... (to mòże kąsk zbawic)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Jinszy debùger debùgùje terô tã programã. Ni mòże zladowac wëdowiédzë ò "
-"załómaniu."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Ni dało sã zladowac wëdowiédzë ò załómaniu."
-
-#: backtracewidget.cpp:196
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Another debugging process is attached to the crashed application. "
-#| "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
-#| "the other debugger and click <interface>Reload Crash Information</"
-#| "interface>."
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Jinszi proces je sparłãczony z załómónym dzejaniém debùgòwaniô. Dlôte "
-"debugger DrKonqi ni mòże pòbrac szlachù. Proszã zaknąc drëdżegò debuggera  ë "
-"klëknąc<interface>Zladëjë wëdowiédzã ò załómaniu znowa</interface>."
-
-#: backtracewidget.cpp:241
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "This crash information is useful"
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "To brëkòwnô wëdowiédzô ò załómaniu."
-
-#: backtracewidget.cpp:244
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "This crash information may be useful"
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "To mòże bëc brëkòwnô wëdowiédzô ò załómaniu."
-
-#: backtracewidget.cpp:247
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "This crash information is probably not useful"
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "To wëdôwô sã bëc mało brëkòwnô wëdowiédzô ò załómaniu."
-
-#: backtracewidget.cpp:250
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "This crash information is not useful"
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "To nie je brëkòwnô wëdowiédzô ò załómaniu."
-
-#: backtracewidget.cpp:255
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The rating of this crash information is invalid. This is a bug in drkonqi "
-#| "itself."
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "Lëchô taksa wëdowiédzë ò załómaniu. Bënowô fela drkonqi."
-
-#: backtracewidget.cpp:267
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages and click the <interface>Reload "
-#| "Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Mòżesz klëknąc na knąpã <interface>Winstalëjë symbòle debùgera</interface>  "
-"bë aùtomatno winstalowac felëjącé paczétë wëdowiédzë. Jeżlë to ni darzi sã: "
-"proszã czëtac <link url='%1'>Jak ùsôdzëc dobri rapòrt załómaniô</link>, do "
-"ùczbë ùsôdzania brëkòwnych szlachów; winstalëjënóterné paczétë ë klëkni na "
-"knąpã <interface>Zladëjë wëdowiédzã załómaniô  znowa</interface>."
-
-#: backtracewidget.cpp:285
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages and click the <interface>Reload "
-#| "Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Mòżesz klëknąc na knąpã <interface>Winstalëjë symbòle debùgera</interface>  "
-"bë aùtomatno winstalowac felëjącé paczétë wëdowiédzë. Jeżlë to ni darzi sã: "
-"proszã czëtac <link url='%1'>Jak ùsôdzëc dobri rapòrt załómaniô</link>, do "
-"ùczbë ùsôdzania brëkòwnych szlachów; winstalëjënóterné paczétë ë klëkni na "
-"knąpã <interface>Zladëjë wëdowiédzã załómaniô  znowa</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Debùger zakùńczëł niespòdzajno dzejanié."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Ni dało sã wëgenerowac wëdowiédzë ò załómaniu."
-
-#: backtracewidget.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Mòżesz spróbòwac wëgenerowac nen szlach znowa, klëkając na "
-"knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
-
-#: backtracewidget.cpp:316
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "The debugger application is missing or could not be launched."
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "Felëje aplikacëjô debùggera abò ni mòże òna bëc zrëszonô."
-
-#: backtracewidget.cpp:322
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"Je ce nót winstalowac paczet debùggera (%1) ë klëknąc na "
-"knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Fela przë instalacëji symbòlë debùgòwaniô"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-
-#: backtracewidget.cpp:418
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Missing debug symbols"
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Felëją symbòle debùgòwaniô"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -622,134 +343,6 @@ msgstr "Zrëszë apliakcëjã znowa"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Brëkùjë ti knąpë do zrëszaniô załómóny aplikacëji znowa."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Spòdlowò"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Wëdowiédzô dlô rozwijôrzów"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Przepôszómë, <application>%1</application> niespòdzajno "
-"zakùńczadzejanié.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />You can manually report this bug to "
-#| "%1 (including the backtrace from the Developer Information tab.)</para>"
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Asystent rapòrtowaniô sã wëłączëł bò òkno załómaniô zrëszëło sãw "
-"bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
-"szlach z wëdowiédzë rozwijôrzów.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />You can manually report this bug to "
-#| "%1 (including the backtrace from the Developer Information tab.)</para>"
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Asystent rapòrtowaniô sã wëłączëł bò òkno załómaniô zrëszëło sãw "
-"bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
-"szlach z wëdowiédzë rozwijôrzów.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You can help us improve KDE Software by reporting this error.<nl /"
-#| "><link url='#aboutbugreporting'>Learn more about bug reporting.</link></"
-#| "para><para><note>It is safe to close this dialog if you do not want to "
-#| "report this bug.</note></para>"
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Mòżesz nama pòmóc w rozwiju KDE przez sélanié rapòrtu ò ti felë.<nl /"
-"><link url='#aboutbugreporting'>Dobëjë wicy wëdowiédzë ò rapòrtowaniu felów."
-"</link></para><para><note>Bezpieczno je zamknąc to òkno, jeżlë nie chcesz "
-"sélac rapòrtu ò felë.</note></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You cannot report this error, because the application does not "
-#| "provide a bug reporting address.</para>"
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Ni mòżesz wësłac rapòrtu ò ti felë, bò apliakcëjô ni wspierô adresë "
-"rapòrtowaniô felów.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Detale:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4)</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Wëkònëwólny lopk: <application>%1</application> PID: <numid>%2</numid> "
-"Sygnal: %3 (%4)</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Zamkni to òkno (zdżinie wëdowiédzô ò załómaniu)."
 
 #: main.cpp:154
 #, fuzzy, kde-format
@@ -1078,10 +671,25 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Kòpérëjë"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "Brëkùjë ti knąpë do kòpérowaniô do tacnika wëdowiédzë ò załómaniu."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Brëkùjë ti knąpë do zapisaniô do lopka wëdowiédzë ò załómaniu. Brëkòwné je "
+"to jeżlë chcesz pòzdze przezdrzec rapòrt ò felë."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -1097,6 +705,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Spróbùjë znowa..."
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Fela przë instalacëji symbòlë debùgòwaniô"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1190,6 +803,13 @@ msgstr ""
 "Mòżesz spróbòwac wëgenerowac nen szlach znowa, klëkając na "
 "knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
 
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
@@ -1277,6 +897,20 @@ msgstr ""
 "Brëkùjë ti knapë do wlogòwaniô sã do systemë szlachòwaniô felów KDE z pòmòcą "
 "dobëtegò miona brëkòwnika ë parolë."
 
+#: qml/main.qml:26
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>You cannot report this error, because the application does not "
+#| "provide a bug reporting address.</para>"
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Ni mòżesz wësłac rapòrtu ò ti felë, bò apliakcëjô ni wspierô adresë "
+"rapòrtowaniô felów.</para>"
+
 #: qml/main.qml:33
 #, fuzzy
 #| msgctxt "@info"
@@ -1327,6 +961,24 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+
+#: qml/main.qml:64
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>You can help us improve KDE Software by reporting this error.<nl /"
+#| "><link url='#aboutbugreporting'>Learn more about bug reporting.</link></"
+#| "para><para><note>It is safe to close this dialog if you do not want to "
+#| "report this bug.</note></para>"
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Mòżesz nama pòmóc w rozwiju KDE przez sélanié rapòrtu ò ti felë.<nl /"
+"><link url='#aboutbugreporting'>Dobëjë wicy wëdowiédzë ò rapòrtowaniu felów."
+"</link></para><para><note>Bezpieczno je zamknąc to òkno, jeżlë nie chcesz "
+"sélac rapòrtu ò felë.</note></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1904,6 +1556,283 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Zladëjë znowa"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Brëkùjë ti knąpë, abë wczëtac znowa wëdowiédzã ò załómaniu (szlach).  Je "
+#~ "to dobré jak ni môsz winstalowónych pasownych paczetów do debùgòwaniô ë "
+#~ "chcesz dobëc lepszi szlach."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instalëjë symbòle debùgowaniô"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Brëkùjë ti knąpë do winstalowaniô felëjącëch paczetów z symbòlama "
+#~ "debùgòwaniô."
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Ladowanié..."
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Loading crash information... (this may take some time)"
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Ladowanié wëdowiédzë ò załómaniu... (to mòże kąsk zbawic)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Jinszy debùger debùgùje terô tã programã. Ni mòże zladowac wëdowiédzë ò "
+#~ "załómaniu."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Ni dało sã zladowac wëdowiédzë ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "Another debugging process is attached to the crashed application. "
+#~| "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~| "the other debugger and click <interface>Reload Crash Information</"
+#~| "interface>."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Jinszi proces je sparłãczony z załómónym dzejaniém debùgòwaniô. Dlôte "
+#~ "debugger DrKonqi ni mòże pòbrac szlachù. Proszã zaknąc drëdżegò "
+#~ "debuggera  ë klëknąc<interface>Zladëjë wëdowiédzã ò załómaniu znowa</"
+#~ "interface>."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "This crash information is useful"
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "To brëkòwnô wëdowiédzô ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "This crash information may be useful"
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "To mòże bëc brëkòwnô wëdowiédzô ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "This crash information is probably not useful"
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "To wëdôwô sã bëc mało brëkòwnô wëdowiédzô ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "This crash information is not useful"
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "To nie je brëkòwnô wëdowiédzô ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "The rating of this crash information is invalid. This is a bug in "
+#~| "drkonqi itself."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "Lëchô taksa wëdowiédzë ò załómaniu. Bënowô fela drkonqi."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You can click the <interface>Install Debug Symbols</interface> button in "
+#~| "order to automatically install the missing debugging information "
+#~| "packages. If this method does not work: please read <link url='%1'>How "
+#~| "to create useful crash reports</link> to learn how to get a useful "
+#~| "backtrace; install the needed packages and click the <interface>Reload "
+#~| "Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Mòżesz klëknąc na knąpã <interface>Winstalëjë symbòle debùgera</"
+#~ "interface>  bë aùtomatno winstalowac felëjącé paczétë wëdowiédzë. Jeżlë "
+#~ "to ni darzi sã: proszã czëtac <link url='%1'>Jak ùsôdzëc dobri rapòrt "
+#~ "załómaniô</link>, do ùczbë ùsôdzania brëkòwnych szlachów; "
+#~ "winstalëjënóterné paczétë ë klëkni na knąpã <interface>Zladëjë wëdowiédzã "
+#~ "załómaniô  znowa</interface>."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You can click the <interface>Install Debug Symbols</interface> button in "
+#~| "order to automatically install the missing debugging information "
+#~| "packages. If this method does not work: please read <link url='%1'>How "
+#~| "to create useful crash reports</link> to learn how to get a useful "
+#~| "backtrace; install the needed packages and click the <interface>Reload "
+#~| "Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Mòżesz klëknąc na knąpã <interface>Winstalëjë symbòle debùgera</"
+#~ "interface>  bë aùtomatno winstalowac felëjącé paczétë wëdowiédzë. Jeżlë "
+#~ "to ni darzi sã: proszã czëtac <link url='%1'>Jak ùsôdzëc dobri rapòrt "
+#~ "załómaniô</link>, do ùczbë ùsôdzania brëkòwnych szlachów; "
+#~ "winstalëjënóterné paczétë ë klëkni na knąpã <interface>Zladëjë wëdowiédzã "
+#~ "załómaniô  znowa</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Debùger zakùńczëł niespòdzajno dzejanié."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Ni dało sã wëgenerowac wëdowiédzë ò załómaniu."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You could try to regenerate the backtrace by clicking the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Mòżesz spróbòwac wëgenerowac nen szlach znowa, klëkając na "
+#~ "knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "The debugger application is missing or could not be launched."
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "Felëje aplikacëjô debùggera abò ni mòże òna bëc zrëszonô."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "Je ce nót winstalowac paczet debùggera (%1) ë klëknąc na "
+#~ "knąpã<interface>Wladëjë wëdowiédzã ò załómaniu znowa</interface>."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Missing debug symbols"
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Felëją symbòle debùgòwaniô"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Spòdlowò"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Wëdowiédzô dlô rozwijôrzów"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Przepôszómë, <application>%1</application> niespòdzajno "
+#~ "zakùńczadzejanié.</para>"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>The reporting assistant is disabled because the crash handler "
+#~| "dialog was started in safe mode.<nl />You can manually report this bug "
+#~| "to %1 (including the backtrace from the Developer Information tab.)</"
+#~| "para>"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Asystent rapòrtowaniô sã wëłączëł bò òkno załómaniô zrëszëło sãw "
+#~ "bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
+#~ "szlach z wëdowiédzë rozwijôrzów.)</para>"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>The reporting assistant is disabled because the crash handler "
+#~| "dialog was started in safe mode.<nl />You can manually report this bug "
+#~| "to %1 (including the backtrace from the Developer Information tab.)</"
+#~| "para>"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Asystent rapòrtowaniô sã wëłączëł bò òkno załómaniô zrëszëło sãw "
+#~ "bezpiecznym mòduse.<nl />Mòżesz rãczno sélac rapòrt felë do %1 (dodôwając "
+#~ "szlach z wëdowiédzë rozwijôrzów.)</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Detale:"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4)</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Wëkònëwólny lopk: <application>%1</application> PID: <numid>%2</"
+#~ "numid> Sygnal: %3 (%4)</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Zamkni to òkno (zdżinie wëdowiédzô ò załómaniu)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

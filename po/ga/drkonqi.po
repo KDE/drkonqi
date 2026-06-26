@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -26,250 +26,6 @@ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Athluchtaigh"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Úsáid an cnaipe seo chun an cúl-lorg a athluchtú. Tá sé seo úsáideach nuair "
-"a bheidh na pacáistí oiriúnacha dífhabhtaithe suiteáilte agat agus ba mhaith "
-"leat cúl-lorg níos fearr a chruthú."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Suiteáil Siombailí Dífhabhtaithe"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Úsáíd an cnaipe seo chun na pacáistí leis na siombailí dífhabhtaithe a "
-"shuiteáil."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Úsáid an cnaipe seo chun an t-eolas faoin tuairt (cúl-lorg) a chóipeáil go "
-"dtí an ghearrthaisce."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Úsáid an cnaipe seo chun an t-eolas faoin tuairt (cúl-lorg) a shábháil i "
-"gcomhad. Tá sé seo úsáideach má tá tú ag iarraidh é a scrúdú nó an tuairisc "
-"a dhéanamh ar ball."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Cad is \"cúl-lorg\" ann?</h2><p>Is éard atá i gcúl-lorg ná tuairisc a "
-"dhéanann cur síos ar na rudaí a bhí ar siúl san fheidhmchlár nuair a "
-"thuairteáil sé, sa chaoi go mbeidh na forbróirí in ann cúis na faidhbe a "
-"aimsiú. Seans go mbeadh cuma chraiceáilte orthu, ach de ghnáth bíonn neart "
-"eolais áisiúil iontu.<br />Go coitianta, baintear úsáid as cúl-loirg le linn "
-"seisiúin dífhabhtaithe idirghníomhaigh nó iar-anailíse.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Á Luchtú..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Cúl-lorg á chruthú... (seans go nglacfaidh sé seo tamall fada)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Tá dífhabhtóir eile ag dífhabhtú an fheidhmchláir seo faoi láthair. Níorbh "
-"fhéidir an cúl-lorg a chruthú."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Níorbh fhéidir an cúl-lorg a chruthú."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Tá próiseas dífhabhtaithe eile ceangailte leis an bhfeidhmchlár a "
-"thuairteáil. Dá bharr sin, ní féidir leis an dífhabhtóir DrKonqi cúl-lorg a "
-"chruthú. Dún an dífhabhtóir eile agus cliceáil <interface>Athluchtaigh</"
-"interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Tá an fhaisnéis faoin tuairt úsáideach"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Seans go bhfuil an fhaisnéis faoin tuairt úsáídeach"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Is dócha nach bhfuil an fhaisnéis faoin tuairt úsáideach"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Níl an fhaisnéis faoin tuairt úsáideach"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Tá an rátáil a bhaineann leis an tuairt seo neamhbhailí. Fabht in DrKonqi "
-"féin atá ann."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Is féidir an cnaipe <interface>Suiteáil Siombailí Dífhabhtaithe</interface> "
-"chun na pacáistí ina bhfuil na siombailí dífhabhtaithe a shuiteáil go "
-"huathoibríoch. Mura n-oibríonn sé seo, léigh <link url='%1'>Conas a "
-"chruthaítear tuairisc úsáideach ar fhabht</link> chun tuilleadh eolais a "
-"fháil ar chúl-loirg; suiteáil na pacáistí riachtanacha (<link "
-"url='%2'>liosta comhad</link>) agus cliceáil an cnaipe "
-"<interface>Athluchtaigh</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Léigh <link url='%1'>Conas a chruthaítear tuairisc úsáideach ar fhabht</"
-"link> chun tuilleadh eolais a fháil ar chúl-lorg; suiteáil na pacáistí "
-"dífhabhtaithe (<link url='%2'>liosta comhad</link>) agus cliceáil an cnaipe "
-"<interface>Athluchtaigh</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Stad an dífhabhtóir gan súil leis."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Níorbh fhéidir faisnéis maidir leis an tuairteáil a ghiniúint."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"B'fhéidir leat an cúl-lorg a athghiniúint tríd an gcnaipe "
-"<interface>Athluchtaigh</interface> a chliceáil."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Earráid agus na siombailí dífhabhtaithe á suiteáil"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Tá na pacáistí ina bhfuil faisnéis dhífhabhtaithe don fheidhmchlár agus "
-"leabharlanna seo a leanas ar iarraidh:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Pacáistí ina bhfuil faisnéis dhífhabhtaithe ar iarraidh"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -565,97 +321,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Úsáid an cnaipe seo chun an feidhmchlár a thuairteáil a atosú."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Ginearálta"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Eolas le haghaidh Forbróirí"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Tá brón orainn, dhún <application>%1</application> gan súil leis.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Mionsonraí:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
-"Dún an dialóg seo (caillfidh tú sonraí a bhaineann leis an tuairteáil.)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -911,10 +576,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Úsáid an cnaipe seo chun an t-eolas faoin tuairt (cúl-lorg) a chóipeáil go "
+"dtí an ghearrthaisce."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Úsáid an cnaipe seo chun an t-eolas faoin tuairt (cúl-lorg) a shábháil i "
+"gcomhad. Tá sé seo úsáideach má tá tú ag iarraidh é a scrúdú nó an tuairisc "
+"a dhéanamh ar ball."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -927,6 +610,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr ""
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Earráid agus na siombailí dífhabhtaithe á suiteáil"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -970,6 +658,15 @@ msgid ""
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Tá na pacáistí ina bhfuil faisnéis dhífhabhtaithe don fheidhmchlár agus "
+"leabharlanna seo a leanas ar iarraidh:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1034,6 +731,13 @@ msgid ""
 "email address and password."
 msgstr ""
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1065,6 +769,13 @@ msgid ""
 "<para>After updating it is always a good idea to log out and back\n"
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
+msgstr ""
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
 
 #: qml/main.qml:93
@@ -1497,6 +1208,174 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Athluchtaigh"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Úsáid an cnaipe seo chun an cúl-lorg a athluchtú. Tá sé seo úsáideach "
+#~ "nuair a bheidh na pacáistí oiriúnacha dífhabhtaithe suiteáilte agat agus "
+#~ "ba mhaith leat cúl-lorg níos fearr a chruthú."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Suiteáil Siombailí Dífhabhtaithe"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Úsáíd an cnaipe seo chun na pacáistí leis na siombailí dífhabhtaithe a "
+#~ "shuiteáil."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Cad is \"cúl-lorg\" ann?</h2><p>Is éard atá i gcúl-lorg ná tuairisc a "
+#~ "dhéanann cur síos ar na rudaí a bhí ar siúl san fheidhmchlár nuair a "
+#~ "thuairteáil sé, sa chaoi go mbeidh na forbróirí in ann cúis na faidhbe a "
+#~ "aimsiú. Seans go mbeadh cuma chraiceáilte orthu, ach de ghnáth bíonn "
+#~ "neart eolais áisiúil iontu.<br />Go coitianta, baintear úsáid as cúl-"
+#~ "loirg le linn seisiúin dífhabhtaithe idirghníomhaigh nó iar-anailíse.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Á Luchtú..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Cúl-lorg á chruthú... (seans go nglacfaidh sé seo tamall fada)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Tá dífhabhtóir eile ag dífhabhtú an fheidhmchláir seo faoi láthair. "
+#~ "Níorbh fhéidir an cúl-lorg a chruthú."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Níorbh fhéidir an cúl-lorg a chruthú."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Tá próiseas dífhabhtaithe eile ceangailte leis an bhfeidhmchlár a "
+#~ "thuairteáil. Dá bharr sin, ní féidir leis an dífhabhtóir DrKonqi cúl-lorg "
+#~ "a chruthú. Dún an dífhabhtóir eile agus cliceáil <interface>Athluchtaigh</"
+#~ "interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Tá an fhaisnéis faoin tuairt úsáideach"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Seans go bhfuil an fhaisnéis faoin tuairt úsáídeach"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Is dócha nach bhfuil an fhaisnéis faoin tuairt úsáideach"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Níl an fhaisnéis faoin tuairt úsáideach"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Tá an rátáil a bhaineann leis an tuairt seo neamhbhailí. Fabht in DrKonqi "
+#~ "féin atá ann."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Is féidir an cnaipe <interface>Suiteáil Siombailí Dífhabhtaithe</"
+#~ "interface> chun na pacáistí ina bhfuil na siombailí dífhabhtaithe a "
+#~ "shuiteáil go huathoibríoch. Mura n-oibríonn sé seo, léigh <link "
+#~ "url='%1'>Conas a chruthaítear tuairisc úsáideach ar fhabht</link> chun "
+#~ "tuilleadh eolais a fháil ar chúl-loirg; suiteáil na pacáistí riachtanacha "
+#~ "(<link url='%2'>liosta comhad</link>) agus cliceáil an cnaipe "
+#~ "<interface>Athluchtaigh</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Léigh <link url='%1'>Conas a chruthaítear tuairisc úsáideach ar fhabht</"
+#~ "link> chun tuilleadh eolais a fháil ar chúl-lorg; suiteáil na pacáistí "
+#~ "dífhabhtaithe (<link url='%2'>liosta comhad</link>) agus cliceáil an "
+#~ "cnaipe <interface>Athluchtaigh</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Stad an dífhabhtóir gan súil leis."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Níorbh fhéidir faisnéis maidir leis an tuairteáil a ghiniúint."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "B'fhéidir leat an cúl-lorg a athghiniúint tríd an gcnaipe "
+#~ "<interface>Athluchtaigh</interface> a chliceáil."
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Pacáistí ina bhfuil faisnéis dhífhabhtaithe ar iarraidh"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Ginearálta"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Eolas le haghaidh Forbróirí"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Tá brón orainn, dhún <application>%1</application> gan súil leis.</"
+#~ "para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Mionsonraí:"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr ""
+#~ "Dún an dialóg seo (caillfidh tú sonraí a bhaineann leis an tuairteáil.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

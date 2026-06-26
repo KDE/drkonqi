@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2026-06-01 07:38+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -42,247 +42,6 @@ msgid "Your emails"
 msgstr ""
 "kom@kde.gr.jp,shinsaku@users.sourceforge.jp,tsuno@ngy.1st.ne.jp, "
 "phanective@gmail.com,ryuichi_ya220@outlook.jp"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "再読み込み(&R)"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"このボタンでクラッシュ情報 (バックトレース) を再読み込みできます。デバッグシ"
-"ンボルパッケージがインストールされており、より良いバックトレースを取得したい"
-"場合に便利です。"
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "デバッグシンボルをインストール(&I)"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"このボタンで欠けているデバッグシンボルパッケージをインストールできます。"
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"アプリケーションが開始された後に更新またはアンインストールされたため、シンボ"
-"ルのインストールができません。"
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"このボタンでクラッシュ情報 (バックトレース) をクリップボードへコピーします。"
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"このボタンでクラッシュ情報 (バックトレース) をファイルへ保存します。内容を確"
-"認したり、後でバグを報告したりするときに便利です。"
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>バックトレースとは？</h2><p>バックトレースにはクラッシュ時にアプリケー"
-"ション内部で何が起こっていたのかが記されており、開発者が問題を特定する際の手"
-"助けになります。意味がないように見えるときでも、実際には役に立つ情報を豊富に"
-"含んでいることがあります。<br/>バックトレースはインタラクティブな事後解析デ"
-"バッグでよく使用されます。</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "読み込み中..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "バックトレースを生成中... (しばらく時間がかかります)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"他のデバッガが同じアプリケーションをデバッグ中です。クラッシュ情報を取得する"
-"ことができませんでした。"
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "クラッシュ情報を取得することができませんでした。"
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"他のデバッグプロセスがクラッシュしたアプリケーションにアタッチされています。"
-"そのため、DrKonqi デバッガはバックトレースを取得できません。他のデバッガを終"
-"了して<interface>再読み込み</interface>ボタンをクリックしてください。"
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "今回生成されたクラッシュ情報は有益です"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "今回生成されたクラッシュ情報は有益である可能性があります"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "今回生成されたクラッシュ情報はおそらく有益ではありません"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "今回生成されたクラッシュ情報は有益ではありません"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "このクラッシュ情報の格付けは無効です。これは DrKonqi 自身のバグです。"
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"<interface>デバッグシンボルをインストール</interface>ボタンをクリックして、自"
-"動的にデバッグ情報パッケージをインストールできます。このボタンが動作しない場"
-"合、<link url='%1'>「有益なバグレポートを作成する方法」</link> を読み、有益な"
-"バックトレースを取得する方法についてお知りおきください。必要なパッケージをイ"
-"ンストールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み"
-"</interface>ボタンを押してください。"
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"<link url='%1'>「有益なバグレポートを作成する方法」</link> を読み、有益なバッ"
-"クトレースを取得する方法についてお知りおきください。必要なパッケージをインス"
-"トールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み込み</"
-"interface>ボタンを押してください。"
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "デバッガが予期せず終了しました。"
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "クラッシュ情報を生成することができませんでした。"
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生成で"
-"きます。"
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>デバッガがインストールされていないか、起動できませんでした。</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong><interface>再読み込み</interface>ボタンをクリックする前に、デバッガア"
-"プリケーション (%1) をインストールしてください。</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "デバッグシンボルのインストール中にエラーが発生しました"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"以下のアプリケーションとライブラリのデバッグ情報を含むパッケージが欠けていま"
-"す:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "デバッグ情報パッケージが不足しています"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -582,114 +341,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "このボタンでクラッシュしたアプリケーションを再起動します。"
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "全般(&G)"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "開発者情報(&D)"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>申し訳ございません、<application>%1</application> が異常終了しました。"
-"</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>クラッシュハンドラ自身に不具合が発生したため、自動報告プロセスは link "
-"<link url='%1'>手動での報告</link> をお願いします。レポートに<interface>開発"
-"者情報</interface>タブのバックトレースを含めることを忘れないでください。</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>クラッシュハンドラがセーフモードで起動されたため、報告アシスタントは無"
-"効化されています。<nl />%1 への手動での報告を検討してください。(<interface>開"
-"発者情報</interface>タブのバックトレースを含めることができます。)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>クラッシュしたアプリケーションが開始後に更新またはアンインストールされ"
-"たため、報告アシスタントは無効化されています。このような操作は正確なクラッ"
-"シュ報告を阻害します。また、このクラッシュの原因である可能性もあります。</"
-"para><para>更新内容を完全に適用するために、更新した後は常に再ログインするよう"
-"にしてください。</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>このエラーを報告することで KDE ソフトウェアの改善に協力できます。<nl /"
-"><link url='%1'>バグレポートについて詳しく知る</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para><application>%1</application> がバグレポートのアドレスを提供していない"
-"ため、このエラーは報告できません。</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "詳細:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>実行ファイル: <application>%1</application> PID: <numid>%2</numid> シグ"
-"ナル: %3 (%4) 日時: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "このダイアログを閉じる (クラッシュ情報を破棄します)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -971,10 +622,26 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "コピー"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"このボタンでクラッシュ情報 (バックトレース) をクリップボードへコピーします。"
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"このボタンでクラッシュ情報 (バックトレース) をファイルへ保存します。内容を確"
+"認したり、後でバグを報告したりするときに便利です。"
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -987,6 +654,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "再試行"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "デバッグシンボルのインストール中にエラーが発生しました"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1069,6 +741,15 @@ msgid ""
 msgstr ""
 "<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生成で"
 "きます。"
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"以下のアプリケーションとライブラリのデバッグ情報を含むパッケージが欠けていま"
+"す:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1164,6 +845,15 @@ msgstr ""
 "提供されたメールアドレスとパスワードを使って KDE バグ追跡システムにログインす"
 "るには、このボタンを使用してください。"
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para><application>%1</application> がバグレポートのアドレスを提供していない"
+"ため、このエラーは報告できません。</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1196,6 +886,15 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>このエラーを報告することで KDE ソフトウェアの改善に協力できます。<nl /"
+"><link url='%1'>バグレポートについて詳しく知る</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1712,6 +1411,242 @@ msgstr "bugstest.kde.org ユーザ名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org パスワード"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "再読み込み(&R)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "このボタンでクラッシュ情報 (バックトレース) を再読み込みできます。デバッグ"
+#~ "シンボルパッケージがインストールされており、より良いバックトレースを取得し"
+#~ "たい場合に便利です。"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "デバッグシンボルをインストール(&I)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "このボタンで欠けているデバッグシンボルパッケージをインストールできます。"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "アプリケーションが開始された後に更新またはアンインストールされたため、シン"
+#~ "ボルのインストールができません。"
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>バックトレースとは？</h2><p>バックトレースにはクラッシュ時にアプリケー"
+#~ "ション内部で何が起こっていたのかが記されており、開発者が問題を特定する際の"
+#~ "手助けになります。意味がないように見えるときでも、実際には役に立つ情報を豊"
+#~ "富に含んでいることがあります。<br/>バックトレースはインタラクティブな事後"
+#~ "解析デバッグでよく使用されます。</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "読み込み中..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "バックトレースを生成中... (しばらく時間がかかります)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "他のデバッガが同じアプリケーションをデバッグ中です。クラッシュ情報を取得す"
+#~ "ることができませんでした。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "クラッシュ情報を取得することができませんでした。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "他のデバッグプロセスがクラッシュしたアプリケーションにアタッチされていま"
+#~ "す。そのため、DrKonqi デバッガはバックトレースを取得できません。他のデバッ"
+#~ "ガを終了して<interface>再読み込み</interface>ボタンをクリックしてくださ"
+#~ "い。"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "今回生成されたクラッシュ情報は有益です"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "今回生成されたクラッシュ情報は有益である可能性があります"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "今回生成されたクラッシュ情報はおそらく有益ではありません"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "今回生成されたクラッシュ情報は有益ではありません"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "このクラッシュ情報の格付けは無効です。これは DrKonqi 自身のバグです。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "<interface>デバッグシンボルをインストール</interface>ボタンをクリックし"
+#~ "て、自動的にデバッグ情報パッケージをインストールできます。このボタンが動作"
+#~ "しない場合、<link url='%1'>「有益なバグレポートを作成する方法」</link> を"
+#~ "読み、有益なバックトレースを取得する方法についてお知りおきください。必要な"
+#~ "パッケージをインストールして (<link url='%2'>ファイルのリスト</"
+#~ "link>)<interface>再読み込み</interface>ボタンを押してください。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "<link url='%1'>「有益なバグレポートを作成する方法」</link> を読み、有益な"
+#~ "バックトレースを取得する方法についてお知りおきください。必要なパッケージを"
+#~ "インストールして (<link url='%2'>ファイルのリスト</link>)<interface>再読み"
+#~ "込み</interface>ボタンを押してください。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "デバッガが予期せず終了しました。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "クラッシュ情報を生成することができませんでした。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "<interface>再読み込み</interface>ボタンをクリックしてバックトレースを再生"
+#~ "成できます。"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>デバッガがインストールされていないか、起動できませんでした。</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong><interface>再読み込み</interface>ボタンをクリックする前に、デバッ"
+#~ "ガアプリケーション (%1) をインストールしてください。</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "デバッグ情報パッケージが不足しています"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "全般(&G)"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "開発者情報(&D)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>申し訳ございません、<application>%1</application> が異常終了しまし"
+#~ "た。</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>クラッシュハンドラ自身に不具合が発生したため、自動報告プロセスは "
+#~ "link <link url='%1'>手動での報告</link> をお願いします。レポートに"
+#~ "<interface>開発者情報</interface>タブのバックトレースを含めることを忘れな"
+#~ "いでください。</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>クラッシュハンドラがセーフモードで起動されたため、報告アシスタントは"
+#~ "無効化されています。<nl />%1 への手動での報告を検討してください。"
+#~ "(<interface>開発者情報</interface>タブのバックトレースを含めることができま"
+#~ "す。)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>クラッシュしたアプリケーションが開始後に更新またはアンインストールさ"
+#~ "れたため、報告アシスタントは無効化されています。このような操作は正確なク"
+#~ "ラッシュ報告を阻害します。また、このクラッシュの原因である可能性もありま"
+#~ "す。</para><para>更新内容を完全に適用するために、更新した後は常に再ログイ"
+#~ "ンするようにしてください。</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "詳細:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>実行ファイル: <application>%1</application> PID: <numid>%2</numid> "
+#~ "シグナル: %3 (%4) 日時: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "このダイアログを閉じる (クラッシュ情報を破棄します)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

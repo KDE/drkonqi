@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-28 09:55+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -35,258 +35,6 @@ msgid "Your emails"
 msgstr ""
 "rysin@kde.org,kov@tokyo.email.ne.jp,fr.ivan@ukrainian-orthodox.org,"
 "yurchor@ukr.net"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Перезавантажити"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Натисніть цю кнопку, щоб перезавантажити дані щодо аварійного завершення "
-"(зворотне трасування). Подібне перезавантаження буде корисним, якщо ви "
-"встановили відповідні пакунки з символами для налагоджування, а також, якщо "
-"ви бажаєте отримати краще зворотне трасування."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Встановити символи налагоджування"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Натисніть цю кнопку, щоб встановити відсутні пакунки символів для "
-"налагоджування."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Встановлення символів недоступне, оскільки програму було оновлено або "
-"вилучено після запуску."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Натисніть цю кнопку, щоб скопіювати дані щодо аварії (зворотне трасування) "
-"до буфера обміну даними."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Натисніть цю кнопку, щоб зберегти дані щодо аварійного завершення (зворотне "
-"трасування) до файла. Подібне збереження буде корисним, якщо ви пізніше "
-"забажаєте переглянути ці дані або створити звіт про помилку."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Що таке «зворотне трасування»?</h2><p>Зворотне трасування — це опис на "
-"базовому рівні подій, які відбувалися у програмі на час аварійного "
-"завершення роботи. За допомогою цих даних розробникові буде легше виявити "
-"причину негараздів. Для вас ці дані можуть виглядати позбавленими сенсу, але "
-"у них може міститися дуже важлива інформація.<br />Типово, зворотні "
-"трасування використовують для інтерактивної або післяаварійної діагностики "
-"програм.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Завантаження..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Створення зворотного трасування… (може тривати якийсь час)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Зараз над цією програмою працює інший інструмент усування вад. Не вдалося "
-"отримати даних щодо аварійного завершення."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Не вдалося зібрати дані щодо аварії."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"До програми, що завершилася аварійно приєднано інший процес усування вад. З "
-"цієї причини інструмент усування вад DrKonqi не може отримати зворотного "
-"трасування. Будь ласка, завершіть роботу стороннього інструмента усування "
-"вад, а потім натисніть кнопку <interface>Перезавантажити</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Зібрані дані щодо аварійного завершення є корисними"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Зібрані дані щодо аварійного завершення можуть бути корисними"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Зібрані дані щодо аварійного завершення, ймовірно, не є корисними"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Зібрані дані щодо аварійного завершення не є корисними"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Оцінка цих даних щодо аварії не є коректною. Ви натрапили на ваду у самій "
-"програмі DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Ви можете натиснути кнопку <interface>Встановити символи для налагоджування</"
-"interface>, щоб наказати програмі автоматично встановити відсутні пакунки з "
-"символами для налагоджування. Якщо це не спрацює, будь ласка, прочитайте "
-"довідку <link url='%1'>Як створювати корисні звіти про вади</link>, щоб "
-"дізнатися про те, як отримати корисне зворотне трасування. Після "
-"встановлення потрібних пакунків (<link url='%2'>список файлів</link>) "
-"натисніть кнопку <interface>Перезавантажити</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Будь ласка, прочитайте довідку <link url='%1'>Як створювати корисні звіти "
-"про вади</link>, щоб дізнатися про те, як отримати корисне зворотне "
-"трасування. Після встановлення потрібних пакунків(<link url='%2'>список "
-"файлів</link>) натисніть кнопку <interface>Перезавантажити</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Інструмент налагоджування завершив роботу у аварійному режимі."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Не вдалося створити перелік даних щодо аварії."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Ви можете спробувати повторно створити зворотне трасування натисканням "
-"кнопки <interface>Перезавантажити</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Програму для пошуку вад не встановлено або її не вдалося запустити.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Вам слід встановити програму для пошуку вад (%1) і натиснути кнопку "
-"<interface>Перезавантажити</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Помилка під час спроби встановлення символів для налагоджування"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Не встановлено пакунки з даними для налагоджування для таких програм і "
-"бібліотек:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Не встановлено пакунків з даними для налагоджування"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -598,121 +346,6 @@ msgstr ""
 "Натисніть цю кнопку, щоб перезапустити програму, що аварійно завершила "
 "роботу."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Загальне"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Від&омості для розробника"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Вибачте, але програма <application>%1</application> завершила роботу у "
-"аварійному режимі.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Оскільки інструмент обробки аварійних завершень сам завершив роботу у "
-"аварійному режимі, автоматичне звітування про вади вимкнено, щоб зменшити "
-"ймовірність повторних помилок.<nl /><nl />Будь ласка, повідомте про цю у "
-"продукті \"drkonqi\" <link url='%1'>вручну</link> до системи стеження за "
-"вадами у KDE. Не забудьте додати до звіту дані зворотного трасування, "
-"наведені на вкладці відомостей для розробників.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Помічник створення звітів вимкнено, оскільки діалогове вікно обробки "
-"аварійних завершень було запущено у безпечному режимі.<nl />Ви можете "
-"повідомити про цю ваду вручну до %1 (додавши до звіту зворотне трасування з "
-"вкладки «Відомості для розробника»).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Помічника звітування щодо вад вимкнено, оскільки, здається, програму, "
-"яка завершила роботу в аварійному режимі, було оновлено або вилучено після "
-"запуску. Через це точне звітування щодо аварії неможливе. Причиною аварії "
-"могло стати саме це оновлення або вилучення.</para><para>Після оновлення "
-"варто вийти з облікового запису користувача системи і увійти до нього знову, "
-"щоб забезпечити повне застосування оновлення без будь-яких побіжних ефектів."
-"</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Ви можете допомогти нам покращити програмне забезпечення KDE "
-"надсиланням звіту щодо цієї помилки.<nl /><link url='%1'>Дізнатися більше "
-"про звітування про вади.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Ви не можете прозвітувати про цю помилку, оскільки у програмі "
-"<application>%1</application> не передбачено адреси для звітування про вади."
-"</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Подробиці:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Виконуваний файл: <application>%1</application> PID: %2 Сигнал: %3 "
-"(%4) Час: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Закрити це вікно (ви втратите всі дані щодо аварійного завершення)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -984,10 +617,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Копіювати"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Натисніть цю кнопку, щоб скопіювати дані щодо аварії (зворотне трасування) "
+"до буфера обміну даними."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Зберегти"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Натисніть цю кнопку, щоб зберегти дані щодо аварійного завершення (зворотне "
+"трасування) до файла. Подібне збереження буде корисним, якщо ви пізніше "
+"забажаєте переглянути ці дані або створити звіт про помилку."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -1003,6 +654,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Повторити"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Помилка під час спроби встановлення символів для налагоджування"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1064,6 +720,15 @@ msgstr ""
 "Створення даних зворотного трасування було припинено через нестачу пам'яті. "
 "Ви можете спробувати повторно створити зворотне трасування натисканням "
 "кнопки <interface>Перезавантажити</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Не встановлено пакунки з даними для налагоджування для таких програм і "
+"бібліотек:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1144,6 +809,16 @@ msgstr ""
 "Натисніть цю кнопку, щоб увійти до системи стеження за вадами KDE за "
 "вказаними вами адресою електронної пошти і паролем."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Ви не можете прозвітувати про цю помилку, оскільки у програмі "
+"<application>%1</application> не передбачено адреси для звітування про вади."
+"</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1194,6 +869,16 @@ msgstr ""
 "варто вийти з облікового запису користувача системи і увійти до нього знову, "
 "щоб забезпечити повне застосування оновлення без будь-яких побіжних ефектів."
 "</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Ви можете допомогти нам покращити програмне забезпечення KDE "
+"надсиланням звіту щодо цієї помилки.<nl /><link url='%1'>Дізнатися більше "
+"про звітування про вади.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1679,6 +1364,253 @@ msgstr "Ім'я користувача bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Пароль до bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Перезавантажити"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Натисніть цю кнопку, щоб перезавантажити дані щодо аварійного завершення "
+#~ "(зворотне трасування). Подібне перезавантаження буде корисним, якщо ви "
+#~ "встановили відповідні пакунки з символами для налагоджування, а також, "
+#~ "якщо ви бажаєте отримати краще зворотне трасування."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Встановити символи налагоджування"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Натисніть цю кнопку, щоб встановити відсутні пакунки символів для "
+#~ "налагоджування."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Встановлення символів недоступне, оскільки програму було оновлено або "
+#~ "вилучено після запуску."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Що таке «зворотне трасування»?</h2><p>Зворотне трасування — це опис "
+#~ "на базовому рівні подій, які відбувалися у програмі на час аварійного "
+#~ "завершення роботи. За допомогою цих даних розробникові буде легше виявити "
+#~ "причину негараздів. Для вас ці дані можуть виглядати позбавленими сенсу, "
+#~ "але у них може міститися дуже важлива інформація.<br />Типово, зворотні "
+#~ "трасування використовують для інтерактивної або післяаварійної "
+#~ "діагностики програм.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Завантаження..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Створення зворотного трасування… (може тривати якийсь час)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Зараз над цією програмою працює інший інструмент усування вад. Не вдалося "
+#~ "отримати даних щодо аварійного завершення."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Не вдалося зібрати дані щодо аварії."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "До програми, що завершилася аварійно приєднано інший процес усування вад. "
+#~ "З цієї причини інструмент усування вад DrKonqi не може отримати "
+#~ "зворотного трасування. Будь ласка, завершіть роботу стороннього "
+#~ "інструмента усування вад, а потім натисніть кнопку "
+#~ "<interface>Перезавантажити</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Зібрані дані щодо аварійного завершення є корисними"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Зібрані дані щодо аварійного завершення можуть бути корисними"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Зібрані дані щодо аварійного завершення, ймовірно, не є корисними"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Зібрані дані щодо аварійного завершення не є корисними"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Оцінка цих даних щодо аварії не є коректною. Ви натрапили на ваду у самій "
+#~ "програмі DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Ви можете натиснути кнопку <interface>Встановити символи для "
+#~ "налагоджування</interface>, щоб наказати програмі автоматично встановити "
+#~ "відсутні пакунки з символами для налагоджування. Якщо це не спрацює, будь "
+#~ "ласка, прочитайте довідку <link url='%1'>Як створювати корисні звіти про "
+#~ "вади</link>, щоб дізнатися про те, як отримати корисне зворотне "
+#~ "трасування. Після встановлення потрібних пакунків (<link url='%2'>список "
+#~ "файлів</link>) натисніть кнопку <interface>Перезавантажити</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Будь ласка, прочитайте довідку <link url='%1'>Як створювати корисні звіти "
+#~ "про вади</link>, щоб дізнатися про те, як отримати корисне зворотне "
+#~ "трасування. Після встановлення потрібних пакунків(<link url='%2'>список "
+#~ "файлів</link>) натисніть кнопку <interface>Перезавантажити</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Інструмент налагоджування завершив роботу у аварійному режимі."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Не вдалося створити перелік даних щодо аварії."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Ви можете спробувати повторно створити зворотне трасування натисканням "
+#~ "кнопки <interface>Перезавантажити</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Програму для пошуку вад не встановлено або її не вдалося "
+#~ "запустити.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Вам слід встановити програму для пошуку вад (%1) і натиснути "
+#~ "кнопку <interface>Перезавантажити</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Не встановлено пакунків з даними для налагоджування"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Загальне"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Від&омості для розробника"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Вибачте, але програма <application>%1</application> завершила "
+#~ "роботу у аварійному режимі.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Оскільки інструмент обробки аварійних завершень сам завершив роботу "
+#~ "у аварійному режимі, автоматичне звітування про вади вимкнено, щоб "
+#~ "зменшити ймовірність повторних помилок.<nl /><nl />Будь ласка, повідомте "
+#~ "про цю у продукті \"drkonqi\" <link url='%1'>вручну</link> до системи "
+#~ "стеження за вадами у KDE. Не забудьте додати до звіту дані зворотного "
+#~ "трасування, наведені на вкладці відомостей для розробників.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Помічник створення звітів вимкнено, оскільки діалогове вікно "
+#~ "обробки аварійних завершень було запущено у безпечному режимі.<nl />Ви "
+#~ "можете повідомити про цю ваду вручну до %1 (додавши до звіту зворотне "
+#~ "трасування з вкладки «Відомості для розробника»).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Помічника звітування щодо вад вимкнено, оскільки, здається, "
+#~ "програму, яка завершила роботу в аварійному режимі, було оновлено або "
+#~ "вилучено після запуску. Через це точне звітування щодо аварії неможливе. "
+#~ "Причиною аварії могло стати саме це оновлення або вилучення.</"
+#~ "para><para>Після оновлення варто вийти з облікового запису користувача "
+#~ "системи і увійти до нього знову, щоб забезпечити повне застосування "
+#~ "оновлення без будь-яких побіжних ефектів.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Подробиці:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Виконуваний файл: <application>%1</application> PID: %2 Сигнал: %3 "
+#~ "(%4) Час: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Закрити це вікно (ви втратите всі дані щодо аварійного завершення)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

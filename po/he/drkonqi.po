@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-28 23:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -43,236 +43,6 @@ msgstr "Netanel_h,צוות התרגום של KDE ישראל"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "netanel@gmx.com,kde-l10n-he@kde.org"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&טעינה מחדש"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"כפתור זה טוען את פרטי הקריסה (ניתוח מהלכים - backtrace) מחדש. שימושי אם "
-"התקנת את חבילות סמלי ניפוי השגיאות המתאימות ומטרתך היא לקבל ניתוח מהלכים "
-"מוצלח יותר."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "ה&תקנת סמלי ניפוי שגיאות"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "כפתור זה מתקין את חבילות סמלי ניפוי השגיאות החסרות."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr "התקנת סמלים לא זמינה כיוון שהיישום עודכן או הוסר לאחר שהופעל."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "כפתור זה מעתיק את פרטי הקריסה (ניתוח מהלכים - backtrace) ללוח הגזירים."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"כפתור זה שומר את פרטי הקריסה (ניתוח מהלכים - backtrace) לקובץ. שימושי כדי "
-"לעיין בהם או לדווח על תקלה מאוחר יותר."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>מה זה „ניתוח מהלכים” (backtrace)?</h2><p>ניתוח מהלכים מתאר מה קרה בתוך "
-"היישום כשקרס, כדי שהמפתחים יוכלו לאתר איפה התחיל הבלגן. הם עשויים להיראות לך "
-"חסרי משמעות, אך הם עשויים להכיל המון מידע שימושי.<br />ניתוחי מהלכים משמשים "
-"בעיקר במהלך ניפוי שגיאות אינטראקטיבי ולאחר תקלה.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "בטעינה…"
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "ניתוח המהלכים נוצר… (עשוי לארוך זמן מה)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"מנפה שגיאות אחר מנפה כרגע שגיאות באותו היישום. אי אפשר למשוך את פרטי הקריסה."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "אי אפשר למשוך את פרטי הקריסה."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"תהליך ניפוי שגיאות נוסף מוצמד ליישום שקרס. לכן, מנפה השגיאות של DrKonqi לא "
-"יכול למשוך את ניתוח המהלכים. נא לסגור את מנפה השגיאות האחר וללחוץ על "
-"<interface>טעינה מחדש</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "פרטי הקריסה שנוצרו מביאים תועלת"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "פרטי הקריסה שנוצרו עשוים להביא תועלת"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "פרטי הקריסה שנוצרו כנראה לא מביאים תועלת"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "פרטי הקריסה לא מביאים תועלת"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "דירוג היעילות של פרטי הקריסה שגוי. זאת תקלה ב־DrKonqi עצמו."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"אפשר ללחוץ על <interface>התקנת סמלי ניפוי שגיאות</interface> כדי להתקין "
-"אוטומטית את חבילות פרטי ניפוי השגיאות החסרות. אם השיטה הזאת לא עובדת: נא "
-"לקרוא את <link url='%1'>איך ליצור דוחות קריסה משמעותיים</link> כדי ללמוד איך "
-"לקבל ניתוחי מהלכים שימושיים, להתקין את החבילות הנחוצות (<link url='%2'>רשימת "
-"קבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"נא לקרוא <link url='%1'>איך ליצור דוחות קריסה שימושיים</link> כדי ללמוד איך "
-"לקבל ניתוח מהלכים שימושי, להתקין את החבילות הנחוצות (<link url='%2'>רשימת "
-"הקבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "מנפה השגיאות הסתיים במפתיע."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "לא ניתן ליצור את מידע הקריסה."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"אפשר לנסות ליצור את ניתוח המהלכים מחדש בלחיצה על הכפתור <interface>טעינה "
-"מחדש</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>יישום ניפוי השגיאות חסר או שלא ניתן להפעילו.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>יש להתקין את יישום מנפה השגיאות (%1) תחילה ואז ללחוץ על הכפתור "
-"<interface>טעינה מחדש</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "שגיאה במהלך התקנת סמלי ניפוי השגיאות"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr "החבילות שמכילות את פרטי ניפוי השגיאות ליישום הבא והספריות חסרות:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "סמלי ניפוי שגיאות חסרים"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -567,111 +337,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "אפשר להשתמש בכפתור זה כדי להפעיל יישום שקרס מחדש."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&כללי"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "מידע למ&פתחים"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para>‏<application>%1</application> נסגר במפתיע, עימך הסליחה.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>כיוון שהמטפל בשגיאות עצמו כשל, תהליך הדיווח האוטומטי מושבת כדי להפחית "
-"את הסיכון לכשל חוזר.<nl /><nl />נא, <link url='%1'>לדווח ידנית</link> על "
-"השגיאה הזאת למערכת מעקב התקלות של KDE. לא לשכוח לכלול את ניתוח המהלכים "
-"מהלשונית <interface>מידע למפתחים</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>מסייע הדיווח הושבת כיוון שחלונית המטפל בקריסות הופעלה במצב בטוח.<nl /"
-">אפשר לדווח על התקלה הזאת ידנית דרך %1 (כולל ניתוח המהלכים מהלשונית "
-"<interface>מידע למפתחים</interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>מסייע הדיווח מושבת כיוון שכנראה שהיישום שקרס עודכן או הוסר מאז שהופעל. "
-"מצב כזה מונע דיווח יעיל על קריסות ועלול גם לגרום לקריסה הזאת בעצמו.</"
-"para><para>לאחר עדכון תמיד כדאי לצאת מההפעלה ולחזור אליה כדי לוודא שהעדכון "
-"חל במלואו ולא יגרום לתופעות לוואי.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>אפשר לסייע לנו לשפר את התוכנות של KDE על ידי דיווח על השגיאה הזאת.<nl /"
-"><link url='%1'>מידע נוסף על דיווח תקלות.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>אי אפשר לדווח על השגיאה הזאת כיוון ש־<application>%1</application> לא "
-"מספק כתובת לדיווח תקלות.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "פרטים:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): <numid>%2</"
-"numid> אות (Signal): %3 (%4) מועד: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "סגירת החלונית הזאת (פרטי הקריסה יאבדו.)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -932,10 +597,25 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "העתקה"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "כפתור זה מעתיק את פרטי הקריסה (ניתוח מהלכים - backtrace) ללוח הגזירים."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "שמירה"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"כפתור זה שומר את פרטי הקריסה (ניתוח מהלכים - backtrace) לקובץ. שימושי כדי "
+"לעיין בהם או לדווח על תקלה מאוחר יותר."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -950,6 +630,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ניסיון חוזר"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "שגיאה במהלך התקנת סמלי ניפוי השגיאות"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1009,6 +694,13 @@ msgid ""
 msgstr ""
 "יצירת ניתוח המהלכים נעצר עקב עומס על הזיכרון. אפשר לנסות ליצור את ניתוח "
 "המהלכים מחדש בלחיצה על הכפתור <interface>טעינה מחדש</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr "החבילות שמכילות את פרטי ניפוי השגיאות ליישום הבא והספריות חסרות:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1083,6 +775,15 @@ msgstr ""
 "אפשר להשתמש בכפתור הזה כדי להיכנס למערכת מעקב התקלות של KDE באמצעות כתובת "
 "הדוא״ל והסיסמה שסופקו."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>אי אפשר לדווח על השגיאה הזאת כיוון ש־<application>%1</application> לא "
+"מספק כתובת לדיווח תקלות.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1130,6 +831,15 @@ msgstr ""
 "<para>לאחר עדכון תמיד כדאי לצאת מההפעלה\n"
 "ולחזור אליה כדי לוודא שהעדכון חל במלואו ולא יגרום\n"
 "לתופעות לוואי.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>אפשר לסייע לנו לשפר את התוכנות של KDE על ידי דיווח על השגיאה הזאת.<nl /"
+"><link url='%1'>מידע נוסף על דיווח תקלות.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1590,6 +1300,231 @@ msgstr "שם משתמש ב־bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "סיסמה ב־bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&טעינה מחדש"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "כפתור זה טוען את פרטי הקריסה (ניתוח מהלכים - backtrace) מחדש. שימושי אם "
+#~ "התקנת את חבילות סמלי ניפוי השגיאות המתאימות ומטרתך היא לקבל ניתוח מהלכים "
+#~ "מוצלח יותר."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "ה&תקנת סמלי ניפוי שגיאות"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "כפתור זה מתקין את חבילות סמלי ניפוי השגיאות החסרות."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr "התקנת סמלים לא זמינה כיוון שהיישום עודכן או הוסר לאחר שהופעל."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>מה זה „ניתוח מהלכים” (backtrace)?</h2><p>ניתוח מהלכים מתאר מה קרה "
+#~ "בתוך היישום כשקרס, כדי שהמפתחים יוכלו לאתר איפה התחיל הבלגן. הם עשויים "
+#~ "להיראות לך חסרי משמעות, אך הם עשויים להכיל המון מידע שימושי.<br />ניתוחי "
+#~ "מהלכים משמשים בעיקר במהלך ניפוי שגיאות אינטראקטיבי ולאחר תקלה.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "בטעינה…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "ניתוח המהלכים נוצר… (עשוי לארוך זמן מה)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "מנפה שגיאות אחר מנפה כרגע שגיאות באותו היישום. אי אפשר למשוך את פרטי "
+#~ "הקריסה."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "אי אפשר למשוך את פרטי הקריסה."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "תהליך ניפוי שגיאות נוסף מוצמד ליישום שקרס. לכן, מנפה השגיאות של DrKonqi "
+#~ "לא יכול למשוך את ניתוח המהלכים. נא לסגור את מנפה השגיאות האחר וללחוץ על "
+#~ "<interface>טעינה מחדש</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "פרטי הקריסה שנוצרו מביאים תועלת"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "פרטי הקריסה שנוצרו עשוים להביא תועלת"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "פרטי הקריסה שנוצרו כנראה לא מביאים תועלת"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "פרטי הקריסה לא מביאים תועלת"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "דירוג היעילות של פרטי הקריסה שגוי. זאת תקלה ב־DrKonqi עצמו."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "אפשר ללחוץ על <interface>התקנת סמלי ניפוי שגיאות</interface> כדי להתקין "
+#~ "אוטומטית את חבילות פרטי ניפוי השגיאות החסרות. אם השיטה הזאת לא עובדת: נא "
+#~ "לקרוא את <link url='%1'>איך ליצור דוחות קריסה משמעותיים</link> כדי ללמוד "
+#~ "איך לקבל ניתוחי מהלכים שימושיים, להתקין את החבילות הנחוצות (<link "
+#~ "url='%2'>רשימת קבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</"
+#~ "interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "נא לקרוא <link url='%1'>איך ליצור דוחות קריסה שימושיים</link> כדי ללמוד "
+#~ "איך לקבל ניתוח מהלכים שימושי, להתקין את החבילות הנחוצות (<link "
+#~ "url='%2'>רשימת הקבצים</link>) וללחוץ על הכפתור <interface>טעינה מחדש</"
+#~ "interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "מנפה השגיאות הסתיים במפתיע."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "לא ניתן ליצור את מידע הקריסה."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "אפשר לנסות ליצור את ניתוח המהלכים מחדש בלחיצה על הכפתור <interface>טעינה "
+#~ "מחדש</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>יישום ניפוי השגיאות חסר או שלא ניתן להפעילו.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>יש להתקין את יישום מנפה השגיאות (%1) תחילה ואז ללחוץ על הכפתור "
+#~ "<interface>טעינה מחדש</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "סמלי ניפוי שגיאות חסרים"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&כללי"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "מידע למ&פתחים"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>‏<application>%1</application> נסגר במפתיע, עימך הסליחה.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>כיוון שהמטפל בשגיאות עצמו כשל, תהליך הדיווח האוטומטי מושבת כדי "
+#~ "להפחית את הסיכון לכשל חוזר.<nl /><nl />נא, <link url='%1'>לדווח ידנית</"
+#~ "link> על השגיאה הזאת למערכת מעקב התקלות של KDE. לא לשכוח לכלול את ניתוח "
+#~ "המהלכים מהלשונית <interface>מידע למפתחים</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>מסייע הדיווח הושבת כיוון שחלונית המטפל בקריסות הופעלה במצב בטוח."
+#~ "<nl />אפשר לדווח על התקלה הזאת ידנית דרך %1 (כולל ניתוח המהלכים מהלשונית "
+#~ "<interface>מידע למפתחים</interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>מסייע הדיווח מושבת כיוון שכנראה שהיישום שקרס עודכן או הוסר מאז "
+#~ "שהופעל. מצב כזה מונע דיווח יעיל על קריסות ועלול גם לגרום לקריסה הזאת "
+#~ "בעצמו.</para><para>לאחר עדכון תמיד כדאי לצאת מההפעלה ולחזור אליה כדי "
+#~ "לוודא שהעדכון חל במלואו ולא יגרום לתופעות לוואי.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "פרטים:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>קובץ הפעלה: <application>%1</application> מזהה יישום (PID): <numid>"
+#~ "%2</numid> אות (Signal): %3 (%4) מועד: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "סגירת החלונית הזאת (פרטי הקריסה יאבדו.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

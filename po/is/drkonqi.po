@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2026-03-23 16:04+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -39,253 +39,6 @@ msgid "Your emails"
 msgstr ""
 "ra@ra.is, bre@netverjar.is, spm@vlug.eyjar.is, sv1@fellsnet.is, "
 "gudmundure@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Endu&rhlaða"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Notaðu þennan hnapp til að hlaða aftur inn villuupplýsingarnar "
-"(endurrakningu). Þetta er gagnlegt þegar búið er að setja upp góða "
-"aflúsunartáknapakka og þú vilt fá betri endurrakningu."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Setja upp &aflúsunartákn"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Notaðu þennan hnapp til að setja upp aflúsunartáknapakkana sem vantar."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Uppsetning tákna er ekki í boði þar sem forritið var uppfært eða fjarlægt "
-"eftir að það var ræst."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Notaðu þennan hnapp til að afrita villuupplýsingarnar (endurrakninguna) á "
-"klippispjaldið."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Notaðu þennan hnapp til að vista villuupplýsingarnar (endurrakninguna) í "
-"skrá. Þetta er gagnlegt ef þú vilt skoða gögnin eða senda inn villuskýrslu "
-"síðar."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Hvað er \"endurrakning\" (e. backtrace)?</h2><p>Endurrakning lýsir því "
-"sem gerðist í forritinu þegar það hrundi svo forritarar þess geti rakið sig "
-"að uppruna villunnar. Þessi gögn virðast e.t.v. merkingarlaus við fyrstu sýn "
-"en þau innihalda mikið af gagnlegum upplýsingum. <br />Endurrakningar eru "
-"oft notaðar í aflúsun bæði þegar forritið er í keyrslu og eftir að það "
-"stöðvast.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Hleður..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Útbý endurrakningu... (þetta gæti tekið nokkra stund)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Annað aflúsunarforrit er að aflúsa sama hugbúnað. Ekki var hægt að sækja "
-"villuupplýsingarnar."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Ekki tókst að sækja villuupplýsingarnar."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Önnur aflúsunarvinnsla er tengd forritinu sem hrundi. Af þeim sökum getur "
-"DrKonqi aflúsarinn ekki sótt endurrakninguna. Veldu annað aflúsunarforrit og "
-"smelltu á <interface>Endurhlaða</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Villuupplýsingarnar sem kerfið bjó til eru gagnlegar"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Villuupplýsingarnar sem kerfið bjó til gætu verið gagnlegar"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Villuupplýsingarnar sem kerfið bjó til eru líklega ekki gagnlegar"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Villuupplýsingarnar sem kerfið bjó til eru ekki gagnlegar"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Einkunnagjöfin fyrir þessar villuupplýsingar er ógild. Þetta er villa í "
-"DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Þú getur smellt á hnappinn <interface>Setja upp aflúsunartákn</interface> "
-"til að setja sjálfkrafa upp þá aflúsunarupplýsingapakka sem vantar. Ef það "
-"virkar ekki: lestu yfir <link url='%1'>How to create useful crash reports</"
-"link> (hvernig útbúa á gagnlegar villuskýrslur) til að fá upplýsingar um "
-"hvernig gagnleg endurrakning er gerð; settu upp nauðsynlega pakka (<link "
-"url='%2'>listi yfir skrár</link>) og smelltu á hnappinn "
-"<interface>Endurhlaða</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Skoðaðu<link url='%1'>How to create useful crash reports</link> til að fá "
-"upplýsingar um hvernig gagnleg endurrakning er gerð; settu upp nauðsynlega "
-"pakka (<link url='%2'>listi yfir skrár</link>) og smelltu á hnappinn "
-"<interface>Endurhlaða</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Aflúsarinn stöðvaðist óvænt."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Ekki tókst að útbúa villuupplýsingarnar."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Þú getur reynt að endurgera endurrakninguna með því að smella á hnappinn "
-"<interface>Endurhlaða</interface>"
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Aflúsunarforritið er ekki til staðar eða ekki tókst að keyra það.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Þú þarft fyrst að setja upp aflúsunarforritið (%1) og smella svo á "
-"hnappinn <interface>Endurhlaða</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Villa við uppsetningu á aflúsunartáknum"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Pakkarnir sem innihalda aflúsunarupplýsingar fyrir eftirfarandi hugbúnað og "
-"hugbúnaðarsöfn eru ekki til staðar:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Aflúsunarupplýsingapakka vantar"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -589,116 +342,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Notaðu þennan hnapp til að endurræsa hrunda forritið."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "Al&mennt"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Upplýsingar forritara"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para>Því miður lokaðist <application>%1</application> óvænt.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Þar sem hrunumsjónarforritið sjálft hrundi er sjálfvirka "
-"skýrsluaðgerðin gerð óvirk til draga úr hættu á öðru hruni.<nl /> <nl /"
-"><link url='%1'>Sendu tilkynningu handvirkt</link> um þessa villu í KDE-"
-"villugrunninn. Ekki gleyma að setja með endurrakningu úr flipanum "
-"<interface>Upplýsingar fyrir forritara</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarglugginn var opnaður "
-"á öryggissniði (e. safe mode).<nl />Þú getur sent villuskýrsluna handvirkt "
-"til %1 (þ.m.t. endurrakninguna úr flipanum <interface>Upplýsingar fyrir "
-"forritara</interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarforritið virðist "
-"hafa verið uppfært eða fjarlægt frá því það var opnað. Þetta kemur í veg "
-"fyrir nákvæma upplýsingagjöf um hrun og getur einnig verið ástæðan fyrir "
-"þessu hruni.</para><para>Eftir uppfærslu er alltaf góð hugmynd að skrá sig "
-"út og aftur inn til að tryggja að uppfærslan sé að fullu sett upp og valdi "
-"engum aukaverkunum.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Þú getur hjálpað okkur að bæta hugbúnað KDE með því að tilkynna þessa "
-"villu.<nl /><link url='%1'>Fá meiri upplýsingar um villutilkynningar</link></"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Þú getur ekki tilkynnt þessa villu þar sem <application>%1</"
-"application> gefur ekki upp villutilkynningarslóð.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Nánar:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Keyrsluskrá: <application>%1</application> PID: %2 Merki: %3 (%4) "
-"Tími: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Loka þessum svarglugga (hrunupplýsingarnar munu glatast)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -964,10 +607,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Afrita"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Notaðu þennan hnapp til að afrita villuupplýsingarnar (endurrakninguna) á "
+"klippispjaldið."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Vista"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Notaðu þennan hnapp til að vista villuupplýsingarnar (endurrakninguna) í "
+"skrá. Þetta er gagnlegt ef þú vilt skoða gögnin eða senda inn villuskýrslu "
+"síðar."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -983,6 +644,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reyna aftur"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Villa við uppsetningu á aflúsunartáknum"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1045,6 +711,15 @@ msgstr ""
 "Endurrakningin var stöðvuð vegna minnisálags. Þú getur reynt að endurgera "
 "endurrakninguna með því að smella á hnappinn <interface>Endurhlaða</"
 "interface>"
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Pakkarnir sem innihalda aflúsunarupplýsingar fyrir eftirfarandi hugbúnað og "
+"hugbúnaðarsöfn eru ekki til staðar:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1122,6 +797,15 @@ msgstr ""
 "Notaðu þennan hnapp til að skrá þig inn í KDE villuleitarkerfið með "
 "netfanginu og lykilorðinu sem þú gafst upp."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Þú getur ekki tilkynnt þessa villu þar sem <application>%1</"
+"application> gefur ekki upp villutilkynningarslóð.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1173,6 +857,16 @@ msgstr ""
 "þessu hruni.</para><para>Eftir uppfærslu er alltaf góð\n"
 "hugmynd að skrá sig út og aftur inn til að tryggja að uppfærslan\n"
 "sé að fullu sett upp og valdi engum aukaverkunum.</"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Þú getur hjálpað okkur að bæta hugbúnað KDE með því að tilkynna þessa "
+"villu.<nl /><link url='%1'>Fá meiri upplýsingar um villutilkynningar</link></"
+"para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1649,6 +1343,245 @@ msgstr "bugstest.kde.org notandanafn"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org lykilorð"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Endu&rhlaða"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Notaðu þennan hnapp til að hlaða aftur inn villuupplýsingarnar "
+#~ "(endurrakningu). Þetta er gagnlegt þegar búið er að setja upp góða "
+#~ "aflúsunartáknapakka og þú vilt fá betri endurrakningu."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Setja upp &aflúsunartákn"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Notaðu þennan hnapp til að setja upp aflúsunartáknapakkana sem vantar."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Uppsetning tákna er ekki í boði þar sem forritið var uppfært eða fjarlægt "
+#~ "eftir að það var ræst."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Hvað er \"endurrakning\" (e. backtrace)?</h2><p>Endurrakning lýsir "
+#~ "því sem gerðist í forritinu þegar það hrundi svo forritarar þess geti "
+#~ "rakið sig að uppruna villunnar. Þessi gögn virðast e.t.v. merkingarlaus "
+#~ "við fyrstu sýn en þau innihalda mikið af gagnlegum upplýsingum. <br /"
+#~ ">Endurrakningar eru oft notaðar í aflúsun bæði þegar forritið er í "
+#~ "keyrslu og eftir að það stöðvast.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Hleður..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Útbý endurrakningu... (þetta gæti tekið nokkra stund)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Annað aflúsunarforrit er að aflúsa sama hugbúnað. Ekki var hægt að sækja "
+#~ "villuupplýsingarnar."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Ekki tókst að sækja villuupplýsingarnar."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Önnur aflúsunarvinnsla er tengd forritinu sem hrundi. Af þeim sökum getur "
+#~ "DrKonqi aflúsarinn ekki sótt endurrakninguna. Veldu annað aflúsunarforrit "
+#~ "og smelltu á <interface>Endurhlaða</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Villuupplýsingarnar sem kerfið bjó til eru gagnlegar"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Villuupplýsingarnar sem kerfið bjó til gætu verið gagnlegar"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Villuupplýsingarnar sem kerfið bjó til eru líklega ekki gagnlegar"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Villuupplýsingarnar sem kerfið bjó til eru ekki gagnlegar"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Einkunnagjöfin fyrir þessar villuupplýsingar er ógild. Þetta er villa í "
+#~ "DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Þú getur smellt á hnappinn <interface>Setja upp aflúsunartákn</interface> "
+#~ "til að setja sjálfkrafa upp þá aflúsunarupplýsingapakka sem vantar. Ef "
+#~ "það virkar ekki: lestu yfir <link url='%1'>How to create useful crash "
+#~ "reports</link> (hvernig útbúa á gagnlegar villuskýrslur) til að fá "
+#~ "upplýsingar um hvernig gagnleg endurrakning er gerð; settu upp "
+#~ "nauðsynlega pakka (<link url='%2'>listi yfir skrár</link>) og smelltu á "
+#~ "hnappinn <interface>Endurhlaða</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Skoðaðu<link url='%1'>How to create useful crash reports</link> til að fá "
+#~ "upplýsingar um hvernig gagnleg endurrakning er gerð; settu upp "
+#~ "nauðsynlega pakka (<link url='%2'>listi yfir skrár</link>) og smelltu á "
+#~ "hnappinn <interface>Endurhlaða</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Aflúsarinn stöðvaðist óvænt."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Ekki tókst að útbúa villuupplýsingarnar."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Þú getur reynt að endurgera endurrakninguna með því að smella á hnappinn "
+#~ "<interface>Endurhlaða</interface>"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Aflúsunarforritið er ekki til staðar eða ekki tókst að keyra það."
+#~ "</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Þú þarft fyrst að setja upp aflúsunarforritið (%1) og smella svo "
+#~ "á hnappinn <interface>Endurhlaða</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Aflúsunarupplýsingapakka vantar"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "Al&mennt"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Upplýsingar forritara"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Því miður lokaðist <application>%1</application> óvænt.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Þar sem hrunumsjónarforritið sjálft hrundi er sjálfvirka "
+#~ "skýrsluaðgerðin gerð óvirk til draga úr hættu á öðru hruni.<nl /> <nl /"
+#~ "><link url='%1'>Sendu tilkynningu handvirkt</link> um þessa villu í KDE-"
+#~ "villugrunninn. Ekki gleyma að setja með endurrakningu úr flipanum "
+#~ "<interface>Upplýsingar fyrir forritara</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarglugginn var "
+#~ "opnaður á öryggissniði (e. safe mode).<nl />Þú getur sent villuskýrsluna "
+#~ "handvirkt til %1 (þ.m.t. endurrakninguna úr flipanum "
+#~ "<interface>Upplýsingar fyrir forritara</interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Skýrsluhjálpin er óvirk vegna þess að hrunumsjónarforritið virðist "
+#~ "hafa verið uppfært eða fjarlægt frá því það var opnað. Þetta kemur í veg "
+#~ "fyrir nákvæma upplýsingagjöf um hrun og getur einnig verið ástæðan fyrir "
+#~ "þessu hruni.</para><para>Eftir uppfærslu er alltaf góð hugmynd að skrá "
+#~ "sig út og aftur inn til að tryggja að uppfærslan sé að fullu sett upp og "
+#~ "valdi engum aukaverkunum.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Nánar:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Keyrsluskrá: <application>%1</application> PID: %2 Merki: %3 (%4) "
+#~ "Tími: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Loka þessum svarglugga (hrunupplýsingarnar munu glatast)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

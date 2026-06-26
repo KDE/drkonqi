@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1738957 2026-06-12 01:28:09Z scripty $
+# $Id: drkonqi.po 1739911 2026-06-26 01:29:57Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-28 06:52+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -40,249 +40,6 @@ msgid "Your emails"
 msgstr ""
 "markos@elite.org,roman.maurer@amis.net,gregor.rakar@kiss.si,gregor."
 "fajdiga@telemach.net,jlp@holodeck1.com,andrejm@ubuntu.si"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Znova naloži"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Kliknite ta gumb, da znova naložite podatke o sesutju (povratno sled). To je "
-"uporabno, če ste namestili pakete s podatki za razhroščevanje in želite "
-"dobiti boljšo povratno sled."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Namesti razhroščevalne simbole"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Kliknite ta gumb, da namestite manjkajoče pakete z razhroščevalnimi simboli."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Namestitev simbola ni na voljo, ker je bila aplikacija posodobljena oz. "
-"odstranjena po zagonu."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Kliknite ta gumb, da kopirate podatke o sesutju (povratno sled) v odložišče."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Kliknite ta gumb, da shranite podatke o sesutju (povratno sled) v datoteko. "
-"To je uporabno, če si želite podatke ogledati kasneje ali pa oddati poročilo "
-"kasneje."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Kaj je »povratna sled«?</h2><p>Povratna sled v osnovi opisuje, kaj se je "
-"dogajalo v programu, ko se je sesul. Razvijalci lahko tako ugotovijo, kje so "
-"se težave pričele. Vam morda ne pomeni nič, a lahko vsebuje ogromno "
-"uporabnih podatkov.<br />Povratne sledi se običajno uporabljajo med "
-"interaktivnim razhroščevanjem ali pa razhroščevanjem po sesutju.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Nalaganje ..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Ustvarjanje povratne sledi ... (to lahko traja dalj časa)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Nek drug razhroščevalnik trenutno že razhroščuje ta program. Podatkov o "
-"sesutju ni bilo mogoče pridobiti."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Podatkov o sesutju ni bilo mogoče pridobiti."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Na sesut program je pripet neko drugo razhroščevalno opravilo, zato "
-"razhroščevalnik DrKonqija ne more pridobiti povratne sledi. Zaprite drugi "
-"razhroščevalnik in kliknite <interface>Znova naloži</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Ustvarjeni podatki o sesutju so uporabni"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Ustvarjeni podatki o sesutju so morda uporabni"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Ustvarjeni podatki o sesutju verjetno niso uporabni"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Ustvarjeni podatki o sesutju niso uporabni"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "Ocena teh podatkov o sesutju ni veljavna. To je napaka v DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Za samodejno namestitev manjkajočih paketov z razhroščevalnimi podatki lahko "
-"kliknete gumb <interface>Namesti razhroščevalne simbole</interface>. Če to "
-"ne deluje: preberite si <link url='%1'>Kako ustvariti uporabna poročila o "
-"sesutjih</link>, da ugotovite kako dobiti uporabno povratno sled; namestite "
-"zahtevane pakete (<link url='%2'>seznam datotek</link>) in kliknite gumb "
-"<interface>Znova naloži</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Preberite si <link url='%1'>Kako ustvariti uporabna poročila o sesutjih</"
-"link>, da ugotovite kako dobiti uporabno povratno sled;  namestite zahtevane "
-"pakete (<link url='%2'>seznam datotek</link>) in kliknite gumb "
-"<interface>Znova naloži</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Razhroščevalnik je nepričakovano končal."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Podatkov o sesutju ni bilo mogoče ustvariti."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Povratno sled lahko poskusite ustvariti znova s klikom na gumb "
-"<interface>Znova naloži</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Razhroščevalni program manjka ali pa ga ni bilo mogoče zagnati.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Najprej morate namestiti razhroščevalni program (%1) in nato "
-"klikniti na gumb <interface>Znova naloži</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Napaka med nameščanjem razhroščevalnih simbolov"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Manjkajo paketi, ki vsebujejo razhroščevalne podatke za naslednje programe "
-"in knjižnice:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Manjkajoči paketi z razhroščevalnimi podatki"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -587,118 +344,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Kliknite ta gumb, da znova zaženete sesut program."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "Splošno"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Po&datki za razvijalce"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Se opravičujemo, program <application>%1</application> se je "
-"nepričakovano zaprl.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Ker je zagon upravljalnika sesutij spodletel, je bilo samodejno "
-"poročanje onemogočeno, da bi zmanjšali tveganje ponovnega neuspeha.<nl /"
-"><nl />O tem hrošču <link url='%1'>poročajte ročno</link> v KDE-jevemu "
-"sistemu za sledenje hroščem. Ne pozabite priložiti povratne sledi z zavihka "
-"<interface>Podatki za razvijalce</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Ker je bil upravljalnik s sesutji zagnan v varnem načinu, je pomočnik "
-"za poročanje onemogočen.<nl />Ta hrošč lahko ročno sporočite na %1 "
-"(vključite povratno sled z zavihka <interface>Podatki za razvijalce</"
-"interface>).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Pomočnik za poročanje je onemogočen, ker je videti, da je zrušena "
-"aplikacija bila posodobljena ali odstranjena odkar je bila zagnana. To "
-"preprečuje natančno poročanje o zrušitvah in je lahko tudi vzrok za to.</"
-"para><para>Po posodobitvi je vedno dobra ideja, da se odjavite in ponovno "
-"prijavite in tako poskrbite, da bo posodobitev v celoti uporabljena in ne bi "
-"povzročila morebitnih stranskih učinkov.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>S poročanjem o tej napaki nam lahko pomagate izboljšati KDE-jeve "
-"programe.<nl /><link url='%1'>Naučite se več o poročanju o programskih "
-"napakah.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Te napake ne morete sporočiti, ker <application>%1</application> ne "
-"ponuja naslova za poročanje o hroščih.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Podrobnosti:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Program: <application>%1</application> PID: %2 Signal: %3 (%4) Čas: %5 "
-"%6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Zapri to pogovorno okno (izgubili boste podatke o sesutju)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -967,10 +612,27 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopiraj"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Kliknite ta gumb, da kopirate podatke o sesutju (povratno sled) v odložišče."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Shrani"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Kliknite ta gumb, da shranite podatke o sesutju (povratno sled) v datoteko. "
+"To je uporabno, če si želite podatke ogledati kasneje ali pa oddati poročilo "
+"kasneje."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -986,6 +648,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Poskusi ponovno"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Napaka med nameščanjem razhroščevalnih simbolov"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1047,6 +714,15 @@ msgstr ""
 "Generiranje povratne sledi je bilo ustavljeno zaradi pritiska na pomnilnik. "
 "Povratno sled lahko poskusite znova ustvariti s klikom na gumb "
 "<interface>Ponovno naloži</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Manjkajo paketi, ki vsebujejo razhroščevalne podatke za naslednje programe "
+"in knjižnice:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1126,6 +802,15 @@ msgstr ""
 "S tem gumbom se prijavite v sistem za sledenje hroščem KDE z navedenim e-"
 "poštnim naslovom in geslom."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Te napake ne morete sporočiti, ker <application>%1</application> ne "
+"ponuja naslova za poročanje o hroščih.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1176,6 +861,16 @@ msgstr ""
 "<para>Po posodobitvi je vedno dobra ideja, da se odjavite in\n"
 "ponovno prijavite in tako poskrbite, da bo posodobitev v celoti\n"
 "uporabljena in ne bi povzročila morebitnih stranskih učinkov.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>S poročanjem o tej napaki nam lahko pomagate izboljšati KDE-jeve "
+"programe.<nl /><link url='%1'>Naučite se več o poročanju o programskih "
+"napakah.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1652,6 +1347,243 @@ msgstr "bugstest.kde.org uporabniško ime"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org geslo"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Znova naloži"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Kliknite ta gumb, da znova naložite podatke o sesutju (povratno sled). To "
+#~ "je uporabno, če ste namestili pakete s podatki za razhroščevanje in "
+#~ "želite dobiti boljšo povratno sled."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Namesti razhroščevalne simbole"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Kliknite ta gumb, da namestite manjkajoče pakete z razhroščevalnimi "
+#~ "simboli."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Namestitev simbola ni na voljo, ker je bila aplikacija posodobljena oz. "
+#~ "odstranjena po zagonu."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Kaj je »povratna sled«?</h2><p>Povratna sled v osnovi opisuje, kaj se "
+#~ "je dogajalo v programu, ko se je sesul. Razvijalci lahko tako ugotovijo, "
+#~ "kje so se težave pričele. Vam morda ne pomeni nič, a lahko vsebuje "
+#~ "ogromno uporabnih podatkov.<br />Povratne sledi se običajno uporabljajo "
+#~ "med interaktivnim razhroščevanjem ali pa razhroščevanjem po sesutju.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Nalaganje ..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Ustvarjanje povratne sledi ... (to lahko traja dalj časa)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Nek drug razhroščevalnik trenutno že razhroščuje ta program. Podatkov o "
+#~ "sesutju ni bilo mogoče pridobiti."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Podatkov o sesutju ni bilo mogoče pridobiti."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Na sesut program je pripet neko drugo razhroščevalno opravilo, zato "
+#~ "razhroščevalnik DrKonqija ne more pridobiti povratne sledi. Zaprite drugi "
+#~ "razhroščevalnik in kliknite <interface>Znova naloži</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Ustvarjeni podatki o sesutju so uporabni"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Ustvarjeni podatki o sesutju so morda uporabni"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Ustvarjeni podatki o sesutju verjetno niso uporabni"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Ustvarjeni podatki o sesutju niso uporabni"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "Ocena teh podatkov o sesutju ni veljavna. To je napaka v DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Za samodejno namestitev manjkajočih paketov z razhroščevalnimi podatki "
+#~ "lahko kliknete gumb <interface>Namesti razhroščevalne simbole</"
+#~ "interface>. Če to ne deluje: preberite si <link url='%1'>Kako ustvariti "
+#~ "uporabna poročila o sesutjih</link>, da ugotovite kako dobiti uporabno "
+#~ "povratno sled; namestite zahtevane pakete (<link url='%2'>seznam datotek</"
+#~ "link>) in kliknite gumb <interface>Znova naloži</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Preberite si <link url='%1'>Kako ustvariti uporabna poročila o sesutjih</"
+#~ "link>, da ugotovite kako dobiti uporabno povratno sled;  namestite "
+#~ "zahtevane pakete (<link url='%2'>seznam datotek</link>) in kliknite gumb "
+#~ "<interface>Znova naloži</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Razhroščevalnik je nepričakovano končal."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Podatkov o sesutju ni bilo mogoče ustvariti."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Povratno sled lahko poskusite ustvariti znova s klikom na gumb "
+#~ "<interface>Znova naloži</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Razhroščevalni program manjka ali pa ga ni bilo mogoče zagnati.</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Najprej morate namestiti razhroščevalni program (%1) in nato "
+#~ "klikniti na gumb <interface>Znova naloži</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Manjkajoči paketi z razhroščevalnimi podatki"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "Splošno"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Po&datki za razvijalce"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Se opravičujemo, program <application>%1</application> se je "
+#~ "nepričakovano zaprl.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Ker je zagon upravljalnika sesutij spodletel, je bilo samodejno "
+#~ "poročanje onemogočeno, da bi zmanjšali tveganje ponovnega neuspeha.<nl /"
+#~ "><nl />O tem hrošču <link url='%1'>poročajte ročno</link> v KDE-jevemu "
+#~ "sistemu za sledenje hroščem. Ne pozabite priložiti povratne sledi z "
+#~ "zavihka <interface>Podatki za razvijalce</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Ker je bil upravljalnik s sesutji zagnan v varnem načinu, je "
+#~ "pomočnik za poročanje onemogočen.<nl />Ta hrošč lahko ročno sporočite na "
+#~ "%1 (vključite povratno sled z zavihka <interface>Podatki za razvijalce</"
+#~ "interface>).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Pomočnik za poročanje je onemogočen, ker je videti, da je zrušena "
+#~ "aplikacija bila posodobljena ali odstranjena odkar je bila zagnana. To "
+#~ "preprečuje natančno poročanje o zrušitvah in je lahko tudi vzrok za to.</"
+#~ "para><para>Po posodobitvi je vedno dobra ideja, da se odjavite in ponovno "
+#~ "prijavite in tako poskrbite, da bo posodobitev v celoti uporabljena in ne "
+#~ "bi povzročila morebitnih stranskih učinkov.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Podrobnosti:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Program: <application>%1</application> PID: %2 Signal: %3 (%4) Čas: "
+#~ "%5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Zapri to pogovorno okno (izgubili boste podatke o sesutju)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

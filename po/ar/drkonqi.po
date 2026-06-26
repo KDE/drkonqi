@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-29 21:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -41,237 +41,6 @@ msgstr "زايد السعيدي,صفا الفليج"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com,safaalfulaij@hotmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "أ&عد التحميل"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"استخدم هذا الزر لإعادة تحميل معلومات الانهيار (المتتبع الخلفي). هذا مفيد "
-"عندما تثبت حزم التنقيح الصحيحة و تريد أن أن تحصل على تتبع خلفي أفضل."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&ثبّت رموز التنقيح"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "استعمل هذا الزر لتثبيت حزم رموز التنقيح المفقودة."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"تثبيت الرمز غير متاح لأن التطبيق قد حُدث أو إلغاء تثبيته بعد بدء تشغيله."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "استخدم هذا الزر لتنسخ معلومات الانهيار (المتتبع الخلفي) إلى الحافظة."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"استخدم هذا الزر لتحفظ معلومات الانهيار (المتتبع الخلفي) إلى ملف، هذا مفيد في "
-"حالة أن أردت أن تلقي نظرة على التقرير أو تبلغ عن العلة لاحقا."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>ماهو \"التتبع الخلفي\" ?</h2><p>التتبع الخلفي (backtrace) يصف ما كان "
-"يجري داخل التطبيق حين انهياره لكي يتمكن المطورون من تعقب أين بدأت المشكلة. "
-"قد يبدو دون معنى، لكنه قد يحتوي على معلومات قيمة.<br />التتبعات الخلفية "
-"تستعمل عادة أثناء التنقيح التفاعلي والتنقيح بعد الانهيار.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "يحمل..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "يولّد التتبّع الخلفي.... (قد يأخذ هذا بعض الوقت)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"منقح آخر يعمل على تقيح نفس التطبيق حاليا، لا يمكن جلب معلومات الانهيار."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "لا يمكن جلب معلومات الانهيار."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"يوجد عملية تنقيح أخرى ملتصقة بالتطبيق المنهار، لذا لا يستطيع منقح DrKonqi أن "
-"يجلب معلومات التعقب، الرجاء غلق المنقح الأخر و النقر على <interface>أعد "
-"التحميل</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "معلومات الانهيار المولّدة مفيدة"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "قد تكون معلومات الانهيار المولّدة مفيدة"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "معلومات الانهيار هذه قد لا تكون مفيدة"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "معلومات الانهيار المولّدة غير مفيدة"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "تقييم معلومات هذا الانهيار غير صالح. هذه علّة في DrKonqi نفسه."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"يمكنك النقر فوق الزر <interface> ثبّت رموز التنقيح </interface> لتثبيت حزم "
-"معلومات تصحيح الأخطاء المفقودة آليًّا. إذا لم تعمل هذه الطريقة: يُرجى قراءة "
-"<link url='%1'> كيفية إنشاء تقارير أعطال مفيدة </link> لمعرفة كيفية الحصول "
-"على تتبع خلفي مفيد؛ ثبّت الحزم المطلوبة (<link url='%2'> قائمة الملفات </"
-"link>) وانقر فوق الزر <interface> أعد التحميل </interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"يُرجى قراءة <link url='%1'> كيفية إنشاء تقارير أعطال مفيدة </link> لمعرفة "
-"كيفية الحصول على تتبع خلفي مفيد؛ ثبّت الحزم المطلوبة (<link url='%2'>قائمة "
-"الملفات </link>) وانقر فوق الزر <interface> أعد التحميل </interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "خرج المنقح فجأة."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "لا يمكن توليد معلومات الانهيار ."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"يمكنك محاولة توليد معلومات التعقب بالنقر على زر <interface>أعد تحميل</"
-"interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>تطبيق المنقّح ناقص أو لا يمكن إطلاقه.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>تحتاج إلى تثبيت حزمة المنقح (%1) ثم انقر على زر <interface>أعد تحميل "
-"</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "خطأ أثناء تثبيت رموز التنقيح"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"الحزم التي تحتوي على معلومات التنقيح للتطبيقات والمكتبات التالية مفقودة:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "حزم معلومات التنقيح مفقودة"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -568,111 +337,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "استخدم هذا الزر لتعيد تشغيل التطبيق المنهار."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&عام"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&معلومات المطور"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para> نحن آسفون <application>%1</application> انغلق فجأة.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>بسبب انهيار معالج الانهيار نفسه، أُلغيت عملية الإبلاغ الآليّ لتقليص "
-"مخاطر الانهيار مرة أخرى.<nl /><nl />من فضلك أبلغ عن هذا الخطأ يدويا <link "
-"url='%1'>يدويا</link>. لا تنسَ إدراج بيانات التقفي من لسان <interface>معلومات "
-"المطور</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>مساعد الإبلاغ معطل لأن حوار معالج الانهيار شُغل في الوضع الآمن.<nl /"
-">يمكنك التبليغ عن الخطأ يدويا إلى %1 (مع تضمين بيانات تتبع الانهيار من لسان "
-"<interface>معلومات المطور</interface>)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para> عطل مساعد التقارير لأنه يبدو أن التطبيق المنهار قد حُدث أو ألغي تثبيته "
-"منذ بدئه. هذا يمنع الإبلاغ الدقيق عن الأعطال ويمكن أن يكون أيضًا سبب هذا "
-"التعطل. </para> <para> بعد تحديثه من الأفضل دائمًا تسجيل الخروج والعودة "
-"للتأكد من تطبيق التحديث بالكامل ولن يتسبب في أي تأثيرات جانبية. </para> "
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>يمكنك المساهمة في تطوير كِيدِي بالإبلاغ عن هذا الخطأ.<nl /><link "
-"url='%1'> تعلم أكثر عن الإبلاغ عن الأخطاء. </link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>لا يمكنك الإبلاغ عن هذا الخطأ لأن التطبيق <application>%1</"
-"application> لا يوفر عنوانا للتبليغ.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "التفاصيل:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>الملف التنفيذي: <application>%1</application> رقم العملية: %2 الإشارة: "
-"%3 (%4) الوقت: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "أغلق هذا الحوار ( ستفقد معلومات الانهيار)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -931,10 +595,25 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "انسخ"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "استخدم هذا الزر لتنسخ معلومات الانهيار (المتتبع الخلفي) إلى الحافظة."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "احفظ"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"استخدم هذا الزر لتحفظ معلومات الانهيار (المتتبع الخلفي) إلى ملف، هذا مفيد في "
+"حالة أن أردت أن تلقي نظرة على التقرير أو تبلغ عن العلة لاحقا."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -949,6 +628,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "أعِد المحاولة"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "خطأ أثناء تثبيت رموز التنقيح"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1007,6 +691,14 @@ msgid ""
 msgstr ""
 "توقف إنشاء التتبع الخلفي بسبب ضغط الذاكرة. يمكنك محاولة إعادة توليد التتبع "
 "الخلفي بالنقر فوق زر <interface>أعد تحميل</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"الحزم التي تحتوي على معلومات التنقيح للتطبيقات والمكتبات التالية مفقودة:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1081,6 +773,15 @@ msgstr ""
 "استخدم هذا الزر للولوج إلى نظام تعقب علل كِيدِي باستخدام عنوان بريد إلكتروني و "
 "كلمة السر المعطاة."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>لا يمكنك الإبلاغ عن هذا الخطأ لأن التطبيق <application>%1</"
+"application> لا يوفر عنوانا للتبليغ.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1130,6 +831,15 @@ msgstr ""
 "</para> <para> بعد تحديثه من الأفضل دائمًا تسجيل \n"
 "الخروج والعودة للتأكد من تطبيق التحديث بالكامل\n"
 " ولن يتسبب في أي تأثيرات جانبية. </para> "
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>يمكنك المساهمة في تطوير كِيدِي بالإبلاغ عن هذا الخطأ.<nl /><link "
+"url='%1'> تعلم أكثر عن الإبلاغ عن الأخطاء. </link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1594,6 +1304,228 @@ msgstr "اسم مستخدم bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "كلمة سر bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "أ&عد التحميل"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "استخدم هذا الزر لإعادة تحميل معلومات الانهيار (المتتبع الخلفي). هذا مفيد "
+#~ "عندما تثبت حزم التنقيح الصحيحة و تريد أن أن تحصل على تتبع خلفي أفضل."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&ثبّت رموز التنقيح"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "استعمل هذا الزر لتثبيت حزم رموز التنقيح المفقودة."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "تثبيت الرمز غير متاح لأن التطبيق قد حُدث أو إلغاء تثبيته بعد بدء تشغيله."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>ماهو \"التتبع الخلفي\" ?</h2><p>التتبع الخلفي (backtrace) يصف ما كان "
+#~ "يجري داخل التطبيق حين انهياره لكي يتمكن المطورون من تعقب أين بدأت "
+#~ "المشكلة. قد يبدو دون معنى، لكنه قد يحتوي على معلومات قيمة.<br />التتبعات "
+#~ "الخلفية تستعمل عادة أثناء التنقيح التفاعلي والتنقيح بعد الانهيار.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "يحمل..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "يولّد التتبّع الخلفي.... (قد يأخذ هذا بعض الوقت)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "منقح آخر يعمل على تقيح نفس التطبيق حاليا، لا يمكن جلب معلومات الانهيار."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "لا يمكن جلب معلومات الانهيار."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "يوجد عملية تنقيح أخرى ملتصقة بالتطبيق المنهار، لذا لا يستطيع منقح DrKonqi "
+#~ "أن يجلب معلومات التعقب، الرجاء غلق المنقح الأخر و النقر على "
+#~ "<interface>أعد التحميل</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "معلومات الانهيار المولّدة مفيدة"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "قد تكون معلومات الانهيار المولّدة مفيدة"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "معلومات الانهيار هذه قد لا تكون مفيدة"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "معلومات الانهيار المولّدة غير مفيدة"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "تقييم معلومات هذا الانهيار غير صالح. هذه علّة في DrKonqi نفسه."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "يمكنك النقر فوق الزر <interface> ثبّت رموز التنقيح </interface> لتثبيت حزم "
+#~ "معلومات تصحيح الأخطاء المفقودة آليًّا. إذا لم تعمل هذه الطريقة: يُرجى قراءة "
+#~ "<link url='%1'> كيفية إنشاء تقارير أعطال مفيدة </link> لمعرفة كيفية "
+#~ "الحصول على تتبع خلفي مفيد؛ ثبّت الحزم المطلوبة (<link url='%2'> قائمة "
+#~ "الملفات </link>) وانقر فوق الزر <interface> أعد التحميل </interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "يُرجى قراءة <link url='%1'> كيفية إنشاء تقارير أعطال مفيدة </link> لمعرفة "
+#~ "كيفية الحصول على تتبع خلفي مفيد؛ ثبّت الحزم المطلوبة (<link url='%2'>قائمة "
+#~ "الملفات </link>) وانقر فوق الزر <interface> أعد التحميل </interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "خرج المنقح فجأة."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "لا يمكن توليد معلومات الانهيار ."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "يمكنك محاولة توليد معلومات التعقب بالنقر على زر <interface>أعد تحميل</"
+#~ "interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>تطبيق المنقّح ناقص أو لا يمكن إطلاقه.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>تحتاج إلى تثبيت حزمة المنقح (%1) ثم انقر على زر <interface>أعد "
+#~ "تحميل </interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "حزم معلومات التنقيح مفقودة"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&عام"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&معلومات المطور"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr "<para> نحن آسفون <application>%1</application> انغلق فجأة.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>بسبب انهيار معالج الانهيار نفسه، أُلغيت عملية الإبلاغ الآليّ لتقليص "
+#~ "مخاطر الانهيار مرة أخرى.<nl /><nl />من فضلك أبلغ عن هذا الخطأ يدويا <link "
+#~ "url='%1'>يدويا</link>. لا تنسَ إدراج بيانات التقفي من لسان "
+#~ "<interface>معلومات المطور</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>مساعد الإبلاغ معطل لأن حوار معالج الانهيار شُغل في الوضع الآمن.<nl /"
+#~ ">يمكنك التبليغ عن الخطأ يدويا إلى %1 (مع تضمين بيانات تتبع الانهيار من "
+#~ "لسان <interface>معلومات المطور</interface>)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para> عطل مساعد التقارير لأنه يبدو أن التطبيق المنهار قد حُدث أو ألغي "
+#~ "تثبيته منذ بدئه. هذا يمنع الإبلاغ الدقيق عن الأعطال ويمكن أن يكون أيضًا "
+#~ "سبب هذا التعطل. </para> <para> بعد تحديثه من الأفضل دائمًا تسجيل الخروج "
+#~ "والعودة للتأكد من تطبيق التحديث بالكامل ولن يتسبب في أي تأثيرات جانبية. </"
+#~ "para> "
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "التفاصيل:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>الملف التنفيذي: <application>%1</application> رقم العملية: %2 "
+#~ "الإشارة: %3 (%4) الوقت: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "أغلق هذا الحوار ( ستفقد معلومات الانهيار)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 16:53+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -39,248 +39,6 @@ msgid "Your emails"
 msgstr ""
 "wolfram@steloj.de,matthias@peick.de,pedrotpmx@wanadoo.fr,axel@esperanto-"
 "jeunes.org, michael.moroni@mailoo.org,olivermkellogg@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Reŝargi"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Uzu ĉi tiun butonon por reŝargi la paneoinformojn (retrospuro). Ĉi tio estas "
-"utila kiam vi instalis la taŭgajn sencimigajn simbolpakaĵojn kaj vi volas "
-"akiri pli bonan retrospuron."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instali sencimigajn simbolojn"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Uzu ĉi tiun butonon por instali la mankantajn sencimsimbolajn pakaĵojn."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Simbolinstalado estas neatingebla ĉar la aplikaĵo estis ĝisdatigita aŭ "
-"malinstalita post kiam ĝi estis komencita."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Uzu ĉi tiun butonon por kopii la paneoinformojn (retrospuro) al la tondujo."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Uzu ĉi tiun butonon por konservi la paneoinformojn (backtrace) al dosiero. "
-"Ĉi tio estas utila se vi volas rigardi ĝin aŭ raporti la cimon poste."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Kio estas \"retrospuro\"?</h2><p>Retrospuro esence priskribas tion, kio "
-"okazis ene de la aplikaĵo kiam ĝi paneis, do la programistoj povas elspuri, "
-"kie la malordo komenciĝis. Ili povas aspekti sensignifaj al vi, sed ili eble "
-"enhavas multe da utilaj informoj.<br />Retrospuroj estas kutime uzataj dum "
-"interaga kaj postmorta sencimigo.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Ŝarganta..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Kreanta retrospuradon... (tio postulas tempon)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Alia erarserĉilo nuntempe elpurigas la saman aplikaĵon. La paneoinformoj ne "
-"povis esti prenitaj."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "La paneinformoj ne povis esti prenitaj."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Alia sencimiga procezo estas alfiksita al la paneinta aplikaĵo. Tial, la "
-"DrKonqi-erarseĉilo ne povas preni la malantaŭan spuron. Bonvolu fermi la "
-"alian erarserĉilon kaj klaki <interface>Reŝargi</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "La kreataj informoj pri kolapso utilas"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "La kreataj informoj pri kolapso povus utili"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "La kreataj informoj pri kolapso eble ne utilas"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "La kreataj informoj pri kolapso ne utilas"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"La takso de ĉi tiu paneinformo estas nevalida. Ĉi tio estas cimo en DrKonqi "
-"mem."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Vi povas klaki la butonon <interface>Instali Sencimigajn Simbolojn</"
-"interface> por aŭtomate instali la mankantajn sencimigajn informpakaĵojn. Se "
-"ĉi tiu metodo ne funkcias: bonvolu legi <link url='%1'>Kiel krei utilajn "
-"paneoraportojn</link> por lerni kiel akiri utilan malantaŭan spuron; instalu "
-"la bezonatajn pakaĵojn (<link url='%2'>listo de dosieroj</link>) kaj alklaku "
-"la butonon <interface>Reŝargi</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Bonvolu legi <link url='%1'>Kiel krei utilajn paneoraportojn</link> por "
-"lerni kiel akiri utilan malantaŭan spuron; instalu la bezonatajn pakaĵojn "
-"(<link url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
-"<interface>Reŝargi</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "La sencimigilo neatendite fermiĝis."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "La paneinformoj ne povis esti generita."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Vi povus provi regeneri la malantaŭan spuron klakante la butonon "
-"<interface>Reŝargi</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>La sencimigilo-aplikaĵo mankas aŭ ne eblis lanĉi.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Vi devas unue instali la sencimigilon (%1) kaj poste alklaku la "
-"butonon <interface>Reŝargi</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Eraro dum la instalado de sencimigaj simboloj"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Mankas la pakaĵoj enhavantaj sencimigajn informojn por la sekvaj aplikaĵoj "
-"kaj bibliotekoj:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Pakaĵoj por sencimigaj informoj mankas"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -580,116 +338,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Uzu ĉi tiun butonon por restartigi la kolapsitan aplikaĵon."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "Ĝ&enerala"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Informoj por Programistoj"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Ni bedaŭras, <application>%1</application> neatendite fermiĝis.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Ĉar la Paneotraktilo mem malsukcesis, la aŭtomata raporta procezo "
-"estas malŝaltita por redukti la riskojn de fiasko denove.<nl /><nl /"
-">Bonvolu, <link url='%1'>mane raporti</link> ĉi tiu eraro al la cimspura "
-"sistemo de KDE. Ne forgesu inkluzivi la malantaŭan spuron el la langeto "
-"<interface>Informoj pri Programisto</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri panea "
-"pritraktilo estis komencita en sekura reĝimo.<nl />Vi povas permane raporti "
-"ĉi tiun cimon al %1 (inkluzive de la malantaŭa spuro de la langeto "
-"<interface>Informoj pri Programisto</interface>). </para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>La raporta asistanto estas malŝaltita ĉar la paneinta aplikaĵo ŝajnas "
-"esti ĝisdatigita aŭ malinstalita de kiam ĝi estis komencita. Ĉi tio "
-"malhelpas precizajn paneraportojn kaj ankaŭ povas esti la kaŭzo de ĉi tiu "
-"paneo.</para><para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj reeniri "
-"por certigi, ke la ĝisdatigo estas plene aplikata kaj ne kaŭzos ajnan "
-"flankon. efikoj.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Vi povas helpi nin plibonigi KDE-Programaron raportante ĉi tiun eraron."
-"<nl /><link url='%1'>Lernu pli pri cimraportado.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Vi ne povas raporti ĉi tiun eraron, ĉar <application>%1</application> "
-"ne provizas adreson pri cimraporto.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Detaloj:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Efektivigebla: <application>%1</application> PID: %2 Signalo: %3 (%4) "
-"Tempo: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Fermi ĉi tiun dialogon (vi perdos la informojn pri kolapso)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -970,10 +618,26 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopii"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Uzu ĉi tiun butonon por kopii la paneoinformojn (retrospuro) al la tondujo."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Konservi"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Uzu ĉi tiun butonon por konservi la paneoinformojn (backtrace) al dosiero. "
+"Ĉi tio estas utila se vi volas rigardi ĝin aŭ raporti la cimon poste."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -986,6 +650,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reprovi"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Eraro dum la instalado de sencimigaj simboloj"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1079,6 +748,15 @@ msgid ""
 msgstr ""
 "Vi povus provi regeneri la malantaŭan spuron klakante la butonon "
 "<interface>Reŝargi</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Mankas la pakaĵoj enhavantaj sencimigajn informojn por la sekvaj aplikaĵoj "
+"kaj bibliotekoj:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1183,6 +861,15 @@ msgstr ""
 "Uzu ĉi tiun butonon por ensaluti al la KDE-spura sistemo uzante la "
 "provizitajn retadreson kaj pasvorton."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Vi ne povas raporti ĉi tiun eraron, ĉar <application>%1</application> "
+"ne provizas adreson pri cimraporto.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1235,6 +922,15 @@ msgstr ""
 "<para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj reen\n"
 "in por certigi, ke la ĝisdatigo estas plene aplikata kaj estos ne kaŭzas\n"
 "ajn kromefikojn.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Vi povas helpi nin plibonigi KDE-Programaron raportante ĉi tiun eraron."
+"<nl /><link url='%1'>Lernu pli pri cimraportado.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1768,6 +1464,242 @@ msgstr "bugstest.kde.org uzantnomo"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "pasvorto bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Reŝargi"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Uzu ĉi tiun butonon por reŝargi la paneoinformojn (retrospuro). Ĉi tio "
+#~ "estas utila kiam vi instalis la taŭgajn sencimigajn simbolpakaĵojn kaj vi "
+#~ "volas akiri pli bonan retrospuron."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instali sencimigajn simbolojn"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Uzu ĉi tiun butonon por instali la mankantajn sencimsimbolajn pakaĵojn."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Simbolinstalado estas neatingebla ĉar la aplikaĵo estis ĝisdatigita aŭ "
+#~ "malinstalita post kiam ĝi estis komencita."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Kio estas \"retrospuro\"?</h2><p>Retrospuro esence priskribas tion, "
+#~ "kio okazis ene de la aplikaĵo kiam ĝi paneis, do la programistoj povas "
+#~ "elspuri, kie la malordo komenciĝis. Ili povas aspekti sensignifaj al vi, "
+#~ "sed ili eble enhavas multe da utilaj informoj.<br />Retrospuroj estas "
+#~ "kutime uzataj dum interaga kaj postmorta sencimigo.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Ŝarganta..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Kreanta retrospuradon... (tio postulas tempon)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Alia erarserĉilo nuntempe elpurigas la saman aplikaĵon. La paneoinformoj "
+#~ "ne povis esti prenitaj."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "La paneinformoj ne povis esti prenitaj."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Alia sencimiga procezo estas alfiksita al la paneinta aplikaĵo. Tial, la "
+#~ "DrKonqi-erarseĉilo ne povas preni la malantaŭan spuron. Bonvolu fermi la "
+#~ "alian erarserĉilon kaj klaki <interface>Reŝargi</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "La kreataj informoj pri kolapso utilas"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "La kreataj informoj pri kolapso povus utili"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "La kreataj informoj pri kolapso eble ne utilas"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "La kreataj informoj pri kolapso ne utilas"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "La takso de ĉi tiu paneinformo estas nevalida. Ĉi tio estas cimo en "
+#~ "DrKonqi mem."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vi povas klaki la butonon <interface>Instali Sencimigajn Simbolojn</"
+#~ "interface> por aŭtomate instali la mankantajn sencimigajn informpakaĵojn. "
+#~ "Se ĉi tiu metodo ne funkcias: bonvolu legi <link url='%1'>Kiel krei "
+#~ "utilajn paneoraportojn</link> por lerni kiel akiri utilan malantaŭan "
+#~ "spuron; instalu la bezonatajn pakaĵojn (<link url='%2'>listo de dosieroj</"
+#~ "link>) kaj alklaku la butonon <interface>Reŝargi</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Bonvolu legi <link url='%1'>Kiel krei utilajn paneoraportojn</link> por "
+#~ "lerni kiel akiri utilan malantaŭan spuron; instalu la bezonatajn pakaĵojn "
+#~ "(<link url='%2'>listo de dosieroj</link>) kaj alklaku la butonon "
+#~ "<interface>Reŝargi</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "La sencimigilo neatendite fermiĝis."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "La paneinformoj ne povis esti generita."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vi povus provi regeneri la malantaŭan spuron klakante la butonon "
+#~ "<interface>Reŝargi</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>La sencimigilo-aplikaĵo mankas aŭ ne eblis lanĉi.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Vi devas unue instali la sencimigilon (%1) kaj poste alklaku la "
+#~ "butonon <interface>Reŝargi</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Pakaĵoj por sencimigaj informoj mankas"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "Ĝ&enerala"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Informoj por Programistoj"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Ni bedaŭras, <application>%1</application> neatendite fermiĝis.</"
+#~ "para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Ĉar la Paneotraktilo mem malsukcesis, la aŭtomata raporta procezo "
+#~ "estas malŝaltita por redukti la riskojn de fiasko denove.<nl /><nl /"
+#~ ">Bonvolu, <link url='%1'>mane raporti</link> ĉi tiu eraro al la cimspura "
+#~ "sistemo de KDE. Ne forgesu inkluzivi la malantaŭan spuron el la langeto "
+#~ "<interface>Informoj pri Programisto</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>La raporta asistanto estas malŝaltita ĉar la dialogo pri panea "
+#~ "pritraktilo estis komencita en sekura reĝimo.<nl />Vi povas permane "
+#~ "raporti ĉi tiun cimon al %1 (inkluzive de la malantaŭa spuro de la "
+#~ "langeto <interface>Informoj pri Programisto</interface>). </para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>La raporta asistanto estas malŝaltita ĉar la paneinta aplikaĵo "
+#~ "ŝajnas esti ĝisdatigita aŭ malinstalita de kiam ĝi estis komencita. Ĉi "
+#~ "tio malhelpas precizajn paneraportojn kaj ankaŭ povas esti la kaŭzo de ĉi "
+#~ "tiu paneo.</para><para>Post ĝisdatigo estas ĉiam bona ideo elsaluti kaj "
+#~ "reeniri por certigi, ke la ĝisdatigo estas plene aplikata kaj ne kaŭzos "
+#~ "ajnan flankon. efikoj.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Detaloj:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Efektivigebla: <application>%1</application> PID: %2 Signalo: %3 "
+#~ "(%4) Tempo: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Fermi ĉi tiun dialogon (vi perdos la informojn pri kolapso)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

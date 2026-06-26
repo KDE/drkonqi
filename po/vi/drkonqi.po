@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2022-09-05 23:25+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -29,244 +29,6 @@ msgstr "Nguyễn Hùng Phú,Lê Hoàng Phương,Phan Vĩnh Thịnh"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "phu.nguyen@kdemail.net,herophuong93@gmail.com,teppi82@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Tải lại"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Dùng nút này để tải lại thông tin về sự cố (vết ngăn xếp). Việc này có ích "
-"khi bạn đã cài đặt các gói kí hiệu gỡ lỗi thích hợp và bạn muốn có một vết "
-"ngăn xếp tốt hơn."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Cài đặt các kí hiệu gỡ lỗi"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Dùng nút này để cài đặt các gói kí hiệu gỡ lỗi còn thiếu."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Việc cài đặt kí hiệu hiện không khả dụng vì ứng dụng đã được cập nhật hoặc "
-"gỡ cài đặt sau khi nó được khởi động."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Dùng nút này để sao chép thông tin về sự cố (vết ngăn xếp) vào bảng nháp."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Dùng nút này để lưu thông tin về sự cố (vết ngăn xếp) vào một tệp. Việc này "
-"có ích nếu sau này bạn muốn xem lại hoặc báo lỗi."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>\"Vết ngăn xếp\" là gì?</h2><p>Một vết ngăn xếp về cơ bản mô tả những gì "
-"đã diễn ra bên trong ứng dụng khi nó gặp sự cố, để các nhà phát triển có thể "
-"tìm ra xem vấn đề xuất phát từ đâu. Chúng có thể trông vô nghĩa với bạn, "
-"nhưng có khả năng chúng thực sự chứa một lượng lớn thông tin có ích.<br /"
-">Vết ngăn xếp thường được dùng khi gỡ lỗi tương tác và tử hậu.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Đang tải..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Đang tạo vết ngăn xếp... (có thể mất chút thời gian)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Một trình gỡ lỗi khác hiện đang gỡ lỗi ứng dụng này. Không tìm nạp được "
-"thông tin về sự cố."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Không tìm nạp được thông tin về sự cố."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Một tiến trình gỡ lỗi khác đã được gắn vào ứng dụng gặp sự cố. Vì vậy, trình "
-"gỡ lỗi DrKonqi không thể tìm nạp được vết ngăn xếp. Vui lòng đóng trình gỡ "
-"lỗi khác đó và bấm <interface>Tải lại</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Thông tin đã tạo về sự cố hữu ích"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Thông tin đã tạo về sự cố có thể hữu ích"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Thông tin đã tạo về sự cố có lẽ không hữu ích"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Thông tin đã tạo về sự cố không hữu ích"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Việc đánh giá thông tin về sự cố này không hợp lệ. Đây là một lỗi của bản "
-"thân DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Bạn có thể bấm nút <interface>Cài đặt các kí hiệu gỡ lỗi</interface> để tự "
-"động cài đặt các gói thông tin gỡ lỗi còn thiếu. Nếu cách này không hoạt "
-"động, vui lòng đọc <link url='%1'>Cách tạo báo cáo sự cố hữu ích</link> để "
-"biết cách lấy một vết ngăn xếp có ích; cài đặt các gói cần thiết (<link "
-"url='%2'>danh sách các tệp</link>) và bấm nút <interface>Tải lại</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Vui lòng đọc <link url='%1'>Cách tạo báo cáo sự cố hữu ích</link> để biết "
-"cách lấy một vết ngăn xếp có ích; cài đặt các gói cần thiết (<link "
-"url='%2'>danh sách các tệp</link>) và bấm nút <interface>Tải lại</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Trình gỡ lỗi đã bất ngờ thoát."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Không tạo được thông tin về sự cố."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Bạn có thể thử tạo lại vết ngăn xếp bằng cách bấm nút <interface>Tải lại</"
-"interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>Không có hoặc không khởi chạy được ứng dụng gỡ lỗi.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Bạn cần, trước tiên, cài đặt ứng dụng gỡ lỗi (%1) rồi bấm nút "
-"<interface>Tải lại</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Lỗi khi đang cài đặt các kí hiệu gỡ lỗi"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Còn thiếu các gói chứa thông tin gỡ lỗi cho các ứng dụng và thư viện sau:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Các gói thông tin gỡ lỗi còn thiếu"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -570,116 +332,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Dùng nút này để khởi động lại ứng dụng gặp sự cố."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Chung"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Thông tin nhà phát triển"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Chúng tôi rất tiếc, <application>%1</application> đã bất ngờ thoát.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Vì bản thân trình xử lí sự cố đã bị hỏng, tiến trình báo cáo tự động "
-"đã bị tắt để giảm nguy cơ hỏng một lần nữa.<nl /><nl />Vui lòng <link "
-"url='%1'>báo cáo thủ công</link> lỗi này đến hệ thống theo dõi lỗi của KDE. "
-"Đừng quên kèm theo vết ngăn xếp trong thẻ <interface>Thông tin nhà phát "
-"triển</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Trợ tá báo cáo đã bị tắt vì hộp thoại trình xử lí sự cố được khởi động "
-"trong chế độ an toàn.<nl />Bạn có thể báo cáo thủ công lỗi này đến %1 (kèm "
-"theo vết ngăn xếp trong thẻ <interface>Thông tin nhà phát triển</"
-"interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Trợ tá báo cáo đã bị tắt vì ứng dụng gặp sự cố có vẻ đã được cập nhật "
-"hoặc gỡ cài đặt sau khi nó được khởi động. Việc này ngăn cản sự báo cáo "
-"chính xác về sự cố và cũng có thể chính là nguyên nhân của sự cố này.</"
-"para><para>Sau khi cập nhật, nên đăng xuất rồi đăng nhập lại để đảm bảo rằng "
-"bản cập nhật được áp dụng đầy đủ và không gây ra hiệu ứng phụ nào.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Bạn có thể giúp chúng tôi cải thiện phần mềm KDE bằng cách báo lỗi này."
-"<nl /><link url='%1'>Tìm hiểu thêm về việc báo lỗi.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Bạn không thể báo lỗi này, vì <application>%1</application> không cung "
-"cấp địa chỉ báo lỗi nào.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Chi tiết:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Tệp thực thi: <application>%1</application> PID: %2 Tín hiệu: %3 (%4) "
-"Thời gian: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Đóng hộp thoại này (bạn sẽ mất thông tin về sự cố.)"
-
 #: main.cpp:154
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
@@ -965,10 +617,26 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Chép"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Dùng nút này để sao chép thông tin về sự cố (vết ngăn xếp) vào bảng nháp."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Lưu"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Dùng nút này để lưu thông tin về sự cố (vết ngăn xếp) vào một tệp. Việc này "
+"có ích nếu sau này bạn muốn xem lại hoặc báo lỗi."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -984,6 +652,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Thử lại"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Lỗi khi đang cài đặt các kí hiệu gỡ lỗi"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1077,6 +750,14 @@ msgstr ""
 "Bạn có thể thử tạo lại vết ngăn xếp bằng cách bấm nút <interface>Tải lại</"
 "interface>."
 
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Còn thiếu các gói chứa thông tin gỡ lỗi cho các ứng dụng và thư viện sau:"
+
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
@@ -1168,6 +849,15 @@ msgstr ""
 "Dùng nút này để đăng nhập vào hệ thống theo dõi lỗi của KDE bằng địa chỉ thư "
 "điện tử và mật khẩu đã cho."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Bạn không thể báo lỗi này, vì <application>%1</application> không cung "
+"cấp địa chỉ báo lỗi nào.</para>"
+
 #: qml/main.qml:33
 #, fuzzy
 #| msgctxt "@info"
@@ -1236,6 +926,15 @@ msgstr ""
 "<para>Sau khi cập nhật, nên đăng xuất rồi đăng nhập lại để\n"
 "đảm bảo rằng bản cập nhật được áp dụng đầy đủ và không\n"
 "gây ra hiệu ứng phụ nào.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Bạn có thể giúp chúng tôi cải thiện phần mềm KDE bằng cách báo lỗi này."
+"<nl /><link url='%1'>Tìm hiểu thêm về việc báo lỗi.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1772,6 +1471,243 @@ msgstr "tên người dùng bugtest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "mật khẩu bugtest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Tải lại"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Dùng nút này để tải lại thông tin về sự cố (vết ngăn xếp). Việc này có "
+#~ "ích khi bạn đã cài đặt các gói kí hiệu gỡ lỗi thích hợp và bạn muốn có "
+#~ "một vết ngăn xếp tốt hơn."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Cài đặt các kí hiệu gỡ lỗi"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "Dùng nút này để cài đặt các gói kí hiệu gỡ lỗi còn thiếu."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Việc cài đặt kí hiệu hiện không khả dụng vì ứng dụng đã được cập nhật "
+#~ "hoặc gỡ cài đặt sau khi nó được khởi động."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>\"Vết ngăn xếp\" là gì?</h2><p>Một vết ngăn xếp về cơ bản mô tả những "
+#~ "gì đã diễn ra bên trong ứng dụng khi nó gặp sự cố, để các nhà phát triển "
+#~ "có thể tìm ra xem vấn đề xuất phát từ đâu. Chúng có thể trông vô nghĩa "
+#~ "với bạn, nhưng có khả năng chúng thực sự chứa một lượng lớn thông tin có "
+#~ "ích.<br />Vết ngăn xếp thường được dùng khi gỡ lỗi tương tác và tử hậu.</"
+#~ "p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Đang tải..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Đang tạo vết ngăn xếp... (có thể mất chút thời gian)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Một trình gỡ lỗi khác hiện đang gỡ lỗi ứng dụng này. Không tìm nạp được "
+#~ "thông tin về sự cố."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Không tìm nạp được thông tin về sự cố."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Một tiến trình gỡ lỗi khác đã được gắn vào ứng dụng gặp sự cố. Vì vậy, "
+#~ "trình gỡ lỗi DrKonqi không thể tìm nạp được vết ngăn xếp. Vui lòng đóng "
+#~ "trình gỡ lỗi khác đó và bấm <interface>Tải lại</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Thông tin đã tạo về sự cố hữu ích"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Thông tin đã tạo về sự cố có thể hữu ích"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Thông tin đã tạo về sự cố có lẽ không hữu ích"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Thông tin đã tạo về sự cố không hữu ích"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Việc đánh giá thông tin về sự cố này không hợp lệ. Đây là một lỗi của bản "
+#~ "thân DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Bạn có thể bấm nút <interface>Cài đặt các kí hiệu gỡ lỗi</interface> để "
+#~ "tự động cài đặt các gói thông tin gỡ lỗi còn thiếu. Nếu cách này không "
+#~ "hoạt động, vui lòng đọc <link url='%1'>Cách tạo báo cáo sự cố hữu ích</"
+#~ "link> để biết cách lấy một vết ngăn xếp có ích; cài đặt các gói cần thiết "
+#~ "(<link url='%2'>danh sách các tệp</link>) và bấm nút <interface>Tải lại</"
+#~ "interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Vui lòng đọc <link url='%1'>Cách tạo báo cáo sự cố hữu ích</link> để biết "
+#~ "cách lấy một vết ngăn xếp có ích; cài đặt các gói cần thiết (<link "
+#~ "url='%2'>danh sách các tệp</link>) và bấm nút <interface>Tải lại</"
+#~ "interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Trình gỡ lỗi đã bất ngờ thoát."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Không tạo được thông tin về sự cố."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Bạn có thể thử tạo lại vết ngăn xếp bằng cách bấm nút <interface>Tải lại</"
+#~ "interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Không có hoặc không khởi chạy được ứng dụng gỡ lỗi.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Bạn cần, trước tiên, cài đặt ứng dụng gỡ lỗi (%1) rồi bấm nút "
+#~ "<interface>Tải lại</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Các gói thông tin gỡ lỗi còn thiếu"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Chung"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Thông tin nhà phát triển"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Chúng tôi rất tiếc, <application>%1</application> đã bất ngờ thoát."
+#~ "</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Vì bản thân trình xử lí sự cố đã bị hỏng, tiến trình báo cáo tự "
+#~ "động đã bị tắt để giảm nguy cơ hỏng một lần nữa.<nl /><nl />Vui lòng "
+#~ "<link url='%1'>báo cáo thủ công</link> lỗi này đến hệ thống theo dõi lỗi "
+#~ "của KDE. Đừng quên kèm theo vết ngăn xếp trong thẻ <interface>Thông tin "
+#~ "nhà phát triển</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Trợ tá báo cáo đã bị tắt vì hộp thoại trình xử lí sự cố được khởi "
+#~ "động trong chế độ an toàn.<nl />Bạn có thể báo cáo thủ công lỗi này đến "
+#~ "%1 (kèm theo vết ngăn xếp trong thẻ <interface>Thông tin nhà phát triển</"
+#~ "interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Trợ tá báo cáo đã bị tắt vì ứng dụng gặp sự cố có vẻ đã được cập "
+#~ "nhật hoặc gỡ cài đặt sau khi nó được khởi động. Việc này ngăn cản sự báo "
+#~ "cáo chính xác về sự cố và cũng có thể chính là nguyên nhân của sự cố này."
+#~ "</para><para>Sau khi cập nhật, nên đăng xuất rồi đăng nhập lại để đảm bảo "
+#~ "rằng bản cập nhật được áp dụng đầy đủ và không gây ra hiệu ứng phụ nào.</"
+#~ "para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Chi tiết:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Tệp thực thi: <application>%1</application> PID: %2 Tín hiệu: %3 "
+#~ "(%4) Thời gian: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Đóng hộp thoại này (bạn sẽ mất thông tin về sự cố.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2010-07-18 21:35+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -28,217 +28,6 @@ msgstr "Muhammad Najmi Ahmad Zabidi, Sharuzzaman Ahmat Raslan"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "md_najmi@yahoo.com, sharuzzaman@myrealbox.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Ulangmuat"
-
-#: backtracewidget.cpp:60
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr "Guna hingga ialah dan hingga a."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Pasang S&imbol Nyahpepijat"
-
-#: backtracewidget.cpp:70
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Guna hingga henti."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "Guna hingga hingga."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr "Guna hingga hingga a fail ialah hingga a atau hingga."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Memuatkan..."
-
-#: backtracewidget.cpp:138
-#, fuzzy, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Memuat beberapa masa "
-
-#: backtracewidget.cpp:189
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr "ialah."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr ""
-
-#: backtracewidget.cpp:196
-#, fuzzy, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"ialah dilampirkan hingga lain-lain dan<interface> Ulangmuat Maklumat</"
-"interface>."
-
-#: backtracewidget.cpp:241
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "ialah"
-
-#: backtracewidget.cpp:244
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "ialah"
-
-#: backtracewidget.cpp:247
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "ialah"
-
-#: backtracewidget.cpp:250
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "ialah"
-
-#: backtracewidget.cpp:255
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "bagi ialah ialah a inci."
-
-#: backtracewidget.cpp:267
-#, fuzzy, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"<link url='%1'> hingga</link> hingga hingga a Selepas<interface> Ulangmuat "
-"Maklumat</interface>."
-
-#: backtracewidget.cpp:285
-#, fuzzy, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"<link url='%1'> hingga</link> hingga hingga a Selepas<interface> Ulangmuat "
-"Maklumat</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr ""
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr ""
-
-#: backtracewidget.cpp:307
-#, fuzzy, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr "Anda hingga<interface> Ulangmuat Maklumat</interface>."
-
-#: backtracewidget.cpp:316
-#, fuzzy, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "ialah atau."
-
-#: backtracewidget.cpp:322
-#, fuzzy, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr "Anda hingga dan<interface> Ulangmuat Maklumat</interface>."
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Guna hingga henti."
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr ""
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, fuzzy, kde-kuit-format
@@ -540,96 +329,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Guna hingga ulangmula."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Umum"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Maklumat Pemaju"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, fuzzy, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para> Anda us KDE ralat<nl /><link url='#aboutbugreporting'> Belajar lebih</"
-"link></para><para><note> ialah hingga hingga</note></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Perincian:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, fuzzy, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr "<para><application></application> PID<numid></numid> Isyarat</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Tutup"
-
 #: main.cpp:154
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
@@ -929,10 +628,25 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
+#: qml/DeveloperPage.qml:72
+#, fuzzy
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "Guna hingga hingga."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
+
+#: qml/DeveloperPage.qml:81
+#, fuzzy
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr "Guna hingga hingga a fail ialah hingga a atau hingga."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -946,6 +660,12 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Ulangi."
+
+#: qml/DeveloperPage.qml:127
+#, fuzzy
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Guna hingga henti."
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -998,6 +718,13 @@ msgid ""
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr "Anda hingga<interface> Ulangmuat Maklumat</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1069,6 +796,13 @@ msgid ""
 "email address and password."
 msgstr "Guna hingga hingga KDE dan."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1101,6 +835,16 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+
+#: qml/main.qml:64
+#, fuzzy
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para> Anda us KDE ralat<nl /><link url='#aboutbugreporting'> Belajar lebih</"
+"link></para><para><note> ialah hingga hingga</note></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1585,6 +1329,150 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Ulangmuat"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr "Guna hingga ialah dan hingga a."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Pasang S&imbol Nyahpepijat"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "Guna hingga henti."
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Memuatkan..."
+
+#, fuzzy
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Memuat beberapa masa "
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr "ialah."
+
+#, fuzzy
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "ialah dilampirkan hingga lain-lain dan<interface> Ulangmuat Maklumat</"
+#~ "interface>."
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "ialah"
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "ialah"
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "ialah"
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "ialah"
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "bagi ialah ialah a inci."
+
+#, fuzzy
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "<link url='%1'> hingga</link> hingga hingga a Selepas<interface> "
+#~ "Ulangmuat Maklumat</interface>."
+
+#, fuzzy
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "<link url='%1'> hingga</link> hingga hingga a Selepas<interface> "
+#~ "Ulangmuat Maklumat</interface>."
+
+#, fuzzy
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr "Anda hingga<interface> Ulangmuat Maklumat</interface>."
+
+#, fuzzy
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "ialah atau."
+
+#, fuzzy
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr "Anda hingga dan<interface> Ulangmuat Maklumat</interface>."
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Umum"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Maklumat Pemaju"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Perincian:"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr "<para><application></application> PID<numid></numid> Isyarat</para>"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Tutup"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

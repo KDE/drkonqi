@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2026-05-02 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -40,251 +40,6 @@ msgid "Your emails"
 msgstr ""
 "eroloz@bilgi.edu.tr, gokcen@pardus.org.tr, volkangezer@gmail.com, "
 "emir_sari@icloud.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Yeniden Yükle"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Çökme bilgilerini (geri iz) yeniden yüklemek için bu düğmeyi kullanın. Bu "
-"işlem hata ayıklama sembollerini içeren paketleri kurduğunuzda ve daha iyi "
-"geri iz almak istediğinizde kullanışlıdır."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Hata Ayıklama Sembollerini Kur"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Eksik hata ayıklama sembolü paketlerini kurmak için bu düğmeyi kullanın."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Sembol kurulumu kullanılamıyor; çünkü başlatıldıktan sonra uygulama "
-"güncellendi veya kaldırıldı."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Çökme bilgilerini (geri iz) panoya kopyalamak için bu düğmeyi kullanın."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Çökme bilgilerini (geri iz) bir dosyaya kaydetmek için bu düğmeyi kullanın. "
-"Bu çökme bilgilerine göz atmanız ya da hatayı daha sonra raporlamanız için "
-"yararlı bir yoldur."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Bir “geri iz” nedir?</h2><p>Bir geri iz temel olarak çöktüğü zaman "
-"uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler "
-"bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız görünebilir "
-"ama aslında oldukça yararlı bilgiler içeriyor olabilirler.<br />Geri izler "
-"etkileşimli ve olay sonrası hata ayıklama sırasında yaygın olarak kullanılır."
-"</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Yükleniyor…"
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Geri iz oluşturuluyor… (biraz zaman alabilir)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Şu anda başka bir hata ayıklayıcı, aynı uygulamayı inceliyor. Çökme bilgisi "
-"alınamayabilir."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Çökme bilgileri getirilemedi."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Çöken uygulamayı başka bir hata ayıklama süreci inceliyor. Bu nedenle Dr. "
-"Konqi hata ayıklayıcısı geri iz alamaz. Lütfen diğer hata ayıklayıcıyı "
-"kapatın ve <interface>Yeniden Yükle</interface> ögesine tıklayın."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Kendiliğinden üretilen çökme bilgisi yararlı"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Oluşturulan çökme bilgisi yararlı olabilir"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Çökme bilgisi büyük olasılıkla yararlı değil"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Çökme bilgisi yararlı değil"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Çökme bilgisi derecelendirmesi geçersiz. Bu Drkonqi’nin kendisine ait bir "
-"hata."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Eksik hata ayıklama paketlerini kendiliğinden kurmak için <interface>Hata "
-"Ayıklama Simgelerini Kur</interface> düğmesine tıklayabilirsiniz. Eğer bu "
-"yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
-"url='%1'>Nasıl yararlı hata raporları oluşturulur</link> yazısını okuyun; "
-"gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
-"<interface>Yeniden Yükle</interface> düğmesine basın."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
-"hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri kurun "
-"(<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden Yükle</"
-"interface> düğmesine basın."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Hata ayıklayıcıdan beklenmedik bir şekilde çıkıldı."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Çökme bilgisi üretilemedi."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
-"oluşturmayı deneyebilirsiniz."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Hata ayıklayıcı uygulama bulunamadı ya da çalıştırılamadı.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Hata ayıklayıcı paketini (%1) kurun ve <interface>Yeniden Yükle</"
-"interface> düğmesine basın.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Şu uygulamalar ve kitaplıklar için hata ayıklama bilgisi içeren paketler "
-"eksik:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Eksik hata ayıklama bilgisi paketleri"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -587,119 +342,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Çöken uygulamayı yeniden başlatmak için bu düğmeyi kullanın."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Genel"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Geliştirici Bilgisi"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
-"biçimde kapandı.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Çökme İşleyicisi’nin kendisi hata verdiğinden, yeniden hata vermesinin "
-"riskini azaltmak için otomatik raporlama işlemi devre dışı bırakıldı. <nl /"
-"><nl />Lütfen bu hatayı KDE hata izleme sistemine <link url='%1'>el ile "
-"rapor edin</link>. <interface>Geliştirici Bilgileri</interface> sekmesindeki "
-"geri izi eklemeyi unutmayın.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Çökme İşleyicisi iletişim kutusu güvenli kipte başlatıldığı için "
-"raporlama yardımcısı etkin değil.<nl />Bu hatayı kendiniz %1 adresine "
-"(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
-"birlikte) bildirebilirsiniz.</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Raporlama yardımcısı devre dışı bırakıldı; çünkü kilitlenen uygulama "
-"başlatıldığından beri güncellenmiş veya kaldırılmış gibi görünüyor. Bu, "
-"doğru kilitlenme raporlamasını engeller ve ayrıca bu kilitlenmenin nedeni "
-"olabilir.</para><para>Güncellemeden sonra, güncellemenin tam olarak "
-"uygulandığından ve herhangi bir olumsuzluğa neden olmayacağından emin olmak "
-"için oturumu kapatıp yeniden açmak her zaman iyi bir fikirdir ve bir yan "
-"etkisi yoktur.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Bu hatayı bildirerek KDE yazılımlarını geliştirmemize yardımcı "
-"olabilirsiniz.<nl /><link url='%1'>Hata raporlaması hakkında daha fazla "
-"bilgi edinin.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para><application>%1</application> uygulaması herhangi bir hata bildirim "
-"adresi sağlamadığından, bu uygulama için hata bildiremezsiniz.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Ayrıntılar:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Yürütülebilir: <application>%1</application> Süreç Kimliği: %2 Sinyal: "
-"%3 (%4) Zaman: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -966,10 +608,27 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopyala"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Çökme bilgilerini (geri iz) panoya kopyalamak için bu düğmeyi kullanın."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Kaydet"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Çökme bilgilerini (geri iz) bir dosyaya kaydetmek için bu düğmeyi kullanın. "
+"Bu çökme bilgilerine göz atmanız ya da hatayı daha sonra raporlamanız için "
+"yararlı bir yoldur."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -985,6 +644,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yeniden Dene"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Hata ayıklama sembolleri kurulurken bir hata oluştu"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1045,6 +709,15 @@ msgstr ""
 "Bellek baskısından dolayı geri iz üretimi durduruldu. <interface>Yeniden "
 "Yükle</interface> düğmesine basarak yeniden geri iz oluşturmayı "
 "deneyebilirsiniz."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Şu uygulamalar ve kitaplıklar için hata ayıklama bilgisi içeren paketler "
+"eksik:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1124,6 +797,15 @@ msgstr ""
 "Sağlanan e-posta adresi ve parola ile KDE hata izleme sistemine oturum açmak "
 "için bu düğmeyi kullanın."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para><application>%1</application> uygulaması herhangi bir hata bildirim "
+"adresi sağlamadığından, bu uygulama için hata bildiremezsiniz.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1175,6 +857,16 @@ msgstr ""
 "olarak uygulandığından ve herhangi bir olumsuzluğa neden\n"
 "olmayacağından emin olmak için oturumu kapatıp yeniden\n"
 "açmak her zaman iyi bir fikirdir ve bir yan etkisi yoktur.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Bu hatayı bildirerek KDE yazılımlarını geliştirmemize yardımcı "
+"olabilirsiniz.<nl /><link url='%1'>Hata raporlaması hakkında daha fazla "
+"bilgi edinin.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1654,6 +1346,246 @@ msgstr "bugstest.kde.org kullanıcı adı"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org parolası"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Yeniden Yükle"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Çökme bilgilerini (geri iz) yeniden yüklemek için bu düğmeyi kullanın. Bu "
+#~ "işlem hata ayıklama sembollerini içeren paketleri kurduğunuzda ve daha "
+#~ "iyi geri iz almak istediğinizde kullanışlıdır."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Hata Ayıklama Sembollerini Kur"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Eksik hata ayıklama sembolü paketlerini kurmak için bu düğmeyi kullanın."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Sembol kurulumu kullanılamıyor; çünkü başlatıldıktan sonra uygulama "
+#~ "güncellendi veya kaldırıldı."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Bir “geri iz” nedir?</h2><p>Bir geri iz temel olarak çöktüğü zaman "
+#~ "uygulamanın içinde neler olmakta olduğunu anlatır, böylece geliştiriciler "
+#~ "bozukluğun nerede başladığını bulabilirler. Bunlar size anlamsız "
+#~ "görünebilir ama aslında oldukça yararlı bilgiler içeriyor olabilirler."
+#~ "<br />Geri izler etkileşimli ve olay sonrası hata ayıklama sırasında "
+#~ "yaygın olarak kullanılır.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Yükleniyor…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Geri iz oluşturuluyor… (biraz zaman alabilir)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Şu anda başka bir hata ayıklayıcı, aynı uygulamayı inceliyor. Çökme "
+#~ "bilgisi alınamayabilir."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Çökme bilgileri getirilemedi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Çöken uygulamayı başka bir hata ayıklama süreci inceliyor. Bu nedenle Dr. "
+#~ "Konqi hata ayıklayıcısı geri iz alamaz. Lütfen diğer hata ayıklayıcıyı "
+#~ "kapatın ve <interface>Yeniden Yükle</interface> ögesine tıklayın."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Kendiliğinden üretilen çökme bilgisi yararlı"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Oluşturulan çökme bilgisi yararlı olabilir"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Çökme bilgisi büyük olasılıkla yararlı değil"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Çökme bilgisi yararlı değil"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Çökme bilgisi derecelendirmesi geçersiz. Bu Drkonqi’nin kendisine ait bir "
+#~ "hata."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Eksik hata ayıklama paketlerini kendiliğinden kurmak için <interface>Hata "
+#~ "Ayıklama Simgelerini Kur</interface> düğmesine tıklayabilirsiniz. Eğer bu "
+#~ "yöntem işe yaramazsa düzgün bir geri iz almayı öğrenmek için lütfen <link "
+#~ "url='%1'>Nasıl yararlı hata raporları oluşturulur</link> yazısını okuyun; "
+#~ "gerekli paketleri kurun (<link url='%2'>dosyaların listesi</link>) ve "
+#~ "<interface>Yeniden Yükle</interface> düğmesine basın."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Yararlı geri iz almayı öğrenmek için lütfen <link url='%1'>Nasıl yararlı "
+#~ "hata raporları oluşturulur</link> belgesini okuyun; gerekli paketleri "
+#~ "kurun (<link url='%2'>dosyaların listesi</link>) ve <interface>Yeniden "
+#~ "Yükle</interface> düğmesine basın."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Hata ayıklayıcıdan beklenmedik bir şekilde çıkıldı."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Çökme bilgisi üretilemedi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "<interface>Yeniden Yükle</interface> düğmesine basarak yeniden geri iz "
+#~ "oluşturmayı deneyebilirsiniz."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Hata ayıklayıcı uygulama bulunamadı ya da çalıştırılamadı.</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Hata ayıklayıcı paketini (%1) kurun ve <interface>Yeniden Yükle</"
+#~ "interface> düğmesine basın.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Eksik hata ayıklama bilgisi paketleri"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Genel"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Geliştirici Bilgisi"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Üzgünüz, <application>%1</application> uygulaması beklenmedik bir "
+#~ "biçimde kapandı.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Çökme İşleyicisi’nin kendisi hata verdiğinden, yeniden hata "
+#~ "vermesinin riskini azaltmak için otomatik raporlama işlemi devre dışı "
+#~ "bırakıldı. <nl /><nl />Lütfen bu hatayı KDE hata izleme sistemine <link "
+#~ "url='%1'>el ile rapor edin</link>. <interface>Geliştirici Bilgileri</"
+#~ "interface> sekmesindeki geri izi eklemeyi unutmayın.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Çökme İşleyicisi iletişim kutusu güvenli kipte başlatıldığı için "
+#~ "raporlama yardımcısı etkin değil.<nl />Bu hatayı kendiniz %1 adresine "
+#~ "(<interface>Geliştirici Bilgileri</interface> sekmesindeki geri iz ile "
+#~ "birlikte) bildirebilirsiniz.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Raporlama yardımcısı devre dışı bırakıldı; çünkü kilitlenen "
+#~ "uygulama başlatıldığından beri güncellenmiş veya kaldırılmış gibi "
+#~ "görünüyor. Bu, doğru kilitlenme raporlamasını engeller ve ayrıca bu "
+#~ "kilitlenmenin nedeni olabilir.</para><para>Güncellemeden sonra, "
+#~ "güncellemenin tam olarak uygulandığından ve herhangi bir olumsuzluğa "
+#~ "neden olmayacağından emin olmak için oturumu kapatıp yeniden açmak her "
+#~ "zaman iyi bir fikirdir ve bir yan etkisi yoktur.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Ayrıntılar:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Yürütülebilir: <application>%1</application> Süreç Kimliği: %2 "
+#~ "Sinyal: %3 (%4) Zaman: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Bu pencereyi kapat (çökme bilgilerini kaybedeceksiniz.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

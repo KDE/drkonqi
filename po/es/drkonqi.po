@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-28 02:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -41,253 +41,6 @@ msgid "Your emails"
 msgstr ""
 "ecuadra@eloihr.net,the.blue.valkyrie@gmail.com,jaime@kde.org,pvicentea@oan."
 "es,ponghy@ono.com,bw@kybs.de,yo@miguelrevilla.com,andresbajotierra@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Volver a cargar"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Use este botón para volver a cargar la información del fallo (traza "
-"inversa). Esto resulta útil si ha instalado los paquetes de símbolos de "
-"depuración necesarios y desea obtener una traza inversa más completa."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instalar símbolos de depuración"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Use este botón para instalar los paquetes de símbolos de depuración que no "
-"tenga."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"La instalación de símbolos no está disponible porque la aplicación se ha "
-"actualizado o desinstalado tras haberse iniciado."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Use este botón para copiar la información de fallo (traza inversa) al "
-"portapapeles."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Use este botón para guardar la información del fallo (traza inversa) en un "
-"archivo. Esto resulta útil cuando desea examinar o informar del error más "
-"tarde."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>¿Qué es una «traza inversa»?</h2><p>Básicamente, una traza inversa "
-"describe lo que estaba ocurriendo dentro de una aplicación cuando se produjo "
-"el fallo, de forma que los desarrolladores puedan rastrear dónde empezó el "
-"desastre. Aunque no entienda nada de ellas, contienen una cantidad "
-"considerable de información útil.<br />Las trazas inversas se suelen usar "
-"durante las sesiones de depuración interactivas y <i>post mortem</i>.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Cargando…"
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Generando traza inversa… (puede llevar un tiempo)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Otro proceso depurador está actualmente analizando la misma aplicación. La "
-"información del fallo no pudo ser recolectada."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "La información del fallo no pudo ser recolectada."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Hay otro proceso de depuración conectado a la aplicación que ha fallado. Por "
-"ello, el depurador de DrKonqi no puede obtener una traza inversa. Cierre el "
-"otro depurador y pulse <interface>Volver a cargar</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "La información del fallo generada es útil"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "La información del fallo generada puede ser útil"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "La información del fallo generada probablemente no sea útil"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "La información del fallo generada no es útil"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"La puntuación de la información del fallo no es válida. Este es un fallo en "
-"el código de DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Puede pulsar el botón <interface>Instalar símbolos de depuración</interface> "
-"para instalar automáticamente los paquetes de información de depuración no "
-"disponibles. Si este método no funciona, consulte <link url='%1'>cómo crear "
-"informes de fallo útiles</link> para saber cómo obtener una traza inversa "
-"útil. Tras instalar los paquetes necesarios (<link url='%2'>lista de "
-"archivos</link>), pulse el botón <interface>Volver a cargar</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Consulte <link url='%1'>cómo crear informes de fallo útiles</link> para "
-"saber cómo obtener una traza inversa útil. Instale los paquetes necesarios "
-"(<link url='%2'>lista de archivos</link>) y pulse el botón <interface>Volver "
-"a cargar</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "El proceso depurador ha finalizado inesperadamente."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "No se ha podido generar la información sobre el fallo."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Puede intentar volver a generar la traza inversa haciendo clic en el botón "
-"<interface>Volver a cargar</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Falta la aplicación de depuración o no se ha podido lanzar.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Debe instalar la aplicación de depuración (%1) y hacer clic en el "
-"botón <interface>Volver a cargar</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Error durante la instalación de los símbolos de depuración"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Faltan los paquetes que contienen la información de depuración de las "
-"siguientes aplicaciones y bibliotecas:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Símbolos de depuración no disponibles"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -597,119 +350,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Use este botón para reiniciar la aplicación que ha fallado."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&General"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Información para los &desarrolladores"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Lo lamentamos, <application>%1</application> se ha cerrado "
-"inesperadamente.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>El gestor de errores ha fallado, por lo que el proceso de informes "
-"automáticos se ha desactivado para reducir el riesgo de que vuelva a fallar."
-"<nl /><nl /><link url='%1'>Informe manualmente</link> de este error en el "
-"sistema de seguimiento de errores de KDE. No olvide incluir la traza inversa "
-"de la pestaña <interface>Información para los desarrolladores</interface>.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>El asistente de informe está desactivado porque el diálogo del gestor "
-"de errores se ha iniciado en modo seguro.<nl />Puede informar manualmente de "
-"este error a %1 (incluyendo la traza inversa de la pestaña "
-"<interface>Información para los desarrolladores</interface>).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>El asistente de notificación de errores se ha desactivado porque "
-"parece que la aplicación que ha fallado ha sido actualizada o se ha "
-"desinstalado después de haberse iniciado. Esto impide generar un informe de "
-"errores preciso y también puede ser la causa de este fallo.</para><para>Tras "
-"actualizar, siempre es una buena idea cerrar la sesión y volver a iniciarla "
-"para asegurarse de que la actualización se ha aplicado correctamente y no "
-"provocará efectos colaterales.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Puede ayudarnos a mejorar el software de KDE informando de este error."
-"<nl /><link url='%1'>Aprenda más sobre e informe de errores.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>No puede informar de este error porque <application>%1</application> "
-"no proporciona una dirección de informe de errores.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Detalles:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Ejecutable: <application>%1</application> PID: %2 Señal: %3 (%4) Hora: "
-"%5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Cerrar este diálogo (se perderá la información de este fallo.)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -979,10 +619,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copiar"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Use este botón para copiar la información de fallo (traza inversa) al "
+"portapapeles."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Guardar"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Use este botón para guardar la información del fallo (traza inversa) en un "
+"archivo. Esto resulta útil cuando desea examinar o informar del error más "
+"tarde."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -998,6 +656,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Volver a intentarlo"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Error durante la instalación de los símbolos de depuración"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1058,6 +721,15 @@ msgstr ""
 "Se ha detenido la generación de la traza inversa debido a la presión de la "
 "memoria. Puede intentar volver a generar la traza inversa pulsando el botón "
 "<interface>Volver a cargar</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Faltan los paquetes que contienen la información de depuración de las "
+"siguientes aplicaciones y bibliotecas:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1138,6 +810,15 @@ msgstr ""
 "Use este botón para iniciar sesión en el sistema de seguimiento de errores "
 "de KDE usando la dirección de correo electrónico y la contraseña facilitados."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>No puede informar de este error porque <application>%1</application> "
+"no proporciona una dirección de informe de errores.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1191,6 +872,15 @@ msgstr ""
 "actualizar, siempre es una buena idea cerrar la sesión y volver a iniciarla\n"
 "para asegurarse de que la actualización se ha aplicado correctamente y no\n"
 "provocará efectos colaterales.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Puede ayudarnos a mejorar el software de KDE informando de este error."
+"<nl /><link url='%1'>Aprenda más sobre e informe de errores.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1675,6 +1365,250 @@ msgstr "Usuario de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contraseña de bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Volver a cargar"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Use este botón para volver a cargar la información del fallo (traza "
+#~ "inversa). Esto resulta útil si ha instalado los paquetes de símbolos de "
+#~ "depuración necesarios y desea obtener una traza inversa más completa."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instalar símbolos de depuración"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Use este botón para instalar los paquetes de símbolos de depuración que "
+#~ "no tenga."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "La instalación de símbolos no está disponible porque la aplicación se ha "
+#~ "actualizado o desinstalado tras haberse iniciado."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>¿Qué es una «traza inversa»?</h2><p>Básicamente, una traza inversa "
+#~ "describe lo que estaba ocurriendo dentro de una aplicación cuando se "
+#~ "produjo el fallo, de forma que los desarrolladores puedan rastrear dónde "
+#~ "empezó el desastre. Aunque no entienda nada de ellas, contienen una "
+#~ "cantidad considerable de información útil.<br />Las trazas inversas se "
+#~ "suelen usar durante las sesiones de depuración interactivas y <i>post "
+#~ "mortem</i>.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Cargando…"
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Generando traza inversa… (puede llevar un tiempo)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Otro proceso depurador está actualmente analizando la misma aplicación. "
+#~ "La información del fallo no pudo ser recolectada."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "La información del fallo no pudo ser recolectada."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Hay otro proceso de depuración conectado a la aplicación que ha fallado. "
+#~ "Por ello, el depurador de DrKonqi no puede obtener una traza inversa. "
+#~ "Cierre el otro depurador y pulse <interface>Volver a cargar</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "La información del fallo generada es útil"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "La información del fallo generada puede ser útil"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "La información del fallo generada probablemente no sea útil"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "La información del fallo generada no es útil"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "La puntuación de la información del fallo no es válida. Este es un fallo "
+#~ "en el código de DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Puede pulsar el botón <interface>Instalar símbolos de depuración</"
+#~ "interface> para instalar automáticamente los paquetes de información de "
+#~ "depuración no disponibles. Si este método no funciona, consulte <link "
+#~ "url='%1'>cómo crear informes de fallo útiles</link> para saber cómo "
+#~ "obtener una traza inversa útil. Tras instalar los paquetes necesarios "
+#~ "(<link url='%2'>lista de archivos</link>), pulse el botón "
+#~ "<interface>Volver a cargar</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Consulte <link url='%1'>cómo crear informes de fallo útiles</link> para "
+#~ "saber cómo obtener una traza inversa útil. Instale los paquetes "
+#~ "necesarios (<link url='%2'>lista de archivos</link>) y pulse el botón "
+#~ "<interface>Volver a cargar</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "El proceso depurador ha finalizado inesperadamente."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "No se ha podido generar la información sobre el fallo."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Puede intentar volver a generar la traza inversa haciendo clic en el "
+#~ "botón <interface>Volver a cargar</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Falta la aplicación de depuración o no se ha podido lanzar.</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Debe instalar la aplicación de depuración (%1) y hacer clic en el "
+#~ "botón <interface>Volver a cargar</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Símbolos de depuración no disponibles"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&General"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Información para los &desarrolladores"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Lo lamentamos, <application>%1</application> se ha cerrado "
+#~ "inesperadamente.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>El gestor de errores ha fallado, por lo que el proceso de informes "
+#~ "automáticos se ha desactivado para reducir el riesgo de que vuelva a "
+#~ "fallar.<nl /><nl /><link url='%1'>Informe manualmente</link> de este "
+#~ "error en el sistema de seguimiento de errores de KDE. No olvide incluir "
+#~ "la traza inversa de la pestaña <interface>Información para los "
+#~ "desarrolladores</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>El asistente de informe está desactivado porque el diálogo del "
+#~ "gestor de errores se ha iniciado en modo seguro.<nl />Puede informar "
+#~ "manualmente de este error a %1 (incluyendo la traza inversa de la pestaña "
+#~ "<interface>Información para los desarrolladores</interface>).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>El asistente de notificación de errores se ha desactivado porque "
+#~ "parece que la aplicación que ha fallado ha sido actualizada o se ha "
+#~ "desinstalado después de haberse iniciado. Esto impide generar un informe "
+#~ "de errores preciso y también puede ser la causa de este fallo.</"
+#~ "para><para>Tras actualizar, siempre es una buena idea cerrar la sesión y "
+#~ "volver a iniciarla para asegurarse de que la actualización se ha aplicado "
+#~ "correctamente y no provocará efectos colaterales.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Detalles:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Ejecutable: <application>%1</application> PID: %2 Señal: %3 (%4) "
+#~ "Hora: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Cerrar este diálogo (se perderá la información de este fallo.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

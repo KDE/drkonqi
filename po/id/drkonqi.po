@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2022-09-27 18:03+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -30,248 +30,6 @@ msgstr "Andhika Padmawan,Wantoyo"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Muat Ulang"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Gunakan tombol ini untuk memuat ulang informasi mogok (backtrace). Hal ini "
-"berguna ketika kamu telah menginstal paket simbol yang benar dan kamu ingin "
-"mendapatkan pelacakan balik yang lebih baik."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instal Simbol Debug"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Gunakan tombol ini untuk menginstal paket simbol debug yang hilang."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Penginstalan simbol tidaklah tersedia karena aplikasi sedang diperbarui atau "
-"diuninstal setelah semenjak dijalankan."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Gunakan tombol ini untuk menyalin informasi mogok (backtrace) ke papan-klip."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Gunakan tombol ini untuk menyimpan informasi mogok (backtrace) ke sebuah "
-"file. Hal ini berguna jika kamu ingin melihatnya atau melaporkan bug "
-"tersebut nanti."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Apakah itu \"backtrace\" ?</h2><p>Backtrace pada dasarnya menjelaskan "
-"apa yang terjadi di dalam aplikasi ketika mogok, sehingga pengembang dapat "
-"melacak dari mana kekacauan berasal. Backtrace mungkin tampak tidak berarti "
-"bagi kamu, tetapi sebenarnya kaya akan informasi yang berharga.<br /"
-">Backtrace umumnya digunakan ketika pendebugan interaktif dan otopsi.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Memuat..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Membuat backtrace... (ini dapat berlangsung beberapa saat)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Pendebug lain saat ini sedang mendebug aplikasi yang sama. Informasi mogok "
-"tidak dapat diambil."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Informasi mogok tidak dapat diambil."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Proses pendebugan lain telah dilampirkan ke aplikasi yang mogok. Sehingga, "
-"pendebug DrKonqi tak dapat mengambil backtrace. Silakan tutup pendebug lain "
-"lalu klik <interface>Muat Ulang</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Informasi mogok yang dibuat ini berguna"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Informasi mogok yang dibuat ini mungkin berguna"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Informasi mogok yang dibuat ini mungkin tidak berguna"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Informasi mogok yang dibuat ini tidak berguna"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Peringkat informasi mogok ini tidak absah. Ini adalah bug di dalam DrKonqi "
-"sendiri."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Kamu bisa klik tombol <interface>Instal Simbol Debug</interface> untuk "
-"secara otomatis menginstal paket informasi pendebugan yang hilang. Jika "
-"metode ini tidak bekerja: silakan baca <link url='%1'>Bagaimana cara "
-"menciptakan laporan mogok yang berguna</link> untuk mempelajari cara "
-"mendapatkan lacak balik yang berguna; instal paket yang diperlukan (<link "
-"url='%2'>senarai file</link>) lalu klik tombol <interface>Muat Ulang</"
-"interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Silakan baca <link url='%1'>Bagaimana cara menciptakan laporan mogok yang "
-"berguna</link> untuk mempelajari cara mendapatkan backtrace yang berguna; "
-"instal paket yang diperlukan (<link url='%2'>senarai file</link>) lalu klik "
-"tombol <interface>Muat Ulang</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Pendebug telah berhenti secara tiba-tiba."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Informasi mogok tidak dapat dibuat."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Kamu bisa mencoba untuk membuat ulang backtrace dengan klik tombol "
-"<interface>Muat Ulang</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>Aplikasi pendebug hilang atau tidak dapat dijalankan.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Kamu perlu menginstal paket pendebug aplikasi (%1) lalu klik tombol "
-"<interface>Muat Ulang</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Error ketika penginstalan simbol debug"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Paket berisi informasi debug untuk aplikasi dan pustaka berikut hilang:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Paket informasi debug hilang"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -575,118 +333,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Gunakan tombol ini untuk menjalankan ulang aplikasi yang mogok."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Umum"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Informasi Pengembang"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Kami mohon maaf, <application>%1</application> tertutup secara tiba-"
-"tiba.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Karena Penanganan Mogok sendiri telah gagal, proses pelaporan otomatis "
-"telah dinonfungsikan untuk mengurangi risiko dari kegagalan yang sama.<nl /"
-"><nl />Silakan, <link url='%1'>laporkan secara manual</link>  error ini di "
-"produk \"drkonqi\" di %1. Jangan lupa untuk menyertakan backtrace dari tab "
-"<interface>Informasi Pengembang</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Asisten pelaporan dinonfungsikan karena dialog penanganan mogok "
-"dijalankan dalam mode aman.<nl />Kamu bisa melaporkan secara manual bug ini "
-"ke %1 (termasuk backtrace dari tab <interface>Informasi Pengembang</"
-"interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Asisten pelaporan dinonfungsikan karena aplikasi mogok yang muncul "
-"sedang diperbarui atau diuninstal semenjak dijalankan. Ini mencegah "
-"pelaporan mogok yang akurat dan juga bisa menjadi penyebab kemogokan ini.</"
-"para><para>Setelah pembaruan, sebaiknya keluar log dan kembali masuk log "
-"untuk memastikan bahwa pembaruan secara lengkap diterapkan dan tidak akan "
-"menimbulkan efek samping.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Kamu bisa membantu kami dalam memperbaiki Perangkat Lunak KDE dengan "
-"melaporkan bug ini.<nl /><link url='%1'>Pelajari selebihnya tentang "
-"pelaporan bug.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Kamu tidak dapat melaporkan error ini, karena <application>%1</"
-"application> tidak menyediakan alamat pelaporan bug.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Perincian:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Dapat Dieksekusi: <application>%1</application> PID: %2 Sinyal: %3 "
-"(%4) Waktu: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Tutup dialog ini (kamu akan kehilangan informasi mogok.)"
-
 #: main.cpp:154
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
@@ -974,10 +620,27 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Salin"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Gunakan tombol ini untuk menyalin informasi mogok (backtrace) ke papan-klip."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Simpan"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Gunakan tombol ini untuk menyimpan informasi mogok (backtrace) ke sebuah "
+"file. Hal ini berguna jika kamu ingin melihatnya atau melaporkan bug "
+"tersebut nanti."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -993,6 +656,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Coba lagi"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Error ketika penginstalan simbol debug"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1086,6 +754,14 @@ msgstr ""
 "Kamu bisa mencoba untuk membuat ulang backtrace dengan klik tombol "
 "<interface>Muat Ulang</interface>."
 
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Paket berisi informasi debug untuk aplikasi dan pustaka berikut hilang:"
+
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
@@ -1177,6 +853,15 @@ msgstr ""
 "Gunakan tombol ini untuk login ke sistem pelacakan bug KDE menggunakan "
 "alamat e-mail dan kata sandi yang disediakan."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Kamu tidak dapat melaporkan error ini, karena <application>%1</"
+"application> tidak menyediakan alamat pelaporan bug.</para>"
+
 #: qml/main.qml:33
 #, fuzzy
 #| msgctxt "@info"
@@ -1248,6 +933,16 @@ msgstr ""
 "para><para>Setelah pembaruan, sebaiknya keluar log dan kembali masuk log "
 "untuk memastikan bahwa pembaruan secara lengkap diterapkan dan tidak akan "
 "menimbulkan efek samping.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Kamu bisa membantu kami dalam memperbaiki Perangkat Lunak KDE dengan "
+"melaporkan bug ini.<nl /><link url='%1'>Pelajari selebihnya tentang "
+"pelaporan bug.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1786,6 +1481,244 @@ msgstr "Nama pengguna bugtest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Sandi bugtest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Muat Ulang"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Gunakan tombol ini untuk memuat ulang informasi mogok (backtrace). Hal "
+#~ "ini berguna ketika kamu telah menginstal paket simbol yang benar dan kamu "
+#~ "ingin mendapatkan pelacakan balik yang lebih baik."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instal Simbol Debug"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "Gunakan tombol ini untuk menginstal paket simbol debug yang hilang."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Penginstalan simbol tidaklah tersedia karena aplikasi sedang diperbarui "
+#~ "atau diuninstal setelah semenjak dijalankan."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Apakah itu \"backtrace\" ?</h2><p>Backtrace pada dasarnya menjelaskan "
+#~ "apa yang terjadi di dalam aplikasi ketika mogok, sehingga pengembang "
+#~ "dapat melacak dari mana kekacauan berasal. Backtrace mungkin tampak tidak "
+#~ "berarti bagi kamu, tetapi sebenarnya kaya akan informasi yang berharga."
+#~ "<br />Backtrace umumnya digunakan ketika pendebugan interaktif dan otopsi."
+#~ "</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Memuat..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Membuat backtrace... (ini dapat berlangsung beberapa saat)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Pendebug lain saat ini sedang mendebug aplikasi yang sama. Informasi "
+#~ "mogok tidak dapat diambil."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Informasi mogok tidak dapat diambil."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Proses pendebugan lain telah dilampirkan ke aplikasi yang mogok. "
+#~ "Sehingga, pendebug DrKonqi tak dapat mengambil backtrace. Silakan tutup "
+#~ "pendebug lain lalu klik <interface>Muat Ulang</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Informasi mogok yang dibuat ini berguna"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Informasi mogok yang dibuat ini mungkin berguna"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Informasi mogok yang dibuat ini mungkin tidak berguna"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Informasi mogok yang dibuat ini tidak berguna"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Peringkat informasi mogok ini tidak absah. Ini adalah bug di dalam "
+#~ "DrKonqi sendiri."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Kamu bisa klik tombol <interface>Instal Simbol Debug</interface> untuk "
+#~ "secara otomatis menginstal paket informasi pendebugan yang hilang. Jika "
+#~ "metode ini tidak bekerja: silakan baca <link url='%1'>Bagaimana cara "
+#~ "menciptakan laporan mogok yang berguna</link> untuk mempelajari cara "
+#~ "mendapatkan lacak balik yang berguna; instal paket yang diperlukan (<link "
+#~ "url='%2'>senarai file</link>) lalu klik tombol <interface>Muat Ulang</"
+#~ "interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Silakan baca <link url='%1'>Bagaimana cara menciptakan laporan mogok yang "
+#~ "berguna</link> untuk mempelajari cara mendapatkan backtrace yang berguna; "
+#~ "instal paket yang diperlukan (<link url='%2'>senarai file</link>) lalu "
+#~ "klik tombol <interface>Muat Ulang</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Pendebug telah berhenti secara tiba-tiba."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Informasi mogok tidak dapat dibuat."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Kamu bisa mencoba untuk membuat ulang backtrace dengan klik tombol "
+#~ "<interface>Muat Ulang</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Aplikasi pendebug hilang atau tidak dapat dijalankan.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Kamu perlu menginstal paket pendebug aplikasi (%1) lalu klik "
+#~ "tombol <interface>Muat Ulang</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Paket informasi debug hilang"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Umum"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Informasi Pengembang"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Kami mohon maaf, <application>%1</application> tertutup secara tiba-"
+#~ "tiba.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Karena Penanganan Mogok sendiri telah gagal, proses pelaporan "
+#~ "otomatis telah dinonfungsikan untuk mengurangi risiko dari kegagalan yang "
+#~ "sama.<nl /><nl />Silakan, <link url='%1'>laporkan secara manual</link>  "
+#~ "error ini di produk \"drkonqi\" di %1. Jangan lupa untuk menyertakan "
+#~ "backtrace dari tab <interface>Informasi Pengembang</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Asisten pelaporan dinonfungsikan karena dialog penanganan mogok "
+#~ "dijalankan dalam mode aman.<nl />Kamu bisa melaporkan secara manual bug "
+#~ "ini ke %1 (termasuk backtrace dari tab <interface>Informasi Pengembang</"
+#~ "interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Asisten pelaporan dinonfungsikan karena aplikasi mogok yang muncul "
+#~ "sedang diperbarui atau diuninstal semenjak dijalankan. Ini mencegah "
+#~ "pelaporan mogok yang akurat dan juga bisa menjadi penyebab kemogokan ini."
+#~ "</para><para>Setelah pembaruan, sebaiknya keluar log dan kembali masuk "
+#~ "log untuk memastikan bahwa pembaruan secara lengkap diterapkan dan tidak "
+#~ "akan menimbulkan efek samping.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Perincian:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Dapat Dieksekusi: <application>%1</application> PID: %2 Sinyal: %3 "
+#~ "(%4) Waktu: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Tutup dialog ini (kamu akan kehilangan informasi mogok.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

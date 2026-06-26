@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2026-01-02 11:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -44,249 +44,6 @@ msgstr ""
 "kim.enkovaara@iki.fi, eleknader@phnet.fi,ilpo@iki.fi, niklas.laxstrom"
 "+kdetrans@gmail.com, tpr@d5k.net, translator@legisign.org, karvonen."
 "jorma@gmail.com, lliehu@kolumbus.fi"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Lataa &uudelleen"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Lataa kaatumistiedot (pinolistaus) uudelleen tällä painikkeella. Tästä on "
-"hyötyä, kun oikeat virheenpaikannussymbolipaketit on asennettu ja haluat "
-"saada paremman pinolistauksen."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Asenna v&irheenpaikannussymbolit"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Asenna puuttuvat virheenpaikannussymbolipaketit tästä painikkeesta."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Symboliasennusta ei voi käyttää, koska sovellus on päivitetty tai asennus "
-"poistettu sen käynnistyttyä."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "Kopioi kaatumistiedot (pinolistaus) leikepöydälle tällä painikkeella."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Tallenna kaatumistiedot (pinolistaus) tiedostoon tällä painikkeella. Tästä "
-"on hyötyä, jos haluat tarkastella tietoja tai ilmoittaa viasta myöhemmin."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Mikä on ”pinolistaus”?</h2><p>Pinolistaus kuvaa lähinnä, mitä "
-"sovelluksessa kaatumishetkellä tapahtui, jotta kehittäjät voisivat "
-"jäljittää, mistä ongelmat alkavat. Sen sisältö saattaa näyttää "
-"merkityksettömältä mutta se voi oikeasti sisältää runsaasti hyödyllistä "
-"tietoa.<br />Vuorovaikutteisessa ja jälkikäteisessä virheenpaikannuksessa "
-"pinolistausta käytetään usein.</p>"
-
-# skip-rule: orthography-three-dots-in-msgstr
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Ladataan..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Ladataan pinolistausta… (voi kestää hetken)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Toinen virheenpaikannin tutkii samaa sovellusta paraikaa. Kaatumistietoja ei "
-"saada."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Kaatumistietoja ei saatu noudettua."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Kaatuneeseen sovellukseen on kytkeytynyt toinen virheenpaikannusprosessi, "
-"minkä vuoksi DrKonqi-virheenpaikannin ei saa pinolistausta. Sulje toinen "
-"virheenpaikannin ja napsauta <interface>Lataa uudelleen</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Tuotetuista kaatumistiedoista on hyötyä"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Tuotetuista kaatumistiedoista voi olla hyötyä"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Tuotetuista kaatumistiedoista ei luultavasti ole hyötyä"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Tuotetuista kaatumistiedoista ei ole hyötyä"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Näiden kaatumistietojen arvio on virheellinen. Tämä on virhe itse DrKonqissa."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Puuttuvat virheenpaikannustietopaketit voi asentaa automaattisesti "
-"napsauttamalla <interface>Asenna virheenpaikannussymbolit</interface>. Ellei "
-"tämä toimi, opettele tuottamaan käyttökelpoinen pinolistaus lukemalla <link "
-"url='%1'>Kuinka luoda käyttökelpoisia kaatumisilmoituksia</link>. "
-"Asennettuasi tarpeelliset paketit (<link url='%2'>tiedostoluettelo</link>) "
-"napsauta <interface>Lataa uudelleen</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Opettele tuottamaan käyttökelpoinen pinolistaus lukemalla <link "
-"url='%1'>Kuinka luoda käyttökelpoisia kaatumisilmoituksia</link>. "
-"Asennettuasi tarpeelliset paketit (<link url='%2'>tiedostoluettelo</link>) "
-"napsauta <interface>Lataa uudelleen</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Virheenpaikantimen suoritus päättyi yllättäen."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Kaatumistietoja ei voitu tuottaa."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Pinolistauksen voi yrittää tuottaa uudelleen napsauttamalla <interface>Lataa "
-"uudelleen</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Virheenpaikannussovellusta ei ole tai sitä ei saatu käynnistettyä.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Asenna ensin virheenpaikannussovellus (%1) ja napsauta sitten "
-"<interface>Lataa uudelleen</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Virhe virheenpaikannussymbolien asennuksessa"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Seuraavien sovellusten ja kirjastojen virheenpaikannustietoa sisältävät "
-"paketit puuttuvat:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Virheenpaikannustietopaketteja puuttuu"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -589,115 +346,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Käynnistä kaatunut sovellus uudelleen tästä painikkeesta."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Yleistä"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Ke&hittäjätiedot"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para><application>%1</application> sulkeutui yllättäen.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Koska itse kaatumistenkäsittelijä kaatui, automaattinen "
-"ilmoitusavustaja on poistettu käytöstä uuden kaatumisen riskin "
-"pienentämiseksi.<nl /><nl />Ole hyvä ja <link url='%1'>ilmoita tästä "
-"virheestä itse</link> KDE:n vianseurantajärjestelmään. Älä unohda "
-"sisällyttää pinolistausta <interface>Kehittäjätiedot</interface>-"
-"välilehdeltä.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Ilmoitusavustaja ei ole käytössä, koska kaatumiskäsittelijän ikkuna "
-"käynnistettiin turvatilassa.<nl />Viasta voi ilmoittaa osoitteeseen %1 "
-"(jolloin tulisi sisällyttää <interface>Kehittäjätiedot</interface>-"
-"välilehdeltä pinolistaus).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Ilmoitusavustaja ei ole käytössä, koska kaatunut sovellus vaikuttaa "
-"päivitetyn tai asennus poistetun sen käynnistyttyä. Tämä estää tarkan "
-"kaatumisilmoituksen ja voi olla syykin kaatumiseen.</para><para>Päivityksen "
-"jälkeen on hyvä aina kirjautua ulos ja takaisin sisään, jotta päivitykset "
-"tulisivat sivuvaikutuksitta täysin voimaan.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Voit auttaa meitä parantamaan KDE:tä ilmoittamalla tästä viasta.<nl /"
-"><link url='%1'>Lisätietoa vikojen ilmoittamisesta.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Tästä viasta ei voi ilmoittaa, koska <application>%1</application> ei "
-"tarjoa vikailmoitusosoitetta.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Tiedot:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Ohjelmatiedosto: <application>%1</application> Prosessitunniste: %2 "
-"Signaali: %3 (%4) Aika: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Sulje tämä ikkuna (kaatumistiedot menetetään)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -960,10 +608,25 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopioi"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "Kopioi kaatumistiedot (pinolistaus) leikepöydälle tällä painikkeella."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Tallenna"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Tallenna kaatumistiedot (pinolistaus) tiedostoon tällä painikkeella. Tästä "
+"on hyötyä, jos haluat tarkastella tietoja tai ilmoittaa viasta myöhemmin."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -978,6 +641,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yritä uudelleen"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Virhe virheenpaikannussymbolien asennuksessa"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1039,6 +707,15 @@ msgstr ""
 "Pinolistauksen luominen keskeytettiin, koska muisti on vähissä. Sen voi "
 "yrittää luoda uudelleen napsauttamalla <interface>Lataa uudelleen</"
 "interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Seuraavien sovellusten ja kirjastojen virheenpaikannustietoa sisältävät "
+"paketit puuttuvat:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1117,6 +794,15 @@ msgstr ""
 "Kirjaudu KDE:n vianseurantajärjestelmään annetulla sähköpostiosoitteella ja "
 "salasanalla napsauttamalla tätä."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Tästä viasta ei voi ilmoittaa, koska <application>%1</application> ei "
+"tarjoa vikailmoitusosoitetta.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1167,6 +853,15 @@ msgstr ""
 "<para>Päivityksen jälkeen on hyvä aina kirjautua ulos ja\n"
 "takaisin sisään, jotta päivitykset tulisivat\n"
 "sivuvaikutuksitta täysin voimaan.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Voit auttaa meitä parantamaan KDE:tä ilmoittamalla tästä viasta.<nl /"
+"><link url='%1'>Lisätietoa vikojen ilmoittamisesta.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1640,6 +1335,245 @@ msgstr "bugstest.kde.org-käyttäjätunnus"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org-salasana"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Lataa &uudelleen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Lataa kaatumistiedot (pinolistaus) uudelleen tällä painikkeella. Tästä on "
+#~ "hyötyä, kun oikeat virheenpaikannussymbolipaketit on asennettu ja haluat "
+#~ "saada paremman pinolistauksen."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Asenna v&irheenpaikannussymbolit"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "Asenna puuttuvat virheenpaikannussymbolipaketit tästä painikkeesta."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Symboliasennusta ei voi käyttää, koska sovellus on päivitetty tai asennus "
+#~ "poistettu sen käynnistyttyä."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Mikä on ”pinolistaus”?</h2><p>Pinolistaus kuvaa lähinnä, mitä "
+#~ "sovelluksessa kaatumishetkellä tapahtui, jotta kehittäjät voisivat "
+#~ "jäljittää, mistä ongelmat alkavat. Sen sisältö saattaa näyttää "
+#~ "merkityksettömältä mutta se voi oikeasti sisältää runsaasti hyödyllistä "
+#~ "tietoa.<br />Vuorovaikutteisessa ja jälkikäteisessä virheenpaikannuksessa "
+#~ "pinolistausta käytetään usein.</p>"
+
+# skip-rule: orthography-three-dots-in-msgstr
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Ladataan..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Ladataan pinolistausta… (voi kestää hetken)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Toinen virheenpaikannin tutkii samaa sovellusta paraikaa. Kaatumistietoja "
+#~ "ei saada."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Kaatumistietoja ei saatu noudettua."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Kaatuneeseen sovellukseen on kytkeytynyt toinen virheenpaikannusprosessi, "
+#~ "minkä vuoksi DrKonqi-virheenpaikannin ei saa pinolistausta. Sulje toinen "
+#~ "virheenpaikannin ja napsauta <interface>Lataa uudelleen</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Tuotetuista kaatumistiedoista on hyötyä"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Tuotetuista kaatumistiedoista voi olla hyötyä"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Tuotetuista kaatumistiedoista ei luultavasti ole hyötyä"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Tuotetuista kaatumistiedoista ei ole hyötyä"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Näiden kaatumistietojen arvio on virheellinen. Tämä on virhe itse "
+#~ "DrKonqissa."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Puuttuvat virheenpaikannustietopaketit voi asentaa automaattisesti "
+#~ "napsauttamalla <interface>Asenna virheenpaikannussymbolit</interface>. "
+#~ "Ellei tämä toimi, opettele tuottamaan käyttökelpoinen pinolistaus "
+#~ "lukemalla <link url='%1'>Kuinka luoda käyttökelpoisia "
+#~ "kaatumisilmoituksia</link>. Asennettuasi tarpeelliset paketit (<link "
+#~ "url='%2'>tiedostoluettelo</link>) napsauta <interface>Lataa uudelleen</"
+#~ "interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Opettele tuottamaan käyttökelpoinen pinolistaus lukemalla <link "
+#~ "url='%1'>Kuinka luoda käyttökelpoisia kaatumisilmoituksia</link>. "
+#~ "Asennettuasi tarpeelliset paketit (<link url='%2'>tiedostoluettelo</"
+#~ "link>) napsauta <interface>Lataa uudelleen</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Virheenpaikantimen suoritus päättyi yllättäen."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Kaatumistietoja ei voitu tuottaa."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Pinolistauksen voi yrittää tuottaa uudelleen napsauttamalla "
+#~ "<interface>Lataa uudelleen</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Virheenpaikannussovellusta ei ole tai sitä ei saatu käynnistettyä."
+#~ "</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Asenna ensin virheenpaikannussovellus (%1) ja napsauta sitten "
+#~ "<interface>Lataa uudelleen</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Virheenpaikannustietopaketteja puuttuu"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Yleistä"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Ke&hittäjätiedot"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr "<para><application>%1</application> sulkeutui yllättäen.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Koska itse kaatumistenkäsittelijä kaatui, automaattinen "
+#~ "ilmoitusavustaja on poistettu käytöstä uuden kaatumisen riskin "
+#~ "pienentämiseksi.<nl /><nl />Ole hyvä ja <link url='%1'>ilmoita tästä "
+#~ "virheestä itse</link> KDE:n vianseurantajärjestelmään. Älä unohda "
+#~ "sisällyttää pinolistausta <interface>Kehittäjätiedot</interface>-"
+#~ "välilehdeltä.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Ilmoitusavustaja ei ole käytössä, koska kaatumiskäsittelijän ikkuna "
+#~ "käynnistettiin turvatilassa.<nl />Viasta voi ilmoittaa osoitteeseen %1 "
+#~ "(jolloin tulisi sisällyttää <interface>Kehittäjätiedot</interface>-"
+#~ "välilehdeltä pinolistaus).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Ilmoitusavustaja ei ole käytössä, koska kaatunut sovellus vaikuttaa "
+#~ "päivitetyn tai asennus poistetun sen käynnistyttyä. Tämä estää tarkan "
+#~ "kaatumisilmoituksen ja voi olla syykin kaatumiseen.</"
+#~ "para><para>Päivityksen jälkeen on hyvä aina kirjautua ulos ja takaisin "
+#~ "sisään, jotta päivitykset tulisivat sivuvaikutuksitta täysin voimaan.</"
+#~ "para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Tiedot:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Ohjelmatiedosto: <application>%1</application> Prosessitunniste: %2 "
+#~ "Signaali: %3 (%4) Aika: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Sulje tämä ikkuna (kaatumistiedot menetetään)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

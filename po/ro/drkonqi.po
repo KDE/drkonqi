@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2024-06-08 16:49+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -30,254 +30,6 @@ msgstr "Sergiu Bivol,Cristian Oneț"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sergiu@cip.md,onet.cristian@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Reîncarcă"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Folosiți acest buton pentru a reîncărca informațiile despre prăbușire "
-"(backtrace). Această acțiune este utilă după ce ați instalat pachetele cu "
-"simbolurile de depanare pentru a obține un backtrace mai bun."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instalează simbolurile de depanare"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Utilizați acest buton pentru a instala pachetele cu simboluri de depanare "
-"lipsă."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Instalarea simbolurilor nu e disponibilă deoarece aplicația a fost "
-"actualizată sau dezinstalată după ce a fost pornită."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Folosiți acest buton pentru a copia informațiile despre prăbușire "
-"(backtrace) în clipboard."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Folosiți acest buton pentru a salva informațiile despre prăbușire "
-"(backtrace) într-un fișier. Această acțiune este utilă dacă doriți să "
-"verificați informațiile sau să trimiteți raportul de eroare mai târziu."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Ce este un „backtrace” ?</h2><p>Un backtrace în principiu descrie ce se "
-"întâmplă în interiorul aplicației când aceasta s-a prăbușit, astfel ca "
-"dezvoltatorii să poată depista de unde a început dezastrul. Acesta poate să "
-"vă pară fără niciun sens, dar poate să conțină o cantitate mare de "
-"informații utile.<br />Backtrace-urile sunt folosite de obicei în timpul "
-"depanării interactive și post-mortem.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Încărcare..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Încărcare informații despre prăbușire... (poate dura)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Un alt depanator depanează în acest moment aceeași aplicație. Informațiile "
-"despre prăbușire nu au putut fi preluate."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Informațiile despre prăbușire nu au putut fi preluate."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Un alt proces depanator este atașat la aplicație prăbușită. Ca urmare, "
-"depanatorul DrKonqi nu poate extrage informațiile despre prăbușire. Vă rugăm "
-"închideți celălalt depanator și faceți click pe <interface>Reîncarcă</"
-"interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Informațiile generate despre prăbușire sunt utile"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Informațiile generate despre prăbușire pot fi utile"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Informațiile generate despre prăbușire probabil nu sunt utile"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Informațiile generate despre prăbușire nu sunt utile"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Informațiile de clasificare a acestei prăbușiri sunt invalide. Aceasta este "
-"o eroare chiar în DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Puteți apăsa butonul <interface>Instalează simboluri de depanare</interface> "
-"pentru a instala automat pachetele cu informații de debug lipsă. Dacă "
-"această metodă nu funcționează: citiți <link url='%1'>Cum se creează "
-"rapoarte de prăbușire utile</link> ca să învățați cum să obțineți un "
-"backtrace folositor; instalați pachetele necesare (<link url='%2'>lista de "
-"fișiere</link>) și faceți clic pe butonul <interface>Reîncarcă</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Citiți <link url='%1'>Cum se creează rapoarte de prăbușire utile</link> ca "
-"să învățați cum să obțineți un backtrace folositor; instalați pachetele "
-"necesare (<link url='%2'>lista de fișiere</link>) și apăsați butonul "
-"<interface>Reîncarcă</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Depanatorul a ieșit neașteptat"
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Informațiile despre prăbușire nu au putut fi generate."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Puteți încerca să regenerați backtrace-ul apăsând pe butonul "
-"<interface>Reîncarcă</interface>"
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Aplicația de depanare lipsește sau nu a putut fi lansată.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Trebuie mai întâi să instalați aplicația de depanare (%1) și să "
-"faceți click pe butonul <interface>Reîncarcă</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Eroare în timpul instalării simbolurilor de depanare"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Pachetele care conțin informațiile de depanare ale următoarelor aplicații și "
-"biblioteci lipsesc:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Lipsesc pachetele cu informațiile de depanare"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -585,118 +337,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Folosiți acest buton pentru a reporni aplicația prăbușită."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Generale"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Informații pentru &dezvoltatori"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Ne pare rău, <application>%1</application> s-a închis neașteptat.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Pentru că Manipulatorul de erori însuși a eșuat, procesul de raportare "
-"automată este dezactivat pentru a reduce riscurile unui nou eșec.<nl /><nl /"
-"><link url='%1'>Raportați manual</link> această eroare în sistemul KDE de "
-"urmărire a defectelor. Nu uitați să includeți backtrace-ul din fila "
-"<interface>Informații pentru dezvoltatori</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Asistentul pentru raportare este dezactivat deoarece dialogul "
-"manipulatorului de erori a fost pornit în regim de siguranță.<nl />Puteți "
-"raporta manual acest defect la %1 (inclusiv backtrace-ul din fila "
-"<interface>Informații pentru dezvoltatori</interface>).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Asistentul pentru raportare este dezactivat deoarece aplicația "
-"prăbușită pare să fi fost actualizată sau dezinstalată de când a fost "
-"pornită. Aceasta împiedică raportarea cu exactitate a prăbușirii și poate fi "
-"chiar cauza prăbușirii.</para><para>După actualizare, se recomandă "
-"întotdeauna să vă reautentificați pentru a vă asigura că actualizarea a fost "
-"aplicată complet și nu va cauza efecte secundare.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Ne puteți ajuta să îmbunătățim programele KDE raportând această eroare."
-"<nl /><link url='%1'>Aflați mai multe despre raportarea defectelor.</link></"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Nu puteți raporta această eroare, deoarece <application>%1</"
-"application> nu furnizează o adresă pentru raportarea defectelor.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Detalii:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Executabil: <application>%1</application> PID: %2 Semnal: %3 (%4) Oră: "
-"%5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Închide acest dialog (veți pierde informațiile despre prăbușire)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -979,10 +619,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copiază"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Folosiți acest buton pentru a copia informațiile despre prăbușire "
+"(backtrace) în clipboard."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salvează"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Folosiți acest buton pentru a salva informațiile despre prăbușire "
+"(backtrace) într-un fișier. Această acțiune este utilă dacă doriți să "
+"verificați informațiile sau să trimiteți raportul de eroare mai târziu."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -995,6 +653,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Reîncearcă"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Eroare în timpul instalării simbolurilor de depanare"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1090,6 +753,15 @@ msgid ""
 msgstr ""
 "Puteți încerca să regenerați backtrace-ul apăsând pe butonul "
 "<interface>Reîncarcă</interface>"
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Pachetele care conțin informațiile de depanare ale următoarelor aplicații și "
+"biblioteci lipsesc:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1197,6 +869,15 @@ msgstr ""
 "Folosiți acest buton pentru a vă autentifica în sistemul de urmărire a "
 "defecțiunilor KDE folosind adresa de e-mail și parola dată."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Nu puteți raporta această eroare, deoarece <application>%1</"
+"application> nu furnizează o adresă pentru raportarea defectelor.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1247,6 +928,16 @@ msgstr ""
 "<para>După actualizare, se recomandă întotdeauna să vă reautentificați\n"
 "pentru a vă asigura că actualizarea a fost aplicată complet și nu va\n"
 "cauza efecte secundare.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Ne puteți ajuta să îmbunătățim programele KDE raportând această eroare."
+"<nl /><link url='%1'>Aflați mai multe despre raportarea defectelor.</link></"
+"para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1791,6 +1482,247 @@ msgstr "utilizator bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "parolă bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Reîncarcă"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Folosiți acest buton pentru a reîncărca informațiile despre prăbușire "
+#~ "(backtrace). Această acțiune este utilă după ce ați instalat pachetele cu "
+#~ "simbolurile de depanare pentru a obține un backtrace mai bun."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instalează simbolurile de depanare"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Utilizați acest buton pentru a instala pachetele cu simboluri de depanare "
+#~ "lipsă."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Instalarea simbolurilor nu e disponibilă deoarece aplicația a fost "
+#~ "actualizată sau dezinstalată după ce a fost pornită."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Ce este un „backtrace” ?</h2><p>Un backtrace în principiu descrie ce "
+#~ "se întâmplă în interiorul aplicației când aceasta s-a prăbușit, astfel ca "
+#~ "dezvoltatorii să poată depista de unde a început dezastrul. Acesta poate "
+#~ "să vă pară fără niciun sens, dar poate să conțină o cantitate mare de "
+#~ "informații utile.<br />Backtrace-urile sunt folosite de obicei în timpul "
+#~ "depanării interactive și post-mortem.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Încărcare..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Încărcare informații despre prăbușire... (poate dura)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Un alt depanator depanează în acest moment aceeași aplicație. "
+#~ "Informațiile despre prăbușire nu au putut fi preluate."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Informațiile despre prăbușire nu au putut fi preluate."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Un alt proces depanator este atașat la aplicație prăbușită. Ca urmare, "
+#~ "depanatorul DrKonqi nu poate extrage informațiile despre prăbușire. Vă "
+#~ "rugăm închideți celălalt depanator și faceți click pe "
+#~ "<interface>Reîncarcă</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Informațiile generate despre prăbușire sunt utile"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Informațiile generate despre prăbușire pot fi utile"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Informațiile generate despre prăbușire probabil nu sunt utile"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Informațiile generate despre prăbușire nu sunt utile"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Informațiile de clasificare a acestei prăbușiri sunt invalide. Aceasta "
+#~ "este o eroare chiar în DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Puteți apăsa butonul <interface>Instalează simboluri de depanare</"
+#~ "interface> pentru a instala automat pachetele cu informații de debug "
+#~ "lipsă. Dacă această metodă nu funcționează: citiți <link url='%1'>Cum se "
+#~ "creează rapoarte de prăbușire utile</link> ca să învățați cum să obțineți "
+#~ "un backtrace folositor; instalați pachetele necesare (<link "
+#~ "url='%2'>lista de fișiere</link>) și faceți clic pe butonul "
+#~ "<interface>Reîncarcă</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Citiți <link url='%1'>Cum se creează rapoarte de prăbușire utile</link> "
+#~ "ca să învățați cum să obțineți un backtrace folositor; instalați "
+#~ "pachetele necesare (<link url='%2'>lista de fișiere</link>) și apăsați "
+#~ "butonul <interface>Reîncarcă</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Depanatorul a ieșit neașteptat"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Informațiile despre prăbușire nu au putut fi generate."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Puteți încerca să regenerați backtrace-ul apăsând pe butonul "
+#~ "<interface>Reîncarcă</interface>"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Aplicația de depanare lipsește sau nu a putut fi lansată.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Trebuie mai întâi să instalați aplicația de depanare (%1) și să "
+#~ "faceți click pe butonul <interface>Reîncarcă</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Lipsesc pachetele cu informațiile de depanare"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Generale"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Informații pentru &dezvoltatori"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Ne pare rău, <application>%1</application> s-a închis neașteptat.</"
+#~ "para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Pentru că Manipulatorul de erori însuși a eșuat, procesul de "
+#~ "raportare automată este dezactivat pentru a reduce riscurile unui nou "
+#~ "eșec.<nl /><nl /><link url='%1'>Raportați manual</link> această eroare în "
+#~ "sistemul KDE de urmărire a defectelor. Nu uitați să includeți backtrace-"
+#~ "ul din fila <interface>Informații pentru dezvoltatori</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Asistentul pentru raportare este dezactivat deoarece dialogul "
+#~ "manipulatorului de erori a fost pornit în regim de siguranță.<nl />Puteți "
+#~ "raporta manual acest defect la %1 (inclusiv backtrace-ul din fila "
+#~ "<interface>Informații pentru dezvoltatori</interface>).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Asistentul pentru raportare este dezactivat deoarece aplicația "
+#~ "prăbușită pare să fi fost actualizată sau dezinstalată de când a fost "
+#~ "pornită. Aceasta împiedică raportarea cu exactitate a prăbușirii și poate "
+#~ "fi chiar cauza prăbușirii.</para><para>După actualizare, se recomandă "
+#~ "întotdeauna să vă reautentificați pentru a vă asigura că actualizarea a "
+#~ "fost aplicată complet și nu va cauza efecte secundare.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Detalii:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Executabil: <application>%1</application> PID: %2 Semnal: %3 (%4) "
+#~ "Oră: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Închide acest dialog (veți pierde informațiile despre prăbușire)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

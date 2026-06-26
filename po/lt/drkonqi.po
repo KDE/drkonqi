@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-12-20 20:59+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -32,252 +32,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "andrius@stikonas.eu, liudas@akmc.lt, opensuse.lietuviu.kalba@gmail.com, <>"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Įkelti iš &naujo"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Naudokite šį mygtuką norėdami iš naujo įkelti strigties informaciją. Tai "
-"naudinga tada, kai yra įdiegti atitinkami derinimo simbolių paketai ir jūs "
-"norite gauti geresnį strigties pėdsaką."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Įdiegti &derinimo simbolius"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Naudokite šį mygtuką norėdami įsidiegti trūkstamus derinimo simbolių paketus."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Simbolių įdiegimas yra neprieinamas, nes po programos paleidimo, programa "
-"buvo atnaujinta arba pašalinta."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Naudokite šį mygtuką norėdami nukopijuoti strigties informaciją (pėdsaką) į "
-"iškarpinę."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Naudokite šį mygtuką norėdami įrašyti strigties informaciją (pėdsaką) į "
-"failą. Tai naudinga tuo atveju, jei norite peržiūrėti klaidą ar pranešti "
-"apie ją vėliau."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Kas yra strigties pėdsakas?</h2><p>Strigties pėdsakas, pagrinde, aprašo "
-"kas vyko programos viduje tuo metu, kai ji užstrigo. Tokiu būdu "
-"programuotojai galės atsekti kur prasidėjo visa betvarkė. Jums ši "
-"informacija gali atrodyti beprasmiška, tačiau joje gali būti daugybė labai "
-"naudingos informacijos.<br />Strigties pėdsakas yra dažnai naudojamas "
-"interaktyvaus ir avarinės baigties derinimo metu.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Įkeliama..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Kuriamas strigties pėdsakas... (tai gali šiek tiek užtrukti)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Šiuo metu kita derintuvė derina tą pačią programa. Nepavyko gauti strigties "
-"informacijos."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Nepavyko gauti strigties informacijos."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Prie užstrigusios programos yra pridėtas kitas derinimo procesas. Todėl, "
-"DrKonqi derintuvė negali gauti strigties pėdsako. Užverkite kitą derintuvę "
-"ir spustelėkite <interface>Įkelti iš naujo</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Sukurta strigties informacija yra naudinga"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Sukurta strigties informacija gali būti naudinga"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Sukurta strigties informacija, tikriausiai, nėra naudinga"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Sukurta strigties informacija nėra naudinga"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Šios strigties informacijos įvertinimas yra neteisingas. Tai - klaida "
-"pačioje DrKonqi programoje."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Galite spustelėti ant mygtuko <interface>Įdiegti derinimo simbolius</"
-"interface> norėdami automatiškai įsidiegti trūkstamus derinimo informacijos "
-"paketus. Jei šis metodas neveikia: skaitykite <link url='%1'>Kaip sukurti "
-"naudingus pranešimus apie strigtis</link>, kad sužinotumėte kaip gauti "
-"naudingą strigties pėdsaką; įdiekite reikiamus paketus (<link url='%2'>failų "
-"sąrašas</link>) ir spustelėkite mygtuką <interface>Įkelti iš naujo</"
-"interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Skaitykite <link url='%1'>Kaip sukurti naudingus pranešimus apie strigtis</"
-"link>, kad sužinotumėte kaip gauti naudingą strigties pėdsaką; įdiekite "
-"reikiamus paketus (<link url='%2'>failų sąrašas</link>) ir spustelėkite "
-"mygtuką <interface>Įkelti iš naujo</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Derintuvė netikėtai baigė darbą."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Nepavyko sukurti strigties informacijos."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Galite pabandyti sukurti strigties pėdsaką, spusteldami mygtuką "
-"<interface>Įkelti iš naujo</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>Trūksta derintuvės arba nepavyko jos paleisti.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Iš pradžių, turite įsidiegti derintuvės programą (%1), o paskui "
-"spustelėkite mygtuką <interface>Įkelti iš naujo</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Klaida įdiegiant derinimo simbolius"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Trūksta paketų, kuriuose būtų šioms programoms ir bibliotekoms reikalingos "
-"derinimo informacijos:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Trūksta derinimo informacijos paketų"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -582,118 +336,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Naudokite šį mygtuką, norėdami iš naujo paleisti užstrigusią programą."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Bendra"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Informacija programuotojams"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Atleiskite, <application>%1</application> netikėtai užsivėrė.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Kadangi strigčių doroklė pati patyrė nesėkmę, tai automatinis "
-"pranešimo procesas yra išjungtas, kad būtų sumažinta pasikartojančių "
-"nesėkmių rizika.<nl /><nl />Prašome, <link url='%1'>rankiniu būdu pranešti</"
-"link> apie šią klaidą į KDE klaidų sekimo sistemą. Nepamirškite iš "
-"<interface>Informacijos programuotojams</interface> kortelės įtraukti "
-"strigties pėdsaką.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Pranešimų pagelbiklis yra išjungtas, nes strigčių doroklės dialogas "
-"buvo paleistas ribotoje veiksenoje.<nl />Galite rankiniu būdu pranešti apie "
-"šią klaidą į %1 (įskaitant strigties pėdsaką iš <interface>Informacijos "
-"programuotojams</interface> kortelės.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Pranešimo pagelbiklis yra išjungtas, nes atrodo, kad užstrigusi "
-"programa, nuo jos paleidimo, buvo atnaujinta arba pašalinta. Tai neleidžia "
-"tikslaus pranešimo apie strigtį ir taip pat gali būti šios strigties "
-"priežastimi.</para><para>Atnaujinus, visada skatinama atsijungti ir vėl "
-"prisijungti, kad būtų užtikrinta, jog antaujinimas buvo pilnai pritaikytas "
-"ir nesukels jokių šalutinių poveikių.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Pranešdami apie šią klaidą galite padėti mums tobulinti KDE programinę "
-"įrangą.<nl /><link url='%1'>Sužinokite daugiau apie pranešimą apie klaidas.</"
-"link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Jūs negalite pranešti apie šią klaidą, nes <application>%1</"
-"application> nepateikia pranešimų apie klaidas adreso.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Išsamiau:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Vykdomas failas: <application>%1</application> PID: %2 Signalas: %3 "
-"(%4) Laikas: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Užverti šį dialogą (prarasite visą informaciją apie strigtį)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -959,10 +601,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopijuoti"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Naudokite šį mygtuką norėdami nukopijuoti strigties informaciją (pėdsaką) į "
+"iškarpinę."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Įrašyti"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Naudokite šį mygtuką norėdami įrašyti strigties informaciją (pėdsaką) į "
+"failą. Tai naudinga tuo atveju, jei norite peržiūrėti klaidą ar pranešti "
+"apie ją vėliau."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -978,6 +638,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Bandyti dar kartą"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Klaida įdiegiant derinimo simbolius"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1041,6 +706,15 @@ msgstr ""
 "Strigties pėdsako kūrimas buvo sustabdytas dėl atminties spaudimo. Galite "
 "pabandyti sukurti strigties pėdsaką, spusteldami mygtuką <interface>Įkelti "
 "iš naujo</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Trūksta paketų, kuriuose būtų šioms programoms ir bibliotekoms reikalingos "
+"derinimo informacijos:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1120,6 +794,15 @@ msgstr ""
 "Naudokite šį mygtuką norėdami prisijungti prie KDE klaidų sekimo sistemos "
 "naudojant pateiktą el. pašto adresą ir slaptažodį."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Jūs negalite pranešti apie šią klaidą, nes <application>%1</"
+"application> nepateikia pranešimų apie klaidas adreso.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1172,6 +855,16 @@ msgstr ""
 "<para>Atnaujinus, visada skatinama atsijungti ir vėl prisijungti,\n"
 "kad būtų užtikrinta, jog antaujinimas buvo pilnai pritaikytas\n"
 "ir nesukels jokių šalutinių poveikių.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Pranešdami apie šią klaidą galite padėti mums tobulinti KDE programinę "
+"įrangą.<nl /><link url='%1'>Sužinokite daugiau apie pranešimą apie klaidas.</"
+"link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1650,6 +1343,245 @@ msgstr "bugstest.kde.org naudotojo vardas"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org slaptažodis"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Įkelti iš &naujo"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Naudokite šį mygtuką norėdami iš naujo įkelti strigties informaciją. Tai "
+#~ "naudinga tada, kai yra įdiegti atitinkami derinimo simbolių paketai ir "
+#~ "jūs norite gauti geresnį strigties pėdsaką."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Įdiegti &derinimo simbolius"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Naudokite šį mygtuką norėdami įsidiegti trūkstamus derinimo simbolių "
+#~ "paketus."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Simbolių įdiegimas yra neprieinamas, nes po programos paleidimo, programa "
+#~ "buvo atnaujinta arba pašalinta."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Kas yra strigties pėdsakas?</h2><p>Strigties pėdsakas, pagrinde, "
+#~ "aprašo kas vyko programos viduje tuo metu, kai ji užstrigo. Tokiu būdu "
+#~ "programuotojai galės atsekti kur prasidėjo visa betvarkė. Jums ši "
+#~ "informacija gali atrodyti beprasmiška, tačiau joje gali būti daugybė "
+#~ "labai naudingos informacijos.<br />Strigties pėdsakas yra dažnai "
+#~ "naudojamas interaktyvaus ir avarinės baigties derinimo metu.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Įkeliama..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Kuriamas strigties pėdsakas... (tai gali šiek tiek užtrukti)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Šiuo metu kita derintuvė derina tą pačią programa. Nepavyko gauti "
+#~ "strigties informacijos."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Nepavyko gauti strigties informacijos."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Prie užstrigusios programos yra pridėtas kitas derinimo procesas. Todėl, "
+#~ "DrKonqi derintuvė negali gauti strigties pėdsako. Užverkite kitą "
+#~ "derintuvę ir spustelėkite <interface>Įkelti iš naujo</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Sukurta strigties informacija yra naudinga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Sukurta strigties informacija gali būti naudinga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Sukurta strigties informacija, tikriausiai, nėra naudinga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Sukurta strigties informacija nėra naudinga"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Šios strigties informacijos įvertinimas yra neteisingas. Tai - klaida "
+#~ "pačioje DrKonqi programoje."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Galite spustelėti ant mygtuko <interface>Įdiegti derinimo simbolius</"
+#~ "interface> norėdami automatiškai įsidiegti trūkstamus derinimo "
+#~ "informacijos paketus. Jei šis metodas neveikia: skaitykite <link "
+#~ "url='%1'>Kaip sukurti naudingus pranešimus apie strigtis</link>, kad "
+#~ "sužinotumėte kaip gauti naudingą strigties pėdsaką; įdiekite reikiamus "
+#~ "paketus (<link url='%2'>failų sąrašas</link>) ir spustelėkite mygtuką "
+#~ "<interface>Įkelti iš naujo</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Skaitykite <link url='%1'>Kaip sukurti naudingus pranešimus apie "
+#~ "strigtis</link>, kad sužinotumėte kaip gauti naudingą strigties pėdsaką; "
+#~ "įdiekite reikiamus paketus (<link url='%2'>failų sąrašas</link>) ir "
+#~ "spustelėkite mygtuką <interface>Įkelti iš naujo</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Derintuvė netikėtai baigė darbą."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Nepavyko sukurti strigties informacijos."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Galite pabandyti sukurti strigties pėdsaką, spusteldami mygtuką "
+#~ "<interface>Įkelti iš naujo</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>Trūksta derintuvės arba nepavyko jos paleisti.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Iš pradžių, turite įsidiegti derintuvės programą (%1), o paskui "
+#~ "spustelėkite mygtuką <interface>Įkelti iš naujo</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Trūksta derinimo informacijos paketų"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Bendra"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Informacija programuotojams"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Atleiskite, <application>%1</application> netikėtai užsivėrė.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Kadangi strigčių doroklė pati patyrė nesėkmę, tai automatinis "
+#~ "pranešimo procesas yra išjungtas, kad būtų sumažinta pasikartojančių "
+#~ "nesėkmių rizika.<nl /><nl />Prašome, <link url='%1'>rankiniu būdu "
+#~ "pranešti</link> apie šią klaidą į KDE klaidų sekimo sistemą. Nepamirškite "
+#~ "iš <interface>Informacijos programuotojams</interface> kortelės įtraukti "
+#~ "strigties pėdsaką.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Pranešimų pagelbiklis yra išjungtas, nes strigčių doroklės dialogas "
+#~ "buvo paleistas ribotoje veiksenoje.<nl />Galite rankiniu būdu pranešti "
+#~ "apie šią klaidą į %1 (įskaitant strigties pėdsaką iš "
+#~ "<interface>Informacijos programuotojams</interface> kortelės.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Pranešimo pagelbiklis yra išjungtas, nes atrodo, kad užstrigusi "
+#~ "programa, nuo jos paleidimo, buvo atnaujinta arba pašalinta. Tai "
+#~ "neleidžia tikslaus pranešimo apie strigtį ir taip pat gali būti šios "
+#~ "strigties priežastimi.</para><para>Atnaujinus, visada skatinama "
+#~ "atsijungti ir vėl prisijungti, kad būtų užtikrinta, jog antaujinimas buvo "
+#~ "pilnai pritaikytas ir nesukels jokių šalutinių poveikių.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Išsamiau:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Vykdomas failas: <application>%1</application> PID: %2 Signalas: %3 "
+#~ "(%4) Laikas: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Užverti šį dialogą (prarasite visą informaciją apie strigtį)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

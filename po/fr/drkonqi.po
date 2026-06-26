@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2025-11-29 10:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -50,260 +50,6 @@ msgstr ""
 "xavier.besnard@kde.org, duranceau@kde.org, cousin@kde.org, nicolas."
 "ternisien@gmail.com, vpinon@kde.org, sdepiets@gmail.com, xavier.besnard@kde."
 "org"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Recharger"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Utilisez ce bouton pour recharger les informations du plantage (pile "
-"d'appels). Ceci est particulièrement utile lorsque vous avez installé les "
-"bons paquets de débogage et que vous souhaitez obtenir une pile d'appels "
-"plus détaillée."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Installer les symboles de débogage"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Utilisez ce bouton pour installer les paquets manquants de symboles de "
-"débogage."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"L'installation des symboles n'est pas disponible car l'application a été "
-"mise à jour ou désinstallée après avoir été lancée."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Utilisez ce bouton pour copier les informations du plantage (pile d'appels) "
-"dans le presse-papiers."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Utilisez ce bouton pour copier les informations du plantage (pile d'appels) "
-"dans un fichier. Cette option est utile lorsque vous souhaitez l'analyser ou "
-"si vous souhaitez le signaler ultérieurement."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Qu'est-ce qu'une pile d'appels ?</h2><p>Une pile d'appels décrit tout "
-"simplement ce qui se passait dans l'application au moment du plantage, afin "
-"que les développeurs puissent comprendre où le problème a débuté. Elle "
-"devrait vous paraître sans aucun sens mais peut contenir une mine "
-"d'informations.<br />Les piles d'appels sont régulièrement utilisées lors du "
-"débogage interactif et post-mortem.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Chargement..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Création de la pile d'appels... (cette opération peut être longue)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Un autre débogueur analyse actuellement la même application. Il est "
-"impossible d'obtenir les informations du plantage."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Il es impossible d'obtenir les informations du plantage."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Un autre processus de débogueur est attaché à l'application plantée. Il est "
-"impossible pour le débogueur DrKonqi de charger la pile d'appels. Veuillez "
-"fermer l'autre débogueur et cliquez sur le bouton <interface>Recharger</"
-"interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Les informations produites suite au plantage sont utilisables."
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr ""
-"Les informations produites suite au plantage pourraient être utilisables."
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr ""
-"Les informations produites suite au plantage ne sont pas probablement "
-"utilisables."
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Les informations produites suite au plantage ne sont pas utilisables."
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"La notation de ces informations de plantage n'est pas valable. C'est un "
-"bogue dans l'application DrKonqi elle-même."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Vous pouvez cliquer sur le bouton <interface>Installer les symboles de "
-"débogage</interface> afin d'installer automatiquement les paquets manquants "
-"d'informations de débogage. Si cette méthode ne fonctionne pas : veuillez "
-"lire <link url='%1'>Comment créer des rapports de bogue utiles</link> pour "
-"apprendre comment obtenir une pile d'appels utile ; installer les paquets "
-"nécessaires (<link url='%2'>liste des fichiers</link>) et cliquez sur le "
-"bouton <interface>Recharger</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
-"plantages utiles</link> pour apprendre comment obtenir une pile d'appels "
-"utile, installer les paquets nécessaires (<link url='%2'>liste des fichiers</"
-"link>) puis cliquez sur le bouton <interface>Recharger</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Le débogueur s'est arrêté de façon inattendue."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Il est impossible de générer les informations de plantage."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Vous pouvez essayer de régénérer une pile d'appels en cliquant sur le bouton "
-"<interface>Recharger</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>L'application de débogage est absente ou ne peut être lancée.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Vous devez d'abord installer l'application de débogage (« %1 ») et "
-"ensuite, cliquez sur le bouton <interface>Recharger</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Erreur pendant l'installation des symboles de débogage"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Les paquets contenant les informations de débogage pour l'application et les "
-"bibliothèques suivantes sont absentes :"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Paquets d'informations de débogage absents"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -615,121 +361,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Utiliser ce bouton pour redémarrer l'application plantée."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Général"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Informations pour le &développeur"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Nous sommes désolés, l'application <application>%1</application> s'est "
-"arrêtée subitement.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Le gestionnaire de plantage lui-même étant défaillant, le processus de "
-"rapport automatique est désactivé pour réduire le risque de nouvel échec."
-"<nl /><nl />Veuillez, s'il vous plaît, <link url='%1'>rapporter "
-"manuellement</link> cette erreur dans le système de rapport de bogues de "
-"KDE. N'oubliez pas de fournir la pile d'appels à partir de l'onglet "
-"<interface> « Informations du développeur » ).</interface></para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>L'assistant de rapport de bogue est désactivé car le gestionnaire de "
-"plantage a été démarré en mode sécurisé.<nl />Vous pouvez rapporter "
-"manuellement ce bogue à %1 (en incluant la pile d'appels à partir de "
-"l'onglet <interface> « Informations du développeur » </interface>).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>L'assistant de rapport de bogues est désactivé car l'application qui a "
-"planté semble avoir été mise à jour ou désinstallée après avoir été lancée. "
-"Ceci empêche la préparation d'un rapport de plantage fiable, et peut "
-"également être à l'origine du plantage.</para> <para>Après une mise à jour, "
-"il est recommandé de se déconnecter et de se reconnecter afin de s'assurer "
-"que la mise à jour soit entièrement appliquée et ne cause aucun effet "
-"secondaire.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Vous pouvez nous aider à améliorer le logiciel de KDE en rapportant "
-"cette erreur.<nl /><link url='%1'>En savoir plus sur comment faire un "
-"rapport de bogue.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Vous ne pouvez pas rapporter cette erreur car l'application "
-"<application>%1</application> ne fournit pas d'adresse de rapport de bogues."
-"</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Détails :"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Exécutable : <application>%1</application> PID : %2 Signal : %3 (%4) "
-"Temps : %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Fermer cette fenêtre (vous perdrez les informations de plantage)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -1004,10 +635,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copier"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Utilisez ce bouton pour copier les informations du plantage (pile d'appels) "
+"dans le presse-papiers."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Enregistrer"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Utilisez ce bouton pour copier les informations du plantage (pile d'appels) "
+"dans un fichier. Cette option est utile lorsque vous souhaitez l'analyser ou "
+"si vous souhaitez le signaler ultérieurement."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -1023,6 +672,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Réessayer"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Erreur pendant l'installation des symboles de débogage"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1087,6 +741,15 @@ msgstr ""
 "La génération de la pile d'appels s'est arrêtée à cause d'un manque de "
 "mémoire. Vous pouvez essayer de régénérer la pile d'appels par un clic sur "
 "le bouton <interface>Recharger</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Les paquets contenant les informations de débogage pour l'application et les "
+"bibliothèques suivantes sont absentes :"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1170,6 +833,16 @@ msgstr ""
 "Veuillez utiliser ce bouton pour vous connecter au système de suivi des "
 "bogues KDE en utilisant votre adresse de courriel et votre mot de passe."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Vous ne pouvez pas rapporter cette erreur car l'application "
+"<application>%1</application> ne fournit pas d'adresse de rapport de bogues."
+"</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1227,6 +900,16 @@ msgstr ""
 "afin de s'assurer que la mise à jour soit entièrement appliquée et ne cause "
 "aucun\n"
 "effet secondaire.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Vous pouvez nous aider à améliorer le logiciel de KDE en rapportant "
+"cette erreur.<nl /><link url='%1'>En savoir plus sur comment faire un "
+"rapport de bogue.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1717,6 +1400,257 @@ msgstr "Nom d'utilisateur pour « bugstest.kde.org »"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Mot de passe pour « bugstest.kde.org »"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Recharger"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Utilisez ce bouton pour recharger les informations du plantage (pile "
+#~ "d'appels). Ceci est particulièrement utile lorsque vous avez installé les "
+#~ "bons paquets de débogage et que vous souhaitez obtenir une pile d'appels "
+#~ "plus détaillée."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Installer les symboles de débogage"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Utilisez ce bouton pour installer les paquets manquants de symboles de "
+#~ "débogage."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "L'installation des symboles n'est pas disponible car l'application a été "
+#~ "mise à jour ou désinstallée après avoir été lancée."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Qu'est-ce qu'une pile d'appels ?</h2><p>Une pile d'appels décrit tout "
+#~ "simplement ce qui se passait dans l'application au moment du plantage, "
+#~ "afin que les développeurs puissent comprendre où le problème a débuté. "
+#~ "Elle devrait vous paraître sans aucun sens mais peut contenir une mine "
+#~ "d'informations.<br />Les piles d'appels sont régulièrement utilisées lors "
+#~ "du débogage interactif et post-mortem.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Chargement..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Création de la pile d'appels... (cette opération peut être longue)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Un autre débogueur analyse actuellement la même application. Il est "
+#~ "impossible d'obtenir les informations du plantage."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Il es impossible d'obtenir les informations du plantage."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Un autre processus de débogueur est attaché à l'application plantée. Il "
+#~ "est impossible pour le débogueur DrKonqi de charger la pile d'appels. "
+#~ "Veuillez fermer l'autre débogueur et cliquez sur le bouton "
+#~ "<interface>Recharger</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Les informations produites suite au plantage sont utilisables."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr ""
+#~ "Les informations produites suite au plantage pourraient être utilisables."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr ""
+#~ "Les informations produites suite au plantage ne sont pas probablement "
+#~ "utilisables."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr ""
+#~ "Les informations produites suite au plantage ne sont pas utilisables."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "La notation de ces informations de plantage n'est pas valable. C'est un "
+#~ "bogue dans l'application DrKonqi elle-même."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vous pouvez cliquer sur le bouton <interface>Installer les symboles de "
+#~ "débogage</interface> afin d'installer automatiquement les paquets "
+#~ "manquants d'informations de débogage. Si cette méthode ne fonctionne "
+#~ "pas : veuillez lire <link url='%1'>Comment créer des rapports de bogue "
+#~ "utiles</link> pour apprendre comment obtenir une pile d'appels utile ; "
+#~ "installer les paquets nécessaires (<link url='%2'>liste des fichiers</"
+#~ "link>) et cliquez sur le bouton <interface>Recharger</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Veuillez consulter le guide <link url='%1'>Comment créer des rapports de "
+#~ "plantages utiles</link> pour apprendre comment obtenir une pile d'appels "
+#~ "utile, installer les paquets nécessaires (<link url='%2'>liste des "
+#~ "fichiers</link>) puis cliquez sur le bouton <interface>Recharger</"
+#~ "interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Le débogueur s'est arrêté de façon inattendue."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Il est impossible de générer les informations de plantage."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vous pouvez essayer de régénérer une pile d'appels en cliquant sur le "
+#~ "bouton <interface>Recharger</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>L'application de débogage est absente ou ne peut être lancée.</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Vous devez d'abord installer l'application de débogage (« %1 ») "
+#~ "et ensuite, cliquez sur le bouton <interface>Recharger</interface>.</"
+#~ "strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Paquets d'informations de débogage absents"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Général"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Informations pour le &développeur"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Nous sommes désolés, l'application <application>%1</application> "
+#~ "s'est arrêtée subitement.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Le gestionnaire de plantage lui-même étant défaillant, le processus "
+#~ "de rapport automatique est désactivé pour réduire le risque de nouvel "
+#~ "échec.<nl /><nl />Veuillez, s'il vous plaît, <link url='%1'>rapporter "
+#~ "manuellement</link> cette erreur dans le système de rapport de bogues de "
+#~ "KDE. N'oubliez pas de fournir la pile d'appels à partir de l'onglet "
+#~ "<interface> « Informations du développeur » ).</interface></para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>L'assistant de rapport de bogue est désactivé car le gestionnaire "
+#~ "de plantage a été démarré en mode sécurisé.<nl />Vous pouvez rapporter "
+#~ "manuellement ce bogue à %1 (en incluant la pile d'appels à partir de "
+#~ "l'onglet <interface> « Informations du développeur » </interface>).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>L'assistant de rapport de bogues est désactivé car l'application "
+#~ "qui a planté semble avoir été mise à jour ou désinstallée après avoir été "
+#~ "lancée. Ceci empêche la préparation d'un rapport de plantage fiable, et "
+#~ "peut également être à l'origine du plantage.</para> <para>Après une mise "
+#~ "à jour, il est recommandé de se déconnecter et de se reconnecter afin de "
+#~ "s'assurer que la mise à jour soit entièrement appliquée et ne cause aucun "
+#~ "effet secondaire.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Détails :"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Exécutable : <application>%1</application> PID : %2 Signal : %3 "
+#~ "(%4) Temps : %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Fermer cette fenêtre (vous perdrez les informations de plantage)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

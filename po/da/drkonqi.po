@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2020-02-08 15:01+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -29,253 +29,6 @@ msgstr "Erik Kjær Pedersen,Keld Simonsen"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "erik@binghamton.edu,keld@dkuug.dk"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Genindlæs"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Brug denne knap til at genindlæse sammenbrudsinformationen (backtrace). "
-"Dette er nyttigt, når du har installeret de korrekte debug-symbol-pakker og "
-"du vil opnå et bedre backtrace."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Installér fejlsøgningssymboler"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Brug denne knap til at installere de manglende pakker med "
-"fejlsøgningssymboler."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Installation af symboler er ikke tilgængelig fordi programmet er blevet "
-"opdateret eller afinstalleret efter det blev startet."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Brug denne knap til at kopiere sammenbrudsinformationen (backtrace) til "
-"udklipsholderen."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Brug denne knap til at gemme sammenbrudsinformationen (backtrace) til en "
-"fil. Dette er nyttigt hvis du vil kigge på den eller rapportere fejlen "
-"senere."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Hvad er et \"backtrace\" ?</h2><p>Et backtrace beskriver basalt set hvad "
-"der skete indeni programmet da det brød sammen, så udviklerne kan finde frem "
-"til hvor problemerne begyndte. De ser måske uforståelige ud for dig, men de "
-"kan faktisk indeholde et væld af nyttig information.<br />Backtraces bruges "
-"meget ofte under interaktiv og post-mortem fejlsøgning.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Indlæser..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Genererer backtrace... (dette kan tage nogen tid)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Et andet fejlsøgningsprogram er i øjeblikket i gang med at fejlsøge samme "
-"program. Sammenbrudsinformationen kunne ikke hentes."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Sammenbrudsinformationen kunne ikke hentes."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"En anden fejlsøgningsproces er tilknyttet programmet der brød sammen. Derfor "
-"kan fejlsøgningsprogrammet DrKonqi ikke hente backtrace. Luk det andet "
-"fejlsøgningsprogram og tryk på <interface>Genindæs</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Den genererede sammenbrudsinformation er nyttig"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Denne genererede sammenbrudsinformation kan være nyttig"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Den genererede sammenbrudsinformation er sandsynligvis ikke nyttig"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Denne genererede sammenbrudsinformation er ikke nyttig"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Vurderingen af denne sammenbrudsinformation er ugyldig. Dette er en fejl i "
-"DrKonqi selv."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Du kan trykke på knappen <interface>Installér fejlsøgningssymboler</"
-"interface> for automatisk at installere de manglende pakker med "
-"fejlsøgningsinformation. Hvis denne metode ikke virker, så læs <link "
-"url='%1'>Hvordan man opretter nyttige fejlrapporter</link> for at lære "
-"hvordan man får et nyttigt backtrace. Installér de nødvendige pakker (<link "
-"url='%2'>liste over filer</link>) og tryk på knappen <interface>Genindlæs</"
-"interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Læs venligst <link url='%1'>Hvordan man opretter nyttige fejlrapporter</"
-"link> for at lære hvordan man får et nyttigt backtrace. Installér de "
-"nødvendige pakker (<link url='%2'>liste over filer</link>) og tryk på "
-"knappen <interface>Genindlæs</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Fejlsøgningsprogrammet afsluttede uventet."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Sammenbrudsinformationen kunne ikke genereres."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Du kan prøve at regenerere backtrace ved at trykke på knappen "
-"<interface>Genindlæs</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Fejlsøgningsprogrammet mangler eller kunne ikke startes.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Du skal først installere fejlsøgningsprogrammet (%1) og trykke på "
-"knappen <interface>Genindlæs</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Fejl under installation af fejlsøgningssymboler"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Pakkerne der indeholder fejlsøgningsinformation til følgende program og "
-"biblioteker mangler:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Manglende pakker med fejsøgningsinformation"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -587,116 +340,6 @@ msgstr "&Genstart programmet"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Brug denne knap til at genstarte programmet som brød sammen."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Generelt"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "U&dviklerinformation"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Vi beklager, <application>%1</application> lukkede uventet.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Da sammenbrudsbehandleren selv har fejlet, deaktiveres den automatiske "
-"rapporteringsproces for at mindske risikoen for at det sker igen.<nl /><nl /"
-"><link url='%1'>Rapportér venligst manuelt</link> denne fejl til KDE's "
-"fejlrapportsystem. Glem ikke at medtage backtracet fra fanebladet "
-"<interface>Udviklerinformation</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Rapporteringsassistenten er deaktiveret fordi dialogen til "
-"sammenbrudsbehandling blev startet i sikker tilstand.<nl />Du kan manuelt "
-"rapportere denne fejl til %1 (inklusiv backtrace fra fanebladet "
-"<interface>Udviklerinformation</interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Rapporteringsassistenten er deaktiveret da det sammenbrudte program "
-"ser ud til at være blevet opdateret eller afinstalleret efter det blev "
-"startet. Dette forhindrer korrekt sammenbrudsrapportering og kan også være "
-"årsagen til sammenbruddet.</para><para>Efter opdatering er det altid en god "
-"ide at logge ud og ind igen, for at sikre at opdateringen er fuldt anvendt "
-"og ikke har nogle utilsigtede konsekvenser.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Du kan hjælpe os med at forbedre KDE-software ved at rapportere denne "
-"fejl.<nl /> <link url='%1'>Lær mere om fejlrapportering.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Du kan ikke rapportere denne fejl, da <application>%1</application> "
-"ikke angiver en adresse til fejlrapportering.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Detaljer:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Kørbar fil: <application>%1</application> PID: %2 Signal: %3 (%4) Tid: "
-"%5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Luk denne dialog (du vil miste informationen om sammenbruddet.)"
 
 #: main.cpp:154
 #, fuzzy, kde-format
@@ -1040,10 +683,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Kopiér"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Brug denne knap til at kopiere sammenbrudsinformationen (backtrace) til "
+"udklipsholderen."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Brug denne knap til at gemme sammenbrudsinformationen (backtrace) til en "
+"fil. Dette er nyttigt hvis du vil kigge på den eller rapportere fejlen "
+"senere."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -1058,6 +719,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Prøv igen"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Fejl under installation af fejlsøgningssymboler"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1150,6 +816,15 @@ msgstr ""
 "Du kan prøve at regenerere backtrace ved at trykke på knappen "
 "<interface>Genindlæs</interface>."
 
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Pakkerne der indeholder fejlsøgningsinformation til følgende program og "
+"biblioteker mangler:"
+
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
@@ -1239,6 +914,15 @@ msgstr ""
 "Brug denne knap til at logge ind i KDE's fejlrapportsystem med den oplyste e-"
 "mailadresse og adgangskode."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Du kan ikke rapportere denne fejl, da <application>%1</application> "
+"ikke angiver en adresse til fejlrapportering.</para>"
+
 #: qml/main.qml:33
 #, fuzzy
 #| msgctxt "@info"
@@ -1310,6 +994,15 @@ msgstr ""
 "årsagen til sammenbruddet.</para><para>Efter opdatering er det altid en god "
 "ide at logge ud og ind igen, for at sikre at opdateringen er fuldt anvendt "
 "og ikke har nogle utilsigtede konsekvenser.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Du kan hjælpe os med at forbedre KDE-software ved at rapportere denne "
+"fejl.<nl /> <link url='%1'>Lær mere om fejlrapportering.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1893,6 +1586,245 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Genindlæs"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Brug denne knap til at genindlæse sammenbrudsinformationen (backtrace). "
+#~ "Dette er nyttigt, når du har installeret de korrekte debug-symbol-pakker "
+#~ "og du vil opnå et bedre backtrace."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Installér fejlsøgningssymboler"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Brug denne knap til at installere de manglende pakker med "
+#~ "fejlsøgningssymboler."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Installation af symboler er ikke tilgængelig fordi programmet er blevet "
+#~ "opdateret eller afinstalleret efter det blev startet."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Hvad er et \"backtrace\" ?</h2><p>Et backtrace beskriver basalt set "
+#~ "hvad der skete indeni programmet da det brød sammen, så udviklerne kan "
+#~ "finde frem til hvor problemerne begyndte. De ser måske uforståelige ud "
+#~ "for dig, men de kan faktisk indeholde et væld af nyttig information.<br /"
+#~ ">Backtraces bruges meget ofte under interaktiv og post-mortem fejlsøgning."
+#~ "</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Indlæser..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Genererer backtrace... (dette kan tage nogen tid)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Et andet fejlsøgningsprogram er i øjeblikket i gang med at fejlsøge samme "
+#~ "program. Sammenbrudsinformationen kunne ikke hentes."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Sammenbrudsinformationen kunne ikke hentes."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "En anden fejlsøgningsproces er tilknyttet programmet der brød sammen. "
+#~ "Derfor kan fejlsøgningsprogrammet DrKonqi ikke hente backtrace. Luk det "
+#~ "andet fejlsøgningsprogram og tryk på <interface>Genindæs</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Den genererede sammenbrudsinformation er nyttig"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Denne genererede sammenbrudsinformation kan være nyttig"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Den genererede sammenbrudsinformation er sandsynligvis ikke nyttig"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Denne genererede sammenbrudsinformation er ikke nyttig"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Vurderingen af denne sammenbrudsinformation er ugyldig. Dette er en fejl "
+#~ "i DrKonqi selv."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Du kan trykke på knappen <interface>Installér fejlsøgningssymboler</"
+#~ "interface> for automatisk at installere de manglende pakker med "
+#~ "fejlsøgningsinformation. Hvis denne metode ikke virker, så læs <link "
+#~ "url='%1'>Hvordan man opretter nyttige fejlrapporter</link> for at lære "
+#~ "hvordan man får et nyttigt backtrace. Installér de nødvendige pakker "
+#~ "(<link url='%2'>liste over filer</link>) og tryk på knappen "
+#~ "<interface>Genindlæs</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Læs venligst <link url='%1'>Hvordan man opretter nyttige fejlrapporter</"
+#~ "link> for at lære hvordan man får et nyttigt backtrace. Installér de "
+#~ "nødvendige pakker (<link url='%2'>liste over filer</link>) og tryk på "
+#~ "knappen <interface>Genindlæs</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Fejlsøgningsprogrammet afsluttede uventet."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Sammenbrudsinformationen kunne ikke genereres."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Du kan prøve at regenerere backtrace ved at trykke på knappen "
+#~ "<interface>Genindlæs</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Fejlsøgningsprogrammet mangler eller kunne ikke startes.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Du skal først installere fejlsøgningsprogrammet (%1) og trykke på "
+#~ "knappen <interface>Genindlæs</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Manglende pakker med fejsøgningsinformation"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Generelt"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "U&dviklerinformation"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Vi beklager, <application>%1</application> lukkede uventet.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Da sammenbrudsbehandleren selv har fejlet, deaktiveres den "
+#~ "automatiske rapporteringsproces for at mindske risikoen for at det sker "
+#~ "igen.<nl /><nl /><link url='%1'>Rapportér venligst manuelt</link> denne "
+#~ "fejl til KDE's fejlrapportsystem. Glem ikke at medtage backtracet fra "
+#~ "fanebladet <interface>Udviklerinformation</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Rapporteringsassistenten er deaktiveret fordi dialogen til "
+#~ "sammenbrudsbehandling blev startet i sikker tilstand.<nl />Du kan manuelt "
+#~ "rapportere denne fejl til %1 (inklusiv backtrace fra fanebladet "
+#~ "<interface>Udviklerinformation</interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Rapporteringsassistenten er deaktiveret da det sammenbrudte program "
+#~ "ser ud til at være blevet opdateret eller afinstalleret efter det blev "
+#~ "startet. Dette forhindrer korrekt sammenbrudsrapportering og kan også "
+#~ "være årsagen til sammenbruddet.</para><para>Efter opdatering er det altid "
+#~ "en god ide at logge ud og ind igen, for at sikre at opdateringen er fuldt "
+#~ "anvendt og ikke har nogle utilsigtede konsekvenser.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Detaljer:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Kørbar fil: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Tid: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Luk denne dialog (du vil miste informationen om sammenbruddet.)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

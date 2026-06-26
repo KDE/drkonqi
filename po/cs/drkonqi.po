@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2024-08-27 13:52+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -28,248 +28,6 @@ msgstr "Lukáš Tinkl,Vít Pelčák,Marián Kyral"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukas@kde.org,vit@pelcak.org,mkyral@email.cz"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "O&bnovit"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Použijte toto tlačítko pro opětovné načtení informací o pádu (backtrace). To "
-"se hodí pokud jste například doinstalovali příslušné balíčky s ladicími "
-"symboly a přejete si získat lepší backtrace."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Na&instalovat ladicí symboly"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Použijte toto tlačítko pro instalaci chybějících balíčků s ladicími symboly."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Instalace symbolů není dostupné protože aplikace byla po spuštění "
-"aktualizována nebo odinstalována."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Použijte toto tlačítko pro zkopírování informace o pádu (backtrace) do "
-"schránky."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Použijte toto tlačítko k uložení informace o pádu (backtrace) do souboru. To "
-"je vhodné pokud si přejete se na něj podívat nebo nahlásit chybu později."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Co je to \"backtrace\" ?</h2><p>Informace o pádu (Backtrace) popisují, "
-"co se děje uvnitř aplikace když spadla, takže vývojáři mohou vystopovat "
-"počátek problému. vám mohou připadat bezvýznamné, ale ve skutečnosti mohou "
-"obsahovat spoustu užitečných informací.<br />Backtrace je obvykle využíváno "
-"interaktivního ladění po pádu aplikace.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Načítání..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Generuji backtrace... (to může nějakou dobu trvat)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Tuto aplikaci již ladí jiný ladicí nástroj. Informace o pádu nemohla být "
-"získána."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Nepovedlo se stáhnout informace o pádu"
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Na spadlou aplikaci je připojen jiný ladicí proces, proto DrKonqi nemůže "
-"získat backtrace. Prosím ukončete další ladicí programy a klikněte na "
-"<interface>Obnovit</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Vygenerovaná informace o pádu je užitečná"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Vygenerovaná informace o pádu může být užitečná"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Vygenerovaná informace o pádu je pravděpodobně nepoužitelná"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Vygenerovaná informace o pádu je nepoužitelná"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Hodnocení této informace o pádu je neplatné. Toto je chyba v samotném "
-"DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Pokud si přejete automaticky nainstalovat chybějící ladicí balíčky, klikněte "
-"na tlačítko <interface>Instalovat ladicí symboly</interface>. Pokud tato "
-"metoda nefunguje: prosím přečtěte si <link url='%1'>Jak vytvořit použitelné "
-"hlášení o chybě</link>, abyste se dozvěděli jak získat použitelný backtrace; "
-"nainstalujte potřebné balíčky (<link url='%2'>seznam souborů</link>) a "
-"klikněte na tlačítko <interface>Obnovit</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Prosím, přečtěte si <link url='%1'>Jak vytvořit použitelná chybová hlášení</"
-"link> abyste se dozvěděli jak získat použitelný backtrace. Po instalaci "
-"potřebných balíčků (<link url='%2'>seznam souborů</link>), klikněte na "
-"tlačítko <interface>Obnovit</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Ladicí nástroj byl nečekaně ukončen."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Nepovedlo se vygenerovat informace o pádu."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Můžete zkusit znovu vygenerovat backtrace kliknutím na tlačítko "
-"<interface>Obnovit</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>Ladicí aplikace chybí nebo nemohla být spuštěna.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Je potřeba nainstalovat ladicí aplikaci (%1) a kliknout na tlačítko "
-"<interface>Obnovit</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Chyba během instalace ladicích symbolů"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Balíčky obsahující ladicí informace pro následující aplikaci a balíčky chybí:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Chybí balíčky s informacemi pro ladění"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -562,115 +320,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Použijte toto tlačítko pro restart spadlé aplikace."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "O&becné"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Informa&ce pro vývojáře"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Omlouváme se, ale aplikace <application>%1</application> byla nečekaně "
-"ukončena.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Protože program na obsluhu pádů sám selhal, automatický proces hlášení "
-"byl zakázán, aby se snížilo riziko opakovaného selhání.<nl /><nl />Prosím, "
-"<link url='%1'>nahlaste ručně</link> tuto chybu do systému pro sledování "
-"chyb KDE. Nezapomeňte zahrnout backtrace z karty <interface>Informace pro "
-"vývojáře</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Asistent hlášení chyb byl zakázán, dialog pro obsluhu pádu byl spuštěn "
-"v nouzovém režimu.<nl />Tuto chybu můžete ručně nahlásit na %1 (včetně "
-"backtrace z karty <interface>Informace pro vývojáře</interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Asistent hlášení je vypnut protože spadlá aplikace byla od posledního "
-"spuštění buď aktualizována nebo odinstalována. To brání přesnému nahlášení "
-"pádu a může být i důvodem tohoto pádu.</para><para>Po aktualizaci je vždy "
-"dobrý nápad odhlásit se a znovu přihlásit abyste se ujistili, že aktualizace "
-"byla plně nainstalována a nebude způsobovat vedlejší efekty.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Můžete nám pomoci vylepšit software KDE nahlášením této chyby.<nl /"
-"><link url='%1'>Naučte se hlásit chyby.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Tuto chybu nelze nahlásit, protože aplikace <application>%1</"
-"application> neposkytuje adresu pro hlášení chyb.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Podrobnosti:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Spustitelný soubor: <application>%1</application> PID: %2 Signál: %3 "
-"(%4) Čas: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Zavřít tento dialog (ztratíte informace o pádu)"
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -929,10 +578,27 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopírovat"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Použijte toto tlačítko pro zkopírování informace o pádu (backtrace) do "
+"schránky."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Uložit"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Použijte toto tlačítko k uložení informace o pádu (backtrace) do souboru. To "
+"je vhodné pokud si přejete se na něj podívat nebo nahlásit chybu později."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -945,6 +611,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Zkusit znovu"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Chyba během instalace ladicích symbolů"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -988,6 +659,14 @@ msgid ""
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Balíčky obsahující ladicí informace pro následující aplikaci a balíčky chybí:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1052,6 +731,15 @@ msgid ""
 "email address and password."
 msgstr ""
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Tuto chybu nelze nahlásit, protože aplikace <application>%1</"
+"application> neposkytuje adresu pro hlášení chyb.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1102,6 +790,15 @@ msgstr ""
 "<para>Po aktualizaci je vždy dobrý nápad odhlásit se a znovu \n"
 "přihlásit abyste se ujistili, že aktualizace byla plně nainstalována \n"
 "a nebude způsobovat vedlejší efekty.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Můžete nám pomoci vylepšit software KDE nahlášením této chyby.<nl /"
+"><link url='%1'>Naučte se hlásit chyby.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1548,6 +1245,244 @@ msgstr "Uživatelské jméno bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Heslo bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "O&bnovit"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Použijte toto tlačítko pro opětovné načtení informací o pádu (backtrace). "
+#~ "To se hodí pokud jste například doinstalovali příslušné balíčky s "
+#~ "ladicími symboly a přejete si získat lepší backtrace."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Na&instalovat ladicí symboly"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Použijte toto tlačítko pro instalaci chybějících balíčků s ladicími "
+#~ "symboly."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Instalace symbolů není dostupné protože aplikace byla po spuštění "
+#~ "aktualizována nebo odinstalována."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Co je to \"backtrace\" ?</h2><p>Informace o pádu (Backtrace) "
+#~ "popisují, co se děje uvnitř aplikace když spadla, takže vývojáři mohou "
+#~ "vystopovat počátek problému. vám mohou připadat bezvýznamné, ale ve "
+#~ "skutečnosti mohou obsahovat spoustu užitečných informací.<br />Backtrace "
+#~ "je obvykle využíváno interaktivního ladění po pádu aplikace.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Načítání..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Generuji backtrace... (to může nějakou dobu trvat)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Tuto aplikaci již ladí jiný ladicí nástroj. Informace o pádu nemohla být "
+#~ "získána."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Nepovedlo se stáhnout informace o pádu"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Na spadlou aplikaci je připojen jiný ladicí proces, proto DrKonqi nemůže "
+#~ "získat backtrace. Prosím ukončete další ladicí programy a klikněte na "
+#~ "<interface>Obnovit</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Vygenerovaná informace o pádu je užitečná"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Vygenerovaná informace o pádu může být užitečná"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Vygenerovaná informace o pádu je pravděpodobně nepoužitelná"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Vygenerovaná informace o pádu je nepoužitelná"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Hodnocení této informace o pádu je neplatné. Toto je chyba v samotném "
+#~ "DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Pokud si přejete automaticky nainstalovat chybějící ladicí balíčky, "
+#~ "klikněte na tlačítko <interface>Instalovat ladicí symboly</interface>. "
+#~ "Pokud tato metoda nefunguje: prosím přečtěte si <link url='%1'>Jak "
+#~ "vytvořit použitelné hlášení o chybě</link>, abyste se dozvěděli jak "
+#~ "získat použitelný backtrace; nainstalujte potřebné balíčky (<link "
+#~ "url='%2'>seznam souborů</link>) a klikněte na tlačítko "
+#~ "<interface>Obnovit</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Prosím, přečtěte si <link url='%1'>Jak vytvořit použitelná chybová "
+#~ "hlášení</link> abyste se dozvěděli jak získat použitelný backtrace. Po "
+#~ "instalaci potřebných balíčků (<link url='%2'>seznam souborů</link>), "
+#~ "klikněte na tlačítko <interface>Obnovit</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Ladicí nástroj byl nečekaně ukončen."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Nepovedlo se vygenerovat informace o pádu."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Můžete zkusit znovu vygenerovat backtrace kliknutím na tlačítko "
+#~ "<interface>Obnovit</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>Ladicí aplikace chybí nebo nemohla být spuštěna.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Je potřeba nainstalovat ladicí aplikaci (%1) a kliknout na "
+#~ "tlačítko <interface>Obnovit</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Chybí balíčky s informacemi pro ladění"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "O&becné"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Informa&ce pro vývojáře"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Omlouváme se, ale aplikace <application>%1</application> byla "
+#~ "nečekaně ukončena.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Protože program na obsluhu pádů sám selhal, automatický proces "
+#~ "hlášení byl zakázán, aby se snížilo riziko opakovaného selhání.<nl /><nl /"
+#~ ">Prosím, <link url='%1'>nahlaste ručně</link> tuto chybu do systému pro "
+#~ "sledování chyb KDE. Nezapomeňte zahrnout backtrace z karty "
+#~ "<interface>Informace pro vývojáře</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Asistent hlášení chyb byl zakázán, dialog pro obsluhu pádu byl "
+#~ "spuštěn v nouzovém režimu.<nl />Tuto chybu můžete ručně nahlásit na %1 "
+#~ "(včetně backtrace z karty <interface>Informace pro vývojáře</"
+#~ "interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Asistent hlášení je vypnut protože spadlá aplikace byla od "
+#~ "posledního spuštění buď aktualizována nebo odinstalována. To brání "
+#~ "přesnému nahlášení pádu a může být i důvodem tohoto pádu.</para><para>Po "
+#~ "aktualizaci je vždy dobrý nápad odhlásit se a znovu přihlásit abyste se "
+#~ "ujistili, že aktualizace byla plně nainstalována a nebude způsobovat "
+#~ "vedlejší efekty.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Podrobnosti:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Spustitelný soubor: <application>%1</application> PID: %2 Signál: "
+#~ "%3 (%4) Čas: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Zavřít tento dialog (ztratíte informace o pádu)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

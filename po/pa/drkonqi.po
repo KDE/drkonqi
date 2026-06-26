@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -31,232 +31,6 @@ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alam.yellow@gmail.com"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "ਮੁੜ-ਲੋਡ ਕਰੋ(&R)"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "ਡੀਬੱਗ ਸਿੰਬਲ ਇੰਸਟਾਲ ਕਰੋ(&I)"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "ਇਹ ਬਟਨ ਨੂੰ ਨਾ-ਮੌਜੂਦ ਡੀਬੱਗ ਸਿੰਬਲ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਵਰਤੋਂ।"
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "ਇਹ ਬਟਨ ਨੂੰ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ (ਬੈਕਟਰੇਸ) ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰਨ ਲਈ ਵਰਤੋਂ।"
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "...ਬੈਕਟਰੇਸ ਬਾਰੇ ਜਾਣਕਾਰੀ ਤਿਆਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ (ਇਸ ਨੂੰ ਕੁਝ ਸਮਾਂ ਲੱਗੇਗਾ)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr "ਹੋਰ ਡੀਬੱਗਰ ਇਹੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਡੀਬੱਗ ਕਰ ਰਿਹਾ ਹੈ। ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨਹੀਂ ਲਈ ਜਾ ਸਕੀ।"
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨਹੀਂ ਲਈ ਜਾ ਸਕੀ।"
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਫਾਇਦੇਮੰਦ ਹੈ"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਸ਼ਾਇਦ ਫਾਇਦੇਮੰਦ ਹੋ ਸਕਦੀ ਹੈ"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਸ਼ਾਇਦ ਫਾਇਦੇਮੰਦ ਨਾ ਹੋਵੇ"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "ਤਿਆਰ ਕੀਤੀ  ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਫਾਇਦੇਮੰਦ ਨਹੀਂ ਹੈ"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "ਇਹ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨੂੰ ਅਢੁੱਕਵੀਂ ਰੇਟ ਕੀਤਾ ਗਿਆ ਹੈ। ਇਹ ਬੱਗ DrKonqi ਵਿੱਚ ਹੀ ਹੈ।"
-
-#: backtracewidget.cpp:267
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਨੂੰ "
-"ਦੱਬੋ।"
-
-#: backtracewidget.cpp:285
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਨੂੰ "
-"ਦੱਬੋ।"
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "ਡੀਬੱਗਰ ਅਚਾਨਕ ਬੰਦ ਹੋ ਗਿਆ।"
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਤਿਆਰ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"ਤੁਹਾਨੂੰ <interface>ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਕਲਿੱਕ ਕਰਕੇ ਬੈਕਟਰੇਸ ਮੁੜ-ਤਿਆਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।"
-
-#: backtracewidget.cpp:316
-#, fuzzy, kde-format
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>ਕੀ ਐਪਲੀਕੇਸ਼ਨ ਕਰੈਸ਼ ਹੁੰਦੀ ਹੈ, ਜੇ ਤੁਸੀਂ ਉਹੀ ਹਾਲਤ ਫੇਰ ਦੁਹਰਾਉਂਦੇ ਹੋ?</strong>"
-
-#: backtracewidget.cpp:322
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr "ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਨੂੰ ਦੱਬੋ।"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "ਡੀਬੱਗ ਸਿੰਬਲ ਇੰਸਟਾਲ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਪੈਕੇਜ ਗੁੰਮ ਹੈ"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -567,106 +341,6 @@ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਮੁੜ-ਚਾਲੂ(&R)"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ਕਰੈਸ਼ ਹੋਈ ਐਪਲੀਕੇਸ਼ਨ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਵਾਸਤੇ ਇਹ ਬਟਨ ਵਰਤੋਂ।"
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "ਆਮ(&G)"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "ਡਿਵੈਲਪਰ ਜਾਣਕਾਰੀ(&D)"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para>ਸਾਨੂੰ ਅਫਸੋਸ ਹੈ, <application>%1</application> ਅਚਾਨਕ ਬੰਦ ਹੋ ਗਈ।</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You cannot report this error, because the application does not "
-#| "provide a bug reporting address.</para>"
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>ਤੁਸੀਂ ਇਹ ਗਲਤੀ ਬਾਰੇ ਰਿਪੋਰਟ ਨਹੀਂ ਦੇ ਸਕਦੇ, ਕਿਉਂਕਿ ਐਪਲੀਕੇਸ਼ਨ ਬੱਗ ਰਿਪੋਰਟਿੰਗ ਐਡਰੈੱਸ ਉਪਲੱਬਧ "
-"ਨਹੀਂ ਕਰਵਾਉਂਦੀ।</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "ਵੇਰਵਾ:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4)</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>ਚੱਲਣਯੋਗ: <application>%1</application> PID:<numid>%2</numid> ਸਿੰਗਨਲ: %3 "
-"(%4)</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "ਇਹ ਡਾਈਲਾਗ ਬੰਦ ਕਰੋ (ਤੁਸੀਂ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਗੁਆ ਦਿਉਗੇ)"
 
 #: main.cpp:154
 #, fuzzy, kde-format
@@ -988,9 +662,22 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "ਕਾਪੀ(&o)"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "ਇਹ ਬਟਨ ਨੂੰ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ (ਬੈਕਟਰੇਸ) ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰਨ ਲਈ ਵਰਤੋਂ।"
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
+msgstr ""
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
 msgstr ""
 
 #: qml/DeveloperPage.qml:97
@@ -1007,6 +694,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ਮੁੜ-ਕੋਸ਼ਿਸ਼..."
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "ਡੀਬੱਗ ਸਿੰਬਲ ਇੰਸਟਾਲ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
 
 #: qml/DeveloperPage.qml:218
 #, fuzzy
@@ -1082,6 +774,13 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਨੂੰ <interface>ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਕਲਿੱਕ ਕਰਕੇ ਬੈਕਟਰੇਸ ਮੁੜ-ਤਿਆਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।"
 
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
@@ -1151,6 +850,20 @@ msgid ""
 "email address and password."
 msgstr ""
 
+#: qml/main.qml:26
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>You cannot report this error, because the application does not "
+#| "provide a bug reporting address.</para>"
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>ਤੁਸੀਂ ਇਹ ਗਲਤੀ ਬਾਰੇ ਰਿਪੋਰਟ ਨਹੀਂ ਦੇ ਸਕਦੇ, ਕਿਉਂਕਿ ਐਪਲੀਕੇਸ਼ਨ ਬੱਗ ਰਿਪੋਰਟਿੰਗ ਐਡਰੈੱਸ ਉਪਲੱਬਧ "
+"ਨਹੀਂ ਕਰਵਾਉਂਦੀ।</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1182,6 +895,13 @@ msgid ""
 "<para>After updating it is always a good idea to log out and back\n"
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
+msgstr ""
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
 msgstr ""
 
 #: qml/main.qml:93
@@ -1724,6 +1444,169 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "ਮੁੜ-ਲੋਡ ਕਰੋ(&R)"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "ਡੀਬੱਗ ਸਿੰਬਲ ਇੰਸਟਾਲ ਕਰੋ(&I)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "ਇਹ ਬਟਨ ਨੂੰ ਨਾ-ਮੌਜੂਦ ਡੀਬੱਗ ਸਿੰਬਲ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਵਰਤੋਂ।"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "...ਬੈਕਟਰੇਸ ਬਾਰੇ ਜਾਣਕਾਰੀ ਤਿਆਰ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ (ਇਸ ਨੂੰ ਕੁਝ ਸਮਾਂ ਲੱਗੇਗਾ)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr "ਹੋਰ ਡੀਬੱਗਰ ਇਹੀ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਡੀਬੱਗ ਕਰ ਰਿਹਾ ਹੈ। ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨਹੀਂ ਲਈ ਜਾ ਸਕੀ।"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨਹੀਂ ਲਈ ਜਾ ਸਕੀ।"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਫਾਇਦੇਮੰਦ ਹੈ"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਸ਼ਾਇਦ ਫਾਇਦੇਮੰਦ ਹੋ ਸਕਦੀ ਹੈ"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "ਤਿਆਰ ਕੀਤੀ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਸ਼ਾਇਦ ਫਾਇਦੇਮੰਦ ਨਾ ਹੋਵੇ"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "ਤਿਆਰ ਕੀਤੀ  ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਫਾਇਦੇਮੰਦ ਨਹੀਂ ਹੈ"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "ਇਹ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਨੂੰ ਅਢੁੱਕਵੀਂ ਰੇਟ ਕੀਤਾ ਗਿਆ ਹੈ। ਇਹ ਬੱਗ DrKonqi ਵਿੱਚ ਹੀ ਹੈ।"
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਮੁੜ-ਲੋਡ</interface> ਬਟਨ "
+#~ "ਨੂੰ ਦੱਬੋ।"
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਮੁੜ-ਲੋਡ</interface> ਬਟਨ "
+#~ "ਨੂੰ ਦੱਬੋ।"
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "ਡੀਬੱਗਰ ਅਚਾਨਕ ਬੰਦ ਹੋ ਗਿਆ।"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਤਿਆਰ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "ਤੁਹਾਨੂੰ <interface>ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਕਲਿੱਕ ਕਰਕੇ ਬੈਕਟਰੇਸ ਮੁੜ-ਤਿਆਰ ਕਰਨਾ ਚਾਹੀਦਾ "
+#~ "ਹੈ।"
+
+#, fuzzy
+#~| msgctxt "@label question"
+#~| msgid ""
+#~| "<strong>Does the application crash again if you repeat the same "
+#~| "situation?</strong>"
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>ਕੀ ਐਪਲੀਕੇਸ਼ਨ ਕਰੈਸ਼ ਹੁੰਦੀ ਹੈ, ਜੇ ਤੁਸੀਂ ਉਹੀ ਹਾਲਤ ਫੇਰ ਦੁਹਰਾਉਂਦੇ ਹੋ?</strong>"
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr "ਤੁਸੀਂ ਡੀਬੱਗਰ ਪੈਕੇਜ (%1) ਇੰਸਟਾਲ ਕਰਕੇ <interface>ਮੁੜ-ਲੋਡ</interface> ਬਟਨ ਨੂੰ ਦੱਬੋ।"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "ਡੀਬੱਗ ਜਾਣਕਾਰੀ ਪੈਕੇਜ ਗੁੰਮ ਹੈ"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "ਆਮ(&G)"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "ਡਿਵੈਲਪਰ ਜਾਣਕਾਰੀ(&D)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>ਸਾਨੂੰ ਅਫਸੋਸ ਹੈ, <application>%1</application> ਅਚਾਨਕ ਬੰਦ ਹੋ ਗਈ।</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "ਵੇਰਵਾ:"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4)</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>ਚੱਲਣਯੋਗ: <application>%1</application> PID:<numid>%2</numid> ਸਿੰਗਨਲ: "
+#~ "%3 (%4)</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "ਇਹ ਡਾਈਲਾਗ ਬੰਦ ਕਰੋ (ਤੁਸੀਂ ਕਰੈਸ਼ ਜਾਣਕਾਰੀ ਗੁਆ ਦਿਉਗੇ)"
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:45+0000\n"
+"POT-Creation-Date: 2026-06-26 00:47+0000\n"
 "PO-Revision-Date: 2026-02-22 00:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -33,254 +33,6 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus,marcos@euskalgnu.org,hizpol@ej-gv.es"
-
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Bi&rzamatu"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) birzamatzeko. "
-"Arazte-sinboloen pakete egokiak instalatuta dituzunean eta atzerako aztarna "
-"hobea lortu nahi duzunean da baliagarria aukera hau."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instalatu arazteko sinboloak"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Erabili botoi hau falta diren arazteko sinboloen paketeak instalatzeko."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Sinboloen instalazioa ezin da erabili aplikazioa abiatu ondoren eguneratu "
-"edo desinstalatu delako."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) arbelean "
-"kopiatzeko."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) fitxategi "
-"batean gordetzeko. Informazioa berriz begiratu nahi baduzu edo akatsa "
-"geroago jakinarazi nahi baduzu da baliagarria aukera hau."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Zer da \"aztarna\" bat?</h2><p>Aplikazioa kraskatu zenean aplikazioaren "
-"barruan zer gertatzen ari zen deskribatzen dute funtsean aztarnek. Haiei "
-"esker, arazoa non hasi zen jakin dezakete garatzaileek. Hutsalak irudituko "
-"zaizkizu agian, baina informazio baliagarri asko ematen dute.<br />Akatsak "
-"arazteko prozesu interaktiboan zehar eta haiek konpondu ondoren erabili ohi "
-"dira aztarnak.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Kargatzen..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Aztarna sortzen... (baliteke denbora pixka bat behar izatea)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Beste araztaile bat ari da orain aplikazio hori bera arazten. Kraskadurari "
-"buruzko informazioa ezin izan da bildu."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Kraskadurari buruzko informazioa ezin izan da bildu."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Kraskatu den aplikazioari beste arazte-prozesu bat dagokio. Hori dela eta, "
-"DrKonqi araztaileak ezin du aztarna lortu. Itxi beste araztaileak eta egin "
-"klik <interface>Birzamatu</interface> botoian."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Kraskadurari buruz sortutako informazioa baliagarria da"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Kraskadurari buruz sortutako informazioa baliagarria izan liteke"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr ""
-"Kraskadurari buruz sortutako informazioa ez da baliagarria izango seguru aski"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Kraskadurari buruz sortutako informazioa ez da baliagarria"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Kraskadurari buruzko informazioaren balorazioa baliogabea da. DrKonqi-ren "
-"beraren akatsa da."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Egin klik <interface>Instalatu arazteko sinboloak</interface> botoian, falta "
-"diren arazteko informazio-paketeak automatikoki instalatzeko. Metodo horrek "
-"funtzionatzen ez badu, irakurri <link url='%1'>Kraskadurei buruzko "
-"jakinarazpen baliagarriak nola sortu</link> atala, atzerako aztarna "
-"baliagarriak nola sortzen diren ikasteko. Instalatu beharrezko paketeak "
-"(<link url='%2'>fitxategi-zerrenda</link>) eta egin klik "
-"<interface>Birzamatu</interface> botoian."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen baliagarriak nola "
-"sortu</link> atala, aztarna baliagarriak nola sortzen diren ikasteko. "
-"Instalatu beharrezko paketeak (<link url='%2'>fitxategi-zerrenda</link>) eta "
-"egin klik <interface>Birzamatu</interface> botoian."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Araztailea ustekabean itxi da."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Kraskadurari buruzko informazioa ezin izan da sortu."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Aztarna berriz sortzen saia zaitezke; horretarako, egin klik "
-"<interface>Birzamatu</interface> botoian."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Araztaile aplikazioa falta da edo ezin izan da jaurti.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Lehenenik araztaile aplikazioa (%1) instalatu behar duzu, ondoren "
-"klikatu <interface>Birzamatu</interface> botoia.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Errorea gertatu da arazteko sinboloak instalatzean"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Aplikazio eta liburutegi hauei buruzko arazte-informazioa duten paketeak "
-"falta dira:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Falta diren arazte-informazioko paketeak"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -585,118 +337,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Erabili botoi hau kraskatu den aplikazioa berrabiarazteko."
 
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Orokorra"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Garatzaileen informazioa"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para><application>%1</application> ustekabean itxi da.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Kraskadura maneiatzaileak berak huts egin duenez, txostena "
-"jakinarazteko prozesu automatikoa ezgaituta dago, berriz huts egiteko "
-"arriskua murrizteko.<nl /><nl />Mesedez, akats hau <link url='%1'>eskuz "
-"jakinarazi</link> KDEren akatsen jarraipen sistemara. Ez ahaztu "
-"<interface>Garatzaileen informazioa</interface> fitxako aztarna eranstea.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Txostenak jakinarazteko laguntzailea desgaituta dago kraskadura "
-"maneiatzeko elkarrizketa modu seguruan hasi delako.<nl />Akats hau eskuz "
-"jakinarazi dezakezu %1-(e)ra (<interface>Garatzailearen informazioa</"
-"interface> fitxako aztarna barne).</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Txostenak egiteko laguntzailea ezgaituta dago, antza denez, "
-"kraskatutako aplikazioa abiatu ondoren eguneratu edo desinstalatu delako. "
-"Honek galarazi egiten du kraskaduraren gaineko txosten zuzena egitea, eta "
-"kraskadura beraren jatorria izan daiteke.</para><para>Eguneratu ondoren "
-"gomendagarria da saio-itxi eta atzera saio-hastea, eguneraketa erabat ezarri "
-"dela eta albo eraginik ez duela izango ziurtatzeko.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>KDE Softwarea hobetzen lagundu diezagukezu errore hau jakinaraziz.<nl /"
-"><link url='%1'>Jakizu gehiago akatsak jakinarazteari buruz.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Ezin duzu akats hau jakinarazi, <application>%1</application>ek ez "
-"duelako akatsaren txostena jakinarazteko helbiderik hornitzen.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Xehetasunak:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Exekutagarria: <application>%1</application> PID: %2 Seinalea: %3 (%4) "
-"Data: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
-"Itxi elkarrizketa-leihoa (kraskadurari buruzko informazioa galdu egingo "
-"duzu)."
-
 #: main.cpp:154
 #, kde-format
 msgid "Crash Handler"
@@ -965,10 +605,28 @@ msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopiatu"
 
+#: qml/DeveloperPage.qml:72
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) arbelean "
+"kopiatzeko."
+
 #: qml/DeveloperPage.qml:79
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Gorde"
+
+#: qml/DeveloperPage.qml:81
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Erabili botoi hau kraskadurari buruzko informazioa (aztarna) fitxategi "
+"batean gordetzeko. Informazioa berriz begiratu nahi baduzu edo akatsa "
+"geroago jakinarazi nahi baduzu da baliagarria aukera hau."
 
 #: qml/DeveloperPage.qml:97
 msgctxt "@info"
@@ -984,6 +642,11 @@ msgstr ""
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Berriz saiatu"
+
+#: qml/DeveloperPage.qml:127
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Errorea gertatu da arazteko sinboloak instalatzean"
 
 #: qml/DeveloperPage.qml:218
 msgctxt "@info/rich"
@@ -1045,6 +708,15 @@ msgstr ""
 "Memoria presioagatik atzeranzko aztarnaren sorrera gelditu egin da."
 "Atzeranzko aztarna berriz sortzen saia zintezke, <interface>Birzamatu</"
 "interface> botoiari klik eginez."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:265
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Aplikazio eta liburutegi hauei buruzko arazte-informazioa duten paketeak "
+"falta dira:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1125,6 +797,15 @@ msgstr ""
 "Erabili botoi hau KDEren akatsen jarraipenerako sisteman dagokizun e-posta "
 "eta pasahitzarekin saioa hasteko."
 
+#: qml/main.qml:26
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Ezin duzu akats hau jakinarazi, <application>%1</application>ek ez "
+"duelako akatsaren txostena jakinarazteko helbiderik hornitzen.</para>"
+
 #: qml/main.qml:33
 msgctxt "@info"
 msgid ""
@@ -1175,6 +856,15 @@ msgstr ""
 "izan daiteke.</para><para>Hura eguneratu ondoren gomendagarria\n"
 "da saio-itxi eta atzera saio-hastea, eguneraketa erabat ezarri dela eta\n"
 "albo eraginik izango ez duela ziurtatzeko.</para>"
+
+#: qml/main.qml:64
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>KDE Softwarea hobetzen lagundu diezagukezu errore hau jakinaraziz.<nl /"
+"><link url='%1'>Jakizu gehiago akatsak jakinarazteari buruz.</link></para>"
 
 #: qml/main.qml:93
 msgctxt "@info"
@@ -1655,6 +1345,248 @@ msgstr "bugstest.kde.org erabiltzaile-izena"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org pasahitza"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Bi&rzamatu"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Erabili botoi hau kraskadurari buruzko informazioa (aztarna) "
+#~ "birzamatzeko. Arazte-sinboloen pakete egokiak instalatuta dituzunean eta "
+#~ "atzerako aztarna hobea lortu nahi duzunean da baliagarria aukera hau."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instalatu arazteko sinboloak"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Erabili botoi hau falta diren arazteko sinboloen paketeak instalatzeko."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Sinboloen instalazioa ezin da erabili aplikazioa abiatu ondoren eguneratu "
+#~ "edo desinstalatu delako."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Zer da \"aztarna\" bat?</h2><p>Aplikazioa kraskatu zenean "
+#~ "aplikazioaren barruan zer gertatzen ari zen deskribatzen dute funtsean "
+#~ "aztarnek. Haiei esker, arazoa non hasi zen jakin dezakete garatzaileek. "
+#~ "Hutsalak irudituko zaizkizu agian, baina informazio baliagarri asko "
+#~ "ematen dute.<br />Akatsak arazteko prozesu interaktiboan zehar eta haiek "
+#~ "konpondu ondoren erabili ohi dira aztarnak.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Kargatzen..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Aztarna sortzen... (baliteke denbora pixka bat behar izatea)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Beste araztaile bat ari da orain aplikazio hori bera arazten. "
+#~ "Kraskadurari buruzko informazioa ezin izan da bildu."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Kraskadurari buruzko informazioa ezin izan da bildu."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Kraskatu den aplikazioari beste arazte-prozesu bat dagokio. Hori dela "
+#~ "eta, DrKonqi araztaileak ezin du aztarna lortu. Itxi beste araztaileak "
+#~ "eta egin klik <interface>Birzamatu</interface> botoian."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Kraskadurari buruz sortutako informazioa baliagarria da"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Kraskadurari buruz sortutako informazioa baliagarria izan liteke"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr ""
+#~ "Kraskadurari buruz sortutako informazioa ez da baliagarria izango seguru "
+#~ "aski"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Kraskadurari buruz sortutako informazioa ez da baliagarria"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Kraskadurari buruzko informazioaren balorazioa baliogabea da. DrKonqi-ren "
+#~ "beraren akatsa da."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Egin klik <interface>Instalatu arazteko sinboloak</interface> botoian, "
+#~ "falta diren arazteko informazio-paketeak automatikoki instalatzeko. "
+#~ "Metodo horrek funtzionatzen ez badu, irakurri <link url='%1'>Kraskadurei "
+#~ "buruzko jakinarazpen baliagarriak nola sortu</link> atala, atzerako "
+#~ "aztarna baliagarriak nola sortzen diren ikasteko. Instalatu beharrezko "
+#~ "paketeak (<link url='%2'>fitxategi-zerrenda</link>) eta egin klik "
+#~ "<interface>Birzamatu</interface> botoian."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Irakurri <link url='%1'>Kraskadurei buruzko jakinarazpen baliagarriak "
+#~ "nola sortu</link> atala, aztarna baliagarriak nola sortzen diren "
+#~ "ikasteko. Instalatu beharrezko paketeak (<link url='%2'>fitxategi-"
+#~ "zerrenda</link>) eta egin klik <interface>Birzamatu</interface> botoian."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Araztailea ustekabean itxi da."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Kraskadurari buruzko informazioa ezin izan da sortu."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Aztarna berriz sortzen saia zaitezke; horretarako, egin klik "
+#~ "<interface>Birzamatu</interface> botoian."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Araztaile aplikazioa falta da edo ezin izan da jaurti.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Lehenenik araztaile aplikazioa (%1) instalatu behar duzu, ondoren "
+#~ "klikatu <interface>Birzamatu</interface> botoia.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Falta diren arazte-informazioko paketeak"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Orokorra"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Garatzaileen informazioa"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr "<para><application>%1</application> ustekabean itxi da.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Kraskadura maneiatzaileak berak huts egin duenez, txostena "
+#~ "jakinarazteko prozesu automatikoa ezgaituta dago, berriz huts egiteko "
+#~ "arriskua murrizteko.<nl /><nl />Mesedez, akats hau <link url='%1'>eskuz "
+#~ "jakinarazi</link> KDEren akatsen jarraipen sistemara. Ez ahaztu "
+#~ "<interface>Garatzaileen informazioa</interface> fitxako aztarna eranstea."
+#~ "</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Txostenak jakinarazteko laguntzailea desgaituta dago kraskadura "
+#~ "maneiatzeko elkarrizketa modu seguruan hasi delako.<nl />Akats hau eskuz "
+#~ "jakinarazi dezakezu %1-(e)ra (<interface>Garatzailearen informazioa</"
+#~ "interface> fitxako aztarna barne).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Txostenak egiteko laguntzailea ezgaituta dago, antza denez, "
+#~ "kraskatutako aplikazioa abiatu ondoren eguneratu edo desinstalatu delako. "
+#~ "Honek galarazi egiten du kraskaduraren gaineko txosten zuzena egitea, eta "
+#~ "kraskadura beraren jatorria izan daiteke.</para><para>Eguneratu ondoren "
+#~ "gomendagarria da saio-itxi eta atzera saio-hastea, eguneraketa erabat "
+#~ "ezarri dela eta albo eraginik ez duela izango ziurtatzeko.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Xehetasunak:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Exekutagarria: <application>%1</application> PID: %2 Seinalea: %3 "
+#~ "(%4) Data: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr ""
+#~ "Itxi elkarrizketa-leihoa (kraskadurari buruzko informazioa galdu egingo "
+#~ "duzu)."
 
 #~ msgctxt "@info:shell"
 #~ msgid "The program was started by kdeinit"
