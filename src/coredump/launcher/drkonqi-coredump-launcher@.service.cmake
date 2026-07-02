@@ -4,6 +4,7 @@
 [Unit]
 Description=Launch DrKonqi for a systemd-coredump crash
 PartOf=graphical-session.target
+Requisite=graphical-session.target
 ConditionUser=!@system
 
 [Service]
