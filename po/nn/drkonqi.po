@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:45+0000\n"
-"PO-Revision-Date: 2026-07-05 17:34+0200\n"
+"PO-Revision-Date: 2026-07-07 18:57+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -123,7 +123,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr ""
+msgstr "Krasjen er alt send inn."
 
 #: coredump/gui/Patient.cpp:227
 #, kde-format
@@ -137,19 +137,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Flatpak"
 
 #: coredump/gui/Patient.cpp:271
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap-butikken"
 
 #: coredump/gui/Patient.cpp:273
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "KDE"
 
 #: coredump/gui/qml/DetailsPage.qml:20
 msgctxt "@title"
@@ -167,12 +167,9 @@ msgid "Run Interactive Debugger"
 msgstr "Køyr interaktiv feilsøkjar"
 
 #: coredump/gui/qml/DetailsPage.qml:47
-#, fuzzy
-#| msgctxt "@action Report the bug on this domain"
-#| msgid "Report on %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
-msgstr "Rapporter på %1"
+msgstr "Rapporter til %1"
 
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
@@ -203,7 +200,7 @@ msgstr "Oversikt"
 #, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr ""
+msgstr "Programkrasj"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -221,7 +218,7 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Tenestekrasj"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
@@ -230,9 +227,7 @@ msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
 msgstr "Detaljar"
@@ -241,7 +236,7 @@ msgstr "Detaljar"
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Klarte ikkje starta"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
 #, fuzzy, kde-format
@@ -456,7 +451,6 @@ msgid "Do not show a notification but launch the debug dialog directly"
 msgstr "Ikkje vis varsling, men start heller feilsøkingsvindauget direkte"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Hentar tilbakelogg (automatisk krasjinformasjon)"
@@ -467,10 +461,9 @@ msgid "Next"
 msgstr "Neste"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Fekk ikkje kontakt med bugs.kde.org: <message>%1</message>"
+msgstr "Fekk ikkje kontakt med %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
@@ -478,15 +471,14 @@ msgid "Retry"
 msgstr "Prøv på nytt"
 
 #: qml/BugzillaPage.qml:62
-#, fuzzy
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr "Prøver å kontakta bugs.kde.org …"
+msgstr "Prøver å kontakta %1 …"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Kunnskapen din"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -538,7 +530,6 @@ msgid "Not Sufficiently Useful"
 msgstr "Ikkje nyttig nok"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -546,9 +537,9 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"<para>Informasjonen du kom med, er dessverre ikkje nyttig nok i dette "
-"tilfellet. Om du ikkje kjem på noko meir du trur kan vera nyttig, kan du no "
-"lukka feilrapporterings­vindauget.</para>"
+"Informasjonen du kom med, er dessverre ikkje nyttig nok i dette tilfellet.\n"
+"Om du ikkje kjem på noko meir du trur kan vera nyttig, kan du no lukka "
+"feilrapporterings­vindauget."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -561,12 +552,10 @@ msgid "Install Debug Symbols"
 msgstr "Installer feilsøkingssymbol"
 
 #: qml/DeveloperPage.qml:42
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
-"Bruk denne knappen for å installera dei manglande pakkane med "
-"feilsøkingssymbol."
+"Bruk denne knappen for å installera pakkar for manglande feilsøkingssymbol."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -641,7 +630,6 @@ msgid "Error during the installation of debug symbols"
 msgstr "Klarte ikkje installera feilsøkingssymbola"
 
 #: qml/DeveloperPage.qml:218
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -661,7 +649,6 @@ msgstr ""
 "att</interface>."
 
 #: qml/DeveloperPage.qml:226
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -676,7 +663,6 @@ msgstr ""
 "interface>."
 
 #: qml/DeveloperPage.qml:233
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -686,14 +672,13 @@ msgstr ""
 "att</interface>."
 
 #: qml/DeveloperPage.qml:237
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<emphasis strong='true'>Du må først installera feilsøkings­pakken (%1) og så "
-"trykkja <interface>Last om att</interface>.</emphasis>"
+"<emphasis strong='true'>Installer først feilsøkings­pakken (%1), og trykk så "
+"<interface>Last om att</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:241
 #, fuzzy
@@ -725,7 +710,6 @@ msgid "Automatically download debug symbols to enhance crash reports"
 msgstr "Last automatisk ned feilsøkings­symbol for å forbetra krasjrapportane"
 
 #: qml/DownloadSymbolsCheckBox.qml:29
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
 "Crash reports can be of greater value if additional debugging resources are "
@@ -741,7 +725,6 @@ msgstr ""
 "dersom du har forbruksmålt Internett-tilgang."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Logg på feilrapportsystemet"
@@ -752,7 +735,6 @@ msgid "You need to login with your %1 account in order to proceed."
 msgstr "Du må logga inn på %1-kontoen din for å halda fram."
 
 #: qml/LoginPage.qml:71
-#, fuzzy
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
 msgstr "E-postadresse:"
@@ -768,7 +750,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Lagra innloggingsinformasjonen i KDE Wallet"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -790,7 +771,6 @@ msgid "Login"
 msgstr "Logg inn"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
@@ -893,18 +873,14 @@ msgstr ""
 "eller lukka vindauget."
 
 #: qml/MainPage.qml:12
-#, fuzzy
 msgctxt "@title"
 msgid "Crash Handler"
 msgstr "Krasjhandsamar"
 
 #: qml/MainPage.qml:35
-#, fuzzy
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
-"<para>Me er leie for det, men <application>%1</application> vart brått "
-"avslutta.</para>"
+msgstr "<application>%1</application> vart brått avslutta."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -919,10 +895,9 @@ msgstr "Sjå utviklarinformasjon"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Førehandsvising av feilrapport"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
@@ -944,31 +919,26 @@ msgid "Waiting for data…"
 msgstr "Ventar på data …"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
 msgctxt "@info"
 msgid "The generated crash information is useful."
-msgstr "Informasjonen om denne krasjen er nyttig"
+msgstr "Informasjonen om denne krasjen er nyttig."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
 msgctxt "@info"
 msgid "The generated crash information may be useful."
-msgstr "Informasjonen om denne krasjen kan vera nyttig"
+msgstr "Informasjonen om denne krasjen kan vera nyttig."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Informasjonen om denne krasjen er ikkje nyttig"
+msgstr "Informasjonen om denne krasjen er truleg ikkje nyttig."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
 msgctxt "@info"
 msgid "The generated crash information is not useful."
-msgstr "Informasjonen om denne krasjen er ikkje nyttig"
+msgstr "Informasjonen om denne krasjen er ikkje nyttig."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Skriv inn detaljar om krasjen"
@@ -1051,9 +1021,6 @@ msgid "Distribution method:"
 msgstr "Distribusjonsmetode:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Loading..."
 msgctxt "@item:inlistbox placeholder while loading"
 msgid "Loading…"
 msgstr "Lastar …"
@@ -1101,7 +1068,6 @@ msgid "Retry Submission"
 msgstr "Prøv på nytt"
 
 #: qml/SendingPage.qml:81
-#, fuzzy
 msgctxt "@info"
 msgid "Submitting bug report…"
 msgstr "Sender inn feilrapport …"
@@ -1122,26 +1088,23 @@ msgid "URL: <link url='%1'>%1</link>"
 msgstr "Adresse: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
 msgstr "Takk for at du bidreg til KDE. No kan du lukka dette vindauget."
 
 #: qml/SentryPage.qml:12
-#, fuzzy
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "Send automatisk feilrapport"
+msgstr "Automatisk feilrapport"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"Samlar inn informasjon om krasjen. Innsamla data vert automatisk sende inn i "
-"bakgrunnen."
+"Samlar inn informasjon om krasjen. Du kan lukka dette vindauget. Innsamla "
+"data vert automatisk sende inn i bakgrunnen."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
@@ -1160,7 +1123,6 @@ msgid "Automatically report crashes"
 msgstr "Send automatisk krasjrapportar"
 
 #: qml/SentryPage.qml:79
-#, fuzzy
 msgctxt "@info:tooltip"
 msgid ""
 "Always automatically submit a crash report to KDE's crash tracking system, "
@@ -1187,10 +1149,9 @@ msgid "Finish"
 msgstr "Fullfør"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Velkommen til vegvisaren for feilrapportering"
+msgstr "Krasjrapport-vegvisar"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1202,7 +1163,6 @@ msgstr ""
 "inn ein feil."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
