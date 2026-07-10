@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-04 00:45+0000\n"
-"PO-Revision-Date: 2026-07-08 23:41+0200\n"
+"PO-Revision-Date: 2026-07-09 10:51+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -79,7 +79,7 @@ msgstr "Selhání"
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Z neznámých důvodů se nepodařilo získat přístup k údajům o pádu."
 
 #: coredump/gui/Patient.cpp:183
 #, kde-format
@@ -88,6 +88,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"V současné době není možné ladit chyby vedoucí k pádu softwaru spuštěného v "
+"sandboxu Flatpak."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -96,6 +98,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"V současné době není možné ladit chyby vedoucí k pádu softwaru spuštěného v "
+"sandboxu Snap."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -104,12 +108,13 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"U této chyby již není možné provést ladění. Chybí soubor s výpisem paměti."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "U této chyby již není možné provést ladění."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
@@ -211,6 +216,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"<command>%1</command> (součást <command>%2</command>) zaznamenal závažnou "
+"chybu a byl ukončen."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -224,7 +231,7 @@ msgstr "Pád služby"
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "<command>%1</command> zaznamenal závažnou chybu a byl ukončen."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
 #, kde-format
@@ -459,22 +466,23 @@ msgstr "Další"
 #: qml/BugzillaPage.qml:43
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr ""
+msgstr "Nepodařilo se připojit k %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
 msgctxt "@action"
 msgid "Retry"
 msgstr "Zkusit znovu"
 
+# %s is FTP or HTTP
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr ""
+msgstr "Pokus o navázání připojení na %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Vaše znalosti"
 
 #: qml/ContextPage.qml:18
 msgctxt "@info/rich"
@@ -533,6 +541,10 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
+"Informace, které jste poskytli, nejsou v tomto případě považovány za "
+"dostatečně užitečné.\n"
+"Pokud vás nenapadají žádné další informace, můžete dialogové okno s hlášením "
+"chyby zavřít."
 
 #: qml/DeveloperPage.qml:23
 msgctxt "@title:window"
@@ -548,6 +560,7 @@ msgstr "Nainstalovat ladicí symboly"
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
+"Pomocí tohoto tlačítka nainstalujte balíčky s chybějícími ladicími symboly."
 
 #: qml/DeveloperPage.qml:50
 msgctxt "@action Report the bug on this domain"
@@ -609,6 +622,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Tento backtrace je velmi omezený, protože k vygenerování úplného výpisu "
+"nebylo k dispozici dostatek paměti. Můžete zavřít některé aplikace a zkusit "
+"to znovu."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -631,6 +647,13 @@ msgid ""
 "backtrace, install the needed packages (<link url='%2'>list of files</"
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
+"Klikněte na tlačítko <interface>Nainstalovat ladicí symboly</interface>, aby "
+"se automaticky nainstalovaly chybějící balíčky s ladicími informacemi. Pokud "
+"tato metoda\n"
+"nefunguje, přečtěte si <link url='%1'>Jak vytvořit užitečné zprávy o pádu</"
+"link>, kde se dozvíte, jak získat užitečný\n"
+"backtrace, nainstalujte potřebné balíčky (<link url='%2'>seznam souborů</"
+"link>) a poté klikněte na tlačítko <interface>Obnovit</interface>."
 
 #: qml/DeveloperPage.qml:226
 msgctxt "@info/rich"
@@ -640,6 +663,10 @@ msgid ""
 "(<link url='%2'>list of files</link>), then click the <interface>Reload</"
 "interface> button."
 msgstr ""
+"Přečtěte si <link url='%1'>Jak vytvořit užitečné zprávy o pádu</link>, kde "
+"se dozvíte, jak získat užitečný backtrace, nainstalujte potřebné\n"
+"balíčky (<link url='%2'>seznam souborů</link>) a poté klikněte na tlačítko "
+"<interface>Obnovit</interface>."
 
 #: qml/DeveloperPage.qml:233
 msgctxt "@info/rich"
@@ -647,6 +674,8 @@ msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
+"Zkuste znovu vygenerovat backtrace kliknutím na tlačítko <interface>Obnovit</"
+"interface>."
 
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
@@ -654,6 +683,8 @@ msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
+"<emphasis strong='true'>Nejprve nainstalujte ladicí aplikaci (%1) a poté "
+"klikněte na tlačítko <interface>Obnovit</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -662,6 +693,9 @@ msgid ""
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
+"Vytváření backtrace bylo zastaveno z důvodu nedostatku paměti. Můžete zkusit "
+"backtrace vygenerovat znovu kliknutím na tlačítko <interface>Obnovit</"
+"interface>."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: qml/DeveloperPage.qml:265
@@ -675,6 +709,7 @@ msgstr ""
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
 msgstr ""
+"Automatické stahování ladicích symbolů za účelem vylepšení hlášení o selhání"
 
 #: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
@@ -685,6 +720,11 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
+"Zprávy o pádu mohou mít větší hodnotu, pokud si nejprve stáhnete další "
+"ladicí nástroje od svého distributora.\n"
+"To však může také vést ke zvýšené spotřebě paměti, prodloužení doby "
+"zpracování a ke stažení souborů neznámé velikosti v případě pádu. Při "
+"použití měřeného internetového připojení se tento krok automaticky přeskočí."
 
 #: qml/LoginPage.qml:14
 msgctxt "@title:window"
@@ -721,6 +761,12 @@ msgid ""
 "url='%2'>create one here</link>. Please do not use disposable email "
 "addresses.</note>"
 msgstr ""
+"<note>K nahlášení chyby potřebujete uživatelský účet v <link "
+"url='%1'>systému pro sledování chyb KDE</link>, protože vás možná budeme "
+"později muset kontaktovat\n"
+"a požádat o další informace. Pokud účet ještě nemáte, můžete si jej zdarma "
+"<link url='%2'>vytvořit zde</link>. Nepoužívejte prosím jednorázové e-"
+"mailové adresy.</note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -733,6 +779,8 @@ msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
+"Pomocí tohoto tlačítka se přihlaste do systému pro sledování chyb KDE pomocí "
+"zadané e-mailové adresy a hesla."
 
 #: qml/main.qml:26
 msgctxt "@info"
@@ -809,6 +857,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Nebylo dostatek paměti k zaznamenání informací o pádu. Můžete zavřít některé "
+"aplikace, abyste uvolnili paměť, a zkusit to znovu."
 
 #: qml/main.qml:98
 msgctxt "@info"
@@ -816,6 +866,8 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
+"Z neznámých důvodů se nepodařilo shromáždit informace o pádu. Můžete to "
+"zkusit znovu, zavřít okno nebo <link url='%1'>zobrazit podrobný výpis</link>."
 
 #: qml/main.qml:101
 msgctxt "@info"
@@ -823,6 +875,8 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Z neznámých důvodů se nepodařilo získat informace o pádu. Můžete to zkusit "
+"znovu nebo okno zavřít."
 
 #: qml/MainPage.qml:12
 msgctxt "@title"
@@ -832,7 +886,7 @@ msgstr "Obsluha pádů"
 #: qml/MainPage.qml:35
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
-msgstr ""
+msgstr "<application>%1</application> se neočekávaně ukončila."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
@@ -847,7 +901,7 @@ msgstr "Odeslat informace pro vývojáře"
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Náhled hlášení chyby"
 
 #: qml/PreviewPage.qml:20
 msgctxt "@label/rich"
@@ -856,6 +910,8 @@ msgid ""
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
+"<para>Toto je náhled obsahu zprávy, která bude odeslána.</para><para>Chcete-"
+"li zprávu upravit, vraťte se na předchozí stránky.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
@@ -943,6 +999,14 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Popište co nejpodrobněji okolnosti selhání:</subtitle>\n"
+"<list>\n"
+"<item>Uveďte, jaké akce jste prováděli v aplikaci i mimo ni těsně před "
+"selháním.</item>\n"
+"<item>Uveďte, zda jste si všimli nějakého neobvyklého chování v aplikaci "
+"nebo v celém prostředí.</item>\n"
+"<item>Uveďte jakékoli nestandardní nastavení v aplikaci.</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:74
 msgctxt "the minimum required length of a text was reached"
@@ -999,7 +1063,7 @@ msgstr ""
 #: qml/SendingPage.qml:63
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr ""
+msgstr "Nepodařilo se odeslat hlášení o chybě: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
@@ -1029,12 +1093,12 @@ msgstr "URL: <link url='%1'>%1</link>"
 #: qml/SentPage.qml:32
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr ""
+msgstr "Děkujeme, že jste součástí KDE. Nyní můžete toto okno zavřít."
 
 #: qml/SentryPage.qml:12
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr ""
+msgstr "Automatické hlášení"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1042,6 +1106,8 @@ msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
+"Získávání údajů o pádu. Toto okno lze zavřít. Získané údaje budou "
+"automaticky odeslány na pozadí."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
@@ -1057,7 +1123,7 @@ msgstr "V budoucnosti:"
 #: qml/SentryPage.qml:70
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr ""
+msgstr "Automatické hlášení pádů"
 
 #: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
@@ -1066,11 +1132,14 @@ msgid ""
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Hlášení o pádu bude vždy automaticky odesláno do systému sledování chyb KDE, "
+"aniž by bylo nutné cokoli zadávat ručně.\n"
+"Už nebudete dostávat žádná oznámení o pádu."
 
 #: qml/SentryPage.qml:95
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr ""
+msgstr "Řekněte nám o tomto pádu něco víc…"
 
 #: qml/SentryPage.qml:106
 msgctxt "@action:button"
@@ -1085,7 +1154,7 @@ msgstr "Dokončit"
 #: qml/WelcomePage.qml:14
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr ""
+msgstr "Asistent pro hlášení"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@info/rich"
@@ -1106,6 +1175,12 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
+"<para><note>Vzhledem k tomu, že pro efektivní odladění je nutná komunikace "
+"mezi vámi a vývojáři,\n"
+"je pro další hlášení této chyby <emphasis strong='true'>nutné, abyste "
+"souhlasili s tím, že vás vývojáři mohou kontaktovat</emphasis>.\n"
+"</note></para><para>Pokud s tím nesouhlasíte, můžete toto dialogové okno "
+"klidně zavřít.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
@@ -1160,7 +1235,7 @@ msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr ""
+msgstr "Aplikace se neočekávaně ukončila. Automaticky se odesílá hlášení."
 
 #: statusnotifier.cpp:47
 #, kde-format
@@ -1210,27 +1285,27 @@ msgstr "Restartovat aplikaci"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Název ladicího programu předaný parseru"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Soubor obsahující backtrace."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "BugzillaLib Test (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Testovací aplikace pro knihovnu správce systému sledování chyb"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
 #, kde-format
