@@ -17,6 +17,7 @@ Coredump::Coredump(QByteArray cursor, EntriesHash data)
     , exe(QString::fromLocal8Bit(m_rawData[QByteArrayLiteral("COREDUMP_EXE")]))
     , filename(QString::fromLocal8Bit(m_rawData[keyFilename()]))
     , systemd_unit(QString::fromLocal8Bit(m_rawData[QByteArrayLiteral("_SYSTEMD_UNIT")]))
+    , user_unit(QString::fromLocal8Bit(m_rawData[QByteArrayLiteral("COREDUMP_USER_UNIT")]))
     , bootId(QString::fromUtf8(m_rawData["_BOOT_ID"_ba]))
     , timestamp(QString::fromUtf8(m_rawData["COREDUMP_TIMESTAMP"_ba]))
 {

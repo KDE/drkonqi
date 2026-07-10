@@ -1,7 +1,16 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 
-add_executable(drkonqi-coredump-launcher main.cpp GlobalNotifierTruck.cpp DevNotifierTruck.cpp)
+set(SYSTEMD_DBUS_XMLS
+    org.freedesktop.systemd1.Manager.xml
+    org.freedesktop.systemd1.Service.xml
+    org.freedesktop.systemd1.Unit.xml
+)
+
+#set_source_files_properties(${SYSTEMD_DBUS_XMLS} PROPERTIES INCLUDE dbustypes.h)
+qt_add_dbus_interfaces(dbus_SRCS ${SYSTEMD_DBUS_XMLS})
+
+add_executable(drkonqi-coredump-launcher main.cpp GlobalNotifierTruck.cpp DevNotifierTruck.cpp ${dbus_SRCS})
 target_link_libraries(drkonqi-coredump-launcher
     PRIVATE
         Qt::Core

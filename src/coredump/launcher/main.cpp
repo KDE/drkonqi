@@ -9,6 +9,7 @@
 
 #include <chrono>
 
+#include <QDBusConnection>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -31,6 +32,10 @@
 #include "DevNotifierTruck.h"
 #include "DumpTruckInterface.h"
 #include "GlobalNotifierTruck.h"
+
+#include "managerinterface.h"
+#include "serviceinterface.h"
+#include "unitinterface.h"
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -148,6 +153,31 @@ void writeToDisk(const QJsonObject &contextObject, const QString &drkonqiMetadat
     }
 }
 
+static bool unitAutoRestarts(const Coredump &dump)
+{
+    auto dbus = QDBusConnection::sessionBus();
+    const QString systemdService = u"org.freedesktop.systemd1"_s;
+
+    org::freedesktop::systemd1::Manager managerInterface{systemdService, QStringLiteral("/org/freedesktop/systemd1"), dbus};
+    const QString path = managerInterface.GetUnit(dump.user_unit).value().path();
+
+    if (path.isEmpty()) {
+        return false;
+    }
+
+    org::freedesktop::systemd1::Service serviceInterface{systemdService, path, dbus};
+    org::freedesktop::systemd1::Unit unitInterface{systemdService, path, dbus};
+
+    const QString activeState = unitInterface.activeState();
+    // TODO subState == "start"?
+    if (activeState != "activating"_L1 && activeState != "active"_L1) {
+        return false;
+    }
+
+    // TODO on-abnormal, on-abort? start-limit-hit?
+    return serviceInterface.restart() == "on-failure"_L1 && serviceInterface.result() == "success"_L1;
+}
+
 static bool tryDrkonqi(const Coredump &dump)
 {
     const QString kcrashMetadataPath = Metadata::resolveKCrashMetadataPath(dump.exe, dump.bootId, dump.pid);
@@ -194,6 +224,12 @@ static bool tryDrkonqi(const Coredump &dump)
     if (Paths::drkonqiExe().isEmpty()) {
         qWarning() << "Couldn't find drkonqi exe";
         return false;
+    }
+
+    auto object = metadata[Metadata::KCRASH_KEY].toObject();
+    if (!object.value("restarted"_L1).toBool() && unitAutoRestarts(dump)) {
+        object.insert("restarted"_L1, true);
+        metadata[Metadata::KCRASH_KEY] = object;
     }
 
     setenv("DRKONQI_BACKEND", "COREDUMPD", 1);
