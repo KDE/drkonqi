@@ -246,6 +246,8 @@ static void onNewDump(const Coredump &dump)
 int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
+    // Never let the launcher participate in session management. It will break things because we assume to be invoked by systemd sockets exclusively.
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     app.setApplicationName(QStringLiteral("drkonqi-coredump-launcher"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
