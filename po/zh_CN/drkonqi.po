@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -34,6 +34,36 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr "<placeholder>请详细告诉我们程序崩溃时您正在做什么。</placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -514,7 +544,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能相关的的应用程序自定义设置"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "信息不够详细"
@@ -530,37 +560,37 @@ msgstr ""
 "在这种情况下，您能够提供的信息无法帮助我们确定问题的成因。 如果您回想不出更多"
 "信息，请关闭错误报告对话框。"
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "开发者信息"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "安装调试符号包"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "使用此按钮来安装缺少的调试符号软件包。"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "报告到 %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "启动程序缺陷报告助手。"
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "重新加载"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -571,23 +601,23 @@ msgstr ""
 "点击此按钮可重新加载崩溃信息 (回溯跟踪数据)。在安装了目标软件的调试符号包后，"
 "您可以点击此按钮来生成更有价值的回溯跟踪数据。"
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "复制"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "点击此按钮可将崩溃信息 (回溯跟踪数据) 复制到剪贴板。"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -596,7 +626,7 @@ msgstr ""
 "点击此按钮可将崩溃信息 (回溯跟踪数据) 保存为文件。用于需要检查信息内容或者保"
 "存数据留待日后报告。"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -605,17 +635,17 @@ msgstr ""
 "此回溯信息非常有限，因为当时可用内存不足，无法生成完整的回溯信息。您可以关闭"
 "一些应用程序之后重试。"
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "重试"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "安装调试符号包时出错"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -632,7 +662,7 @@ msgstr ""
 "请安装所需的软件包(<link url='%2'>文件列表</link>)，然后请点击<interface>重新"
 "加载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -645,7 +675,7 @@ msgstr ""
 "请安装所需的软件包(<link url='%2'>文件列表</link>)，然后点击<interface>重新加"
 "载</interface>按钮。"
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -656,13 +686,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>请先安装调试器程序 (%1)，然后点击<interface>重新加载"
 "</interface>按钮。</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -673,7 +710,7 @@ msgstr ""
 "按钮重新生成回溯。"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -750,7 +787,7 @@ msgid ""
 "email address and password."
 msgstr "点击此按钮可使用您的邮件地址和密码登录到 KDE 程序缺陷跟踪系统。"
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -759,7 +796,7 @@ msgstr ""
 "<para>您无法报告此错误，因为 <application>%1</application> 并未提供接收报告的"
 "地址。</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -776,7 +813,7 @@ msgstr ""
 "并记得附上<interface>开发人员信息</interface>页面中的\n"
 "回溯跟踪数据。</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -788,7 +825,7 @@ msgstr ""
 "您可以手动发送此报告到 <link>%1</link> (请附上<interface>开发人员信息</"
 "interface>页面中的回溯跟踪数据。)</para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -806,7 +843,7 @@ msgstr ""
 "<para>建议您在更新软件之后退出并重新登录系统，\n"
 "这将确保软件更新能得到完整应用并避免发生意外情况。</para>"
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -815,7 +852,7 @@ msgstr ""
 "<para>您可以报告此次错误，帮助我们改进 KDE 软件。<nl /><link url='%1'>查看程"
 "序缺陷报告的更多相关信息。</link></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -823,7 +860,21 @@ msgid ""
 msgstr ""
 "内存不足，无法收集崩溃信息。您可以关闭一些应用程序以释放内存，然后重试。"
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"收集崩溃信息失败，原因未知。您可以重试或者关闭此窗口，也可以 <link url='%1'>"
+"查看详细输出</link>。"
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -832,7 +883,7 @@ msgstr ""
 "收集崩溃信息失败，原因未知。您可以重试或者关闭此窗口，也可以 <link url='%1'>"
 "查看详细输出</link>。"
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1061,7 +1112,7 @@ msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
-msgstr ""
+msgstr "正在收集崩溃数据。您可以关闭此窗口。收集到的数据将自动在后台提交。"
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"

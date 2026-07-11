@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2026-01-02 11:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -54,6 +54,36 @@ msgid ""
 msgstr ""
 "<placeholder>Kerro yksityiskohtaisesti, mitä teit sovelluksen kaatuessa. </"
 "placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -543,7 +573,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Mukautetut sovellusasetukset, jotka voivat liittyä asiaan"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Ei tarpeeksi hyödyllinen"
@@ -560,37 +590,37 @@ msgstr ""
 "hyödyllisiä.\n"
 "Ellet keksi muuta, virheilmoitusikkunan voi sulkea."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Kehittäjätiedot"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Asenna virheenpaikannussymbolit"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "Asenna puuttuvat virheenpaikannussymbolipaketit napsauttamalla tätä."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Ilmoita osoitteeseen %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Käynnistää vikailmoitusavustajan."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Lataa uudelleen"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -603,23 +633,23 @@ msgstr ""
 "kun oikeat virheenpaikannussymbolipaketit on asennettu ja haluat paremman "
 "pinolistauksen."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopioi"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "Kopioi kaatumistiedot (pinolistaus) leikepöydälle tällä painikkeella."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Tallenna"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -628,7 +658,7 @@ msgstr ""
 "Tallenna kaatumistiedot (pinolistaus) tiedostoon tällä painikkeella. Tästä "
 "on hyötyä, jos haluat tarkastella tietoja tai ilmoittaa viasta myöhemmin."
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -637,17 +667,17 @@ msgstr ""
 "Tämä pinolistaus on hyvin rajallinen, koska muisti ei riittänyt täyteen "
 "listaukseen. Voit kokeilla sulkea joitakin sovelluksia ja yrittää uudelleen."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Yritä uudelleen"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Virhe virheenpaikannussymbolien asennuksessa"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -666,7 +696,7 @@ msgstr ""
 "Asennettuasi tarpeelliset paketit (<link url='%2'>luettelo</link>) napsauta "
 "<interface>Lataa uudelleen</interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -679,7 +709,7 @@ msgstr ""
 "Asennettuasi tarpeelliset paketit (<link url='%2'>luettelo</link>) napsauta "
 "<interface>Lataa uudelleen</interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -691,13 +721,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>Asenna ensin virheenpaikannussovellus (%1) ja "
 "napsauta sitten <interface>Lataa uudelleen</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -709,7 +746,7 @@ msgstr ""
 "interface>."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -794,7 +831,7 @@ msgstr ""
 "Kirjaudu KDE:n vianseurantajärjestelmään annetulla sähköpostiosoitteella ja "
 "salasanalla napsauttamalla tätä."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -803,7 +840,7 @@ msgstr ""
 "<para>Tästä viasta ei voi ilmoittaa, koska <application>%1</application> ei "
 "tarjoa vikailmoitusosoitetta.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -821,7 +858,7 @@ msgstr ""
 "vianseurantajärjestelmään. Älä unohda sisällyttää pinolistausta\n"
 "<interface>Kehitystiedot</interface>-välilehdeltä.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -835,7 +872,7 @@ msgstr ""
 "sisällyttää <interface>Kehitystiedot</interface>-välilehdeltä pinolistaus).</"
 "para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -854,7 +891,7 @@ msgstr ""
 "takaisin sisään, jotta päivitykset tulisivat\n"
 "sivuvaikutuksitta täysin voimaan.</para>"
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -863,7 +900,7 @@ msgstr ""
 "<para>Voit auttaa meitä parantamaan KDE:tä ilmoittamalla tästä viasta.<nl /"
 "><link url='%1'>Lisätietoa vikojen ilmoittamisesta.</link></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -872,7 +909,21 @@ msgstr ""
 "Muisti ei riitä kaatumistiedon keräämiseksi. Kokeile vapauttaa muistia "
 "sulkemalla joitakin sovelluksia ja yritä uudelleen."
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"Tuntemattomasta syystä kaatumistiedon kerääminen epäonnistui. Voit yrittää "
+"uudelleen, sulkea ikkunan tai <link url='%1'>katsoa tarkat tiedot</link>."
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -881,7 +932,7 @@ msgstr ""
 "Tuntemattomasta syystä kaatumistiedon kerääminen epäonnistui. Voit yrittää "
 "uudelleen, sulkea ikkunan tai <link url='%1'>katsoa tarkat tiedot</link>."
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

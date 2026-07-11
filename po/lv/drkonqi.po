@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2026-03-04 17:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -43,6 +43,36 @@ msgid ""
 msgstr ""
 "<placeholder>Sīki aprakstiet, ko darījāt, pirms programma avarēja.</"
 "placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -531,7 +561,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Pielāgoti programmas iestatījumi, kam varētu būt nozīme"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Nav pietiekami lietderīgi"
@@ -548,38 +578,38 @@ msgstr ""
 "Ja nevarat iedomāties papildu informāciju, ko varat sniegt, aizveriet "
 "ziņošanas par kļūdu logu."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informācija izstrādātājiem"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Instalēt atkļūdošanas simbolus"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "Izmantojiet šo pogu, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Ziņot %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Palaiž kļūdu ziņošanas palīgu."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Pārlādēt"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -592,24 +622,24 @@ msgstr ""
 "ir instalētas atbilstošas atkļūdošanas simbolu pakotnes un vēlaties saņemt "
 "labāku atpakaļceļu."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopēt"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
 "Spiediet, lai kopētu starpliktuvē informāciju par avāriju (atpakaļceļu)."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Saglabāt"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -618,7 +648,7 @@ msgstr ""
 "Spiediet, lai informāciju par avāriju (atpakaļceļu) saglabātu datnē. "
 "Noderīgi, ja vēlaties šo informāciju apskatīt vai ziņot par kļūdu vēlāk."
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -628,17 +658,17 @@ msgstr ""
 "atpakaļceļu. Varat aizvērt kādu atvērto programmu (vai vairākas) un mēģināt "
 "vēlreiz."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Mēģināt vēlreiz"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Kļūda, instalējot atkļūdošanas simbolus"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -656,7 +686,7 @@ msgstr ""
 "vajadzīgās pakotnes (<link url='%2'>datņu saraksts</link>) un klikšķiniet "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -670,7 +700,7 @@ msgstr ""
 "(<link url='%2'>datņu saraksts</link>) un klikšķiniet uz "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -682,13 +712,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>Vispirms instalējiet atkļūdošanas programmu („%1“), "
 "bet pēc tam spiediet uz <interface>Pārlādēt</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -699,7 +736,7 @@ msgstr ""
 "atpakaļceļu, klikšķinot uz <interface>Pārlādēt</interface> pogas."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -784,7 +821,7 @@ msgstr ""
 "Spiediet, lai ierakstītos KDE kļūdu uzskaites sistēmā, izmantojot piedāvāto "
 "e-pasta adresi un paroli."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -793,7 +830,7 @@ msgstr ""
 "<para>Par šo kļūdu nevarat ziņot, jo <application>%1</application> programmā "
 "nav norādīta kļūdu ziņošanas adrese.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -812,7 +849,7 @@ msgstr ""
 "Neaizmirstiet iekļaut atpakaļceļu no\n"
 "<interface>Informācija izstrādātājiem</interface> lapas.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -825,7 +862,7 @@ msgstr ""
 "Varat pašrocīgi ziņot par šo kļūdu uz <link>%1</link> (ieskaitot atpakaļceļu "
 "no <interface>Informācija izstrādātājiem</interface>lapas.)</para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -844,7 +881,7 @@ msgstr ""
 "ierakstīties, lai visi atjauninājumi stātos spēkā un nerastos\n"
 "negaidīti blakus efekti.</para>"
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -853,7 +890,7 @@ msgstr ""
 "<para>Varat palīdzēt mums uzlabot KDE programmatūru, ziņojot par šo kļūdu."
 "<nl /><link url='%1'>Uzziniet vairāk par kļūdu ziņošanu.</link></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -862,7 +899,21 @@ msgstr ""
 "Pietrūk atmiņas informācijas par avāriju iegūšanai. Varat aizvērt kādu "
 "programmu (vai vairākas), lai atbrīvotu atmiņu, un mēģināt vēlreiz."
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"Avārijas informācijas iegūšana neizdevās nezināmu iemeslu dēļ. Varat mēģināt "
+"vēlreiz, aizvērt šo logu vai <link url='%1'>aplūkot sīkāku izvadi</link>."
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -871,7 +922,7 @@ msgstr ""
 "Avārijas informācijas iegūšana neizdevās nezināmu iemeslu dēļ. Varat mēģināt "
 "vēlreiz, aizvērt šo logu vai <link url='%1'>aplūkot sīkāku izvadi</link>."
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

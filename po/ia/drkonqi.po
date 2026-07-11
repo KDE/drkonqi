@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2026-02-05 18:40+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -36,6 +36,36 @@ msgid ""
 msgstr ""
 "<placeholder>In detalio, tu dice nos cosa tu esseva facente quando le "
 "application fracassava.</placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -533,7 +563,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Preferentias personalisate del application que pote esser referite"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Non assatis utile"
@@ -551,38 +581,38 @@ msgstr ""
 " Si tu non pote pensar a altere information tu pote clauder le dialogo de  "
 "reporto de bug (falta).</para>"
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Information del Developpator"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Installa Symbolos de Cribrar"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "Usa iste button pro installar le pacchettos del symbolos de cribrar mancante."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Reporta a %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "On initia le assistente de reporto de bug."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Recarga"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -595,12 +625,12 @@ msgstr ""
 " tu ha installate le proprie pacchettos de symbolo de cribrar e que tu vole  "
 "obtener un melior retraciamento."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Copia"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
@@ -608,12 +638,12 @@ msgstr ""
 "Usa iste button pro copiar le information de fracasso (retraciamento) al le "
 "area de transferentia."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salveguarda"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -623,7 +653,7 @@ msgstr ""
 "retro) a un file. Isto es utile si tu vole guardar illo o reportar le bug "
 "plus tarde."
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -633,17 +663,17 @@ msgstr ""
 "disponibile per generare un retraciamento plen. Tu pote clauder alcun "
 "applicationes e essayar novemente."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Prova novemente"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Error durante le installation de symbolos de cribrar"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -661,7 +691,7 @@ msgstr ""
 "retraciamento, installar le pacchettos necessari (<link url='%2'>lista de "
 "files</link>) post pulsa le button <interface>Recarga</interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -674,7 +704,7 @@ msgstr ""
 "(<link url='%2'>lista de files</link>) post  pulsa le button "
 "<interface>Recarga </interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -686,13 +716,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>Prime tu installa le application (%1), post  pulsa "
 "le button de <interface>Recarga</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -704,7 +741,7 @@ msgstr ""
 "<interface> Recarga</interface>."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -791,7 +828,7 @@ msgstr ""
 "Usa iste button pro acceder al systema de tracia de bug de KDE, con le uso "
 "de adresse de e-posta e contrasigno fornite."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -800,7 +837,7 @@ msgstr ""
 "<para>Tu non pote reportar iste error, proque <application>%1</application> "
 "non forni un adresse pro reportar bug.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -819,7 +856,7 @@ msgstr ""
 " te a includer un retraciamento ex pagina\n"
 " <interface>Information de disveloppator</interface>.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -833,7 +870,7 @@ msgstr ""
 "retraciamento  ab  le pagina <interface>Information de Disveloppator</"
 "interface>.)</para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -852,7 +889,7 @@ msgstr ""
 " session e reaperir session per assecurar que le actualisation es\n"
 " completemente applicate e non causara ulle effectos lateral.</para>"
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -862,7 +899,7 @@ msgstr ""
 "error. <nl /><link url='%1'>. Apprende plus super reportar bugs.</link></"
 "para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -871,7 +908,22 @@ msgstr ""
 "Il no habeva assatis memoria per colliger information de fracasso.  Tu pote "
 "clauder alcun applicationes per liberar memoria e essayar novemente."
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"Colliger information de fracasso falleva per motivationes incognite. Tu "
+"pote  provar novemente, clauder le fenestra, o vider exito <link "
+"url='%1'>detaliate</link>."
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -881,7 +933,7 @@ msgstr ""
 "pote  provar novemente, clauder le fenestra, o vider exito <link "
 "url='%1'>detaliate</link>."
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

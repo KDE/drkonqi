@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 14:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -42,6 +42,36 @@ msgid ""
 msgstr ""
 "<placeholder>செயலி முறிவடைந்தபோது என்ன செய்துக்கொண்டிருந்தீர்கள் (விவரமாக)?</"
 "placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -525,7 +555,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "தொடர்புடையவையாய் இருக்கக்கூடிய இச்செயலியின் தனிப்பட்ட அமைப்புகள்"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "இதனால் எந்த பயனும் இல்லை"
@@ -541,37 +571,37 @@ msgstr ""
 "பிழையை கண்டறிவதற்கு நீங்கள் கொடுத்த விவரங்கள் போதியவையாய் தெரியவில்லை.\n"
 "மேலும் விவரங்களை வழங்க முடியாத பட்சத்தில், இச்சாளரத்தை நீங்கள் மூடலாம்."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "நிரலாளர்களுக்கான விவரங்கள்"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "பிழைநீக்க குறியீடுகளை நிறுவு"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "தேவையான பிழைநீக்க குறியீட்டுத் தொகுப்புகளை நிறுவ இப்பட்டனைப் பயன்படுத்தவும்"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "%1 தனில் தெரிவி"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "பிழையறிக்கை உதவிநிரலைத் துவக்கும்."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "மீளேற்று"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -582,12 +612,12 @@ msgstr ""
 "முறிவுகுறித்த விவரங்களை (backtrace-ஐ) மீளேற்ற இப்பட்டனை பயன்படுத்தலாம். பிழைநீக்க\n"
 "தொகுப்புகளை நிறுவியபின் இன்னும் நல்ல backtrace-ஐ உருவாக்க வேண்டுமெனில் இது உதவும்."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "நகலெடு"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
@@ -595,12 +625,12 @@ msgstr ""
 "முறிவு குறித்த (backtrace) விவரங்களை பிடிப்புப்பலகைக்கு நகலெடுக்க இப்பட்டனைப் "
 "பயன்படுத்துங்கள்."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "சேமி"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -609,24 +639,24 @@ msgstr ""
 "முறிவு குறித்த (backtrace) விவரங்களை கோப்பில் சேமிக்க இப்பட்டனைப் பயன்படுத்துங்கள். "
 "இவ்விவரங்களை பின்னர் பார்க்கவோ பிழையறிக்கையை சமர்ப்பிக்கவோ இது உதவும்"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "மீண்டும் முயற்சி"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "பிழைநீக்க குறியீடுகளை நிறுவுவதில் சிக்கல்"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -638,7 +668,7 @@ msgid ""
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -647,7 +677,7 @@ msgid ""
 "interface> button."
 msgstr ""
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -659,13 +689,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>பிழைநீக்க நிரலை (%1) நிறுவி <interface>மீளேற்று</"
 "interface> எனும் பட்டனை அழுத்த வேண்டும்.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -681,7 +718,7 @@ msgstr ""
 "சேகரிக்க முயற்சிக்கலாம்."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -755,7 +792,7 @@ msgstr ""
 "கொடுக்கப்பட்டுள்ள மின்னஞ்சல் முகவரி மற்றும் கடவுச்சொல்லைக் கொண்டு கே.டீ.யீ. பிழையறிக்கை "
 "சேவையில் நுழைய இப்பட்டனை அழுத்தவும்."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -764,7 +801,7 @@ msgstr ""
 "<para><application>%1</application> பிழையறிக்கைகளுக்கான முகவரிகளை வழங்காத‍தால் "
 "இச்சிக்கலைத் தெரிவிக்க முடியாது.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -783,7 +820,7 @@ msgstr ""
 "எனும் கீற்றிலுள்ள விவரங்களை உங்கள் பிழையறிக்கையில்\n"
 "சேர்க்கவும்.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -792,7 +829,7 @@ msgid ""
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -804,7 +841,7 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -813,14 +850,29 @@ msgstr ""
 "<para>இச்சிக்கலை தெரிவிப்பதன் மூலம் கே.டீ.யீ. மென்பொருட்களை மேம்படுத்த நீங்கள் உதவலாம்.<nl /"
 "><link url='%1'>பிழையறிக்கைகளைப் பற்றிய மேலும் விவரங்கள்.</link></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"தெரியாத காரணத்தால் முறிவுகுறித்த விவரங்களை சேகரிப்பது தோல்வியடைந்தது. மீண்டும் "
+"முயற்சிக்கலாம், சாளரத்தை மூடலாம், அல்லது  <link url='%1'>கூடுதல் விவரங்களைக் காணலாம்</"
+"link>."
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -830,7 +882,7 @@ msgstr ""
 "முயற்சிக்கலாம், சாளரத்தை மூடலாம், அல்லது  <link url='%1'>கூடுதல் விவரங்களைக் காணலாம்</"
 "link>."
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

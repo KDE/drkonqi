@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2026-05-25 18:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,6 +38,36 @@ msgid ""
 "<placeholder>In detail, tell us what you were doing  when the application "
 "crashed.</placeholder>"
 msgstr "<placeholder>앱이 충돌할 때 무엇을 했는지 알려 주십시오.</placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -522,7 +552,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "연관될 수도 있는 사용자 정의 설정"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "충분히 유용하지 않음"
@@ -538,37 +568,37 @@ msgstr ""
 "이 경우에 대해서는 제공한 정보가 유용하지 않습니다.\n"
 "더 많은 정보를 제공할 수 없으면 버그 보고 대화 상자를 닫아도 됩니다."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "개발자 정보"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "디버그 기호 설치"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "이 단추를 클릭하면 빠진 디버그 기호를 설치합니다."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "%1에 보고"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "버그 보고 도우미를 시작합니다."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "새로 고침"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -579,23 +609,23 @@ msgstr ""
 "이 단추를 클릭하면 충돌 정보(역추적)를 다시 불러옵니다. 올바른 디버그 기호\n"
 "패키지를 설치한 다음 더 나은 역추적을 얻을 때 유용합니다."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "복사"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr "이 단추를 클릭하면 충돌 정보(역추적)를 클립보드에 복사합니다."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "저장"
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -604,7 +634,7 @@ msgstr ""
 "이 단추를 클릭하면 충돌 정보(역추적)를 파일로 저장합니다. 버그를 확인하고 싶"
 "거나 나중에 보고하고 싶을 때 사용하십시오."
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -613,17 +643,17 @@ msgstr ""
 "전체 역추적을 생성하기에 메모리가 부족하여 생성된 역추적이 매우 제한적입니"
 "다. 일부 앱을 끝내고 다시 시도하십시오."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "다시 시도"
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "디버그 기호 설치 중 오류 발생"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -641,7 +671,7 @@ msgstr ""
 "필요한 패키지를 모두 설치한 다음 (<link url='%2'>파일 목록</link>) "
 "<interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -653,7 +683,7 @@ msgstr ""
 "는 방법을 읽어 보십시오. 필요한 패키지를 모두 설치한 다음 (<link url='%2'>파"
 "일 목록</link>) <interface>새로 고침</interface> 단추를 클릭하십시오."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -665,13 +695,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>디버거 앱(%1)을 설치한 다음 <interface>새로 고침</"
 "interface> 단추를 클릭하십시오.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -682,7 +719,7 @@ msgstr ""
 "interface> 단추를 클릭하여 역추적 생성을 다시 시도할 수 있습니다."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -762,7 +799,7 @@ msgid ""
 msgstr ""
 "입력한 이메일 주소와 암호로 KDE 버그 추적 시스템에 로그인하려면 클릭하십시오."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 msgctxt "@info"
 msgid ""
 "<para>You cannot report this error, because <application>%1</application> "
@@ -771,7 +808,7 @@ msgstr ""
 "<para><application>%1</application> 앱의 버그를 보고하는 방법을 지정하지 않았"
 "기 때문에 버그를 보고할 수 없습니다.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -789,7 +826,7 @@ msgstr ""
 "보고해 주십시오. <interface>개발자 정보</interface> 페이지의\n"
 "역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -802,7 +839,7 @@ msgstr ""
 "%1(으)로 이 버그를 수동으로 보고할 수 있습니다. <interface>개발자 정보</"
 "interface> 페이지의 역추적 정보를 같이 보고해 주십시오.</para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -821,7 +858,7 @@ msgstr ""
 "업데이트가 완전히 적용되게 하는 것을 추천합니다. 또한 부작용이\n"
 "발생하지 않습니다.</para>"
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error.<nl /"
@@ -830,7 +867,7 @@ msgstr ""
 "<para>이 오류를 보고하여 KDE 소프트웨어를 개선하는 데 도움을 줄 수 있습니다."
 "<nl /><link url='%1'>버그 보고에 대하여 더 알아보십시오.</link></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -839,7 +876,21 @@ msgstr ""
 "충돌 정보를 수집하기에 메모리가 부족합니다. 일부 앱을 끝낸 후 다시 시도하십시"
 "오."
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"알 수 없는 이유로 충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나, 다시 시도"
+"하거나, <link url='%1'>자세한 출력을 볼 수</link> 있습니다."
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -848,7 +899,7 @@ msgstr ""
 "알 수 없는 이유로 충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나, 다시 시도"
 "하거나, <link url='%1'>자세한 출력을 볼 수</link> 있습니다."
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

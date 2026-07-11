@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2010-07-19 10:20+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -37,6 +37,36 @@ msgid ""
 msgstr ""
 "<placeholder>Yn detail, fertel ús wat jo oan it dwaan wienen doe't dit "
 "programma ferûngelokke.</placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -608,7 +638,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Oanpaste ynstllings fan de applikaasje dat der ta dwaan kinne"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -628,7 +658,7 @@ msgid ""
 msgstr ""
 "De ynformaasje dy't jo ferskaffe kinne, wurdt no net as helpfol sjoen ."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -636,7 +666,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Un&twikkelders ynformaasje"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -644,7 +674,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Utbrek symboalen &ynstallearje"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Use this button to install the missing debug symbols packages."
@@ -653,7 +683,7 @@ msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "Brûk dizze knop om de missende útbrek symboal pakketten te ynstallearjen."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -661,12 +691,12 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Rapportearje oan %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Lit de brekrapport assistint úteinsette."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -674,7 +704,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "Op 'e nij &lade"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -692,12 +722,12 @@ msgstr ""
 "Dit kin brûkber wêze as jo de juste útbrek symboal pakketten ynstallearre ha "
 "en jo in better trochslach gripe wolle."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr ""
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
@@ -705,12 +735,12 @@ msgstr ""
 "Brûk dizze knop om de ûngelok ynformaasje (trochslach) te kopiearjen nei it "
 "klamboerd."
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -720,14 +750,14 @@ msgstr ""
 "skriuwen. Dit kin brûkber wêze as jo letter der nochris nei sjen of "
 "rapportearje wolle."
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Retry..."
@@ -735,12 +765,12 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Op 'e nij besykje..."
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "Flater ûnder it ynstallearjen fan útbrek symboalen"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -767,7 +797,7 @@ msgstr ""
 "ynstallearje nedige pakketten (<link url='%2'>list of files</link>) en klik "
 "op de <interface>op 'e nij lade</interface> knop."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -787,7 +817,7 @@ msgstr ""
 "pakketten  (<link url='%2'>list of files</link>) en klik op de <interface>Op "
 "'e nij lade</interface> knop."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -802,6 +832,13 @@ msgstr ""
 "de <interface>Op 'e nij lade</interface> knop."
 
 #: qml/DeveloperPage.qml:237
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -815,7 +852,7 @@ msgstr ""
 "Jo moatte de útbrek pakketten (%1) ynstallearje en klikke op de "
 "<interface>Op 'e nij lade</interface> knop."
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -831,7 +868,7 @@ msgstr ""
 "de <interface>Op 'e nij lade</interface> knop."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -926,7 +963,7 @@ msgstr ""
 "Brûk dizze knop om mei it ferskafte brûkersnamme en wachtwurd yn it KDE brek-"
 "folch-systeem yn te loggen."
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -940,7 +977,7 @@ msgstr ""
 "<para>Jo kinne dizze flater net rapporteaje, omdat it programma net in "
 "brekrapportear adres hat.</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -965,7 +1002,7 @@ msgstr ""
 "%1. Ferjit net om in trochslach der by te dwaan fan de Untwikkelders "
 "ynformaasje ljepper.</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -984,7 +1021,7 @@ msgstr ""
 "oan %1 (ynklusyf de trochslach fan de ûntwikkelders ynformaasje ljepper.)</"
 "para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -996,7 +1033,7 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1014,21 +1051,28 @@ msgstr ""
 "rapportearjen fan in brek.</link></para><para><note>It is feilich om dit "
 "skerm te sluten as jo dizze brek net rapportearje wolle.</note></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "

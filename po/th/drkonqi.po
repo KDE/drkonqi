@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-04 00:45+0000\n"
+"POT-Creation-Date: 2026-07-11 00:45+0000\n"
 "PO-Revision-Date: 2010-12-18 08:01+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -39,6 +39,36 @@ msgid ""
 "crashed.</placeholder>"
 msgstr ""
 "<placeholder>โปรดแจ้งว่าคุณได้ทำอะไรบ้างเมื่อโปรแกรมขัดข้องแล้วอย่างละเอียด</placeholder>"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -610,7 +640,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "การตั้งค่าต่าง ๆ ของโปรแกรมด้วยตนเอง ซึ่งอาจจะเกี่ยวพันกับข้อขัดข้อง"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -629,7 +659,7 @@ msgid ""
 "dialog."
 msgstr "ข้อมูลรายละเอียดที่คุณสามารถให้ได้สามารถถูกพิจารณาว่าไม่มีประโยชน์เพียงพอ"
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -637,7 +667,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "&ข้อมูลสำหรับนักพัฒนา"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -645,7 +675,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&ติดตั้งสัญลักษณ์ต่าง ๆ สำหรับดีบั๊ก"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Use this button to install the missing debug symbols packages."
@@ -653,7 +683,7 @@ msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "ใช้ปุ่มนี้เพื่อทำการติดตั้งแพกเกจสำหรับทำการดีบั๊กเชิงสัญลักษณ์"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -661,12 +691,12 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "แจ้งรายงานไปยัง %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "เริ่มตัวช่วยรายงานข้อผิดพลาด"
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -674,7 +704,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "โ&หลดใหม่อีกครั้ง"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -692,26 +722,26 @@ msgstr ""
 "ซึ่งจะมีประโยชน์หากคุณได้ทำการติดตั้งแพกเกจสำหรับการดีบั๊กเชิงสัญลักษณ์แล้ว "
 "และคุณต้องการจะให้มีการติดตามการทำงานย้อนกลับที่ดีกว่าเดิม"
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "คั&ดลอก"
 
-#: qml/DeveloperPage.qml:72
+#: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to copy the crash information (backtrace) to the clipboard."
 msgstr ""
 "ใช้ปุ่มนี้เพื่อทำการคัดลอกข้อมูลรายละเอียดของข้อขัดข้อง (การติดตามย้อนกลับ) ไปไว้ยังคลิปบอร์ด"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:81
+#: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information (backtrace) to a file. This is "
@@ -720,14 +750,14 @@ msgstr ""
 "ใช้ปุ่มนี้เพื่อทำการคัดลอกข้อมูลรายละเอียดของข้อขัดข้อง (การติดตามย้อนกลับ) ไปเก็บไว้เป็นแฟ้ม "
 "ซึ่งจะมีประโยชน์หากคุณต้องการจะดูมันอีกครั้ง หรือใช้ในการแจ้งรายงานข้อผิดพลาดในภายหลัง"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/main.qml:121
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Retry..."
@@ -735,12 +765,12 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ลองใหม่..."
 
-#: qml/DeveloperPage.qml:127
+#: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
 msgid "Error during the installation of debug symbols"
 msgstr "เกิดข้อผิดพลาดขึ้นระหว่างทำการติดตั้งสัญลักษณ์การดีบั๊ก"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -767,7 +797,7 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -787,7 +817,7 @@ msgstr ""
 "(<link url='%2'>รายการแฟ้มต่าง ๆ</link>) แล้วคลิกที่ปุม <interface>โหลดใหม่อีกครั้ง</"
 "interface>"
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -802,6 +832,13 @@ msgstr ""
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
 #: qml/DeveloperPage.qml:237
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -815,7 +852,7 @@ msgstr ""
 "คุณจำเป็นต้องทำการติดตั้งแพกเกจเครื่องมือดีบั๊ก (%1) ก่อน แล้วคลิกที่ปุ่ม "
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -831,7 +868,7 @@ msgstr ""
 "<interface>โหลดใหม่อีกคร้ง</interface>"
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: qml/DeveloperPage.qml:265
+#: qml/DeveloperPage.qml:269
 msgid ""
 "The packages containing debug information for the following application and "
 "libraries are missing:"
@@ -923,7 +960,7 @@ msgid ""
 "email address and password."
 msgstr "ใช้ปุ่มนี้เพื่อทำการล็อกอินไปยังระบบติดตามข้อผิดพลาดของ KDE โดยต้องป้อนชื่อผู้ใช้และรหัสผ่าน"
 
-#: qml/main.qml:26
+#: qml/main.qml:27
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -937,7 +974,7 @@ msgstr ""
 "<para>คุณไม่สามารถจะรายงานข้อผิดพลาดนี้ได้ เนื่องจากตัวโปรแกรม "
 "ไม่ได้ให้ที่อยู่ในการแจ้งข้อผิดพลาดมาด้วย</para>"
 
-#: qml/main.qml:33
+#: qml/main.qml:34
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -961,7 +998,7 @@ msgstr ""
 "><nl /> โปรดทำการรายงานข้อผิดพลาดนี้ว่า \"drkonqi\" ทำงานผิดพลาดด้วยตัวคุณเอง ไปยัง %1 "
 "และอย่างลืมรวบรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย</para>"
 
-#: qml/main.qml:45
+#: qml/main.qml:46
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -980,7 +1017,7 @@ msgstr ""
 ">คุณสามารถรายงานข้อผิดพลาดนี้ด้วยตัวคุณเอง ไปยัง %1 "
 "(โดยรวมข้อมูลการทำงานย้อนกลับที่อยู่ในแท็บข้อมูลสำหรับนักพัฒนาด้วย)</para>"
 
-#: qml/main.qml:52
+#: qml/main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -992,7 +1029,7 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:64
+#: qml/main.qml:65
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -1011,21 +1048,28 @@ msgstr ""
 "para><para><note>คุณสามารถปิดกล่องแจ้งรายงานนี้ได้อย่างปลอดภัย "
 "หากคุณไม่ต้องการจะแจ้งรายงานข้อผิดพลาดนี้</note></para>"
 
-#: qml/main.qml:93
+#: qml/main.qml:94
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
 
-#: qml/main.qml:98
+#: qml/main.qml:100
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/main.qml:105
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 
-#: qml/main.qml:101
+#: qml/main.qml:108
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
