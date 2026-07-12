@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1741105 2026-07-11 01:27:58Z scripty $
+# $Id: drkonqi.po 1741180 2026-07-12 01:27:35Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-04 13:17+0200\n"
+"PO-Revision-Date: 2026-07-11 09:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -55,31 +55,31 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Neuspelo ustvarjanje osrednjega imenika: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Neuspelo odpiranje osrednje datoteke: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Datoteka coredump ne obstaja: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Postopek ekstrakcije osnovne datoteke ni uspel s kodo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Postopek ekstrakcije povišane osnovne datoteke ni uspel: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -731,6 +731,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Priprava generiranja povratne sledi ni uspela. To kaže na resno težavo, ki "
+"je verjetno ne morete odpraviti."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -919,19 +921,13 @@ msgstr ""
 "aplikacije lahko zaprete, da sprostite pomnilnik, in poskusite znova."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Zbiranje informacij o sesutju ni uspelo iz neznanih razlogov. Lahko "
-"poskusite znova, zaprete okno ali si <link url='%1'>ogledate podroben "
-"rezultat</link>."
+"Zbiranje informacij o sesutju ni uspelo. Okno lahko zaprete ali si <link "
+"url='%1'>ogledate podroben izpis</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"

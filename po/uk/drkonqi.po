@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-04 09:40+0300\n"
+"PO-Revision-Date: 2026-07-11 13:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -50,31 +50,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Не вдалося створити каталог ядра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Не вдалося відкрити файл ядра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Файла дампу ядра не існує: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Помилка у процесі видобування даних з файла ядра, код: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
+"Помилка процесу видобування даних з файла ядра з підвищеними привілеями: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -737,6 +738,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Не вдалося підготувати процедуру створення даних зворотного трасування. Це "
+"вказує на серйозну проблему, яку, ймовірно, вам не вдасться розв'язати."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -928,19 +931,13 @@ msgstr ""
 "спробу."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Не вдалося зібрати дані щодо аварії з незрозумілих причин. Ви можете "
-"повторити спробу, закрити вікно або  <link url='%1'>переглянути докладні "
-"повідомлення</link>."
+"Не вдалося зібрати дані щодо аварії. Ви можете закрити вікно або  <link "
+"url='%1'>переглянути докладні повідомлення</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"

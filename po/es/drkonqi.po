@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-04 23:51+0100\n"
+"PO-Revision-Date: 2026-07-11 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -56,31 +56,35 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "No se ha podido crear el directorio de volcados del núcleo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "No se ha podido abrir el archivo de volcado del núcleo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "El archivo de volcado del núcleo no existe: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
 msgstr ""
+"El proceso de extracción del archivo de volcado del núcleo ha fallado con el "
+"código: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
+"El proceso de extracción del archivo de volcado del núcleo con privilegios "
+"elevados ha fallado: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -738,6 +742,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Ha fallado la preparación de la generación de la traza inversa. Esto indica "
+"un problema grave que probablemente no podrá resolver."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -929,19 +935,13 @@ msgstr ""
 "cerrar algunas aplicaciones para liberar memoria y volver a intentarlo."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"La recopilación de información sobre el fallo no se ha podido completar por "
-"motivos desconocidos. Puede volver a intentarlo, cerrar la ventana o <link "
-"url='%1'>ver la salida detallada</link>."
+"La recopilación de información sobre el fallo no se ha podido completar. "
+"Puede cerrar la ventana o <link url='%1'>ver la salida detallada</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"

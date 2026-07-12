@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-09 10:51+0200\n"
+"PO-Revision-Date: 2026-07-11 11:06+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -44,31 +44,31 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Nepodařilo se vytvořit adresář jádra: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Nepodařilo se otevřít soubor jádra: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Soubor coredump neexistuje: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Proces extrakce souboru jádra selhal s kódem: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Proces zvýšené extrakce souboru jádra selhal: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -713,6 +713,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Příprava záznamu backtrace selhala. To naznačuje závažný problém, který "
+"pravděpodobně nebudete schopni vyřešit."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -898,18 +900,13 @@ msgstr ""
 "aplikace, abyste uvolnili paměť, a zkusit to znovu."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Z neznámých důvodů se nepodařilo shromáždit informace o pádu. Můžete to "
-"zkusit znovu, zavřít okno nebo <link url='%1'>zobrazit podrobný výpis</link>."
+"Načtení informací o pádu se nezdařilo. Můžete okno zavřít nebo <link "
+"url='%1'>zobrazit podrobný výpis</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"
