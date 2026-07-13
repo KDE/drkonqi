@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-07 09:02+0300\n"
+"PO-Revision-Date: 2026-07-12 18:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -56,31 +56,31 @@ msgstr "<placeholder>נא לספר לנו מה עשית כשהיישום קרס,
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "יצירת תיקיית ליבה נכשלה: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "פתיחת קובץ הליבה נכשלה: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "קובץ היטל הליבה לא קיים: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "תהליך חילוץ קובץ הליבה נכשל עם הקוד: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "תהליך חילוץ קובץ הליבה עם הרשאות גבוהות יותר נכשל: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -712,6 +712,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"ההכנות ליצירת השתלשלות האירועים נכשלו. הבעיה הזאת מעידה על תקלה חמורה שכנראה "
+"אין לך איך לפתור."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -888,18 +890,13 @@ msgstr ""
 "לפנות זיכרון ולנסות שוב."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"איסוף פרטי הקריסה נכשל מסיבות לא ברורות. אפשר לנסות שוב או לסגור את החלון או "
-"<link url='%1'>לצפות בפלט המפורט</link>."
+"איסוף פרטי הקריסה נכשל מסיבות לא ברורות. אפשר לסגור את החלון או <link "
+"url='%1'>לצפות בפלט המפורט</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"
