@@ -9,7 +9,7 @@
 
 #include <QString>
 
-class QWidget;
+class QWindow;
 
 class SystemInformation;
 class DebuggerManager;
@@ -25,7 +25,7 @@ public:
     static DebuggerManager *debuggerManager();
     static CrashedApplication *crashedApplication();
 
-    static void saveReport(const QString &reportText, QWidget *parent = nullptr);
+    static void saveReport(const QString &reportText, QWindow *parent);
     static void setSignal(int signal);
     static void setAppName(const QString &appName);
     static void setAppPath(const QString &appPath);

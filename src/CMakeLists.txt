@@ -85,6 +85,7 @@ kconfig_add_kcfg_files(DrKonqiInternal GENERATE_MOC settings.kcfgc)
 target_link_libraries(
     DrKonqiInternal
     DrKonqiSentryInternal
+    KF6::GuiAddons
     KF6::I18n
     KF6::CoreAddons
     KF6::ConfigGui

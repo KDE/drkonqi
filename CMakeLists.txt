@@ -58,6 +58,7 @@ find_package(
     ${KF6_MIN_VERSION}
     REQUIRED
     COMPONENTS
+        GuiAddons
         I18n
         CoreAddons
         Config

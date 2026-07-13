@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QObject>
+#include <QWindow>
 
 #include "systeminformation.h"
 
@@ -21,7 +22,7 @@ class Doctore : public QObject
 public:
     using QObject::QObject;
 
-    static Q_INVOKABLE void saveReport(const QString &text);
+    static Q_INVOKABLE void saveReport(const QString &text, QWindow *parent);
     static Q_INVOKABLE void copyToClipboard(const QString &text);
     static Q_INVOKABLE QString appName();
     static Q_INVOKABLE QString kdeBugzillaURL();

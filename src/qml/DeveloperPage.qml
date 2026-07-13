@@ -81,7 +81,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             tooltip: xi18nc("@info:tooltip",
 `Use this button to save the crash information (backtrace) to a file. This is useful if you want to take a look at it or to report the bug later.`)
             enabled: BacktraceGenerator.state === BacktraceGenerator.Loaded
-            onTriggered: DrKonqi.saveReport(traceArea.text)
+            onTriggered: DrKonqi.saveReport(traceArea.text, page.QQC2.ApplicationWindow.window)
         }
     ]
 
