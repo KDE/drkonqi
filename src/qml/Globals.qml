@@ -2,9 +2,9 @@
 // SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
 pragma Singleton
-import QtQuick 2.6
+import QtQuick
 
-import org.kde.drkonqi 1.0
+import org.kde.drkonqi
 
 QtObject {
     readonly property string bugzillaUrl: DrKonqi.kdeBugzillaURL()
