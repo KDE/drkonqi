@@ -6,10 +6,14 @@
 #include <memory>
 
 #include <QAbstractListModel>
+#include <QQmlEngine>
 
 class PatientModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
 public:
     enum ItemRole {
         IndexRole = Qt::UserRole + 1,
@@ -17,7 +21,17 @@ public:
     };
     Q_ENUM(ItemRole)
 
-    explicit PatientModel(const QMetaObject &mo, QObject *parent = nullptr);
+    static PatientModel *instance()
+    {
+        static PatientModel _instance;
+        return &_instance;
+    }
+
+    static PatientModel *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+        return instance();
+    }
 
     [[nodiscard]] QHash<int, QByteArray> roleNames() const final;
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const final;
@@ -40,6 +54,7 @@ private:
     int initRoleNames(const QMetaObject &mo);
     void addDynamicRoleNames(int maxEnumValue, QObject *object);
     [[nodiscard]] QMetaMethod propertyChangedMetaMethod() const;
+    explicit PatientModel(QObject *parent = nullptr);
 
     QList<QObject *> m_objects;
     QHash<int, QByteArray> m_roles;

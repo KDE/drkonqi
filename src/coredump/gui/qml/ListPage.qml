@@ -7,7 +7,7 @@ import QtQuick.Layouts 1.15
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 
-import org.kde.drkonqi.coredump.gui 1.0 as DrKonqi
+import org.kde.drkonqi.coredump.gui as DrKonqi
 
 Kirigami.ScrollablePage {
     id: page
@@ -59,7 +59,7 @@ Kirigami.ScrollablePage {
             icon.name: modelObject.iconName
 
             width: ListView.view.width
-            onClicked: pageStack.push("qrc:/DetailsPage.qml", {patient: modelObject})
+            onClicked: pageStack.push(Qt.resolvedUrl("DetailsPage.qml"), {patient: modelObject})
 
             contentItem: Kirigami.IconTitleSubtitle {
                 title: delegate.text

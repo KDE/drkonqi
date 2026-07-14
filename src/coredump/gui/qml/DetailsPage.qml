@@ -8,7 +8,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import org.kde.syntaxhighlighting 1.0
 import org.kde.coreaddons
 
-import org.kde.drkonqi.coredump.gui 1.0 as DrKonqi
+import org.kde.drkonqi.coredump.gui as DrKonqi
 
 Kirigami.ScrollablePage {
     id: page

@@ -40,39 +40,26 @@ int main(int argc, char *argv[])
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    PatientModel model(Patient::staticMetaObject);
-    qmlRegisterSingletonInstance("org.kde.drkonqi.coredump.gui", 1, 0, "PatientModel", &model);
-    qmlRegisterType<DetailsLoader>("org.kde.drkonqi.coredump.gui", 1, 0, "DetailsLoader");
-
     KLocalizedContext i18nContext;
     i18nContext.setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(&i18nContext);
 
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreated,
-        &app,
-        [url](QObject *obj, const QUrl &objUrl) {
-            if (!obj && url == objUrl) {
-                qWarning() << "ABORT ABORT";
-                QCoreApplication::exit(-1);
-            }
-        },
-        Qt::QueuedConnection);
-    engine.load(url);
+    engine.loadFromModule("org.kde.drkonqi.coredump.gui", "Main");
+    if (engine.rootObjects().isEmpty()) {
+        return -1;
+    }
 
     auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
     Q_ASSERT(expectedJournal.ret == 0);
     Q_ASSERT(expectedJournal.value);
     CoredumpWatcher watcher(std::move(expectedJournal.value), {}, {}, nullptr);
-    QObject::connect(&watcher, &CoredumpWatcher::newDump, &model, [&](const Coredump &dump) {
-        model.addObject(std::make_unique<Patient>(dump));
+    QObject::connect(&watcher, &CoredumpWatcher::newDump, PatientModel::instance(), [&](const Coredump &dump) {
+        PatientModel::instance()->addObject(std::make_unique<Patient>(dump));
     });
-    QObject::connect(&watcher, &CoredumpWatcher::atLogEnd, &model, [&]() {
-        model.setReady(true);
+    QObject::connect(&watcher, &CoredumpWatcher::atLogEnd, PatientModel::instance(), [&]() {
+        PatientModel::instance()->setReady(true);
     });
     watcher.metaObject()->invokeMethod(&watcher, &CoredumpWatcher::start, Qt::QueuedConnection);
 

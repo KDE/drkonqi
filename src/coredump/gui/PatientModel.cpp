@@ -8,12 +8,14 @@
 #include <QDebug>
 #include <QMetaMethod>
 
+#include "Patient.h"
+
 using namespace std::chrono_literals;
 
-PatientModel::PatientModel(const QMetaObject &mo, QObject *parent)
+PatientModel::PatientModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    initRoleNames(mo);
+    initRoleNames(Patient::staticMetaObject);
 }
 
 QHash<int, QByteArray> PatientModel::roleNames() const
