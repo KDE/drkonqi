@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-05 10:01+0200\n"
+"PO-Revision-Date: 2026-07-12 09:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -65,31 +65,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Échec de la création du répertoire principal : %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Échec de l'ouverture du fichier principal : %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Le fichier « Coredump » n'existe pas : %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
 msgstr ""
+"Le processus d'extraction du fichier principal a échoué avec le code : %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Échec du processus d'extraction avancé du fichier principal : %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -757,6 +758,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"La génération de pile d'appels n'a pas réussi être préparée. Cela indique un "
+"problème grave que vous ne pourrez probablement pas résoudre."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -959,19 +962,13 @@ msgstr ""
 "mémoire et réessayer."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"La collecte d'informations sur le plantage a échoué pour des raisons "
-"inconnues. Vous pouvez réessayer ou fermer la fenêtre ou <link "
-"url='%1'>afficher la sortie avec les détails</link>."
+"La collecte d'informations sur le plantage a échoué. Vous pouvez fermer la "
+"fenêtre ou <link url='%1'>afficher la sortie avec les détails</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"

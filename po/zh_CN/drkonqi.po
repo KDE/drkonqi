@@ -39,31 +39,31 @@ msgstr "<placeholder>请详细告诉我们程序崩溃时您正在做什么。</
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "创建核心目录失败：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "打开核心文件失败：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "内核转储文件不存在：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "核心文件提取处理失败，错误代码： %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "提权的核心文件提取处理失败：%1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -688,7 +688,7 @@ msgctxt "@info/rich"
 msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
-msgstr ""
+msgstr "回溯跟踪数据生成准备失败。这表明您可能遇到了一个无法解决的严重问题。"
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -866,6 +866,8 @@ msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
+"收集崩溃信息失败。您可以关闭此窗口，也可以 <link url='%1'>查看详细输出</"
+"link>。"
 
 #: qml/main.qml:105
 msgctxt "@info"
