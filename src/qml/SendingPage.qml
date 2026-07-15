@@ -14,7 +14,7 @@ Kirigami.Page {
     Connections {
         target: reportInterface
         function onDone(number) {
-            pageStack.replace("qrc:/ui/SentPage.qml", {bugNumber: reportInterface.sentReport})
+            pageStack.replace(Qt.resolvedUrl("SentPage.qml"), {bugNumber: reportInterface.sentReport})
         }
         function onSendReportError(msg) {
             console.log("ERROR" + msg)

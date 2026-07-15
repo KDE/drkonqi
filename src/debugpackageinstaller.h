@@ -10,6 +10,7 @@
 
 #include <QObject>
 #include <QProcess>
+#include <qqmlintegration.h>
 
 class KProcess;
 class QProgressDialog;
@@ -17,6 +18,8 @@ class QProgressDialog;
 class DebugPackageInstaller : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(bool canInstallDebugPackages READ canInstallDebugPackages CONSTANT)
 
 public:

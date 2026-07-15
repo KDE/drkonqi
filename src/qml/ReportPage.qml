@@ -159,7 +159,7 @@ Kirigami.Page {
             Kirigami.Action {
                 icon.name: "preview"
                 text: i18nc("@action:button", "Preview Report")
-                onTriggered: pageStack.push("qrc:/ui/PreviewPage.qml")
+                onTriggered: pageStack.push(Qt.resolvedUrl("PreviewPage.qml"))
             }
         ]
     }

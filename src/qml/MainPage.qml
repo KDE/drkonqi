@@ -63,7 +63,7 @@ Kirigami.Page {
                 onTriggered: {
                     reportInterface.setSendWhenReady(true)
                     reportInterface.sendSentryReport()
-                    pageStack.push("qrc:/ui/SentryPage.qml")
+                    pageStack.push(Qt.resolvedUrl("SentryPage.qml"))
                 }
             }
         }
@@ -76,7 +76,7 @@ Kirigami.Page {
             action: Kirigami.Action {
                 icon.name: "code-class-symbolic"
                 text: i18nc("@action", "See Developer Information")
-                onTriggered: pageStack.push("qrc:/ui/DeveloperPage.qml")
+                onTriggered: pageStack.push(Qt.resolvedUrl("DeveloperPage.qml"))
             }
         }
 

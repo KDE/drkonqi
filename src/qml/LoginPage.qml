@@ -18,7 +18,7 @@ Kirigami.ScrollablePage {
     onLoggedInChanged: {
         console.log("logged in changed")
         if (loggedIn) {
-            pageStack.push('qrc:/ui/ReportPage.qml')
+            pageStack.push(Qt.resolvedUrl("ReportPage.qml"))
         }
     }
 

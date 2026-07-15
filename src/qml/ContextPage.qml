@@ -98,7 +98,7 @@ If you can't think of any more information, you can close the bug report dialog.
                 text: i18nc("@action:button", "Next")
                 onTriggered: {
                     if (reportInterface.isBugAwarenessPageDataUseful || DrKonqi.ignoreQuality()) {
-                        pageStack.push("qrc:/ui/BacktracePage.qml")
+                        pageStack.push(Qt.resolvedUrl("BacktracePage.qml"))
                         return
                     }
                     problemDialog.open()

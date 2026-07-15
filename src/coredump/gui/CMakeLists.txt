@@ -9,7 +9,12 @@ target_compile_definitions(drkonqi-coredump-gui
 target_link_libraries(drkonqi-coredump-gui PRIVATE
     DrKonqiInternal
     Qt::Quick
+    Qt::Widgets
     KF6::I18n
+    KF6::ConfigCore
+    KF6::CoreAddons
+    KF6::Service
+    KF6::KIOGui
     drkonqi-core
     drkonqi-coredump
     drkonqi-coredumpexcavator

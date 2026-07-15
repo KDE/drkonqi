@@ -44,7 +44,7 @@ to continue reporting this bug it is <emphasis strong='true'>required for you to
                 icon.name: "document-sign"
                 text: i18nc("@action:button", "I Agree to be Contacted")
                 onTriggered: {
-                    pageStack.push("qrc:/ui/ContextPage.qml")
+                    pageStack.push(Qt.resolvedUrl("ContextPage.qml"))
                 }
             }
         ]

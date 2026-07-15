@@ -50,7 +50,7 @@ Kirigami.ScrollablePage {
             icon.name: "story-editor-symbolic"
             text: i18nc("@action Report the bug on this domain", "Report on %1", Globals.bugzillaShortUrl)
             tooltip: canReportText !== "" ? canReportText : i18nc("@info:tooltip", "Starts the bug report assistant.")
-            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
+            onTriggered: pageStack.push(Qt.resolvedUrl("WelcomePage.qml"))
         },
 
         Kirigami.Action {
@@ -108,7 +108,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
 
             RatingItem {
                 id: ratingItem
-                failed: BacktraceGenerator.hasAnyFailure()
+                failed: BacktraceGenerator.hasAnyFailure
                 loading: BacktraceGenerator.state === BacktraceGenerator.Loading
             }
 

@@ -33,7 +33,7 @@ DeveloperPage {
             }
             icon.name: "go-next"
             text: i18nc("@action:button", "Next")
-            onTriggered: pageStack.push("qrc:/ui/BugzillaPage.qml")
+            onTriggered: pageStack.push(Qt.resolvedUrl("BugzillaPage.qml"))
         }
     ]
 }

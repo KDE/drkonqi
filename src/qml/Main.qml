@@ -130,6 +130,6 @@ any side effects.</para>`);
     pageStack.defaultColumnWidth: appWindow.width // show single page
 
     function goToSentry() {
-        pageStack.replace("qrc:/ui/SentryPage.qml")
+        pageStack.replace(Qt.resolvedUrl("SentryPage.qml"))
     }
 }

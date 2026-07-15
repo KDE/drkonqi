@@ -14,10 +14,13 @@
 
 #include <QFutureWatcher>
 #include <QProcess>
+#include <QQmlEngine>
 #include <QTemporaryFile>
 #include <QUrl>
 
 #include "debugger.h"
+#include "debuggermanager.h"
+#include "drkonqi.h"
 #include "systemd/memoryfence.h"
 
 class KProcess;
@@ -28,6 +31,8 @@ class QLockFile;
 class BacktraceGenerator : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
     Q_PROPERTY(bool hasAnyFailure READ hasAnyFailure NOTIFY stateChanged) // derives from state
@@ -46,6 +51,12 @@ public:
         MemoryPressure,
     };
     Q_ENUM(State)
+
+    static BacktraceGenerator *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(DrKonqi::debuggerManager()->backtraceGenerator(), QQmlEngine::CppOwnership);
+        return DrKonqi::debuggerManager()->backtraceGenerator();
+    }
 
     BacktraceGenerator(const Debugger &debugger, QObject *parent);
     ~BacktraceGenerator() override;

@@ -5,6 +5,7 @@
 
 #include <QObject>
 #include <QWindow>
+#include <qqmlintegration.h>
 
 #include <KWallet>
 
@@ -13,6 +14,8 @@
 class CredentialStore : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+
 public:
     using QObject::QObject;
 

@@ -19,7 +19,7 @@ Kirigami.Page {
         target: bugzilla
         function onBugzillaVersionFound() {
             pageStack.pop()
-            pageStack.push("qrc:/ui/LoginPage.qml")
+            pageStack.push(Qt.resolvedUrl("LoginPage.qml"))
         }
 
         function onBugzillaVersionError(error) {

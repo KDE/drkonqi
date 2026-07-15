@@ -37,7 +37,7 @@ Kirigami.ScrollablePage {
             Kirigami.Action {
                 icon.name: "submit"
                 text: i18nc("@action:button", "Submit")
-                onTriggered: pageStack.push("qrc:/ui/SendingPage.qml")
+                onTriggered: pageStack.push(Qt.resolvedUrl("SendingPage.qml"))
             }
         ]
     }
