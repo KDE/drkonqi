@@ -88,6 +88,7 @@ any side effects.</para>`);
     Component {
         id: warningComponent
         Kirigami.InlineMessage {
+            position: Kirigami.InlineMessage.Header
             readonly property string fakeUrl: "fake://open-details" // onLinkActivated sends a string, so we treat this as string!
             text: {
                 if (BacktraceGenerator.state === BacktraceGenerator.MemoryPressure) {
