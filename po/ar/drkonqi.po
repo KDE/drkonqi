@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-11 00:45+0000\n"
-"PO-Revision-Date: 2026-07-13 23:34+0400\n"
+"POT-Creation-Date: 2026-07-16 00:45+0000\n"
+"PO-Revision-Date: 2026-07-15 22:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,31 +55,31 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "فشل إنشاء دليل النواة: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "فشل فتح ملف النواة: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "ملف تفريغ النواة غير موجود: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "فشلت عملية استخراج ملف النواة بالرمز: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "فشلت عملية استخراج ملف النواة بصلاحيات مرتفعة: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -234,7 +234,7 @@ msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "لا يوجد انهيار متطابق مع البحث"
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:13
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "النظرة العامة"
@@ -709,6 +709,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"فشل تحضير توليد تتبع الاستدعاءات. يشير هذا إلى مشكلة خطيرة لا يمكنك حلها "
+"غالبًا."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -888,18 +890,13 @@ msgstr ""
 "مساحة، ثم المحاولة مرة أخرى."
 
 #: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"فشل جمع معلومات الانهيار لأسباب مجهولة. يمكنك إعادة المحاولة أو إغلاق "
-"النافذة أو <link url='%1'>رؤية الناتج بالتفصيل</link>."
+"فشل جمع معلومات الانهيار. يمكنك إغلاق النافذة، أو <link url='%1'>اعرض "
+"المخرجات المفصلة</link>."
 
 #: qml/main.qml:105
 msgctxt "@info"
