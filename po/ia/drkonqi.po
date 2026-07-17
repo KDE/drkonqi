@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:45+0000\n"
-"PO-Revision-Date: 2026-02-05 18:40+0100\n"
+"POT-Creation-Date: 2026-07-17 00:45+0000\n"
+"PO-Revision-Date: 2026-07-16 16:23+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,31 +41,31 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Il falleva a crear directorio de core (nucleo) :%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Falleva a aperir file de core (nucleo): %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "File de coredump non existe: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Processo de extraction de file de core falleva con codice: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Processo de extraction de file de nucleo (core) elevate ha fallite: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -327,25 +327,25 @@ msgstr ""
 "Un error occurreva durante le installation de pacchettos de symbolo de "
 "cribrar."
 
-#: drkonqi.cpp:146
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Reporto salvate a <filename>%1</filename>."
 
-#: drkonqi.cpp:148
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Il non poteva crear un file ubi salvar le reporto."
 
-#: drkonqi.cpp:155
+#: drkonqi.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Salveguarda reporto"
 
-#: drkonqi.cpp:185
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -663,7 +663,7 @@ msgstr ""
 "disponibile per generare un retraciamento plen. Tu pote clauder alcun "
 "applicationes e essayar novemente."
 
-#: qml/DeveloperPage.qml:103 qml/main.qml:121
+#: qml/DeveloperPage.qml:103 qml/main.qml:122
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Prova novemente"
@@ -719,6 +719,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Le generation del retraciamento falleva de preparar se. Isto indica un "
+"problema sever que probabilemente tu non pote resolver."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -899,7 +901,7 @@ msgstr ""
 "error. <nl /><link url='%1'>. Apprende plus super reportar bugs.</link></"
 "para>"
 
-#: qml/main.qml:94
+#: qml/main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -908,22 +910,16 @@ msgstr ""
 "Il no habeva assatis memoria per colliger information de fracasso.  Tu pote "
 "clauder alcun applicationes per liberar memoria e essayar novemente."
 
-#: qml/main.qml:100
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
+#: qml/main.qml:101
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Colliger information de fracasso falleva per motivationes incognite. Tu "
-"pote  provar novemente, clauder le fenestra, o vider exito <link "
-"url='%1'>detaliate</link>."
+"Colliger information de fracasso falleva. Tu pote clauder le fenestra,  o "
+"<link url='%1'>vider le resultato detaliate</link>."
 
-#: qml/main.qml:105
+#: qml/main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -933,7 +929,7 @@ msgstr ""
 "pote  provar novemente, clauder le fenestra, o vider exito <link "
 "url='%1'>detaliate</link>."
 
-#: qml/main.qml:108
+#: qml/main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1168,18 +1164,13 @@ msgid "Automatic Report"
 msgstr "Reporto Automatic"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"Colligente datos de fracasso. Le datos colligite essera automaticamente "
-"submittite in le fundo."
+"Colliger datos de fracasso. Iste fenestra pote esser claudite. Le datos "
+"colligite essera automaticamente submittite in le secunde plano."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
