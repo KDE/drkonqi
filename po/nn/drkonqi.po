@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-19 00:47+0000\n"
-"PO-Revision-Date: 2026-07-07 18:57+0200\n"
+"PO-Revision-Date: 2026-07-17 10:53+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -337,6 +337,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Feilsøking er førebels ikkje mogleg for krasjar i programvare som køyrer i "
+"Flatpak-sandkassar."
 
 #: coredump/gui/Patient.cpp:185
 #, kde-format
@@ -345,6 +347,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Feilsøking er førebels ikkje mogleg for krasjar i programvare som køyrer i "
+"Snap-sandkassar."
 
 #: coredump/gui/Patient.cpp:189
 #, kde-format
@@ -353,18 +357,19 @@ msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
 msgstr ""
+"Feilsøking er ikkje lenger mogleg for denne krasjen. Manglar kjernedumpfil."
 
 #: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Feilsøking er ikkje lenger mogleg for denne krasjen."
 
 #: coredump/gui/Patient.cpp:217
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Krajrapportering er førebels ikkje støtta for Flatpak-program."
 
 #: coredump/gui/Patient.cpp:222
 #, kde-format
@@ -379,6 +384,8 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Distribusjonen din har ikkje oppgjeve ei adresse for innsending av "
+"feilrapportar. Meld frå om dette til distribusjonen din."
 
 #: coredump/gui/Patient.cpp:269
 #, kde-format
@@ -458,6 +465,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"Det oppstod ein kritisk feil i <command>%1</command> (del av <command>%2</"
+"command>), og programmet vart derfor lukka."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -472,6 +481,8 @@ msgstr "Tenestekrasj"
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
 msgstr ""
+"Det oppstod ein kritisk feil i <command>%1</command>, og programmet vart "
+"derfor lukka."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
 #, kde-format
@@ -486,12 +497,10 @@ msgid "Failed to Launch"
 msgstr "Klarte ikkje starta"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
-#, fuzzy, kde-format
-#| msgctxt "@title CLI title"
-#| msgid "Crashed Processes Viewer"
+#, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Visar for krasja prosessar"
+msgstr "Klarte ikkje starta visarprogrammet for krasja prosessar."
 
 #: debugger.cpp:37 debugger.cpp:64
 #, kde-format
@@ -964,6 +973,9 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Tilbakeloggen er svært avgrensa, då det ikkje var nok ledig minne til å laga "
+"ein fullstendig tilbakelogg. Du kan prøva å lukka nokre program og prøva på "
+"nytt."
 
 #: qml/DeveloperPage.qml:102 qml/main.qml:114
 msgctxt "@action retry gathering crash data"
@@ -1022,19 +1034,14 @@ msgstr ""
 "<interface>Last om att</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:241
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Du kan prøva å laga tilbakeloggen på nytt ved å trykkja <interface>Last om "
-"att</interface>."
+"Avbraut laging av tilbakeloggen på grunn av lite ledig minne. Du kan prøva å "
+"laga tilbakeloggen på nytt ved å trykkja <interface>Last om att</interface>."
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1167,6 +1174,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Det var ikkje nok ledig minne for å henta inn krasjinformasjon. Prøv å lukka "
+"nokre program for å frigjera minne, og prøv så på nytt."
 
 #: qml/main.qml:98
 msgctxt "@info"
