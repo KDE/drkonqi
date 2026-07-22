@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-17 00:45+0000\n"
-"PO-Revision-Date: 2026-07-08 13:18+0300\n"
+"PO-Revision-Date: 2026-07-21 21:14+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -47,31 +47,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Nepavyko sukurti pagrindinio katalogo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Nepavyko atverti pagrindinio failo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Pagrindinės išklotinės failo nėra: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
 msgstr ""
+"Pagrindinio failo išpakavimo procesas patyrė nesėkmę nurodydamas kodą: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Aukštesnis pagrindinio failo išpakavimo procesas patyrė nesėkmę: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -723,6 +724,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Nepavyko paruošti strigties pėdsako sukūrimo. Tai reiškia, jog yra rimta "
+"problema, kurios, greičiausiai, negalite išspręsti."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -914,19 +917,13 @@ msgstr ""
 "dar kartą."
 
 #: qml/main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Informacijos rinkimas apie strigtį dėl nežinomų priežasčių patyrė nesėkmę. "
-"Galite bandyti dar kartą, užverti šį langą arba <link url='%1'>peržiūrėti "
-"išsamią išvestį</link>."
+"Nepavyko surinkti informacijos apie apie strigtį. Galite užverti šį langą "
+"arba <link url='%1'>peržiūrėti išsamią išvestį</link>."
 
 #: qml/main.qml:106
 msgctxt "@info"
