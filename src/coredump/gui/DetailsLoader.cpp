@@ -7,12 +7,18 @@
 
 void DetailsLoader::setPatient(Patient *patient)
 {
+    if (patient == m_patient) {
+        return;
+    }
+
     m_patient = patient;
+
     if (m_patient) {
         load();
     } else {
         m_LoaderProcess = nullptr;
     }
+    Q_EMIT patientChanged();
 }
 
 void DetailsLoader::load()

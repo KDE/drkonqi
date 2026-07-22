@@ -17,6 +17,11 @@ Kirigami.ScrollablePage {
     property string text
     property string errorText
 
+    onPatientChanged: {
+        page.text = "";
+        page.errorText = "";
+    }
+
     title: i18nc("@title", "Details")
     horizontalScrollBarPolicy: Qt.ScrollBarAsNeeded
 
