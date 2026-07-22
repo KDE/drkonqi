@@ -69,12 +69,12 @@ int PatientModel::role(const QByteArray &roleName) const
     return m_roles.key(roleName, -1);
 }
 
-void PatientModel::addObject(std::unique_ptr<QObject> patient)
+void PatientModel::addObject(std::unique_ptr<Patient> patient)
 {
     const int index = m_objects.size();
     beginInsertRows(QModelIndex(), index, index);
 
-    QObject *object = patient.release();
+    auto object = patient.release();
     object->setParent(this);
 
     m_objects.append(object);
@@ -156,6 +156,29 @@ void PatientModel::setReady(bool ready)
 {
     m_ready = ready;
     Q_EMIT readyChanged();
+}
+
+int PatientModel::currentIndex() const
+{
+    return m_currentIndex;
+}
+
+void PatientModel::setCurrentIndex(int index)
+{
+    if (m_currentIndex == index) {
+        return;
+    }
+
+    m_currentIndex = index;
+    Q_EMIT currentIndexChanged();
+}
+
+Patient *PatientModel::currentPatient() const
+{
+    if (m_currentIndex == -1 || m_currentIndex >= m_objects.count()) {
+        return nullptr;
+    }
+    return m_objects[m_currentIndex];
 }
 
 #include "moc_PatientModel.cpp"

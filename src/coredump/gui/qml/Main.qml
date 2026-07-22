@@ -6,6 +6,7 @@ import QtQuick.Layouts
 import org.kde.config as KConfig
 import org.kde.kirigami as Kirigami
 
+import org.kde.drkonqi.coredump.gui
 
 Kirigami.ApplicationWindow {
     id: root
@@ -20,6 +21,32 @@ Kirigami.ApplicationWindow {
         configGroupName: "MainWindow"
     }
 
+    readonly property Item applicationStates : Item {
+        states: [
+            State {
+                when: PatientModel.currentIndex === -1
+                PropertyChanges {
+                    root.pageStack.items: [listPage]
+                }
+            },
+            State {
+                when: PatientModel.currentIndex !== -1
+                PropertyChanges {
+                    root.pageStack.items: [listPage, detailsPage]
+                }
+            }
+        ]
+    }
+
+    readonly property ListPage listPage : ListPage {
+        parent: root.applicationStates
+    }
+
+    readonly property DetailsPage detailsPage : DetailsPage {
+        parent: root.applicationStates
+
+        patient: PatientModel.currentPatient
+    }
+
     pageStack.initialPage: ListPage {}
-    pageStack.defaultColumnWidth: root.width // show single page
 }

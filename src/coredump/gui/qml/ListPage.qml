@@ -55,15 +55,20 @@ Kirigami.ScrollablePage {
         delegate: QQC2.ItemDelegate {
             id: delegate
 
+            required property int modelIndex
+            required property var modelObject
+
             text: modelObject.appName
             icon.name: modelObject.iconName
 
+            highlighted: modelIndex === DrKonqi.PatientModel.currentIndex
+
             width: ListView.view.width
-            onClicked: pageStack.push(Qt.resolvedUrl("DetailsPage.qml"), {patient: modelObject})
+            onClicked: DrKonqi.PatientModel.currentIndex = modelIndex
 
             contentItem: Kirigami.IconTitleSubtitle {
                 title: delegate.text
-                subtitle: modelObject.dateTime
+                subtitle: delegate.modelObject.dateTime
                 icon: icon.fromControlsIcon(delegate.icon)
             }
         }
