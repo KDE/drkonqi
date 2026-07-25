@@ -2,18 +2,18 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1742015 2026-07-23 01:28:25Z scripty $
+# $Id: drkonqi.po 1742194 2026-07-25 01:30:04Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
 # Dimitar Popov <insane@fmi.uni-sofia.bg>, 2011.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:45+0000\n"
-"PO-Revision-Date: 2025-11-28 20:33+0100\n"
+"PO-Revision-Date: 2026-07-24 09:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,31 +47,33 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Неуспешно създаване на директория с данни за срив: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Неуспешно отваряне на файл с данни за срив: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Липсва coredump файл: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Процесът на извличане на файлове с данни за срив е неуспешен с код: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
+"Процесът за извличане на файл с данни за срив с повишени привилегии се "
+"провали: %1"
 
 #: coredump/gui/DetailsLoader.cpp:30
 #, kde-format
@@ -727,6 +729,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Генерирането на backtrace не успя да се подготви. Това показва сериозен "
+"проблем, който вероятно не можете да решите."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -921,19 +925,13 @@ msgstr ""
 "някои приложения, за да освободите допълнително памет и опитайте отново. "
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Събирането на информация за срива е неуспешна по неизвестни причини. Можете "
-"да опитате отново или да затворите този прозорец или <link url='%1'>да "
-"видите подробен отчет</link>."
+"Събирането на информация за срива е неуспешна. Можете да затворите този "
+"прозорец или <link url='%1'>да видите подробен отчет</link>."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1181,18 +1179,13 @@ msgid "Automatic Report"
 msgstr "Автоматично изпращане доклад за грешка"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"Събиране на данни за сривове. Събраните данни се изпращат автоматично във "
-"фонов режим."
+"Събиране на данни за сриването. Прозорецът може да бъде затворен. Събраните "
+"данни автоматично се изпращат в фонов режим."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
