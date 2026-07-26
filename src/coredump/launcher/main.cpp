@@ -123,8 +123,7 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
         return metadata;
     }
 
-    static const QString configFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("drkonqirc"));
-    if (!KConfig(configFile, KConfig::SimpleConfig).group(u"General"_s).readEntry(QStringLiteral("IncludeAll"), false)) {
+    if (!KConfig(QStringLiteral("drkonqirc")).group(u"General"_s).readEntry(QStringLiteral("IncludeAll"), false)) {
         return metadata;
     }
 
