@@ -9,7 +9,6 @@
 #include <QQmlContext>
 
 #include <KAboutData>
-#include <KConfigGroup>
 #include <KLocalizedString>
 
 #include <config-drkonqi.h>

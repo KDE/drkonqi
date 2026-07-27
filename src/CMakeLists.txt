@@ -166,7 +166,7 @@ target_compile_definitions(DrKonqiInternal PRIVATE SYSTEMD_AVAILABLE)
 
 add_executable(drkonqi main.cpp)
 ecm_mark_nongui_executable(drkonqi)
-target_link_libraries(drkonqi PRIVATE DrKonqiInternal Qt::Widgets Qt::DBus KF6::CoreAddons KF6::ConfigCore KF6::I18n)
+target_link_libraries(drkonqi PRIVATE DrKonqiInternal Qt::Widgets Qt::DBus KF6::CoreAddons KF6::ConfigGui KF6::I18n)
 
 target_link_libraries(drkonqi PRIVATE DrKonqiInternalplugin)
 

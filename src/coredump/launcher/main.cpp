@@ -27,6 +27,7 @@
 #include <metadata.h>
 
 #include "../coredump.h"
+#include "../settings.h"
 #include "../socket.h"
 #include "DevNotifierTruck.h"
 #include "DumpTruckInterface.h"
@@ -123,7 +124,7 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
         return metadata;
     }
 
-    if (!KConfig(QStringLiteral("drkonqirc")).group(u"General"_s).readEntry(QStringLiteral("IncludeAll"), false)) {
+    if (!Settings::includeAll()) {
         return metadata;
     }
 

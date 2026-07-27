@@ -17,8 +17,6 @@
 #include <QTimer>
 
 #include "drkonqi_debug.h"
-#include <KConfig>
-#include <KConfigGroup>
 #include <KCrash>
 #include <QStandardPaths>
 
@@ -30,6 +28,7 @@
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "linuxprocmapsparser.h"
+#include "settings.h"
 
 #ifdef Q_OS_MACOS
 #include <AvailabilityMacros.h>
@@ -182,12 +181,9 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("DrKonqi"));
-    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("gdb"));
-
     const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
 
-    const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, defaultDebuggerName));
+    const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, Settings::debugger()));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
     return new DebuggerManager(preferredDebugger, this);
 }

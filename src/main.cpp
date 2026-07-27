@@ -24,7 +24,6 @@
 #include <QTimer>
 
 #include <KAboutData>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KSignalHandler>
@@ -40,6 +39,7 @@
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 #include "sentryscope.h"
+#include "settings.h"
 #include "statusnotifier.h"
 
 using namespace std::chrono_literals;
@@ -274,7 +274,7 @@ int main(int argc, char *argv[])
     const bool restarted = parser.isSet(restartedOption);
 
     // Whether the user should be encouraged to file a bug report
-    const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("General")).readEntry("InteractionAllowed", true);
+    const bool interactionAllowed = Settings::interactionAllowed();
     const bool shuttingDown = isShuttingDown();
 
     if (forceDialog) {

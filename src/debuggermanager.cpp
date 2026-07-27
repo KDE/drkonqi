@@ -6,8 +6,6 @@
 */
 #include "debuggermanager.h"
 
-#include <KConfigGroup>
-
 #include "backtracegenerator.h"
 #include "debugger.h"
 #include "drkonqibackends.h"
