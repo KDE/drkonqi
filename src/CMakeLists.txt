@@ -173,6 +173,7 @@ target_link_libraries(drkonqi PRIVATE DrKonqiInternalplugin)
 install(TARGETS drkonqi DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 configure_file(org.kde.drkonqi.desktop.cmake ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop)
 install(PROGRAMS ${CMAKE_BINARY_DIR}/src/org.kde.drkonqi.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME drkonqi.kcfg)
 
 add_subdirectory(sentry)
 
