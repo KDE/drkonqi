@@ -8,4 +8,5 @@
 namespace Paths
 {
 [[nodiscard]] QString drkonqiExe();
+[[nodiscard]] QString drkonqiCoredumpGuiExe();
 } // namespace Paths

@@ -26,7 +26,6 @@ set(drkonqi_SRCS
     crashedapplication.cpp
     debugger.cpp
     debuggermanager.cpp
-    statusnotifier.cpp
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
     drkonqi_globals.cpp
@@ -46,7 +45,6 @@ set(drkonqi_SRCS
     crashedapplication.h
     debugger.h
     debuggermanager.h
-    statusnotifier.h
     statusnotifier_activationclosetimer.h
     linuxprocmapsparser.h
     drkonqi_globals.h

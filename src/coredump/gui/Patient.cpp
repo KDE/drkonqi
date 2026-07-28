@@ -16,6 +16,7 @@
 #include <KOSRelease>
 #include <KShell>
 #include <KTerminalLauncherJob>
+#include <KWaylandExtras>
 
 #include <drkonqipaths.h>
 #include <metadata.h>
@@ -63,6 +64,7 @@ Patient::Patient(const Coredump &dump)
             return {.entity = FaultContext::Entity::Snap, .name = snapName};
         }
 
+        // ### metadata file comes in after the patient was created, as this model listens for coredumps using the watcher, not just drkonqi-coredump-launcher
         const auto drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
         const auto metadata = Metadata::readFromDisk(drkonqiMetadataPath);
         if (!metadata.isEmpty() && !metadata.value(u"kcrash"_s).toObject().isEmpty()) {
@@ -75,10 +77,22 @@ Patient::Patient(const Coredump &dump)
             };
         }
 
-        return {.entity = FaultContext::Entity::Distro, .name = m_osRelease.prettyName()};
+        return {.entity = FaultContext::Entity::Distro, .name = m_osRelease.prettyName(), .drkonqiMetadataPath = drkonqiMetadataPath};
     }())
     , m_journalCursor(QString::fromUtf8(dump.m_cursor))
 {
+}
+
+void Patient::updateMetadata()
+{
+    const auto metadata = Metadata::readFromDisk(m_faultContext.drkonqiMetadataPath);
+    if (!QFile::exists(m_faultContext.drkonqiMetadataPath) || metadata.isEmpty() || metadata.value(u"kcrash"_s).toObject().isEmpty()) {
+        return;
+    }
+    m_faultContext.entity = FaultContext::Entity::KDE;
+    m_faultContext.drkonqiMetadata = metadata;
+    m_faultContext.reportedToKDE = !metadata.value(Metadata::DRKONQI_KEY).toObject().value(Metadata::SENTRY_EVENT_ID_KEY).toString().isEmpty();
+    Q_EMIT changed();
 }
 
 QStringList Patient::coredumpctlArguments(const QString &command) const
@@ -232,7 +246,7 @@ QString Patient::reasonForNoReport() const
     return QString();
 }
 
-void Patient::report()
+void Patient::report(QWindow *window, bool sentry)
 {
     switch (m_faultContext.entity) {
     case FaultContext::Entity::Flatpak:
@@ -242,17 +256,20 @@ void Patient::report()
         QDesktopServices::openUrl(QUrl(u"https://snapcraft.io/"_s.append(m_faultContext.name)));
         return;
     case FaultContext::Entity::KDE: {
-        auto job = new KIO::CommandLauncherJob(
-            Paths::drkonqiExe(),
-            QStringList{u"--dialog"_s} + Metadata::metadataArguments(m_faultContext.drkonqiMetadata[Metadata::KCRASH_KEY].toObject().toVariantHash()),
-            this);
-        auto env = QProcessEnvironment::systemEnvironment();
-        env.insert(u"DRKONQI_BACKEND"_s, u"COREDUMPD"_s);
-        env.insert(u"DRKONQI_METADATA_FILE"_s, m_faultContext.drkonqiMetadataPath);
-        job->setProcessEnvironment(env);
-        job->start();
-        // TODO: this is a bit awkward because it allows the user to open the same report multiple times. There is no
-        // good way to prevent this though I think.
+        KWaylandExtras::exportToplevel(window).then(this, [this, sentry](const QString &token) {
+            auto args = Metadata::metadataArguments(m_faultContext.drkonqiMetadata[Metadata::KCRASH_KEY].toObject().toVariantHash())
+                + QStringList{u"--metadata_file"_s, m_faultContext.drkonqiMetadataPath} + QStringList{u"--window"_s, token};
+            if (sentry) {
+                args.append(u"--sentry"_s);
+            }
+            auto job = new KIO::CommandLauncherJob(Paths::drkonqiExe(), QStringList{u"--dialog"_s} + args, this);
+            auto env = QProcessEnvironment::systemEnvironment();
+            env.insert(u"DRKONQI_BACKEND"_s, u"COREDUMPD"_s);
+            job->setProcessEnvironment(env);
+            job->start();
+            // TODO: this is a bit awkward because it allows the user to open the same report multiple times. There is no
+            // good way to prevent this though I think.
+        });
         return;
     }
     case FaultContext::Entity::Distro:
@@ -276,6 +293,11 @@ void Patient::report()
     }
     Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
     return {};
+}
+
+pid_t Patient::pid() const
+{
+    return m_pid;
 }
 
 #include "moc_Patient.cpp"

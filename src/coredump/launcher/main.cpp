@@ -191,17 +191,20 @@ static bool tryDrkonqi(const Coredump &dump)
         return false;
     }
 
-    if (Paths::drkonqiExe().isEmpty()) {
-        qWarning() << "Couldn't find drkonqi exe";
+    if (Paths::drkonqiCoredumpGuiExe().isEmpty()) {
+        qWarning() << "Couldn't find drkonqi-coredump-gui exe";
         return false;
     }
 
     setenv("DRKONQI_BACKEND", "COREDUMPD", 1);
-    setenv("DRKONQI_METADATA_FILE", qPrintable(drkonqiMetadataPath), 1);
 
     // We must start drkonqi in a new slice. This launcher will want to terminate quickly and we enforce that
     // through maximum run time in the unit configuration. If drkonqi wasn't in a new slice it'd get killed with us.
-    QProcess::execute(Paths::drkonqiExe(), Metadata::metadataArguments(metadata[Metadata::KCRASH_KEY].toObject().toVariantHash()));
+
+    const auto path = Paths::drkonqiCoredumpGuiExe();
+    const auto args = Metadata::metadataArguments(metadata[Metadata::KCRASH_KEY].toObject().toVariantHash())
+        + QStringList{u"--notify"_s, u"--metadata_file"_s, drkonqiMetadataPath};
+    QProcess::execute(path, args);
 
     return true; // always considered handled, even if drkonqi crashes or something
 }

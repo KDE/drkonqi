@@ -9,6 +9,7 @@
 
 #include <QAbstractListModel>
 #include <QQmlEngine>
+#include <QWindow>
 
 class PatientModel : public QAbstractListModel
 {
@@ -18,6 +19,7 @@ class PatientModel : public QAbstractListModel
 
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(Patient *currentPatient READ currentPatient NOTIFY currentIndexChanged)
+    Q_PROPERTY(QWindow *window READ window WRITE setWindow NOTIFY windowChanged)
 
 public:
     enum ItemRole {
@@ -52,11 +54,22 @@ public:
     void setReady(bool ready);
     Q_SIGNAL void readyChanged();
 
+    void setPatient(pid_t pid);
+
     [[nodiscard]] int currentIndex() const;
     void setCurrentIndex(int index);
     Q_SIGNAL void currentIndexChanged();
 
     [[nodiscard]] Patient *currentPatient() const;
+
+    void openReport();
+    void openSentry();
+
+    void updatePatient(pid_t pid);
+
+    [[nodiscard]] QWindow *window() const;
+    void setWindow(QWindow *window);
+    Q_SIGNAL void windowChanged();
 
 private Q_SLOTS:
     void propertyChanged();
@@ -66,12 +79,19 @@ private:
     void addDynamicRoleNames(int maxEnumValue, QObject *object);
     [[nodiscard]] QMetaMethod propertyChangedMetaMethod() const;
     explicit PatientModel(QObject *parent = nullptr);
+    int indexForPid(pid_t pid) const;
+    void openSentryIfNeededAndPossible();
+    void openReportIfNeededAndPossible();
 
     int m_currentIndex = -1;
+    pid_t m_initialPid = -1;
+    bool m_openReport = false;
+    bool m_openSentry = false;
 
     QList<Patient *> m_objects;
     QHash<int, QByteArray> m_roles;
     QHash<int, QByteArray> m_objectProperties;
     QHash<int, int> m_signalIndexToProperties;
     bool m_ready = false;
+    QWindow *m_window = nullptr;
 };

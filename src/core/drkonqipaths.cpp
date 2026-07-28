@@ -20,3 +20,15 @@ QString Paths::drkonqiExe()
     static QString exec = QStandardPaths::findExecutable(QStringLiteral("drkonqi"), paths);
     return exec;
 }
+
+QString Paths::drkonqiCoredumpGuiExe()
+{
+    static QStringList paths =
+        QStringList{
+            QCoreApplication::applicationDirPath(), // then look where our application binary is located
+            QLibraryInfo::path(QLibraryInfo::BinariesPath),
+        }
+        + QFile::decodeName(qgetenv("PATH")).split(QLatin1Char(':'), Qt::SkipEmptyParts);
+    static QString exec = QStandardPaths::findExecutable(QStringLiteral("drkonqi-coredump-gui"), paths);
+    return exec;
+}

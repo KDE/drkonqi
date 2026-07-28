@@ -40,7 +40,6 @@
 #include "drkonqidialog.h"
 #include "sentryscope.h"
 #include "settings.h"
-#include "statusnotifier.h"
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -71,41 +70,15 @@ void aboutToQuit()
     }
 }
 
-void openDrKonqiDialog(DrKonqiDialog::GoTo to = DrKonqiDialog::GoTo::Main)
+void openDrKonqiDialog(DrKonqiDialog::GoTo to = DrKonqiDialog::GoTo::Main, const QString &window = {})
 {
     auto *w = new DrKonqiDialog();
     QObject::connect(qApp, &QCoreApplication::aboutToQuit, w, &QObject::deleteLater);
     QObject::connect(qApp, &QGuiApplication::lastWindowClosed, qApp, &aboutToQuit);
-    w->show(to);
+    w->show(to, window);
 #ifdef Q_OS_MACOS
     KWindowSystem::forceActiveWindow(w->winId());
 #endif
-}
-
-void requestDrKonqiDialog(bool restarted, bool interactionAllowed)
-{
-    auto activation = interactionAllowed ? StatusNotifier::Activation::Allowed : StatusNotifier::Activation::NotAllowed;
-    if (ReportInterface::self()->isCrashEventSendingEnabled()) {
-        activation = StatusNotifier::Activation::AlreadySubmitting;
-        ReportInterface::self()->setSendWhenReady(true);
-        if (DrKonqi::debuggerManager()->backtraceGenerator()->state() == BacktraceGenerator::NotLoaded) {
-            DrKonqi::debuggerManager()->backtraceGenerator()->start();
-        }
-    }
-
-    auto *statusNotifier = new StatusNotifier();
-    if (interactionAllowed) {
-        statusNotifier->show();
-    }
-    statusNotifier->notify(activation);
-    QObject::connect(statusNotifier, &StatusNotifier::expired, qApp, &aboutToQuit);
-    QObject::connect(statusNotifier, &StatusNotifier::activated, qApp, [] {
-        openDrKonqiDialog(DrKonqiDialog::GoTo::Main);
-    });
-    QObject::connect(statusNotifier, &StatusNotifier::sentryActivated, qApp, [] {
-        qDebug() << "Sending report to sentry automatically";
-        openDrKonqiDialog(DrKonqiDialog::GoTo::Sentry);
-    });
 }
 
 bool isShuttingDown()
@@ -189,26 +162,16 @@ int main(int argc, char *argv[])
     const QCommandLineOption exceptionWhatOption(u"exceptionwhat"_s, u"The exception what string if an exception was the cause"_s, u"what"_s);
     const QCommandLineOption qtVersionOption(u"qtversion"_s, u"The version of Qt used by the process"_s, u"qtversion"_s);
     const QCommandLineOption frameworksVersionOption(u"kdeframeworksversion"_s, u"The KDE Frameworks version used by the process"_s, u"kdeframeworksversion"_s);
+    const QCommandLineOption metadataOption(QStringLiteral("metadata_file"), i18nc("@info:shell", "The path to the metadata file"), u"path"_s);
+    const QCommandLineOption sentryOption(QStringLiteral("sentry"), i18nc("@info", "Go directly to the sentry page"));
+    const QCommandLineOption windowOption(QStringLiteral("window"), i18nc("@info", "Parent to the given window token"), u"token"_s);
 
-    parser.addOptions({signalOption,
-                       appNameOption,
-                       appPathOption,
-                       appVersionOption,
-                       bugAddressOption,
-                       programNameOption,
-                       productNameOption,
-                       pidOption,
-                       startupIdOption,
-                       saferOption,
-                       restartedOption,
-                       keepRunningOption,
-                       threadOption,
-                       dialogOption,
-                       glRendererOption,
-                       exceptionNameOption,
-                       exceptionWhatOption,
-                       qtVersionOption,
-                       frameworksVersionOption});
+    parser.addOptions({
+        signalOption,     appNameOption,       appPathOption,       appVersionOption, bugAddressOption,        programNameOption, productNameOption,
+        pidOption,        startupIdOption,     saferOption,         restartedOption,  keepRunningOption,       threadOption,      dialogOption,
+        glRendererOption, exceptionNameOption, exceptionWhatOption, qtVersionOption,  frameworksVersionOption, metadataOption,    sentryOption,
+        windowOption,
+    });
 
     // Add all unknown options but make sure to print a warning.
     // This enables older DrKonqi's to run by newer KCrash instances with
@@ -246,6 +209,7 @@ int main(int argc, char *argv[])
     DrKonqi::setThread(parser.value(threadOption).toInt());
     DrKonqi::setStartupId(parser.value(startupIdOption));
     DrKonqi::instance()->m_exceptionName = parser.value(exceptionNameOption);
+    DrKonqi::setMetadataFile(parser.value(metadataOption));
     if (!DrKonqi::instance()->m_exceptionName.isEmpty()) {
         QProcess proc;
         proc.setProgram(u"c++filt"_s);
@@ -273,23 +237,12 @@ int main(int argc, char *argv[])
 
     const bool restarted = parser.isSet(restartedOption);
 
-    // Whether the user should be encouraged to file a bug report
-    const bool interactionAllowed = Settings::interactionAllowed();
     const bool shuttingDown = isShuttingDown();
 
     if (forceDialog) {
-        openDrKonqiDialog();
+        openDrKonqiDialog(parser.isSet(sentryOption) ? DrKonqiDialog::GoTo::Sentry : DrKonqiDialog::GoTo::Main, parser.value(windowOption));
     } else if (shuttingDown) {
         return 0;
-    } else {
-        // if no notification service is running (eg. shell crashed, or other desktop environment)
-        // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
-        // and emitting a desktop notification.
-        if (!StatusNotifier::notificationServiceRegistered() && !restarted) {
-            openDrKonqiDialog();
-        } else { // StatusNotifierItem (interaction) or notification (no interaction)
-            requestDrKonqiDialog(restarted, interactionAllowed);
-        }
     }
 
     return app.exec();

@@ -20,7 +20,11 @@ class StatusNotifier : public QObject
     Q_OBJECT
 
 public:
-    enum class Activation { NotAllowed, Allowed, AlreadySubmitting };
+    enum class Activation {
+        NotAllowed,
+        Allowed,
+        AlreadySubmitting
+    };
 
     explicit StatusNotifier(QObject *parent = nullptr);
     ~StatusNotifier() override;
@@ -32,8 +36,8 @@ public:
 
 Q_SIGNALS:
     void expired();
-    void activated();
-    void sentryActivated();
+    void activated(pid_t pid);
+    void sentryActivated(pid_t pid);
 
 private:
     static bool canBeRestarted(CrashedApplication *app);

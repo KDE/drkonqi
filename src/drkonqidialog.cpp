@@ -6,25 +6,16 @@
 
 #include <KLocalizedString>
 #include <KWindowConfig>
+#include <KWindowSystem>
 
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QWindow>
 
-#include "backtracegenerator.h"
-#include "bugzillaintegration/bugzillalib.h"
 #include "config-drkonqi.h"
-#include "crashedapplication.h"
-#include "debuggermanager.h"
-#include "debugpackageinstaller.h"
 #include "drkonqi.h"
-#include "parser/backtraceparser.h"
-#include "qmlextensions/credentialstore.h"
-#include "qmlextensions/doctore.h"
-#include "qmlextensions/platformmodel.h"
-#include "qmlextensions/reproducibilitymodel.h"
-#include "settings.h"
 
-void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
+void DrKonqiDialog::show(DrKonqiDialog::GoTo to, const QString &windowToken)
 {
     auto engine = new QQmlApplicationEngine(this);
 
@@ -36,13 +27,18 @@ void DrKonqiDialog::show(DrKonqiDialog::GoTo to)
         engine,
         &QQmlApplicationEngine::objectCreated,
         this,
-        [to](QObject *obj, const QUrl &) {
-            switch (to) {
-            case GoTo::Main:
-                break;
-            case GoTo::Sentry:
-                QMetaObject::invokeMethod(obj, "goToSentry", Qt::QueuedConnection);
-                break;
+        [to, windowToken](QObject *obj, const QUrl &) {
+            if (auto window = qobject_cast<QWindow *>(obj)) {
+                if (!windowToken.isEmpty()) {
+                    KWindowSystem::setMainWindow(window, windowToken);
+                }
+                switch (to) {
+                case GoTo::Main:
+                    break;
+                case GoTo::Sentry:
+                    QMetaObject::invokeMethod(obj, "goToSentry", Qt::QueuedConnection);
+                    break;
+                }
             }
         },
         Qt::QueuedConnection);

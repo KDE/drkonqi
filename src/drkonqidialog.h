@@ -13,5 +13,5 @@ public:
     using QObject::QObject;
 
     enum class GoTo { Main, Sentry };
-    void show(GoTo to);
+    void show(GoTo to, const QString &window);
 };

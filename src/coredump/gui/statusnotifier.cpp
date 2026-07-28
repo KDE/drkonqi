@@ -18,6 +18,7 @@
 
 #include "crashedapplication.h"
 #include "drkonqi.h"
+#include "drkonqibackends.h"
 #include "statusnotifier_activationclosetimer.h"
 
 namespace
@@ -41,17 +42,15 @@ StatusNotifier::StatusNotifier(QObject *parent)
     : QObject(parent)
     , m_sni(new KStatusNotifierItem(this))
 {
-    CrashedApplication *crashedApp = DrKonqi::crashedApplication();
-
     // this is used for both the SNI tooltip as well as the notification
-    m_title = i18nc("Placeholder is an application name; it crashed", "%1 Closed Unexpectedly", crashedApp->name());
+    m_title = i18nc("Placeholder is an application name; it crashed", "%1 Closed Unexpectedly", DrKonqi::crashedApplication()->name());
 }
 
 StatusNotifier::~StatusNotifier() = default;
 
 void StatusNotifier::show()
 {
-    CrashedApplication *crashedApp = DrKonqi::crashedApplication();
+    auto crashedApp = DrKonqi::crashedApplication();
 
     connect(this, &StatusNotifier::activated, this, &StatusNotifier::deleteLater);
     // The expiring the notifier doesn't necessarily quit immediately, make sure to hide the SNI by deleting it (there
@@ -94,7 +93,9 @@ void StatusNotifier::show()
 
     // Depending on the environmental state we may auto-activate or auto-close the SNI.
     auto timer = new ActivationCloseTimer(this);
-    connect(timer, &ActivationCloseTimer::autoActivate, this, &StatusNotifier::activated);
+    connect(timer, &ActivationCloseTimer::autoActivate, this, [this]() {
+        Q_EMIT activated(DrKonqi::pid());
+    });
     connect(timer, &ActivationCloseTimer::autoClose, this, &StatusNotifier::expired);
     auto dbusWatcher = new DBusServiceWatcher(timer);
     auto idleWatcher = new IdleWatcher(timer);
@@ -103,25 +104,29 @@ void StatusNotifier::show()
 
 void StatusNotifier::notify(Activation activation)
 {
-    CrashedApplication *crashedApp = DrKonqi::crashedApplication();
+    auto crashedApp = DrKonqi::crashedApplication();
 
     const auto activationAllowed = activation != Activation::NotAllowed;
     const QString title = activationAllowed ? m_title : crashedApp->name();
     const QString message = activationMessage(activation);
 
-    KNotification *notification = KNotification::event(QStringLiteral("applicationcrash"),
-                                                       title,
-                                                       message,
-                                                       QStringLiteral("tools-report-bug"),
-                                                       KNotification::DefaultEvent | KNotification::SkipGrouping);
+    auto notification = KNotification::event(QStringLiteral("applicationcrash"),
+                                             title,
+                                             message,
+                                             QStringLiteral("tools-report-bug"),
+                                             KNotification::DefaultEvent | KNotification::SkipGrouping);
 
     if (activationAllowed) {
         if (activation == StatusNotifier::Activation::AlreadySubmitting) {
             auto details = notification->addAction(i18nc("@action:button, keep short", "Add Details"));
-            connect(details, &KNotificationAction::activated, this, &StatusNotifier::sentryActivated);
+            connect(details, &KNotificationAction::activated, this, [this, crashedApp] {
+                Q_EMIT sentryActivated(crashedApp->pid());
+            });
         } else {
             auto action = notification->addAction(i18nc("Notification action button, keep short", "Report Bug"));
-            connect(action, &KNotificationAction::activated, this, &StatusNotifier::activated);
+            connect(action, &KNotificationAction::activated, this, [this, crashedApp] {
+                Q_EMIT activated(crashedApp->pid());
+            });
         }
     }
     if (canBeRestarted(crashedApp)) {

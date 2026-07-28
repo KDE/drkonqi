@@ -72,8 +72,6 @@ any side effects.</para>`);
     title: CrashedApplication.name
     minimumWidth: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 30
     minimumHeight: Kirigami.Settings.isMobile ? 0 : Kirigami.Units.gridUnit * 25
-    width: Kirigami.Settings.isMobile ? undefined : minimumWidth
-    height: Kirigami.Settings.isMobile ? undefined : minimumHeight
 
     header: generatorFailure ? warningComponent.createObject(appWindow) : null
 

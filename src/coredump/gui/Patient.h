@@ -12,6 +12,7 @@
 #include <automaticcoredumpexcavator.h>
 #include <qqmlintegration.h>
 
+class QWindow;
 class Coredump;
 class Patient : public QObject
 {
@@ -52,7 +53,11 @@ public:
     [[nodiscard]] QString faultEntityName() const;
     [[nodiscard]] bool canReport();
     Q_INVOKABLE [[nodiscard]] QString reasonForNoReport() const;
-    Q_INVOKABLE void report();
+    Q_INVOKABLE void report(QWindow *window, bool sentry = false);
+
+    [[nodiscard]] pid_t pid() const;
+
+    void updateMetadata();
 
 Q_SIGNALS:
     void changed();

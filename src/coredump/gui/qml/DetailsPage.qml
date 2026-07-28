@@ -52,7 +52,7 @@ Kirigami.ScrollablePage {
             text: i18nc("@action %1 is the name of a distribution", "Report to %1", patient.faultEntityName)
             onTriggered: {
                 copyToClipboardAction.trigger()
-                patient.report()
+                patient.report(page.QQC2.ApplicationWindow.window)
                 enabled = false // one report per detail view (bit of a hack, not persistent or anything)
             }
         }

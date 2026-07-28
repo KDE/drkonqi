@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QMetaMethod>
 
+#include <coredumpwatcher.h>
+
 #include "Patient.h"
 #include "coredumpwatcher.h"
 
@@ -104,6 +106,13 @@ void PatientModel::addObject(std::unique_ptr<Patient> patient)
     }
 
     endInsertRows();
+
+    if (m_initialPid == object->pid()) {
+        m_currentIndex = index;
+        Q_EMIT currentIndexChanged();
+    }
+    openSentryIfNeededAndPossible();
+    openReportIfNeededAndPossible();
 }
 
 QMetaMethod PatientModel::propertyChangedMetaMethod() const
@@ -171,6 +180,25 @@ void PatientModel::setReady(bool ready)
     Q_EMIT readyChanged();
 }
 
+int PatientModel::indexForPid(pid_t pid) const
+{
+    const auto it = std::ranges::find_if(m_objects, [pid](const auto &it) {
+        return it->pid() == pid;
+    });
+    if (it == m_objects.end()) {
+        return -1;
+    }
+
+    return it - m_objects.begin();
+}
+
+void PatientModel::setPatient(pid_t pid)
+{
+    m_initialPid = pid;
+
+    setCurrentIndex(indexForPid(pid));
+}
+
 int PatientModel::currentIndex() const
 {
     return m_currentIndex;
@@ -184,6 +212,9 @@ void PatientModel::setCurrentIndex(int index)
 
     m_currentIndex = index;
     Q_EMIT currentIndexChanged();
+
+    openSentryIfNeededAndPossible();
+    openReportIfNeededAndPossible();
 }
 
 Patient *PatientModel::currentPatient() const
@@ -192,6 +223,62 @@ Patient *PatientModel::currentPatient() const
         return nullptr;
     }
     return m_objects[m_currentIndex];
+}
+
+void PatientModel::openReport()
+{
+    m_openReport = true;
+    openReportIfNeededAndPossible();
+}
+
+void PatientModel::openSentry()
+{
+    m_openSentry = true;
+    openSentryIfNeededAndPossible();
+}
+
+void PatientModel::updatePatient(pid_t pid)
+{
+    const auto index = indexForPid(pid);
+    if (index == -1) {
+        return;
+    }
+    m_objects[indexForPid(pid)]->updateMetadata();
+}
+
+QWindow *PatientModel::window() const
+{
+    return m_window;
+}
+
+void PatientModel::setWindow(QWindow *window)
+{
+    if (m_window == window) {
+        return;
+    }
+
+    m_window = window;
+    Q_EMIT windowChanged();
+    openSentryIfNeededAndPossible();
+    openReportIfNeededAndPossible();
+}
+
+void PatientModel::openSentryIfNeededAndPossible()
+{
+    if (!currentPatient() || m_initialPid != currentPatient()->pid() || !m_window || !m_openSentry) {
+        return;
+    }
+    currentPatient()->report(m_window, true);
+    m_openSentry = false;
+}
+
+void PatientModel::openReportIfNeededAndPossible()
+{
+    if (!currentPatient() || m_initialPid != currentPatient()->pid() || !m_window || !m_openReport) {
+        return;
+    }
+    currentPatient()->report(m_window, false);
+    m_openReport = false;
 }
 
 #include "moc_PatientModel.cpp"

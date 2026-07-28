@@ -21,6 +21,8 @@ Kirigami.ScrollablePage {
         }
     ]
 
+    Component.onCompleted: DrKonqi.PatientModel.window = page.QQC2.ApplicationWindow.window
+
     ListView {
         id: view
 
@@ -28,7 +30,7 @@ Kirigami.ScrollablePage {
 
         reuseItems: true // We have a lot of items potentially, recycle them
 
-        KItemModels.KSortFilterProxyModel { // set as model during state change
+        model: KItemModels.KSortFilterProxyModel {
             id: patientFilterModel
             sourceModel: DrKonqi.PatientModel
             filterRoleName: "ROLE_appName"
@@ -113,7 +115,6 @@ Kirigami.ScrollablePage {
         },
         State {
             name: "" // default state
-            PropertyChanges { target: view; model: patientFilterModel }
         }
     ]
 }
