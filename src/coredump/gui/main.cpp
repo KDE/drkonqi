@@ -13,7 +13,6 @@
 #include <KLocalizedString>
 
 #include <config-drkonqi.h>
-#include <coredumpwatcher.h>
 
 #include "DetailsLoader.h"
 #include "Patient.h"
@@ -50,18 +49,6 @@ int main(int argc, char *argv[])
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
-
-    auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
-    Q_ASSERT(expectedJournal.ret == 0);
-    Q_ASSERT(expectedJournal.value);
-    CoredumpWatcher watcher(std::move(expectedJournal.value), {}, {}, nullptr);
-    QObject::connect(&watcher, &CoredumpWatcher::newDump, PatientModel::instance(), [&](const Coredump &dump) {
-        PatientModel::instance()->addObject(std::make_unique<Patient>(dump));
-    });
-    QObject::connect(&watcher, &CoredumpWatcher::atLogEnd, PatientModel::instance(), [&]() {
-        PatientModel::instance()->setReady(true);
-    });
-    watcher.metaObject()->invokeMethod(&watcher, &CoredumpWatcher::start, Qt::QueuedConnection);
 
     return app.exec();
 }

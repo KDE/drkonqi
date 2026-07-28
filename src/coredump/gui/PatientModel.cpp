@@ -9,6 +9,7 @@
 #include <QMetaMethod>
 
 #include "Patient.h"
+#include "coredumpwatcher.h"
 
 using namespace std::chrono_literals;
 
@@ -16,6 +17,18 @@ PatientModel::PatientModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     initRoleNames(Patient::staticMetaObject);
+
+    auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
+    Q_ASSERT(expectedJournal.ret == 0);
+    Q_ASSERT(expectedJournal.value);
+    auto watcher = new CoredumpWatcher(std::move(expectedJournal.value), {}, {}, this);
+    connect(watcher, &CoredumpWatcher::newDump, this, [&](const auto &dump) {
+        addObject(std::make_unique<Patient>(dump));
+    });
+    connect(watcher, &CoredumpWatcher::atLogEnd, this, [&]() {
+        setReady(true);
+    });
+    QMetaObject::invokeMethod(watcher, &CoredumpWatcher::start, Qt::QueuedConnection);
 }
 
 QHash<int, QByteArray> PatientModel::roleNames() const
