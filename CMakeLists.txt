@@ -73,6 +73,7 @@ find_package(
         WindowSystem
         SyntaxHighlighting
         StatusNotifierItem
+        DBusAddons
 )
 
 ecm_find_qmlmodule(org.kde.kirigami 2.20)

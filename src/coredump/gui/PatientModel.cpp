@@ -104,6 +104,11 @@ void PatientModel::addObject(std::unique_ptr<Patient> patient)
     }
 
     endInsertRows();
+
+    if (m_initialPid == object->pid()) {
+        m_currentIndex = index;
+        Q_EMIT currentIndexChanged();
+    }
 }
 
 QMetaMethod PatientModel::propertyChangedMetaMethod() const
@@ -171,6 +176,25 @@ void PatientModel::setReady(bool ready)
     Q_EMIT readyChanged();
 }
 
+int PatientModel::indexForPid(pid_t pid) const
+{
+    const auto it = std::ranges::find_if(m_objects, [pid](const auto &it) {
+        return it->pid() == pid;
+    });
+    if (it == m_objects.end()) {
+        return -1;
+    }
+
+    return it - m_objects.begin();
+}
+
+void PatientModel::setPatient(pid_t pid)
+{
+    m_initialPid = pid;
+
+    setCurrentIndex(indexForPid(pid));
+}
+
 int PatientModel::currentIndex() const
 {
     return m_currentIndex;
@@ -192,6 +216,27 @@ Patient *PatientModel::currentPatient() const
         return nullptr;
     }
     return m_objects[m_currentIndex];
+}
+
+void PatientModel::openReport(pid_t pid)
+{
+    if (const auto index = indexForPid(pid); index != -1) {
+        m_objects[index]->report(false);
+    }
+}
+
+void PatientModel::openSentry(pid_t pid)
+{
+    if (const auto index = indexForPid(pid); index != -1) {
+        m_objects[index]->report(true);
+    }
+}
+
+void PatientModel::updatePatient(pid_t pid)
+{
+    if (const auto index = indexForPid(pid); index != -1) {
+        m_objects[indexForPid(pid)]->updateMetadata();
+    }
 }
 
 #include "moc_PatientModel.cpp"

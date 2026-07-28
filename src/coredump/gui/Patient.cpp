@@ -83,10 +83,18 @@ Patient::Patient(const Coredump &dump)
             return *context;
         }
 
-        return {.entity = FaultContext::Entity::Distro, .name = m_osRelease.prettyName()};
+        return {.entity = FaultContext::Entity::Distro, .name = m_osRelease.prettyName(), .drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid)};
     }())
     , m_journalCursor(QString::fromUtf8(dump.m_cursor))
 {
+}
+
+void Patient::updateMetadata()
+{
+    if (const auto &faultContext = loadKDEFaultContext(m_faultContext.drkonqiMetadataPath)) {
+        m_faultContext = *faultContext;
+        Q_EMIT changed();
+    }
 }
 
 QStringList Patient::coredumpctlArguments(const QString &command) const
@@ -240,7 +248,7 @@ QString Patient::reasonForNoReport() const
     return QString();
 }
 
-void Patient::report()
+void Patient::report(bool sentry)
 {
     switch (m_faultContext.entity) {
     case FaultContext::Entity::Flatpak:
@@ -251,13 +259,11 @@ void Patient::report()
         markAsReported();
         return;
     case FaultContext::Entity::KDE: {
-        auto job = new KIO::CommandLauncherJob(
-            Paths::drkonqiExe(),
-            QStringList{u"--dialog"_s} + Metadata::metadataArguments(m_faultContext.drkonqiMetadata[Metadata::KCRASH_KEY].toObject().toVariantHash()),
-            this);
+        const auto args = Metadata::metadataArguments(m_faultContext.drkonqiMetadata[Metadata::KCRASH_KEY].toObject().toVariantHash())
+            + QStringList{u"--dialog"_s, u"--metadata_file"_s, m_faultContext.drkonqiMetadataPath} + (sentry ? QStringList{u"--sentry"_s} : QStringList());
+        auto job = new KIO::CommandLauncherJob(Paths::drkonqiExe(), args, this);
         auto env = QProcessEnvironment::systemEnvironment();
         env.insert(u"DRKONQI_BACKEND"_s, u"COREDUMPD"_s);
-        env.insert(u"DRKONQI_METADATA_FILE"_s, m_faultContext.drkonqiMetadataPath);
         job->setProcessEnvironment(env);
         job->start();
         auto dirWatch = new KDirWatch(this);
@@ -312,6 +318,11 @@ void Patient::markAsReported()
     }
     file.write(QJsonDocument(m_faultContext.drkonqiMetadata).toJson());
     file.close();
+}
+
+pid_t Patient::pid() const
+{
+    return m_pid;
 }
 
 #include "moc_Patient.cpp"

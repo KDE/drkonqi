@@ -39,6 +39,7 @@ public:
     static void setKeepRunning(bool keepRunning);
     static void setThread(int thread);
     static void setStartupId(const QString &startupId);
+    static void setMetadataFile(const QString &metadataFile);
 
     static int signal();
     static const QString &appName();
@@ -58,6 +59,7 @@ public:
     static const QString &kdeBugzillaURL();
     static const QString &startupId();
     static QString backendClassName();
+    [[nodiscard]] static QString metadataFile();
 
     // An ephemeral crash is one that cannot be restarted at a later point.
     // e.g. KCrashBackend is ephemeral, CoredumpBackend is not.
@@ -94,6 +96,7 @@ private:
     bool m_keepRunning;
     int m_thread;
     QString m_startupId;
+    QString m_metadataFile;
 };
 
 #endif

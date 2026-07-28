@@ -7,20 +7,33 @@
 #ifndef DRKONQI_STATUSNOTIFIER_H
 #define DRKONQI_STATUSNOTIFIER_H
 
+#include <QDateTime>
+#include <QMap>
 #include <QObject>
+#include <QPointer>
 
 class QTimer;
 
+class KNotification;
 class KStatusNotifierItem;
 
 class CrashedApplication;
+
+struct NotificationInfo {
+    QPointer<KNotification> notification;
+    QDateTime spawnedTime;
+};
 
 class StatusNotifier : public QObject
 {
     Q_OBJECT
 
 public:
-    enum class Activation { NotAllowed, Allowed, AlreadySubmitting };
+    enum class Activation {
+        NotAllowed,
+        Allowed,
+        AlreadySubmitting
+    };
 
     explicit StatusNotifier(QObject *parent = nullptr);
     ~StatusNotifier() override;
@@ -32,13 +45,15 @@ public:
 
 Q_SIGNALS:
     void expired();
-    void activated();
-    void sentryActivated();
+    void activated(pid_t pid);
+    void sentryActivated(pid_t pid);
+    void trayActivated();
 
 private:
     static bool canBeRestarted(CrashedApplication *app);
 
     KStatusNotifierItem *m_sni = nullptr;
+    QMap<QString, NotificationInfo> m_notifications;
     QString m_title;
 };
 

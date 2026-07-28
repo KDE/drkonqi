@@ -45,7 +45,9 @@ ProductMapping::ProductMapping(const CrashedApplication *crashedApp, BugzillaMan
     map(crashedApp->fakeExecutableBaseName());
 
     // Get valid versions
-    connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoFetched, this, &ProductMapping::checkProductInfo);
+    connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoFetched, m_crashedAppPtr, [this](const auto &product) {
+        checkProductInfo(product);
+    });
     // Holding the connection so we can easily disconnect in the fallback logic.
     m_productInfoErrorConnection = connect(m_bugzillaManagerPtr, &BugzillaManager::productInfoError, this, &ProductMapping::fallBackToKDE);
 
