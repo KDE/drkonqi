@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1742194 2026-07-25 01:30:04Z scripty $
+# $Id: drkonqi.po 1742482 2026-07-29 01:30:30Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:45+0000\n"
+"POT-Creation-Date: 2026-07-29 00:47+0000\n"
 "PO-Revision-Date: 2026-07-24 09:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -75,31 +75,31 @@ msgstr ""
 "Процесът за извличане на файл с данни за срив с повишени привилегии се "
 "провали: %1"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "Подпроцесът приключи с грешка: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Подпроцесът се срина. Проверете инсталацията."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:29
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Преглед на сринали се процеси"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:31
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Предоставя подробен изглед от минали сривове"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:33
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
@@ -192,22 +192,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "Подробности"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Копиране в клипборда"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Стартиране на интерактивна програма за проследяване на грешки"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Докладване на %1"
@@ -217,22 +217,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Сривове"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Зареждане на доклади за срив"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Засега няма срив на процеси"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Няма сривове отговарящи на търсенето"
 
-#: coredump/gui/qml/Main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Преглед"

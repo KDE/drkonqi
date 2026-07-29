@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:45+0000\n"
+"POT-Creation-Date: 2026-07-29 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -69,31 +69,31 @@ msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "उपप्रक्रिया त्रुटिना सह निर्गतवती: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "उपप्रक्रिया दुर्घटितवती। स्वस्य संस्थापनं पश्यन्तु।"
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:29
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "दुर्घटनाग्रस्तः प्रक्रियाः दर्शकः"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:31
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "पूर्वदुर्घटनानां विस्तृतदृश्यं प्रदाति"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:33
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(ग) 2020-2022, द डॉकोन्की लेखक"
@@ -178,22 +178,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "वर्णन"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "क्लिप्बोर्ड् प्रति प्रतिलिख्यताम्"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Interactive Debugger चालयन्तु"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 #, fuzzy
 #| msgctxt "@action Report the bug on this domain"
 #| msgid "Report on %1"
@@ -206,22 +206,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "दुर्घटना भवति"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "दुर्घटना-रिपोर्ट् लोड् भवति"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "अद्यापि कोऽपि प्रक्रियाः दुर्घटनाम् अकुर्वन्"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "अन्वेषणस्य सङ्गतिं न दुर्घटना"
 
-#: coredump/gui/qml/Main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "अवलोकनम्"

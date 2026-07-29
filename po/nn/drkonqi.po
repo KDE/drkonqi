@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:45+0000\n"
+"POT-Creation-Date: 2026-07-29 00:47+0000\n"
 "PO-Revision-Date: 2026-07-17 10:53+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -71,32 +71,32 @@ msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr "Feil ved uthenting av kjernefil (utvida løyve) – kode: %1"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "Underprosess vart avslutta med feil: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Underprosess krasja. Sjå til at programmet er rett installert."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:29
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Visar for krasja prosessar"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:31
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Viser detaljert informasjon om tidlegare krasjar"
 
 # Desktop-fila seier at offisielt namn er «Dr Konqi», ikkje «DrKonqi».
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:33
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2000–2022 Dr Konqi-utviklarane"
@@ -188,22 +188,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "Detaljar"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Køyr interaktiv feilsøkjar"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Rapporter til %1"
@@ -213,22 +213,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Krasjtilfelle"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Hentar inn krasjrapportar"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Ingen prosessar har krasja til no"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Finst ingen krasjtilfelle i samsvar med søket"
 
-#: coredump/gui/qml/Main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Oversikt"

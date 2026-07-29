@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-23 00:45+0000\n"
+"POT-Creation-Date: 2026-07-29 00:47+0000\n"
 "PO-Revision-Date: 2026-07-12 09:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -92,31 +92,31 @@ msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr "Échec du processus d'extraction avancé du fichier principal : %1"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "Le sous-processus s'est arrêté avec une erreur : %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Le sous-processus s'est planté. Veuillez vérifier votre installation."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:29
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Afficheur des plantages de processus"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:31
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Fournit un affichage détaillé des anciens plantages"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:33
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2000-2022, les auteurs de DrKonqi"
@@ -212,22 +212,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "Détails"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papier"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Lancer le débogueur interactif"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Signaler à %1"
@@ -237,22 +237,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Plantages"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Chargement du rapport de plantage"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Aucun processus ne s'est encore planté."
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Aucun plantage correspondant à la recherche"
 
-#: coredump/gui/qml/Main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Aperçu"
