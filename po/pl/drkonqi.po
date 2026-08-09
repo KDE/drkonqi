@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Grzesiek11 <grzesiek.jedenastka@outlook.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 00:48+0000\n"
-"PO-Revision-Date: 2026-01-18 16:20+0100\n"
+"PO-Revision-Date: 2026-08-08 12:40+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,31 +43,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Nie udało się utworzyć katalogu pliku jądra: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Nie udało się otworzyć pliku jądra: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Plik zrzutu jądra nie istnieje: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Wydobywanie pliku jądra zakończyło kodem błędu: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
+"Nie udało się wydobyć pliku jądra przy użyciu podwyższonych uprawnień: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -720,6 +721,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Nie udało się przygotować śladu wykonywania. Wskazuje to na poważny błąd, "
+"którego prawdopodobnie samodzielnie nie rozwiążesz."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -908,19 +911,13 @@ msgstr ""
 "kilka aplikacji, aby zwolnić pamięć i spróbuj ponownie."
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Nie udało się zgromadzić danych z wysypanego programu z nieznanych powodów. "
-"Możesz spróbować ponownie, zamknąć to okno lub  or <link url='%1'>obejrzeć "
-"szczegółowe opis</link>."
+"Nie udało się zgromadzić danych z wysypanego programu. Możesz zamknąć to "
+"okno lub  or <link url='%1'>obejrzeć szczegółowy opis</link>."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -930,7 +927,7 @@ msgid ""
 msgstr ""
 "Nie udało się zgromadzić danych z wysypanego programu z nieznanych powodów. "
 "Możesz spróbować ponownie, zamknąć to okno lub  or <link url='%1'>obejrzeć "
-"szczegółowe opis</link>."
+"szczegółowy opis</link>."
 
 #: qml/Main.qml:109
 msgctxt "@info"
@@ -1168,16 +1165,13 @@ msgid "Automatic Report"
 msgstr "Sam wyślij zgłoszenie"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
-msgstr "Zbieranie danych po wysypaniu. Zebrane dane zostaną wysłane w tle."
+msgstr ""
+"Zbieranie danych po wysypaniu. Możesz zamknąć to okno. Zebrane dane zostaną "
+"wysłane w tle."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
