@@ -70,6 +70,7 @@ Kirigami.ScrollablePage {
                 title: delegate.text
                 subtitle: delegate.modelObject.dateTime
                 icon: icon.fromControlsIcon(delegate.icon)
+                color: delegate.modelObject.reported ? Kirigami.Theme.disabledTextColor : Kirigami.Theme.textColor
             }
         }
 

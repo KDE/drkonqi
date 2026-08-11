@@ -12,7 +12,22 @@
 #include <automaticcoredumpexcavator.h>
 #include <qqmlintegration.h>
 
-class Coredump;
+#include "coredump.h"
+
+struct FaultContext {
+    enum class Entity {
+        Flatpak,
+        Snap,
+        KDE,
+        Distro // always when unknown
+    };
+    Entity entity;
+    QString name;
+    QString drkonqiMetadataPath = {}; // NOLINT this is not a redundant init!
+    QJsonObject drkonqiMetadata = {}; // NOLINT this is not a redundant init!
+    bool reportedToKDE = false;
+};
+
 class Patient : public QObject
 {
     Q_OBJECT
@@ -39,6 +54,7 @@ class Patient : public QObject
     Q_PROPERTY(QString iconName READ iconName CONSTANT)
     Q_PROPERTY(QString faultEntityName READ faultEntityName CONSTANT)
     Q_PROPERTY(QString journalCursor MEMBER m_journalCursor CONSTANT)
+    Q_PROPERTY(bool reported READ reported NOTIFY changed)
 public:
     explicit Patient(const Coredump &dump);
 
@@ -53,6 +69,7 @@ public:
     [[nodiscard]] bool canReport();
     Q_INVOKABLE [[nodiscard]] QString reasonForNoReport() const;
     Q_INVOKABLE void report();
+    [[nodiscard]] bool reported() const;
 
 Q_SIGNALS:
     void changed();
@@ -61,6 +78,8 @@ private Q_SLOTS:
     void launchDebugger();
 
 private:
+    void markAsReported();
+
     const QByteArray m_coredumpExe;
     const QByteArray m_coredumpCom;
     QString m_iconName;
@@ -68,19 +87,7 @@ private:
     QByteArray m_systemUnit;
     QByteArray m_userUnit;
     KOSRelease m_osRelease;
-    struct FaultContext {
-        enum class Entity {
-            Flatpak,
-            Snap,
-            KDE,
-            Distro // always when unknown
-        };
-        Entity entity;
-        QString name;
-        QString drkonqiMetadataPath = {}; // NOLINT this is not a redundant init!
-        QJsonObject drkonqiMetadata = {}; // NOLINT this is not a redundant init!
-        bool reportedToKDE = false;
-    } m_faultContext;
+    FaultContext m_faultContext;
     QString m_journalCursor;
 };
 

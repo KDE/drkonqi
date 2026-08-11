@@ -12,6 +12,7 @@
 #include <QUrl>
 
 #include <KApplicationTrader>
+#include <KDirWatch>
 #include <KLocalizedString>
 #include <KOSRelease>
 #include <KShell>
@@ -23,6 +24,21 @@
 #include "../coredump/coredump.h"
 
 using namespace Qt::StringLiterals;
+
+std::optional<FaultContext> loadKDEFaultContext(const QString &metadataPath)
+{
+    const auto metadata = Metadata::readFromDisk(metadataPath);
+    if (metadata.isEmpty() || metadata.value(u"kcrash"_s).toObject().isEmpty()) {
+        return std::nullopt;
+    }
+    return FaultContext{
+        .entity = FaultContext::Entity::KDE,
+        .name = {}, // unused
+        .drkonqiMetadataPath = metadataPath,
+        .drkonqiMetadata = metadata,
+        .reportedToKDE = !metadata.value(Metadata::DRKONQI_KEY).toObject().value(Metadata::SENTRY_EVENT_ID_KEY).toString().isEmpty(),
+    };
+}
 
 Patient::Patient(const Coredump &dump)
     : m_origCoreFilename(QString::fromUtf8(dump.m_rawData.value("COREDUMP_FILENAME")))
@@ -63,16 +79,8 @@ Patient::Patient(const Coredump &dump)
             return {.entity = FaultContext::Entity::Snap, .name = snapName};
         }
 
-        const auto drkonqiMetadataPath = Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid);
-        const auto metadata = Metadata::readFromDisk(drkonqiMetadataPath);
-        if (!metadata.isEmpty() && !metadata.value(u"kcrash"_s).toObject().isEmpty()) {
-            return {
-                .entity = FaultContext::Entity::KDE,
-                .name = {}, // unused
-                .drkonqiMetadataPath = drkonqiMetadataPath,
-                .drkonqiMetadata = metadata,
-                .reportedToKDE = !metadata.value(Metadata::DRKONQI_KEY).toObject().value(Metadata::SENTRY_EVENT_ID_KEY).toString().isEmpty(),
-            };
+        if (auto context = loadKDEFaultContext(Metadata::drkonqiMetadataPath(dump.exe, dump.bootId, dump.timestamp, dump.pid))) {
+            return *context;
         }
 
         return {.entity = FaultContext::Entity::Distro, .name = m_osRelease.prettyName()};
@@ -240,6 +248,7 @@ void Patient::report()
         return;
     case FaultContext::Entity::Snap:
         QDesktopServices::openUrl(QUrl(u"https://snapcraft.io/"_s.append(m_faultContext.name)));
+        markAsReported();
         return;
     case FaultContext::Entity::KDE: {
         auto job = new KIO::CommandLauncherJob(
@@ -251,12 +260,19 @@ void Patient::report()
         env.insert(u"DRKONQI_METADATA_FILE"_s, m_faultContext.drkonqiMetadataPath);
         job->setProcessEnvironment(env);
         job->start();
+        auto dirWatch = new KDirWatch(this);
+        dirWatch->addFile(m_faultContext.drkonqiMetadataPath);
+        connect(dirWatch, &KDirWatch::dirty, this, [this] {
+            m_faultContext = *loadKDEFaultContext(m_faultContext.drkonqiMetadataPath);
+            Q_EMIT changed();
+        });
         // TODO: this is a bit awkward because it allows the user to open the same report multiple times. There is no
         // good way to prevent this though I think.
         return;
     }
     case FaultContext::Entity::Distro:
         QDesktopServices::openUrl(QUrl(m_osRelease.bugReportUrl()));
+        markAsReported();
         return;
     }
     Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
@@ -276,6 +292,26 @@ void Patient::report()
     }
     Q_ASSERT_X(false, Q_FUNC_INFO, "Unhandled enum value");
     return {};
+}
+
+bool Patient::reported() const
+{
+    return m_faultContext.drkonqiMetadata[Metadata::DRKONQI_KEY].toObject()[u"Reported"_s].toBool() || m_faultContext.reportedToKDE;
+}
+
+void Patient::markAsReported()
+{
+    auto drKonqi = m_faultContext.drkonqiMetadata[Metadata::DRKONQI_KEY].toObject();
+    drKonqi[u"Reported"_s] = true;
+    m_faultContext.drkonqiMetadata[Metadata::DRKONQI_KEY] = drKonqi;
+    Q_EMIT changed();
+    QFile file(m_faultContext.drkonqiMetadataPath);
+    if (!file.open(QFile::WriteOnly)) {
+        qWarning() << "Could not open" << m_faultContext.drkonqiMetadataPath << "to mark report as sent.";
+        return;
+    }
+    file.write(QJsonDocument(m_faultContext.drkonqiMetadata).toJson());
+    file.close();
 }
 
 #include "moc_Patient.cpp"
