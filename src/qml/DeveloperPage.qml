@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 // SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.syntaxhighlighting 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
+import org.kde.syntaxhighlighting
+import org.kde.ki18n
 
-import org.kde.drkonqi 1.0
+import org.kde.drkonqi
 
 Kirigami.ScrollablePage {
     id: page
@@ -49,7 +50,7 @@ Kirigami.ScrollablePage {
             icon.name: "story-editor-symbolic"
             text: i18nc("@action Report the bug on this domain", "Report on %1", Globals.bugzillaShortUrl)
             tooltip: canReportText !== "" ? canReportText : i18nc("@info:tooltip", "Starts the bug report assistant.")
-            onTriggered: pageStack.push("qrc:/ui/WelcomePage.qml")
+            onTriggered: pageStack.push(Qt.resolvedUrl("WelcomePage.qml"))
         },
 
         Kirigami.Action {
@@ -80,7 +81,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
             tooltip: xi18nc("@info:tooltip",
 `Use this button to save the crash information (backtrace) to a file. This is useful if you want to take a look at it or to report the bug later.`)
             enabled: BacktraceGenerator.state === BacktraceGenerator.Loaded
-            onTriggered: DrKonqi.saveReport(traceArea.text)
+            onTriggered: DrKonqi.saveReport(traceArea.text, page.QQC2.ApplicationWindow.window)
         }
     ]
 
@@ -107,7 +108,7 @@ installed the proper debug symbol packages and you want to obtain a better backt
 
             RatingItem {
                 id: ratingItem
-                failed: BacktraceGenerator.state === BacktraceGenerator.Failed || BacktraceGenerator.state === BacktraceGenerator.FailedToStart || BacktraceGenerator.state === BacktraceGenerator.MemoryPressure
+                failed: BacktraceGenerator.hasAnyFailure
                 loading: BacktraceGenerator.state === BacktraceGenerator.Loading
             }
 
@@ -231,6 +232,9 @@ backtrace, install the needed packages (<link url='%2'>list of files</link>), th
                     } else if (state == BacktraceGenerator.Failed) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich", `Try to regenerate the backtrace by clicking the <interface>Reload</interface> button.`)
+                    } else if (state == BacktraceGenerator.FailedToPrepare) {
+                        traceArea.text = BacktraceGenerator.rawTraceData()
+                        detailsLabel.text = KI18n.xi18nc("@info/rich", `The backtrace generation failed to prepare. This indicates a severe problem which you likely cannot resolve.`)
                     } else if (state == BacktraceGenerator.FailedToStart) {
                         traceArea.text = BacktraceGenerator.rawTraceData()
                         detailsLabel.text = xi18nc("@info/rich",

@@ -10,9 +10,9 @@
 #include "crashedapplication.h"
 #include "drkonqi.h"
 
-void Doctore::saveReport(const QString &text)
+void Doctore::saveReport(const QString &text, QWindow *parent)
 {
-    DrKonqi::saveReport(text, nullptr);
+    DrKonqi::saveReport(text, parent);
 }
 
 void Doctore::copyToClipboard(const QString &text)

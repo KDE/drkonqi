@@ -12,6 +12,7 @@
 #define REPORTINTERFACE__H
 
 #include <QObject>
+#include <QQmlEngine>
 #include <QStringList>
 #include <QTimer>
 
@@ -28,6 +29,9 @@ class ProductMapping;
 class ReportInterface : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
     Q_PROPERTY(BugzillaManager *bugzilla READ bugzillaManager CONSTANT)
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString detailText MEMBER m_reportDetailText WRITE setDetailText NOTIFY detailTextChanged)
@@ -68,6 +72,11 @@ public:
     Q_ENUM(DrKonqiStamp)
 
     static ReportInterface *self();
+    static ReportInterface *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(self(), QQmlEngine::CppOwnership);
+        return self();
+    }
 
     Q_SIGNAL void awarenessChanged();
 

@@ -19,7 +19,7 @@ target_sources(DrKonqiInternal PRIVATE
     memorypressure.cpp
 )
 
-target_link_libraries(DrKonqiInternal
+target_link_libraries(DrKonqiInternal PRIVATE
     Systemd::systemd
     systemd-dbus
 )

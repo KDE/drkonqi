@@ -10,6 +10,7 @@
 
 #include <config-drkonqi.h>
 
+#include "settings.h"
 #include "systeminformation.h"
 
 #if HAVE_UNAME
@@ -18,12 +19,9 @@
 #endif
 
 #include "drkonqi_debug.h"
-#include <KConfig>
-#include <KConfigGroup>
 #include <KCoreAddons>
 #include <KOSRelease>
 #include <KProcess>
-#include <KSharedConfig>
 #include <KWindowSystem>
 #include <QStandardPaths>
 #include <kcoreaddons_version.h>
@@ -85,15 +83,13 @@ SystemInformation::SystemInformation(Config infoConfig, QObject *parent)
     m_operatingSystem = fetchOSDetailInformation();
     tryToSetBugzillaPlatform();
 
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SystemInformation"));
-    m_compiledSources = config.readEntry("CompiledSources", false);
+    m_compiledSources = Settings::compiledSources();
 }
 
 SystemInformation::~SystemInformation()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("SystemInformation"));
-    config.writeEntry("CompiledSources", m_compiledSources);
-    config.sync();
+    Settings::setCompiledSources(m_compiledSources);
+    Settings::self()->save();
 }
 
 void SystemInformation::tryToSetBugzillaPlatform()

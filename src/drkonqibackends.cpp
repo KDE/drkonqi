@@ -17,8 +17,6 @@
 #include <QTimer>
 
 #include "drkonqi_debug.h"
-#include <KConfig>
-#include <KConfigGroup>
 #include <KCrash>
 #include <QStandardPaths>
 
@@ -30,6 +28,7 @@
 #include "debuggermanager.h"
 #include "drkonqi.h"
 #include "linuxprocmapsparser.h"
+#include "settings.h"
 
 #ifdef Q_OS_MACOS
 #include <AvailabilityMacros.h>
@@ -133,7 +132,7 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
         const QString exePath = QFile::symLinkTarget(exeProcPath);
 
         executable.setFile(exePath);
-        if (DrKonqi::isKdeinit() || executable.fileName().startsWith(QLatin1String("python"))) {
+        if (executable.fileName().startsWith(QLatin1String("python"))) {
             fakeBaseName = DrKonqi::appName();
         }
 
@@ -147,19 +146,14 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
         qCDebug(DRKONQI_LOG) << "exe" << exePath << "has deleted files:" << hasDeletedFiles;
     } else {
-        if (DrKonqi::isKdeinit()) {
-            executable = QFileInfo(QStandardPaths::findExecutable(QStringLiteral("kdeinit5")));
-            fakeBaseName = DrKonqi::appName();
+        QFileInfo execPath(DrKonqi::appName());
+        if (execPath.isAbsolute()) {
+            executable = execPath;
+        } else if (!DrKonqi::appPath().isEmpty()) {
+            QDir execDir(DrKonqi::appPath());
+            executable = QFileInfo(execDir.absoluteFilePath(execPath.fileName()));
         } else {
-            QFileInfo execPath(DrKonqi::appName());
-            if (execPath.isAbsolute()) {
-                executable = execPath;
-            } else if (!DrKonqi::appPath().isEmpty()) {
-                QDir execDir(DrKonqi::appPath());
-                executable = QFileInfo(execDir.absoluteFilePath(execPath.fileName()));
-            } else {
-                executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
-            }
+            executable = QFileInfo(QStandardPaths::findExecutable(execPath.fileName()));
         }
     }
 
@@ -187,18 +181,9 @@ CrashedApplication *KCrashBackend::constructCrashedApplication()
 
 DebuggerManager *KCrashBackend::constructDebuggerManager()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("DrKonqi"));
-#if defined(__MAC_OS_X_VERSION_MAX_ALLOWED) && __MAC_OS_X_VERSION_MAX_ALLOWED > 1070
-    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("lldb"));
-#elif !defined(Q_OS_WIN)
-    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("gdb"));
-#else
-    QString defaultDebuggerName = config.readEntry("Debugger", QStringLiteral("cdb"));
-#endif
-
     const QList<Debugger> internalDebuggers = Debugger::availableInternalDebuggers(QStringLiteral("KCrash"));
 
-    const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, defaultDebuggerName));
+    const Debugger preferredDebugger(Debugger::findDebugger(internalDebuggers, Settings::debugger()));
     qCDebug(DRKONQI_LOG) << "Using debugger:" << preferredDebugger.codeName();
     return new DebuggerManager(preferredDebugger, this);
 }

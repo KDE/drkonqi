@@ -4,7 +4,7 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 if(HAVE_UNAME)
     add_executable(lsb_release lsb_release_double.c)
 
-    ecm_add_tests(systeminformationtest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
+    ecm_add_tests(systeminformationtest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal KF6::CoreAddons)
 endif()
 
 add_subdirectory(crashtest)
@@ -12,11 +12,11 @@ add_subdirectory(backtraceparsertest)
 add_subdirectory(bugzillalibtest)
 add_subdirectory(sentrytest)
 
-ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_backtrace_parser)
+ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 ecm_add_tests(
         linuxprocmapsparsertest.cpp
         statusnotifier_activationclosetimertest.cpp
-    LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
+    LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal Qt::DBus)
 
 if(NOT APPLE)
     if(NOT RUBY_EXECTUABLE)

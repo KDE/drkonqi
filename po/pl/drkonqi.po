@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Grzesiek11 <grzesiek.jedenastka@outlook.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
-"PO-Revision-Date: 2026-01-18 16:20+0100\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"PO-Revision-Date: 2026-08-08 12:40+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,252 +29,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "Wczytaj &ponownie"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Użyj tego przycisku, aby ponownie wczytać dane o usterce (ślad wykonywania). "
-"Jest to przydatne, gdy nie masz wgranych odpowiednich pakietów do "
-"diagnostyki i chcesz uzyskać lepszy ślad."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "Wgraj symbole d&iagnostyczne"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Użyj tego przycisku, aby wgrać brakujące pakiety symboli diagnostycznych."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Wgranie symboli jest niedostępne ponieważ aplikacja została uaktualniona lub "
-"usunięta po jej uruchomieniu."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
-"schowka."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Użyj tego przycisku, aby zapisać dane o usterce (ślad wykonywania) do pliku. "
-"Jest to przydatne, jeśli usterką będziesz chciał się zająć później."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Czym jest \"ślad wykonywania\" ?</h2><p>Ślad wykonywania dokładnie "
-"opisuje co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
-"programistom do ustalania miejsca występowania błędu. Dane te mogą wydać ci "
-"się bez znaczenia, ale zawierają wiele użytecznych szczegółów.<br />Ślady "
-"wykonywania są często używane podczas diagnostyki interaktywnej lub po "
-"zakończeniu pracy programu.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Wczytywanie..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Zbieranie danych o usterce... (to może chwilę potrwać)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Inny program diagnostyczny diagnozuje teraz ten sam program. Nie można "
-"pobrać szczegółów o usterce."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Nie udało się pobrać informacji o usterce."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Z programem, w którym wystąpiła usterka, powiązany jest inny proces "
-"diagnostyczny. Dlatego też program diagnostyczny DrKonqi nie może pobrać "
-"szczegółów o usterce. Proszę zamknąć inne wystąpienie programu "
-"diagnostycznego i nacisnąć na <interface>Wczytaj ponownie</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Zebrane dane o usterce są przydatne."
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Zebrane dane o usterce mogą być przydatne."
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Zebrane dane o usterce prawdopodobnie nie są przydatne."
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Zebrane dane o usterce nie są przydatne."
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Ocena informacji o usterce jest niepoprawna. Jest to błąd programu DrKonqi."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Aby samoczynnie wgrać brakujące pakiety diagnostyczne, naciśnij na przycisk "
-"<interface>Wgraj symbole diagnostyczne</interface>. Jeśli ten sposób nie "
-"zadziała, zapoznaj się z treścią tekstu <link url='%1'>Jak tworzyć użyteczne "
-"zgłoszenia o usterce</link>, dzięki czemu dowiesz się, jak uzyskać przydatny "
-"ślad wykonywania; wgraj potrzebne pakiety (<link url='%2'>lista plików</"
-"link>) i naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Przeczytaj <link url='%1'>przewodnik skutecznego zgłaszania błędów</link>, "
-"aby dowiedzieć się jak uzyskać użyteczny ślad wykonywania. Następnie wgraj "
-"potrzebne pakiety (<link url='%2'>spis pakietów</link>) i naciśnij na "
-"przycisk <interface>Wczytaj ponownie</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Nie udało się zebrać szczegółów o usterce."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Aby spróbować utworzyć ślad wykonywania ponownie naciśnij przycisk "
-"<interface>Wczytaj ponownie</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Brak programu do diagnozowania lub nie może on zostać uruchomiony.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a następnie "
-"nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Błąd podczas wgrywania symboli diagnostycznych"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Brakuje pakietów zawierających szczegóły diagnostyczne dla następujących "
-"programów i bibliotek:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Brak pakietów diagnostycznych"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -285,31 +39,62 @@ msgstr ""
 "<placeholder>Opowiedz nam szczegółowo o czynnościach wykonywanych, gdy w "
 "programie nastąpiła usterka.</placeholder>"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr "Nie udało się utworzyć katalogu pliku jądra: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr "Nie udało się otworzyć pliku jądra: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr "Plik zrzutu jądra nie istnieje: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr "Wydobywanie pliku jądra zakończyło kodem błędu: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
+"Nie udało się wydobyć pliku jądra przy użyciu podwyższonych uprawnień: %1"
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "Podproces zakończył z błędem: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Wysypał się podproces. Sprawdź swoją instalację."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Przeglądarka wysypanych procesów"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Daje widok szczegółowy poprzednich usterek"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, Autorzy DrKonqi"
@@ -403,22 +188,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "Szczegóły"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Skopiuj do schowka"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Rozpocznij diagnostykę interaktywną"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Zgłoś na %1"
@@ -428,22 +213,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Usterki"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Wczytywanie zgłoszeń o usterkach"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Jeszcze żaden proces się nie wysypał"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Nie ma żadnych usterek pod szukanym słowem"
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Przegląd"
@@ -498,13 +283,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr "Nie można uruchomić przeglądarki wysypanych procesów."
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr "GDB"
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -541,25 +326,25 @@ msgid ""
 "packages."
 msgstr "Wystąpił błąd podczas wgrywania pakietów symboli diagnostycznych."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Zgłoszenie zapisane w pliku <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Nie można utworzyć pliku do zapisania zgłoszenia."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Zapisz sprawozdanie"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -578,117 +363,6 @@ msgid "Use this button to restart the crashed application."
 msgstr ""
 "Użyj tego przycisku, aby ponownie uruchomić program, w którym wystąpiła "
 "usterka."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "O&góły"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Szczegóły"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Niestety, program <application>%1</application> niespodziewanie "
-"zakończył działanie.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>W programie do obsługi usterek, nastąpiła usterka, więc wyłączono "
-"system do zautomatyzowanego zgłaszania błędów po to,  aby zmniejszyć ryzyko "
-"ponownego wystąpienia usterki.<nl /><nl /> Proszę, <link url='%1'>ręcznie "
-"zgłosić</link> ten błąd do systemu obsługi błędów KDE. Nie zapomnij dołączyć "
-"śladu z karty <interface>Informacji dla programisty</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
-"obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl />Możesz "
-"ręcznie zgłosić ten błąd do %1 (dołączając ślad wykonywania z karty "
-"<interface>Szczegóły dla programisty</interface>.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Pomocnik zgłaszania została wyłączony, bo aplikacja z usterką została "
-"uaktualniona lub usunięta po jej uruchomieniu. To uniemożliwia dokładne "
-"zgłoszenie usterki, a także może być jej przyczyną.</para><para>Po "
-"uaktualnieniu, dobrze jest zawsze przelogować się, aby upewnić się, że "
-"zostało ono dobrze przeprowadzone i nie spowoduje żadnych skutków ubocznych."
-"</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Zgłoszenie tego błędu może nam pomóc w usprawnieniu KDE.<nl /><link "
-"url='%1'>Dowiedz się więcej o zgłaszaniu błędów.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Nie możesz zgłosić tego błędu, ponieważ <application>%1</application> "
-"nie dostarcza adresu zgłaszania błędu.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Szczegóły:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Plik wykonywalny: <application>%1</application> PID: %2 Sygnał: %3 "
-"(%4) Czas: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Zamknij to okno (wszystkie dane o usterce zostaną utracone.)"
 
 #: main.cpp:154
 #, kde-format
@@ -787,22 +461,16 @@ msgstr "Początkowy <ID> programu"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Program był uruchomiony przez kdeinit"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Wyłącz bezpośredni dostęp do dysku"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Program już został ponownie uruchomiony"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
@@ -810,13 +478,13 @@ msgstr ""
 "Nie przerywaj działania programu, utwórz ślad wykonywania przy ponownym "
 "uruchomieniu"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<ID wątku> wadliwego wątku"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -895,7 +563,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Niezwykłe ustawienia programu, które mogą mieć znaczenie"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Niewystarczająco użyteczne"
@@ -913,38 +581,38 @@ msgstr ""
 "Jeśli nie przypominasz sobie więcej szczegółów, to możesz zamknąć to okno "
 "zgłaszania błędów."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Szczegóły dla programisty"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Wgraj symbole diagnostyczne"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "Użyj tego przycisku, aby wgrać pakiety brakujących symboli diagnostycznych."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Zgłoś na %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Wywołuje pomocnika zgłaszania błędów."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -957,17 +625,34 @@ msgstr ""
 "gdy nie masz wgranych odpowiednich pakietów do diagnostyki i chcesz uzyskać "
 "lepszy ślad."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Skopiuj"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Użyj tego przycisku, aby skopiować dane o usterce (ślad wykonywania) do "
+"schowka."
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Użyj tego przycisku, aby zapisać dane o usterce (ślad wykonywania) do pliku. "
+"Jest to przydatne, jeśli usterką będziesz chciał się zająć później."
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -977,12 +662,17 @@ msgstr ""
 "pamięci, aby utworzyć pełny ślad wykonywania. Pozamykaj kilka aplikacji i "
 "spróbuj ponownie."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Spróbuj ponownie"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Błąd podczas wgrywania symboli diagnostycznych"
+
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -1002,7 +692,7 @@ msgstr ""
 "link>), a następnie naciśnij na przycisk <interface>Wczytaj ponownie</"
 "interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -1016,7 +706,7 @@ msgstr ""
 "(<link url='%2'>spis pakietów</link>) i naciśnij na przycisk "
 "<interface>Wczytaj ponownie</interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -1028,6 +718,15 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+"Nie udało się przygotować śladu wykonywania. Wskazuje to na poważny błąd, "
+"którego prawdopodobnie samodzielnie nie rozwiążesz."
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
@@ -1035,7 +734,7 @@ msgstr ""
 "następnie nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</"
 "emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -1045,6 +744,15 @@ msgstr ""
 "Przerwano zbieranie śladu wykonywania ze względu na niewystarczającą ilość "
 "pamięci. Aby spróbować utworzyć ślad wykonywania, ponownie naciśnij przycisk "
 "<interface>Wczytaj ponownie</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Brakuje pakietów zawierających szczegóły diagnostyczne dla następujących "
+"programów i bibliotek:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1124,7 +832,16 @@ msgstr ""
 "Użyj tego przycisku, aby wejść do systemu obsługi błędów KDE przy użyciu "
 "wpisanego adresu pocztowego i hasła."
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Nie możesz zgłosić tego błędu, ponieważ <application>%1</application> "
+"nie dostarcza adresu zgłaszania błędu.</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1143,7 +860,7 @@ msgstr ""
 "śladu z karty <interface>Szczegóły dla programisty</interface>.\n"
 "</para>"
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1156,7 +873,7 @@ msgstr ""
 "ręcznie zgłosić ten błąd do <link>%1</link> (dołączając ślad wykonywania ze "
 "strony <interface>Szczegóły dla programisty</interface>.)</para>"
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1175,7 +892,16 @@ msgstr ""
 "aby upewnić się, że zostało ono dobrze przeprowadzone i nie spowoduje\n"
 "żadnych skutków ubocznych.</para>"
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Zgłoszenie tego błędu może nam pomóc w usprawnieniu KDE.<nl /><link "
+"url='%1'>Dowiedz się więcej o zgłaszaniu błędów.</link></para>"
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -1184,7 +910,16 @@ msgstr ""
 "Było niewystarczająco pamięci, aby zebrać szczegóły o usterce. Pozamykaj "
 "kilka aplikacji, aby zwolnić pamięć i spróbuj ponownie."
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"Nie udało się zgromadzić danych z wysypanego programu. Możesz zamknąć to "
+"okno lub  or <link url='%1'>obejrzeć szczegółowy opis</link>."
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1192,9 +927,9 @@ msgid ""
 msgstr ""
 "Nie udało się zgromadzić danych z wysypanego programu z nieznanych powodów. "
 "Możesz spróbować ponownie, zamknąć to okno lub  or <link url='%1'>obejrzeć "
-"szczegółowe opis</link>."
+"szczegółowy opis</link>."
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1432,9 +1167,11 @@ msgstr "Sam wyślij zgłoszenie"
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
-msgstr "Zbieranie danych po wysypaniu. Zebrane dane zostaną wysłane w tle."
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
+msgstr ""
+"Zbieranie danych po wysypaniu. Możesz zamknąć to okno. Zebrane dane zostaną "
+"wysłane w tle."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
@@ -1648,6 +1385,253 @@ msgstr "bugstest.kde.org nazwa_użytkownika"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org hasło"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "Wczytaj &ponownie"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Użyj tego przycisku, aby ponownie wczytać dane o usterce (ślad "
+#~ "wykonywania). Jest to przydatne, gdy nie masz wgranych odpowiednich "
+#~ "pakietów do diagnostyki i chcesz uzyskać lepszy ślad."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "Wgraj symbole d&iagnostyczne"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Użyj tego przycisku, aby wgrać brakujące pakiety symboli diagnostycznych."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Wgranie symboli jest niedostępne ponieważ aplikacja została uaktualniona "
+#~ "lub usunięta po jej uruchomieniu."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Czym jest \"ślad wykonywania\" ?</h2><p>Ślad wykonywania dokładnie "
+#~ "opisuje co działo się wewnątrz aplikacji, zanim się wysypała. Służy "
+#~ "programistom do ustalania miejsca występowania błędu. Dane te mogą wydać "
+#~ "ci się bez znaczenia, ale zawierają wiele użytecznych szczegółów.<br /"
+#~ ">Ślady wykonywania są często używane podczas diagnostyki interaktywnej "
+#~ "lub po zakończeniu pracy programu.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Wczytywanie..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Zbieranie danych o usterce... (to może chwilę potrwać)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Inny program diagnostyczny diagnozuje teraz ten sam program. Nie można "
+#~ "pobrać szczegółów o usterce."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Nie udało się pobrać informacji o usterce."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Z programem, w którym wystąpiła usterka, powiązany jest inny proces "
+#~ "diagnostyczny. Dlatego też program diagnostyczny DrKonqi nie może pobrać "
+#~ "szczegółów o usterce. Proszę zamknąć inne wystąpienie programu "
+#~ "diagnostycznego i nacisnąć na <interface>Wczytaj ponownie</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Zebrane dane o usterce są przydatne."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Zebrane dane o usterce mogą być przydatne."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Zebrane dane o usterce prawdopodobnie nie są przydatne."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Zebrane dane o usterce nie są przydatne."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Ocena informacji o usterce jest niepoprawna. Jest to błąd programu "
+#~ "DrKonqi."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Aby samoczynnie wgrać brakujące pakiety diagnostyczne, naciśnij na "
+#~ "przycisk <interface>Wgraj symbole diagnostyczne</interface>. Jeśli ten "
+#~ "sposób nie zadziała, zapoznaj się z treścią tekstu <link url='%1'>Jak "
+#~ "tworzyć użyteczne zgłoszenia o usterce</link>, dzięki czemu dowiesz się, "
+#~ "jak uzyskać przydatny ślad wykonywania; wgraj potrzebne pakiety (<link "
+#~ "url='%2'>lista plików</link>) i naciśnij na przycisk <interface>Wczytaj "
+#~ "ponownie</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Przeczytaj <link url='%1'>przewodnik skutecznego zgłaszania błędów</"
+#~ "link>, aby dowiedzieć się jak uzyskać użyteczny ślad wykonywania. "
+#~ "Następnie wgraj potrzebne pakiety (<link url='%2'>spis pakietów</link>) i "
+#~ "naciśnij na przycisk <interface>Wczytaj ponownie</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Program diagnostyczny niespodziewanie zakończył działanie."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Nie udało się zebrać szczegółów o usterce."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Aby spróbować utworzyć ślad wykonywania ponownie naciśnij przycisk "
+#~ "<interface>Wczytaj ponownie</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Brak programu do diagnozowania lub nie może on zostać uruchomiony."
+#~ "</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Najpierw musisz zainstalować program diagnostyczny (%1), a "
+#~ "następnie nacisnąć na przycisk <interface>Wczytaj ponownie</interface>.</"
+#~ "strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Brak pakietów diagnostycznych"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "O&góły"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Szczegóły"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Niestety, program <application>%1</application> niespodziewanie "
+#~ "zakończył działanie.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>W programie do obsługi usterek, nastąpiła usterka, więc wyłączono "
+#~ "system do zautomatyzowanego zgłaszania błędów po to,  aby zmniejszyć "
+#~ "ryzyko ponownego wystąpienia usterki.<nl /><nl /> Proszę, <link "
+#~ "url='%1'>ręcznie zgłosić</link> ten błąd do systemu obsługi błędów KDE. "
+#~ "Nie zapomnij dołączyć śladu z karty <interface>Informacji dla "
+#~ "programisty</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Pomocnik zgłaszania jest wyłączony, ponieważ okno programu "
+#~ "obsługującego usterki zostało uruchomione w trybie bezpiecznym.<nl /"
+#~ ">Możesz ręcznie zgłosić ten błąd do %1 (dołączając ślad wykonywania z "
+#~ "karty <interface>Szczegóły dla programisty</interface>.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Pomocnik zgłaszania została wyłączony, bo aplikacja z usterką "
+#~ "została uaktualniona lub usunięta po jej uruchomieniu. To uniemożliwia "
+#~ "dokładne zgłoszenie usterki, a także może być jej przyczyną.</"
+#~ "para><para>Po uaktualnieniu, dobrze jest zawsze przelogować się, aby "
+#~ "upewnić się, że zostało ono dobrze przeprowadzone i nie spowoduje żadnych "
+#~ "skutków ubocznych.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Szczegóły:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Plik wykonywalny: <application>%1</application> PID: %2 Sygnał: %3 "
+#~ "(%4) Czas: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Zamknij to okno (wszystkie dane o usterce zostaną utracone.)"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Program był uruchomiony przez kdeinit"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"

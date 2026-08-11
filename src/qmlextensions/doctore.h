@@ -4,7 +4,8 @@
 #pragma once
 
 #include <QObject>
-
+#include <QWindow>
+#include <qqmlintegration.h>
 #include "systeminformation.h"
 
 /**
@@ -17,11 +18,14 @@
 class Doctore : public QObject
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(DrKonqi)
+    QML_SINGLETON
+
     // TODO redo DrKonqi so it can work with QML and convert everything to properties.
 public:
     using QObject::QObject;
 
-    static Q_INVOKABLE void saveReport(const QString &text);
+    static Q_INVOKABLE void saveReport(const QString &text, QWindow *parent);
     static Q_INVOKABLE void copyToClipboard(const QString &text);
     static Q_INVOKABLE QString appName();
     static Q_INVOKABLE QString kdeBugzillaURL();

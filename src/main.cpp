@@ -24,7 +24,6 @@
 #include <QTimer>
 
 #include <KAboutData>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KSignalHandler>
@@ -40,6 +39,7 @@
 #include "drkonqi.h"
 #include "drkonqidialog.h"
 #include "sentryscope.h"
+#include "settings.h"
 #include "statusnotifier.h"
 
 using namespace std::chrono_literals;
@@ -176,7 +176,6 @@ int main(int argc, char *argv[])
     const QCommandLineOption productNameOption(QStringLiteral("productname"), i18nc("@info:shell", "Bugzilla product name"), QStringLiteral("name"));
     const QCommandLineOption pidOption(QStringLiteral("pid"), i18nc("@info:shell", "The <PID> of the program"), QStringLiteral("pid"));
     const QCommandLineOption startupIdOption(QStringLiteral("startupid"), i18nc("@info:shell", "Startup <ID> of the program"), QStringLiteral("id"));
-    const QCommandLineOption kdeinitOption(QStringLiteral("kdeinit"), i18nc("@info:shell", "The program was started by kdeinit"));
     const QCommandLineOption saferOption(QStringLiteral("safer"), i18nc("@info:shell", "Disable arbitrary disk access"));
     const QCommandLineOption restartedOption(QStringLiteral("restarted"), i18nc("@info:shell", "The program has already been restarted"));
     const QCommandLineOption keepRunningOption(QStringLiteral("keeprunning"),
@@ -200,7 +199,6 @@ int main(int argc, char *argv[])
                        productNameOption,
                        pidOption,
                        startupIdOption,
-                       kdeinitOption,
                        saferOption,
                        restartedOption,
                        keepRunningOption,
@@ -242,7 +240,6 @@ int main(int argc, char *argv[])
     DrKonqi::setProgramName(parser.value(programNameOption));
     DrKonqi::setProductName(parser.value(productNameOption));
     DrKonqi::setPid(parser.value(pidOption).toInt());
-    DrKonqi::setKdeinit(parser.isSet(kdeinitOption));
     DrKonqi::setSafer(parser.isSet(saferOption));
     DrKonqi::setRestarted(parser.isSet(restartedOption));
     DrKonqi::setKeepRunning(parser.isSet(keepRunningOption));
@@ -277,7 +274,7 @@ int main(int argc, char *argv[])
     const bool restarted = parser.isSet(restartedOption);
 
     // Whether the user should be encouraged to file a bug report
-    const bool interactionAllowed = KConfigGroup(KSharedConfig::openConfig(), QStringLiteral("General")).readEntry("InteractionAllowed", true);
+    const bool interactionAllowed = Settings::interactionAllowed();
     const bool shuttingDown = isShuttingDown();
 
     if (forceDialog) {

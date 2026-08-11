@@ -128,7 +128,6 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("autorestart"), QStringLiteral("Automatically restart")));
-    parser.addOption(QCommandLineOption(QStringLiteral("kdeinit"), QStringLiteral("Start DrKonqi using kdeinit")));
     parser.addPositionalArgument(QStringLiteral("type"), QStringLiteral("Type of crash."), QStringLiteral("crash|malloc|div0|assert|threads|fatal"));
     aboutData.setupCommandLine(&parser);
     parser.process(app);
@@ -137,8 +136,6 @@ int main(int argc, char *argv[])
     // Start drkonqi directly by default so that drkonqi's output goes to the console.
     KCrash::CrashFlags flags = KCrash::AlwaysDirectly;
     // This can be disabled to be able to test kcrash's real default behavior.
-    if (parser.isSet(QStringLiteral("kdeinit")))
-        flags &= ~KCrash::AlwaysDirectly;
     if (parser.isSet(QStringLiteral("autorestart")))
         flags |= KCrash::AutoRestart;
     KCrash::setFlags(flags);

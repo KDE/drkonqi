@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 // SPDX-FileCopyrightText: 2022-2023 Harald Sitter <sitter@kde.org>
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.syntaxhighlighting 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
+import org.kde.syntaxhighlighting
 
-import org.kde.drkonqi 1.0
+import org.kde.drkonqi
 
 Kirigami.ScrollablePage {
     id: page
@@ -18,7 +18,7 @@ Kirigami.ScrollablePage {
     onLoggedInChanged: {
         console.log("logged in changed")
         if (loggedIn) {
-            pageStack.push('qrc:/ui/ReportPage.qml')
+            pageStack.push(Qt.resolvedUrl("ReportPage.qml"))
         }
     }
 

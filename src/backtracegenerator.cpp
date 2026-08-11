@@ -474,7 +474,7 @@ QByteArray BacktraceGenerator::sentryPayload() const
     return m_sentryPayload;
 };
 
-void BacktraceGenerator::setBackendFailed()
+void BacktraceGenerator::setBackendFailedToPrepare(const QString &context)
 {
     // Shouldn't have been set yet
     Q_ASSERT(!m_proc);
@@ -482,14 +482,22 @@ void BacktraceGenerator::setBackendFailed()
     m_proc = nullptr;
     m_temp = nullptr;
 
-    m_state = FailedToStart;
+    m_rawTraceBytes.append(context.toUtf8());
+
+    m_state = FailedToPrepare;
     Q_EMIT stateChanged();
     Q_EMIT failedToStart();
 }
 
 bool BacktraceGenerator::hasAnyFailure()
 {
-    return m_state == State::Failed || m_state == State::FailedToStart || m_state == State::MemoryPressure;
+    return std::ranges::any_of(std::initializer_list{State::Failed, //
+                                                     State::FailedToPrepare,
+                                                     State::FailedToStart,
+                                                     State::MemoryPressure},
+                               [this](State state) {
+                                   return m_state == state;
+                               });
 }
 
 QUrl BacktraceGenerator::rawTraceUrlAndDoNotAutoRemove()

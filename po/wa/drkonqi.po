@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
 "PO-Revision-Date: 2013-07-06 01:28+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -32,256 +32,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "jean.cayron@gmail.com, laurent.hendschel@skynet.be, pablo@walon.org"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Ritcherdjî"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Eployîz ç' boton chal po rtcherdjî ls informåcions sol tcheyaedje e rak "
-"(passêye e-n erî). C' est ahessåve cwand vs avoz astalé li bou simbole di "
-"disbugaedje et k' vos vloz aveur ene meyeuse passêye e-n erî."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Astaler simboles di disbugaedje"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr ""
-"Siervoz vs di ç' boton ci po-z astaler les pacaedjes di simboles di "
-"disbugaedje mancants."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Siervoz vs di ç' boton ci po copyî les informåcions sol tcheyaedje e rak "
-"(passêye e-n erî) dins l' presse-papî."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Siervoz vs di ç' boton ci po schaper les informåcions sol tcheyaedje e rak "
-"(passêye e-n erî) dins on fitchî. Ça pout siervi si vs voloz î rwaitî ou "
-"rapoirter l' bug pus tård."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Ene « passêye e-n erî », cwè çki c' est d' ça ?</h2><p>Ene passêye e-n "
-"erî discrît çou k' i s' a passé e programe cwand il a tcheyou e rak, po "
-"k' les programeus sepnuxhe ritrover wice kel disdût a comincî. I pôrént n' "
-"vos rén dire a vos mins aveur totes sôres di pondants et di djondants bén "
-"ahessåves.<br />Les passêye e-n erîs sont sovint eployîs sol tins do "
-"disbugaedje interactif et post-mortem.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Dji tchedje..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Dji fwait askepyî l' passêye e-n erî... (ça pout prinde do tins)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"Èn ôte disbugueu disbugue pol moumint l' minme programe. Dji n' a savou "
-"cweri après les pondants et les djondants do tcheyaedje e rak."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Dji n' a savou cweri après l' informåcion sol tcheyaedje e rak."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Èn ôte processus di disbugaedje est ataetchî å programe k' a tcheyou e rak. "
-"Ça fwait kel disbugueu di DrKonqi n' sait nén cweri après l' passêye e-n "
-"erî. Cloyoz l' ôte disbugueu s' i vs plait eyet clitchî so "
-"<interface>Ritcherdjî</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Les informåcions sol tcheyaedje e rak d' askepeye est ahessåve"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr ""
-"Les informåcions sol tcheyaedje e rak d' askepeye pôrént esse ahessåves"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr ""
-"Les informåcions sol tcheyaedje e rak d' askepeye n' est motoit nén ahessåve"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Les informåcions sol tcheyaedje e rak d' askepeye n' est nén ahessåve"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Li préjhaedje di ces informåcions di tcheyaedje e rak n' est nén valåbe. "
-"C' est on bug di dvins DrKonqi lu-minme."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Vos savoz clitchî sol  boton <interface>Astaler les simboles di disbugaedje</"
-"interface> po saveur astaler otomaticmint les pacaedjes mancants "
-"d' informåcions di disbugaedje. Si cisse metôde la ni va nén, lijhoz s' i vs "
-"plait <link url='%1'>Comint ahiver des rapoirts di bug ahessåves</link> po-z "
-"aprinde comint obtini ene passêye e-n erî ahessåve ; astalez les pacaedjes "
-"k' i fåt (<link url='%2'>lisse des fitchîs</link>) eyet clitchî sol boton "
-"<interface>Ritcherdjî</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Lijhoz s' i vs plait <link url='%1'>Comint ahiver des rapoirts di bug "
-"ahessåves</link> po-z aprinde comint obtini ene passêye e-n erî ahessåve ; "
-"astalez les pacaedjes k' i fåt (<link url='%2'>lisse des fitchîs</link>) "
-"eyet clitchî sol boton <interface>Ritcherdjî</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Li disbugueu a moussî foû d' abôrd k' on nel ratindeu nén."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Dji n' a savou askepyî l' informåcion sol tcheyaedje e rak."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Vos pôrîz rsayî d' askepyî l' passêye e-n erî tot clitchant sol boton "
-"<interface>Ritcherdjî</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Li programe disbugueu manke oudonbén dji n' l' a savou enonder.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Vos dvoz astaler l' pacaedje do disbugueu (%1) ey adon clitchî sol "
-"boton <interface>Ritcherdjî</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Åk n' a nén stî come dj' astaléve les simboles di disbugaedje"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Les pacaedjes k' a les informåcions d' disbugaedje pol programe eyet l' "
-"livreye shuvantes divins mankèt :"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Les pacaedjes d' informåcion d' disbugaedje mankèt"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -290,31 +40,61 @@ msgid ""
 "crashed.</placeholder>"
 msgstr ""
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr ""
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr ""
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr ""
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr ""
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
@@ -402,7 +182,7 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Details:"
@@ -410,17 +190,17 @@ msgctxt "@title"
 msgid "Details"
 msgstr "Totafwait :"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -433,7 +213,7 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Sending the Crash Report"
@@ -441,17 +221,17 @@ msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Evoyaedje do rapoirt di tcheyaedje e rak"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr ""
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "@title:window"
@@ -510,13 +290,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr ""
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr ""
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -560,19 +340,19 @@ msgstr ""
 "Åk n' a nén stî come l' astalaedje des pacaedjes di simboles di disbugaedje "
 "si fjhént."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Rapoirt schapé come <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Dji n' a savou ahiver d' fitchî po schaper l' rapoirt divins."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Save to File..."
@@ -580,7 +360,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "&Schaper dins on fitchî..."
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -597,111 +377,6 @@ msgstr "&Renonder programe"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Si siervi di ç' boton ci po renonder l' programe k' a tcheyou e rak."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Djenerå"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "Informåcions sol &diswalpeu"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Nos rgretans mins <application>%1</application>s' a cloyou d' ene "
-"façon nén ratindowe.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Nos rgretans mins <application>%1</application>s' a cloyou d' ene "
-"façon nén ratindowe.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Totafwait :"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, fuzzy, kde-kuit-format
-#| msgctxt ""
-#| "@info Note the time information is divided into date and time parts"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4) Time: %5 %6</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Enondåve : <application>%1</application> PID : <numid>%2</numid> "
-"Signå : %3 (%4) Date : %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr ""
-"Clôre ci purnea d' divize ci (vos piedroz les informåcions sol tcheyaedje e "
-"rak)"
 
 #: main.cpp:154
 #, fuzzy, kde-format
@@ -821,29 +496,23 @@ msgstr "L' idintifiant d' enondaedje do programe"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Li programe a stî enondé pa kdeinit"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Essocter accès årbitråres al plake"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Li programe a ddja stî renondé"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 "Leyî l' programe tourner eyet askepyî l' passêye e-n erî a l' enondaedje"
 
-#: main.cpp:186
+#: main.cpp:185
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -851,7 +520,7 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "L' id del lignoûle del lignoûle ki fwait berwete"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -983,7 +652,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Apontiaedjes a vosse môde do programe ki pôrént aveur vey avou"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -1004,7 +673,7 @@ msgstr ""
 "Les informåcions ki vos avoz dné ni sont nén considerêyes come nos aidant "
 "assez po ç' cas chal."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -1012,7 +681,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informåcions sol &diswalpeu"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -1020,7 +689,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "&Astaler simboles di disbugaedje"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Use this button to install the missing debug symbols packages."
@@ -1030,7 +699,7 @@ msgstr ""
 "Siervoz vs di ç' boton ci po-z astaler les pacaedjes di simboles di "
 "disbugaedje mancants."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -1038,12 +707,12 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Rapoirter a %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Enonde li macrea di rapoirtaedje di bug."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -1051,7 +720,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "&Ritcherdjî"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1069,26 +738,44 @@ msgstr ""
 "(passêye e-n erî). C' est ahessåve cwand vs avoz astalé li bou simbole di "
 "disbugaedje et k' vos vloz aveur ene meyeuse passêye e-n erî."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&Copyî"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Siervoz vs di ç' boton ci po copyî les informåcions sol tcheyaedje e rak "
+"(passêye e-n erî) dins l' presse-papî."
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Siervoz vs di ç' boton ci po schaper les informåcions sol tcheyaedje e rak "
+"(passêye e-n erî) dins on fitchî. Ça pout siervi si vs voloz î rwaitî ou "
+"rapoirter l' bug pus tård."
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Retry..."
@@ -1096,7 +783,12 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Risayî..."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Åk n' a nén stî come dj' astaléve les simboles di disbugaedje"
+
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1124,7 +816,7 @@ msgstr ""
 "k' i fåt (<link url='%2'>lisse des fitchîs</link>) eyet clitchî sol boton "
 "<interface>Ritcherdjî</interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1144,7 +836,7 @@ msgstr ""
 "astalez les pacaedjes k' i fåt (<link url='%2'>lisse des fitchîs</link>) "
 "eyet clitchî sol boton <interface>Ritcherdjî</interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1159,6 +851,13 @@ msgstr ""
 "<interface>Ritcherdjî</interface>."
 
 #: qml/DeveloperPage.qml:237
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1172,7 +871,7 @@ msgstr ""
 "<strong>Vos dvoz astaler l' pacaedje do disbugueu (%1) ey adon clitchî sol "
 "boton <interface>Ritcherdjî</interface>.</strong>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1186,6 +885,15 @@ msgid ""
 msgstr ""
 "Vos pôrîz rsayî d' askepyî l' passêye e-n erî tot clitchant sol boton "
 "<interface>Ritcherdjî</interface>."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Les pacaedjes k' a les informåcions d' disbugaedje pol programe eyet l' "
+"livreye shuvantes divins mankèt :"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1255,7 +963,21 @@ msgid ""
 "email address and password."
 msgstr ""
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Nos rgretans mins <application>%1</application>s' a cloyou d' ene "
+"façon nén ratindowe.</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1267,7 +989,7 @@ msgid ""
 "page.</para>"
 msgstr ""
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1276,7 +998,7 @@ msgid ""
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1288,21 +1010,35 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1601,8 +1337,8 @@ msgstr ""
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
 msgstr ""
 
 #: qml/SentryPage.qml:55
@@ -1859,6 +1595,214 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Ritcherdjî"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Eployîz ç' boton chal po rtcherdjî ls informåcions sol tcheyaedje e rak "
+#~ "(passêye e-n erî). C' est ahessåve cwand vs avoz astalé li bou simbole di "
+#~ "disbugaedje et k' vos vloz aveur ene meyeuse passêye e-n erî."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Astaler simboles di disbugaedje"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr ""
+#~ "Siervoz vs di ç' boton ci po-z astaler les pacaedjes di simboles di "
+#~ "disbugaedje mancants."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Ene « passêye e-n erî », cwè çki c' est d' ça ?</h2><p>Ene passêye e-"
+#~ "n erî discrît çou k' i s' a passé e programe cwand il a tcheyou e rak, po "
+#~ "k' les programeus sepnuxhe ritrover wice kel disdût a comincî. I pôrént "
+#~ "n' vos rén dire a vos mins aveur totes sôres di pondants et di djondants "
+#~ "bén ahessåves.<br />Les passêye e-n erîs sont sovint eployîs sol tins do "
+#~ "disbugaedje interactif et post-mortem.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Dji tchedje..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Dji fwait askepyî l' passêye e-n erî... (ça pout prinde do tins)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "Èn ôte disbugueu disbugue pol moumint l' minme programe. Dji n' a savou "
+#~ "cweri après les pondants et les djondants do tcheyaedje e rak."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Dji n' a savou cweri après l' informåcion sol tcheyaedje e rak."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Èn ôte processus di disbugaedje est ataetchî å programe k' a tcheyou e "
+#~ "rak. Ça fwait kel disbugueu di DrKonqi n' sait nén cweri après l' passêye "
+#~ "e-n erî. Cloyoz l' ôte disbugueu s' i vs plait eyet clitchî so "
+#~ "<interface>Ritcherdjî</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Les informåcions sol tcheyaedje e rak d' askepeye est ahessåve"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr ""
+#~ "Les informåcions sol tcheyaedje e rak d' askepeye pôrént esse ahessåves"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr ""
+#~ "Les informåcions sol tcheyaedje e rak d' askepeye n' est motoit nén "
+#~ "ahessåve"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr ""
+#~ "Les informåcions sol tcheyaedje e rak d' askepeye n' est nén ahessåve"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Li préjhaedje di ces informåcions di tcheyaedje e rak n' est nén valåbe. "
+#~ "C' est on bug di dvins DrKonqi lu-minme."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vos savoz clitchî sol  boton <interface>Astaler les simboles di "
+#~ "disbugaedje</interface> po saveur astaler otomaticmint les pacaedjes "
+#~ "mancants d' informåcions di disbugaedje. Si cisse metôde la ni va nén, "
+#~ "lijhoz s' i vs plait <link url='%1'>Comint ahiver des rapoirts di bug "
+#~ "ahessåves</link> po-z aprinde comint obtini ene passêye e-n erî "
+#~ "ahessåve ; astalez les pacaedjes k' i fåt (<link url='%2'>lisse des "
+#~ "fitchîs</link>) eyet clitchî sol boton <interface>Ritcherdjî</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Lijhoz s' i vs plait <link url='%1'>Comint ahiver des rapoirts di bug "
+#~ "ahessåves</link> po-z aprinde comint obtini ene passêye e-n erî "
+#~ "ahessåve ; astalez les pacaedjes k' i fåt (<link url='%2'>lisse des "
+#~ "fitchîs</link>) eyet clitchî sol boton <interface>Ritcherdjî</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Li disbugueu a moussî foû d' abôrd k' on nel ratindeu nén."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Dji n' a savou askepyî l' informåcion sol tcheyaedje e rak."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Vos pôrîz rsayî d' askepyî l' passêye e-n erî tot clitchant sol boton "
+#~ "<interface>Ritcherdjî</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Li programe disbugueu manke oudonbén dji n' l' a savou enonder.</"
+#~ "strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Vos dvoz astaler l' pacaedje do disbugueu (%1) ey adon clitchî "
+#~ "sol boton <interface>Ritcherdjî</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Les pacaedjes d' informåcion d' disbugaedje mankèt"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Djenerå"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "Informåcions sol &diswalpeu"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Nos rgretans mins <application>%1</application>s' a cloyou d' ene "
+#~ "façon nén ratindowe.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Totafwait :"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@info Note the time information is divided into date and time parts"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4) Time: %5 %6</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Enondåve : <application>%1</application> PID : <numid>%2</numid> "
+#~ "Signå : %3 (%4) Date : %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr ""
+#~ "Clôre ci purnea d' divize ci (vos piedroz les informåcions sol tcheyaedje "
+#~ "e rak)"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Li programe a stî enondé pa kdeinit"
 
 #, fuzzy
 #~| msgid "Show backtrace content (advanced)"

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 // SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.19 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
-import org.kde.drkonqi 1.0
+import org.kde.drkonqi
 
 Kirigami.Page {
     title: i18nc("@title", "Crash Handler")
@@ -63,7 +63,7 @@ Kirigami.Page {
                 onTriggered: {
                     reportInterface.setSendWhenReady(true)
                     reportInterface.sendSentryReport()
-                    pageStack.push("qrc:/ui/SentryPage.qml")
+                    pageStack.push(Qt.resolvedUrl("SentryPage.qml"))
                 }
             }
         }
@@ -76,7 +76,7 @@ Kirigami.Page {
             action: Kirigami.Action {
                 icon.name: "code-class-symbolic"
                 text: i18nc("@action", "See Developer Information")
-                onTriggered: pageStack.push("qrc:/ui/DeveloperPage.qml")
+                onTriggered: pageStack.push(Qt.resolvedUrl("DeveloperPage.qml"))
             }
         }
 

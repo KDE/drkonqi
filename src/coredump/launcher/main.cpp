@@ -9,10 +9,10 @@
 
 #include <chrono>
 
-#include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
+#include <QGuiApplication>
 #include <QJsonDocument>
 #include <QLibraryInfo>
 #include <QProcess>
@@ -28,6 +28,7 @@
 #include <metadata.h>
 
 #include "../coredump.h"
+#include "../settings.h"
 #include "../socket.h"
 #include "DevNotifierTruck.h"
 #include "DumpTruckInterface.h"
@@ -124,8 +125,7 @@ QJsonObject jsonObjectFromKConfigGroup(const KConfigGroup &group)
         return metadata;
     }
 
-    static const QString configFile = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("drkonqirc"));
-    if (!KConfig(configFile, KConfig::SimpleConfig).group(u"General"_s).readEntry(QStringLiteral("IncludeAll"), false)) {
+    if (!Settings::includeAll()) {
         return metadata;
     }
 
@@ -246,7 +246,9 @@ static void onNewDump(const Coredump &dump)
 
 int main(int argc, char **argv)
 {
-    QCoreApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
+    // Never let the launcher participate in session management. It will break things because we assume to be invoked by systemd sockets exclusively.
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     app.setApplicationName(QStringLiteral("drkonqi-coredump-launcher"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 

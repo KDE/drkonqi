@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
-"PO-Revision-Date: 2025-11-28 04:35+0100\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"PO-Revision-Date: 2026-07-11 05:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,247 +28,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "თავიდან ჩატვირთვა"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის თავიდან ჩასატვირთად. ეს "
-"სასარგებლოა, როცა გამართვის სიმბოლოების პაკეტს დააყენეთ და გნებავთ, უკეთესი "
-"უკუტრეისი მიიღოთ."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "გამართვის სიმბოლოების დაყენება"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "გამოიყენეთ ეს ღილაკი გამართვის სიმბოლოს პაკეტების დასაყენებლად."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"სიმბოლოების დაყენება ხელმიუწვდომელია, რადგან გაშვების შემდეგ აპლიკაცია "
-"განახლდა ან წაიშალა."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის (უკუტრეისი) ბუფერში დასაკოპირებლად."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"გამოიყენეთ ეს ღილაკი, რათა ავარიის ინფორმაცია (უკუტრეისი) ფაილში შეინახოთ. "
-"ეს სასარგებლოა, თუ ამ შეცდომას გნებავთ, მოგვიანებით მიხედოთ."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>რა არის \"უკუტრეისი\"?</h2><p>უკუტრეისი განსაზღვრავს რა ხდებოდა "
-"აპლიკაციის შიგნით მაშინ, როცა ის ავარიულად დასრულდა, რათა პროგრამისტებმა "
-"გაარკვიონ, სად აირია ყველაფერი. ამას შეიძლება თქვენთვის აზრი არ ქონდეს, "
-"მაგრამ რეალურად შეიძლება საჭირო ინფორმაციას შეიცავდეს.<br />უკუტრეისები "
-"ჩვეულებრივ ინტერაქტიული და ფაქტის-შემდგომი გამართვისთვის გამოიყენება.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "იტვირთება..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "უკუტრეისის გენერაცია... (ამას შეიძლება დრო დასჭირდეს)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"ამ აპლიკაციას ამჟამად სხვა გამმართველი უყურებს. ავარიის ინფორმაციის მიღება "
-"შეუძლებელია."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "ავარიის ინფორმაციის გამოთხოვის შეცდომა."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"ავარიულად დასრულებულ აპლიკაციაზე სხვა გამმართველი აპლიკაცია მიმაგრებული. "
-"ამიტომ DrKonqi გამმართველი უკუტრეისს ვერ გამოითხოვს. დახურეთ სხვა "
-"გამმართველი და <interface>თავიდან ჩატვირთვას</interface> დააწექით."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია სასარგებლოა"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია შეიძლება სასარგებლო იყოს"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია, ალბათ, სასარგებლო არაა"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია სასარგებლო არაა"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "ავარიის ინფორმაციის შეფასება არასწორია. ეს DrKonqi-ის შეცდომაა."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"იმისათვის, რომ გასამართი სიმბოლოების ინფორმაციის პაკეტები ავტომატურად "
-"დააყენოთ, შეგიძლიათ დააწვეთ ღილაკს <interface>გამართვის სიმბოლოების "
-"დაყენება</interface>. თუ ეს მეთოდი არ მუშაობს: სცადეთ, წაიკითხოთ <link "
-"url='%1'>როგორ შევქმნათ სასარგებლო ანგარიშები ავარიის შესახებ</link>, რათა "
-"გაიგოთ, როგორ შექმნათ სასარგებლო უკუტრეისი. დააყენეთ საჭირო პაკეტები (<link "
-"url='%2'>ფაილების სია</link>) და დააწკაპუნეთ <interface>თავიდან ჩატვირთვის</"
-"interface> ღილაკს."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"იმისათვის, რომ გაიგოთ, <link url='%1'>როგორ მოგვაწოდოთ ინფორმაცია პროგრამის "
-"ავარიული დასრულების შესახებ</link>, ეს ბმული წიკითხეთ. დააყენეთ საჭირო "
-"განახლებები (<link url='%2'>ფაილების სია</link>) და <interface>თავიდან "
-"ჩატვირთვას</interface> დააწექით."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "გამმართველი მოულოდნელად გაითიშა."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "ავარიის ინფორმაციის გენერაცია შეუძლებელია."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"უკუტრეისის თავიდან გენერაცია <interface>თავიდან ჩატვირთვის</interface> "
-"ღილაკზე დაწკაპუნებით შეგიძლიათ."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>გამმართველი დაყენებული არაა ან მისი გაშვება შეუძლებელია.</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>ჯერ დააყენეთ გამმართველი აპლიკაცია(%1), შემდეგ კი "
-"<interface>გადატვირთვის</interface> ღილაკს დააწექით.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "შეცდომა გამართვის სიმბოლოების პაკეტების დაყენებისას"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"გამართვს ინფორმაციის შემცველი პაკეტები დაყენებული არაა შემდეგი პროგრამებისა "
-"და ბიბლიოთეკებისთვის:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "გამართვის საინფორმაციო პაკეტები არ არსებობს"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -278,25 +37,55 @@ msgid ""
 msgstr ""
 "<placeholder>მოგვიყევით დეტალურად, რას აკეთებდით ავარიის დროს.</placeholder>"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr "ბირთვის საქაღალდის შექმნა ჩავარდა: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr "ბირთვის ფაილის შექმნა ჩავარდა: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr "ბირთვის ფაილი არ არსებობს: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr "ბირთვის ფაილის ამოღების პროცესი ჩავარდა კოდით: %1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr "ამაღლებული ბირთვის ფაილის ამოღების პროცესი ჩავარდა: %1"
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "ქვეპროცესი დასრულდა შეცდომით: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "ქვეპროცესი ავარიულად დასრულდა. გადაამოწმეთ პროგრამის ფაილები."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "ავარიით დასრულებული პროცესების ნახვა"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
@@ -304,7 +93,7 @@ msgstr ""
 "დეტალური ინფორმაცია წარსულში მომხდარი პროგრამების ავარიული დასრულებების "
 "შესახებ"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, DrKonqi -ის ავტორები"
@@ -397,22 +186,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "დეტალები"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "გაცვლის ბუფერში კოპირება"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "ინტერაქტიური გამმართველის გაშვება"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "პრობლემის ანგარიში %1-სთვის"
@@ -422,22 +211,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "ავარიები"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "ავარიის ანგარიშების ჩატვირთვა"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "ჯერ პროცესი ავარიულად არ დასრულებულა"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "თქვენს ძებნას პასუხები არ აქვს"
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "მიმოხილვა"
@@ -492,13 +281,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr "ავარიით დასრულებული პროცესების მნახველის გაშვება შეუძლებელია."
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr "GDB"
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -535,25 +324,25 @@ msgid ""
 "packages."
 msgstr "შეცდომა გამართვის სიმბოლოს პაკეტების დაყენებისას."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "ანგარიში ჩაწერილია ფაილში <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "ანგარიშის ჩასაწერი ფაილის შექმნის შეცდომა."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "ანგარიშის შენახვა"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -571,117 +360,6 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr ""
 "ავარიულად დასრულებული აპლიკაციის თავიდან გასაშვებად ეს ღილაკი გამოიყენეთ."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&ზოგადი"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&ინფორმაცია პროგრამისტისთვის"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>უკაცრავად, <application>%1</application> მოულოდნელად დაიხურა.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>რადგანაც ავარიულად დასრულდა თვითონ ავარიების დამმუშავებელი, შეცდომების "
-"ავტომატური გადაცემა შემდგომი ავარიების თავიდან ასაცილებლად გამოირთო.<nl /"
-"><nl />გთხოვთ <link url='%1'>ხელით მოგვწერეთ</link>ამ შეცდომის შესახებ. არ "
-"დაგავიწყდეთ ასევე მიამაგროთ უკუტრეისი <interface>პროგრამისტების ინფორმაციის</"
-"interface> ჩანართიდან.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>გადაცემის დამხმარე გამორთულია, რადგან ავარიების დამმუშავებელი უსაფრთხო "
-"რეჟიმშია გაშვებული.<nl />ეს შეცდომა შეგიძლიათ %1-ს ხელით გადაუგზავნოთ1 "
-"(<interface>პროგრამისტის ინფორმაციის</interface> ჩანართში არსებული "
-"უკუტრეისის ჩათვლით.)</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>ანგარიშის დამხმარე გათიშულია, რადგან დასრულებული აპლიკაცია როგორც ჩანს "
-"განაახლეთ ან წაშალეთ მას შემდეგ, რაც ის გაეშვა. ეს ხელს უშლის სწორი ავარიული "
-"დასრულების ანგარიშის შექმნას და ასევე შეიძლება ამ ავარიის მიზეზსაც "
-"წარმოადგენდეს.</para><para>განახლების შემდეგ ყოველთვის კარგი იდეაა, გახვიდეთ "
-"და თავიდან შეხვიდეთ სისტემაში, რათა დარწმუნდეთ, რომ ყველა განახლებული "
-"პროგრამა თავიდან გაეშვა და პრობლემებს არ იწვევს.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>დაგვეხმარეთ KDE-ის პროგრამების გაუმჯობესებაში, მოგვწერეთ ამ შეცდომის "
-"შესახებ.<nl /><link url='%1'>შეიტყვეთ მეტი შეცდომების შესახებ ანგარიშის "
-"გამოგზავნის შესახებ.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>ამ შეცდომის გადაგზავნა არ შეგიძლიათ, რადგან <application>%1</"
-"application>-ს შეცდომების გადასაგზავნი მისამართი მითითებული არ აქვს.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "დეტალები:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>გამშვები ფაილი: <application>%1</application> PID: %2 სიგნალი: %3 (%4) "
-"დრო: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "ამ ფანჯრის დახურვა (დაკარგავთ ავარიის ინფორმაციას.)"
 
 #: main.cpp:154
 #, kde-format
@@ -781,34 +459,28 @@ msgstr "პროგრამის გაშვების <ID>"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "პროგრამა kdeinit-მა გაუშვა"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "დისკთან ჩვეულებრივი წვდომის აკრძალვა"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "პროგრამა უკვე გადაიტვირთა"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "პროგრამის გაშვებულად დატოვება და უკუტრეისის გაშვებისას გენერაცია"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "ავარიული ნაკადის ID <thread id>"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -887,7 +559,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "აპლიკაციის მორგებული პარამეტრები, რომლებიც კავშირში შეიძლება, იყოს"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "არასაკმარისად სასარგებლო"
@@ -903,38 +575,38 @@ msgstr ""
 "ამ შემთხვევაში ინფორმაცია, რომელიც შეგიძლიათ, მოგვაწოდოთ, გამოსადეგი არაა.\n"
 "თუ მეტს ვერაფერს იხსენებთ, ეს ფანჯარა შეგიძლიათ დახუროთ."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "ინფორმაცია დეველოპერზე"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "გამართვის სიმბოლოების დაყენება"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "გამოიყენეთ ეს ღილაკი გამართვის სიმბოლოს ნაკლული პაკეტების დასაყენებლად."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "ანგარიშის %1-ზე"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "შეცდომის ანგარიშის გადაცემის დამხმარის გაშვება."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "თავიდან ჩატვირთვა"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -947,17 +619,33 @@ msgstr ""
 "როცა გამართვის სიმბოლოების პაკეტს დააყენეთ და გნებავთ, უკეთესი უკუტრეისი "
 "მიიღოთ."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "კოპირება"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის (უკუტრეისი) ბუფერში დასაკოპირებლად."
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "შენახვა"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"გამოიყენეთ ეს ღილაკი, რათა ავარიის ინფორმაცია (უკუტრეისი) ფაილში შეინახოთ. "
+"ეს სასარგებლოა, თუ ამ შეცდომას გნებავთ, მოგვიანებით მიხედოთ."
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -967,12 +655,17 @@ msgstr ""
 "მეხსიერებ საკმარისი არ იყო. შეგიძლიათ, დახუროთ სხვა აპლიკაციები, და თავიდან "
 "სცადოთ."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "თავიდან ცდა"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "შეცდომა გამართვის სიმბოლოების პაკეტების დაყენებისას"
+
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -992,7 +685,7 @@ msgstr ""
 "დააყენეთ საჭირო პაკეტები (<link url='%2'>ფაილების სია</link>) და დააწკაპუნეთ "
 "<interface>თავიდან ჩატვირთვის</interface> ღილაკს."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -1006,7 +699,7 @@ msgstr ""
 "(<link url='%2'>ფაილების სია</link>) და <interface>თავიდან ჩატვირთვის</"
 "interface> ღილაკს დააწექით."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -1018,13 +711,22 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+"უკუტრეისის გენერაციის მომზადება ჩავარდა. ეს მიუთითებს მძიმე პრობლემაზე, "
+"რომლის მოგვარებასაც, ალბათ, ვერ შეძლებთ."
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>ჯერ დააყენეთ გამმართველი აპლიკაცია(%1), შემდეგ კი "
 "<interface>გადატვირთვის</interface> ღილაკს დააწექით.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -1034,6 +736,15 @@ msgstr ""
 "უკუტრეისის გენერაცია გაჩერდა არასაკმარისი მეხსიერების გამო. მისი თავიდან "
 "გენერაცია <interface>თავიდან ჩატვირთვის</interface> ღილაკზე დაწკაპუნებით "
 "შეგიძლიათ."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"გამართვს ინფორმაციის შემცველი პაკეტები დაყენებული არაა შემდეგი პროგრამებისა "
+"და ბიბლიოთეკებისთვის:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1111,7 +822,16 @@ msgstr ""
 "მითითებული ელფოსტის მისამართითა და პაროლით KDE-ის შეცდომების პორტალზე "
 "შესასვლელად ამ ღილაკს დააჭირეთ."
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>ამ შეცდომის გადაგზავნა არ შეგიძლიათ, რადგან <application>%1</"
+"application>-ს შეცდომების გადასაგზავნი მისამართი მითითებული არ აქვს.</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1131,7 +851,7 @@ msgstr ""
 "პროგრამისტების ინფორმაციის</interface>\n"
 "ჩანართიდან.</para>"
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1145,7 +865,7 @@ msgstr ""
 "(<interface>პროგრამისტის ინფორმაციის</interface> ჩანართში არსებული "
 "უკუტრეისის ჩათვლით.)</para>"
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1166,7 +886,17 @@ msgstr ""
 "რათა დარწმუნდეთ, რომ ყველა განახლებული პროგრამა\n"
 "თავიდან გაეშვა და პრობლემებს არ იწვევს.</para>"
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>დაგვეხმარეთ KDE-ის პროგრამების გაუმჯობესებაში, მოგვწერეთ ამ შეცდომის "
+"შესახებ.<nl /><link url='%1'>შეიტყვეთ მეტი შეცდომების შესახებ ანგარიშის "
+"გამოგზავნის შესახებ.</link></para>"
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -1175,7 +905,16 @@ msgstr ""
 "არასაკმარისი მეხსიერება ავარიის ინფორმაციის შესაგროვებლად. შეგიძლიათ, "
 "დახუროთ სხვა აპლიკაციები, გაათავისუფლოთ მეხსიერება და თავიდან სცადოთ."
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"ავარიის ინფორმაციის მოგროვების მცდელობა ჩავარდა. შეგიძლიათ, დახუროთ ფანჯარა, "
+"ან <link url='%1'>ნახოთ ავარიის დეტალები</link>."
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1185,7 +924,7 @@ msgstr ""
 "შეგიძლიათ, თავიდან სცადოთ, დახუროთ ფანჯარა, ან <link url='%1'>ნახოთ ავარიის "
 "დეტალები</link>."
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1423,11 +1162,11 @@ msgstr "ავტომატური ანგარიში"
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
 msgstr ""
-"ავარიის მონაცემების შეგროვება. მოგროვებული მონაცემების გადაცემა ფონურად "
-"მოხდება."
+"ავარიის მონაცემების შეგროვება. ეს ფანჯარა შეგიძლიათ, დახუროთ. მოგროვებული "
+"მონაცემების გადაცემა ფონურად მოხდება."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
@@ -1647,6 +1386,245 @@ msgstr "bugstest.kde.org -ის მომხმარებლის სახ�
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org -ის პაროლი"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "თავიდან ჩატვირთვა"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "გამოიყენეთ ეს ღილაკი ავარიის ინფორმაციის თავიდან ჩასატვირთად. ეს "
+#~ "სასარგებლოა, როცა გამართვის სიმბოლოების პაკეტს დააყენეთ და გნებავთ, "
+#~ "უკეთესი უკუტრეისი მიიღოთ."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "გამართვის სიმბოლოების დაყენება"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "გამოიყენეთ ეს ღილაკი გამართვის სიმბოლოს პაკეტების დასაყენებლად."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "სიმბოლოების დაყენება ხელმიუწვდომელია, რადგან გაშვების შემდეგ აპლიკაცია "
+#~ "განახლდა ან წაიშალა."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>რა არის \"უკუტრეისი\"?</h2><p>უკუტრეისი განსაზღვრავს რა ხდებოდა "
+#~ "აპლიკაციის შიგნით მაშინ, როცა ის ავარიულად დასრულდა, რათა პროგრამისტებმა "
+#~ "გაარკვიონ, სად აირია ყველაფერი. ამას შეიძლება თქვენთვის აზრი არ ქონდეს, "
+#~ "მაგრამ რეალურად შეიძლება საჭირო ინფორმაციას შეიცავდეს.<br />უკუტრეისები "
+#~ "ჩვეულებრივ ინტერაქტიული და ფაქტის-შემდგომი გამართვისთვის გამოიყენება.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "იტვირთება..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "უკუტრეისის გენერაცია... (ამას შეიძლება დრო დასჭირდეს)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "ამ აპლიკაციას ამჟამად სხვა გამმართველი უყურებს. ავარიის ინფორმაციის "
+#~ "მიღება შეუძლებელია."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "ავარიის ინფორმაციის გამოთხოვის შეცდომა."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "ავარიულად დასრულებულ აპლიკაციაზე სხვა გამმართველი აპლიკაცია მიმაგრებული. "
+#~ "ამიტომ DrKonqi გამმართველი უკუტრეისს ვერ გამოითხოვს. დახურეთ სხვა "
+#~ "გამმართველი და <interface>თავიდან ჩატვირთვას</interface> დააწექით."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია სასარგებლოა"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr ""
+#~ "ავარიის ინფორმაციის დაგენერირებული ინფორმაცია შეიძლება სასარგებლო იყოს"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია, ალბათ, სასარგებლო არაა"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "ავარიის შესახებ დაგენერირებული ინფორმაცია სასარგებლო არაა"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "ავარიის ინფორმაციის შეფასება არასწორია. ეს DrKonqi-ის შეცდომაა."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "იმისათვის, რომ გასამართი სიმბოლოების ინფორმაციის პაკეტები ავტომატურად "
+#~ "დააყენოთ, შეგიძლიათ დააწვეთ ღილაკს <interface>გამართვის სიმბოლოების "
+#~ "დაყენება</interface>. თუ ეს მეთოდი არ მუშაობს: სცადეთ, წაიკითხოთ <link "
+#~ "url='%1'>როგორ შევქმნათ სასარგებლო ანგარიშები ავარიის შესახებ</link>, "
+#~ "რათა გაიგოთ, როგორ შექმნათ სასარგებლო უკუტრეისი. დააყენეთ საჭირო პაკეტები "
+#~ "(<link url='%2'>ფაილების სია</link>) და დააწკაპუნეთ <interface>თავიდან "
+#~ "ჩატვირთვის</interface> ღილაკს."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "იმისათვის, რომ გაიგოთ, <link url='%1'>როგორ მოგვაწოდოთ ინფორმაცია "
+#~ "პროგრამის ავარიული დასრულების შესახებ</link>, ეს ბმული წიკითხეთ. დააყენეთ "
+#~ "საჭირო განახლებები (<link url='%2'>ფაილების სია</link>) და "
+#~ "<interface>თავიდან ჩატვირთვას</interface> დააწექით."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "გამმართველი მოულოდნელად გაითიშა."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "ავარიის ინფორმაციის გენერაცია შეუძლებელია."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "უკუტრეისის თავიდან გენერაცია <interface>თავიდან ჩატვირთვის</interface> "
+#~ "ღილაკზე დაწკაპუნებით შეგიძლიათ."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>გამმართველი დაყენებული არაა ან მისი გაშვება შეუძლებელია.</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>ჯერ დააყენეთ გამმართველი აპლიკაცია(%1), შემდეგ კი "
+#~ "<interface>გადატვირთვის</interface> ღილაკს დააწექით.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "გამართვის საინფორმაციო პაკეტები არ არსებობს"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&ზოგადი"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&ინფორმაცია პროგრამისტისთვის"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>უკაცრავად, <application>%1</application> მოულოდნელად დაიხურა.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>რადგანაც ავარიულად დასრულდა თვითონ ავარიების დამმუშავებელი, "
+#~ "შეცდომების ავტომატური გადაცემა შემდგომი ავარიების თავიდან ასაცილებლად "
+#~ "გამოირთო.<nl /><nl />გთხოვთ <link url='%1'>ხელით მოგვწერეთ</link>ამ "
+#~ "შეცდომის შესახებ. არ დაგავიწყდეთ ასევე მიამაგროთ უკუტრეისი "
+#~ "<interface>პროგრამისტების ინფორმაციის</interface> ჩანართიდან.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>გადაცემის დამხმარე გამორთულია, რადგან ავარიების დამმუშავებელი "
+#~ "უსაფრთხო რეჟიმშია გაშვებული.<nl />ეს შეცდომა შეგიძლიათ %1-ს ხელით "
+#~ "გადაუგზავნოთ1 (<interface>პროგრამისტის ინფორმაციის</interface> ჩანართში "
+#~ "არსებული უკუტრეისის ჩათვლით.)</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>ანგარიშის დამხმარე გათიშულია, რადგან დასრულებული აპლიკაცია როგორც "
+#~ "ჩანს განაახლეთ ან წაშალეთ მას შემდეგ, რაც ის გაეშვა. ეს ხელს უშლის სწორი "
+#~ "ავარიული დასრულების ანგარიშის შექმნას და ასევე შეიძლება ამ ავარიის "
+#~ "მიზეზსაც წარმოადგენდეს.</para><para>განახლების შემდეგ ყოველთვის კარგი "
+#~ "იდეაა, გახვიდეთ და თავიდან შეხვიდეთ სისტემაში, რათა დარწმუნდეთ, რომ ყველა "
+#~ "განახლებული პროგრამა თავიდან გაეშვა და პრობლემებს არ იწვევს.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "დეტალები:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>გამშვები ფაილი: <application>%1</application> PID: %2 სიგნალი: %3 "
+#~ "(%4) დრო: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "ამ ფანჯრის დახურვა (დაკარგავთ ავარიის ინფორმაციას.)"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "პროგრამა kdeinit-მა გაუშვა"
 
 #~ msgctxt "@info"
 #~ msgid "Reporting for KDE software is only available at the time of crash."

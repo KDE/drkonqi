@@ -10,11 +10,14 @@
 #include <KOSRelease>
 
 #include <automaticcoredumpexcavator.h>
+#include <qqmlintegration.h>
 
 class Coredump;
 class Patient : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Get from PatientModel")
 
     QString m_origCoreFilename;
     QFileInfo m_coreFileInfo;

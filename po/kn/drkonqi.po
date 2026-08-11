@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
 "PO-Revision-Date: 2012-01-08 23:43+0530\n"
 "Last-Translator: s\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -30,265 +30,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ramaprakash.b@gmail.com,kamathvasudev@gmail.com,svenkate@redhat.com"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "ಪುನರುತ್ಥಾಪಿಸು(&R)"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ಮರಳಿ ಲೋಡ್ ಮಾಡಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ. ನೀವು ಒಂದು "
-"ಸೂಕ್ತವಾದ ದೋಷ ನಿವಾರಣ ಸಂಕೇತದ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದ್ದರೆ ಹಾಗು ನಿಮಗೆ ಉತ್ತಮವಾದ "
-"ಬ್ಯಾಕ್‌ಟ್ರೇಸ್ ಅನ್ನು ಪಡೆಯಲು ಬಯಸಿದಲ್ಲಿ ಇದು ಸಹಾಯಕವಾಗುತ್ತದೆ."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳನ್ನು ಸ್ಥಾಪಿಸು(&I)"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "ಈ ಗುಂಡಿಯನ್ನು ಕಾಣೆಯಾಗಿರುವ ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳ ಪ್ಯಾಕೇಜ್ ಸ್ಥಾಪಿಸಲು ಬಳಸಿ."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ನಕಲುಫಲಕಕ್ಕೆ ಉಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ಒಂದು ಕಡತಕ್ಕೆ ಉಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ. ನೀವು ಅದನ್ನು "
-"ನಂತರದ ಸಮಯದಲ್ಲಿ ನೋಡಲು ಅಥವ ದೋಷ ವರದಿ ಸಲ್ಲಿಸಲು ಇದು ನೆರವಾಗುತ್ತದೆ."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "ಲೋಡ್ ಆಗುತ್ತಿದೆ..."
-
-#: backtracewidget.cpp:138
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Loading crash information... (this may take some time)"
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಉತ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ.... (ಇದು ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"ಪ್ರಸ್ತುತ ಮತ್ತೊಂದು ದೋಷ ನಿವಾರಕವು ಈ ಅನ್ವಯದ ದೋಷ ನಿವಾದಣೆ ಮಾಡುತ್ತಿದೆ. ಆದುದರಿಂದ ಕುಸಿತದ "
-"ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲಾಗುತ್ತಿಲ್ಲ."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
-
-#: backtracewidget.cpp:196
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Another debugging process is attached to the crashed application. "
-#| "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
-#| "the other debugger and click <interface>Reload Crash Information</"
-#| "interface>."
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"ಕುಸಿತಗೊಂಡ ಅನ್ವಯಕ್ಕೆ ಇನ್ನೊಂದು ದೋಷ ನಿವಾರಣಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಲಗತ್ತಿಸಲಾಗಿದೆ. ಆದ್ದರಿಂದ, "
-"DrKonqi ದೋಷ ನಿವಾರಕವು ಜಾಡನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್‌) ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೇರೊಂದು ದೋಷ "
-"ನಿವಾರಕವನ್ನು ಮುಚ್ಚಿ ಹಾಗು ನಂತರ <interface>ಕುಸಿತ ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು </"
-"interface> ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ."
-
-#: backtracewidget.cpp:241
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "This crash information is useful"
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "ಈ ಕುಸಿತ ಮಾಹಿತಿಯಿಂದ ಉಪಯೋಗವಾಗುತ್ತದೆ"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "ಉತ್ಪಾದಿಸಲಾದ ಕುಸಿತದ ಮಾಹಿತಿಯು ಉಪಯುಕ್ತವಾಗಿದೆ"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "ಉತ್ಪಾದಿಸಲಾದ ಕುಸಿತದ ಮಾಹಿತಿಯು ಬಹುಷಃ ಉಪಯುಕ್ತವಾಗದೆ ಇರಬಹುದು"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "ಈ ಕುಸಿತ ಮಾಹಿತಿಯಿಂದ ಯಾವುದೆ ಉಪಯೋಗವಿಲ್ಲ"
-
-#: backtracewidget.cpp:255
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The rating of this crash information is invalid. This is a bug in drkonqi "
-#| "itself."
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"ಈ ಕುಸಿತದ ಮಾಹಿತಿಯ ರೇಟಿಂಗ್ ಅಮಾನ್ಯವಾದುದಾಗಿದೆ. ಇದು drkonqi ನಲ್ಲಿನ ಒಂದು ದೋಷವಾಗಿದೆ."
-
-#: backtracewidget.cpp:267
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
-"ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
-
-#: backtracewidget.cpp:285
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
-"ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "ದೋಷನಿವಾರಕವು ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಿರ್ಗಮಿಸಿದೆ."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಉತ್ಪಾದಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
-
-#: backtracewidget.cpp:307
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"<interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತುವ ಮೂಲಕ "
-"ಜಾಡನ್ನು (ಬ್ಯಾಕ್ ಟ್ರೇಸ್) ಮರಳಿ ಉತ್ಪಾದಿಸಬಹುದು."
-
-#: backtracewidget.cpp:316
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "The debugger application is missing or could not be launched."
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "ದೋಷ ನಿವಾರಕ ಅನ್ವಯವು ಕಾಣಿಸುತ್ತಿಲ್ಲ ಅಥವ ಅದನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
-
-#: backtracewidget.cpp:322
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You need to install the debugger package (%1) and click the "
-#| "<interface>Reload Crash Information</interface> button."
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
-"ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "ದೋಷ ನಿವಾರಕ ಚಿಹ್ನೆಗಳ ಅನುಸ್ಥಾಪನೆಯ ಸಮಯದಲ್ಲಿ ತೊಂದರೆ ಉಂಟಾಗಿದೆ"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-
-#: backtracewidget.cpp:418
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Missing debug symbols"
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "ಕಾಣೆಯಾಗಿರುವ ದೋಷ ನಿವಾರಕ ಚಿಹ್ನೆಗಳು"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -298,31 +39,61 @@ msgid ""
 msgstr ""
 "<placeholder>ಅನ್ವಯವು ಯಾವಾಗವು ಕುಸಿತಗೊಂಡಿತು ಎಂದು ನಮಗೆ ವಿವರ ತಿಳಿಸಿ.</placeholder>"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr ""
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr ""
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr ""
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr ""
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
@@ -410,7 +181,7 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Details:"
@@ -418,17 +189,17 @@ msgctxt "@title"
 msgid "Details"
 msgstr "ವಿವರಗಳು:"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr ""
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -441,7 +212,7 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Sending the Crash Report"
@@ -449,17 +220,17 @@ msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "ಕುಸಿತ ವರದಿಯನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತಿದೆ"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr ""
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr ""
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "@title:window"
@@ -518,13 +289,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr ""
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr ""
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -564,19 +335,19 @@ msgid ""
 "packages."
 msgstr ""
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "ವರದಿಯನ್ನು <filename>%1 </filename>ಗೆ ಉಳಿಸಲಾಗಿದೆ."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "ವರದಿಯನ್ನು ಉಳಿಸಲು ಕಡತವನ್ನು ಸೃಷ್ಟಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. "
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "&Save to File..."
@@ -584,7 +355,7 @@ msgctxt "@title:window"
 msgid "Save Report"
 msgstr "ಕಡತಕ್ಕೆ ಉಳಿಸು(&S)..."
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -603,107 +374,6 @@ msgstr "ಅನ್ವಯವನ್ನು ಮರಳಿ ಆರಂಭಿಸು"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ಕುಸಿತಗೊಂಡ ಅನ್ವಯವನ್ನು ಮರಳಿ ಆರಂಭಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "ಸಾಮಾನ್ಯ(&G)"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "ವಿಕಸನೆಗಾರರ ಮಾಹಿತಿ(&D)"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>ಕ್ಷಮಿಸಿ, <application>%1</application> ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಿರ್ಗಮಿಸಿದೆ.</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You cannot report this error, because the application does not "
-#| "provide a bug reporting address.</para>"
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>ನೀವು ಈ ತೊಂದರೆಯನ್ನು ವರದಿ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ, ಯಾಕೆಂದರೆ ಅನ್ವಯದಲ್ಲಿ ದೋಷ ವರದಿಯ "
-"ವಿಳಾಸವಿಲ್ಲ.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "ವಿವರಗಳು:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
-#| "Signal: %3 (%4)</para>"
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>ಚಾಲನಯೋಗ್ಯ: <application>%1</application> PID: <numid>%2</numid> ಸಂಜ್ಞೆ: "
-"%3 (%4)</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "ಈ ಸಂವಾದವನ್ನು ಮುಚ್ಚು (ಕುಸಿತದ ಮಾಹಿತಿಯು ಇಲ್ಲವಾಗುತ್ತದೆ.)"
 
 #: main.cpp:154
 #, fuzzy, kde-format
@@ -823,34 +493,28 @@ msgstr "ಕ್ರಮವಿಧಿಯ ಪ್ರಾರಂಭದ (ಸ್ಟಾರ್
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "kdeinit ನಿಂದ ಆರಂಭಿಸಲ್ಪಟ್ಟ ಕ್ರಮವಿಧಿ"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "ನಿರಂಕುಶ ಮುದ್ರಿಕೆ ನಿಲುಕಣೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "ಕ್ರಮವಿಧಿಯನ್ನು ಈಗಾಗಲೆ ಆರಂಭಿಸಲಾಗಿದೆ"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr ""
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr ""
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -957,7 +621,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr ""
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr ""
@@ -971,7 +635,7 @@ msgid ""
 "dialog."
 msgstr ""
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 #, fuzzy
 #| msgctxt "@title:tab"
 #| msgid "&Developer Information"
@@ -979,7 +643,7 @@ msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "ವಿಕಸನೆಗಾರರ ಮಾಹಿತಿ(&D)"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Install Debug Symbols"
@@ -987,7 +651,7 @@ msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳನ್ನು ಸ್ಥಾಪಿಸು(&I)"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Use this button to install the missing debug symbols packages."
@@ -995,7 +659,7 @@ msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "ಈ ಗುಂಡಿಯನ್ನು ಕಾಣೆಯಾಗಿರುವ ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳ ಪ್ಯಾಕೇಜ್ ಸ್ಥಾಪಿಸಲು ಬಳಸಿ."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 #, fuzzy
 #| msgctxt "@info/plain report to url/mail address"
 #| msgid "Report to %1"
@@ -1003,12 +667,12 @@ msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "%1 ಗೆ ವರದಿ ಮಾಡು"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "ಕುಸಿತ ವರದಿ ಸಹಾಯಕವನ್ನು ಆರಂಭಿಸುತ್ತದೆ."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "&Reload"
@@ -1016,7 +680,7 @@ msgctxt "@action:button"
 msgid "Reload"
 msgstr "ಪುನರುತ್ಥಾಪಿಸು(&R)"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -1034,26 +698,41 @@ msgstr ""
 "ಸೂಕ್ತವಾದ ದೋಷ ನಿವಾರಣ ಸಂಕೇತದ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದ್ದರೆ ಹಾಗು ನಿಮಗೆ ಉತ್ತಮವಾದ "
 "ಬ್ಯಾಕ್‌ಟ್ರೇಸ್ ಅನ್ನು ಪಡೆಯಲು ಬಯಸಿದಲ್ಲಿ ಇದು ಸಹಾಯಕವಾಗುತ್ತದೆ."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 #, fuzzy
 #| msgid "C&opy"
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "&ನಕಲಿಸು"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ನಕಲುಫಲಕಕ್ಕೆ ಉಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ."
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ಒಂದು ಕಡತಕ್ಕೆ ಉಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ. ನೀವು ಅದನ್ನು "
+"ನಂತರದ ಸಮಯದಲ್ಲಿ ನೋಡಲು ಅಥವ ದೋಷ ವರದಿ ಸಲ್ಲಿಸಲು ಇದು ನೆರವಾಗುತ್ತದೆ."
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Retry..."
@@ -1061,7 +740,12 @@ msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "ಮರಳಿ ಪ್ರಯತ್ನಿಸಿ..."
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "ದೋಷ ನಿವಾರಕ ಚಿಹ್ನೆಗಳ ಅನುಸ್ಥಾಪನೆಯ ಸಮಯದಲ್ಲಿ ತೊಂದರೆ ಉಂಟಾಗಿದೆ"
+
+#: qml/DeveloperPage.qml:219
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1080,7 +764,7 @@ msgstr ""
 "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
 "ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1096,7 +780,7 @@ msgstr ""
 "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
 "ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1111,6 +795,13 @@ msgstr ""
 "ಜಾಡನ್ನು (ಬ್ಯಾಕ್ ಟ್ರೇಸ್) ಮರಳಿ ಉತ್ಪಾದಿಸಬಹುದು."
 
 #: qml/DeveloperPage.qml:237
+msgctxt "@info/rich"
+msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1124,7 +815,7 @@ msgstr ""
 "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು "
 "ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 #, fuzzy
 #| msgctxt "@info/rich"
 #| msgid ""
@@ -1138,6 +829,13 @@ msgid ""
 msgstr ""
 "<interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತುವ ಮೂಲಕ "
 "ಜಾಡನ್ನು (ಬ್ಯಾಕ್ ಟ್ರೇಸ್) ಮರಳಿ ಉತ್ಪಾದಿಸಬಹುದು."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1226,7 +924,21 @@ msgstr ""
 "ಒದಗಿಸಲಾದ ಬಳಕೆದಾರ ಹೆಸರು ಹಾಗು ಗುಪ್ತಪದವನ್ನು ಬಳಸಿಕೊಂಡು KDE ದೋಷ ಟ್ರಾಕಿಂಗ್ ವ್ಯವಸ್ಥೆಗೆ "
 "ಪ್ರವೇಶಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಉಪಯೋಗಿಸಿ."
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>You cannot report this error, because the application does not "
+#| "provide a bug reporting address.</para>"
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>ನೀವು ಈ ತೊಂದರೆಯನ್ನು ವರದಿ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ, ಯಾಕೆಂದರೆ ಅನ್ವಯದಲ್ಲಿ ದೋಷ ವರದಿಯ "
+"ವಿಳಾಸವಿಲ್ಲ.</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1238,7 +950,7 @@ msgid ""
 "page.</para>"
 msgstr ""
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1247,7 +959,7 @@ msgid ""
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1259,21 +971,35 @@ msgid ""
 "any side effects.</para>"
 msgstr ""
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1568,8 +1294,8 @@ msgstr "ಕುಸಿತದ ವರದಿಯನ್ನು ಕಳುಹಿಸು"
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
 msgstr ""
 
 #: qml/SentryPage.qml:55
@@ -1808,6 +1534,225 @@ msgstr ""
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "ಪುನರುತ್ಥಾಪಿಸು(&R)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್) ಮರಳಿ ಲೋಡ್ ಮಾಡಲು ಈ ಗುಂಡಿಯನ್ನು ಬಳಸಿ. ನೀವು ಒಂದು "
+#~ "ಸೂಕ್ತವಾದ ದೋಷ ನಿವಾರಣ ಸಂಕೇತದ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಲಾಗಿದ್ದರೆ ಹಾಗು ನಿಮಗೆ ಉತ್ತಮವಾದ "
+#~ "ಬ್ಯಾಕ್‌ಟ್ರೇಸ್ ಅನ್ನು ಪಡೆಯಲು ಬಯಸಿದಲ್ಲಿ ಇದು ಸಹಾಯಕವಾಗುತ್ತದೆ."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳನ್ನು ಸ್ಥಾಪಿಸು(&I)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "ಈ ಗುಂಡಿಯನ್ನು ಕಾಣೆಯಾಗಿರುವ ದೋಷ ನಿವಾರಣೆ ಚಿಹ್ನೆಗಳ ಪ್ಯಾಕೇಜ್ ಸ್ಥಾಪಿಸಲು ಬಳಸಿ."
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "ಲೋಡ್ ಆಗುತ್ತಿದೆ..."
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "Loading crash information... (this may take some time)"
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr ""
+#~ "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಉತ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ.... (ಇದು ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳಬಹುದು)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "ಪ್ರಸ್ತುತ ಮತ್ತೊಂದು ದೋಷ ನಿವಾರಕವು ಈ ಅನ್ವಯದ ದೋಷ ನಿವಾದಣೆ ಮಾಡುತ್ತಿದೆ. ಆದುದರಿಂದ "
+#~ "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲಾಗುತ್ತಿಲ್ಲ."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "Another debugging process is attached to the crashed application. "
+#~| "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~| "the other debugger and click <interface>Reload Crash Information</"
+#~| "interface>."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "ಕುಸಿತಗೊಂಡ ಅನ್ವಯಕ್ಕೆ ಇನ್ನೊಂದು ದೋಷ ನಿವಾರಣಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಲಗತ್ತಿಸಲಾಗಿದೆ. ಆದ್ದರಿಂದ, "
+#~ "DrKonqi ದೋಷ ನಿವಾರಕವು ಜಾಡನ್ನು (ಬ್ಯಾಕ್‌ಟ್ರೇಸ್‌) ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೇರೊಂದು "
+#~ "ದೋಷ ನಿವಾರಕವನ್ನು ಮುಚ್ಚಿ ಹಾಗು ನಂತರ <interface>ಕುಸಿತ ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು "
+#~ "</interface> ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ."
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid "This crash information is useful"
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "ಈ ಕುಸಿತ ಮಾಹಿತಿಯಿಂದ ಉಪಯೋಗವಾಗುತ್ತದೆ"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "ಉತ್ಪಾದಿಸಲಾದ ಕುಸಿತದ ಮಾಹಿತಿಯು ಉಪಯುಕ್ತವಾಗಿದೆ"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "ಉತ್ಪಾದಿಸಲಾದ ಕುಸಿತದ ಮಾಹಿತಿಯು ಬಹುಷಃ ಉಪಯುಕ್ತವಾಗದೆ ಇರಬಹುದು"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "ಈ ಕುಸಿತ ಮಾಹಿತಿಯಿಂದ ಯಾವುದೆ ಉಪಯೋಗವಿಲ್ಲ"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "The rating of this crash information is invalid. This is a bug in "
+#~| "drkonqi itself."
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "ಈ ಕುಸಿತದ ಮಾಹಿತಿಯ ರೇಟಿಂಗ್ ಅಮಾನ್ಯವಾದುದಾಗಿದೆ. ಇದು drkonqi ನಲ್ಲಿನ ಒಂದು ದೋಷವಾಗಿದೆ."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ "
+#~ "ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ "
+#~ "ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "ದೋಷನಿವಾರಕವು ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಿರ್ಗಮಿಸಿದೆ."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಉತ್ಪಾದಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You could try to regenerate the backtrace by clicking the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "<interface>ಕುಸಿತದ ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತುವ "
+#~ "ಮೂಲಕ ಜಾಡನ್ನು (ಬ್ಯಾಕ್ ಟ್ರೇಸ್) ಮರಳಿ ಉತ್ಪಾದಿಸಬಹುದು."
+
+#, fuzzy
+#~| msgctxt "@info:status"
+#~| msgid "The debugger application is missing or could not be launched."
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "ದೋಷ ನಿವಾರಕ ಅನ್ವಯವು ಕಾಣಿಸುತ್ತಿಲ್ಲ ಅಥವ ಅದನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#, fuzzy
+#~| msgctxt "@info/rich"
+#~| msgid ""
+#~| "You need to install the debugger package (%1) and click the "
+#~| "<interface>Reload Crash Information</interface> button."
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "ನೀವು ದೋಷ ನಿವಾರಕ ಪ್ಯಾಕೇಜನ್ನು ಅನುಸ್ಥಾಪಿಸಿ (%1) ನಂತರ <interface>ಕುಸಿತದ "
+#~ "ಮಾಹಿತಿಯನ್ನು ಮರಳಿ ಉತ್ಥಾಪಿಸು</interface> ಗುಂಡಿಯನ್ನು ಒತ್ತಿ."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Missing debug symbols"
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "ಕಾಣೆಯಾಗಿರುವ ದೋಷ ನಿವಾರಕ ಚಿಹ್ನೆಗಳು"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "ಸಾಮಾನ್ಯ(&G)"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "ವಿಕಸನೆಗಾರರ ಮಾಹಿತಿ(&D)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>ಕ್ಷಮಿಸಿ, <application>%1</application> ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಿರ್ಗಮಿಸಿದೆ.</"
+#~ "para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "ವಿವರಗಳು:"
+
+#, fuzzy
+#~| msgctxt "@info"
+#~| msgid ""
+#~| "<para>Executable: <application>%1</application> PID: <numid>%2</numid> "
+#~| "Signal: %3 (%4)</para>"
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>ಚಾಲನಯೋಗ್ಯ: <application>%1</application> PID: <numid>%2</numid> "
+#~ "ಸಂಜ್ಞೆ: %3 (%4)</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "ಈ ಸಂವಾದವನ್ನು ಮುಚ್ಚು (ಕುಸಿತದ ಮಾಹಿತಿಯು ಇಲ್ಲವಾಗುತ್ತದೆ.)"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "kdeinit ನಿಂದ ಆರಂಭಿಸಲ್ಪಟ್ಟ ಕ್ರಮವಿಧಿ"
 
 #, fuzzy
 #~| msgctxt "@label:textbox"

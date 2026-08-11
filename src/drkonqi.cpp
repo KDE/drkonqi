@@ -15,11 +15,12 @@
 #include <QTemporaryFile>
 #include <QTextStream>
 #include <QTimerEvent>
+#include <QWindow>
 
 #include <KCrash>
-#include <KJobWidgets>
+#include <KJobWindows>
 #include <KLocalizedString>
-#include <KMessageBox>
+#include <KMessageDialog>
 #include <QApplication>
 #include <kio/filecopyjob.h>
 
@@ -56,7 +57,6 @@ DrKonqi::DrKonqi()
     , m_backend(factorizeBackend())
     , m_signal(0)
     , m_pid(0)
-    , m_kdeinit(false)
     , m_safer(false)
     , m_restarted(false)
     , m_keepRunning(false)
@@ -133,7 +133,7 @@ CrashedApplication *DrKonqi::crashedApplication()
 }
 
 // static
-void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
+void DrKonqi::saveReport(const QString &reportText, QWindow *parent)
 {
     if (isSafer()) {
         QTemporaryFile tf;
@@ -144,14 +144,21 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
             QTextStream textStream(&tf);
             textStream << reportText;
             textStream.flush();
-            KMessageBox::information(parent, xi18nc("@info", "Report saved to <filename>%1</filename>.", tf.fileName()));
+            auto dialog =
+                new KMessageDialog(KMessageDialog::Information, xi18nc("@info", "Report saved to <filename>%1</filename>.", tf.fileName()), parent->winId());
+            dialog->windowHandle()->setTransientParent(parent);
+            dialog->exec();
         } else {
-            KMessageBox::error(parent, i18nc("@info", "Could not create a file in which to save the report."));
+            auto dialog = new KMessageDialog(KMessageDialog::Error, i18nc("@info", "Could not create a file in which to save the report."), parent->winId());
+            dialog->windowHandle()->setTransientParent(parent);
+            dialog->exec();
         }
     } else {
         QString defname = getSuggestedKCrashFilename(crashedApplication());
 
-        QPointer<QFileDialog> dlg(new QFileDialog(parent, defname));
+        QPointer<QFileDialog> dlg(new QFileDialog(nullptr, defname));
+        dlg->winId();
+        dlg->windowHandle()->setTransientParent(parent);
         dlg->selectFile(defname);
         dlg->setWindowTitle(i18nc("@title:window", "Save Report"));
         dlg->setAcceptMode(QFileDialog::AcceptSave);
@@ -181,20 +188,22 @@ void DrKonqi::saveReport(const QString &reportText, QWidget *parent)
                 ts << reportText;
                 ts.flush();
             } else {
-                KMessageBox::error(parent,
-                                   xi18nc("@info",
-                                          "Cannot open file <filename>%1</filename> "
-                                          "for writing.",
-                                          tf.fileName()));
+                auto dialog = new KMessageDialog(KMessageDialog::Error,
+                                                 xi18nc("@info", "Cannot open file <filename>%1</filename> for writing.", tf.fileName()),
+                                                 parent->winId());
+                dialog->windowHandle()->setTransientParent(parent);
+                dialog->exec();
                 return;
             }
 
             // QFileDialog was run with confirmOverwrite, so we can safely
             // overwrite as necessary.
             KIO::FileCopyJob *job = KIO::file_copy(QUrl::fromLocalFile(tf.fileName()), fileUrl, -1, KIO::DefaultFlags | KIO::Overwrite);
-            KJobWidgets::setWindow(job, parent);
+            KJobWindows::setWindow(job, parent);
             if (!job->exec()) {
-                KMessageBox::error(parent, job->errorString());
+                auto dialog = new KMessageDialog(KMessageDialog::Error, job->errorString(), parent->winId());
+                dialog->windowHandle()->setTransientParent(parent);
+                dialog->exec();
             }
         }
     }
@@ -238,11 +247,6 @@ void DrKonqi::setProductName(const QString &productName)
 void DrKonqi::setPid(int pid)
 {
     instance()->m_pid = pid;
-}
-
-void DrKonqi::setKdeinit(bool kdeinit)
-{
-    instance()->m_kdeinit = kdeinit;
 }
 
 void DrKonqi::setSafer(bool safer)
@@ -308,11 +312,6 @@ const QString &DrKonqi::productName()
 int DrKonqi::pid()
 {
     return instance()->m_pid;
-}
-
-bool DrKonqi::isKdeinit()
-{
-    return instance()->m_kdeinit;
 }
 
 bool DrKonqi::isSafer()

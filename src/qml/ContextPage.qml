@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 // SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.19 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
-import org.kde.drkonqi 1.0
+import org.kde.drkonqi
 
 Kirigami.ScrollablePage {
     id: page
@@ -98,7 +98,7 @@ If you can't think of any more information, you can close the bug report dialog.
                 text: i18nc("@action:button", "Next")
                 onTriggered: {
                     if (reportInterface.isBugAwarenessPageDataUseful || DrKonqi.ignoreQuality()) {
-                        pageStack.push("qrc:/ui/BacktracePage.qml")
+                        pageStack.push(Qt.resolvedUrl("BacktracePage.qml"))
                         return
                     }
                     problemDialog.open()

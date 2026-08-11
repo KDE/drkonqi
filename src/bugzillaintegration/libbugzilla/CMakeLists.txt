@@ -51,7 +51,6 @@ ecm_qt_declare_logging_category(
     HEADER bugzilla_debug.h
     IDENTIFIER BUGZILLA_LOG
     CATEGORY_NAME org.kde.drkonqi.bugzilla
-    DEFAULT_SEVERITY Warning
     DESCRIPTION "drkonqi bugzilla"
     EXPORT DRKONQI
 )

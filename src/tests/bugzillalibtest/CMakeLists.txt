@@ -10,4 +10,4 @@ ecm_qt_declare_logging_category(
 add_executable(bugzillalibtest ${bugzillalibtest_SRCS})
 ecm_mark_as_test(bugzillalibtest)
 
-target_link_libraries(bugzillalibtest KF6::KIOWidgets KF6::I18n qbugzilla DrKonqiInternal)
+target_link_libraries(bugzillalibtest KF6::KIOWidgets KF6::I18n qbugzilla DrKonqiInternal Qt::Qml)

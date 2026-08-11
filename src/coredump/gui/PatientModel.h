@@ -5,11 +5,20 @@
 
 #include <memory>
 
+#include "Patient.h"
+
 #include <QAbstractListModel>
+#include <QQmlEngine>
 
 class PatientModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
+    Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
+    Q_PROPERTY(Patient *currentPatient READ currentPatient NOTIFY currentIndexChanged)
+
 public:
     enum ItemRole {
         IndexRole = Qt::UserRole + 1,
@@ -17,7 +26,17 @@ public:
     };
     Q_ENUM(ItemRole)
 
-    explicit PatientModel(const QMetaObject &mo, QObject *parent = nullptr);
+    static PatientModel *instance()
+    {
+        static PatientModel _instance;
+        return &_instance;
+    }
+
+    static PatientModel *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(instance(), QQmlEngine::CppOwnership);
+        return instance();
+    }
 
     [[nodiscard]] QHash<int, QByteArray> roleNames() const final;
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const final;
@@ -26,12 +45,18 @@ public:
     [[nodiscard]] int role(const QByteArray &roleName) const;
 
     // Takes ownership.
-    void addObject(std::unique_ptr<QObject> patient);
+    void addObject(std::unique_ptr<Patient> patient);
 
     Q_PROPERTY(bool ready READ ready WRITE setReady NOTIFY readyChanged)
     bool ready() const;
     void setReady(bool ready);
     Q_SIGNAL void readyChanged();
+
+    [[nodiscard]] int currentIndex() const;
+    void setCurrentIndex(int index);
+    Q_SIGNAL void currentIndexChanged();
+
+    [[nodiscard]] Patient *currentPatient() const;
 
 private Q_SLOTS:
     void propertyChanged();
@@ -40,8 +65,11 @@ private:
     int initRoleNames(const QMetaObject &mo);
     void addDynamicRoleNames(int maxEnumValue, QObject *object);
     [[nodiscard]] QMetaMethod propertyChangedMetaMethod() const;
+    explicit PatientModel(QObject *parent = nullptr);
 
-    QList<QObject *> m_objects;
+    int m_currentIndex = -1;
+
+    QList<Patient *> m_objects;
     QHash<int, QByteArray> m_roles;
     QHash<int, QByteArray> m_objectProperties;
     QHash<int, int> m_signalIndexToProperties;

@@ -10,20 +10,20 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009, 2010.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
-"PO-Revision-Date: 2025-11-29 17:16+0900\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"PO-Revision-Date: 2026-07-22 01:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -40,232 +40,6 @@ msgstr ""
 "candyz@linux.org.tw,pesder.liao@msa.hinet.net,franklin@goodhorse.idv.tw, "
 "s8321414@gmail.com, pan93412@gmail.com, mail@kisaragi-hiu.com"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "重新載入(&R)"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"用此按鍵來重新載入此崩潰的資訊（回溯追蹤資料）。若您已安裝好除錯軟體包，您可"
-"以用此按鍵來取得更完整的回溯追蹤資料。"
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "安裝除錯符號(&I)"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "用此按鍵來安裝除錯軟體包。"
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr "因為應用程式在啟動後更新或解除安裝，因此無法使用符號安裝。"
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr "用此按鍵來複製崩潰資訊（回溯追蹤資料）到剪貼簿中。"
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"用此按鍵將崩潰資訊（回溯追蹤資料）儲存到檔案中。若您要稍候再看關於此問題的報"
-"告，您可以先存到檔案中。"
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>什麼是「回溯追蹤」？</h2><p>回溯追蹤基本上是描述當應用程式崩潰時，應用程"
-"式裡面發生了什麼事，讓開發者可以追蹤出問題的根源所在。它們對您而言看起來可能"
-"是沒有什麼意義的，但是裡面可能其實包含很有用的資訊。<br />回溯追蹤廣泛用於開"
-"發期間的互動式除錯，以及出錯後的錯誤回報。</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "載入中..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "產生回溯追蹤中...（可能要花點時間）"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr "目前有另一個除錯器正在除錯此應用程式，因此無法取得崩潰資訊。"
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "無法取得崩潰資訊。"
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"目前有另一個除錯器正在除錯此應用程式，因此 DrKonqi 無法取得回溯追蹤。請關閉另"
-"一個除錯器，並點擊「<interface>重新載入</interface>」。"
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "產生的崩潰資訊是有用的"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "產生的崩潰資訊可能是有用的"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "產生的崩潰資訊可能不太有用"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "產生的崩潰資訊不太有用"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr "關於此崩潰資訊的評比是無效的。這是 DrKonqi 自身的問題。"
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"您可以點擊「<interface>安裝除錯符號</interface>」按鍵以自動安裝遺失的除錯軟體"
-"包。若此方法不管用，請閱讀<link url='%1'>如何建立有用的崩潰報告</link>來看看"
-"如何取得有用的回溯追蹤資訊。在您安裝了一些需要的軟體包（<link url='%2'>需要的"
-"檔案清單</link>）之後，點擊「<interface>重新載入</interface>」按鈕。"
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"您可以點擊「<interface>安裝除錯符號</interface>」按鍵以自動安裝遺失的除錯軟體"
-"包。若此方法不管用，請閱讀<link url='%1'>如何建立有用的崩潰報告</link>來看看"
-"如何取得有用的回溯追蹤資訊。請安裝一些需要的軟體包（<link url='%2'>需要的檔案"
-"清單</link>），然後點擊「<interface>重新載入</interface>」按鈕。"
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "除錯器非預期結束。"
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "無法產生崩潰資訊。"
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"您可以點擊「<interface>重新載入</interface>」來試著重新產生回溯追蹤資料。"
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr "<strong>找不到或無法啟動除錯器應用程式。</strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>您需要先安裝除錯軟體包（%1），然後點擊「<interface>重新載入</"
-"interface>」。</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "安裝除錯符號軟體包時發生錯誤"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr "找不到包含以下應用程式與函式庫的除錯資訊的軟體包："
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "遺失除錯資訊軟體包"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -276,31 +50,61 @@ msgstr ""
 "<placeholder>請告訴我們當應用程式崩潰時，您正在做什麼。越詳細越好。</"
 "placeholder>"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr "建立核心目錄失敗：%1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr "開啟核心檔案失敗：%1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr "核心傾印檔案不存在：%1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr "核心檔案取出程序失敗，錯誤代碼：%1"
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr "提高權限後的核心檔案取出程序失敗：%1"
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "子行程已帶錯誤結束：%1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "子行程已崩潰。請檢查您的安裝。"
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "崩潰行程檢視器"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "提供過去崩潰的詳細檢視"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, DrKonqi 作者群"
@@ -385,22 +189,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "詳細資料"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "複製到剪貼簿"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "執行互動式除錯器"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "回報給 %1"
@@ -410,22 +214,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "崩潰"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "正在載入崩潰報告"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "尚未有崩潰過的行程"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "沒有符合搜尋的崩潰項目"
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "總覽"
@@ -479,13 +283,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr "無法啟動崩潰行程檢視器。"
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr "GDB"
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -522,25 +326,25 @@ msgid ""
 "packages."
 msgstr "安裝除錯符號軟體包時發生錯誤。"
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "報告已儲存到 <filename>%1</filename>。"
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "不能建立用來儲存錯誤報告的檔案。"
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "儲存報告"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -557,110 +361,6 @@ msgstr "重新啟動應用程式(&R)"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "用此按鍵來重新啟動已崩潰的應用程式。"
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "一般(&G)"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "開發者資訊(&D)"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr "<para>抱歉，<application>%1</application>無預警關閉。</para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>因為崩潰處理器本身發生問題，自動回報機制已關閉，以避免產生更多的問題。"
-"<nl /><nl />請您<link url='%1'>手動回報</link>這個問題到 KDE 錯誤追蹤系統。別"
-"忘了到<interface>「開發者資訊」</interface>分頁中取得回溯追蹤並放入您的報告"
-"中。</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>回報小助手已關閉，因為崩潰處理器對話框是在安全模式下啟動的。<nl />您可"
-"以手動報告此錯誤給 %1（請包含在<interface>「開發者資訊」</interface>分頁中的"
-"錯誤回溯追蹤資料。）</para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>回報助手因為崩潰的應用程式看起來有在啟動後更新或解除安裝過而停用。這會"
-"使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
-"入，以確保更新完全套用，且不會有任何副作用。</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>您回報此錯誤可以協助我們改進 KDE 軟體。<nl /><link url='%1'>更多關於錯"
-"誤回報的詳情。</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>您不能回報此錯誤，因為 <application>%1</application> 並未提供錯誤回報位"
-"址。</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "詳細資料："
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>執行檔：<application>%1</application> 行程代碼：%2，訊號：%3（%4）時"
-"間：%5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "關閉此對話框（您將會遺失關於此崩潰的資訊。）"
 
 #: main.cpp:154
 #, kde-format
@@ -758,34 +458,28 @@ msgstr "程式的啟動代碼 <ID>"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "這個程式由 kdeinit 啟動"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "停用對磁碟的任意存取"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "這個程式已被啟動"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "保持程式執行，並在啟動時產生回溯追蹤"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "出錯的執行緒的代碼 <thread id>"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -864,7 +558,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "可能有關的自訂應用程式設定"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "不夠有用"
@@ -880,37 +574,37 @@ msgstr ""
 "您能提供的資訊在這個情況下可能不太夠有幫助。\n"
 "如果您無法想起更多資訊，則可以關閉錯誤回報對話框就好。"
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "開發者資訊"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "安裝除錯符號"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr "用此按鍵來安裝除錯軟體包，來取得目前缺乏的除錯符號。"
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "在 %1 上回報"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "啟動錯誤回報小助手。"
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "重新載入"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -922,17 +616,32 @@ msgstr ""
 "此按鍵\n"
 "來取得更完整的回溯追蹤資料。"
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "複製"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr "用此按鍵來複製崩潰資訊（回溯追蹤資料）到剪貼簿中。"
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "儲存"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"用此按鍵將崩潰資訊（回溯追蹤資料）儲存到檔案中。若您要稍候再看關於此問題的報"
+"告，您可以先存到檔案中。"
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -941,12 +650,17 @@ msgstr ""
 "這個回溯追蹤非常有限，因為記憶體不足以產生完整的回溯追蹤。您可以關閉一些應用"
 "程式然後再試一次。"
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "重試"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "安裝除錯符號軟體包時發生錯誤"
+
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -963,7 +677,7 @@ msgstr ""
 "之後安裝需要的軟體包（<link url='%2'>需要的檔案清單</link>），然後點擊"
 "「<interface>重新載入</interface>」按鈕。"
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -976,7 +690,7 @@ msgstr ""
 "（<link url='%2'>需要的檔案清單</link>），然後點擊「<interface>重新載入</"
 "interface>」按鈕。"
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -986,13 +700,20 @@ msgstr "請試著點擊「<interface>重新載入</interface>」來重新產生�
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr "回溯追蹤產生的準備失敗了。這代表有嚴重而應該無法由您解決的問題。"
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>請先安裝除錯應用程式（%1），然後點擊「<interface>重新"
 "載入</interface>」按鈕。</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -1001,6 +722,13 @@ msgid ""
 msgstr ""
 "由於記憶體不足，已停止產生回溯追蹤。您可以點擊「<interface>重新載入</"
 "interface>」來試著重新產生回溯追蹤資料。"
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr "找不到包含以下應用程式與函式庫的除錯資訊的軟體包："
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1071,7 +799,16 @@ msgid ""
 "email address and password."
 msgstr "使用此按鈕，以使用提供的電子信箱位址及密碼登入 KDE 錯誤追蹤系統。"
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>您不能回報此錯誤，因為 <application>%1</application> 並未提供錯誤回報位"
+"址。</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1087,7 +824,7 @@ msgstr ""
 "忘了到<interface>「開發者資訊」</interface>分頁中取得回溯追蹤並放入您的報告"
 "中。</para>"
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1099,7 +836,7 @@ msgstr ""
 "以手動報告此錯誤到 <link>%1</link>（請包含在<interface>「開發者資訊」</"
 "interface>分頁中的錯誤回溯追蹤資料。）</para>"
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1114,7 +851,16 @@ msgstr ""
 "使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出後登"
 "入，以確保更新完全套用，且不會有任何副作用。</para>"
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>您回報此錯誤可以協助我們改進 KDE 軟體。<nl /><link url='%1'>更多關於錯"
+"誤回報的詳情。</link></para>"
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -1123,7 +869,16 @@ msgstr ""
 "記憶體不足以取得崩潰資訊。您可以試著關閉一些應用程式來釋放一些記憶體然後再試"
 "一次。"
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"收集崩潰資料時失敗了。您可以關閉視窗，或是<link url='%1'>檢視詳細輸出</"
+"link>。"
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1132,7 +887,7 @@ msgstr ""
 "收集崩潰資料時因不明原因而失敗。您可以重試、關閉視窗，或是<link url='%1'>檢視"
 "詳細輸出</link>。"
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1361,9 +1116,9 @@ msgstr "自動報告"
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
-msgstr "正在收集崩潰資料。收集的資料將自動在背景提交。"
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
+msgstr "正在收集崩潰資料。您可以放心關閉此視窗。收集的資料將自動在背景提交。"
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
@@ -1574,6 +1329,227 @@ msgstr "bugstest.kde.org 使用者名稱"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密碼"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "重新載入(&R)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "用此按鍵來重新載入此崩潰的資訊（回溯追蹤資料）。若您已安裝好除錯軟體包，您"
+#~ "可以用此按鍵來取得更完整的回溯追蹤資料。"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "安裝除錯符號(&I)"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "用此按鍵來安裝除錯軟體包。"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr "因為應用程式在啟動後更新或解除安裝，因此無法使用符號安裝。"
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>什麼是「回溯追蹤」？</h2><p>回溯追蹤基本上是描述當應用程式崩潰時，應用"
+#~ "程式裡面發生了什麼事，讓開發者可以追蹤出問題的根源所在。它們對您而言看起來"
+#~ "可能是沒有什麼意義的，但是裡面可能其實包含很有用的資訊。<br />回溯追蹤廣泛"
+#~ "用於開發期間的互動式除錯，以及出錯後的錯誤回報。</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "載入中..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "產生回溯追蹤中...（可能要花點時間）"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr "目前有另一個除錯器正在除錯此應用程式，因此無法取得崩潰資訊。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "無法取得崩潰資訊。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "目前有另一個除錯器正在除錯此應用程式，因此 DrKonqi 無法取得回溯追蹤。請關"
+#~ "閉另一個除錯器，並點擊「<interface>重新載入</interface>」。"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "產生的崩潰資訊是有用的"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "產生的崩潰資訊可能是有用的"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "產生的崩潰資訊可能不太有用"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "產生的崩潰資訊不太有用"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr "關於此崩潰資訊的評比是無效的。這是 DrKonqi 自身的問題。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "您可以點擊「<interface>安裝除錯符號</interface>」按鍵以自動安裝遺失的除錯"
+#~ "軟體包。若此方法不管用，請閱讀<link url='%1'>如何建立有用的崩潰報告</link>"
+#~ "來看看如何取得有用的回溯追蹤資訊。在您安裝了一些需要的軟體包（<link "
+#~ "url='%2'>需要的檔案清單</link>）之後，點擊「<interface>重新載入</"
+#~ "interface>」按鈕。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "您可以點擊「<interface>安裝除錯符號</interface>」按鍵以自動安裝遺失的除錯"
+#~ "軟體包。若此方法不管用，請閱讀<link url='%1'>如何建立有用的崩潰報告</link>"
+#~ "來看看如何取得有用的回溯追蹤資訊。請安裝一些需要的軟體包（<link url='%2'>"
+#~ "需要的檔案清單</link>），然後點擊「<interface>重新載入</interface>」按鈕。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "除錯器非預期結束。"
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "無法產生崩潰資訊。"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "您可以點擊「<interface>重新載入</interface>」來試著重新產生回溯追蹤資料。"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr "<strong>找不到或無法啟動除錯器應用程式。</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>您需要先安裝除錯軟體包（%1），然後點擊「<interface>重新載入</"
+#~ "interface>」。</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "遺失除錯資訊軟體包"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "一般(&G)"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "開發者資訊(&D)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr "<para>抱歉，<application>%1</application>無預警關閉。</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>因為崩潰處理器本身發生問題，自動回報機制已關閉，以避免產生更多的問"
+#~ "題。<nl /><nl />請您<link url='%1'>手動回報</link>這個問題到 KDE 錯誤追蹤"
+#~ "系統。別忘了到<interface>「開發者資訊」</interface>分頁中取得回溯追蹤並放"
+#~ "入您的報告中。</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>回報小助手已關閉，因為崩潰處理器對話框是在安全模式下啟動的。<nl />您"
+#~ "可以手動報告此錯誤給 %1（請包含在<interface>「開發者資訊」</interface>分頁"
+#~ "中的錯誤回溯追蹤資料。）</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>回報助手因為崩潰的應用程式看起來有在啟動後更新或解除安裝過而停用。這"
+#~ "會使崩潰回報變得不準確，甚至可能是崩潰的主因。</para><para>更新後建議登出"
+#~ "後登入，以確保更新完全套用，且不會有任何副作用。</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "詳細資料："
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>執行檔：<application>%1</application> 行程代碼：%2，訊號：%3（%4）時"
+#~ "間：%5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "關閉此對話框（您將會遺失關於此崩潰的資訊。）"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "這個程式由 kdeinit 啟動"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"

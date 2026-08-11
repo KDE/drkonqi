@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 // SPDX-FileCopyrightText: 2020-2022 Harald Sitter <sitter@kde.org>
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Layouts 1.15
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kitemmodels 1.0 as KItemModels
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.kitemmodels as KItemModels
 
-import org.kde.drkonqi.coredump.gui 1.0 as DrKonqi
+import org.kde.drkonqi.coredump.gui as DrKonqi
 
 Kirigami.ScrollablePage {
     id: page
@@ -55,15 +55,20 @@ Kirigami.ScrollablePage {
         delegate: QQC2.ItemDelegate {
             id: delegate
 
+            required property int modelIndex
+            required property DrKonqi.Patient modelObject
+
             text: modelObject.appName
             icon.name: modelObject.iconName
 
+            highlighted: modelIndex === DrKonqi.PatientModel.currentIndex
+
             width: ListView.view.width
-            onClicked: pageStack.push("qrc:/DetailsPage.qml", {patient: modelObject})
+            onClicked: DrKonqi.PatientModel.currentIndex = modelIndex
 
             contentItem: Kirigami.IconTitleSubtitle {
                 title: delegate.text
-                subtitle: modelObject.dateTime
+                subtitle: delegate.modelObject.dateTime
                 icon: icon.fromControlsIcon(delegate.icon)
             }
         }

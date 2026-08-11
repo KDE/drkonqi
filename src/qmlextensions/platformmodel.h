@@ -3,13 +3,15 @@
 
 #pragma once
 
+#include "bugzillaintegration/bugzillalib.h"
 #include <QAbstractListModel>
-
-class BugzillaManager;
+#include <qqmlintegration.h>
 
 class PlatformModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
 public:
     enum class Role {
         Name,

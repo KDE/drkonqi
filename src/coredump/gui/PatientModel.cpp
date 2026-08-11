@@ -8,12 +8,27 @@
 #include <QDebug>
 #include <QMetaMethod>
 
+#include "Patient.h"
+#include "coredumpwatcher.h"
+
 using namespace std::chrono_literals;
 
-PatientModel::PatientModel(const QMetaObject &mo, QObject *parent)
+PatientModel::PatientModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    initRoleNames(mo);
+    initRoleNames(Patient::staticMetaObject);
+
+    auto expectedJournal = owning_ptr_call<sd_journal>(sd_journal_open, SD_JOURNAL_LOCAL_ONLY);
+    Q_ASSERT(expectedJournal.ret == 0);
+    Q_ASSERT(expectedJournal.value);
+    auto watcher = new CoredumpWatcher(std::move(expectedJournal.value), {}, {}, this);
+    connect(watcher, &CoredumpWatcher::newDump, this, [&](const auto &dump) {
+        addObject(std::make_unique<Patient>(dump));
+    });
+    connect(watcher, &CoredumpWatcher::atLogEnd, this, [&]() {
+        setReady(true);
+    });
+    QMetaObject::invokeMethod(watcher, &CoredumpWatcher::start, Qt::QueuedConnection);
 }
 
 QHash<int, QByteArray> PatientModel::roleNames() const
@@ -32,7 +47,7 @@ QVariant PatientModel::data(const QModelIndex &index, int role) const
     if (!hasIndex(index.row(), index.column())) {
         return {};
     }
-    QObject *obj = m_objects.at(index.row());
+    const auto obj = m_objects.at(index.row());
     switch ((ItemRole)role) {
     case ObjectRole:
         return QVariant::fromValue(obj);
@@ -67,12 +82,12 @@ int PatientModel::role(const QByteArray &roleName) const
     return m_roles.key(roleName, -1);
 }
 
-void PatientModel::addObject(std::unique_ptr<QObject> patient)
+void PatientModel::addObject(std::unique_ptr<Patient> patient)
 {
     const int index = m_objects.size();
     beginInsertRows(QModelIndex(), index, index);
 
-    QObject *object = patient.release();
+    auto object = patient.release();
     object->setParent(this);
 
     m_objects.append(object);
@@ -154,6 +169,29 @@ void PatientModel::setReady(bool ready)
 {
     m_ready = ready;
     Q_EMIT readyChanged();
+}
+
+int PatientModel::currentIndex() const
+{
+    return m_currentIndex;
+}
+
+void PatientModel::setCurrentIndex(int index)
+{
+    if (m_currentIndex == index) {
+        return;
+    }
+
+    m_currentIndex = index;
+    Q_EMIT currentIndexChanged();
+}
+
+Patient *PatientModel::currentPatient() const
+{
+    if (m_currentIndex == -1 || m_currentIndex >= m_objects.count()) {
+        return nullptr;
+    }
+    return m_objects[m_currentIndex];
 }
 
 #include "moc_PatientModel.cpp"

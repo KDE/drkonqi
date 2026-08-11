@@ -12,11 +12,15 @@
 #include <QObject>
 #include <QSet>
 #include <QStringList>
+#include <qqmlintegration.h>
+
 class BacktraceParserPrivate;
 
 class BacktraceParser : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Only for enums")
     Q_DECLARE_PRIVATE(BacktraceParser)
 public:
     enum Usefulness {

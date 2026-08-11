@@ -6,8 +6,6 @@
 */
 #include "debugger.h"
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KFileUtils>
 #include <KLocalizedString>
 #include <KMacroExpander>

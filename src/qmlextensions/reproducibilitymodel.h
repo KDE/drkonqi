@@ -4,12 +4,15 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlintegration.h>
 
 #include "bugzillaintegration/reportinterface.h"
 
 class ReproducibilityModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
 public:
     enum class Role {
         String = Qt::UserRole,

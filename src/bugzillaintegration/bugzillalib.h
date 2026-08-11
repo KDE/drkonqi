@@ -13,6 +13,7 @@
 
 #include <QObject>
 #include <QString>
+#include <qqmlintegration.h>
 
 #include "libbugzilla/clients/commands/newbug.h"
 #include "libbugzilla/models/product.h"
@@ -25,6 +26,8 @@ class KJob;
 class BugzillaManager : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Get using PlatformModel.manager")
 
 public:
     // Note: it expect the bugTrackerUrl parameter to contain the trailing slash.

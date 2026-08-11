@@ -13,7 +13,7 @@ public:
     void excavateFrom(const QString &coredumpFilename);
 
 Q_SIGNALS:
-    void failed();
+    void failed(const QString &context);
     // WARNING: the corepath is only valid as long as the excavator exists!
     void excavated(const QString &corePath);
 

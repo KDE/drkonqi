@@ -10,6 +10,7 @@
 #include <QDateTime>
 #include <QFileInfo>
 #include <QObject>
+#include <QQmlEngine>
 
 #include "bugreportaddress.h"
 
@@ -20,6 +21,9 @@ using EntriesHash = QHash<QByteArray, QByteArray>;
 class CrashedApplication : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(QFileInfo executable READ executable CONSTANT)
     Q_PROPERTY(QString exectuableAbsoluteFilePath READ exectuableAbsoluteFilePath CONSTANT)
@@ -35,6 +39,12 @@ class CrashedApplication : public QObject
     Q_PROPERTY(bool hasDeletedFiles READ hasDeletedFiles CONSTANT)
     Q_PROPERTY(bool wasNotResponding READ wasNotResponding CONSTANT)
 public:
+    static CrashedApplication *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(DrKonqi::crashedApplication(), QQmlEngine::CppOwnership);
+        return DrKonqi::crashedApplication();
+    }
+
     CrashedApplication(int pid,
                        int thread,
                        int signalNumber,

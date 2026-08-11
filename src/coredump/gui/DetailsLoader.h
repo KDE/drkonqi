@@ -7,6 +7,7 @@
 
 #include <QObject>
 #include <QProcess>
+#include <qqmlintegration.h>
 
 #include "Patient.h"
 
@@ -14,6 +15,7 @@ Q_DECLARE_METATYPE(Patient *)
 class DetailsLoader : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(Patient *patient MEMBER m_patient WRITE setPatient NOTIFY patientChanged)
     Patient *m_patient = nullptr;

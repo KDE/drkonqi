@@ -7,6 +7,17 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+
+  <kcfgfile name="drkonqirc" />
+
+  <group name="General">
+      <entry name="InteractionAllowed" type="Bool">
+          <default>true</default>
+      </entry>
+      <entry name="IncludeAll" type="Bool">
+          <default>false</default>
+      </entry>
+  </group>
   <group name="DrKonqi">
     <entry name="Sentry" type="Bool">
       <default>false</default>
@@ -14,5 +25,13 @@
     <entry name="DownloadSymbols" type="Bool">
       <default>false</default>
     </entry>
+    <entry name="Debugger" type="String">
+        <default>gdb</default>
+    </entry>
+  </group>
+  <group name="SystemInformation">
+      <entry name="CompiledSources" type="Bool">
+          <default>false</default>
+      </entry>
   </group>
 </kcfg>

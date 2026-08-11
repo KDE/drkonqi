@@ -9,7 +9,7 @@
 
 #include <QString>
 
-class QWidget;
+class QWindow;
 
 class SystemInformation;
 class DebuggerManager;
@@ -25,7 +25,7 @@ public:
     static DebuggerManager *debuggerManager();
     static CrashedApplication *crashedApplication();
 
-    static void saveReport(const QString &reportText, QWidget *parent = nullptr);
+    static void saveReport(const QString &reportText, QWindow *parent);
     static void setSignal(int signal);
     static void setAppName(const QString &appName);
     static void setAppPath(const QString &appPath);
@@ -34,7 +34,6 @@ public:
     static void setProgramName(const QString &programName);
     static void setProductName(const QString &productName);
     static void setPid(int pid);
-    static void setKdeinit(bool kdeinit);
     static void setSafer(bool safer);
     static void setRestarted(bool restarted);
     static void setKeepRunning(bool keepRunning);
@@ -49,7 +48,6 @@ public:
     static const QString &programName();
     static const QString &productName();
     static int pid();
-    static bool isKdeinit();
     static bool isSafer();
     static bool isRestarted();
     static bool isKeepRunning();
@@ -91,7 +89,6 @@ private:
     QString m_programName;
     QString m_productName;
     int m_pid;
-    bool m_kdeinit;
     bool m_safer;
     bool m_restarted;
     bool m_keepRunning;

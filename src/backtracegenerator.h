@@ -14,10 +14,13 @@
 
 #include <QFutureWatcher>
 #include <QProcess>
+#include <QQmlEngine>
 #include <QTemporaryFile>
 #include <QUrl>
 
 #include "debugger.h"
+#include "debuggermanager.h"
+#include "drkonqi.h"
 #include "systemd/memoryfence.h"
 
 class KProcess;
@@ -28,6 +31,8 @@ class QLockFile;
 class BacktraceGenerator : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
     Q_PROPERTY(bool hasAnyFailure READ hasAnyFailure NOTIFY stateChanged) // derives from state
@@ -41,10 +46,17 @@ public:
         Loading,
         Loaded,
         Failed,
+        FailedToPrepare,
         FailedToStart,
         MemoryPressure,
     };
     Q_ENUM(State)
+
+    static BacktraceGenerator *create(QQmlEngine *, QJSEngine *)
+    {
+        QQmlEngine::setObjectOwnership(DrKonqi::debuggerManager()->backtraceGenerator(), QQmlEngine::CppOwnership);
+        return DrKonqi::debuggerManager()->backtraceGenerator();
+    }
 
     BacktraceGenerator(const Debugger &debugger, QObject *parent);
     ~BacktraceGenerator() override;
@@ -67,7 +79,7 @@ public:
     // Called by manager when it is ready for us.
     void setBackendPrepared();
     // ... or not
-    void setBackendFailed();
+    void setBackendFailedToPrepare(const QString &context);
 
     Q_INVOKABLE bool debuggerIsGDB() const;
     Q_INVOKABLE QString debuggerName() const;
@@ -84,7 +96,7 @@ Q_SIGNALS:
     void starting();
     void newLine(const QString &str); // emitted for every line
     void someError();
-    void failedToStart();
+    void failedToStart(); // only exists for informing the backtracegenerator. Not used to indicate state changes etc
     void done();
     void preparing();
     void stateChanged();

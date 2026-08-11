@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-19 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:48+0000\n"
 "PO-Revision-Date: 2026-03-04 17:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -34,247 +34,6 @@ msgstr ""
 "andris.m@delfi.lv, viesturs.zarins@mii.lu.lv, einars8@gmail.com, toms."
 "trasuns@posteo.net"
 
-#: backtracewidget.cpp:57
-#, kde-format
-msgctxt "@action:button"
-msgid "&Reload"
-msgstr "&Pārlādēt"
-
-#: backtracewidget.cpp:60
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to reload the crash information (backtrace). This is useful "
-"when you have installed the proper debug symbol packages and you want to "
-"obtain a better backtrace."
-msgstr ""
-"Spiediet, lai pārlādētu informāciju par avāriju (atpakaļceļu). Noderīgi, ja "
-"instalējāt atbilstošas atkļūdošanas simbolu pakotnes un vēlaties saņemt "
-"labāku atpakaļceļu."
-
-#: backtracewidget.cpp:67
-#, kde-format
-msgctxt "@action:button"
-msgid "&Install Debug Symbols"
-msgstr "&Instalēt atkļūdošanas simbolus"
-
-#: backtracewidget.cpp:70
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to install the missing debug symbols packages."
-msgstr "Spiediet, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
-
-#: backtracewidget.cpp:77
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Symbol installation is unavailable because the application was updated or "
-"uninstalled after it had been started."
-msgstr ""
-"Simbola instalācija nav pieejama, jo programma ir atjaunināta vai "
-"atinstalēta pēc tās palaišanas."
-
-#: backtracewidget.cpp:85 qml/DeveloperPage.qml:72
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to copy the crash information (backtrace) to the clipboard."
-msgstr ""
-"Spiediet, lai kopētu starpliktuvē informāciju par avāriju (atpakaļceļu)."
-
-#: backtracewidget.cpp:94 qml/DeveloperPage.qml:81
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Use this button to save the crash information (backtrace) to a file. This is "
-"useful if you want to take a look at it or to report the bug later."
-msgstr ""
-"Spiediet, lai informāciju par avāriju (atpakaļceļu) saglabātu datnē. "
-"Noderīgi, ja vēlaties šo informāciju apskatīt vai ziņot par kļūdu vēlāk."
-
-#: backtracewidget.cpp:115
-#, kde-format
-msgid ""
-"<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-"was happening inside the application when it crashed, so the developers may "
-"track down where the mess started. They may look meaningless to you, but "
-"they might actually contain a wealth of useful information.<br />Backtraces "
-"are commonly used during interactive and post-mortem debugging.</p>"
-msgstr ""
-"<h2>Kas ir „atpakaļceļš“?</h2><p>Būtībā atpakaļceļš apraksta, kas norisinās "
-"programmā brīdī, kad tā avarē, lai izstrādātāji varētu izsekot problēmu "
-"sākumam. Šī informācija jums var izskatīties nenozīmīga, tomēr var saturēt "
-"daudz noderīgas informācijas.<br />Atpakaļceļi bieži tiek izmantoti "
-"interaktīvās un pēcavārijas atkļūdošanas laikā.</p>"
-
-#: backtracewidget.cpp:135
-#, kde-format
-msgctxt "@info:status"
-msgid "Loading..."
-msgstr "Ielādē..."
-
-#: backtracewidget.cpp:138
-#, kde-format
-msgctxt "@info:status"
-msgid "Generating backtrace... (this may take some time)"
-msgstr "Ģenerē avārijas atpakaļceļu... (tas aizņems kādu brīdi)"
-
-#: backtracewidget.cpp:189
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Another debugger is currently debugging the same application. The crash "
-"information could not be fetched."
-msgstr ""
-"To pašu programmu pašreiz jau atkļūdo cits atkļūdotājs. Neizdevās iegūt "
-"informāciju par avāriju."
-
-#: backtracewidget.cpp:193
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be fetched."
-msgstr "Neizdevās iegūt informāciju par avāriju."
-
-#: backtracewidget.cpp:196
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Another debugging process is attached to the crashed application. Therefore, "
-"the DrKonqi debugger cannot fetch the backtrace. Please close the other "
-"debugger and click <interface>Reload</interface>."
-msgstr ""
-"Avarējušajai programmai ir piesaistīts cita atkļūdotāja process. Līdz ar to "
-"„DrKonqi“ atkļūdotājs nevar ielādēt atpakaļceļu. Aizveriet otru atkļūdotāju "
-"un spiediet <interface>Pārlādēt</interface>."
-
-#: backtracewidget.cpp:241
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is useful"
-msgstr "Ģenerētā avārijas informācija ir noderīga"
-
-#: backtracewidget.cpp:244
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information may be useful"
-msgstr "Ģenerētā avārijas informācija varētu būt noderīga"
-
-#: backtracewidget.cpp:247
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is probably not useful"
-msgstr "Ģenerētā avārijas informācija, visticamāk, nav noderīga"
-
-#: backtracewidget.cpp:250
-#, kde-format
-msgctxt "@info"
-msgid "The generated crash information is not useful"
-msgstr "Ģenerētā avārijas informācija nav noderīga"
-
-#: backtracewidget.cpp:255
-#, kde-format
-msgctxt "@info"
-msgid ""
-"The rating of this crash information is invalid. This is a bug in DrKonqi "
-"itself."
-msgstr ""
-"Nederīgs avārijas informācijas novērtējums. Šī ir kļūda pašā „DrKonqi“."
-
-#: backtracewidget.cpp:267
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You can click the <interface>Install Debug Symbols</interface> button in "
-"order to automatically install the missing debugging information packages. "
-"If this method does not work: please read <link url='%1'>How to create "
-"useful crash reports</link> to learn how to get a useful backtrace; install "
-"the needed packages (<link url='%2'>list of files</link>) and click the "
-"<interface>Reload</interface> button."
-msgstr ""
-"Varat nospiest pogu <interface>Instalēt atkļūdošanas simbolus</interface>, "
-"lai trūkstošās pakotnes instalētu automātiski. Ja šī metode nedarbojas, "
-"izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu ziņojumus</link>, kur "
-"uzzināsiet, kā iegūt noderīgu atpakaļceļu, kā arī instalējiet vajadzīgās "
-"pakotnes (<link url='%2'>datņu saraksts</link>) un nospiediet pogu "
-"<interface>Pārlādēt</interface>."
-
-#: backtracewidget.cpp:285
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"Please read <link url='%1'>How to create useful crash reports</link> to "
-"learn how to get a useful backtrace; install the needed packages (<link "
-"url='%2'>list of files</link>) and click the <interface>Reload</interface> "
-"button."
-msgstr ""
-"Izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu ziņojumus</link>, lai "
-"uzzinātu, kā iegūt noderīgu atpakaļceļu. Instalējiet vajadzīgās pakotnes "
-"(<link url='%2'>datņu saraksts</link>) un nospiediet pogu "
-"<interface>Pārlādēt</interface>."
-
-#: backtracewidget.cpp:301
-#, kde-format
-msgctxt "@info:status"
-msgid "The debugger has quit unexpectedly."
-msgstr "Atkļūdotājs negaidīti beidza darbu."
-
-#: backtracewidget.cpp:303 backtracewidget.cpp:319
-#, kde-format
-msgctxt "@info:status"
-msgid "The crash information could not be generated."
-msgstr "Neizdevās ģenerēt avārijas informāciju."
-
-#: backtracewidget.cpp:307
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"You could try to regenerate the backtrace by clicking the <interface>Reload</"
-"interface> button."
-msgstr ""
-"Varat mēģināt atpakaļceļu ģenerēt vēlreiz, nospiežot pogu "
-"<interface>Pārlādēt</interface>."
-
-#: backtracewidget.cpp:316
-#, kde-format
-msgctxt "@info:status"
-msgid ""
-"<strong>The debugger application is missing or could not be launched.</"
-"strong>"
-msgstr ""
-"<strong>Atkļūdošanas programma nav pieejama, vai arī to neizdevās palaist.</"
-"strong>"
-
-#: backtracewidget.cpp:322
-#, kde-kuit-format
-msgctxt "@info/rich"
-msgid ""
-"<strong>You need to first install the debugger application (%1) then click "
-"the <interface>Reload</interface> button.</strong>"
-msgstr ""
-"<strong>Vispirms instalējiet atkļūdošanas programmu („%1“), bet pēc tam "
-"spiediet uz <interface>Pārlādēt</interface>.</strong>"
-
-#: backtracewidget.cpp:378 qml/DeveloperPage.qml:127
-#, kde-format
-msgctxt "@title:window"
-msgid "Error during the installation of debug symbols"
-msgstr "Kļūda, instalējot atkļūdošanas simbolus"
-
-#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
-#: backtracewidget.cpp:409 qml/DeveloperPage.qml:265
-#, kde-format
-msgid ""
-"The packages containing debug information for the following application and "
-"libraries are missing:"
-msgstr ""
-"Trūkst pakotnes, kas satur informāciju par šādām programmām un lietotnēm:"
-
-#: backtracewidget.cpp:418
-#, kde-format
-msgctxt "messagebox title"
-msgid "Missing debug information packages"
-msgstr "Trūkst atkļūdošanas informācijas pakotņu"
-
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
 msgctxt "@info/plain"
@@ -285,31 +44,61 @@ msgstr ""
 "<placeholder>Sīki aprakstiet, ko darījāt, pirms programma avarēja.</"
 "placeholder>"
 
-#: coredump/gui/DetailsLoader.cpp:30
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to create core directory: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Failed to open core file: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
+#, kde-format
+msgctxt "diagnostic error. %1 is the specific error message from the system"
+msgid "Coredump file does not exist: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
+#, kde-format
+msgctxt "diagnostic error. %1 is the numeric exit code"
+msgid "Core file extraction process failed with code: %1"
+msgstr ""
+
+#: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
+#, kde-format
+msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+msgid "Elevated core file extraction process failed: %1"
+msgstr ""
+
+#: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
 msgstr "Apakšprocess beidzās ar kļūdu: %1"
 
-#: coredump/gui/DetailsLoader.cpp:34
+#: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Apakšprocess avarēja. Pārbaudiet instalāciju."
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:28
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Avarējušo procesu skatītājs"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:30
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Sniedz sīkāku informāciju par notikušām avārijām"
 
-#: coredump/gui/main.cpp:34
+#: coredump/gui/main.cpp:32
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020—2022, „DrKonqi“ autori"
@@ -402,22 +191,22 @@ msgctxt "@info the name of where to report bugs"
 msgid "KDE"
 msgstr "KDE"
 
-#: coredump/gui/qml/DetailsPage.qml:20
+#: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
 msgstr "Informācija"
 
-#: coredump/gui/qml/DetailsPage.qml:30
+#: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
 msgstr "Kopēt starpliktuvē"
 
-#: coredump/gui/qml/DetailsPage.qml:40
+#: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
 msgstr "Palaist interaktīvo atkļūdotāju"
 
-#: coredump/gui/qml/DetailsPage.qml:47
+#: coredump/gui/qml/DetailsPage.qml:52
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Ziņot „%1“ veidotājiem"
@@ -427,22 +216,22 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Avārijas"
 
-#: coredump/gui/qml/ListPage.qml:76
+#: coredump/gui/qml/ListPage.qml:81
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Ielādē avāriju ziņojumus"
 
-#: coredump/gui/qml/ListPage.qml:84
+#: coredump/gui/qml/ListPage.qml:89
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Neviens process vēl nav avarējis"
 
-#: coredump/gui/qml/ListPage.qml:92
+#: coredump/gui/qml/ListPage.qml:97
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Meklēšanai neatbilst neviena avārija"
 
-#: coredump/gui/qml/main.qml:13
+#: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Pārskats"
@@ -497,13 +286,13 @@ msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
 msgstr "Neizdevās palaist avarējušu procesu skatītāju."
 
-#: debugger.cpp:37 debugger.cpp:64
+#: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
 msgstr "GDB"
 
-#: debugger.cpp:52
+#: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
@@ -540,25 +329,25 @@ msgid ""
 "packages."
 msgstr "Radās kļūda, instalējot atkļūdošanas simbolu pakotnes."
 
-#: drkonqi.cpp:147
+#: drkonqi.cpp:148
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Report saved to <filename>%1</filename>."
 msgstr "Ziņojums saglabāts datnē <filename>%1</filename>."
 
-#: drkonqi.cpp:149
+#: drkonqi.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Could not create a file in which to save the report."
 msgstr "Neizdevās izveidot datni ziņojuma saglabāšanai."
 
-#: drkonqi.cpp:156
+#: drkonqi.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
 msgstr "Saglabāt ziņojumu"
 
-#: drkonqi.cpp:186
+#: drkonqi.cpp:192
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
@@ -575,116 +364,6 @@ msgstr "&Pārstartēt programmu"
 msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Spiediet, lai pārstartētu avarējušo programmu."
-
-#: drkonqiwidgetsdialog.cpp:56
-#, kde-format
-msgctxt "@title:tab general information"
-msgid "&General"
-msgstr "&Pamata"
-
-#: drkonqiwidgetsdialog.cpp:60
-#, kde-format
-msgctxt "@title:tab"
-msgid "&Developer Information"
-msgstr "&Informācija izstrādātājiem"
-
-#: drkonqiwidgetsdialog.cpp:95
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>We are sorry, <application>%1</application> closed unexpectedly.</para>"
-msgstr ""
-"<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>As the Crash Handler itself has failed, the automatic reporting "
-"process is disabled to reduce the risks of failing again.<nl /><nl />Please, "
-"<link url='%1'>manually report</link> this error to the KDE bug tracking "
-"system. Do not forget to include the backtrace from the <interface>Developer "
-"Information</interface> tab.</para>"
-msgstr ""
-"<para>Tā kā radās kļūda pašā avāriju apstrādātājā, automātiskais ziņošanas "
-"process ir izslēgts, lai samazinātu turpmāko kļūdu risku.<nl /><nl />Lūdzu, "
-"<link url='%1'>ziņojiet par šo kļūdu pašrocīgi</link> KDE kļūdu uzskaites "
-"sistēmā. Neaizmirstiet iekļaut atpakaļceļu no cilnes <interface>Informācija "
-"izstrādātājiem</interface>.</para>"
-
-#: drkonqiwidgetsdialog.cpp:113
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crash handler dialog "
-"was started in safe mode.<nl />You can manually report this bug to %1 "
-"(including the backtrace from the <interface>Developer Information</"
-"interface> tab.)</para>"
-msgstr ""
-"<para>Ziņošanas palīgs ir izslēgts, jo avāriju apstrādes logs tika palaists "
-"drošajā režīmā.<nl />Varat pašrocīgi ziņot par šo kļūdu uz %1 (ieskaitot "
-"atpakaļceļu no cilnes <interface>Informācija izstrādātājiem</interface>).</"
-"para>"
-
-#: drkonqiwidgetsdialog.cpp:122
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>The reporting assistant is disabled because the crashed application "
-"appears to have been updated or uninstalled since it had been started. This "
-"prevents accurate crash reporting and can also be the cause of this crash.</"
-"para><para>After updating it is always a good idea to log out and back in to "
-"make sure the update is fully applied and will not cause any side effects.</"
-"para>"
-msgstr ""
-"<para>Ziņošanas asistents ir izslēgts, jo avarējusī programma pēc palaišanas "
-"ir atjaunināta vai atinstalēta. Tas novērš precīzu avāriju ziņošanu un "
-"varētu būt arī avārijas cēlonis.</para><para>Pēc atjaunināšanas vienmēr ir "
-"noderīgi izrakstīties no sistēmas un atkal tajā ierakstīties, lai visi "
-"atjauninājumi stātos spēkā un nerastos negaidīti blakus efekti.</para>"
-
-#: drkonqiwidgetsdialog.cpp:131 qml/main.qml:64
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You can help us improve KDE Software by reporting this error.<nl /"
-"><link url='%1'>Learn more about bug reporting.</link></para>"
-msgstr ""
-"<para>Varat palīdzēt mums uzlabot KDE programmatūru, ziņojot par šo kļūdu."
-"<nl /><link url='%1'>Uzziniet vairāk par kļūdu ziņošanu.</link></para>"
-
-#: drkonqiwidgetsdialog.cpp:138 qml/main.qml:26
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<para>You cannot report this error, because <application>%1</application> "
-"does not provide a bug reporting address.</para>"
-msgstr ""
-"<para>Par šo kļūdu nevarat ziņot, jo <application>%1</application> programmā "
-"nav norādīta kļūdu ziņošanas adrese.</para>"
-
-#: drkonqiwidgetsdialog.cpp:146
-#, kde-format
-msgctxt "@label"
-msgid "Details:"
-msgstr "Informācija:"
-
-#: drkonqiwidgetsdialog.cpp:150
-#, kde-kuit-format
-msgctxt "@info Note the time information is divided into date and time parts"
-msgid ""
-"<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-"Time: %5 %6</para>"
-msgstr ""
-"<para>Izpilddatne: <application>%1</application> PID: %2 Signāls: %3 (%4) "
-"Laiks: %5 %6</para>"
-
-#: drkonqiwidgetsdialog.cpp:179
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Close this dialog (you will lose the crash information.)"
-msgstr "Aizvērt šo logu (avārijas informācija tiks pazaudēta.)"
 
 #: main.cpp:154
 #, kde-format
@@ -782,34 +461,28 @@ msgstr "Programmas palaišanas <ID>"
 #: main.cpp:179
 #, kde-format
 msgctxt "@info:shell"
-msgid "The program was started by kdeinit"
-msgstr "Programmu palaida „kdeinit“"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
 msgid "Disable arbitrary disk access"
 msgstr "Aizliegt patvaļīgu piekļuvi diskam"
 
-#: main.cpp:181
+#: main.cpp:180
 #, kde-format
 msgctxt "@info:shell"
 msgid "The program has already been restarted"
 msgstr "Programma jau ir pārstartēta"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Palaižoties paturēt programmu darbojamies un ģenerēt tās atpakaļceļu"
 
-#: main.cpp:186
+#: main.cpp:185
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Kļūdainā pavediena <pavediena id>"
 
-#: main.cpp:187
+#: main.cpp:186
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
@@ -888,7 +561,7 @@ msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Pielāgoti programmas iestatījumi, kam varētu būt nozīme"
 
-#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:258
+#: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
 msgstr "Nav pietiekami lietderīgi"
@@ -905,38 +578,38 @@ msgstr ""
 "Ja nevarat iedomāties papildu informāciju, ko varat sniegt, aizveriet "
 "ziņošanas par kļūdu logu."
 
-#: qml/DeveloperPage.qml:23
+#: qml/DeveloperPage.qml:24
 msgctxt "@title:window"
 msgid "Developer Information"
 msgstr "Informācija izstrādātājiem"
 
-#: qml/DeveloperPage.qml:29
+#: qml/DeveloperPage.qml:30
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
 msgstr "Instalēt atkļūdošanas simbolus"
 
-#: qml/DeveloperPage.qml:42
+#: qml/DeveloperPage.qml:43
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
 msgstr ""
 "Izmantojiet šo pogu, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
 
-#: qml/DeveloperPage.qml:50
+#: qml/DeveloperPage.qml:51
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Ziņot %1"
 
-#: qml/DeveloperPage.qml:51
+#: qml/DeveloperPage.qml:52
 msgctxt "@info:tooltip"
 msgid "Starts the bug report assistant."
 msgstr "Palaiž kļūdu ziņošanas palīgu."
 
-#: qml/DeveloperPage.qml:59
+#: qml/DeveloperPage.qml:60
 msgctxt "@action:button"
 msgid "Reload"
 msgstr "Pārlādēt"
 
-#: qml/DeveloperPage.qml:61
+#: qml/DeveloperPage.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -949,17 +622,33 @@ msgstr ""
 "ir instalētas atbilstošas atkļūdošanas simbolu pakotnes un vēlaties saņemt "
 "labāku atpakaļceļu."
 
-#: qml/DeveloperPage.qml:71
+#: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
 msgstr "Kopēt"
 
-#: qml/DeveloperPage.qml:79
+#: qml/DeveloperPage.qml:73
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to copy the crash information (backtrace) to the clipboard."
+msgstr ""
+"Spiediet, lai kopētu starpliktuvē informāciju par avāriju (atpakaļceļu)."
+
+#: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Saglabāt"
 
-#: qml/DeveloperPage.qml:97
+#: qml/DeveloperPage.qml:82
+msgctxt "@info:tooltip"
+msgid ""
+"Use this button to save the crash information (backtrace) to a file. This is "
+"useful if you want to take a look at it or to report the bug later."
+msgstr ""
+"Spiediet, lai informāciju par avāriju (atpakaļceļu) saglabātu datnē. "
+"Noderīgi, ja vēlaties šo informāciju apskatīt vai ziņot par kļūdu vēlāk."
+
+#: qml/DeveloperPage.qml:98
 msgctxt "@info"
 msgid ""
 "This backtrace is very limited because there was not enough memory available "
@@ -969,12 +658,17 @@ msgstr ""
 "atpakaļceļu. Varat aizvērt kādu atvērto programmu (vai vairākas) un mēģināt "
 "vēlreiz."
 
-#: qml/DeveloperPage.qml:102 qml/main.qml:114
+#: qml/DeveloperPage.qml:103 qml/Main.qml:122
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
 msgstr "Mēģināt vēlreiz"
 
-#: qml/DeveloperPage.qml:218
+#: qml/DeveloperPage.qml:128
+msgctxt "@title:window"
+msgid "Error during the installation of debug symbols"
+msgstr "Kļūda, instalējot atkļūdošanas simbolus"
+
+#: qml/DeveloperPage.qml:219
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -992,7 +686,7 @@ msgstr ""
 "vajadzīgās pakotnes (<link url='%2'>datņu saraksts</link>) un klikšķiniet "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:226
+#: qml/DeveloperPage.qml:227
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -1006,7 +700,7 @@ msgstr ""
 "(<link url='%2'>datņu saraksts</link>) un klikšķiniet uz "
 "<interface>Pārlādēt</interface>."
 
-#: qml/DeveloperPage.qml:233
+#: qml/DeveloperPage.qml:234
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
@@ -1018,13 +712,20 @@ msgstr ""
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
 msgid ""
+"The backtrace generation failed to prepare. This indicates a severe problem "
+"which you likely cannot resolve."
+msgstr ""
+
+#: qml/DeveloperPage.qml:241
+msgctxt "@info/rich"
+msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
 "<emphasis strong='true'>Vispirms instalējiet atkļūdošanas programmu („%1“), "
 "bet pēc tam spiediet uz <interface>Pārlādēt</interface>.</emphasis>"
 
-#: qml/DeveloperPage.qml:241
+#: qml/DeveloperPage.qml:245
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
@@ -1033,6 +734,14 @@ msgid ""
 msgstr ""
 "Atpakaļceļa ir apturēt atmiņas trūkums dēļ. Varat mēģināt no jauna ģenerēt "
 "atpakaļceļu, klikšķinot uz <interface>Pārlādēt</interface> pogas."
+
+#. i18nc here because that'd close the html tag but we need to append an unordered list of paths
+#: qml/DeveloperPage.qml:269
+msgid ""
+"The packages containing debug information for the following application and "
+"libraries are missing:"
+msgstr ""
+"Trūkst pakotnes, kas satur informāciju par šādām programmām un lietotnēm:"
 
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
@@ -1112,7 +821,16 @@ msgstr ""
 "Spiediet, lai ierakstītos KDE kļūdu uzskaites sistēmā, izmantojot piedāvāto "
 "e-pasta adresi un paroli."
 
-#: qml/main.qml:33
+#: qml/Main.qml:27
+msgctxt "@info"
+msgid ""
+"<para>You cannot report this error, because <application>%1</application> "
+"does not provide a bug reporting address.</para>"
+msgstr ""
+"<para>Par šo kļūdu nevarat ziņot, jo <application>%1</application> programmā "
+"nav norādīta kļūdu ziņošanas adrese.</para>"
+
+#: qml/Main.qml:34
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1131,7 +849,7 @@ msgstr ""
 "Neaizmirstiet iekļaut atpakaļceļu no\n"
 "<interface>Informācija izstrādātājiem</interface> lapas.</para>"
 
-#: qml/main.qml:45
+#: qml/Main.qml:46
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1144,7 +862,7 @@ msgstr ""
 "Varat pašrocīgi ziņot par šo kļūdu uz <link>%1</link> (ieskaitot atpakaļceļu "
 "no <interface>Informācija izstrādātājiem</interface>lapas.)</para>"
 
-#: qml/main.qml:52
+#: qml/Main.qml:53
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because\n"
@@ -1163,7 +881,16 @@ msgstr ""
 "ierakstīties, lai visi atjauninājumi stātos spēkā un nerastos\n"
 "negaidīti blakus efekti.</para>"
 
-#: qml/main.qml:93
+#: qml/Main.qml:65
+msgctxt "@info"
+msgid ""
+"<para>You can help us improve KDE Software by reporting this error.<nl /"
+"><link url='%1'>Learn more about bug reporting.</link></para>"
+msgstr ""
+"<para>Varat palīdzēt mums uzlabot KDE programmatūru, ziņojot par šo kļūdu."
+"<nl /><link url='%1'>Uzziniet vairāk par kļūdu ziņošanu.</link></para>"
+
+#: qml/Main.qml:95
 msgctxt "@info"
 msgid ""
 "There was not enough memory to gather crash information. You can close some "
@@ -1172,7 +899,21 @@ msgstr ""
 "Pietrūk atmiņas informācijas par avāriju iegūšanai. Varat aizvērt kādu "
 "programmu (vai vairākas), lai atbrīvotu atmiņu, un mēģināt vēlreiz."
 
-#: qml/main.qml:98
+#: qml/Main.qml:101
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "Gathering crash information failed for unknown reasons. You can retry, "
+#| "close the window, or <link url='%1'>view detailed output</link>."
+msgctxt "@info"
+msgid ""
+"Gathering crash information failed. You can close the window, or <link "
+"url='%1'>view detailed output</link>."
+msgstr ""
+"Avārijas informācijas iegūšana neizdevās nezināmu iemeslu dēļ. Varat mēģināt "
+"vēlreiz, aizvērt šo logu vai <link url='%1'>aplūkot sīkāku izvadi</link>."
+
+#: qml/Main.qml:106
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
@@ -1181,7 +922,7 @@ msgstr ""
 "Avārijas informācijas iegūšana neizdevās nezināmu iemeslu dēļ. Varat mēģināt "
 "vēlreiz, aizvērt šo logu vai <link url='%1'>aplūkot sīkāku izvadi</link>."
 
-#: qml/main.qml:101
+#: qml/Main.qml:109
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
@@ -1414,10 +1155,15 @@ msgid "Automatic Report"
 msgstr "Automātisks ziņojums"
 
 #: qml/SentryPage.qml:32
+#, fuzzy
+#| msgctxt "@label submitting as crash report"
+#| msgid ""
+#| "Collecting crash data. The collected data will automatically be submitted "
+#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
-"Collecting crash data. The collected data will automatically be submitted in "
-"the background."
+"Collecting crash data. This window can be closed. The collected data will "
+"automatically be submitted in the background."
 msgstr "Avārijas datu iegūšana. Iegūtos datus automātiski nosūtīs fonā."
 
 #: qml/SentryPage.qml:55
@@ -1635,6 +1381,246 @@ msgstr "„bugstest.kde.org“ lietotājvārds"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "„bugstest.kde.org“ parole"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Reload"
+#~ msgstr "&Pārlādēt"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Use this button to reload the crash information (backtrace). This is "
+#~ "useful when you have installed the proper debug symbol packages and you "
+#~ "want to obtain a better backtrace."
+#~ msgstr ""
+#~ "Spiediet, lai pārlādētu informāciju par avāriju (atpakaļceļu). Noderīgi, "
+#~ "ja instalējāt atbilstošas atkļūdošanas simbolu pakotnes un vēlaties "
+#~ "saņemt labāku atpakaļceļu."
+
+#~ msgctxt "@action:button"
+#~ msgid "&Install Debug Symbols"
+#~ msgstr "&Instalēt atkļūdošanas simbolus"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to install the missing debug symbols packages."
+#~ msgstr "Spiediet, lai instalētu trūkstošās atkļūdošanas simbolu pakotnes."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Symbol installation is unavailable because the application was updated or "
+#~ "uninstalled after it had been started."
+#~ msgstr ""
+#~ "Simbola instalācija nav pieejama, jo programma ir atjaunināta vai "
+#~ "atinstalēta pēc tās palaišanas."
+
+#~ msgid ""
+#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
+#~ "was happening inside the application when it crashed, so the developers "
+#~ "may track down where the mess started. They may look meaningless to you, "
+#~ "but they might actually contain a wealth of useful information.<br /"
+#~ ">Backtraces are commonly used during interactive and post-mortem "
+#~ "debugging.</p>"
+#~ msgstr ""
+#~ "<h2>Kas ir „atpakaļceļš“?</h2><p>Būtībā atpakaļceļš apraksta, kas "
+#~ "norisinās programmā brīdī, kad tā avarē, lai izstrādātāji varētu izsekot "
+#~ "problēmu sākumam. Šī informācija jums var izskatīties nenozīmīga, tomēr "
+#~ "var saturēt daudz noderīgas informācijas.<br />Atpakaļceļi bieži tiek "
+#~ "izmantoti interaktīvās un pēcavārijas atkļūdošanas laikā.</p>"
+
+#~ msgctxt "@info:status"
+#~ msgid "Loading..."
+#~ msgstr "Ielādē..."
+
+#~ msgctxt "@info:status"
+#~ msgid "Generating backtrace... (this may take some time)"
+#~ msgstr "Ģenerē avārijas atpakaļceļu... (tas aizņems kādu brīdi)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Another debugger is currently debugging the same application. The crash "
+#~ "information could not be fetched."
+#~ msgstr ""
+#~ "To pašu programmu pašreiz jau atkļūdo cits atkļūdotājs. Neizdevās iegūt "
+#~ "informāciju par avāriju."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be fetched."
+#~ msgstr "Neizdevās iegūt informāciju par avāriju."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Another debugging process is attached to the crashed application. "
+#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
+#~ "the other debugger and click <interface>Reload</interface>."
+#~ msgstr ""
+#~ "Avarējušajai programmai ir piesaistīts cita atkļūdotāja process. Līdz ar "
+#~ "to „DrKonqi“ atkļūdotājs nevar ielādēt atpakaļceļu. Aizveriet otru "
+#~ "atkļūdotāju un spiediet <interface>Pārlādēt</interface>."
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is useful"
+#~ msgstr "Ģenerētā avārijas informācija ir noderīga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information may be useful"
+#~ msgstr "Ģenerētā avārijas informācija varētu būt noderīga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is probably not useful"
+#~ msgstr "Ģenerētā avārijas informācija, visticamāk, nav noderīga"
+
+#~ msgctxt "@info"
+#~ msgid "The generated crash information is not useful"
+#~ msgstr "Ģenerētā avārijas informācija nav noderīga"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
+#~ "itself."
+#~ msgstr ""
+#~ "Nederīgs avārijas informācijas novērtējums. Šī ir kļūda pašā „DrKonqi“."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You can click the <interface>Install Debug Symbols</interface> button in "
+#~ "order to automatically install the missing debugging information "
+#~ "packages. If this method does not work: please read <link url='%1'>How to "
+#~ "create useful crash reports</link> to learn how to get a useful "
+#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
+#~ "link>) and click the <interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Varat nospiest pogu <interface>Instalēt atkļūdošanas simbolus</"
+#~ "interface>, lai trūkstošās pakotnes instalētu automātiski. Ja šī metode "
+#~ "nedarbojas, izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu "
+#~ "ziņojumus</link>, kur uzzināsiet, kā iegūt noderīgu atpakaļceļu, kā arī "
+#~ "instalējiet vajadzīgās pakotnes (<link url='%2'>datņu saraksts</link>) un "
+#~ "nospiediet pogu <interface>Pārlādēt</interface>."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
+#~ "learn how to get a useful backtrace; install the needed packages (<link "
+#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
+#~ "interface> button."
+#~ msgstr ""
+#~ "Izlasiet <link url='%1'>Kā izveidot noderīgus kļūdu ziņojumus</link>, lai "
+#~ "uzzinātu, kā iegūt noderīgu atpakaļceļu. Instalējiet vajadzīgās pakotnes "
+#~ "(<link url='%2'>datņu saraksts</link>) un nospiediet pogu "
+#~ "<interface>Pārlādēt</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid "The debugger has quit unexpectedly."
+#~ msgstr "Atkļūdotājs negaidīti beidza darbu."
+
+#~ msgctxt "@info:status"
+#~ msgid "The crash information could not be generated."
+#~ msgstr "Neizdevās ģenerēt avārijas informāciju."
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "You could try to regenerate the backtrace by clicking the "
+#~ "<interface>Reload</interface> button."
+#~ msgstr ""
+#~ "Varat mēģināt atpakaļceļu ģenerēt vēlreiz, nospiežot pogu "
+#~ "<interface>Pārlādēt</interface>."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "<strong>The debugger application is missing or could not be launched.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>Atkļūdošanas programma nav pieejama, vai arī to neizdevās palaist."
+#~ "</strong>"
+
+#~ msgctxt "@info/rich"
+#~ msgid ""
+#~ "<strong>You need to first install the debugger application (%1) then "
+#~ "click the <interface>Reload</interface> button.</strong>"
+#~ msgstr ""
+#~ "<strong>Vispirms instalējiet atkļūdošanas programmu („%1“), bet pēc tam "
+#~ "spiediet uz <interface>Pārlādēt</interface>.</strong>"
+
+#~ msgctxt "messagebox title"
+#~ msgid "Missing debug information packages"
+#~ msgstr "Trūkst atkļūdošanas informācijas pakotņu"
+
+#~ msgctxt "@title:tab general information"
+#~ msgid "&General"
+#~ msgstr "&Pamata"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Developer Information"
+#~ msgstr "&Informācija izstrādātājiem"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#~ "para>"
+#~ msgstr ""
+#~ "<para>Atvainojiet, bet <application>%1</application> negaidīti aizvērās.</"
+#~ "para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
+#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
+#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
+#~ "tracking system. Do not forget to include the backtrace from the "
+#~ "<interface>Developer Information</interface> tab.</para>"
+#~ msgstr ""
+#~ "<para>Tā kā radās kļūda pašā avāriju apstrādātājā, automātiskais "
+#~ "ziņošanas process ir izslēgts, lai samazinātu turpmāko kļūdu risku.<nl /"
+#~ "><nl />Lūdzu, <link url='%1'>ziņojiet par šo kļūdu pašrocīgi</link> KDE "
+#~ "kļūdu uzskaites sistēmā. Neaizmirstiet iekļaut atpakaļceļu no cilnes "
+#~ "<interface>Informācija izstrādātājiem</interface>.</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crash handler "
+#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
+#~ "%1 (including the backtrace from the <interface>Developer Information</"
+#~ "interface> tab.)</para>"
+#~ msgstr ""
+#~ "<para>Ziņošanas palīgs ir izslēgts, jo avāriju apstrādes logs tika "
+#~ "palaists drošajā režīmā.<nl />Varat pašrocīgi ziņot par šo kļūdu uz %1 "
+#~ "(ieskaitot atpakaļceļu no cilnes <interface>Informācija izstrādātājiem</"
+#~ "interface>).</para>"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<para>The reporting assistant is disabled because the crashed application "
+#~ "appears to have been updated or uninstalled since it had been started. "
+#~ "This prevents accurate crash reporting and can also be the cause of this "
+#~ "crash.</para><para>After updating it is always a good idea to log out and "
+#~ "back in to make sure the update is fully applied and will not cause any "
+#~ "side effects.</para>"
+#~ msgstr ""
+#~ "<para>Ziņošanas asistents ir izslēgts, jo avarējusī programma pēc "
+#~ "palaišanas ir atjaunināta vai atinstalēta. Tas novērš precīzu avāriju "
+#~ "ziņošanu un varētu būt arī avārijas cēlonis.</para><para>Pēc "
+#~ "atjaunināšanas vienmēr ir noderīgi izrakstīties no sistēmas un atkal tajā "
+#~ "ierakstīties, lai visi atjauninājumi stātos spēkā un nerastos negaidīti "
+#~ "blakus efekti.</para>"
+
+#~ msgctxt "@label"
+#~ msgid "Details:"
+#~ msgstr "Informācija:"
+
+#~ msgctxt ""
+#~ "@info Note the time information is divided into date and time parts"
+#~ msgid ""
+#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
+#~ "Time: %5 %6</para>"
+#~ msgstr ""
+#~ "<para>Izpilddatne: <application>%1</application> PID: %2 Signāls: %3 (%4) "
+#~ "Laiks: %5 %6</para>"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Close this dialog (you will lose the crash information.)"
+#~ msgstr "Aizvērt šo logu (avārijas informācija tiks pazaudēta.)"
+
+#~ msgctxt "@info:shell"
+#~ msgid "The program was started by kdeinit"
+#~ msgstr "Programmu palaida „kdeinit“"
 
 #~ msgctxt "@action:button"
 #~ msgid "Show backtrace content (advanced)"
