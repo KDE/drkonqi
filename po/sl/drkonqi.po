@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1743035 2026-08-05 01:31:23Z scripty $
+# $Id: drkonqi.po 1743655 2026-08-13 01:35:41Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"POT-Creation-Date: 2026-08-13 00:51+0000\n"
 "PO-Revision-Date: 2026-07-11 09:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -110,19 +110,19 @@ msgstr "Omogoča podroben pregled preteklih sesutij"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2000-2022, avtorji progama DrKonqi"
 
-#: coredump/gui/Patient.cpp:120
+#: coredump/gui/Patient.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Neuspeh"
 
-#: coredump/gui/Patient.cpp:121
+#: coredump/gui/Patient.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "Iz neznanih razlogov ni bilo mogoče dostopati do podatkov o sesutjih."
 
-#: coredump/gui/Patient.cpp:183
+#: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 "Odpravljanje napak ni mogoče pri sesutjih programske opreme, ki se izvaja "
 "znotraj peskovnika Flatpak."
 
-#: coredump/gui/Patient.cpp:185
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "Odpravljanje napak ni mogoče pri sesutjih programske opreme, ki se izvaja "
 "znotraj peskovnika Snap."
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -152,25 +152,25 @@ msgstr ""
 "Odpravljanje napak pri tem sesutju ni več mogoče. Datoteka z izpisom "
 "pomnilnika manjka."
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "Odpravljanje napak pri tem sesutju ni več mogoče."
 
-#: coredump/gui/Patient.cpp:217
+#: coredump/gui/Patient.cpp:225
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "Poročanje trenutno ni podprto za aplikacije Flatpak."
 
-#: coredump/gui/Patient.cpp:222
+#: coredump/gui/Patient.cpp:230
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "Že poročano."
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:235
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -180,19 +180,19 @@ msgstr ""
 "Vaša distribucija ni navedla URL-ja za poročilo o napaki. Prosimo, da to "
 "sporočite svoji distribuciji."
 
-#: coredump/gui/Patient.cpp:269
+#: coredump/gui/Patient.cpp:285
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:271
+#: coredump/gui/Patient.cpp:287
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap Store"
 
-#: coredump/gui/Patient.cpp:273
+#: coredump/gui/Patient.cpp:289
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -223,17 +223,17 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Sesutja"
 
-#: coredump/gui/qml/ListPage.qml:81
+#: coredump/gui/qml/ListPage.qml:82
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Nalaganje poročil o sesutju"
 
-#: coredump/gui/qml/ListPage.qml:89
+#: coredump/gui/qml/ListPage.qml:90
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Noben proces se še ni sesul"
 
-#: coredump/gui/qml/ListPage.qml:97
+#: coredump/gui/qml/ListPage.qml:98
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "Ni sesutij, ki bi ustrezali iskanju"

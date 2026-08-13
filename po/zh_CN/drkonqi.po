@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"POT-Creation-Date: 2026-08-13 00:51+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -94,19 +94,19 @@ msgstr "显示过去程序崩溃的详细信息"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
 
-#: coredump/gui/Patient.cpp:120
+#: coredump/gui/Patient.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "失败"
 
-#: coredump/gui/Patient.cpp:121
+#: coredump/gui/Patient.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "访问崩溃数据失败，原因未知。"
 
-#: coredump/gui/Patient.cpp:183
+#: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -114,7 +114,7 @@ msgid ""
 "sandbox at this time."
 msgstr "目前无法对在 Flatpak 沙箱中运行的软件的崩溃进行调试。"
 
-#: coredump/gui/Patient.cpp:185
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -122,7 +122,7 @@ msgid ""
 "at this time."
 msgstr "目前无法对在 Snap 沙箱中运行的软件的崩溃进行调试。"
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -130,25 +130,25 @@ msgid ""
 "missing."
 msgstr "此崩溃已无法进行调试。它的核心转储文件已丢失。"
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "此崩溃已无法进行调试。"
 
-#: coredump/gui/Patient.cpp:217
+#: coredump/gui/Patient.cpp:225
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "目前不支持报告 Flatpak 应用程序的崩溃。"
 
-#: coredump/gui/Patient.cpp:222
+#: coredump/gui/Patient.cpp:230
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "已经报告。"
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:235
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -156,19 +156,19 @@ msgid ""
 "your distribution."
 msgstr "本机运行的发行版没有提供程序缺陷报告 URL，请自行向该发行版报告此崩溃。"
 
-#: coredump/gui/Patient.cpp:269
+#: coredump/gui/Patient.cpp:285
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:271
+#: coredump/gui/Patient.cpp:287
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap 软件商店"
 
-#: coredump/gui/Patient.cpp:273
+#: coredump/gui/Patient.cpp:289
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -199,17 +199,17 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "崩溃"
 
-#: coredump/gui/qml/ListPage.qml:81
+#: coredump/gui/qml/ListPage.qml:82
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "正在加载崩溃报告"
 
-#: coredump/gui/qml/ListPage.qml:89
+#: coredump/gui/qml/ListPage.qml:90
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "尚未有进程崩溃"
 
-#: coredump/gui/qml/ListPage.qml:97
+#: coredump/gui/qml/ListPage.qml:98
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "没有匹配搜索条件的崩溃记录"

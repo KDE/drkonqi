@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"POT-Creation-Date: 2026-08-13 00:51+0000\n"
 "PO-Revision-Date: 2026-07-11 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -115,13 +115,13 @@ msgstr "Ofrece una vista detallada de fallos anteriores"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2020-2022, los autores de DrKonqi"
 
-#: coredump/gui/Patient.cpp:120
+#: coredump/gui/Patient.cpp:128
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Fallo"
 
-#: coredump/gui/Patient.cpp:121
+#: coredump/gui/Patient.cpp:129
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
@@ -129,7 +129,7 @@ msgstr ""
 "No se ha podido acceder a los datos del fallo de la aplicación por motivos "
 "desconocidos."
 
-#: coredump/gui/Patient.cpp:183
+#: coredump/gui/Patient.cpp:191
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -139,7 +139,7 @@ msgstr ""
 "Por ahora no se pueden depurar los fallos del software que se ejecuta en un "
 "entorno aislado de Flatpak."
 
-#: coredump/gui/Patient.cpp:185
+#: coredump/gui/Patient.cpp:193
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +149,7 @@ msgstr ""
 "Por ahora no se pueden depurar los fallos del software que se ejecuta en un "
 "entorno aislado de Snap."
 
-#: coredump/gui/Patient.cpp:189
+#: coredump/gui/Patient.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -159,25 +159,25 @@ msgstr ""
 "La depuración ya no es posible para este fallo. Falta el archivo de volcado "
 "del núcleo."
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "La depuración ya no es posible para este fallo."
 
-#: coredump/gui/Patient.cpp:217
+#: coredump/gui/Patient.cpp:225
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "Por ahora no se puede informar de aplicaciones Flatpak."
 
-#: coredump/gui/Patient.cpp:222
+#: coredump/gui/Patient.cpp:230
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "Ya se ha informado."
 
-#: coredump/gui/Patient.cpp:227
+#: coredump/gui/Patient.cpp:235
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -187,19 +187,19 @@ msgstr ""
 "Su distribución no ha proporcionado ninguna URL para informar de errores. "
 "Informe de esto a su distribución."
 
-#: coredump/gui/Patient.cpp:269
+#: coredump/gui/Patient.cpp:285
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:271
+#: coredump/gui/Patient.cpp:287
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Tienda Snap"
 
-#: coredump/gui/Patient.cpp:273
+#: coredump/gui/Patient.cpp:289
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -230,17 +230,17 @@ msgctxt "@title"
 msgid "Crashes"
 msgstr "Fallos"
 
-#: coredump/gui/qml/ListPage.qml:81
+#: coredump/gui/qml/ListPage.qml:82
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
 msgstr "Cargando informes de fallos"
 
-#: coredump/gui/qml/ListPage.qml:89
+#: coredump/gui/qml/ListPage.qml:90
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
 msgstr "Todavía no ha fallado ningún proceso"
 
-#: coredump/gui/qml/ListPage.qml:97
+#: coredump/gui/qml/ListPage.qml:98
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
 msgstr "No hay fallos que coincidan con la búsqueda"
