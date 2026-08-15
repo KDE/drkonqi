@@ -53,31 +53,31 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Nepodarilo sa vytvoriť adresár na výpis pamäte: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Nepodarilo sa otvoriť súbor s výpisom pamäte: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Súbor s výpisom pamäte neexistuje: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Proces extrakcie výpisu pamäte zlyhal s kódom: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "Proces extrakcie výpisu pamäte so zvýšenými právami zlyhal: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -718,6 +718,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Prípravu generovania zásobníka volaní sa nepodarilo dokončiť. Naznačuje to "
+"vážny problém, ktorý pravdepodobne nedokážete vyriešiť."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -901,18 +903,13 @@ msgstr ""
 "niektoré aplikácie na uvoľnenie pamäte a skúsiť znova."
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Zhromaždenie informácií o páde zlyhalo z neznámych dôvodov. Môžete to skúsiť "
-"znova, zatvoriť okno, alebo <link url='%1'>zobraziť podrobný výstup</link>."
+"Zhromaždenie informácií o páde zlyhalo. Môžete okno zatvoriť alebo <link "
+"url='%1'>zobraziť podrobný výstup</link>."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1158,16 +1155,13 @@ msgid "Automatic Report"
 msgstr "Odoslať automatické hlásenie"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
-msgstr "Zber dát o páde. Zozbierané dáta budú automaticky odoslané na pozadí."
+msgstr ""
+"Zber dát o páde. Toto okno môžete zatvoriť. Zozbierané dáta sa automaticky "
+"odošlú na pozadí."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
