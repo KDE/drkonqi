@@ -1,25 +1,25 @@
 # Translation for drkonqi.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2025 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the drkonqi package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE Euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2010.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2009, 2010, 2011, 2013, 2014, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-13 00:51+0000\n"
-"PO-Revision-Date: 2026-02-22 00:13+0100\n"
+"PO-Revision-Date: 2026-08-21 21:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -48,31 +48,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "Core direktorioa sortzeak huts egin du: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "Core fitxategia irekitzeak huts egin du: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "Core dump fitxategia ez da existitzen: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "Core fitxategia erauzteko prozesuak huts egin du kode honekin: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
 msgstr ""
+"Pribilegio handiekin core fitxategia erauzteko prozesuak huts egin du: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -194,12 +195,12 @@ msgstr "KDE"
 #: coredump/gui/qml/DetailsPage.qml:25
 msgctxt "@title"
 msgid "Details"
-msgstr "Zehaztasunak"
+msgstr "Xehetasunak"
 
 #: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr "Kopiatu arbelera"
+msgstr "Arbelera kopiatu"
 
 #: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
@@ -725,6 +726,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Atzera-aztarna sortzeko prestaketak huts egin du. Horrek ziurrenik zuk "
+"konpondu ezin izango duzun arazo larri bat dagoela adierazten du."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -913,19 +916,13 @@ msgstr ""
 "batzuk itxi eta berriz saia zaitezke."
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Kraskadurari buruzko datuak biltzea huts egin du arrazoi ezezagunengatik. "
-"Berriz saiatu, leihoa itxi, edo <link url='%1'>irteera xehatua ikusi</link> "
-"dezakezu."
+"Kraskadurari buruzko informazioa biltzeak huts egin du. Leihoa itxi edo "
+"<link url='%1'>irteera xehetua ikusi</link> dezakezu."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1174,18 +1171,13 @@ msgid "Automatic Report"
 msgstr "Txosten automatikoa"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"Kraskaduraren datuak biltzea. Bildutako datuak, atzeko planoan, automatikoki "
-"entregatuko dira."
+"Kraskaduraren datuak biltzen. Leiho hau itxi daiteke. Bildutako datuak "
+"atzeko planoan automatikoki bidaliko dira."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
