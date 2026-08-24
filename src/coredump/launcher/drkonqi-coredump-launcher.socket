@@ -5,6 +5,11 @@
 Description=Socket to launch DrKonqi for a systemd-coredump crash
 DefaultDependencies=no
 ConditionUser=!@system
+Requisite=plasma-core.target
+PartOf=plasma-core.target
+# We need kwin to actually be able to render the drkonqi windows
+After=plasma-kwin_wayland.service
+After=sockets.target
 
 [Socket]
 # This is a bit problematic. Technically the user should be able to set the runtime dir via env as well, but we need
@@ -24,4 +29,4 @@ PollLimitIntervalSec=2s
 MaxConnections=16
 
 [Install]
-WantedBy=sockets.target
+WantedBy=plasma-core.target
