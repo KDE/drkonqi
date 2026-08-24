@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-# SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2021-2026 Harald Sitter <sitter@kde.org>
 
 [Unit]
 Description=Socket to launch DrKonqi for a systemd-coredump crash
@@ -12,13 +12,16 @@ ConditionUser=!@system
 ListenSequentialPacket=/run/user/%U/drkonqi-coredump-launcher
 SocketMode=0600
 Accept=yes
-# Disable trigger limit for the benefit of older systemds
-# TODO: remove in favor of PollLimitBurst mechanism once systemd 255 is in ubuntu LTS
+
+# Disable hard-limiting (would fail the unit when exhausted)
 TriggerLimitBurst=0
+
+# Enable soft-limiting (does not fail the unit but limits the rate of polling)
+PollLimitBurst=15
+PollLimitIntervalSec=2s
+
 # NB: this effectively also limits how many concurrent drkonqis run!
 MaxConnections=16
 
 [Install]
 WantedBy=sockets.target
-# Prevents trigger-limit-hit failure state by restarting the unit (systemd 250[?])
-UpheldBy=sockets.target
