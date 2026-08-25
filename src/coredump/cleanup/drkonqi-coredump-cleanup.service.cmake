@@ -5,8 +5,8 @@
 Description=Cleaning DrKonqi data
 ConditionPathExistsGlob=|%C/kcrash-metadata/*.ini
 ConditionPathExistsGlob=|%C/drkonqi/cores/*
-PartOf=graphical-session.target
-After=plasma-core.target
+PartOf=plasma-core.target
+After=default.target
 
 [Service]
 ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/drkonqi-coredump-cleanup %C
@@ -18,4 +18,6 @@ RuntimeMaxSec=30 minutes
 # left over should then get cleaned up (if the file is old enough).
 # Since we currently lack the UI infrastructure for that we had better clean up on login
 # unconditionally.
-WantedBy=default.target
+#
+# When making changes here also make sure to replicate them in CMake.
+WantedBy=plasma-core.target

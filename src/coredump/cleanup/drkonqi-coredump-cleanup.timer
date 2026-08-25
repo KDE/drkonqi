@@ -3,6 +3,8 @@
 
 [Unit]
 Description=Cleaning DrKonqi data
+PartOf=plasma-core.target
+After=timers.target
 
 [Timer]
 # Purely for users that always supend, they'd not get cruft cleaned up on login.
@@ -11,4 +13,5 @@ OnCalendar=weekly
 Persistent=false
 
 [Install]
-WantedBy=timers.target
+# When making changes here also make sure to replicate them in CMake.
+WantedBy=plasma-core.target

@@ -15,6 +15,6 @@ install(
 )
 install(CODE "
     include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
-    systemctl_enable(drkonqi-coredump-cleanup.service default.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
-    systemctl_enable(drkonqi-coredump-cleanup.timer timers.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
+    systemctl_enable(drkonqi-coredump-cleanup.service plasma-core.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
+    systemctl_enable(drkonqi-coredump-cleanup.timer plasma-core.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
 ")
