@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2019-2022 Harald Sitter <sitter@kde.org>
 */
 
+#include <algorithm>
 #include <thread>
 
 #include <QCommandLineParser>
@@ -25,6 +26,27 @@
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
+
+namespace
+{
+// Crashes of our own binaries must never be forwarded. Forwarding one activates a launcher, that
+// launcher may crash as well, its crash gets forwarded again, and so on. The loop is unbounded and
+// fills the disk with core dumps in a matter of minutes.
+[[nodiscard]] bool isOwnExe(const QString &exe)
+{
+    const auto name = QStringView(exe).mid(exe.lastIndexOf(u'/') + 1);
+    return std::ranges::any_of(std::initializer_list{"drkonqi"_L1,
+                                                     "drkonqi-coredump-launcher"_L1,
+                                                     "drkonqi-coredump-processor"_L1,
+                                                     "drkonqi-coredump-cleanup"_L1,
+                                                     "drkonqi-coredump-gui"_L1,
+                                                     "drkonqi-polkit-helper"_L1,
+                                                     "drkonqi-sentry-postman"_L1},
+                               [name](QLatin1StringView knownExe) {
+                                   return name == knownExe;
+                               });
+}
+} // namespace
 
 int main(int argc, char **argv)
 {
@@ -66,6 +88,13 @@ int main(int argc, char **argv)
         watcher.addMatch(u"COREDUMP_UID=%1"_s.arg(uid));
     }
     QObject::connect(&watcher, &CoredumpWatcher::newDump, &app, [&watcher, pickup](const Coredump &dump) {
+        if (isOwnExe(dump.exe)) {
+            // Neither an error nor fatal. Our own crashes are in the journal and in systemd-coredump's
+            // storage either way, they simply mustn't go around the loop once more.
+            qWarning() << "Not processing the crash of our own binary:" << dump.exe;
+            return;
+        }
+
         if (pickup && !QFile::exists(dump.filename)) {
             // We only ignore missing cores when picking up old crashes. When dealing with new ones we may still wish
             // to notify that something has crashed, even when we can't debug it.
