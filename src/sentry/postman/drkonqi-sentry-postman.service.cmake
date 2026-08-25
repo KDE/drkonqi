@@ -3,7 +3,7 @@
 
 [Unit]
 Description=Submitting pending crash events
-PartOf=graphical-session.target
+PartOf=plasma-core.target
 After=plasma-core.target
 
 [Service]

@@ -1,8 +1,10 @@
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-# SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
+# SPDX-FileCopyrightText: 2023-2026 Harald Sitter <sitter@kde.org>
 
 [Unit]
 Description=Submitting pending crash events (file monitor)
+PartOf=plasma-core.target
+After=default.target
 
 [Path]
 PathExistsGlob=%C/drkonqi/sentry-envelopes/*
@@ -11,4 +13,5 @@ TriggerLimitIntervalSec=30 minutes
 TriggerLimitBurst=4
 
 [Install]
-WantedBy=default.target plasma-core.target
+# When making changes here also make sure to replicate them in CMake.
+WantedBy=plasma-core.target

@@ -4,10 +4,12 @@
 [Unit]
 Description=Submitting pending crash events
 ConditionPathExistsGlob=%C/drkonqi/sentry-envelopes/*
+PartOf=plasma-core.target
 
 [Timer]
 OnCalendar=hourly
 Persistent=false
 
 [Install]
-WantedBy=timers.target plasma-core.target
+# When making changes here also make sure to replicate them in CMake.
+WantedBy=plasma-core.target
