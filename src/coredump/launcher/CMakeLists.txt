@@ -28,8 +28,9 @@ install(
     FILES drkonqi-coredump-launcher.socket ${CMAKE_CURRENT_BINARY_DIR}/drkonqi-coredump-launcher@.service
     DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
 )
+# When making changes here also make sure to replicate them in the unit.
 install(CODE "
     include(${CMAKE_SOURCE_DIR}/cmake/SystemctlEnable.cmake)
-    systemctl_enable(drkonqi-coredump-launcher.socket sockets.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
+    systemctl_enable(drkonqi-coredump-launcher.socket plasma-core.target ${KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR})
 ")
 install( FILES drkonqi-coredump-launcher.notifyrc DESTINATION  ${KDE_INSTALL_KNOTIFYRCDIR})
