@@ -5,7 +5,8 @@
 Description=Socket to launch DrKonqi for a systemd-coredump crash
 DefaultDependencies=no
 ConditionUser=!@system
-Requisite=plasma-core.target
+# Be careful with how we related to plasma-core.target. In (at least) Plasma 6.8 it is somewhat easily kept
+# alive by other units. e.g. on the Steam devices when switching session type between desktop mode and game mode
 PartOf=plasma-core.target
 # We need kwin to actually be able to render the drkonqi windows
 After=plasma-kwin_wayland.service
