@@ -52,11 +52,18 @@ public:
     void setReady(bool ready);
     Q_SIGNAL void readyChanged();
 
+    void setPatient(pid_t pid);
+
     [[nodiscard]] int currentIndex() const;
     void setCurrentIndex(int index);
     Q_SIGNAL void currentIndexChanged();
 
     [[nodiscard]] Patient *currentPatient() const;
+
+    void updatePatient(pid_t pid);
+
+    void openReport(pid_t pid);
+    void openSentry(pid_t pid);
 
 private Q_SLOTS:
     void propertyChanged();
@@ -66,8 +73,13 @@ private:
     void addDynamicRoleNames(int maxEnumValue, QObject *object);
     [[nodiscard]] QMetaMethod propertyChangedMetaMethod() const;
     explicit PatientModel(QObject *parent = nullptr);
+    int indexForPid(pid_t pid) const;
 
     int m_currentIndex = -1;
+    pid_t m_initialPid = -1;
+
+    pid_t m_pidWaitingForReport = -1;
+    pid_t m_pidWaitingForSentry = -1;
 
     QList<Patient *> m_objects;
     QHash<int, QByteArray> m_roles;

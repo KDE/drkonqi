@@ -274,6 +274,11 @@ void DrKonqi::setStartupId(const QString &startupId)
     instance()->m_startupId = startupId;
 }
 
+void DrKonqi::setMetadataFile(const QString &metadataFile)
+{
+    instance()->m_metadataFile = metadataFile;
+}
+
 int DrKonqi::signal()
 {
     return instance()->m_signal;
@@ -411,6 +416,11 @@ QString DrKonqi::frameworksVersion() const
         return m_systemInformation->frameworksVersion();
     }
     return m_frameworksVersion;
+}
+
+QString DrKonqi::metadataFile()
+{
+    return instance()->m_metadataFile;
 }
 
 #include "drkonqi.moc"

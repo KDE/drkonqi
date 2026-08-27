@@ -68,8 +68,12 @@ public:
     [[nodiscard]] QString faultEntityName() const;
     [[nodiscard]] bool canReport();
     Q_INVOKABLE [[nodiscard]] QString reasonForNoReport() const;
-    Q_INVOKABLE void report();
+    Q_INVOKABLE void report(bool sentry = false);
     [[nodiscard]] bool reported() const;
+
+    [[nodiscard]] pid_t pid() const;
+
+    void updateMetadata();
 
 Q_SIGNALS:
     void changed();

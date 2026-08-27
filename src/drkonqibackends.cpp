@@ -52,12 +52,8 @@ void AbstractDrKonqiBackend::prepareForDebugger()
 
 QString AbstractDrKonqiBackend::metadataPath()
 {
-    static QString path = [] {
-        const QString envPath = qEnvironmentVariable("DRKONQI_METADATA_FILE");
-        qunsetenv("DRKONQI_METADATA_FILE");
-        Q_ASSERT(!envPath.isEmpty());
-        return envPath;
-    }();
+    auto path = DrKonqi::metadataFile();
+    Q_ASSERT(!path.isEmpty());
     return path;
 }
 

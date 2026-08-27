@@ -191,18 +191,21 @@ static bool tryDrkonqi(const Coredump &dump)
         return false;
     }
 
-    if (Paths::drkonqiExe().isEmpty()) {
-        qWarning() << "Couldn't find drkonqi exe";
-        return false;
-    }
-
     setenv("DRKONQI_BACKEND", "COREDUMPD", 1);
-    setenv("DRKONQI_METADATA_FILE", qPrintable(drkonqiMetadataPath), 1);
 
     // We must start drkonqi in a new slice. This launcher will want to terminate quickly and we enforce that
     // through maximum run time in the unit configuration. If drkonqi wasn't in a new slice it'd get killed with us.
-    QProcess::execute(Paths::drkonqiExe(), Metadata::metadataArguments(metadata[Metadata::KCRASH_KEY].toObject().toVariantHash()));
+    const auto args = QStringList{u"--user"_s, // omit this if you want the system manager
+                                  u"--scope"_s, // optional; see below
+                                  u"--slice=myapp.slice"_s,
+                                  u"--"_s,
+                                  QStandardPaths::findExecutable(u"drkonqi-coredump-gui"_s)}
+        + Metadata::metadataArguments(metadata[Metadata::KCRASH_KEY].toObject().toVariantHash())
+        + QStringList{u"--notify"_s, u"--metadata_file"_s, drkonqiMetadataPath};
 
+    QProcess process;
+    process.startDetached(u"/usr/bin/systemd-run"_s, args);
+    sleep(1);
     return true; // always considered handled, even if drkonqi crashes or something
 }
 
