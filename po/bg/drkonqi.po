@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1744052 2026-08-17 13:53:49Z mkkdr $
+# $Id: drkonqi.po 1744920 2026-08-28 01:30:48Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-24 09:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -87,36 +87,77 @@ msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "Подпроцесът се срина. Проверете инсталацията."
 
-#: coredump/gui/main.cpp:28
+#: coredump/gui/main.cpp:32 main.cpp:150
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "<PID> на програмата"
+
+#: coredump/gui/main.cpp:33 main.cpp:152
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "Изключване на произволния достъп до диска"
+
+#: coredump/gui/main.cpp:34 main.cpp:159
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr ""
+"Без показване на известие, но директно стартиране на диалоговия прозорец за "
+"отстраняване на грешки"
+
+#: coredump/gui/main.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Start the application showing only a notification that a process has crashed"
+msgstr ""
+
+#: coredump/gui/main.cpp:36 main.cpp:153
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "Програмата вече е презаредена"
+
+#: coredump/gui/main.cpp:37 main.cpp:165
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "<Path> to the executable"
+msgctxt "@info:shell"
+msgid "The path to the metadata file"
+msgstr "<Path> към изпълнимия файл"
+
+#: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr "Преглед на сринали се процеси"
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:188
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr "Предоставя подробен изглед от минали сривове"
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:190
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
 
-#: coredump/gui/Patient.cpp:128
+#: coredump/gui/Patient.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr "Грешка"
 
-#: coredump/gui/Patient.cpp:129
+#: coredump/gui/Patient.cpp:137
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr "Неуспешно получаване на достъп до данните за срива."
 
-#: coredump/gui/Patient.cpp:191
+#: coredump/gui/Patient.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -126,7 +167,7 @@ msgstr ""
 "В момента не е възможно отстраняване на грешки при сривове на софтуер, "
 "изпълняван във Flatpak sandbox."
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +177,7 @@ msgstr ""
 "В момента не е възможно отстраняване на грешки при сривове на софтуер, "
 "изпълняван в Snap sandbox."
 
-#: coredump/gui/Patient.cpp:197
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -146,25 +187,25 @@ msgstr ""
 "Отстраняването на грешки вече не е възможно за този срив. Файлът с "
 "извлечената информация от паметта (core dump) липсва."
 
-#: coredump/gui/Patient.cpp:201
+#: coredump/gui/Patient.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr "Отстраняването на грешки вече не е възможно за този срив."
 
-#: coredump/gui/Patient.cpp:225
+#: coredump/gui/Patient.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr "В момента докладването на грешки не се поддържа за Flatpak приложения."
 
-#: coredump/gui/Patient.cpp:230
+#: coredump/gui/Patient.cpp:238
 #, kde-format
 msgctxt "@info"
 msgid "Already reported."
 msgstr "Вече е докладвана."
 
-#: coredump/gui/Patient.cpp:235
+#: coredump/gui/Patient.cpp:243
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -174,19 +215,19 @@ msgstr ""
 "Вашата дистрибуция не е предоставила URL адрес за докладване на грешки. "
 "Моля, докладвайте това на вашата дистрибуция."
 
-#: coredump/gui/Patient.cpp:285
+#: coredump/gui/Patient.cpp:291
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr "Flatpak"
 
-#: coredump/gui/Patient.cpp:287
+#: coredump/gui/Patient.cpp:293
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr "Snap Store"
 
-#: coredump/gui/Patient.cpp:289
+#: coredump/gui/Patient.cpp:295
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -236,6 +277,84 @@ msgstr "Няма сривове отговарящи на търсенето"
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Преглед"
+
+#: coredump/gui/statusnotifier.cpp:30
+#, kde-format
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "Приложението се затвори неочаквано."
+
+#: coredump/gui/statusnotifier.cpp:32
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr ""
+"Моля, докладвайте за тази грешка, за да помогнете за подобряването на този "
+"софтуер."
+
+#: coredump/gui/statusnotifier.cpp:34
+#, kde-format
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr ""
+"Приложението се затвори неочаквано. Автоматично се изпрати съобщение за срив."
+
+#: coredump/gui/statusnotifier.cpp:46 coredump/gui/statusnotifier.cpp:124
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr "%1 затвори неочаквано"
+
+#: coredump/gui/statusnotifier.cpp:63
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr ""
+"Моля, докладвайте за тази грешка, за да помогнете за подобряването на този "
+"софтуер."
+
+#: coredump/gui/statusnotifier.cpp:70
+#, kde-format
+msgid "Report &Bug"
+msgstr "Доклад и грешка"
+
+#: coredump/gui/statusnotifier.cpp:76
+#, kde-format
+msgid "&Restart Application"
+msgstr "&Рестартиране на приложението"
+
+#: coredump/gui/statusnotifier.cpp:87
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr "Скриване"
+
+#: coredump/gui/statusnotifier.cpp:122
+#, fuzzy, kde-format
+#| msgctxt "Placeholder is an application name; it crashed"
+#| msgid "%1 Closed Unexpectedly"
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Repeatedly"
+msgstr "%1 затвори неочаквано"
+
+#: coredump/gui/statusnotifier.cpp:139
+#, kde-format
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Добавяне на подробности"
+
+#: coredump/gui/statusnotifier.cpp:144
+#, kde-format
+msgctxt "Notification action button, keep short"
+msgid "Report Bug"
+msgstr "Сигнал за грешка"
+
+#: coredump/gui/statusnotifier.cpp:151
+#, kde-format
+msgctxt "Notification action button, keep short"
+msgid "Restart App"
+msgstr "Рестарт"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
 #, kde-format
@@ -369,114 +488,96 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Използвайте този бутон за презареждане на блокиралата програма."
 
-#: main.cpp:154
+#: main.cpp:127
 #, kde-format
 msgid "Crash Handler"
 msgstr "Програма за следене на грешки"
 
-#: main.cpp:156
+#: main.cpp:129
 #, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr ""
 "Програмата за следене на грешки дава на потребителя информация при срив на "
 "даден процес или приложение."
 
-#: main.cpp:159
+#: main.cpp:132
 #, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "(C) 2000-2018, The DrKonqi Authors"
 
-#: main.cpp:160
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:161
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:162
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:163
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:170
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Уловеният сигнал <number>"
 
-#: main.cpp:171
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Име> на програмата"
 
-#: main.cpp:172
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Path> към изпълнимия файл"
 
-#: main.cpp:173
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "<Версията> на програмата"
 
-#: main.cpp:174
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "Грешката <адрес>, която да се използва"
 
-#: main.cpp:175
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Преведено <name> на програмата"
 
-#: main.cpp:176
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr "Bugzilla продуктово име"
 
-#: main.cpp:177
-#, kde-format
-msgctxt "@info:shell"
-msgid "The <PID> of the program"
-msgstr "<PID> на програмата"
-
-#: main.cpp:178
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "Стартиране <ID> на програмата"
 
-#: main.cpp:179
-#, kde-format
-msgctxt "@info:shell"
-msgid "Disable arbitrary disk access"
-msgstr "Изключване на произволния достъп до диска"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
-msgid "The program has already been restarted"
-msgstr "Програмата вече е презаредена"
-
-#: main.cpp:183
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
@@ -484,19 +585,17 @@ msgstr ""
 "Поддържане на програмата работеща и генериране на обратната проследяване при "
 "начало стартиране"
 
-#: main.cpp:185
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "<thread id> на неуспешната нишка"
 
-#: main.cpp:186
+#: main.cpp:166
 #, kde-format
-msgctxt "@info:shell"
-msgid "Do not show a notification but launch the debug dialog directly"
+msgctxt "@info"
+msgid "Go directly to the sentry page"
 msgstr ""
-"Без показване на известие, но директно стартиране на диалоговия прозорец за "
-"отстраняване на грешки"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
@@ -1295,76 +1394,6 @@ msgstr "Понякога"
 msgctxt "@item:inlistbox the bug can be reproduced every time"
 msgid "Every time"
 msgstr "Всеки път"
-
-#: statusnotifier.cpp:29
-#, kde-format
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr "Приложението се затвори неочаквано."
-
-#: statusnotifier.cpp:31
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr ""
-"Моля, докладвайте за тази грешка, за да помогнете за подобряването на този "
-"софтуер."
-
-#: statusnotifier.cpp:33
-#, kde-format
-msgctxt "Notification text"
-msgid ""
-"The application closed unexpectedly. A report is being automatically "
-"submitted."
-msgstr ""
-"Приложението се затвори неочаквано. Автоматично се изпрати съобщение за срив."
-
-#: statusnotifier.cpp:47
-#, kde-format
-msgctxt "Placeholder is an application name; it crashed"
-msgid "%1 Closed Unexpectedly"
-msgstr "%1 затвори неочаквано"
-
-#: statusnotifier.cpp:65
-#, kde-format
-msgid "Please report this error to help improve this software."
-msgstr ""
-"Моля, докладвайте за тази грешка, за да помогнете за подобряването на този "
-"софтуер."
-
-#: statusnotifier.cpp:72
-#, kde-format
-msgid "Report &Bug"
-msgstr "Доклад и грешка"
-
-#: statusnotifier.cpp:78
-#, kde-format
-msgid "&Restart Application"
-msgstr "&Рестартиране на приложението"
-
-#: statusnotifier.cpp:89
-#, kde-format
-msgctxt "Allows the user to hide this notifier item"
-msgid "Hide"
-msgstr "Скриване"
-
-#: statusnotifier.cpp:120
-#, kde-format
-msgctxt "@action:button, keep short"
-msgid "Add Details"
-msgstr "Добавяне на подробности"
-
-#: statusnotifier.cpp:123
-#, kde-format
-msgctxt "Notification action button, keep short"
-msgid "Report Bug"
-msgstr "Сигнал за грешка"
-
-#: statusnotifier.cpp:128
-#, kde-format
-msgctxt "Notification action button, keep short"
-msgid "Restart App"
-msgstr "Рестарт"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2014-09-18 15:23+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -82,37 +82,75 @@ msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr ""
 
-#: coredump/gui/main.cpp:28
+#: coredump/gui/main.cpp:32 main.cpp:150
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "De Perzess-ID <PID> vun't Programm"
+
+#: coredump/gui/main.cpp:33 main.cpp:152
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "Egenmächtig Diskettentogriepen ünnerbinnen"
+
+#: coredump/gui/main.cpp:34 main.cpp:159
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr ""
+
+#: coredump/gui/main.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Start the application showing only a notification that a process has crashed"
+msgstr ""
+
+#: coredump/gui/main.cpp:36 main.cpp:153
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "Dat Programm wöör al nieg opropen."
+
+#: coredump/gui/main.cpp:37 main.cpp:165
+#, fuzzy, kde-format
+#| msgid "Path to the executable"
+msgctxt "@info:shell"
+msgid "The path to the metadata file"
+msgstr "Padd na de utföhrbore Datei"
+
+#: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr ""
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:188
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr ""
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:190
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© 2000-2009: De Schrievers vun DrKonqi"
 
-#: coredump/gui/Patient.cpp:128
+#: coredump/gui/Patient.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:129
+#: coredump/gui/Patient.cpp:137
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:191
+#: coredump/gui/Patient.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -120,7 +158,7 @@ msgid ""
 "sandbox at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -128,7 +166,7 @@ msgid ""
 "at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:197
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -136,19 +174,19 @@ msgid ""
 "missing."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:201
+#: coredump/gui/Patient.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:225
+#: coredump/gui/Patient.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:230
+#: coredump/gui/Patient.cpp:238
 #, fuzzy, kde-format
 #| msgctxt "@info/plain bug resolution"
 #| msgid "[Already reported]"
@@ -156,7 +194,7 @@ msgctxt "@info"
 msgid "Already reported."
 msgstr "[Al meldt]"
 
-#: coredump/gui/Patient.cpp:235
+#: coredump/gui/Patient.cpp:243
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -164,19 +202,19 @@ msgid ""
 "your distribution."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:285
+#: coredump/gui/Patient.cpp:291
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:287
+#: coredump/gui/Patient.cpp:293
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:289
+#: coredump/gui/Patient.cpp:295
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -237,6 +275,97 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Overview"
 msgstr "Ö&verschrieven"
+
+#: coredump/gui/statusnotifier.cpp:30
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr ""
+"<para>Oha, <application>%1</application> wöör unverwachtens utmaakt.</para>"
+
+#: coredump/gui/statusnotifier.cpp:32
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:34
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr ""
+"<para>Oha, <application>%1</application> wöör unverwachtens utmaakt.</para>"
+
+#: coredump/gui/statusnotifier.cpp:46 coredump/gui/statusnotifier.cpp:124
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:63
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:70
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report &Bug"
+msgid "Report &Bug"
+msgstr "Fehler &künnig maken"
+
+#: coredump/gui/statusnotifier.cpp:76
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Restart Application"
+msgid "&Restart Application"
+msgstr "Programm &nieg starten"
+
+#: coredump/gui/statusnotifier.cpp:87
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:122
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Repeatedly"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:139
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "Enkelheiten:"
+
+#: coredump/gui/statusnotifier.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report &Bug"
+msgctxt "Notification action button, keep short"
+msgid "Report Bug"
+msgstr "Fehler &künnig maken"
+
+#: coredump/gui/statusnotifier.cpp:151
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "&Restart Application"
+msgctxt "Notification action button, keep short"
+msgid "Restart App"
+msgstr "Programm &nieg starten"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
 #, fuzzy, kde-format
@@ -371,131 +500,113 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "Mit dissen Knoop kannst Du dat afstörte Programm nieg starten."
 
-#: main.cpp:154
+#: main.cpp:127
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "KDE Afstörten-Pleger"
 
-#: main.cpp:156
+#: main.cpp:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "De KDE-Afstörtenpleger vertellt den Bruker wat över den Afstört."
 
-#: main.cpp:159
+#: main.cpp:132
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "© 2000-2009: De Schrievers vun DrKonqi"
 
-#: main.cpp:160
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:161
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:162
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:163
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:170
+#: main.cpp:143
 #, kde-format
 msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "Dat faatkregen Signaal <number>"
 
-#: main.cpp:171
+#: main.cpp:144
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "<Naam> vun't Programm"
 
-#: main.cpp:172
+#: main.cpp:145
 #, kde-format
 msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "<Padd> na de utföhrbore Datei"
 
-#: main.cpp:173
+#: main.cpp:146
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "Dat Programm sien <Verschoon>"
 
-#: main.cpp:174
+#: main.cpp:147
 #, kde-format
 msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "De Fehler-<Adress>, de Du bruken wullt"
 
-#: main.cpp:175
+#: main.cpp:148
 #, kde-format
 msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "Översett Programm-<Naam>"
 
-#: main.cpp:176
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:177
-#, kde-format
-msgctxt "@info:shell"
-msgid "The <PID> of the program"
-msgstr "De Perzess-ID <PID> vun't Programm"
-
-#: main.cpp:178
+#: main.cpp:151
 #, kde-format
 msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "De Start-<ID> vun't Programm"
 
-#: main.cpp:179
-#, kde-format
-msgctxt "@info:shell"
-msgid "Disable arbitrary disk access"
-msgstr "Egenmächtig Diskettentogriepen ünnerbinnen"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
-msgid "The program has already been restarted"
-msgstr "Dat Programm wöör al nieg opropen."
-
-#: main.cpp:183
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "Programm wieder lopen laten un de Fehlerspoor bi't Starten opstellen."
 
-#: main.cpp:185
+#: main.cpp:158
 #, kde-format
 msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Den fehlerhaftigen Utföhrstrang sien <Strang-ID>"
 
-#: main.cpp:186
+#: main.cpp:166
 #, kde-format
-msgctxt "@info:shell"
-msgid "Do not show a notification but launch the debug dialog directly"
+msgctxt "@info"
+msgid "Go directly to the sentry page"
 msgstr ""
 
 #: qml/BacktracePage.qml:11
@@ -1506,91 +1617,6 @@ msgstr "Mennigmaal"
 msgctxt "@item:inlistbox the bug can be reproduced every time"
 msgid "Every time"
 msgstr "Jümmers"
-
-#: statusnotifier.cpp:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr ""
-"<para>Oha, <application>%1</application> wöör unverwachtens utmaakt.</para>"
-
-#: statusnotifier.cpp:31
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
-msgctxt "Notification text"
-msgid ""
-"The application closed unexpectedly. A report is being automatically "
-"submitted."
-msgstr ""
-"<para>Oha, <application>%1</application> wöör unverwachtens utmaakt.</para>"
-
-#: statusnotifier.cpp:47
-#, kde-format
-msgctxt "Placeholder is an application name; it crashed"
-msgid "%1 Closed Unexpectedly"
-msgstr ""
-
-#: statusnotifier.cpp:65
-#, kde-format
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report &Bug"
-msgid "Report &Bug"
-msgstr "Fehler &künnig maken"
-
-#: statusnotifier.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
-msgid "&Restart Application"
-msgstr "Programm &nieg starten"
-
-#: statusnotifier.cpp:89
-#, kde-format
-msgctxt "Allows the user to hide this notifier item"
-msgid "Hide"
-msgstr ""
-
-#: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Details:"
-msgctxt "@action:button, keep short"
-msgid "Add Details"
-msgstr "Enkelheiten:"
-
-#: statusnotifier.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report &Bug"
-msgctxt "Notification action button, keep short"
-msgid "Report Bug"
-msgstr "Fehler &künnig maken"
-
-#: statusnotifier.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Restart Application"
-msgctxt "Notification action button, keep short"
-msgid "Restart App"
-msgstr "Programm &nieg starten"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
@@ -4258,9 +4284,6 @@ msgstr "bugstest.kde.org Passwoort"
 
 #~ msgid "The signal number that was caught"
 #~ msgstr "De faatkregen Signaalnummer"
-
-#~ msgid "Path to the executable"
-#~ msgstr "Padd na de utföhrbore Datei"
 
 #~ msgid "The version of the program"
 #~ msgstr "Programmverschoon"

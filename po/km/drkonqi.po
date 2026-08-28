@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-08-28 00:47+0000\n"
 "PO-Revision-Date: 2012-06-15 14:16+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -80,37 +80,78 @@ msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr ""
 
-#: coredump/gui/main.cpp:28
+#: coredump/gui/main.cpp:32 main.cpp:150
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "The PID of the program"
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "PID របស់​កម្មវិធី"
+
+#: coredump/gui/main.cpp:33 main.cpp:152
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "បិទ​ការ​​ឲ្យ​ចូល​ដំណើរ​ការ​ថាស​តាម​តែ​អំពើ​ចិត្ត"
+
+#: coredump/gui/main.cpp:34 main.cpp:159
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr ""
+
+#: coredump/gui/main.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Start the application showing only a notification that a process has crashed"
+msgstr ""
+
+#: coredump/gui/main.cpp:36 main.cpp:153
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "កម្មវិធី​ត្រូវបាន​ចាប់ផ្ដើម​ឡើងវិញ​រួច​ហើយ"
+
+#: coredump/gui/main.cpp:37 main.cpp:165
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Path to the executable"
+msgctxt "@info:shell"
+msgid "The path to the metadata file"
+msgstr "ផ្លូវ​ត្រូវប្រតិបត្តិ"
+
+#: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
 msgstr ""
 
-#: coredump/gui/main.cpp:30
+#: coredump/gui/main.cpp:188
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
 msgstr ""
 
-#: coredump/gui/main.cpp:32
+#: coredump/gui/main.cpp:190
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០០-២០០៩ ដោយ​អ្នក​និពន្ធ DrKonqi"
 
-#: coredump/gui/Patient.cpp:128
+#: coredump/gui/Patient.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:129
+#: coredump/gui/Patient.cpp:137
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:191
+#: coredump/gui/Patient.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -118,7 +159,7 @@ msgid ""
 "sandbox at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:193
+#: coredump/gui/Patient.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -126,7 +167,7 @@ msgid ""
 "at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:197
+#: coredump/gui/Patient.cpp:205
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -134,19 +175,19 @@ msgid ""
 "missing."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:201
+#: coredump/gui/Patient.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:225
+#: coredump/gui/Patient.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:230
+#: coredump/gui/Patient.cpp:238
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Your problem has already been reported as bug <numid>%1</numid>."
@@ -154,7 +195,7 @@ msgctxt "@info"
 msgid "Already reported."
 msgstr "អ្នក​នឹង​សម្គាល់​ការ​គាំង​របស់​អ្នក​​ទាក់ទង​ទៅនឹង​កំហុស <numid>%1</numid>"
 
-#: coredump/gui/Patient.cpp:235
+#: coredump/gui/Patient.cpp:243
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -162,19 +203,19 @@ msgid ""
 "your distribution."
 msgstr ""
 
-#: coredump/gui/Patient.cpp:285
+#: coredump/gui/Patient.cpp:291
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:287
+#: coredump/gui/Patient.cpp:293
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
 msgstr ""
 
-#: coredump/gui/Patient.cpp:289
+#: coredump/gui/Patient.cpp:295
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
@@ -233,6 +274,95 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Overview"
 msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:30
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid "The application closed unexpectedly."
+msgstr "<para>យើង​សូមទោស <application>%1</application> បាន​បិទដោយ​មិន​រំពឹង​ទុក ។</para>"
+
+#: coredump/gui/statusnotifier.cpp:32
+#, kde-format
+msgctxt "Notification text"
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:34
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
+#| "para>"
+msgctxt "Notification text"
+msgid ""
+"The application closed unexpectedly. A report is being automatically "
+"submitted."
+msgstr "<para>យើង​សូមទោស <application>%1</application> បាន​បិទដោយ​មិន​រំពឹង​ទុក ។</para>"
+
+#: coredump/gui/statusnotifier.cpp:46 coredump/gui/statusnotifier.cpp:124
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Unexpectedly"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:63
+#, kde-format
+msgid "Please report this error to help improve this software."
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:70
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report Bug"
+msgid "Report &Bug"
+msgstr "រាយការណ៍​កំហុស"
+
+#: coredump/gui/statusnotifier.cpp:76
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgid "&Restart Application"
+msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
+
+#: coredump/gui/statusnotifier.cpp:87
+#, kde-format
+msgctxt "Allows the user to hide this notifier item"
+msgid "Hide"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:122
+#, kde-format
+msgctxt "Placeholder is an application name; it crashed"
+msgid "%1 Closed Repeatedly"
+msgstr ""
+
+#: coredump/gui/statusnotifier.cpp:139
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Details:"
+msgctxt "@action:button, keep short"
+msgid "Add Details"
+msgstr "​សេចក្ដី​លម្អិត ៖"
+
+#: coredump/gui/statusnotifier.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Report Bug"
+msgctxt "Notification action button, keep short"
+msgid "Report Bug"
+msgstr "រាយការណ៍​កំហុស"
+
+#: coredump/gui/statusnotifier.cpp:151
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restart Application"
+msgctxt "Notification action button, keep short"
+msgid "Restart App"
+msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
 #, fuzzy, kde-format
@@ -371,50 +501,50 @@ msgctxt "@info:tooltip"
 msgid "Use this button to restart the crashed application."
 msgstr "ប្រើ​ប៊ូតុង​នេះ​ដើម្បី​ចាប់ផ្ដើម​កម្មវិធី​ដែល​គាំង​ឡើងវិញ ។"
 
-#: main.cpp:154
+#: main.cpp:127
 #, fuzzy, kde-format
 #| msgid "The KDE Crash Handler"
 msgid "Crash Handler"
 msgstr "កម្មវិធី​ដោះស្រាយ​ការ​គាំង​របស់ KDE"
 
-#: main.cpp:156
+#: main.cpp:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "The KDE Crash Handler gives the user feedback if a program has crashed."
 msgid "Crash Handler gives the user feedback if a program has crashed."
 msgstr "កម្មវិធី​គ្រប់គ្រង​ការគាំង​របស់ KDE ផ្ដល់​នូវ​មតិយោបល់​អ្នក​ប្រើ​ ប្រសិនបើ​កម្មវិធី​បានគាំង ។"
 
-#: main.cpp:159
+#: main.cpp:132
 #, fuzzy, kde-format
 #| msgid "(C) 2000-2009, The DrKonqi Authors"
 msgid "(C) 2000-2018, The DrKonqi Authors"
 msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០០-២០០៩ ដោយ​អ្នក​និពន្ធ DrKonqi"
 
-#: main.cpp:160
+#: main.cpp:133
 #, kde-format
 msgctxt "@info:credit"
 msgid "Hans Petter Bieker"
 msgstr "Hans Petter Bieker"
 
-#: main.cpp:161
+#: main.cpp:134
 #, kde-format
 msgctxt "@info:credit"
 msgid "Dario Andres Rodriguez"
 msgstr "Dario Andres Rodriguez"
 
-#: main.cpp:162
+#: main.cpp:135
 #, kde-format
 msgctxt "@info:credit"
 msgid "George Kiagiadakis"
 msgstr "George Kiagiadakis"
 
-#: main.cpp:163
+#: main.cpp:136
 #, kde-format
 msgctxt "@info:credit"
 msgid "A. L. Spehr"
 msgstr "A. L. Spehr"
 
-#: main.cpp:170
+#: main.cpp:143
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The signal number that was caught"
@@ -422,7 +552,7 @@ msgctxt "@info:shell"
 msgid "The signal <number> that was caught"
 msgstr "ចំនួន​សញ្ញា​ដែល​ត្រូវ​បាន​ចាប់យក"
 
-#: main.cpp:171
+#: main.cpp:144
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Name of the program"
@@ -430,7 +560,7 @@ msgctxt "@info:shell"
 msgid "<Name> of the program"
 msgstr "ឈ្មោះ​កម្មវិធី"
 
-#: main.cpp:172
+#: main.cpp:145
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Path to the executable"
@@ -438,7 +568,7 @@ msgctxt "@info:shell"
 msgid "<Path> to the executable"
 msgstr "ផ្លូវ​ត្រូវប្រតិបត្តិ"
 
-#: main.cpp:173
+#: main.cpp:146
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The version of the program"
@@ -446,7 +576,7 @@ msgctxt "@info:shell"
 msgid "The <version> of the program"
 msgstr "កំណែ​កម្មវិធី"
 
-#: main.cpp:174
+#: main.cpp:147
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The bug address to use"
@@ -454,7 +584,7 @@ msgctxt "@info:shell"
 msgid "The bug <address> to use"
 msgstr "អាសយដ្ឋាន​បំបាត់​កំហុស​ត្រូវ​ប្រើ"
 
-#: main.cpp:175
+#: main.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Translated name of the program"
@@ -462,21 +592,13 @@ msgctxt "@info:shell"
 msgid "Translated <name> of the program"
 msgstr "ឈ្មោះ​កម្មវិធី​ដែល​បាន​បកប្រែ"
 
-#: main.cpp:176
+#: main.cpp:149
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
 msgstr ""
 
-#: main.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "The PID of the program"
-msgctxt "@info:shell"
-msgid "The <PID> of the program"
-msgstr "PID របស់​កម្មវិធី"
-
-#: main.cpp:178
+#: main.cpp:151
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "Startup ID of the program"
@@ -484,25 +606,13 @@ msgctxt "@info:shell"
 msgid "Startup <ID> of the program"
 msgstr "លេខសម្គាល់​ចាប់ផ្ដើម​របស់​កម្មវិធី"
 
-#: main.cpp:179
-#, kde-format
-msgctxt "@info:shell"
-msgid "Disable arbitrary disk access"
-msgstr "បិទ​ការ​​ឲ្យ​ចូល​ដំណើរ​ការ​ថាស​តាម​តែ​អំពើ​ចិត្ត"
-
-#: main.cpp:180
-#, kde-format
-msgctxt "@info:shell"
-msgid "The program has already been restarted"
-msgstr "កម្មវិធី​ត្រូវបាន​ចាប់ផ្ដើម​ឡើងវិញ​រួច​ហើយ"
-
-#: main.cpp:183
+#: main.cpp:156
 #, kde-format
 msgctxt "@info:shell"
 msgid "Keep the program running and generate the backtrace at startup"
 msgstr "ទុក​កម្មវិធី​ឲ្យ​រត់ ហើយ​បង្កើត​ដាន​នៅពេល​ចាប់ផ្ដើម"
 
-#: main.cpp:185
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgctxt "@info:shell"
 #| msgid "The thread id of the failing thread"
@@ -510,10 +620,10 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "លេខសម្គាល់​ខ្សែស្រឡាយ​របស់​ខ្សែស្រឡាយ​​ដែល"
 
-#: main.cpp:186
+#: main.cpp:166
 #, kde-format
-msgctxt "@info:shell"
-msgid "Do not show a notification but launch the debug dialog directly"
+msgctxt "@info"
+msgid "Go directly to the sentry page"
 msgstr ""
 
 #: qml/BacktracePage.qml:11
@@ -1491,89 +1601,6 @@ msgstr "ពេល​ខ្លះ"
 msgctxt "@item:inlistbox the bug can be reproduced every time"
 msgid "Every time"
 msgstr "គ្រប់ពេល"
-
-#: statusnotifier.cpp:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
-msgctxt "Notification text"
-msgid "The application closed unexpectedly."
-msgstr "<para>យើង​សូមទោស <application>%1</application> បាន​បិទដោយ​មិន​រំពឹង​ទុក ។</para>"
-
-#: statusnotifier.cpp:31
-#, kde-format
-msgctxt "Notification text"
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
-msgctxt "Notification text"
-msgid ""
-"The application closed unexpectedly. A report is being automatically "
-"submitted."
-msgstr "<para>យើង​សូមទោស <application>%1</application> បាន​បិទដោយ​មិន​រំពឹង​ទុក ។</para>"
-
-#: statusnotifier.cpp:47
-#, kde-format
-msgctxt "Placeholder is an application name; it crashed"
-msgid "%1 Closed Unexpectedly"
-msgstr ""
-
-#: statusnotifier.cpp:65
-#, kde-format
-msgid "Please report this error to help improve this software."
-msgstr ""
-
-#: statusnotifier.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgid "Report &Bug"
-msgstr "រាយការណ៍​កំហុស"
-
-#: statusnotifier.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgid "&Restart Application"
-msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
-
-#: statusnotifier.cpp:89
-#, kde-format
-msgctxt "Allows the user to hide this notifier item"
-msgid "Hide"
-msgstr ""
-
-#: statusnotifier.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Details:"
-msgctxt "@action:button, keep short"
-msgid "Add Details"
-msgstr "​សេចក្ដី​លម្អិត ៖"
-
-#: statusnotifier.cpp:123
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Report Bug"
-msgctxt "Notification action button, keep short"
-msgid "Report Bug"
-msgstr "រាយការណ៍​កំហុស"
-
-#: statusnotifier.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restart Application"
-msgctxt "Notification action button, keep short"
-msgid "Restart App"
-msgstr "ចាប់ផ្ដើម​កម្មវិធី​ឡើងវិញ"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
