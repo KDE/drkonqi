@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-07-11 05:31+0200\n"
+"PO-Revision-Date: 2026-08-28 07:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -103,6 +103,8 @@ msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
 msgstr ""
+"აპლიკაციის გაშვება და, მხოლოდ, გაფრთხილების ჩვენება, რომ პროცესი ავარიულად "
+"დასრულდა"
 
 #: coredump/gui/main.cpp:36 main.cpp:153
 #, kde-format
@@ -111,12 +113,10 @@ msgid "The program has already been restarted"
 msgstr "პროგრამა უკვე გადაიტვირთა"
 
 #: coredump/gui/main.cpp:37 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<ბილიკი> გამშვებ ფაილამდე"
+msgstr "ბილიკი მეტამონაცემების ფაილამდე"
 
 #: coredump/gui/main.cpp:186
 #, kde-format
@@ -322,12 +322,10 @@ msgid "Hide"
 msgstr "დამალვა"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1 მოულოდნელად დაიხურა"
+msgstr "%1 კიდევ ერთხელ დაიხურა"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -582,7 +580,7 @@ msgstr "ავარიული ნაკადის ID <thread id>"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "პირდაპირ sentry-ის გვერდზე გადასვლა"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
