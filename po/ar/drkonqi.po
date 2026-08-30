@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-07-15 22:02+0400\n"
+"PO-Revision-Date: 2026-08-29 17:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -116,7 +116,7 @@ msgstr "لا تعرض إشعارًا ولكن شغّل مربع حوار تصح�
 msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
-msgstr ""
+msgstr "تشغيل التطبيق مع عرض إشعار يفيد بأن إحدى العمليات قد انهارت فقط"
 
 #: coredump/gui/main.cpp:36 main.cpp:153
 #, kde-format
@@ -125,12 +125,10 @@ msgid "The program has already been restarted"
 msgstr "أعيد تشغيل البرنامج فعلًا"
 
 #: coredump/gui/main.cpp:37 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Path> المسار إلى الملف التنفيذي"
+msgstr "مسار ملف البيانات الوصفية"
 
 #: coredump/gui/main.cpp:186
 #, kde-format
@@ -326,12 +324,10 @@ msgid "Hide"
 msgstr "أخفِ"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "توقف %1 بشكل غير متوقع"
+msgstr "أُغلق %1 بشكل كثيرًا"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -582,7 +578,7 @@ msgstr "<thread id> رقم الخيط المنهار"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "انتقل مباشرةً إلى صفحة مراقبة الانهيارات sentry"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
