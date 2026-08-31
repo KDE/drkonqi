@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:47+0000\n"
-"PO-Revision-Date: 2026-07-12 09:38+0200\n"
+"PO-Revision-Date: 2026-08-29 08:52+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -130,6 +130,8 @@ msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
 msgstr ""
+"Démarrez l'application en n'affichant qu'une notification indiquant qu'un "
+"processus s'est planté"
 
 #: coredump/gui/main.cpp:36 main.cpp:153
 #, kde-format
@@ -138,12 +140,10 @@ msgid "The program has already been restarted"
 msgstr "Le programme a déjà été redémarré"
 
 #: coredump/gui/main.cpp:37 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Emplacement> de l'exécutable"
+msgstr "L'emplacement du fichier de métadonnées"
 
 #: coredump/gui/main.cpp:186
 #, kde-format
@@ -348,12 +348,10 @@ msgid "Hide"
 msgstr "Masquer"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1 terminé de façon inattendue"
+msgstr "%1 s'est fermé de façon récurrente"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -613,7 +611,7 @@ msgstr "L'<identifiant> du processus défaillant"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Accédez directement à la page d'entrée"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
