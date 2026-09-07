@@ -29,12 +29,12 @@
 
 using namespace Qt::StringLiterals;
 
-const QCommandLineOption pidOption(QStringLiteral("pid"), i18nc("@info:shell", "The <PID> of the program"), QStringLiteral("pid"));
-const QCommandLineOption saferOption(QStringLiteral("safer"), i18nc("@info:shell", "Disable arbitrary disk access"));
-const QCommandLineOption dialogOption(QStringLiteral("dialog"), i18nc("@info:shell", "Do not show a notification but launch the debug dialog directly"));
-const QCommandLineOption notifyOption(u"notify"_s, i18nc("@info", "Start the application showing only a notification that a process has crashed"));
-const QCommandLineOption restartedOption(QStringLiteral("restarted"), i18nc("@info:shell", "The program has already been restarted"));
-const QCommandLineOption metadataOption(QStringLiteral("metadata_file"), i18nc("@info:shell", "The path to the metadata file"), u"path"_s);
+std::unique_ptr<QCommandLineOption> pidOption;
+std::unique_ptr<QCommandLineOption> saferOption;
+std::unique_ptr<QCommandLineOption> dialogOption;
+std::unique_ptr<QCommandLineOption> notifyOption;
+std::unique_ptr<QCommandLineOption> restartedOption;
+std::unique_ptr<QCommandLineOption> metadataOption;
 
 static QWindow *windowFromEngine(QQmlApplicationEngine *engine)
 {
@@ -127,10 +127,10 @@ bool isShuttingDown()
 
 void setMetadata(const QCommandLineParser &parser)
 {
-    DrKonqi::setPid(parser.value(pidOption).toInt());
-    DrKonqi::setSafer(parser.isSet(saferOption));
-    DrKonqi::setRestarted(parser.isSet(restartedOption));
-    DrKonqi::setMetadataFile(parser.value(metadataOption));
+    DrKonqi::setPid(parser.value(*pidOption).toInt());
+    DrKonqi::setSafer(parser.isSet(*saferOption));
+    DrKonqi::setRestarted(parser.isSet(*restartedOption));
+    DrKonqi::setMetadataFile(parser.value(*metadataOption));
 
     PatientModel::instance()->updatePatient(DrKonqi::pid());
 }
@@ -146,14 +146,14 @@ int Application::handleNotify(const QCommandLineParser &parser)
     //  Whether the user should be encouraged to file a bug report
     const bool interactionAllowed = Settings::interactionAllowed();
 
-    if (isShuttingDown() && !parser.isSet(dialogOption)) {
+    if (isShuttingDown() && !parser.isSet(*dialogOption)) {
         return 0;
     }
 
     // if no notification service is running (eg. shell crashed, or other desktop environment)
     // and we didn't auto-restart the app, open DrKonqi dialog instead of showing an SNI
     // and emitting a desktop notification.
-    if ((!StatusNotifier::notificationServiceRegistered() && !parser.isSet(restartedOption)) || parser.isSet(dialogOption)) {
+    if ((!StatusNotifier::notificationServiceRegistered() && !parser.isSet(*restartedOption)) || parser.isSet(*dialogOption)) {
         PatientModel::instance()->setPatient(DrKonqi::pid());
         if (m_engine) {
             raiseWindow();
@@ -170,7 +170,7 @@ int Application::handleNotify(const QCommandLineParser &parser)
 [[nodiscard]] std::unique_ptr<QCommandLineParser> commandLineParser()
 {
     auto parser = std::make_unique<QCommandLineParser>();
-    parser->addOptions({pidOption, saferOption, dialogOption, metadataOption, restartedOption, notifyOption});
+    parser->addOptions({*pidOption, *saferOption, *dialogOption, *metadataOption, *restartedOption, *notifyOption});
     return parser;
 }
 
@@ -190,6 +190,15 @@ int main(int argc, char *argv[])
                          i18n("(C) 2020-2022, The DrKonqi Authors"));
     aboutData.setDesktopFileName(QStringLiteral("org.kde.drkonqi.coredump.gui"));
     KAboutData::setApplicationData(aboutData);
+
+    pidOption = std::make_unique<QCommandLineOption>(QStringLiteral("pid"), i18nc("@info:shell", "The <PID> of the program"), QStringLiteral("pid"));
+    saferOption = std::make_unique<QCommandLineOption>(QStringLiteral("safer"), i18nc("@info:shell", "Disable arbitrary disk access"));
+    dialogOption =
+        std::make_unique<QCommandLineOption>(QStringLiteral("dialog"), i18nc("@info:shell", "Do not show a notification but launch the debug dialog directly"));
+    notifyOption =
+        std::make_unique<QCommandLineOption>(u"notify"_s, i18nc("@info", "Start the application showing only a notification that a process has crashed"));
+    restartedOption = std::make_unique<QCommandLineOption>(QStringLiteral("restarted"), i18nc("@info:shell", "The program has already been restarted"));
+    metadataOption = std::make_unique<QCommandLineOption>(QStringLiteral("metadata_file"), i18nc("@info:shell", "The path to the metadata file"), u"path"_s);
 
     auto parser = commandLineParser();
 
@@ -216,7 +225,7 @@ int main(int argc, char *argv[])
 
     parser->process(app);
 
-    DrKonqi::setMetadataFile(parser->value(metadataOption));
+    DrKonqi::setMetadataFile(parser->value(*metadataOption));
 
     aboutData.processCommandLine(parser.get());
 
@@ -236,7 +245,7 @@ int main(int argc, char *argv[])
         }
 
         parser->process(arguments);
-        if (parser->isSet(notifyOption)) {
+        if (parser->isSet(*notifyOption)) {
             const auto status = application.handleNotify(*parser);
 
             if (status != 0) {
@@ -247,7 +256,7 @@ int main(int argc, char *argv[])
         }
     });
 
-    if (parser->isSet(notifyOption)) {
+    if (parser->isSet(*notifyOption)) {
         const auto status = application.handleNotify(*parser);
 
         if (status != 0) {
