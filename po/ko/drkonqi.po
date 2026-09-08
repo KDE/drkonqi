@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-08 00:47+0000\n"
 "PO-Revision-Date: 2026-05-25 18:43+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -81,45 +81,6 @@ msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
 msgstr "하위 프로세스가 충돌했습니다. 설치 상태를 확인하십시오."
 
-#: coredump/gui/main.cpp:32 main.cpp:150
-#, kde-format
-msgctxt "@info:shell"
-msgid "The <PID> of the program"
-msgstr "프로그램 <PID>"
-
-#: coredump/gui/main.cpp:33 main.cpp:152
-#, kde-format
-msgctxt "@info:shell"
-msgid "Disable arbitrary disk access"
-msgstr "임의 디스크 접근 방지"
-
-#: coredump/gui/main.cpp:34 main.cpp:159
-#, kde-format
-msgctxt "@info:shell"
-msgid "Do not show a notification but launch the debug dialog directly"
-msgstr "알림을 표시하지 않고 디버그 대화 상자 바로 실행하기"
-
-#: coredump/gui/main.cpp:35
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Start the application showing only a notification that a process has crashed"
-msgstr ""
-
-#: coredump/gui/main.cpp:36 main.cpp:153
-#, kde-format
-msgctxt "@info:shell"
-msgid "The program has already been restarted"
-msgstr "프로그램을 다시 시작했습니다"
-
-#: coredump/gui/main.cpp:37 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
-msgctxt "@info:shell"
-msgid "The path to the metadata file"
-msgstr "실행 파일 <Path>"
-
 #: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
@@ -136,6 +97,45 @@ msgstr "과거 충돌에 대한 자세한 보기 제공"
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "(C) 2020-2022, The DrKonqi Authors"
+
+#: coredump/gui/main.cpp:194 main.cpp:150
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "프로그램 <PID>"
+
+#: coredump/gui/main.cpp:195 main.cpp:152
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "임의 디스크 접근 방지"
+
+#: coredump/gui/main.cpp:197 main.cpp:159
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr "알림을 표시하지 않고 디버그 대화 상자 바로 실행하기"
+
+#: coredump/gui/main.cpp:199
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Start the application showing only a notification that a process has crashed"
+msgstr ""
+
+#: coredump/gui/main.cpp:200 main.cpp:153
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "프로그램을 다시 시작했습니다"
+
+#: coredump/gui/main.cpp:201 main.cpp:165
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "<Path> to the executable"
+msgctxt "@info:shell"
+msgid "The path to the metadata file"
+msgstr "실행 파일 <Path>"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format

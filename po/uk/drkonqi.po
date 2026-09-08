@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-08 00:47+0000\n"
 "PO-Revision-Date: 2026-08-28 13:19+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -91,47 +91,6 @@ msgstr ""
 "Підпроцес завершив роботу в аварійному режимі. Перевірте, чи правильно "
 "встановлено програму."
 
-#: coredump/gui/main.cpp:32 main.cpp:150
-#, kde-format
-msgctxt "@info:shell"
-msgid "The <PID> of the program"
-msgstr "PID програми"
-
-#: coredump/gui/main.cpp:33 main.cpp:152
-#, kde-format
-msgctxt "@info:shell"
-msgid "Disable arbitrary disk access"
-msgstr "Заборонити довільний доступ до диска"
-
-#: coredump/gui/main.cpp:34 main.cpp:159
-#, kde-format
-msgctxt "@info:shell"
-msgid "Do not show a notification but launch the debug dialog directly"
-msgstr ""
-"Не показувати сповіщення, а запустити безпосередньо діалогове вікно "
-"діагностики"
-
-#: coredump/gui/main.cpp:35
-#, kde-format
-msgctxt "@info"
-msgid ""
-"Start the application showing only a notification that a process has crashed"
-msgstr ""
-"Запуск програми показав лише сповіщення, що процес завершив роботу в "
-"аварійному режимі"
-
-#: coredump/gui/main.cpp:36 main.cpp:153
-#, kde-format
-msgctxt "@info:shell"
-msgid "The program has already been restarted"
-msgstr "Програму вже було перезапущено"
-
-#: coredump/gui/main.cpp:37 main.cpp:165
-#, kde-format
-msgctxt "@info:shell"
-msgid "The path to the metadata file"
-msgstr "Шлях до файла метаданих"
-
 #: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
@@ -148,6 +107,47 @@ msgstr "Докладні матеріал щодо попередніх авар
 #, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
 msgstr "© Розробники DrKonqi, 2020–2022"
+
+#: coredump/gui/main.cpp:194 main.cpp:150
+#, kde-format
+msgctxt "@info:shell"
+msgid "The <PID> of the program"
+msgstr "PID програми"
+
+#: coredump/gui/main.cpp:195 main.cpp:152
+#, kde-format
+msgctxt "@info:shell"
+msgid "Disable arbitrary disk access"
+msgstr "Заборонити довільний доступ до диска"
+
+#: coredump/gui/main.cpp:197 main.cpp:159
+#, kde-format
+msgctxt "@info:shell"
+msgid "Do not show a notification but launch the debug dialog directly"
+msgstr ""
+"Не показувати сповіщення, а запустити безпосередньо діалогове вікно "
+"діагностики"
+
+#: coredump/gui/main.cpp:199
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Start the application showing only a notification that a process has crashed"
+msgstr ""
+"Запуск програми показав лише сповіщення, що процес завершив роботу в "
+"аварійному режимі"
+
+#: coredump/gui/main.cpp:200 main.cpp:153
+#, kde-format
+msgctxt "@info:shell"
+msgid "The program has already been restarted"
+msgstr "Програму вже було перезапущено"
+
+#: coredump/gui/main.cpp:201 main.cpp:165
+#, kde-format
+msgctxt "@info:shell"
+msgid "The path to the metadata file"
+msgstr "Шлях до файла метаданих"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
