@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1745911 2026-09-08 01:31:13Z scripty $
+# $Id: drkonqi.po 1746075 2026-09-10 01:32:43Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 00:47+0000\n"
-"PO-Revision-Date: 2026-07-24 09:36+0200\n"
+"PO-Revision-Date: 2026-09-09 16:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -130,6 +130,7 @@ msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
 msgstr ""
+"Стартиране на приложението с показване само на известие за срив на процес"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -138,12 +139,10 @@ msgid "The program has already been restarted"
 msgstr "Програмата вече е презаредена"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Path> към изпълнимия файл"
+msgstr "Път до файла с метаданни"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -331,12 +330,10 @@ msgid "Hide"
 msgstr "Скриване"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1 затвори неочаквано"
+msgstr "%1 многократно затворен"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -595,7 +592,7 @@ msgstr "<thread id> на неуспешната нишка"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Преминаване директно към страницата на Sentry"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
