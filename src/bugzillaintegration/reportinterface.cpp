@@ -77,7 +77,7 @@ ReportInterface::ReportInterface(QObject *parent)
     : QObject(parent)
     , m_sentryPostbox(DrKonqi::crashedApplication()->fakeExecutableBaseName(), std::make_shared<SentryNetworkConnection>())
 {
-    m_bugzillaManager = new BugzillaManager(KDE_BUGZILLA_URL, this);
+    m_bugzillaManager = new BugzillaManager(DrKonqi::kdeBugzillaURL(), this);
 
     m_productMapping = new ProductMapping(DrKonqi::crashedApplication(), m_bugzillaManager, this);
 

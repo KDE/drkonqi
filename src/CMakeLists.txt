@@ -46,7 +46,6 @@ set(drkonqi_SRCS
     debuggermanager.h
     statusnotifier_activationclosetimer.h
     linuxprocmapsparser.h
-    drkonqi_globals.h
     parser/backtraceline.h
     parser/backtraceparser.cpp
     parser/backtraceparsergdb.cpp

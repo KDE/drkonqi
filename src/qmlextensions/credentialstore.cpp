@@ -7,12 +7,11 @@
 #include <QVariant>
 
 #include "drkonqi_debug.h"
-#include "drkonqi_globals.h"
 
 static const char kWalletEntryUsername[] = "username";
 static const char kWalletEntryPassword[] = "password";
 
-static const QString konquerorKWalletEntryName = KDE_BUGZILLA_URL + QStringLiteral("index.cgi#login");
+static const QString konquerorKWalletEntryName = DrKonqi::kdeBugzillaURL() + QStringLiteral("index.cgi#login");
 static const char konquerorKWalletEntryUsername[] = "Bugzilla_login";
 static const char konquerorKWalletEntryPassword[] = "Bugzilla_password";
 

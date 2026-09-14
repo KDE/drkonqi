@@ -13,8 +13,8 @@
 #include <QReadWriteLock>
 #include <QRegularExpression>
 
+#include "drkonqi.h"
 #include "drkonqi_debug.h"
-#include "drkonqi_globals.h"
 #include "libbugzilla/bugzilla.h"
 #include "libbugzilla/clients/attachmentclient.h"
 #include "libbugzilla/clients/bugclient.h"
@@ -86,7 +86,7 @@ void QMessageFilterContainer::clear()
 
 BugzillaManager::BugzillaManager(const QString &bugTrackerUrl, QObject *parent)
     : QObject(parent)
-    , m_bugTrackerUrl(bugTrackerUrl.isEmpty() ? KDE_BUGZILLA_URL : bugTrackerUrl)
+    , m_bugTrackerUrl(bugTrackerUrl.isEmpty() ? DrKonqi::kdeBugzillaURL() : bugTrackerUrl)
 {
     Q_ASSERT(bugTrackerUrl.endsWith(QLatin1Char('/')));
     Bugzilla::setConnection(new Bugzilla::HTTPConnection(QUrl(m_bugTrackerUrl + QStringLiteral("rest"))));
