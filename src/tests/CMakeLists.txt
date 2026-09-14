@@ -16,6 +16,7 @@ ecm_add_tests(gdbbacktracelinetest.cpp LINK_LIBRARIES Qt::Core Qt::Test drkonqi_
 ecm_add_tests(
         linuxprocmapsparsertest.cpp
         statusnotifier_activationclosetimertest.cpp
+        bugreportaddresstest.cpp
     LINK_LIBRARIES Qt::Core Qt::Test DrKonqiInternal)
 
 if(NOT APPLE)
