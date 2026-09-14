@@ -10,8 +10,8 @@
 #include <QString>
 #include <QUrl>
 
+#include "drkonqi.h"
 #include "drkonqi_debug.h"
-#include "drkonqi_globals.h"
 
 class BugReportAddress : public QString
 {
@@ -21,7 +21,7 @@ public:
     {
     }
     BugReportAddress(const QString &address)
-        : QString(looksLikeKDE(address) ? KDE_BUGZILLA_URL : address)
+        : QString(looksLikeKDE(address) ? DrKonqi::kdeBugzillaURL() : address)
     {
         if (!isKdeBugzilla()) {
             qCWarning(DRKONQI_LOG) << "This application doesn't seem to be from KDE. Refusing to report to KDE infrastructure!";
@@ -30,7 +30,7 @@ public:
 
     bool isKdeBugzilla() const
     {
-        return *this == KDE_BUGZILLA_URL;
+        return *this == DrKonqi::kdeBugzillaURL();
     }
 
     bool isEmail() const
