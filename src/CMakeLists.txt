@@ -28,7 +28,6 @@ set(drkonqi_SRCS
     debuggermanager.cpp
     statusnotifier_activationclosetimer.cpp
     linuxprocmapsparser.cpp
-    drkonqi_globals.cpp
     qmlextensions/platformmodel.cpp
     qmlextensions/reproducibilitymodel.cpp
     qmlextensions/credentialstore.cpp
