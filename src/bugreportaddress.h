@@ -23,6 +23,9 @@ public:
     inline BugReportAddress(const QString &address)
         : QString(looksLikeKDE(address) ? KDE_BUGZILLA_URL : address)
     {
+        if (!isKdeBugzilla()) {
+            qCWarning(DRKONQI_LOG) << "This application doesn't seem to be from KDE. Refusing to report to KDE infrastructure!";
+        }
     }
 
     inline bool isKdeBugzilla() const
