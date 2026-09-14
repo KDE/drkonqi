@@ -16,10 +16,6 @@
 class BugReportAddress : public QString
 {
 public:
-    BugReportAddress()
-        : QString()
-    {
-    }
     BugReportAddress(const QString &address)
         : QString(looksLikeKDE(address) ? DrKonqi::kdeBugzillaURL() : address)
     {
@@ -31,11 +27,6 @@ public:
     bool isKdeBugzilla() const
     {
         return *this == DrKonqi::kdeBugzillaURL();
-    }
-
-    bool isEmail() const
-    {
-        return contains(QLatin1Char('@'));
     }
 
 private:
