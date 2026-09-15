@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:47+0000\n"
-"PO-Revision-Date: 2023-12-12 19:27+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"POT-Creation-Date: 2026-09-15 00:45+0000\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +131,7 @@ msgstr "Nezobrazovať informáciu, ale spustiť dialóg ladenia priamo"
 msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
-msgstr ""
+msgstr "Spustiť aplikáciu so zobrazením iba upozornenia, že proces spadol"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -140,12 +140,10 @@ msgid "The program has already been restarted"
 msgstr "Program bol už reštartovaný"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Cesta> k programu"
+msgstr "Cesta k súboru s metadátami"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -325,12 +323,10 @@ msgid "Hide"
 msgstr "Skryť"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1 sa nečakane zatvoril"
+msgstr "%1 sa opakovane zatvoril"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -467,18 +463,6 @@ msgctxt "@info"
 msgid "Cannot open file <filename>%1</filename> for writing."
 msgstr "Nie je možné otvoriť súbor <filename>%1</filename> na zápis."
 
-#: drkonqi_globals.cpp:12
-#, kde-format
-msgctxt "@action:button"
-msgid "&Restart Application"
-msgstr "Reštartovať aplikáciu"
-
-#: drkonqi_globals.cpp:14
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Use this button to restart the crashed application."
-msgstr "Použite toto tlačidlo na reštartovanie spadnutej aplikácie."
-
 #: main.cpp:127
 #, kde-format
 msgid "Crash Handler"
@@ -582,7 +566,7 @@ msgstr "<ID vlákna>, v ktorom došlo k zlyhaniu"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Prejsť priamo na stránku Sentry"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
@@ -1406,6 +1390,14 @@ msgstr "používateľské meno pre bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "heslo pre bugstest.kde.org"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Restart Application"
+#~ msgstr "Reštartovať aplikáciu"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Use this button to restart the crashed application."
+#~ msgstr "Použite toto tlačidlo na reštartovanie spadnutej aplikácie."
 
 #~ msgctxt "@action:button"
 #~ msgid "&Reload"
