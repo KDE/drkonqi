@@ -34,7 +34,7 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
         Q_ASSERT(m_coreDir->isValid());
         if (!m_coreDir->isValid()) {
             Q_EMIT failed(
-                i18nc("diagnostic error. %1 is the specific error message from the system", "Failed to create core directory: %1", m_coreDir->errorString()));
+                i18nc("diagnostic error. %1 is the specific error message from the system", "Failed to create core dump directory: %1", m_coreDir->errorString()));
             return;
         }
         // Keep the core to ourself.
@@ -52,13 +52,13 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
     }
     if (!coreFile->open(QFile::WriteOnly, QFile::ReadUser | QFile::WriteUser)) {
         qWarning() << "Failed to open coreFileTarget" << coreFileTarget << coreFile->errorString();
-        Q_EMIT failed(i18nc("diagnostic error. %1 is the specific error message from the system", "Failed to open core file: %1", coreFile->errorString()));
+        Q_EMIT failed(i18nc("diagnostic error. %1 is the specific error message from the system", "Failed to open core dump file: %1", coreFile->errorString()));
         return;
     }
 
     if (!coredumpFileInfo.exists()) {
         qWarning() << "Coredump file does not exist" << coredumpFilename;
-        Q_EMIT failed(i18nc("diagnostic error. %1 is the specific error message from the system", "Coredump file does not exist: %1", coredumpFilename));
+        Q_EMIT failed(i18nc("diagnostic error. %1 is the specific error message from the system", "Core dump file does not exist: %1", coredumpFilename));
         return;
     }
 
@@ -68,7 +68,7 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             if (exitCode != 0) {
                 qWarning() << "Failed to excavate core from file:" << exitCode;
                 Q_EMIT failed(
-                    i18nc("diagnostic error. %1 is the numeric exit code", "Core file extraction process failed with code: %1", QString::number(exitCode)));
+                    i18nc("diagnostic error. %1 is the numeric exit code", "Core dump file extraction process failed with code: %1", QString::number(exitCode)));
                 return;
             }
             Q_EMIT excavated(coreFileTarget);
@@ -87,9 +87,9 @@ void AutomaticCoredumpExcavator::excavateFrom(const QString &coredumpFilename)
             qWarning() << reply.isValid() << reply.error();
             if (!reply.isValid()) {
                 m_coreDir = nullptr;
-                qWarning() << "Failed to excavate core as admin:" << reply.error();
+                qWarning() << "Failed to excavate core dump as admin:" << reply.error();
                 Q_EMIT failed(i18nc("diagnostic error. %1 is a dbus error from a polkit helper",
-                                    "Elevated core file extraction process failed: %1",
+                                    "Elevated core dump file extraction process failed: %1",
                                     reply.error().message()));
                 return;
             }
