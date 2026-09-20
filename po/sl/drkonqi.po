@@ -1,7 +1,7 @@
 # translation of drkonqi.po to Slovenian
 # Translation of drkonqi.po to Slovenian
 # Copyright (C) 2002, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: drkonqi.po 1746440 2026-09-15 01:28:28Z scripty $
+# $Id: drkonqi.po 1746845 2026-09-20 16:59:14Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2002.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:45+0000\n"
+"POT-Creation-Date: 2026-09-20 16:18+0000\n"
 "PO-Revision-Date: 2026-08-28 06:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -52,33 +52,43 @@ msgstr ""
 "placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Failed to create core directory: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Failed to create core directory: %1"
+msgid "Failed to create core dump directory: %1"
 msgstr "Neuspelo ustvarjanje osrednjega imenika: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Failed to open core file: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Failed to open core file: %1"
+msgid "Failed to open core dump file: %1"
 msgstr "Neuspelo odpiranje osrednje datoteke: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Coredump file does not exist: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Coredump file does not exist: %1"
+msgid "Core dump file does not exist: %1"
 msgstr "Datoteka coredump ne obstaja: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the numeric exit code"
+#| msgid "Core file extraction process failed with code: %1"
 msgctxt "diagnostic error. %1 is the numeric exit code"
-msgid "Core file extraction process failed with code: %1"
+msgid "Core dump file extraction process failed with code: %1"
 msgstr "Postopek ekstrakcije osnovne datoteke ni uspel s kodo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+#| msgid "Elevated core file extraction process failed: %1"
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-msgid "Elevated core file extraction process failed: %1"
+msgid "Elevated core dump file extraction process failed: %1"
 msgstr "Postopek ekstrakcije povišane osnovne datoteke ni uspel: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-15 00:45+0000\n"
+"POT-Creation-Date: 2026-09-20 16:18+0000\n"
 "PO-Revision-Date: 2026-08-28 07:21+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -38,33 +38,43 @@ msgstr ""
 "<placeholder>მოგვიყევით დეტალურად, რას აკეთებდით ავარიის დროს.</placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Failed to create core directory: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Failed to create core directory: %1"
+msgid "Failed to create core dump directory: %1"
 msgstr "ბირთვის საქაღალდის შექმნა ჩავარდა: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Failed to open core file: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Failed to open core file: %1"
+msgid "Failed to open core dump file: %1"
 msgstr "ბირთვის ფაილის შექმნა ჩავარდა: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the specific error message from the system"
+#| msgid "Coredump file does not exist: %1"
 msgctxt "diagnostic error. %1 is the specific error message from the system"
-msgid "Coredump file does not exist: %1"
+msgid "Core dump file does not exist: %1"
 msgstr "ბირთვის ფაილი არ არსებობს: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is the numeric exit code"
+#| msgid "Core file extraction process failed with code: %1"
 msgctxt "diagnostic error. %1 is the numeric exit code"
-msgid "Core file extraction process failed with code: %1"
+msgid "Core dump file extraction process failed with code: %1"
 msgstr "ბირთვის ფაილის ამოღების პროცესი ჩავარდა კოდით: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
+#| msgid "Elevated core file extraction process failed: %1"
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-msgid "Elevated core file extraction process failed: %1"
+msgid "Elevated core dump file extraction process failed: %1"
 msgstr "ამაღლებული ბირთვის ფაილის ამოღების პროცესი ჩავარდა: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
