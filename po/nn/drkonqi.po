@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 00:45+0000\n"
-"PO-Revision-Date: 2026-08-08 12:59+0200\n"
+"PO-Revision-Date: 2026-09-19 16:40+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -125,7 +125,7 @@ msgstr "Ikkje vis varsling, men start heller feilsøkingsvindauget direkte"
 msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
-msgstr ""
+msgstr "Start programmet berre med ei varsling om at prosessen har krasja"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -134,12 +134,10 @@ msgid "The program has already been restarted"
 msgstr "Programmet er alt starta om att"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Path> til programfila"
+msgstr "Adressa til metadata-fila"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -322,12 +320,10 @@ msgid "Hide"
 msgstr "Gøym"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1 vart uventa lukka"
+msgstr "%1 lukka fleire gongar"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -571,7 +567,7 @@ msgstr "<thread id>-en som feila"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Gå direkte til Sentry-sida"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
