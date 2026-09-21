@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2026-08-28 16:33+0100\n"
+"PO-Revision-Date: 2026-09-21 00:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -53,33 +53,25 @@ msgstr ""
 "cerró.</placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to create core directory: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
 msgstr "No se ha podido crear el directorio de volcados del núcleo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to open core file: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
 msgstr "No se ha podido abrir el archivo de volcado del núcleo: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Coredump file does not exist: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
 msgstr "El archivo de volcado del núcleo no existe: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the numeric exit code"
-#| msgid "Core file extraction process failed with code: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
 msgstr ""
@@ -87,9 +79,7 @@ msgstr ""
 "código: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-#| msgid "Elevated core file extraction process failed: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
 msgstr ""
@@ -1442,11 +1432,3 @@ msgstr "Usuario de bugstest.kde.org"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "Contraseña de bugstest.kde.org"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Restart Application"
-#~ msgstr "&Reiniciar la aplicación"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to restart the crashed application."
-#~ msgstr "Use este botón para reiniciar la aplicación que ha fallado."
