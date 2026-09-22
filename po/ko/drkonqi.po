@@ -1,7 +1,7 @@
 # Translation of drkonqi.po to Korean.
 # Copyright (C) 2001-2004, 2007-2008 Free Software Foundation, Inc.
 # SPDX-FileCopyrightText: 2007, 2008, 2009, 2024, 2025, 2026 Park Sinjo <kde@peremen.name>
-# Shinjo Park <kde@peremen.name>, 2009, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2009, 2011, 2013-2023, 2026 Shinjo Park <kde@peremen.name>
 #
 #
 # Yu-Chan, Park, 2001.
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 02:47+0000\n"
-"PO-Revision-Date: 2026-05-25 18:43+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"PO-Revision-Date: 2026-09-21 21:36+0200\n"
+"Last-Translator: Shinjo Park <peremen@gmail.com>\n"
+"Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,31 +43,31 @@ msgstr "<placeholder>앱이 충돌할 때 무엇을 했는지 알려 주십시�
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core directory: %1"
-msgstr ""
+msgstr "코어 디렉터리를 생성할 수 없음: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core file: %1"
-msgstr ""
+msgstr "코어 파일을 열 수 없음: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Coredump file does not exist: %1"
-msgstr ""
+msgstr "코어 덤프 파일이 없음: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core file extraction process failed with code: %1"
-msgstr ""
+msgstr "코어 파일 추출 프로세스가 실패하면서 다음 코드를 반환함: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core file extraction process failed: %1"
-msgstr ""
+msgstr "권한 상승된 코어 파일 추출 프로세스가 실패함: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "알림을 표시하지 않고 디버그 대화 상자 바로 실행하�
 msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
-msgstr ""
+msgstr "프로그램을 시작한 후 충돌한 프로세스의 알림만 표시"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -130,12 +130,10 @@ msgid "The program has already been restarted"
 msgstr "프로그램을 다시 시작했습니다"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "실행 파일 <Path>"
+msgstr "메타데이터 파일의 경로"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -314,12 +312,10 @@ msgid "Hide"
 msgstr "숨기기"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "%1이(가) 예상하지 못하게 종료됨"
+msgstr "%1이(가) 반복적으로 종료됨"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -559,7 +555,7 @@ msgstr "문제가 발생한 <thread id>"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Sentry 페이지로 직접 이동"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
@@ -780,6 +776,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"역추적 생성을 준비하는 데 실패했습니다. 현재 해결할 수 없는 중대한 문제가 발"
+"생했을 수도 있습니다."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -959,18 +957,13 @@ msgstr ""
 "오."
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"알 수 없는 이유로 충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나, 다시 시도"
-"하거나, <link url='%1'>자세한 출력을 볼 수</link> 있습니다."
+"충돌 정보를 수집할 수 없었습니다. 이 창을 닫거나, 다시 시도하거나, <link "
+"url='%1'>자세한 출력을 볼 수</link> 있습니다."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1212,18 +1205,13 @@ msgid "Automatic Report"
 msgstr "자동 보고"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"충돌 데이터를 수집하고 있습니다. 수집된 데이터는 백그라운드에서 자동으로 제출"
-"됩니다."
+"충돌 데이터를 수집하고 있습니다. 이 창을 닫을 수 있습니다. 수집된 데이터는 백"
+"그라운드에서 자동으로 제출됩니다."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
