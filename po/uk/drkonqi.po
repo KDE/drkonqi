@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2026-08-28 13:19+0300\n"
+"PO-Revision-Date: 2026-09-21 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -47,45 +47,36 @@ msgstr ""
 "програми.</placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to create core directory: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
-msgstr "Не вдалося створити каталог ядра: %1"
+msgstr "Не вдалося створити каталог дампів ядра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to open core file: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
-msgstr "Не вдалося відкрити файл ядра: %1"
+msgstr "Не вдалося відкрити файл дампу ядра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Coredump file does not exist: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
 msgstr "Файла дампу ядра не існує: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the numeric exit code"
-#| msgid "Core file extraction process failed with code: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
-msgstr "Помилка у процесі видобування даних з файла ядра, код: %1"
+msgstr "Помилка у процесі видобування даних з файла дампу ядра, код: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-#| msgid "Elevated core file extraction process failed: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
 msgstr ""
-"Помилка процесу видобування даних з файла ядра з підвищеними привілеями: %1"
+"Помилка процесу видобування даних з файла дампу ядра з підвищеними "
+"привілеями: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format

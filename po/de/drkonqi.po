@@ -9,22 +9,22 @@
 # SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 # SPDX-FileCopyrightText: 2026 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2026-04-25 22:06+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-09-19 19:10+0200\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,12 +138,10 @@ msgid "The program has already been restarted"
 msgstr "Das Programm wurde bereits neu gestartet"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "<Pfad> zur ausführbaren Datei"
+msgstr "Der Pfad zur Metadaten-Datei"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -308,7 +306,7 @@ msgstr ""
 #, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Unexpectedly"
-msgstr "„%1“ wurde unerwartet beendet"
+msgstr "%1 wurde unerwartet beendet"
 
 #: coredump/gui/statusnotifier.cpp:63
 #, kde-format
@@ -334,12 +332,10 @@ msgid "Hide"
 msgstr "Ausblenden"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr "„%1“ wurde unerwartet beendet"
+msgstr "%1 wiederholt beendet"
 
 #: coredump/gui/statusnotifier.cpp:139
 #, kde-format
@@ -409,7 +405,7 @@ msgstr "Start fehlgeschlagen"
 #, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr "Betrachter für abgestürzte Prozesse konnte nicht gestartet werden."
+msgstr "Der Betrachter für abgestürzte Prozesse konnte nicht gestartet werden."
 
 #: debugger.cpp:35 debugger.cpp:62
 #, kde-format
@@ -830,6 +826,8 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Das Erstellen der Rückverfolgung kann nicht vorbereitet werden. Das weist "
+"auf ein schwerwiegendes Problem hin, das Sie vermutlich nicht beheben können."
 
 #: qml/DeveloperPage.qml:241
 msgctxt "@info/rich"
@@ -1019,19 +1017,13 @@ msgstr ""
 "und es erneut versuchen."
 
 #: qml/Main.qml:101
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "Gathering crash information failed for unknown reasons. You can retry, "
-#| "close the window, or <link url='%1'>view detailed output</link>."
 msgctxt "@info"
 msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
-"Die Absturzdaten können aus unbekannten Gründen nicht gesammelt werden. Es "
-"kann nochmals versucht, das Fenster geschlossen oder die <link "
-"url='%1'>ausführlichen Angaben</link> gesichtet werden."
+"Das Sammeln der Absturzdaten ist fehlgeschlagen. Sie können dieses Fenster "
+"schließen oder die <link url='%1'>ausführlichen Angaben</link> ansehen."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1281,18 +1273,13 @@ msgid "Automatic Report"
 msgstr "Automatischer Bericht"
 
 #: qml/SentryPage.qml:32
-#, fuzzy
-#| msgctxt "@label submitting as crash report"
-#| msgid ""
-#| "Collecting crash data. The collected data will automatically be submitted "
-#| "in the background."
 msgctxt "@label submitting as crash report"
 msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
-"Die Absturzdaten werden zusammengestellt und automatisch im Hintergrund "
-"gesendet."
+"Die Absturzdaten werden gesammelt. Sie können dieses Fenster schließen. Die "
+"gesammelten Daten werden automatisch im Hintergrund gesendet."
 
 #: qml/SentryPage.qml:55
 msgctxt "@label"
