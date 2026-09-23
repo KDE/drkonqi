@@ -2,7 +2,7 @@
 # Bulgarian translation of KDE.
 # This file is licensed under the GPL.
 #
-# $Id: drkonqi.po 1746845 2026-09-20 16:59:14Z scripty $
+# $Id: drkonqi.po 1747419 2026-09-23 01:42:50Z scripty $
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011, 2013.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2026-09-09 16:42+0200\n"
+"PO-Revision-Date: 2026-09-22 22:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,41 +44,31 @@ msgstr ""
 "се срина. </placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to create core directory: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
 msgstr "Неуспешно създаване на директория с данни за срив: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to open core file: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
 msgstr "Неуспешно отваряне на файл с данни за срив: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Coredump file does not exist: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
 msgstr "Липсва coredump файл: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the numeric exit code"
-#| msgid "Core file extraction process failed with code: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
 msgstr "Процесът на извличане на файлове с данни за срив е неуспешен с код: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-#| msgid "Elevated core file extraction process failed: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
 msgstr ""
@@ -1431,11 +1421,3 @@ msgstr "bugstest.kde.org username"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org password"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Restart Application"
-#~ msgstr "&Презареждане на програмата"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to restart the crashed application."
-#~ msgstr "Използвайте този бутон за презареждане на блокиралата програма."
