@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: drkonqi5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2017-10-14 23:06+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 22:09+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -25,12 +26,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Топлица Танасковић,Часлав Илић"
+msgstr "Топлица Танасковић,Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: bugzillaintegration/reportinterface.cpp:212
 #, kde-kuit-format
@@ -46,61 +47,61 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
-msgstr ""
+msgstr "Не могу да направим фасциклу пописа језгра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
-msgstr ""
+msgstr "Не могу да отворим фајл пописа језгра: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
-msgstr ""
+msgstr "Фајл пописа језгра не постоји: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
-msgstr ""
+msgstr "Процес извлачења фајла пописа језгра није успио, излазни код: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
 msgstr ""
+"Процес извлачења фајла пописа језгра са повишеним овлашћењима није успио: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess exited with error: %1"
-msgstr ""
+msgstr "Потпроцес је изашао са грешком: %1"
 
 #: coredump/gui/DetailsLoader.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "Subprocess crashed. Check your installation."
-msgstr ""
+msgstr "Потпроцес се срушио. Провјерите инсталацију."
 
 #: coredump/gui/main.cpp:186
 #, kde-format
 msgctxt "@title CLI title"
 msgid "Crashed Processes Viewer"
-msgstr ""
+msgstr "Приказивач срушених процеса"
 
 #: coredump/gui/main.cpp:188
 #, kde-format
 msgctxt "@info program description"
 msgid "Offers detailed view of past crashes"
-msgstr ""
+msgstr "Пружа детаљан преглед ранијих падова"
 
 #: coredump/gui/main.cpp:190
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2020-2022, The DrKonqi Authors"
-msgstr "© 2000–2009, аутори Др Конкија"
+msgstr "© 2020–2022, аутори Др Конкија"
 
 #: coredump/gui/main.cpp:194 main.cpp:150
 #, kde-format
@@ -118,14 +119,14 @@ msgstr "Искључи произвољан приступ диску"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a notification but launch the debug dialog directly"
-msgstr "Не приказуј обавештење, непосредно покрени исправљачки дијалог"
+msgstr "Не приказуј обавјештење, непосредно покрени исправљачки дијалог"
 
 #: coredump/gui/main.cpp:199
 #, kde-format
 msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
-msgstr ""
+msgstr "Покрени програм тако да прикаже само обавјештење да се процес срушио"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -134,24 +135,22 @@ msgid "The program has already been restarted"
 msgstr "Овај програм је већ покренут"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "Путања до извршног фајла"
+msgstr "Путања до фајла метаподатака"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
 msgctxt "@title"
 msgid "Failure"
-msgstr ""
+msgstr "Неуспјех"
 
 #: coredump/gui/Patient.cpp:137
 #, kde-format
 msgctxt "@info"
 msgid "Failed to access crash data for unknown reasons."
-msgstr ""
+msgstr "Не могу да приступим подацима о паду из непознатих разлога."
 
 #: coredump/gui/Patient.cpp:199
 #, kde-format
@@ -160,6 +159,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Flatpak "
 "sandbox at this time."
 msgstr ""
+"Исправљање тренутно није могуће за падове софтвера који се извршава у "
+"изолованом окружењу флатпака."
 
 #: coredump/gui/Patient.cpp:201
 #, kde-format
@@ -168,6 +169,8 @@ msgid ""
 "Debugging is not possible for crashes of software run inside a Snap sandbox "
 "at this time."
 msgstr ""
+"Исправљање тренутно није могуће за падове софтвера који се извршава у "
+"изолованом окружењу снапа."
 
 #: coredump/gui/Patient.cpp:205
 #, kde-format
@@ -175,27 +178,25 @@ msgctxt "@info"
 msgid ""
 "Debugging is no longer possible for this crash. The core dump file is "
 "missing."
-msgstr ""
+msgstr "Исправљање овог пада више није могуће. Недостаје фајл пописа језгра."
 
 #: coredump/gui/Patient.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Debugging is no longer possible for this crash."
-msgstr ""
+msgstr "Исправљање овог пада више није могуће."
 
 #: coredump/gui/Patient.cpp:233
 #, kde-format
 msgctxt "@info"
 msgid "Reporting is not supported for Flatpak applications at this time."
-msgstr ""
+msgstr "Пријављивање тренутно није подржано за флатпак програме."
 
 #: coredump/gui/Patient.cpp:238
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Your problem has already been reported as bug %1."
+#, kde-format
 msgctxt "@info"
 msgid "Already reported."
-msgstr "Ваш проблем је већ пријављен као грешка %1."
+msgstr "Већ пријављено."
 
 #: coredump/gui/Patient.cpp:243
 #, kde-format
@@ -204,47 +205,43 @@ msgid ""
 "Your distribution has not provided a bug report URL. Please report this to "
 "your distribution."
 msgstr ""
+"Ваша дистрибуција није навела УРЛ за пријављивање грешака. Пријавите ово "
+"својој дистрибуцији."
 
 #: coredump/gui/Patient.cpp:291
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Flatpak"
-msgstr ""
+msgstr "Флатпак"
 
 #: coredump/gui/Patient.cpp:293
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "Snap Store"
-msgstr ""
+msgstr "Snap Store"
 
 #: coredump/gui/Patient.cpp:295
 #, kde-format
 msgctxt "@info the name of where to report bugs"
 msgid "KDE"
-msgstr ""
+msgstr "КДЕ"
 
 #: coredump/gui/qml/DetailsPage.qml:25
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Details:"
 msgctxt "@title"
 msgid "Details"
-msgstr "Детаљи:"
+msgstr "Детаљи"
 
 #: coredump/gui/qml/DetailsPage.qml:35
 msgctxt "@action"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Копирај у клипборд"
 
 #: coredump/gui/qml/DetailsPage.qml:45
 msgctxt "@action"
 msgid "Run Interactive Debugger"
-msgstr ""
+msgstr "Покрени интерактивни исправљач"
 
 #: coredump/gui/qml/DetailsPage.qml:52
-#, fuzzy
-#| msgctxt "@info report to KDE bugtracker address"
-#| msgid "Report to %1"
 msgctxt "@action %1 is the name of a distribution"
 msgid "Report to %1"
 msgstr "Пријави на %1"
@@ -252,60 +249,48 @@ msgstr "Пријави на %1"
 #: coredump/gui/qml/ListPage.qml:14
 msgctxt "@title"
 msgid "Crashes"
-msgstr ""
+msgstr "Падови"
 
 #: coredump/gui/qml/ListPage.qml:82
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Sending the Crash Report"
 msgctxt "@info place holder for empty listview"
 msgid "Loading crash reports"
-msgstr "Слање извјештаја о грешци"
+msgstr "Учитавам извјештаје о падовима"
 
 #: coredump/gui/qml/ListPage.qml:90
 msgctxt "@info place holder for empty listview"
 msgid "No processes have crashed yet"
-msgstr ""
+msgstr "Ниједан процес се још није срушио"
 
 #: coredump/gui/qml/ListPage.qml:98
 msgctxt "@info place holder for empty listview"
 msgid "No crashes matching the search"
-msgstr ""
+msgstr "Нема падова који одговарају претрази"
 
 #: coredump/gui/qml/Main.qml:14
 msgctxt "@title:window"
 msgid "Overview"
-msgstr ""
+msgstr "Преглед"
 
 #: coredump/gui/statusnotifier.cpp:30
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Notification text"
 msgid "The application closed unexpectedly."
-msgstr ""
-"%1 неочекивано затворен|/|%1 неочекивано $[по-роду-броју %1 затворен "
-"затворена затворено затворени затворене затворена]"
+msgstr "Програм се неочекивано затворио."
 
 # rewrite-msgid: /software/application/
 #: coredump/gui/statusnotifier.cpp:32
-#, fuzzy, kde-format
-#| msgid "Please report this error to help improve this software."
+#, kde-format
 msgctxt "Notification text"
 msgid "Please report this error to help improve this software."
 msgstr "Пријавите ову грешку ако желите да помогнете да се програм побољша."
 
 #: coredump/gui/statusnotifier.cpp:34
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Notification text"
 msgid ""
 "The application closed unexpectedly. A report is being automatically "
 "submitted."
-msgstr ""
-"%1 неочекивано затворен|/|%1 неочекивано $[по-роду-броју %1 затворен "
-"затворена затворено затворени затворене затворена]"
+msgstr "Програм се неочекивано затворио. Извјештај се аутоматски шаље."
 
 #: coredump/gui/statusnotifier.cpp:46 coredump/gui/statusnotifier.cpp:124
 #, kde-format
@@ -338,22 +323,16 @@ msgid "Hide"
 msgstr "Сакриј"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
-msgstr ""
-"%1 неочекивано затворен|/|%1 неочекивано $[по-роду-броју %1 затворен "
-"затворена затворено затворени затворене затворена]"
+msgstr "%1 се изнова затвара"
 
 #: coredump/gui/statusnotifier.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Details:"
+#, kde-format
 msgctxt "@action:button, keep short"
 msgid "Add Details"
-msgstr "Детаљи:"
+msgstr "Додај детаље"
 
 #: coredump/gui/statusnotifier.cpp:144
 #, kde-format
@@ -368,11 +347,10 @@ msgid "Restart App"
 msgstr "Поново покрени"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:106
-#, fuzzy, kde-format
-#| msgid "&Restart Application"
+#, kde-format
 msgctxt "@title:notification"
 msgid "Application Crash"
-msgstr "&Поново покрени програм"
+msgstr "Пад програма"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:110
 #, kde-kuit-format
@@ -383,6 +361,8 @@ msgid ""
 "<command>%1</command> (part of <command>%2</command>) has encountered a "
 "fatal error and was closed."
 msgstr ""
+"Процес <command>%1</command> (дио <command>%2</command>) наишао је на кобну "
+"грешку и затворен је."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:114
 #, kde-format
@@ -390,45 +370,43 @@ msgctxt ""
 "@title:notification service refers to a background service such as kwalletd "
 "or kded"
 msgid "Service Crash"
-msgstr ""
+msgstr "Пад сервиса"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:116
 #, kde-kuit-format
 msgctxt "@info notification text. %1 is a exe name"
 msgid "<command>%1</command> has encountered a fatal error and was closed."
-msgstr ""
+msgstr "Процес <command>%1</command> наишао је на кобну грешку и затворен је."
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:119
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Details:"
+#, kde-format
 msgctxt "@action:button show crash details"
 msgid "Details"
-msgstr "Детаљи:"
+msgstr "Детаљи"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:125
 #, kde-format
 msgctxt "@title"
 msgid "Failed to Launch"
-msgstr ""
+msgstr "Не могу да покренем"
 
 #: coredump/launcher/GlobalNotifierTruck.cpp:126
 #, kde-format
 msgctxt "@info"
 msgid "Could not launch the Crashed Process Viewer."
-msgstr ""
+msgstr "Не могу да покренем приказивач срушених процеса."
 
 #: debugger.cpp:35 debugger.cpp:62
 #, kde-format
 msgctxt "@label the debugger called GDB"
 msgid "GDB"
-msgstr ""
+msgstr "ГДБ"
 
 #: debugger.cpp:50
 #, kde-format
 msgctxt "@label the debugger called LLDB"
 msgid "LLDB"
-msgstr ""
+msgstr "LLDB"
 
 #: debugpackageinstaller.cpp:51
 #, kde-format
@@ -474,12 +452,10 @@ msgid "Could not create a file in which to save the report."
 msgstr "Не могу да направим фајл за уписивање извјештаја."
 
 #: drkonqi.cpp:163
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Save Report"
-msgstr "&Сачувај у фајл..."
+msgstr "Уписивање извјештаја"
 
 #: drkonqi.cpp:192
 #, kde-kuit-format
@@ -488,23 +464,19 @@ msgid "Cannot open file <filename>%1</filename> for writing."
 msgstr "Не могу да отворим фајл <filename>%1</filename> за писање."
 
 #: main.cpp:127
-#, fuzzy, kde-format
-#| msgid "The KDE Crash Handler"
+#, kde-format
 msgid "Crash Handler"
-msgstr "КДЕ‑ов руковалац падовима"
+msgstr "Руковалац падовима"
 
 #: main.cpp:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "The KDE Crash Handler gives the user feedback if a program has crashed."
+#, kde-format
 msgid "Crash Handler gives the user feedback if a program has crashed."
-msgstr "КДЕ‑ов руковалац падовима даје кориснику увид у рушење програма."
+msgstr "Руковалац падовима даје кориснику увид у рушење програма."
 
 #: main.cpp:132
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(C) 2000-2018, The DrKonqi Authors"
-msgstr "© 2000–2009, аутори Др Конкија"
+msgstr "© 2000–2018, аутори Др Конкија"
 
 #: main.cpp:133
 #, kde-format
@@ -570,7 +542,7 @@ msgstr "Преведено име програма"
 #, kde-format
 msgctxt "@info:shell"
 msgid "Bugzilla product name"
-msgstr ""
+msgstr "Име производа Бубаждаје"
 
 #: main.cpp:151
 #, kde-format
@@ -594,12 +566,9 @@ msgstr "ИД нити која се руши"
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Иди право на страницу Sentry"
 
 #: qml/BacktracePage.qml:11
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgctxt "@title:window"
 msgid "Fetching the Backtrace (Automatic Crash Information)"
 msgstr "Добављање контратрага (аутоматски подаци о паду)"
@@ -607,110 +576,67 @@ msgstr "Добављање контратрага (аутоматски пода
 #: qml/BacktracePage.qml:35 qml/ContextPage.qml:98
 msgctxt "@action:button"
 msgid "Next"
-msgstr ""
+msgstr "Сљедеће"
 
 #: qml/BugzillaPage.qml:43
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error sending the crash report:  <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to contact %1: <message>%2</message>"
-msgstr "Грешка при слању извјештаја о паду: <message>%1</message>"
+msgstr "Не могу да ступим у везу са %1: <message>%2</message>"
 
 #: qml/BugzillaPage.qml:48
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retry..."
 msgctxt "@action"
 msgid "Retry"
-msgstr "Покушај поново..."
+msgstr "Покушај поново"
 
 #: qml/BugzillaPage.qml:62
 msgctxt "@info"
 msgid "Trying to contact %1…"
-msgstr ""
+msgstr "Покушавам да ступим у везу са %1…"
 
 #: qml/ContextPage.qml:14
 msgctxt "@title:window"
 msgid "Your Knowledge"
-msgstr ""
+msgstr "Ваше знање"
 
 #: qml/ContextPage.qml:18
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Do you remember what you were doing prior to the crash?</strong>"
 msgctxt "@info/rich"
 msgid "Do you remember what you were doing prior to the crash?"
-msgstr "<strong>Сјећате ли се шта сте радили прије пада?</strong>"
+msgstr "Сјећате ли се шта сте радили прије пада?"
 
 #: qml/ContextPage.qml:28
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"yes\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "Yes"
 msgctxt "@action:button"
 msgid "Yes"
 msgstr "Да"
 
 #: qml/ContextPage.qml:33
-#, fuzzy
-#| msgctxt ""
-#| "@option:radio \"No\" to the question \"do you remember what were you "
-#| "doing prior to the crash?\""
-#| msgid "No"
 msgctxt "@action:button"
 msgid "No"
 msgstr "Не"
 
 #: qml/ContextPage.qml:42
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Does the application crash again if you repeat the same situation?"
-#| "</strong>"
 msgctxt "@info/rich"
 msgid "Does the application crash again if you repeat the same situation?"
-msgstr "<strong>Да ли се програм поново руши ако поновите исте радње?</strong>"
+msgstr "Да ли се програм поново руши ако поновите исте радње?"
 
 #: qml/ContextPage.qml:58
-#, fuzzy
-#| msgctxt "@label question"
-#| msgid ""
-#| "<strong>Please select which additional information you can provide:</"
-#| "strong>"
 msgctxt "@info/rich"
 msgid "Please select which additional information you can provide:"
-msgstr "<strong>Изаберите које још податке можете да пружите:</strong>"
+msgstr "Изаберите које још податке можете да пружите:"
 
 #: qml/ContextPage.qml:65
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash, "
-#| "%1 is the application name"
-#| msgid "What I was doing when the application \"%1\" crashed"
 msgctxt ""
 "@option:check kind of information the user can provide about the crash, %1 "
 "is the application name"
 msgid ""
 "What I was doing when the application <application>%1</application> crashed"
-msgstr "Шта је рађено када се програм „%1“ срушио"
+msgstr "Шта је рађено када се програм <application>%1</application> срушио"
 
 #: qml/ContextPage.qml:71
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Unusual desktop behavior I noticed"
 msgctxt "@action:check"
 msgid "Unusual desktop behavior I noticed"
 msgstr "Примијећено необично понашање површи"
 
 #: qml/ContextPage.qml:76
-#, fuzzy
-#| msgctxt ""
-#| "@option:check kind of information the user can provide about the crash"
-#| msgid "Custom settings of the application that may be related"
 msgctxt "@action:check"
 msgid "Custom settings of the application that may be related"
 msgstr "Посебне поставке у програму које могу бити од значаја"
@@ -718,14 +644,9 @@ msgstr "Посебне поставке у програму које могу б
 #: qml/ContextPage.qml:85 qml/DeveloperPage.qml:262
 msgctxt "@title"
 msgid "Not Sufficiently Useful"
-msgstr ""
+msgstr "Недовољно корисно"
 
 #: qml/ContextPage.qml:90
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The information you can provide is not considered helpful enough in this "
-#| "case."
 msgctxt "@info"
 msgid ""
 "The information you can provide is not considered helpful enough in this "
@@ -733,36 +654,26 @@ msgid ""
 "If you can't think of any more information, you can close the bug report "
 "dialog."
 msgstr ""
-"Подаци које можете пружити не сматрају се довољно корисним у овом случају."
+"Подаци које можете пружити не сматрају се довољно корисним у овом случају.\n"
+"Ако не можете да се сјетите још неких података, можете затворити дијалог за "
+"пријављивање грешке."
 
 #: qml/DeveloperPage.qml:24
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@title:window"
 msgid "Developer Information"
-msgstr "&Подаци за програмере"
+msgstr "Подаци за програмере"
 
 #: qml/DeveloperPage.qml:30
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Install Debug Symbols"
 msgctxt "@action:button"
 msgid "Install Debug Symbols"
-msgstr "&Инсталирај исправљачке симболе"
+msgstr "Инсталирај исправљачке симболе"
 
 #: qml/DeveloperPage.qml:43
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to install the missing debug symbols packages."
 msgctxt "@info:tooltip"
 msgid "Use this button to install the packages for missing debug symbols."
-msgstr "Овим дугметом инсталирате недостајуће пакете исправљачких симбола."
+msgstr "Овим дугметом инсталирате пакете за недостајуће исправљачке симболе."
 
 #: qml/DeveloperPage.qml:51
-#, fuzzy
-#| msgctxt "@info report to url/mail address"
-#| msgid "Report to %1"
 msgctxt "@action Report the bug on this domain"
 msgid "Report on %1"
 msgstr "Пријави на %1"
@@ -773,20 +684,11 @@ msgid "Starts the bug report assistant."
 msgstr "Покреће помоћник за пријављивање грешака."
 
 #: qml/DeveloperPage.qml:60
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Reload"
 msgctxt "@action:button"
 msgid "Reload"
-msgstr "&Учитај поново"
+msgstr "Учитај поново"
 
 #: qml/DeveloperPage.qml:62
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to reload the crash information (backtrace). This is "
-#| "useful when you have installed the proper debug symbol packages and you "
-#| "want to obtain a better backtrace."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to reload the crash information (backtrace). This is useful "
@@ -795,13 +697,14 @@ msgid ""
 "backtrace."
 msgstr ""
 "Овим дугметом поново учитавате податке о паду (контратраг). Корисно када сте "
-"у међувремену инсталирали потребне пакете са исправљачким симболима и желите "
-"да добијете бољи контратраг."
+"у међувремену\n"
+"инсталирали потребне пакете са исправљачким симболима и желите да добијете "
+"бољи контратраг."
 
 #: qml/DeveloperPage.qml:72
 msgctxt "@action:button"
 msgid "Copy"
-msgstr ""
+msgstr "Копирај"
 
 #: qml/DeveloperPage.qml:73
 msgctxt "@info:tooltip"
@@ -812,7 +715,7 @@ msgstr "Овим дугметом копирате податке о паду (�
 #: qml/DeveloperPage.qml:80
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Сачувај"
 
 #: qml/DeveloperPage.qml:82
 msgctxt "@info:tooltip"
@@ -829,14 +732,13 @@ msgid ""
 "This backtrace is very limited because there was not enough memory available "
 "to generate a full backtrace. You can close some applications and try again."
 msgstr ""
+"Овај контратраг је веома ограничен јер није било довољно меморије за "
+"стварање пуног контратрага. Можете затворити неке програме и покушати поново."
 
 #: qml/DeveloperPage.qml:103 qml/Main.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retry..."
 msgctxt "@action retry gathering crash data"
 msgid "Retry"
-msgstr "Покушај поново..."
+msgstr "Покушај поново"
 
 #: qml/DeveloperPage.qml:128
 msgctxt "@title:window"
@@ -844,15 +746,6 @@ msgid "Error during the installation of debug symbols"
 msgstr "Грешка при инсталирању исправљачких симбола."
 
 #: qml/DeveloperPage.qml:219
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You can click the <interface>Install Debug Symbols</interface> button in "
-#| "order to automatically install the missing debugging information "
-#| "packages. If this method does not work: please read <link url='%1'>How to "
-#| "create useful crash reports</link> to learn how to get a useful "
-#| "backtrace; install the needed packages (<link url='%2'>list of files</"
-#| "link>) and click the <interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Click the <interface>Install Debug Symbols</interface> button in order to "
@@ -864,20 +757,13 @@ msgid ""
 "link>), then click the <interface>Reload</interface> button."
 msgstr ""
 "Кликните на дугме <interface>Инсталирај исправљачке симболе</interface> да "
-"би се недостајући исправљачки пакети инсталирали. Ако ово не успије, "
-"прочитајте <link url='%1'>„Како саставити користан извјештај о паду“</link> "
-"да сазнате као да добијете употребљив контратраг. Пошто инсталирате потребне "
-"пакете (<link url='%2'>списак фајлова</link>), кликните на дугме "
-"<interface>Учитај поново</interface>."
+"би се недостајући исправљачки пакети аутоматски инсталирали. Ако ово\n"
+"не успије, прочитајте <link url='%1'>„Како саставити користан извјештај о "
+"паду“</link> да сазнате како да добијете употребљив\n"
+"контратраг, инсталирајте потребне пакете (<link url='%2'>списак фајлова</"
+"link>), па кликните на дугме <interface>Учитај поново</interface>."
 
 #: qml/DeveloperPage.qml:227
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#| "learn how to get a useful backtrace; install the needed packages (<link "
-#| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#| "interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Read <link url='%1'>How to create useful crash reports</link> to learn how "
@@ -886,23 +772,19 @@ msgid ""
 "interface> button."
 msgstr ""
 "Прочитајте <link url='%1'>„Како саставити користан извјештај о паду“</link> "
-"да сазнате као да добијете употребљив контратраг; инсталирајте потребне "
-"пакете (<link url='%2'>списак фајлова</link>) и кликните на дугме "
+"да сазнате како да добијете употребљив контратраг, инсталирајте потребне "
+"пакете\n"
+"(<link url='%2'>списак фајлова</link>), па кликните на дугме "
 "<interface>Учитај поново</interface>."
 
 #: qml/DeveloperPage.qml:234
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "Try to regenerate the backtrace by clicking the <interface>Reload</"
 "interface> button."
 msgstr ""
-"Можете покушати поново да створите контратраг кликом на дугме "
-"<interface>Учитај поново</interface>."
+"Покушајте поново да створите контратраг кликом на дугме <interface>Учитај "
+"поново</interface>."
 
 #: qml/DeveloperPage.qml:237
 msgctxt "@info/rich"
@@ -910,35 +792,28 @@ msgid ""
 "The backtrace generation failed to prepare. This indicates a severe problem "
 "which you likely cannot resolve."
 msgstr ""
+"Припрема за стварање контратрага није успјела. Ово указује на озбиљан "
+"проблем који вјероватно не можете сами да ријешите."
 
 #: qml/DeveloperPage.qml:241
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<strong>You need to first install the debugger application (%1) then "
-#| "click the <interface>Reload</interface> button.</strong>"
 msgctxt "@info/rich"
 msgid ""
 "<emphasis strong='true'>First install the debugger application (%1), then "
 "click the <interface>Reload</interface> button.</emphasis>"
 msgstr ""
-"<strong>Прво инсталирајте исправљачки програм (%1), па кликните на дугме "
-"<interface>Учитај поново</interface>.</strong>"
+"<emphasis strong='true'>Прво инсталирајте исправљачки програм (%1), па "
+"кликните на дугме <interface>Учитај поново</interface>.</emphasis>"
 
 #: qml/DeveloperPage.qml:245
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "You could try to regenerate the backtrace by clicking the "
-#| "<interface>Reload</interface> button."
 msgctxt "@info/rich"
 msgid ""
 "The backtrace generation was stopped due to memory pressure. You could try "
 "to regenerate the backtrace by clicking the <interface>Reload</interface> "
 "button."
 msgstr ""
-"Можете покушати поново да створите контратраг кликом на дугме "
-"<interface>Учитај поново</interface>."
+"Стварање контратрага је заустављено због недостатка меморије. Можете "
+"покушати поново да створите контратраг кликом на дугме <interface>Учитај "
+"поново</interface>."
 
 #. i18nc here because that'd close the html tag but we need to append an unordered list of paths
 #: qml/DeveloperPage.qml:269
@@ -952,7 +827,7 @@ msgstr ""
 #: qml/DownloadSymbolsCheckBox.qml:20
 msgctxt "@label"
 msgid "Automatically download debug symbols to enhance crash reports"
-msgstr ""
+msgstr "Аутоматски преузимај исправљачке симболе ради бољих извјештаја о паду"
 
 #: qml/DownloadSymbolsCheckBox.qml:29
 msgctxt "@info:tooltip"
@@ -963,11 +838,13 @@ msgid ""
 "downloads of unknown size when a crash occurs. This is skipped automatically "
 "when using a metered internet connection."
 msgstr ""
+"Извјештаји о паду могу бити вреднији ако се претходно преузму додатни "
+"исправљачки ресурси од вашег дистрибутера.\n"
+"То може повећати и заузеће меморије, трајаће дуже и изазива преузимања "
+"непознате величине када дође до пада. Ово се аутоматски прескаче на вези "
+"која се наплаћује по протоку."
 
 #: qml/LoginPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Login into the bug tracking system"
 msgctxt "@title:window"
 msgid "Log in to the Bug Tracking System"
 msgstr "Пријављивање у систем за праћење грешака"
@@ -980,7 +857,7 @@ msgstr "Морате се пријавити на налог на %1 да бис
 #: qml/LoginPage.qml:71
 msgctxt "@label:textbox bugzilla account email"
 msgid "Email Address:"
-msgstr ""
+msgstr "Адреса е‑поште:"
 
 #: qml/LoginPage.qml:77
 msgctxt "@label:textbox bugzilla account password"
@@ -993,14 +870,6 @@ msgid "Save login information using the KDE Wallet system"
 msgstr "Сачувај податке за пријаву у КДЕ‑овом систему новчаника"
 
 #: qml/LoginPage.qml:91
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "<note>You need a user account on the <link url='%1'>KDE bug tracking "
-#| "system</link> in order to file a bug report, because we may need to "
-#| "contact you later for requesting further information. If you do not have "
-#| "one, you can freely <link url='%2'>create one here</link>. Please do not "
-#| "use disposable email accounts.</note>"
 msgctxt "@info/rich"
 msgid ""
 "<note>You need a user account on the <link url='%1'>KDE bug tracking system</"
@@ -1012,9 +881,10 @@ msgid ""
 msgstr ""
 "<note>За подношење извјештаја о грешци потребан вам је кориснички налог у "
 "<link url='%1'>КДЕ‑овом систему за праћење грешака</link>, јер вам се "
-"касније можемо обратити за још информација. Ако немате налог, можете га "
-"слободно <link url='%2'>отворити</link>. Молимо вас да не користите "
-"једнократне налоге е‑поште.</note>"
+"касније можемо обратити\n"
+"за још информација. Ако немате налог, можете га слободно <link "
+"url='%2'>отворити овдје</link>. Не користите једнократне адресе е‑поште.</"
+"note>"
 
 #: qml/LoginPage.qml:105
 msgctxt "@action:button"
@@ -1022,18 +892,13 @@ msgid "Login"
 msgstr "Пријави ме"
 
 #: qml/LoginPage.qml:106
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Use this button to login to the KDE bug tracking system using the "
-#| "provided username and password."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to login to the KDE bug tracking system using the provided "
 "email address and password."
 msgstr ""
-"Овим дугметом се пријављујете у КДЕ‑ов систем за праћење грешака, с датим "
-"корисничким именом и лозинком."
+"Овим дугметом се пријављујете у КДЕ‑ов систем за праћење грешака, с датом "
+"адресом е‑поште и лозинком."
 
 #: qml/Main.qml:27
 msgctxt "@info"
@@ -1045,14 +910,6 @@ msgstr ""
 "application> не наводи адресу за пријављивање грешака.</para>"
 
 #: qml/Main.qml:34
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>As the Crash Handler itself has failed, the automatic reporting "
-#| "process is disabled to reduce the risks of failing again.<nl /><nl /"
-#| ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
-#| "tracking system. Do not forget to include the backtrace from the "
-#| "<interface>Developer Information</interface> tab.</para>"
 msgctxt "@info"
 msgid ""
 "<para>As the Crash Handler itself has failed, the\n"
@@ -1063,20 +920,15 @@ msgid ""
 "the backtrace from the <interface>Developer Information</interface>\n"
 "page.</para>"
 msgstr ""
-"<para>Пошто се сам руковалац падом срушио, процес аутоматског извјештавања "
-"је искључен како би се смањио ризик поновног падања.</para><para>Молимо вас "
-"да <link url='%1'>ручно пријавите</link> ову грешку на КДЕ‑ов систем за "
-"праћење грешака. Не заборавите да приложите и контратраг из језичка "
+"<para>Пошто се сам руковалац падом срушио, процес\n"
+"аутоматског извјештавања је искључен како би се смањио\n"
+"ризик поновног падања.<nl /><nl />\n"
+"<link url='%1'>Ручно пријавите</link> ову грешку\n"
+"на КДЕ‑ов систем за праћење грешака. Не заборавите да приложите и\n"
+"контратраг са странице\n"
 "<interface>Подаци за програмере</interface>.</para>"
 
 #: qml/Main.qml:46
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>The reporting assistant is disabled because the crash handler "
-#| "dialog was started in safe mode.<nl />You can manually report this bug to "
-#| "%1 (including the backtrace from the <interface>Developer Information</"
-#| "interface> tab.)</para>"
 msgctxt "@info"
 msgid ""
 "<para>The reporting assistant is disabled because the crash handler dialog "
@@ -1085,9 +937,9 @@ msgid ""
 "from the <interface>Developer Information</interface> page.)</para>"
 msgstr ""
 "<para>Помоћник за пријављивање је искључен зато што је дијалог руковаоца "
-"падом покренут у безбједном режиму.</para><para>Можете ручно пријавити ову "
-"грешку на <link>%1</link> (заједно са контратрагом под језичком "
-"<interface>Подаци за програмере</interface>).</para>"
+"падом покренут у безбједном режиму.<nl />\n"
+"Можете ручно пријавити ову грешку на <link>%1</link> (заједно са "
+"контратрагом са странице <interface>Подаци за програмере</interface>.)</para>"
 
 #: qml/Main.qml:53
 msgctxt "@info"
@@ -1100,6 +952,13 @@ msgid ""
 "in to make sure the update is fully applied and will not cause\n"
 "any side effects.</para>"
 msgstr ""
+"<para>Помоћник за пријављивање је искључен зато што\n"
+"је срушени програм изгледа ажуриран или деинсталиран\n"
+"откад је покренут. То онемогућава тачно\n"
+"пријављивање пада, а може бити и узрок самог пада.</para>\n"
+"<para>Послије ажурирања увијек је добро да се одјавите и поново\n"
+"пријавите, како би ажурирање било потпуно примијењено и не би\n"
+"изазвало никакве споредне ефекте.</para>"
 
 #: qml/Main.qml:65
 msgctxt "@info"
@@ -1116,6 +975,8 @@ msgid ""
 "There was not enough memory to gather crash information. You can close some "
 "applications to free up memory and try again."
 msgstr ""
+"Није било довољно меморије за сакупљање података о паду. Можете затворити "
+"неке програме да ослободите меморију и покушати поново."
 
 #: qml/Main.qml:101
 msgctxt "@info"
@@ -1123,6 +984,8 @@ msgid ""
 "Gathering crash information failed. You can close the window, or <link "
 "url='%1'>view detailed output</link>."
 msgstr ""
+"Сакупљање података о паду није успјело. Можете затворити прозор или <link "
+"url='%1'>погледати детаљан излаз</link>."
 
 #: qml/Main.qml:106
 msgctxt "@info"
@@ -1130,6 +993,9 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, close "
 "the window, or <link url='%1'>view detailed output</link>."
 msgstr ""
+"Сакупљање података о паду није успјело из непознатих разлога. Можете "
+"покушати поново, затворити прозор или <link url='%1'>погледати детаљан "
+"излаз</link>."
 
 #: qml/Main.qml:109
 msgctxt "@info"
@@ -1137,141 +1003,95 @@ msgid ""
 "Gathering crash information failed for unknown reasons. You can retry, or "
 "close the window."
 msgstr ""
+"Сакупљање података о паду није успјело из непознатих разлога. Можете "
+"покушати поново или затворити прозор."
 
 #: qml/MainPage.qml:12
-#, fuzzy
-#| msgid "The KDE Crash Handler"
 msgctxt "@title"
 msgid "Crash Handler"
-msgstr "КДЕ‑ов руковалац падовима"
+msgstr "Руковалац падовима"
 
 #: qml/MainPage.qml:35
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#| "para>"
 msgctxt "@info"
 msgid "<application>%1</application> has closed unexpectedly."
 msgstr ""
-"<para><application>%1</application> се неочекивано затвори.</para>|/|"
-"<para><application>%1</application> се неочекивано $[по-роду %1 затворио "
-"затворила затворило].</para>"
+"<application>%1</application> се неочекивано затвори.|/|<application>%1</"
+"application> се неочекивано $[по-роду %1 затворио затворила затворило]."
 
 #: qml/MainPage.qml:62
 msgctxt "@action"
 msgid "Send Automatic Report"
-msgstr ""
+msgstr "Пошаљи аутоматски извјештај"
 
 #: qml/MainPage.qml:78
-#, fuzzy
-#| msgctxt "@title:tab"
-#| msgid "&Developer Information"
 msgctxt "@action"
 msgid "See Developer Information"
-msgstr "&Подаци за програмере"
+msgstr "Погледај податке за програмере"
 
 #: qml/PreviewPage.qml:14
 msgctxt "@title"
 msgid "Bug Report Preview"
-msgstr ""
+msgstr "Преглед извјештаја о грешци"
 
 #: qml/PreviewPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "This is a preview of the report's contents which will be sent. \n"
-#| "\n"
-#| "If you want to modify it go to the previous pages."
 msgctxt "@label/rich"
 msgid ""
 "<para>This is a preview of the contents of the report which will be sent.</"
 "para><para>If you want to modify the report, return to the previous pages.</"
 "para>"
 msgstr ""
-"Ово је преглед садржаја извјештаја који ће бити послат.\n"
-"\n"
-"Идите на претходну страницу ако желите да га измијените."
+"<para>Ово је преглед садржаја извјештаја који ће бити послат.</"
+"para><para>Ако желите да измијените извјештај, вратите се на претходне "
+"странице.</para>"
 
 #: qml/PreviewPage.qml:39
 msgctxt "@action:button"
 msgid "Submit"
-msgstr ""
+msgstr "Предај"
 
 #: qml/RatingItem.qml:33
 msgctxt "@info"
 msgid "Waiting for data…"
-msgstr ""
+msgstr "Чекам на податке…"
 
 #: qml/RatingItem.qml:43
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is useful"
 msgctxt "@info"
 msgid "The generated crash information is useful."
 msgstr "Сакупљени подаци о паду су корисни."
 
 #: qml/RatingItem.qml:45
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information may be useful"
 msgctxt "@info"
 msgid "The generated crash information may be useful."
 msgstr "Сакупљени подаци о паду могу бити корисни."
 
 #: qml/RatingItem.qml:47
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is likely not useful."
-msgstr "Сакупљени подаци о паду нису корисни."
+msgstr "Сакупљени подаци о паду вјероватно нису корисни."
 
 #: qml/RatingItem.qml:49
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The generated crash information is not useful"
 msgctxt "@info"
 msgid "The generated crash information is not useful."
 msgstr "Сакупљени подаци о паду нису корисни."
 
 #: qml/ReportPage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Enter the Details about the Crash"
 msgctxt "@title"
 msgid "Enter Details About the Crash"
 msgstr "Унос детаља о паду"
 
 #: qml/ReportPage.qml:22
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<strong>Please provide the following information in English.</strong>"
 msgctxt "@info"
 msgid "Please provide the following information in English."
-msgstr "<strong>Додајте следеће податке на енглеском.</strong>"
+msgstr "Додајте сљедеће податке на енглеском."
 
 #: qml/ReportPage.qml:29 qml/ReportPage.qml:48
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Contents of the Report"
 msgctxt "@info"
 msgid "Title of the bug report:"
-msgstr "Садржај извјештаја"
+msgstr "Наслов извјештаја о грешци:"
 
 # Примери остављени на енглеском јер извештаји о грешкама треба да су на енглеском.
 # literal-segment: ".*?"
 #: qml/ReportPage.qml:34
-#, fuzzy
-#| msgctxt "@info:tooltip examples of good bug report titles"
-#| msgid ""
-#| "<strong>Examples of good titles:</strong><nl />\"Plasma crashed after "
-#| "adding the Notes widget and writing on it\"<nl />\"Konqueror crashed when "
-#| "accessing the Facebook application 'X'\"<nl />\"Kopete suddenly closed "
-#| "after resuming the computer and talking to a MSN buddy\"<nl />\"Kate "
-#| "closed while editing a log file and pressing the Delete key a couple of "
-#| "times\""
 msgctxt "@info:tooltip examples of good bug report titles"
 msgid ""
 "<subtitle>Examples of good titles:</subtitle>\n"
@@ -1284,19 +1104,20 @@ msgid ""
 "couple of times</item>\n"
 "</list>"
 msgstr ""
-"<para><strong>Примјери добрих наслова:</strong><list><item>„Plasma crashed "
-"after adding the Notes widget and writing on it“</item><item>„Konqueror "
-"crashed when accessing the Facebook application 'X'“</item><item>„Kopete "
-"suddenly closed after resuming the computer and talking to a MSN buddy“</"
-"item><item>„Kate closed while editing a log file and pressing the Delete key "
-"a couple of times“</item></list></para>"
+"<subtitle>Примјери добрих наслова:</subtitle>\n"
+"<list>\n"
+"<item>Plasma crashed after adding the Notes widget and writing on it</item>\n"
+"<item>Konqueror crashed when accessing the Facebook application „X“</item>\n"
+"<item>Kopete closed after resuming the computer and talking to a MSN buddy</"
+"item>\n"
+"<item>Kate closed while editing a log file and pressing the Delete key a "
+"couple of times</item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:55 qml/ReportPage.qml:97
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@info"
 msgid "Information about the crash:"
-msgstr "Текст података о паду"
+msgstr "Подаци о паду:"
 
 #: qml/ReportPage.qml:60
 msgctxt "@info"
@@ -1311,6 +1132,15 @@ msgid ""
 "<item>Note any non-default configuration in the application</item>\n"
 "</list>"
 msgstr ""
+"<subtitle>Што детаљније опишите околности пада:</subtitle>\n"
+"<list>\n"
+"<item>Наведите које сте радње изводили у програму и ван њега непосредно "
+"прије пада.</item>\n"
+"<item>Наведите да ли сте примијетили необично понашање програма или цијелог "
+"окружења.</item>\n"
+"<item>Наведите поставке програма које се разликују од подразумијеваних</"
+"item>\n"
+"</list>"
 
 #: qml/ReportPage.qml:74
 msgctxt "the minimum required length of a text was reached"
@@ -1323,130 +1153,84 @@ msgid "Provide more information"
 msgstr "Наведите још података."
 
 #: qml/ReportPage.qml:103
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Distribution method:"
 msgctxt "@info"
 msgid "Distribution method:"
 msgstr "Метод набавке:"
 
 #: qml/ReportPage.qml:131
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Loading..."
 msgctxt "@item:inlistbox placeholder while loading"
 msgid "Loading…"
-msgstr "Учитавам..."
+msgstr "учитавам…"
 
 #: qml/ReportPage.qml:144
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "KDE Platform is compiled from sources"
 msgctxt "@option:check"
 msgid "KDE Platform is compiled from source"
 msgstr "Платформа КДЕ‑а компилована из извора"
 
 #: qml/ReportPage.qml:152
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<i>Note:</i> The crash and system information will be automatically added "
-#| "to the bug report."
 msgctxt "@info"
 msgid ""
 "<note>The crash and system information will be automatically added to the "
 "bug report.</note>"
 msgstr ""
-"<i>Напомена:</i> Подаци о паду и систему биће аутоматски додати у извјештај "
-"о грешци."
+"<note>Подаци о паду и систему биће аутоматски додати у извјештај о грешци.</"
+"note>"
 
 #: qml/ReportPage.qml:161
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Preview the Report"
 msgctxt "@action:button"
 msgid "Preview Report"
-msgstr "Преглед извјештаја"
+msgstr "Прегледај извјештај"
 
 #: qml/SendingPage.qml:45
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "&Save to File..."
 msgctxt "@action:button"
 msgid "Save Report to File"
-msgstr "&Сачувај у фајл..."
+msgstr "Сачувај извјештај у фајл"
 
 #: qml/SendingPage.qml:46
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Use this button to view the information of the selected bug report."
 msgctxt "@info:tooltip"
 msgid ""
 "Use this button to save the crash information to a file for manual reporting."
-msgstr "Овим дугметом приказујете детаље изабраног извјештаја о грешци."
+msgstr "Овим дугметом уписујете податке о паду у фајл, за ручно пријављивање."
 
 #: qml/SendingPage.qml:63
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "Error sending the crash report:  <message>%1.</message>"
 msgctxt "@info"
 msgid "Failed to submit bug report: <message>%1</message>"
-msgstr "Грешка при слању извјештаја о паду: <message>%1</message>"
+msgstr "Не могу да предам извјештај о грешци: <message>%1</message>"
 
 #: qml/SendingPage.qml:67
 msgctxt "@action retry submitting bug report"
 msgid "Retry Submission"
-msgstr ""
+msgstr "Поново предај"
 
 #: qml/SendingPage.qml:81
 msgctxt "@info"
 msgid "Submitting bug report…"
-msgstr ""
+msgstr "Предајем извјештај о грешци…"
 
 #: qml/SentPage.qml:12
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@title"
 msgid "Crash Report Sent"
-msgstr "Помоћник за пријављивање падова"
+msgstr "Извјештај о паду послат"
 
 #: qml/SentPage.qml:19 qml/SentryPage.qml:17
-#, fuzzy
-#| msgctxt "Notification action button, keep short"
-#| msgid "Restart App"
 msgctxt "@action %1 is an application name e.g. kwrite"
 msgid "Restart %1"
-msgstr "Поново покрени"
+msgstr "Поново покрени %1|/|Поново покрени $[аку %1]"
 
 #: qml/SentPage.qml:27
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "<link url='%1'>Report's webpage</link>"
 msgctxt "@info"
 msgid "URL: <link url='%1'>%1</link>"
-msgstr "<link url='%1'>Веб страница извјештаја</link>"
+msgstr "УРЛ: <link url='%1'>%1</link>"
 
 #: qml/SentPage.qml:32
-#, fuzzy
-#| msgctxt "@info/rich"
-#| msgid ""
-#| "Crash report sent.<nl/>URL: <link>%1</link><nl/>Thank you for being part "
-#| "of KDE. You can now close this window."
 msgctxt "@info"
 msgid "Thank you for being a part of KDE. You may now close this window."
-msgstr ""
-"Извјештај о паду послат.<nl/>УРЛ: <link>%1</link><nl/>Хвала вам што "
-"учествујете у КДЕ‑у. Сада можете затворити овај прозор."
+msgstr "Хвала вам што сте дио КДЕ‑а. Сада можете затворити овај прозор."
 
-# >> @item:intext +
 #: qml/SentryPage.qml:12
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@title"
 msgid "Automatic Report"
-msgstr "лош извјештај/пад"
+msgstr "Аутоматски извјештај"
 
 #: qml/SentryPage.qml:32
 msgctxt "@label submitting as crash report"
@@ -1454,29 +1238,25 @@ msgid ""
 "Collecting crash data. This window can be closed. The collected data will "
 "automatically be submitted in the background."
 msgstr ""
+"Сакупљам податке о паду. Овај прозор можете затворити. Сакупљени подаци биће "
+"аутоматски послати у позадини."
 
 #: qml/SentryPage.qml:55
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Crash Reporting Assistant"
 msgctxt "@label"
 msgid "Crash Report Sent"
-msgstr "Помоћник за пријављивање падова"
+msgstr "Извјештај о паду послат"
 
 #: qml/SentryPage.qml:67
 msgctxt ""
 "@label other side of row 'in the future: [x] submit stuff automatically"
 msgid "In the future:"
-msgstr ""
+msgstr "Убудуће:"
 
 # >> @item:intext +
 #: qml/SentryPage.qml:70
-#, fuzzy
-#| msgctxt "@info bug resolution"
-#| msgid "Not a valid report/crash"
 msgctxt "@label"
 msgid "Automatically report crashes"
-msgstr "лош извјештај/пад"
+msgstr "Аутоматски пријављуј падове"
 
 #: qml/SentryPage.qml:79
 msgctxt "@info:tooltip"
@@ -1485,38 +1265,31 @@ msgid ""
 "with no manual input required.\n"
 "You will not receive any more crash notifications."
 msgstr ""
+"Извјештај о паду се увијек аутоматски шаље КДЕ‑овом систему за праћење "
+"падова, без ручног уноса.\n"
+"Више нећете добијати обавјештења о падовима."
 
 #: qml/SentryPage.qml:95
-#, fuzzy
-#| msgid "Information about the crash text"
 msgctxt "@label placeholder text in TextArea"
 msgid "Tell us more about the crash…"
-msgstr "Текст података о паду"
+msgstr "Реците нам нешто више о паду…"
 
 #: qml/SentryPage.qml:106
 msgctxt "@action:button"
 msgid "Send Message"
-msgstr ""
+msgstr "Пошаљи поруку"
 
 #: qml/SentryPage.qml:124
 msgctxt "@action:button"
 msgid "Finish"
-msgstr ""
+msgstr "Заврши"
 
 #: qml/WelcomePage.qml:14
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Bug Reporting Assistant Guide"
 msgctxt "@title:window"
 msgid "Reporting Assistant"
-msgstr "Водич помоћника за пријављивање грешака"
+msgstr "Помоћник за пријављивање"
 
 #: qml/WelcomePage.qml:19
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "This assistant will analyze the crash information and guide you through "
-#| "the bug reporting process."
 msgctxt "@info/rich"
 msgid ""
 "This assistant will analyze the crash information and guide you through the "
@@ -1526,14 +1299,6 @@ msgstr ""
 "пријављивања грешке."
 
 #: qml/WelcomePage.qml:32
-#, fuzzy
-#| msgctxt "@info note before starting the bug reporting process"
-#| msgid ""
-#| "<p><i>Note:</i> Since communication between you and the developers is "
-#| "required for effective debugging, to continue reporting this bug "
-#| "<strong>it is required for you to agree that developers may contact you.</"
-#| "strong></p><p>Feel free to close this dialog if you do not accept this.</"
-#| "p>"
 msgctxt "@info/rich note before starting the bug reporting process"
 msgid ""
 "<para><note>Since communication between you and the developers is required "
@@ -1543,21 +1308,22 @@ msgid ""
 "</note></para><para>Feel free to close this dialog if you do not wish to "
 "accept this.</para>"
 msgstr ""
-"<p><i>Напомена:</i> Пошто је за дјелотворно исправљање неопходна "
-"комуникација између вас и програмера̂, за наставак пријављивања "
-"<strong>неопходно је да се сложите да вам се програмери могу обратити</"
-"strong>.</p><p>Слободно затворите овај дијалог ако то не желите.</p>"
+"<para><note>Пошто је за дјелотворно исправљање неопходна комуникација између "
+"вас и програмера̂,\n"
+"за наставак пријављивања ове грешке <emphasis strong='true'>неопходно је да "
+"се сложите да вам се програмери могу обратити</emphasis>.\n"
+"</note></para><para>Слободно затворите овај дијалог ако то не желите.</para>"
 
 #: qml/WelcomePage.qml:45
 msgctxt "@action:button"
 msgid "I Agree to be Contacted"
-msgstr ""
+msgstr "Пристајем да ми се обратите"
 
 #: qmlextensions/platformmodel.cpp:37
 #, kde-format
 msgctxt "@info/status error"
 msgid "Failed to get platform list"
-msgstr ""
+msgstr "Не могу да добавим списак платформи"
 
 # Пази да пристаје за оба пола.
 #: qmlextensions/reproducibilitymodel.cpp:38
@@ -1587,1786 +1353,41 @@ msgstr "Сваки пут"
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:22
 #, kde-format
 msgid "backtraceparsertest_manual"
-msgstr ""
+msgstr "backtraceparsertest_manual"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:27
 #, kde-format
 msgid "The debugger name passed to the parser factory"
-msgstr ""
+msgstr "Име исправљача које се просљеђује фабрици рашчлањивача"
 
 #: tests/backtraceparsertest/backtraceparsertest_manual.cpp:28
 #, kde-format
 msgid "A file containing the backtrace."
-msgstr ""
+msgstr "Фајл који садржи контратраг."
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:118
 #, kde-format
 msgid "BugzillaLib Test (DrKonqi2)"
-msgstr ""
+msgstr "Проба BugzillaLib (DrKonqi2)"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:120
 #, kde-format
 msgid "Test application for bugtracker manager lib"
-msgstr ""
+msgstr "Пробни програм за библиотеку менаџера праћења грешака"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:122
-#, fuzzy, kde-format
-#| msgid "(C) 2000-2009, The DrKonqi Authors"
+#, kde-format
 msgid "(c) 2009, DrKonqi2 Developers"
-msgstr "© 2000–2009, аутори Др Конкија"
+msgstr "© 2009, програмери DrKonqi2"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:125
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org username"
-msgstr ""
+msgstr "Корисничко име на bugstest.kde.org"
 
 #: tests/bugzillalibtest/bugzillalibtest.cpp:126
 #, kde-format
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
-msgstr ""
-
-#~ msgctxt "@action:button"
-#~ msgid "&Restart Application"
-#~ msgstr "&Поново покрени програм"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to restart the crashed application."
-#~ msgstr "Овим дугметом поново покрећете срушени програм."
-
-#~ msgctxt "@action:button"
-#~ msgid "&Reload"
-#~ msgstr "&Учитај поново"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to reload the crash information (backtrace). This is "
-#~ "useful when you have installed the proper debug symbol packages and you "
-#~ "want to obtain a better backtrace."
-#~ msgstr ""
-#~ "Овим дугметом поново учитавате податке о паду (контратраг). Корисно када "
-#~ "сте у међувремену инсталирали потребне пакете са исправљачким симболима и "
-#~ "желите да добијете бољи контратраг."
-
-#~ msgctxt "@action:button"
-#~ msgid "&Install Debug Symbols"
-#~ msgstr "&Инсталирај исправљачке симболе"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to install the missing debug symbols packages."
-#~ msgstr "Овим дугметом инсталирате недостајуће пакете исправљачких симбола."
-
-#~ msgid ""
-#~ "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes what "
-#~ "was happening inside the application when it crashed, so the developers "
-#~ "may track down where the mess started. They may look meaningless to you, "
-#~ "but they might actually contain a wealth of useful information.<br /"
-#~ ">Backtraces are commonly used during interactive and post-mortem "
-#~ "debugging.</p>"
-#~ msgstr ""
-#~ "<h2>Шта је „контратраг“?</h2><p>Контратраг у основи описује шта се "
-#~ "догађало унутар програма у тренутку пада, тако да програмери могу да "
-#~ "испрате одакле је пошло како не треба. Иако вама могу дјеловати "
-#~ "неразумљиво, заправо могу садржати мноштво корисних података.</"
-#~ "p><p>Контратрагови се обично користе током интерактивног и обдукционог "
-#~ "исправљања.</p>"
-
-#~ msgctxt "@info:status"
-#~ msgid "Loading..."
-#~ msgstr "Учитавам..."
-
-#~ msgctxt "@info:status"
-#~ msgid "Generating backtrace... (this may take some time)"
-#~ msgstr "Стварам контратраг... (може потрајати)"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Another debugger is currently debugging the same application. The crash "
-#~ "information could not be fetched."
-#~ msgstr ""
-#~ "Неки други исправљач већ је прикачен на исти програм. Подаци о паду се не "
-#~ "могу добавити."
-
-#~ msgctxt "@info:status"
-#~ msgid "The crash information could not be fetched."
-#~ msgstr "Подаци о паду се не могу добавити."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Another debugging process is attached to the crashed application. "
-#~ "Therefore, the DrKonqi debugger cannot fetch the backtrace. Please close "
-#~ "the other debugger and click <interface>Reload</interface>."
-#~ msgstr ""
-#~ "Други исправљачки процес је прикачен на срушени програм. Зато Др Конкијев "
-#~ "исправљач не може да добави контратраг. Затворите тај други исправљач, па "
-#~ "кликните на <interface>Учитај поново</interface>."
-
-#~ msgctxt "@info"
-#~ msgid "The generated crash information is useful"
-#~ msgstr "Сакупљени подаци о паду су корисни."
-
-#~ msgctxt "@info"
-#~ msgid "The generated crash information may be useful"
-#~ msgstr "Сакупљени подаци о паду могу бити корисни."
-
-#~ msgctxt "@info"
-#~ msgid "The generated crash information is probably not useful"
-#~ msgstr "Сакупљени подаци о паду вјероватно нису корисни."
-
-#~ msgctxt "@info"
-#~ msgid "The generated crash information is not useful"
-#~ msgstr "Сакупљени подаци о паду нису корисни."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The rating of this crash information is invalid. This is a bug in DrKonqi "
-#~ "itself."
-#~ msgstr "Оцјена овог пада није добра. Ово је грешка у самом Др Конкију."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "You can click the <interface>Install Debug Symbols</interface> button in "
-#~ "order to automatically install the missing debugging information "
-#~ "packages. If this method does not work: please read <link url='%1'>How to "
-#~ "create useful crash reports</link> to learn how to get a useful "
-#~ "backtrace; install the needed packages (<link url='%2'>list of files</"
-#~ "link>) and click the <interface>Reload</interface> button."
-#~ msgstr ""
-#~ "Кликните на дугме <interface>Инсталирај исправљачке симболе</interface> "
-#~ "да би се недостајући исправљачки пакети инсталирали. Ако ово не успије, "
-#~ "прочитајте <link url='%1'>„Како саставити користан извјештај о паду“</"
-#~ "link> да сазнате као да добијете употребљив контратраг. Пошто инсталирате "
-#~ "потребне пакете (<link url='%2'>списак фајлова</link>), кликните на дугме "
-#~ "<interface>Учитај поново</interface>."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
-#~ "learn how to get a useful backtrace; install the needed packages (<link "
-#~ "url='%2'>list of files</link>) and click the <interface>Reload</"
-#~ "interface> button."
-#~ msgstr ""
-#~ "Прочитајте <link url='%1'>„Како саставити користан извјештај о паду“</"
-#~ "link> да сазнате као да добијете употребљив контратраг; инсталирајте "
-#~ "потребне пакете (<link url='%2'>списак фајлова</link>) и кликните на "
-#~ "дугме <interface>Учитај поново</interface>."
-
-# rewrite-msgid: /quit/exited/
-#~ msgctxt "@info:status"
-#~ msgid "The debugger has quit unexpectedly."
-#~ msgstr "Исправљач се неочекивано окончао."
-
-#~ msgctxt "@info:status"
-#~ msgid "The crash information could not be generated."
-#~ msgstr "Подаци о паду нису могли бити сакупљени."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "You could try to regenerate the backtrace by clicking the "
-#~ "<interface>Reload</interface> button."
-#~ msgstr ""
-#~ "Можете покушати поново да створите контратраг кликом на дугме "
-#~ "<interface>Учитај поново</interface>."
-
-#~ msgctxt "@info:status"
-#~ msgid ""
-#~ "<strong>The debugger application is missing or could not be launched.</"
-#~ "strong>"
-#~ msgstr ""
-#~ "<strong>Исправљачки програм недостаје или се не може покренути.</strong>"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "<strong>You need to first install the debugger application (%1) then "
-#~ "click the <interface>Reload</interface> button.</strong>"
-#~ msgstr ""
-#~ "<strong>Прво инсталирајте исправљачки програм (%1), па кликните на дугме "
-#~ "<interface>Учитај поново</interface>.</strong>"
-
-#~ msgctxt "messagebox title"
-#~ msgid "Missing debug information packages"
-#~ msgstr "Недостају пакети са исправљачким подацима"
-
-#~ msgctxt "@title:tab general information"
-#~ msgid "&General"
-#~ msgstr "&Опште"
-
-#~ msgctxt "@title:tab"
-#~ msgid "&Developer Information"
-#~ msgstr "&Подаци за програмере"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>We are sorry, <application>%1</application> closed unexpectedly.</"
-#~ "para>"
-#~ msgstr ""
-#~ "<para><application>%1</application> се неочекивано затвори.</para>|/|"
-#~ "<para><application>%1</application> се неочекивано $[по-роду %1 затворио "
-#~ "затворила затворило].</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>As the Crash Handler itself has failed, the automatic reporting "
-#~ "process is disabled to reduce the risks of failing again.<nl /><nl /"
-#~ ">Please, <link url='%1'>manually report</link> this error to the KDE bug "
-#~ "tracking system. Do not forget to include the backtrace from the "
-#~ "<interface>Developer Information</interface> tab.</para>"
-#~ msgstr ""
-#~ "<para>Пошто се сам руковалац падом срушио, процес аутоматског "
-#~ "извјештавања је искључен како би се смањио ризик поновног падања.</"
-#~ "para><para>Молимо вас да <link url='%1'>ручно пријавите</link> ову грешку "
-#~ "на КДЕ‑ов систем за праћење грешака. Не заборавите да приложите и "
-#~ "контратраг из језичка <interface>Подаци за програмере</interface>.</para>"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<para>The reporting assistant is disabled because the crash handler "
-#~ "dialog was started in safe mode.<nl />You can manually report this bug to "
-#~ "%1 (including the backtrace from the <interface>Developer Information</"
-#~ "interface> tab.)</para>"
-#~ msgstr ""
-#~ "<para>Помоћник за пријављивање је искључен зато што је дијалог руковаоца "
-#~ "падом покренут у безбједном режиму.</para><para>Можете ручно пријавити "
-#~ "ову грешку на <link>%1</link> (заједно са контратрагом под језичком "
-#~ "<interface>Подаци за програмере</interface>).</para>"
-
-#~ msgctxt "@label"
-#~ msgid "Details:"
-#~ msgstr "Детаљи:"
-
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5 %6</para>"
-#~ msgstr ""
-#~ "<para>Извршна: <command>%1</command> ПИД: %2 сигнал: %3 (%4) време: %5 "
-#~ "%6</para>"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Close this dialog (you will lose the crash information.)"
-#~ msgstr "Затворите овај дијалог (изгубићете податке о паду)."
-
-#~ msgctxt "@info:shell"
-#~ msgid "The program was started by kdeinit"
-#~ msgstr "Овај програм је покренула kdeinit"
-
-#, fuzzy
-#~| msgid "Show backtrace content (advanced)"
-#~ msgctxt "@action:button"
-#~ msgid "Show backtrace content (advanced)"
-#~ msgstr "Прикажи садржај контратрага (напредно)"
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "What do you know about the crash?"
-#~ msgctxt "@title:window"
-#~ msgid "What do You Know About the Crash?"
-#~ msgstr "Шта знате о паду?"
-
-#, fuzzy
-#~| msgid ""
-#~| "<h2>What is a \"backtrace\" ?</h2><p>A backtrace basically describes "
-#~| "what was happening inside the application when it crashed, so the "
-#~| "developers may track down where the mess started. They may look "
-#~| "meaningless to you, but they might actually contain a wealth of useful "
-#~| "information.<br />Backtraces are commonly used during interactive and "
-#~| "post-mortem debugging.</p>"
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<subtitle>What is a \"backtrace\" ?</subtitle><para>A backtrace basically "
-#~ "describes what was\n"
-#~ "happening inside the application when it crashed, so the developers may "
-#~ "track\n"
-#~ "down where the mess started. They may look meaningless to you, but they "
-#~ "might\n"
-#~ "actually contain a wealth of useful information.<nl />Backtraces are "
-#~ "commonly\n"
-#~ "used during interactive and post-mortem debugging.</para>"
-#~ msgstr ""
-#~ "<h2>Шта је „контратраг“?</h2><p>Контратраг у основи описује шта се "
-#~ "догађало унутар програма у тренутку пада, тако да програмери могу да "
-#~ "испрате одакле је пошло како не треба. Иако вама могу дјеловати "
-#~ "неразумљиво, заправо могу садржати мноштво корисних података.</"
-#~ "p><p>Контратрагови се обично користе током интерактивног и обдукционог "
-#~ "исправљања.</p>"
-
-#~ msgctxt "@title"
-#~ msgid "Preview the Report"
-#~ msgstr "Преглед извјештаја"
-
-#, fuzzy
-#~| msgctxt "@title"
-#~| msgid "Welcome to the Reporting Assistant"
-#~ msgctxt "@title:window"
-#~ msgid "Welcome to the Reporting Assistant"
-#~ msgstr "Добро дошли у помоћник за пријављивање"
-
-#~ msgctxt ""
-#~ "@action:button this is the debug menu button label which contains the "
-#~ "debugging applications"
-#~ msgid "&Debug"
-#~ msgstr "&Исправљање"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Starts a program to debug the crashed application."
-#~ msgstr "Покреће програм за исправљање срушеног програма."
-
-#~ msgctxt "@action:inmenu 1 is the debugger name"
-#~ msgid "Debug in %1"
-#~ msgstr "Исправљај у %1|/|Исправљај у $[аку %1]"
-
-#~ msgctxt "@title"
-#~ msgid "Look for Possible Duplicate Reports"
-#~ msgstr "Тражење могућих дупликата извјештаја"
-
-#, fuzzy
-#~| msgctxt "@info:status"
-#~| msgid "Searching for duplicates (from %1 to %2)..."
-#~ msgctxt "@info"
-#~ msgid "Searching bug database for duplicates…"
-#~ msgstr "Тражим дупликате (од %1 до %2)..."
-
-#, fuzzy
-#~| msgctxt "@info"
-#~| msgid ""
-#~| "See if your bug has already been reported. Double click a report in the "
-#~| "list and compare it to yours. You can suggest that your crash is a "
-#~| "duplicate of that report or directly attach your information to it."
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "See if your bug has already been reported. Double click a report in the "
-#~ "list and compare it to yours. You can suggest that your crash is a "
-#~ "duplicate of that report or directly attach your information to it."
-#~ msgstr ""
-#~ "Погледајте да ли је грешка већ пријављена. Двокликните на извјештај са "
-#~ "списка и упоредите га са својим. Можете предложити да је ваш пад дупликат "
-#~ "тог извјештаја или непосредно приложите своје податке уз њега."
-
-# >> @item:intext +
-#, fuzzy
-#~| msgctxt "@info bug resolution"
-#~| msgid "[Duplicate report]"
-#~ msgctxt "@title"
-#~ msgid "Duplicate?"
-#~ msgstr "[дупликат извјештаја]"
-
-#, fuzzy
-#~| msgid "There are no real duplicates"
-#~ msgctxt "@action:button"
-#~ msgid "Crash is a duplicate"
-#~ msgstr "Нема правих дупликата"
-
-#, fuzzy
-#~| msgctxt "@info:tooltip"
-#~| msgid ""
-#~| "Use this button to suggest that the crash you experienced is related to "
-#~| "this bug report"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this action when you are certain that your crash is a duplicate of "
-#~ "this bug report"
-#~ msgstr ""
-#~ "Овим дугметом сугеришете да је пад који сте искусили повезан са овим "
-#~ "извјештајем о грешци."
-
-#, fuzzy
-#~| msgid "There are no real duplicates"
-#~ msgctxt "@action:button"
-#~ msgid "Crash is not a duplicate"
-#~ msgstr "Нема правих дупликата"
-
-#~ msgctxt "@action:button"
-#~ msgid "Suggest this crash is related"
-#~ msgstr "Сугериши везу са овим падом"
-
-#, fuzzy
-#~| msgctxt "@info:tooltip"
-#~| msgid ""
-#~| "Use this button to suggest that the crash you experienced is related to "
-#~| "this bug report"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to suggest that\n"
-#~ "                                     the crash you experienced is related "
-#~ "to this bug\n"
-#~ "                                     report"
-#~ msgstr ""
-#~ "Овим дугметом сугеришете да је пад који сте искусили повезан са овим "
-#~ "извјештајем о грешци."
-
-#, fuzzy
-#~| msgctxt "@action:button"
-#~| msgid "Suggest this crash is related"
-#~ msgctxt "@action:button"
-#~ msgid "This crash is not related"
-#~ msgstr "Сугериши везу са овим падом"
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid ""
-#~| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#~| "is a duplicate of the <strong>closed</strong> <a href=\"%2\">Bug %2</a>."
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a duplicate of the <emphasis strong='true'>closed</emphasis> "
-#~ "<link url=\"%2\">Bug %2</link>."
-#~ msgstr ""
-#~ "Ваш пад је већ пријављен као <a href=\"%1\">грешка %1</a>, која је "
-#~ "дупликат <strong>затворене</strong> <a href=\"%2\">грешке %2</a>."
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid ""
-#~| "Your crash has already been reported as <a href=\"%1\">Bug %1</a> which "
-#~| "has been <strong>closed</strong>."
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link> "
-#~ "which has been <emphasis strong='true'>closed</emphasis>."
-#~ msgstr ""
-#~ "Ваш пад је већ пријављен као <a href=\"%1\">грешка %1</a>, која је "
-#~ "<strong>затворена</strong>."
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid ""
-#~| "Your crash has already been reported as <a href=\"%1\">Bug %1</a>, which "
-#~| "is a <strong>duplicate</strong> of <a href=\"%2\">Bug %2</a>"
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash has already been reported as <link url=\"%1\">Bug %1</link>, "
-#~ "which is a <emphasis strong='true'>duplicate</emphasis> of <link url="
-#~ "\"%2\">Bug %2</link>"
-#~ msgstr ""
-#~ "Ваш пад је већ пријављен као <a href=\"%1\">грешка %1</a>, која је "
-#~ "<strong>дупликат</strong> <a href=\"%2\">грешке %2</a>."
-
-#, fuzzy
-#~| msgctxt "@label"
-#~| msgid ""
-#~| "Your crash is a <strong>duplicate</strong> and has already been reported "
-#~| "as <a href=\"%1\">Bug %1</a>."
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Your crash is a <emphasis strong='true'>duplicate</emphasis> and has "
-#~ "already been reported as <link url=\"%1\">Bug %2</link>."
-#~ msgstr ""
-#~ "Ваш пад је <strong>дупликат</strong> и већ је пријављен као <a href="
-#~ "\"%1\">грешка %1</a>."
-
-#, fuzzy
-#~| msgctxt "@info/rich"
-#~| msgid ""
-#~| "Please read <link url='%1'>How to create useful crash reports</link> to "
-#~| "learn how to get a useful backtrace; install the needed packages (<link "
-#~| "url='%2'>list of files</link>) and click the <interface>Reload</"
-#~| "interface> button."
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Please read <link url='%1'>How to create useful crash reports</link> to "
-#~ "learn how to get a useful backtrace; install the needed packages (<link "
-#~ "url='%2'>\n"
-#~ "list of files</link>) and click the <interface>Reload</interface> button."
-#~ msgstr ""
-#~ "Прочитајте <link url='%1'>„Како саставити користан извјештај о паду“</"
-#~ "link> да сазнате као да добијете употребљив контратраг; инсталирајте "
-#~ "потребне пакете (<link url='%2'>списак фајлова</link>) и кликните на "
-#~ "дугме <interface>Учитај поново</interface>."
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Filename"
-#~ msgstr "Избор имена фајла"
-
-#, fuzzy
-#~| msgctxt "Notification action button, keep short"
-#~| msgid "Report Bug"
-#~ msgctxt "@action"
-#~ msgid "Report Bug"
-#~ msgstr "Пријави грешку"
-
-#, fuzzy
-#~| msgctxt ""
-#~| "@info Note the time information is divided into date and time parts"
-#~| msgid ""
-#~| "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~| "Time: %5 %6</para>"
-#~ msgctxt ""
-#~ "@info Note the time information is divided into date and time parts"
-#~ msgid ""
-#~ "<para>Executable: <application>%1</application> PID: %2 Signal: %3 (%4) "
-#~ "Time: %5</para>"
-#~ msgstr ""
-#~ "<para>Извршна: <command>%1</command> ПИД: %2 сигнал: %3 (%4) време: %5 "
-#~ "%6</para>"
-
-#~ msgctxt "@title title of the dialog"
-#~ msgid "About Bug Reporting - Help"
-#~ msgstr "О пријављивању грешака — помоћ"
-
-#~ msgctxt "@title"
-#~ msgid "Information about bug reporting"
-#~ msgstr "Информације о пријављивању грешака"
-
-#~ msgctxt "@info/rich"
-#~ msgid "You can help us improve this software by filing a bug report."
-#~ msgstr ""
-#~ "Подношењем извјештаја о грешци можете нам помоћи да побољшамо овај "
-#~ "софтвер."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "<note>It is safe to close this dialog. If you do not want to, you do not "
-#~ "have to file a bug report.</note>"
-#~ msgstr ""
-#~ "<note>Слободно можете затворити овај дијалог ако не желите да поднесете "
-#~ "извјештај.</note>"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "In order to generate a useful bug report we need some information about "
-#~ "both the crash and your system. (You may also need to install some debug "
-#~ "packages.)"
-#~ msgstr ""
-#~ "За стварање корисног извјештаја, треба да сакупите нешто података о паду "
-#~ "и свом систему. (Можда и да инсталирате неке исправљачке пакете.)"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "This assistant will guide you through the crash reporting process for the "
-#~ "KDE bug tracking system. All the information you enter on the bug report "
-#~ "<strong>must be written in English</strong>, if possible, as KDE is "
-#~ "formed internationally."
-#~ msgstr ""
-#~ "Овај помоћник вас води кроз поступак пријављивања пада на сајт КДЕ‑овог "
-#~ "система за праћење грешака. У извјештај о грешци све податке "
-#~ "<strong>морате унијети на енглеском</strong>, јер се КДЕ развија на "
-#~ "међународном нивоу."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "In this page you need to describe how much do you know about the desktop "
-#~ "and the application state before it crashed."
-#~ msgstr ""
-#~ "На овој страници треба да попишете све што знате о стању површи и "
-#~ "програма у тренутку кад се срушио."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If you can, describe in as much detail as possible the crash "
-#~ "circumstances, and what you were doing when the application crashed (this "
-#~ "information is going to be requested later.) You can mention: "
-#~ msgstr ""
-#~ "Ако можете, опишите са што више детаља околности у којима је дошло до "
-#~ "пада и шта сте радили када се програм срушио (ове информације ће бити "
-#~ "тражене касније). Можете поменути:"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid "actions you were taking inside or outside the application"
-#~ msgstr "радње које сте изводили унутар или изван програма;"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid ""
-#~ "documents or images that you were using and their type/format (later if "
-#~ "you go to look at the report in the bug tracking system, you can attach a "
-#~ "file to the report)"
-#~ msgstr ""
-#~ "документе које сте користили и њихов тип и формат (послије подношење "
-#~ "извјештаја у систем за праћење грешака, можете приложити и фајл уз њега);"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid "widgets that you were running"
-#~ msgstr "виџете који су се извршавали;"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid "the URL of a web site you were browsing"
-#~ msgstr "УРЛ веб сајта који сте прегледали;"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid "configuration details of the application"
-#~ msgstr "поставне детаље програма"
-
-#~ msgctxt "@info/rich crash situation example"
-#~ msgid "or other strange things you notice before or after the crash. "
-#~ msgstr "било какве необичности које сте примијетили прије или послије пада."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Screenshots can be very helpful sometimes. You can attach them to the bug "
-#~ "report after it is posted to the bug tracking system."
-#~ msgstr ""
-#~ "Снимци екрана понекад могу бити од велике помоћи. Можете их приложити уз "
-#~ "извјештај чим га предате систему за праћење грешака."
-
-#~ msgctxt "@title"
-#~ msgid "Crash Information (backtrace)"
-#~ msgstr "Подаци о паду (контратраг)"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "This page will generate a \"backtrace\" of the crash. This is information "
-#~ "that tells the developers where the application crashed."
-#~ msgstr ""
-#~ "Ова страница ствара „контратраг“ пада, скуп података који програмерима "
-#~ "говори гдје се програм срушио."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If the crash information is not detailed enough, you may need to install "
-#~ "some debug packages and reload it (if the <interface>Install Debug "
-#~ "Symbols</interface> button is available you can use it to automatically "
-#~ "install the missing information.)"
-#~ msgstr ""
-#~ "Ако подаци о паду нису довољно детаљни, можда ћете морати да инсталирате "
-#~ "неке исправљачке пакете и поново учитате податке. (Ако је дато дугме "
-#~ "<interface>Инсталирај исправљачке симболе</interface>, њиме можете "
-#~ "аутоматски инсталирати неопходно.)"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "You can find more information about backtraces, what they mean, and how "
-#~ "they are useful at <link>%1</link>"
-#~ msgstr ""
-#~ "Више детаља о контратраговима, шта су и како могу бити корисни, можете "
-#~ "наћи на <link>%1</link>."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Once you get a useful backtrace (or if you do not want to install the "
-#~ "missing debugging packages) you can continue."
-#~ msgstr ""
-#~ "Пошто добијете употребљив контратраг, или ако не желите да инсталирате "
-#~ "недостајуће исправљачке пакете, можете наставити."
-
-#~ msgctxt "@title"
-#~ msgid "Conclusions"
-#~ msgstr "Закључци"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Using the quality of the crash information gathered, and your answers on "
-#~ "the previous page, the assistant will tell you if the crash is worth "
-#~ "reporting or not."
-#~ msgstr ""
-#~ "Према саставу сакупљених података о паду, и одговорима које сте дали на "
-#~ "претходној страници, помоћник ће вам рећи вриједи ли пријављивати пад."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If the crash is worth reporting but the application is not supported in "
-#~ "the KDE bug tracking system, you will need to directly contact the "
-#~ "maintainer of the application."
-#~ msgstr ""
-#~ "Ако пад вриједи пријавити али КДЕ‑ов систем за праћење грешака не "
-#~ "подржава дати програм, мораћете да се непосредно обратите његовом "
-#~ "одржаваоцу."
-
-# skip-rule: t-list
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If the crash is listed as being not worth reporting, and you think the "
-#~ "assistant has made a mistake, you can still manually report the bug by "
-#~ "logging into the bug tracking system. You can also go back and change "
-#~ "information and download debug packages."
-#~ msgstr ""
-#~ "Ако помоћник не препоручи слање извјештаја, али мислите да је лоше "
-#~ "оцијенио, свеједно можете ручно пријавити грешку пријавивши се у систем "
-#~ "за праћење грешака. Такође се можете вратити уназад, те измијенити "
-#~ "податке и преузети исправљачке пакете."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "We may need to contact you in the future to ask for further information. "
-#~ "As we need to keep track of the bug reports, you need to have an account "
-#~ "on the KDE bug tracking system. If you do not have one, you can create "
-#~ "one here: <link>%1</link>"
-#~ msgstr ""
-#~ "Можда нам затреба да вам касније затражимо још података. Пошто пратимо "
-#~ "сваки извјештај о грешци, морате имати налог на КДЕ‑овом систему за "
-#~ "праћење грешака. Ако га немате, можете га отворити на <link>%1</link>."
-
-#, fuzzy
-#~| msgctxt "@info/rich"
-#~| msgid ""
-#~| "Then, enter your username and password and press the Login button. You "
-#~| "can use this login to directly access the KDE bug tracking system later."
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Then, enter your e-mail address and password and press the Login button. "
-#~ "You can use this login to directly access the KDE bug tracking system "
-#~ "later."
-#~ msgstr ""
-#~ "Затим, унесите корисничко име и лозинку и притисните дугме "
-#~ "<interface>Пријави ме</interface>. Ово пријављивање можете касније "
-#~ "употријебити за непосредан приступ КДЕ‑овом систему за праћење грешака."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "The KWallet dialog may appear when pressing Login to save your password "
-#~ "in the KWallet password system. Also, it will prompt you for the KWallet "
-#~ "password upon loading to autocomplete the login fields if you use this "
-#~ "assistant again."
-#~ msgstr ""
-#~ "Када притиснете дугме <interface>Пријави ме</interface> може се појавити "
-#~ "дијалог К‑новчаника, у којем можете сачувати лозинку за убудуће. Тада "
-#~ "ћете такође бити упитани за лозинку новчаника, и поља за пријављивање "
-#~ "биће аутоматски попуњена у наредним извршавањима помоћника."
-
-#~ msgctxt "@title"
-#~ msgid "List of possible duplicate reports"
-#~ msgstr "Списак могућих извјештаја-дупликата"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "This page will search the bug report system for similar crashes which are "
-#~ "possible duplicates of your bug. If there are similar bug reports found, "
-#~ "you can double click on them to see details. Then, read the current bug "
-#~ "report information so you can check to see if they are similar. "
-#~ msgstr ""
-#~ "Ова страница ће потражити сличне падове у систему за праћење грешака, "
-#~ "који могу бити дупликати грешке коју сте открили. Ако неки извјештај буде "
-#~ "нађен, можете двокликнути на њега да видите детаље. Затим их упоредите са "
-#~ "својим подацима, у извјештају који припремате."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If you are very sure your bug is the same as another that is previously "
-#~ "reported, you can set your information to be attached to the existing "
-#~ "report."
-#~ msgstr ""
-#~ "Ако сте врло сигурни да се ради о истој грешци као некој претходно "
-#~ "пријављеној, можете задати да се ваши подаци приложе уз постојећи "
-#~ "извјештај."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If you are unsure whether your report is the same, follow the main "
-#~ "options to tentatively mark your crash as a duplicate of that report. "
-#~ "This is usually the safest thing to do. We cannot uncombine bug reports, "
-#~ "but we can easily merge them."
-#~ msgstr ""
-#~ "Ако нисте сигурни да ли је извјештај исти, испратите главне опције да "
-#~ "условно означите свој пад као дупликат тог претходног. Ово је обично "
-#~ "најсигурнији пут — извјештаје не можемо касније раздвајати, али их можемо "
-#~ "лако стапати."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If not enough possible duplicates are found, or you did not find a "
-#~ "similar report, then you can force it to search for more bug reports "
-#~ "(only if the date range limit is not reached.)"
-#~ msgstr ""
-#~ "Ако нема довољно нађених могућих дупликата, или ниједног сличног "
-#~ "извјештаја, можете приморати претрагу још извјештаја (док не буде "
-#~ "досегнуто ограничење по датуму)."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If you do not find any related reports, your crash information is not "
-#~ "useful enough, and you really cannot give additional information about "
-#~ "the crash context, then it is better to not file the bug report, thereby "
-#~ "closing the assistant."
-#~ msgstr ""
-#~ "Ако не нађете ниједан сличан извјештај, подаци о паду нису довољно "
-#~ "корисни, и не можете ништа додатно навести о условима пада, боље је да не "
-#~ "подносите извјештај и затворите помоћник."
-
-#~ msgctxt "@title"
-#~ msgid "Details of the bug report and your system"
-#~ msgstr "Детаљи извјештаја о грешци и вашем систему"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "In this case you need to write a title and description of the crash. "
-#~ "Explain as best you can. "
-#~ msgstr ""
-#~ "Овдје треба да унесете наслов и опис пада. Објасните што боље можете."
-
-# rewrite-msgid: /GNU.Linux/operating system/
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "You can also specify your distribution method (GNU/Linux distribution or "
-#~ "packaging system) or if you compiled the KDE Platform from sources."
-#~ msgstr ""
-#~ "Такође можете навести метод набавке (дистрибуција оперативног система или "
-#~ "пакетарски систем), посебно ако сте компиловали Платформу КДЕ‑а из извора."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "<note>You should <strong>write those information in English</strong>.</"
-#~ "note>"
-#~ msgstr "<note>Треба да <strong>пишете на енглеском</strong>.</note>"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "The last page will send the bug report to the bug tracking system and "
-#~ "will notify you when it is done. It will then show the web address of the "
-#~ "bug report in the KDE bug tracking system, so that you can look at the "
-#~ "report later."
-#~ msgstr ""
-#~ "Посљедња страница ће послати извјештај КДЕ‑овом систему за праћење "
-#~ "грешака, и обавијестити вас кад буде готово. Затим ће вам дати веб адресу "
-#~ "извјештаја у систему за праћење грешака, тако да извјештај можете "
-#~ "погледати касније."
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If the process fails, you can click <interface>Retry</interface> to try "
-#~ "sending the bug report again. If the report cannot be sent because the "
-#~ "bug tracking system has a problem, you can save it to a file to manually "
-#~ "report later."
-#~ msgstr ""
-#~ "Ако поступак не прође, можете кликнути на <interface>Покушај поново...</"
-#~ "interface> да покушате поновно слање извјештаја. Ако извјештај не може "
-#~ "бити послат усљед проблема у систему за праћење грешака, можете га "
-#~ "сачувати у фајл и касније ручно поднијети."
-
-#~ msgctxt "@info/rich"
-#~ msgid "Thank you for being part of KDE!"
-#~ msgstr "Хвала вам што сте дио КДЕ‑а!"
-
-#, fuzzy
-#~| msgctxt "@info/rich"
-#~| msgid ""
-#~| "If you are interested in helping us to keep the KDE bug tracker system "
-#~| "clean and useful, which allows the developers to be more focused on "
-#~| "fixing the real issues,  you are welcome to <link url='http://techbase."
-#~| "kde.org/Contribute/Bugsquad'>join the BugSquad team</link>."
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "If you are interested in helping us to keep the KDE bug tracker system "
-#~ "clean and useful, which allows the developers to be more focused on "
-#~ "fixing the real issues,  you are welcome to <link url='https://community."
-#~ "kde.org/Guidelines_and_HOWTOs/Bug_triaging'>join the BugSquad team</link>."
-#~ msgstr ""
-#~ "Ако бисте желели да помогнете у одржавању КДЕ‑овог система за праћење "
-#~ "грешака у чистом и корисном стању, тако да програмери могу више да се "
-#~ "посвете исправљању стварних проблема, добродошли сте да се <link "
-#~ "url='http://techbase.kde.org/Contribute/Bugsquad'>прикључите тријажном "
-#~ "одреду</link>."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "Widgets you have in your desktop and panels (both official and "
-#~ "unofficial), desktop settings (wallpaper plugin, themes) and activities."
-#~ msgstr ""
-#~ "Виџети које имате на површи и панелима (и званични и незванични), "
-#~ "поставке површи (прикључак тапета, теме) и активности."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "State of Desktop Effects (Compositing), kind of effects enabled, window "
-#~ "decoration, and specific window rules and configuration."
-#~ msgstr ""
-#~ "Стање ефеката површи (слагање), врста укључених ефеката, декорација "
-#~ "прозора, посебна правила и поставе прозора."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "sites you were visiting, number of opened tabs, plugins you have "
-#~ "installed, and any other non-default setting."
-#~ msgstr ""
-#~ "Сајтови које сте посјећивали, број отворених језичака, инсталирани "
-#~ "прикључци, било које неподразумијеване поставке."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "File view mode, grouping and sorting settings, preview settings, and "
-#~ "directory you were browsing."
-#~ msgstr ""
-#~ "Режим приказа фајлова, поставке груписања и ређања, поставке прегледа, "
-#~ "фасцикла коју сте прегледали."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "Instant Messaging protocols you use, and plugins you have installed "
-#~ "(official and unofficial)."
-#~ msgstr ""
-#~ "Брзогласнички протоколи које користите, инсталирани прикључци (званични и "
-#~ "незванични)."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid "Mail protocols and account-types you use."
-#~ msgstr "Протоколи е‑поште и типови ваших налога."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid "Type of the document you were editing."
-#~ msgstr "Тип документа који сте уређивали."
-
-#~ msgctxt "@info examples about information the user can provide"
-#~ msgid ""
-#~ "Type of media (extension and format) you were watching and/or listening "
-#~ "to."
-#~ msgstr "Тип медијума (наставак и формат) који сте гледали или слушали."
-
-# >> argument in 'Login into %1' message
-#~ msgid "the KDE Bug Tracking System"
-#~ msgstr "КДЕ‑ов систем за праћење грешака"
-
-#~ msgctxt "@title"
-#~ msgid "Results of the Analyzed Crash Details"
-#~ msgstr "Резултати анализираних детаља о паду"
-
-#~ msgctxt "@title"
-#~ msgid "Login into %1"
-#~ msgstr "Пријављивање на %1"
-
-#~ msgctxt "@action:button"
-#~ msgid "Close the assistant"
-#~ msgstr "Затвори помоћник"
-
-#~ msgctxt "@action:button"
-#~ msgid "Cancel"
-#~ msgstr "Одустани"
-
-#~ msgctxt "@action:button"
-#~ msgid "Save information and close"
-#~ msgstr "Сачувај податке и затвори"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Do you really want to close the bug reporting assistant? <note>The crash "
-#~ "information is still valid, so you can save the report before closing if "
-#~ "you want.</note>"
-#~ msgstr ""
-#~ "Желите ли заиста да затворите помоћник за пријављивање грешака? "
-#~ "<note>Подаци о паду су и даље добри, ако желите можете сачувати извјештај "
-#~ "прије него што изађете.</note>"
-
-#~ msgctxt "@title:window"
-#~ msgid "Close the Assistant"
-#~ msgstr "Затварање помоћника"
-
-#~ msgctxt "@info"
-#~ msgid "Do you really want to close the bug reporting assistant?"
-#~ msgstr "Желите ли заиста да затворите помоћник за пријављивање грешака?"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This crash information is not useful enough, do you want to try to "
-#~ "improve it? You will need to install some debugging packages."
-#~ msgstr ""
-#~ "Дати подаци о паду нису довољно корисни, желите ли да покушате да их "
-#~ "побољшате? Морали бисте да инсталирате неке исправљачке пакете."
-
-#~ msgctxt "@title:window"
-#~ msgid "Crash Information is not useful enough"
-#~ msgstr "Подаци о паду нису довољно корисни"
-
-#~ msgctxt "@label examples about information the user can provide"
-#~ msgid "Examples: %1"
-#~ msgstr "Примјери: %1"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Show Contents of the Report"
-#~ msgstr "&Садржај извјештаја"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to show the generated report information about this crash."
-#~ msgstr "Ово дугме приказује сакупљене податке о паду у извјештају."
-
-#~ msgctxt "@info"
-#~ msgid "The automatically generated crash information is useful."
-#~ msgstr "Аутоматски сакупљени подаци о паду су корисни."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The automatically generated crash information lacks some details but may "
-#~ "be still be useful."
-#~ msgstr ""
-#~ "Аутоматски сакупљеним подацима о паду недостају неки детаљи, али ипак "
-#~ "могу бити корисни."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The automatically generated crash information lacks important details and "
-#~ "it is probably not helpful."
-#~ msgstr ""
-#~ "Аутоматски сакупљеним подацима о паду недостају важни детаљи, те "
-#~ "вјероватно нису од помоћи."
-
-#~ msgctxt "@info"
-#~ msgid "The crash information was not generated because it was not needed."
-#~ msgstr "Подаци о паду нису створени јер нису потребни."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The automatically generated crash information does not contain enough "
-#~ "information to be helpful."
-#~ msgstr ""
-#~ "Аутоматски сакупљени подаци о паду нису довољно детаљни да би били од "
-#~ "помоћи."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<note>You can improve it by installing debugging packages and reloading "
-#~ "the crash on the Crash Information page. You can get help with the Bug "
-#~ "Reporting Guide by clicking on the <interface>Help</interface> button.</"
-#~ "note>"
-#~ msgstr ""
-#~ "<note>Можете их побољшати инсталирањем исправљачких пакета и учитавањем "
-#~ "пада на страници <interface>Подаци о паду (контратраг)</interface>. Помоћ "
-#~ "за извјештавање о грешкама можете добити кликом на дугме "
-#~ "<interface>Помоћ</interface>.</note>"
-
-#~ msgctxt "@info"
-#~ msgid "The information you can provide could be considered helpful."
-#~ msgstr "Подаци које можете пружити могу бити корисни."
-
-#~ msgctxt "@info"
-#~ msgid "This report is considered helpful."
-#~ msgstr "Извјештај дјелује корисно."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This application's bugs are reported to the KDE bug tracking system: "
-#~ "click <interface>Next</interface> to start the reporting process. You can "
-#~ "manually report at <link>%1</link>"
-#~ msgstr ""
-#~ "Грешке у овом програму пријављују се у КДЕ‑ов систем за праћење грешака: "
-#~ "кликните на <interface>Напријед</interface> да започнете поступак "
-#~ "пријављивања. Умјесто овога, грешку можете ручно пријавити на <link>%1</"
-#~ "link>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This application is not supported in the KDE bug tracking system. Click "
-#~ "<interface>Finish</interface> to report this bug to the application "
-#~ "maintainer. Also, you can manually report at <link>%1</link>."
-#~ msgstr ""
-#~ "КДЕ‑ов систем за праћење грешака не подржава овај програм. Кликните на "
-#~ "<interface>Заврши</interface> да пријавите ову грешку одржаваоцу "
-#~ "програма. Грешку такође можете ручно пријавити на <link>%1</link>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "This report does not contain enough information for the developers, so "
-#~ "the automated bug reporting process is not enabled for this crash."
-#~ msgstr ""
-#~ "Извјештај не садржи довољно података за програмере, тако да поступак "
-#~ "аутоматског пријављивања грешке није доступан за овај пад."
-
-#~ msgctxt "@info"
-#~ msgid "If you wish, you can go back and change your answers. "
-#~ msgstr "Ако желите, можете се вратити и измијенити своје одговоре. "
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can manually report this bug at <link>%1</link>. Click "
-#~ "<interface>Finish</interface> to close the assistant."
-#~ msgstr ""
-#~ "Грешку можете ручно пријавити на <link>%1</link>. Кликните на "
-#~ "<interface>Заврши</interface> да затворите помоћник."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can manually report this bug to its maintainer at <link>%1</link>. "
-#~ "Click <interface>Finish</interface> to close the assistant."
-#~ msgstr ""
-#~ "Грешку можете ручно пријавити одржаваоцу на <link>%1</link>. Кликните на "
-#~ "<interface>Заврши</interface> да затворите помоћник."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to save the generated crash report information to a file. "
-#~ "You can use this option to report the bug later."
-#~ msgstr ""
-#~ "Овим дугметом можете сачувати у фајл сакупљене податке за извјештај о "
-#~ "паду. Корисно када желите касније да пријавите грешку."
-
-#, fuzzy
-#~| msgctxt "@info:status"
-#~| msgid "Error when trying to login: <message>%1.</message>"
-#~ msgctxt "@info:status"
-#~ msgid "Error when trying to login: <message>%1</message>"
-#~ msgstr "Грешка при пријављивању: <message>%1</message>"
-
-#~ msgctxt "@info:status the user is logged at the bugtracker site as USERNAME"
-#~ msgid "Logged in at the KDE bug tracking system (%1) as: %2."
-#~ msgstr "Пријављени у КДЕ‑ов систем за праћење грешака (%1) као %2."
-
-#, fuzzy
-#~| msgctxt "@info:status '1' is a url, '2' the username"
-#~| msgid "Performing login at %1 as %2..."
-#~ msgctxt "@info:status '1' is a url, '2' the e-mail address"
-#~ msgid "Performing login at %1 as %2..."
-#~ msgstr "Покушавам да се пријавим на %1 као %2..."
-
-#, fuzzy
-#~| msgctxt "@info:status"
-#~| msgid "<b>Error: Invalid username or password</b>"
-#~ msgctxt "@info:status"
-#~ msgid "<b>Error: Invalid e-mail address or password</b>"
-#~ msgstr "<b>Грешка: лоше корисничко име или лозинка.</b>"
-
-#, fuzzy
-#~| msgctxt "@action:button"
-#~| msgid "Retry..."
-#~ msgctxt "@action/button retry button in error widget"
-#~ msgid "Retry"
-#~ msgstr "Покушај поново..."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The description about the crash details does not provide enough "
-#~ "information yet.<br /><br />"
-#~ msgstr "Опис пада није довољно информативан.<br /><br />"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The amount of required information is proportional to the quality of the "
-#~ "other information like the backtrace or the reproducibility rate.<br /"
-#~ "><br />"
-#~ msgstr ""
-#~ "Потребна количина података сразмерна је квалитету осталих података попут "
-#~ "контратрага или степена поновљивости.<br /><br />"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Previously, you told DrKonqi that you could provide some contextual "
-#~ "information. Try writing more details about your situation. (even little "
-#~ "ones could help us.)<br /><br />"
-#~ msgstr ""
-#~ "Претходно сте рекли Др Конкију да имате неке податке о контексту. "
-#~ "Покушајте детаљније да опишете своју ситуацију, и мали детаљи нам могу "
-#~ "помоћи.<br /><br />"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "If you cannot provide more information, your report will probably waste "
-#~ "developers' time. Can you tell us more?"
-#~ msgstr ""
-#~ "Ако не можете пружити још података, ваш извјештај ће вјероватно "
-#~ "протраћити вријеме програмера̂. Можете ли нам рећи више?"
-
-#~ msgid "Yes, let me add more information"
-#~ msgstr "Да, могу да додам још података"
-
-#~ msgid "No, I cannot add any other information"
-#~ msgstr "Не, ово је све што знам"
-
-#~ msgctxt "@title:window"
-#~ msgid "We need more information"
-#~ msgstr "Треба нам је још података"
-
-#~ msgctxt "@info:tooltip help and examples of good bug descriptions"
-#~ msgid "Describe in as much detail as possible the crash circumstances:"
-#~ msgstr "Опишите што детаљније околности пада:"
-
-#~ msgctxt "@info:tooltip help and examples of good bug descriptions"
-#~ msgid ""
-#~ "- Detail which actions were you taking inside and outside the application "
-#~ "an instant before the crash."
-#~ msgstr ""
-#~ "— које сте радње изводили унутар и изван програма непосредно прије пада"
-
-#~ msgctxt "@info:tooltip help and examples of good bug descriptions"
-#~ msgid ""
-#~ "- Note if you noticed any unusual behavior in the application or in the "
-#~ "whole environment."
-#~ msgstr ""
-#~ "— да ли сте примијетили неко необично понашање програма или окружења у "
-#~ "цјелини"
-
-#~ msgctxt "@info:tooltip help and examples of good bug descriptions"
-#~ msgid "- Note any non-default configuration in the application."
-#~ msgstr ""
-#~ "— да ли сте подесили неке поставке у програму ван подразумијеваних "
-#~ "вриједности"
-
-#~ msgctxt ""
-#~ "@info:tooltip examples of configuration details. the examples are already "
-#~ "translated"
-#~ msgid "Examples: %1"
-#~ msgstr "Примјери: %1"
-
-#~ msgctxt "@action:button"
-#~ msgid "Retry..."
-#~ msgstr "Покушај поново..."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Use this button to retry sending the crash report if it failed before."
-#~ msgstr ""
-#~ "Овим дугметом поново шаљете извјештај, ако претходни покушај није успио."
-
-#~ msgctxt "@action:button"
-#~ msgid "Sho&w Contents of the Report"
-#~ msgstr "&Садржај извјештаја"
-
-#~ msgctxt "@info:status"
-#~ msgid "Sending crash report... (please wait)"
-#~ msgstr "Шаљем извјештај о паду, сачекајте..."
-
-#~ msgctxt "@info:status"
-#~ msgid "Error sending the crash report:  <message>%1.</message>"
-#~ msgstr "Грешка при слању извјештаја о паду: <message>%1</message>"
-
-#~ msgctxt "@item:intable custom/manaul bug report number"
-#~ msgid "Manual"
-#~ msgstr "ручни"
-
-# rewrite-msgid: /bug//
-#~ msgctxt "@item:intable custom bug report number description"
-#~ msgid "Manually enter a bug report ID"
-#~ msgstr "ручни унос ИД‑а извјештаја"
-
-#~ msgctxt "@info:tooltip / whatsthis"
-#~ msgid "Select this option to manually load a specific bug report"
-#~ msgstr "Изаберите ову опцију да ручно учитате одређени извјештај о грешци."
-
-#~ msgctxt "@action:button"
-#~ msgid "Search for more reports"
-#~ msgstr "Потражи још извјештаја"
-
-#, fuzzy
-#~| msgctxt "@info:tooltip"
-#~| msgid ""
-#~| "Use this button to search for more similar bug reports on an earlier "
-#~| "date."
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to search for more similar bug reports"
-#~ msgstr ""
-#~ "Овим дугметом потражите још сличних извјештаја о грешкама од раније."
-
-#~ msgctxt "@action:button"
-#~ msgid "Retry search"
-#~ msgstr "Понови претрагу"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to retry the search that previously failed."
-#~ msgstr "Овим дугметом понављате претходно неуспјелу претрагу."
-
-#~ msgctxt "@action:button"
-#~ msgid "Open selected report"
-#~ msgstr "Отвори изабрани извјештај"
-
-#~ msgctxt "@action:button"
-#~ msgid "Stop searching"
-#~ msgstr "Заустави тражење"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to stop the current search."
-#~ msgstr "Овим дугметом заустављате тренутну претрагу."
-
-#~ msgctxt "@action:button remove the selected item from a list"
-#~ msgid "Remove"
-#~ msgstr "Уклони"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to remove a selected possible duplicate"
-#~ msgstr "Овим дугметом уклањате изабрани могући дупликат."
-
-#~ msgid ""
-#~ "Press this button to declare that, in your opinion and according to your "
-#~ "experience, the reports found as similar do not match the crash you have "
-#~ "experienced, and you believe it is unlikely that a better match would be "
-#~ "found after further review."
-#~ msgstr ""
-#~ "Кликом на ово дугме изјављујете да, по вашем мишљењу и према вашем "
-#~ "искуству, извјештаји пронађени као слични не одговарају вашем паду и не "
-#~ "вјерујете да се боље поклапање може наћи даљим прегледом."
-
-#~ msgid "Let me check more reports"
-#~ msgstr "Потражићу још извјештаја"
-
-#~ msgid ""
-#~ "Press this button if you would rather review more reports in order to "
-#~ "find a match for the crash you have experienced."
-#~ msgstr ""
-#~ "Кликните на ово дугме ако бисте радије прегледали још извјештаја, да "
-#~ "бисте нашли поклапање са својим падом."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You have not selected any possible duplicates, or a report to which to "
-#~ "attach your crash information. Have you read all the reports, and can you "
-#~ "confirm that there are no real duplicates?"
-#~ msgstr ""
-#~ "Нисте изабрали ниједан могући дупликат, нити извјештај уз који бисте "
-#~ "приложили своје податке о паду. Јесте ли прочитали дате извјештаје и "
-#~ "можете тврдити да нема стварних дупликата?"
-
-#~ msgctxt "@title:window"
-#~ msgid "No selected possible duplicates"
-#~ msgstr "Могући дупликати нису изабрани"
-
-#~ msgctxt "@info:status"
-#~ msgid "Search stopped."
-#~ msgstr "Претрага заустављена."
-
-#, fuzzy
-#~| msgctxt "@info:status"
-#~| msgid "Search stopped. Showing results from %1 to %2"
-#~ msgctxt "@info:status"
-#~ msgid "Search stopped. Showing results."
-#~ msgstr "Претрага заустављена. Приказујем резултате од %1 до %2"
-
-# >> @item:intext +
-#~ msgctxt "@info bug status"
-#~ msgid "[Open]"
-#~ msgstr "[отворено]"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "[Fixed]"
-#~ msgstr "[поправљено]"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "[Non-reproducible]"
-#~ msgstr "[није поновљиво]"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "[Invalid]"
-#~ msgstr "[лош извјештај]"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "[External problem]"
-#~ msgstr "[спољашњи проблем]"
-
-# >> @item:intext +
-#~ msgctxt "@info bug status"
-#~ msgid "[Incomplete]"
-#~ msgstr "[непотпуно]"
-
-#, fuzzy
-#~| msgctxt "@info:status"
-#~| msgid "Showing results from %1 to %2"
-#~ msgctxt "@info:status"
-#~ msgid "Showing results."
-#~ msgstr "Приказујем резултате од %1 до %2"
-
-#~ msgctxt "@info:status"
-#~ msgid "Search Finished. No reports found."
-#~ msgstr "Претрага завршена. Није нађен ниједан извјештај."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "Only <strong><a href=\"%1\">attach</a></strong> if you can add needed "
-#~ "information to the bug report."
-#~ msgstr ""
-#~ "<strong><a href=\"%1\">Прикачите</a></strong> само ако имате неке податке "
-#~ "који су тражени у извештају о грешци."
-
-#~ msgctxt "@info:status"
-#~ msgid "Error fetching the bug report list"
-#~ msgstr "Грешка у добављању списка извјештајâ о грешкама"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Error fetching the bug report list<nl/><message>%1.</message><nl/>Please "
-#~ "wait some time and try again."
-#~ msgstr ""
-#~ "Грешка у добављању списка извјештајâ о грешкама.<nl/><message>%1</"
-#~ "message><nl/>Сачекајте мало, па покушајте поново."
-
-# rewrite-msgid: /bug//
-#~ msgctxt "@title:window"
-#~ msgid "Enter a custom bug report number"
-#~ msgstr "Унос посебног броја извјештаја"
-
-#~ msgctxt "@label"
-#~ msgid "Enter the number of the bug report you want to check"
-#~ msgstr "Унесите број извјештаја о грешци који желите да провјерите"
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "The report is going to be <strong>attached</strong> to bug %1. <a href=\"#"
-#~ "\">Cancel</a>"
-#~ msgstr ""
-#~ "Извјештај ће бити <strong>приложен</strong> уз грешку %1. <a href=\"#"
-#~ "\">Одустани</a>"
-
-#~ msgctxt "@title:window"
-#~ msgid "Bug Description"
-#~ msgstr "Опис грешке"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to retry loading the bug report."
-#~ msgstr "Овим дугметом поново учитавате извјештај о грешци."
-
-#~ msgctxt "@info:status"
-#~ msgid "Loading information about bug %1 from %2...."
-#~ msgstr "Учитавам податке о грешци %1 са %2..."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Backtrace of the crash I experienced:\n"
-#~ "\n"
-#~ msgstr ""
-#~ "Контратраг пада који ми се догађа:\n"
-#~ "\n"
-
-# >> @item:intext +
-#~ msgctxt "@info bug status"
-#~ msgid "Opened (Unconfirmed)"
-#~ msgstr "отворено (непотврђено)"
-
-# >> @item:intext +
-#~ msgctxt "@info bug status"
-#~ msgid "Opened (Unfixed)"
-#~ msgstr "отворено (непоправљено)"
-
-#~ msgctxt "@info bug resolution, fixed in version"
-#~ msgid "Fixed in version \"%1\""
-#~ msgstr "Поправљено у издању „%1“"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution, fixed by kde devs in version"
-#~ msgid "the bug was fixed by KDE developers in version \"%1\""
-#~ msgstr "грешку су поправили програмери КДЕ‑а, у издању „%1“"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "Fixed"
-#~ msgstr "поправљено"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "the bug was fixed by KDE developers"
-#~ msgstr "грешку су поправили програмери КДЕ‑а"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "Non-reproducible"
-#~ msgstr "није поновљиво"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "Duplicate report (Already reported before)"
-#~ msgstr "дуплиран извјештај (већ пријављено раније)"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid "Not caused by a problem in the KDE's Applications or libraries"
-#~ msgstr "није изазвано проблемом у КДЕ програмима или библиотекама"
-
-# >> @item:intext +
-#~ msgctxt "@info bug resolution"
-#~ msgid ""
-#~ "the bug is caused by a problem in an external application or library, or "
-#~ "by a distribution or packaging issue"
-#~ msgstr ""
-#~ "грешку изазива проблем у спољашњем програму или библиотеци, или је до "
-#~ "паковања и дистрибуције"
-
-# >> @item:intext +
-#~ msgctxt "@info bug status"
-#~ msgid "Temporarily closed, because of a lack of information"
-#~ msgstr "привремен затворен због недостатка података"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Invalid report information (malformed data). This could mean that the bug "
-#~ "report does not exist, or the bug tracking site is experiencing a problem."
-#~ msgstr ""
-#~ "Лоши подаци извјештаја. Ово може значити да извјештај о грешци не "
-#~ "постоји, или да сајт за праћење грешака тренутно има проблема."
-
-#~ msgctxt "@action:button let the user to choose to read the main report"
-#~ msgid "Yes, read the main report"
-#~ msgstr "Да, прочитаћу главни извјештај"
-
-#~ msgctxt "@action:button let the user choose to read the original report"
-#~ msgid "No, let me read the report I selected"
-#~ msgstr "Не, прочитаћу одабрани извјештај"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The report you selected (bug %1) is already marked as duplicate of bug "
-#~ "%2. Do you want to read that report instead? (recommended)"
-#~ msgstr ""
-#~ "Извјештај који сте одабрали (грешка %1) већ је означен као дупликат "
-#~ "грешке %2. Желите ли да прочитате извјештај о њој (препоручујемо)?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Nested duplicate detected"
-#~ msgstr "Откривени угнијежђени дупликати"
-
-#~ msgctxt "comment $number to use as subtitle"
-#~ msgid "<h4>Comment %1:</h4>"
-#~ msgstr "<h4>Коментар %1:</h4>"
-
-#~ msgid ""
-#~ "<p><note>The bug report's title is often written by its reporter and may "
-#~ "not reflect the bug's nature, root cause or other visible symptoms you "
-#~ "could use to compare to your crash. Please read the complete report and "
-#~ "all the comments below.</note></p>"
-#~ msgstr ""
-#~ "<html><p><note>Наслов извјештаја о грешци често пише онај ко га "
-#~ "пријављује, па може де не одражава природу грешке, корјени узрок и друге "
-#~ "видљиве симптоме које бисте могли упоредити са својим падом. Молимо вас "
-#~ "да прочитате цио извјештај и све коментаре у њему.</note></p></html>"
-
-#~ msgid ""
-#~ "<p><note>This bug report has %1 duplicate report. That means this is "
-#~ "probably a <strong>common crash</strong>. <i>Please consider only adding "
-#~ "a comment or a note if you can provide new valuable information which was "
-#~ "not already mentioned.</i></note></p>"
-#~ msgid_plural ""
-#~ "<p><note>This bug report has %1 duplicate reports. That means this is "
-#~ "probably a <strong>common crash</strong>. <i>Please consider only adding "
-#~ "a comment or a note if you can provide new valuable information which was "
-#~ "not already mentioned.</i></note></p>"
-#~ msgstr[0] ""
-#~ "<html><p><note>Овај извјештај о грешци има %1 дупликат. Ово значи да се "
-#~ "вјероватно ради о <strong>честом паду</strong>. <i>Молимо вас да радије "
-#~ "додате коментар или напомену, ако можете да пружите још информација у "
-#~ "односу на оне које су већ изнесене.</i></note></p></html>"
-#~ msgstr[1] ""
-#~ "<html><p><note>Овај извјештај о грешци има %1 дупликата. Ово значи да се "
-#~ "вјероватно ради о <strong>честом паду</strong>. <i>Молимо вас да радије "
-#~ "додате коментар или напомену, ако можете да пружите још информација у "
-#~ "односу на оне које су већ изнесене.</i></note></p></html>"
-#~ msgstr[2] ""
-#~ "<html><p><note>Овај извјештај о грешци има %1 дупликата. Ово значи да се "
-#~ "вјероватно ради о <strong>честом паду</strong>. <i>Молимо вас да радије "
-#~ "додате коментар или напомену, ако можете да пружите још информација у "
-#~ "односу на оне које су већ изнесене.</i></note></p></html>"
-#~ msgstr[3] ""
-#~ "<html><p><note>Овај извјештај о грешци има дупликат. Ово значи да се "
-#~ "вјероватно ради о <strong>честом паду</strong>. <i>Молимо вас да радије "
-#~ "додате коментар или напомену, ако можете да пружите још информација у "
-#~ "односу на оне које су већ изнесене.</i></note></p></html>"
-
-#~ msgid ""
-#~ "<p><note>This bug report is not about a crash or about any other critical "
-#~ "bug.</note></p>"
-#~ msgstr ""
-#~ "<html><p><note>Овај извјештај о грешци није о паду или било каквом другом "
-#~ "критичном проблему.</note></p></html>"
-
-#~ msgctxt "@info bug report title (quoted)"
-#~ msgid "<h3>\"%1\"</h3>"
-#~ msgstr "<h3>„%1“</h3>"
-
-#~ msgctxt "@info bug report status"
-#~ msgid "<h4>Bug Report Status: %1</h4>"
-#~ msgstr "<h4>Стање извјештаја о грешци: %1</h4>"
-
-#~ msgctxt "@info bug report product and component"
-#~ msgid "<h4>Affected Component: %1 (%2)</h4>"
-#~ msgstr "<h4>Компонента које се тиче: %1 (%2)</h4>"
-
-#~ msgctxt "@info bug report description"
-#~ msgid "<h3>Description of the bug</h3><p>%1</p>"
-#~ msgstr "<h3>Опис грешке</h3><p>%1</p>"
-
-#~ msgctxt "@label:textbox bug report comments (already formatted)"
-#~ msgid "<h2>Additional Comments</h2>%1"
-#~ msgstr "<h2>Додатни коментари</h2>%1"
-
-#~ msgctxt "@info:status"
-#~ msgid "Showing bug %1"
-#~ msgstr "Приказујем грешку %1"
-
-#~ msgctxt "@info/rich"
-#~ msgid ""
-#~ "Error fetching the bug report<nl/><message>%1.</message><nl/>Please wait "
-#~ "some time and try again."
-#~ msgstr ""
-#~ "Грешка у добављању извјештаја о грешци.<nl/><message>%1</message><nl/"
-#~ ">Сачекајте мало, па покушајте поново."
-
-#~ msgctxt "@info"
-#~ msgid "Error fetching the bug report"
-#~ msgstr "Грешка у добављању извјештаја о грешци"
-
-#~ msgctxt "@info:status"
-#~ msgid "Error fetching the bug report"
-#~ msgstr "Грешка у добављању извјештаја о грешци"
-
-#~ msgctxt "@title:window"
-#~ msgid "Related Bug Report"
-#~ msgstr "Повезани извјештај о грешци"
-
-#~ msgctxt "@action:button"
-#~ msgid "Cancel (Go back to the report)"
-#~ msgstr "Одустани (назад на извјештај)"
-
-#~ msgctxt ""
-#~ "@action:button continue with the selected option and close the dialog"
-#~ msgid "Continue"
-#~ msgstr "Настави"
-
-#~ msgid "You are going to mark your crash as related to bug %1"
-#~ msgstr "Обиљежићете свој пад као повезан са грешком %1"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The report is closed because %1. <i>If the crash is the same, adding "
-#~ "further information will be useless and will consume developers' time.</i>"
-#~ msgstr ""
-#~ "Овај извјештај је затворен уз разлог „%1“. <i>Ако је пад исти, додавати "
-#~ "нове информације је бескорисно и траћи вријеме програмера̂.</i>"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "If you tried to repeat the situation, select how often the application "
-#~ "crashes"
-#~ msgstr ""
-#~ "Ако сте покушали да понављате проблем, унесите колико често програм пада."
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "If you tried to repeat the situation, select how often the application "
-#~ "crashes"
-#~ msgstr ""
-#~ "Ако сте покушали да понављате проблем, изаберите колико често програм "
-#~ "пада."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Check this option if you can describe what were you doing inside the "
-#~ "application before it crashed"
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да опишете шта сте радили у програму "
-#~ "непосредно прије пада."
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Check this option if you can describe what were you doing inside the "
-#~ "application before it crashed"
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да опишете шта сте радили у програму "
-#~ "непосредно прије пада."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Check this option if you can describe any unusual behavior or appearance "
-#~ "in the application or the whole desktop"
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да опишете неко необично понашање или "
-#~ "изглед програма или цијеле површи."
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Check this option if you can describe any unusual behavior or appearance "
-#~ "in the application or the whole desktop"
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да опишете неко необично понашање или "
-#~ "изглед програма или цијеле површи."
-
-#, fuzzy
-#~| msgctxt "@info:tooltip"
-#~| msgid ""
-#~| "Check this option if you can provide application specific details or "
-#~| "settings that may be related to the crash. You can check the examples "
-#~| "(if available.)"
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Check this option if you can provide application specific details or "
-#~ "settings that may be related to the crash."
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да пружите детаље о програму или "
-#~ "поставкама које су можда у вези са падом. Можете да погледате примјере "
-#~ "(ако су доступни)."
-
-#, fuzzy
-#~| msgctxt "@info:whatsthis"
-#~| msgid ""
-#~| "Check this option if you can provide application specific details or "
-#~| "settings that may be related to the crash. You can check the examples "
-#~| "(if available.)"
-#~ msgctxt "@info:whatsthis"
-#~ msgid ""
-#~ "Check this option if you can provide application specific details or "
-#~ "settings that may be related to the crash."
-#~ msgstr ""
-#~ "Попуните ову кућицу ако можете да пружите детаље о програму или "
-#~ "поставкама које су можда у вези са падом. Можете да погледате примјере "
-#~ "(ако су доступни)."
-
-#~ msgctxt "@title:column"
-#~ msgid "Bug ID"
-#~ msgstr "ИД грешке"
-
-#~ msgctxt "@title:column"
-#~ msgid "Description"
-#~ msgstr "опис"
-
-#~ msgctxt ""
-#~ "@label title of a listbox where the possible duplicate bug numbers are "
-#~ "put in"
-#~ msgid "Possible duplicates:"
-#~ msgstr "Могући дупликати:"
-
-#~ msgctxt ""
-#~ "@option:check user must check this to preview the own backtrace (in order "
-#~ "to compare it with the one in the showed report)"
-#~ msgid "Show the backtrace of the crash I experienced to compare (advanced)"
-#~ msgstr "Прикажи контратраг мог пада ради поређења (напредно)"
-
-#~ msgid ""
-#~ "This is likely to be a <strong>common crash</strong>, and a lot of "
-#~ "different cases' details may have been provided already. <i>Proceed only "
-#~ "if you can add new information (not already mentioned). </i>"
-#~ msgstr ""
-#~ "Ово је вјероватно <strong>чест пад</strong>, па је до сада можда "
-#~ "приложено мноштво детаља из различитих случајева. <i>Наставите само ако "
-#~ "можете додати нешто што већ није споменуто.</i>"
-
-#~ msgid "<strong>Do you want to proceed with the reporting process?</strong>"
-#~ msgstr "<strong>Желите ли да наставите са процесом пријављивања?</strong>"
-
-#~ msgid "No, do not file &a new bug report, and cancel the assistant"
-#~ msgstr "Не, обустави &завођење извјештаја о грешци и напусти помоћник"
-
-#~ msgid "Proceed with reporting &the bug"
-#~ msgstr "Настави са пријављивањем &грешке"
-
-#~ msgid ""
-#~ "<strong>Are you sure this report matches your crash situation?</strong>"
-#~ msgstr ""
-#~ "<strong>Јесте ли сигурни да овај извјештај одговара вашем паду?</strong>"
-
-# Пази да пристаје за оба пола.
-#~ msgid "Not &really sure: mark as a possible duplicate"
-#~ msgstr "Не &баш сасвим: означи као могући дупликат"
-
-# Пази да пристаје за оба пола.
-#~ msgid "Completely sure: attach my &information to this report"
-#~ msgstr "Сасвим: приложи моје &податке уз овај извјештај"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "<strong>Title of the bug report:</strong> (<a href=\"#\">examples</a>)"
-#~ msgstr ""
-#~ "<strong>Наслов извјештаја о грешци:</strong> (<a href=\"#\">примјери</a>)"
-
-#~ msgctxt "@label:textbox"
-#~ msgid ""
-#~ "<strong>Information about the crash:</strong> (<a href=\"#\">help and "
-#~ "examples</a>)"
-#~ msgstr ""
-#~ "<strong>Подаци о паду:</strong> (<a href=\"#\">помоћ и примјери</a>)"
-
-#~ msgid "Password input"
-#~ msgstr "Унос лозинке"
-
-#~ msgid "Username input"
-#~ msgstr "Унос корисничког имена"
-
-# rewrite-msgid: /when clicking the Finish button/after sending the report/
-#~ msgctxt "@option:check"
-#~ msgid "Open the bug report page when clicking the Finish button"
-#~ msgstr "Отвори страницу извјештаја о грешци по слању извјештаја"
-
-# rewrite-msgid: /when clicking the Finish button/after sending the report/
-#~ msgctxt "@option:check"
-#~ msgid "Restart the application when clicking the Finish button"
-#~ msgstr "Поново покрени програм по слању извјештаја"
-
-# rewrite-msgid: /when clicking the Finish button/after sending the report/
-#~ msgid "Restart the application when clicking the Finish button"
-#~ msgstr "Поново покрени програм по слању извјештаја"
-
-#~ msgctxt "@action:button"
-#~ msgid "Report &Bug"
-#~ msgstr "Пријави &грешку"
+msgstr "Лозинка на bugstest.kde.org"
