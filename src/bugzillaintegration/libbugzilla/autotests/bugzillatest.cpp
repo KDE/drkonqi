@@ -62,6 +62,7 @@ private Q_SLOTS:
         KJob *job = Bugzilla::version();
         job->start();
         QCOMPARE(Bugzilla::version(job), "5.0.0");
+        delete job;
     }
 
     void testLogin()
@@ -71,6 +72,7 @@ private Q_SLOTS:
         auto details = Bugzilla::login(job);
         QCOMPARE(details.id, 52960);
         QCOMPARE(details.token, "52960-aaaaaaaaaa");
+        delete job;
     }
 
 private:

@@ -70,11 +70,13 @@ private Q_SLOTS:
             }
         }
         QVERIFY(containsWindows);
+        delete job;
         // Run again to drive up coverage for converter registration
         job = client.getField("rep_platform");
         QVERIFY(job);
         job->start();
         client.getField(job);
+        delete job;
     }
 
 private:

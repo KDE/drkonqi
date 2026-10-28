@@ -87,6 +87,8 @@ private Q_SLOTS:
         auto component = product->components()[0];
         QCOMPARE(component->id(), 1200);
         QCOMPARE(component->name(), "general");
+
+        delete job;
     }
 
 private:

@@ -200,6 +200,10 @@ private Q_SLOTS:
         thread.wait();
         thread.terminate();
 
+        // The server lives in the worker thread; it is safe to delete it now
+        // that the thread has finished.
+        delete server;
+
         QCOMPARE(job->error(), KJob::NoError);
         QCOMPARE(job->data(), "General Kenobi!\r\n");
     }

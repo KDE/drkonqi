@@ -140,6 +140,7 @@ private Q_SLOTS:
         QCOMPARE(bug->dupe_of(), -1);
         QCOMPARE(bug->is_open(), false);
         QCOMPARE(bug->customField("cf_versionfixedin"), "5.0");
+        delete job;
     }
 
     void testSearchUnresolved()
@@ -153,6 +154,7 @@ private Q_SLOTS:
         // resolution:"" maps to NONE
         QCOMPARE(bugs.at(0)->resolution(), Bug::Resolution::NONE);
         // None of the above should fail assertions or exception tests.
+        delete job;
     }
 
     void testSearchMultipleProducts()
@@ -166,6 +168,7 @@ private Q_SLOTS:
         QList<Bug::Ptr> bugs = Bugzilla::BugClient().search(job);
         QCOMPARE(bugs.size(), 1);
         // None of the above should fail assertions or exception tests.
+        delete job;
     }
 
     void testNewBug()
@@ -187,6 +190,7 @@ private Q_SLOTS:
         job->start();
         qint64 id = Bugzilla::BugClient().create(job);
         QCOMPARE(id, 12345);
+        delete job;
     }
 
     void testUpdateBug()
@@ -199,6 +203,7 @@ private Q_SLOTS:
         job->start();
         qint64 id = Bugzilla::BugClient().update(job);
         QCOMPARE(id, 54321);
+        delete job;
     }
 
 private:

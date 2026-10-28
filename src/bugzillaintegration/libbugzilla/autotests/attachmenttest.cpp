@@ -78,6 +78,7 @@ private Q_SLOTS:
         job->start();
         QList<int> ids = c.createAttachment(job);
         QCOMPARE(ids, QList<int>({1234}));
+        delete job;
     }
 
 private:

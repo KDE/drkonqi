@@ -76,6 +76,7 @@ private Q_SLOTS:
         Comment::Ptr tre = comments[2];
         QCOMPARE(tre->bug_id(), 407363);
         QCOMPARE(tre->text(), "tre");
+        delete job;
     }
 
     void testSearchNoBugInvalid()
@@ -89,6 +90,7 @@ private Q_SLOTS:
         auto job = c.getFromBug(1);
         job->start();
         QVERIFY_EXCEPTION_THROWN(c.getFromBug(job), Bugzilla::APIException);
+        delete job;
     }
 
 private:
