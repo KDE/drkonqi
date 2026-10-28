@@ -16,7 +16,7 @@ QList<Bug::Ptr> BugClient::search(KJob *kjob) const
 
     QList<Bug::Ptr> list;
     for (auto bug : ary) {
-        list.append(Bug::Ptr(new Bug(bug.toObject().toVariantHash())));
+        list.append(Bug::Ptr(new Bug(bug.toObject().toVariantHash(), job)));
     }
 
     return list;

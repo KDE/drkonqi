@@ -16,6 +16,12 @@ BugField::BugField(const QVariantHash &obj, QObject *parent)
     for (auto it = obj.constBegin(); it != obj.constEnd(); ++it) {
         setProperty(qPrintable(it.key()), it.value());
     }
+
+    // The variant converter creates BugFieldValue instances without a parent;
+    // adopt them so they are destroyed together with this BugField.
+    for (BugFieldValue *value : std::as_const(m_values)) {
+        value->setParent(this);
+    }
 }
 
 QList<BugFieldValue *> BugField::values() const

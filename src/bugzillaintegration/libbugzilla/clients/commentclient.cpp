@@ -23,7 +23,7 @@ QList<Comment::Ptr> CommentClient::getFromBug(KJob *kjob) const
 
     QList<Comment::Ptr> list;
     for (auto it = comments.constBegin(); it != comments.constEnd(); ++it) {
-        list.append(new Comment((*it).toObject().toVariantHash()));
+        list.append(Comment::Ptr(new Comment((*it).toObject().toVariantHash(), job)));
     }
 
     return list;
