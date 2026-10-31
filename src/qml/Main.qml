@@ -62,7 +62,7 @@ any side effects.</para>`);
         canReport = true
         canAutoReport = true
         return xi18nc("@info",
-                        "<para>You can help us improve KDE Software by reporting this error.<nl /><link url='%1'>Learn more about bug reporting.</link></para>",
+                        "<para>You can help us improve KDE Software by reporting this error. Please write your bug report in English.<nl /><link url='%1'>Learn more about bug reporting.</link></para>",
                         Globals.aboutBugReportingUrl);
     }
 
