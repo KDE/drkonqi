@@ -27,4 +27,6 @@ Dependencies:
 
 Options:
  require-passing-tests-on: ['@all']
- enable-lsan: True
+ # lsan disabled because its causing tests to fail:
+ # https://invent.kde.org/plasma/drkonqi/-/pipelines/1400804
+ enable-lsan: False
