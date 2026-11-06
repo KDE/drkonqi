@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-20 16:18+0000\n"
-"PO-Revision-Date: 2026-08-26 11:46+0300\n"
+"PO-Revision-Date: 2026-10-05 11:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -59,31 +59,32 @@ msgstr ""
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
-msgstr ""
+msgstr "Core-vedoskansiota ei voida luoda: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
-msgstr ""
+msgstr "Core-vedostiedostoa ei voi avata: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
 #, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
-msgstr ""
+msgstr "Core-vedostiedostoa ei ole olemassa: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
 #, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
-msgstr ""
+msgstr "Core-vedostiedoston purkuprosessi epäonnistui koodilla: %1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
 #, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
 msgstr ""
+"Lisäkäyttöoikeuksinen core-vedostiedoston purkuprosessi epäonnistui: %1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -138,6 +139,7 @@ msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
 msgstr ""
+"Käynnistä sovellus, joka näyttää vain ilmoituksen prosessin kaatumisesta"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -146,12 +148,10 @@ msgid "The program has already been restarted"
 msgstr "Ohjelma oli jo käynnistynyt uudelleen"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "Ohjelmatiedoston sijainti"
+msgstr "Metatietotiedoston sijainti"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -335,9 +335,7 @@ msgid "Hide"
 msgstr "Piilota"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
 msgstr "%1 sulkeutui yllättäen"
@@ -576,11 +574,12 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Epäonnistuvan säikeen tunniste"
 
+# *** TARKISTA: ”sentry” on tässä epäselvä eikä tunnu esiintyvän muualla
 #: main.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Siirry suoraan vahtisivulle"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
