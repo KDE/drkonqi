@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: drkonqi\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 02:47+0000\n"
-"PO-Revision-Date: 2026-08-26 11:46+0300\n"
+"PO-Revision-Date: 2026-10-05 11:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -138,6 +138,7 @@ msgctxt "@info"
 msgid ""
 "Start the application showing only a notification that a process has crashed"
 msgstr ""
+"Käynnistä sovellus, joka näyttää vain ilmoituksen prosessin kaatumisesta"
 
 #: coredump/gui/main.cpp:200 main.cpp:153
 #, kde-format
@@ -146,12 +147,10 @@ msgid "The program has already been restarted"
 msgstr "Ohjelma oli jo käynnistynyt uudelleen"
 
 #: coredump/gui/main.cpp:201 main.cpp:165
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "<Path> to the executable"
+#, kde-format
 msgctxt "@info:shell"
 msgid "The path to the metadata file"
-msgstr "Ohjelmatiedoston sijainti"
+msgstr "Metatietotiedoston sijainti"
 
 #: coredump/gui/Patient.cpp:136
 #, kde-format
@@ -335,9 +334,7 @@ msgid "Hide"
 msgstr "Piilota"
 
 #: coredump/gui/statusnotifier.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is an application name; it crashed"
-#| msgid "%1 Closed Unexpectedly"
+#, kde-format
 msgctxt "Placeholder is an application name; it crashed"
 msgid "%1 Closed Repeatedly"
 msgstr "%1 sulkeutui yllättäen"
@@ -576,11 +573,12 @@ msgctxt "@info:shell"
 msgid "The <thread id> of the failing thread"
 msgstr "Epäonnistuvan säikeen tunniste"
 
+# *** TARKISTA: ”sentry” on tässä epäselvä eikä tunnu esiintyvän muualla
 #: main.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "Go directly to the sentry page"
-msgstr ""
+msgstr "Siirry suoraan vahtisivulle"
 
 #: qml/BacktracePage.qml:11
 msgctxt "@title:window"
