@@ -36,44 +36,34 @@ msgid ""
 msgstr "<placeholder>请详细告诉我们程序崩溃时您正在做什么。</placeholder>"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:37
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to create core directory: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to create core dump directory: %1"
-msgstr "创建核心目录失败：%1"
+msgstr "创建核心转储目录失败：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:55
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Failed to open core file: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Failed to open core dump file: %1"
-msgstr "打开核心文件失败：%1"
+msgstr "打开核心转储文件失败：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the specific error message from the system"
-#| msgid "Coredump file does not exist: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the specific error message from the system"
 msgid "Core dump file does not exist: %1"
-msgstr "内核转储文件不存在：%1"
+msgstr "核心转储文件不存在：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:71
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is the numeric exit code"
-#| msgid "Core file extraction process failed with code: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is the numeric exit code"
 msgid "Core dump file extraction process failed with code: %1"
-msgstr "核心文件提取处理失败，错误代码： %1"
+msgstr "核心转储文件提取进程失败，错误代码：%1"
 
 #: coredump/dumpexcavator/automaticcoredumpexcavator.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
-#| msgid "Elevated core file extraction process failed: %1"
+#, kde-format
 msgctxt "diagnostic error. %1 is a dbus error from a polkit helper"
 msgid "Elevated core dump file extraction process failed: %1"
-msgstr "提权的核心文件提取处理失败：%1"
+msgstr "提权的核心转储文件提取进程失败：%1"
 
 #: coredump/gui/DetailsLoader.cpp:36
 #, kde-format
@@ -932,19 +922,12 @@ msgstr ""
 "这将确保软件更新能得到完整应用并避免发生意外情况。</para>"
 
 #: qml/Main.qml:65
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "<para>You can help us improve KDE Software by reporting this error.<nl /"
-#| "><link url='%1'>Learn more about bug reporting.</link></para>"
 msgctxt "@info"
 msgid ""
 "<para>You can help us improve KDE Software by reporting this error. Please "
 "write your bug report in English.<nl /><link url='%1'>Learn more about bug "
 "reporting.</link></para>"
 msgstr ""
-"<para>您可以报告此次错误，帮助我们改进 KDE 软件。<nl /><link url='%1'>查看程"
-"序缺陷报告的更多相关信息。</link></para>"
 
 #: qml/Main.qml:95
 msgctxt "@info"
@@ -1347,11 +1330,3 @@ msgstr "bugstest.kde.org 用户名"
 msgctxt "@info:shell"
 msgid "bugstest.kde.org password"
 msgstr "bugstest.kde.org 密码"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Restart Application"
-#~ msgstr "重新启动程序(&R)"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use this button to restart the crashed application."
-#~ msgstr "点击此按钮重新启动崩溃的应用程序。"
